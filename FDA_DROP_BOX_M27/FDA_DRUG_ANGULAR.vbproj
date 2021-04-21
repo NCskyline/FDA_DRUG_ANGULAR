@@ -14,7 +14,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>FDA_DROP_BOX_M27</RootNamespace>
     <AssemblyName>FDA_DROP_BOX_M27</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <OptionExplicit>On</OptionExplicit>
     <OptionCompare>Binary</OptionCompare>
     <OptionStrict>Off</OptionStrict>
@@ -63,7 +63,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
@@ -74,7 +73,6 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -118,7 +116,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -171,6 +168,7 @@
     <Compile Include="CLASS\COMMON\ClassDataset.vb" />
     <Compile Include="CLASS\COMMON\CLS_SESSION.vb" />
     <Compile Include="CLASS\COMMON\Cls_XML.vb" />
+    <Compile Include="CLASS\DAO\DAO_DRUG.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DH.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DI.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DR.vb" />
@@ -180,14 +178,16 @@
     <Compile Include="CLASS\MODEL\MODEL_BOX.vb" />
     <Compile Include="CLASS\MODEL\XML_PDF.vb" />
     <Compile Include="Controllers\AUTHENController.vb" />
-    <Compile Include="Controllers\SV_CENTERController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Linq\LGT_DRUG.designer.vb">
+    <Compile Include="Linq\Linq_DRUG.designer.vb">
+      <DependentUpon>Linq_DRUG.dbml</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LGT_DRUG.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Linq\Linq_DRUG.vb">
+      <DependentUpon>Linq_DRUG.dbml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -355,16 +355,16 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
     </Content>
-    <Content Include="Linq\LGT_DRUG.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>LGT_DRUG.designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
-    <None Include="Linq\LGT_DRUG.dbml.layout">
-      <DependentUpon>LGT_DRUG.dbml</DependentUpon>
-    </None>
     <Content Include="Views\DH\FRM_MAIN_DH.vbhtml" />
     <Content Include="Views\AUTHEN\AUTHEN_GATWAY.vbhtml" />
+    <Content Include="Linq\Linq_DRUG.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Linq_DRUG.designer.vb</LastGenOutput>
+    </Content>
+    <None Include="Linq\Linq_DRUG.dbml.layout">
+      <DependentUpon>Linq_DRUG.dbml</DependentUpon>
+    </None>
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -1377,6 +1377,7 @@
     <None Include="Web References\WS_GET_CPN\WS_DATA_CENTER.disco" />
     <Content Include="Web.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1394,7 +1395,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="CLASS\DAO\" />
     <Folder Include="Models\" />
     <Folder Include="PDF\" />
     <Folder Include="Scripts_angular\DR\" />

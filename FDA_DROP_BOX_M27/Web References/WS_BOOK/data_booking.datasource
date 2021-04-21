@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="data_booking" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>FDA_DROP_BOX_M27.WS_BOOK.data_booking, Web References.WS_BOOK.Reference.vb.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>FDA_DROP_BOX_M27.WS_BOOK.data_booking</TypeInfo>
 </GenericObjectDataSource>
