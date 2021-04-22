@@ -1,14 +1,15 @@
-﻿@Code
-    ViewData("Title") = "INPUT_HACCP"
+﻿
+@Code
+    ViewData("Title") = "INPUT_ISO"
 End Code
 
-<h2 style="font-family:'TH SarabunPSK';font-size:24px;">
+<h2 style="font-family:'TH SarabunPSK';font-size:20px;">
     แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
 </h2>
 <table width="100%" style="font-family:'TH SarabunPSK';font-size:20px;">
     <tr>
         <td style="height:25px;width:35%;">
-            1. Certification number/Registration Number/License Number<font color="red">*</font> :
+            1. Certification Number/Registration Number/License Number<font color="red">*</font> :
         </td>
         <td>
             <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
@@ -56,7 +57,7 @@ End Code
     </tr>
     <tr>
         <td style="height:25px">
-            6. Organization Code (รหัสองค์กร)<font color="red">*</font> :
+            6. Organization Code (รหัสองค์กร) :
         </td>
         <td>
             <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
@@ -72,7 +73,7 @@ End Code
     </tr>
     <tr>
         <td style="height:25px">
-            7. วันเดือนปีที่ออกหนังสือ HACCP (Issue Date)<font color="red">*</font> :
+            7. วันเดือนปีที่ออกหนังสือ ISO (Issue Date)<font color="red">*</font> :
         </td>
         <td>
             <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
@@ -80,7 +81,7 @@ End Code
     </tr>
     <tr>
         <td style="height:25px">
-            วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
+            วันเดือนปีที่หมดอายุ (Expiry Date) :
         </td>
         <td>
             <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
@@ -88,7 +89,7 @@ End Code
     </tr>
     <tr>
         <td style="height:25px">
-            8. หน่วยงานที่ออกใบรับรอง (Certification Body)
+            8. หน่วยงานที่ออกใบรับรอง (Certification Body)<font color="red">*</font>
         </td>
         <td>
             <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
@@ -101,22 +102,19 @@ End Code
         </td>
         <td>
             <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
-
         </td>
     </tr>
     <tr>
         <td style="height:25px">
-            9. สถานที่ผลิตได้มาตฐาน HACCP ตาม :
+            9. สถานที่ผลิตได้มาตรฐาน ISO ที่เกี่ยวกับการผลิต<font color="red">*</font> :
         </td>
         <td>
             <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
-
-
         </td>
     </tr>
 </table>
 <br />
-<h2 style="font-family:'TH SarabunPSK';font-size:24px;">
+<h2>
     รายละเอียดผลิตภัณฑ์ที่ได้รับการรับรอง
 </h2>
 <table>

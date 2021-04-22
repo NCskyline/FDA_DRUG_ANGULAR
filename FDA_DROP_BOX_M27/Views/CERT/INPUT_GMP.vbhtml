@@ -83,7 +83,7 @@ End Code
             วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
         </td>
         <td >
-            <asp:Label ID="lbl_EXP_DOCUMENT_DATE" runat="server" Text="-"></asp:Label>
+            <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
     <tr>

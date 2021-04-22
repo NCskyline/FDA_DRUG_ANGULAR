@@ -179,6 +179,7 @@
     <Compile Include="CLASS\MODEL\XML_PDF.vb" />
     <Compile Include="Controllers\AUTHENController.vb" />
     <Compile Include="Controllers\CERTController.vb" />
+    <Compile Include="Controllers\DHController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -369,6 +370,12 @@
     <Content Include="Views\CERT\FRM_CERT_MAIN.vbhtml" />
     <Content Include="Views\CERT\INPUT_GMP.vbhtml" />
     <Content Include="Views\CERT\INPUT_HACCP.vbhtml" />
+    <Content Include="Views\CERT\HEADER_CERT.vbhtml" />
+    <Content Include="Views\CERT\INPUT_ISO.vbhtml" />
+    <Content Include="Views\CERT\INPUT_CERT_OTHER.vbhtml" />
+    <Content Include="Views\DH\INPUT_DH_AR.vbhtml" />
+    <Content Include="Views\DH\HEADER_DH.vbhtml" />
+    <Content Include="Views\DH\INPUT_DH_AN.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
