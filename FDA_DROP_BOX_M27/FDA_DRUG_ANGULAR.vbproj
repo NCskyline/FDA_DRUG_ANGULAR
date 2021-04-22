@@ -178,6 +178,7 @@
     <Compile Include="CLASS\MODEL\MODEL_BOX.vb" />
     <Compile Include="CLASS\MODEL\XML_PDF.vb" />
     <Compile Include="Controllers\AUTHENController.vb" />
+    <Compile Include="Controllers\CERTController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -365,6 +366,9 @@
     <None Include="Linq\Linq_DRUG.dbml.layout">
       <DependentUpon>Linq_DRUG.dbml</DependentUpon>
     </None>
+    <Content Include="Views\CERT\FRM_CERT_MAIN.vbhtml" />
+    <Content Include="Views\CERT\INPUT_GMP.vbhtml" />
+    <Content Include="Views\CERT\INPUT_HACCP.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
