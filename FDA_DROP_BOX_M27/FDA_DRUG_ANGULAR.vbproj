@@ -380,8 +380,6 @@
     <Content Include="Views\DH\INPUT_DH_IR.vbhtml" />
     <Content Include="Views\DH\INPUT_DH_IN.vbhtml" />
     <Content Include="Views\DR_EDIT_REQUEST\INPUT_YOR_5.vbhtml" />
-    <Content Include="Views\DH\FRM_CHEMICAL_MAIN.vbhtml" />
-    <Content Include="Views\DH\INPUT_CHEMICAL_RQT.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
