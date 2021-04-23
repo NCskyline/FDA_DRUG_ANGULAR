@@ -180,6 +180,7 @@
     <Compile Include="Controllers\AUTHENController.vb" />
     <Compile Include="Controllers\CERTController.vb" />
     <Compile Include="Controllers\DHController.vb" />
+    <Compile Include="Controllers\DR_EDIT_REQUESTController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -378,6 +379,7 @@
     <Content Include="Views\DH\INPUT_DH_AN.vbhtml" />
     <Content Include="Views\DH\INPUT_DH_IR.vbhtml" />
     <Content Include="Views\DH\INPUT_DH_IN.vbhtml" />
+    <Content Include="Views\DR_EDIT_REQUEST\INPUT_YOR_5.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
