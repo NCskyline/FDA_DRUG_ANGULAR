@@ -11,5 +11,8 @@ Namespace Controllers
         Function INPUT_YOR_5() As ActionResult
             Return View()
         End Function
+        Function INPUT_YOR_4() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
