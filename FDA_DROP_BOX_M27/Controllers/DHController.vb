@@ -23,5 +23,11 @@ Namespace Controllers
         Function INPUT_DH_IN() As ActionResult
             Return View()
         End Function
+        Function FRM_CHEMICAL_MAIN() As ActionResult
+            Return View()
+        End Function
+        Function INPUT_CHEMICAL_RQT() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
