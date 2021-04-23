@@ -5,7 +5,7 @@ End Code
 <center>
     <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2> <br />
     <h2>
-        เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำำรับยาผลิตในประเทศ
+        เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ
     </h2>
 </center>
 <table>
@@ -139,6 +139,43 @@ End Code
                     <input type="radio" ng-model="LCN.TYPE" value="2">
                     ใช้ในการพัฒนาตำรับยาที่ได้เลขทะเบียนแล้ว
                 </label> <br />
+                <label>
+                    <input type="radio" ng-model="LCN.TYPE" value="2">
+                    อื่น ๆ (ระบุ)
+                </label>
+                <input />
+            </form>
+        </td>
+    </tr>
+</table> <br />
+พร้อมนี้ได้แนบหลักฐานประกอบการพิจารณา ดังนี้
+<table>
+    <tr>
+        <td>
+            <form name="myForm" ng-controller="ExampleController">
+                <label>
+                    <input type="radio" ng-model="LCN.TYPE" value="1">
+                    สำเนา ผ.ย. ๘ ที่ได้รับอนุมัติแล้ว พร้อมหนังสือสั่งซื้อจากผู้รับอนุญาตผลิตยา
+                </label> <br />
+                <label>
+                    <input type="radio" ng-model="LCN.TYPE" value="2">
+                    สำเนาใบอนุญาตผลิตในต่างประเทศ และรับรองสำำเนาโดยผู้รับอนุญาตที่ขอจดแจ้งเภสัชเคมีภัณฑ์
+                </label> <br />
+                <label>
+                    <input type="radio" ng-model="LCN.TYPE" value="2">
+                    สำเนาใบสำคัญการขึ้นทะเบียนตำรับยา และสำเนา ท.ย.๑ หน้า๑ และหน้า๒/แบบ ย.๑ หน้า๓
+                </label> <br />
+                <label>
+                    <input type="radio" ng-model="LCN.TYPE" value="2">
+                    สำเนารายงานผลการตรวจวิเคราะห์คุณภาพ (Certification of Analysis) ซึ่งระบุข้อกำหนดมาตราฐาน
+                    (Specifications)
+                </label> <br />
+                         <label>
+                             <input type="radio" ng-model="LCN.TYPE" value="2">
+                             สำเนาหนังสือรับรองมาตราฐานหลักเกณฑ์วิธีการที่ดีในการผลิตเภสัชเคมีภัณฑ์
+                             (GoodManufacturing Practice) ตามมาตราฐานองค์การอนามัยโลกหรือเทียบเท่า (กรณีนำเข้า)
+                             (Specifications)
+                         </label> <br />
                 <label>
                     <input type="radio" ng-model="LCN.TYPE" value="2">
                     อื่น ๆ (ระบุ)

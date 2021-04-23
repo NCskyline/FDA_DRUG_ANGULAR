@@ -376,6 +376,8 @@
     <Content Include="Views\DH\INPUT_DH_AR.vbhtml" />
     <Content Include="Views\DH\HEADER_DH.vbhtml" />
     <Content Include="Views\DH\INPUT_DH_AN.vbhtml" />
+    <Content Include="Views\DH\INPUT_DH_IR.vbhtml" />
+    <Content Include="Views\DH\INPUT_DH_IN.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
