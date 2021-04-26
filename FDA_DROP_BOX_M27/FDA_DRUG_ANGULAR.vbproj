@@ -182,6 +182,7 @@
     <Compile Include="Controllers\DHController.vb" />
     <Compile Include="Controllers\DLController.vb" />
     <Compile Include="Controllers\DR_EDIT_REQUESTController.vb" />
+    <Compile Include="Controllers\LCNController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -386,6 +387,16 @@
     <Content Include="Views\DL\INPUT_DL.vbhtml" />
     <Content Include="Views\DL\INPUT_ANIMAL.vbhtml" />
     <Content Include="Views\DL\INPUT_REGIST_DETAIL.vbhtml" />
+    <Content Include="Views\LCN\INPUTdalcn_output_1.vbhtml" />
+    <Content Include="Views\LCN\INPUTdalcn_output_2.vbhtml" />
+    <Content Include="Views\LCN\INPUTdalcn_output_3.vbhtml" />
+    <Content Include="Views\LCN\INPUTdalcn_output_4.vbhtml" />
+    <Content Include="Views\LCN\INPUT_ChangLocation_3_4_3_BUY.vbhtml" />
+    <Content Include="Views\LCN\INPUT_NORDOJ_3_4_1.vbhtml" />
+    <Content Include="Views\LCN\INPUT_NORYOR_1.vbhtml" />
+    <Content Include="Views\LCN\INPUT_PORYOR_1.vbhtml" />
+    <Content Include="Views\LCN\INPUT_SORDOJ_3_4_1.vbhtml" />
+    <Content Include="Views\LCN\INPUT_SORDOJ_3_4_1_Tan.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -1422,7 +1433,6 @@
     <Folder Include="Views\DI\" />
     <Folder Include="Views\DR\" />
     <Folder Include="Views\DS\" />
-    <Folder Include="Views\LCN\" />
     <Folder Include="Views\SV_CENTER\" />
   </ItemGroup>
   <ItemGroup>
