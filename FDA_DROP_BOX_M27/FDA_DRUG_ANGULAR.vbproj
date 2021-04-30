@@ -397,6 +397,14 @@
     <Content Include="Views\LCN\INPUT_PORYOR_1.vbhtml" />
     <Content Include="Views\LCN\INPUT_SORDOJ_3_4_1.vbhtml" />
     <Content Include="Views\LCN\INPUT_SORDOJ_3_4_1_Tan.vbhtml" />
+    <Content Include="Views\DL\INPUT_ATC.vbhtml" />
+    <Content Include="Views\DL\INPUT_CHEM.vbhtml" />
+    <Content Include="Views\DL\INPUT_DRUG_USE.vbhtml" />
+    <Content Include="Views\DL\INPUT_KEEP.vbhtml" />
+    <Content Include="Views\DL\INPUT_PACKAGE_DETAIL.vbhtml" />
+    <Content Include="Views\DL\INPUT_PACKAGE_DETAIL2.vbhtml" />
+    <Content Include="Views\DL\INPUT_PRODUCCER.vbhtml" />
+    <Content Include="Views\DL\INPUT_PRODUCCER_IN.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
