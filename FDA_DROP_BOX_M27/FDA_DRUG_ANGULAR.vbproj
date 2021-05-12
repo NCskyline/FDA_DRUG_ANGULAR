@@ -181,6 +181,7 @@
     <Compile Include="Controllers\CERTController.vb" />
     <Compile Include="Controllers\DHController.vb" />
     <Compile Include="Controllers\DLController.vb" />
+    <Compile Include="Controllers\DRController.vb" />
     <Compile Include="Controllers\DR_EDIT_REQUESTController.vb" />
     <Compile Include="Controllers\LCNController.vb" />
     <Compile Include="Controllers\SV_CENTERController.vb" />
@@ -407,6 +408,21 @@
     <Content Include="Views\DL\INPUT_PACKAGE_DETAIL2.vbhtml" />
     <Content Include="Views\DL\INPUT_PRODUCCER.vbhtml" />
     <Content Include="Views\DL\INPUT_PRODUCCER_IN.vbhtml" />
+    <Content Include="Views\DR\INPUT_ATC.vbhtml" />
+    <Content Include="Views\DR\INPUT_CHEM.vbhtml" />
+    <Content Include="Views\DR\INPUT_CONDITION.vbhtml" />
+    <Content Include="Views\DR\INPUT_DETAIL_USE.vbhtml" />
+    <Content Include="Views\DR\INPUT_DRUG_ANIMAL.vbhtml" />
+    <Content Include="Views\DR\INPUT_DRUG_KEEP.vbhtml" />
+    <Content Include="Views\DR\INPUT_DTB.vbhtml" />
+    <Content Include="Views\DR\INPUT_EQTO.vbhtml" />
+    <Content Include="Views\DR\INPUT_GENERAL.vbhtml" />
+    <Content Include="Views\DR\INPUT_NAME_DRUG_EXPORT.vbhtml" />
+    <Content Include="Views\DR\INPUT_NOUSE.vbhtml" />
+    <Content Include="Views\DR\INPUT_PACKAGE_DETAIL2.vbhtml" />
+    <Content Include="Views\DR\INPUT_PRODUCCER.vbhtml" />
+    <Content Include="Views\DR\INPUT_PRODUCCER_IN.vbhtml" />
+    <Content Include="Views\DR\INPUT_SUB_DRUG_ANIMAL.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -1441,7 +1457,6 @@
     <Folder Include="PDF\" />
     <Folder Include="Scripts_angular\DR\" />
     <Folder Include="Views\DI\" />
-    <Folder Include="Views\DR\" />
     <Folder Include="Views\DS\" />
     <Folder Include="Views\SV_CENTER\" />
   </ItemGroup>
