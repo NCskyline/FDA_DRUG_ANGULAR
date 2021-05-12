@@ -183,6 +183,7 @@
     <Compile Include="Controllers\DLController.vb" />
     <Compile Include="Controllers\DR_EDIT_REQUESTController.vb" />
     <Compile Include="Controllers\LCNController.vb" />
+    <Compile Include="Controllers\SV_CENTERController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -317,6 +318,7 @@
     <Content Include="js\jquery-fusioncharts.min.js" />
     <Content Include="js\jquery.circlechart.js" />
     <Content Include="Scripts_angular\CENTER_SV.js" />
+    <Content Include="Scripts_angular\DH_CTRL.js" />
     <Content Include="Scripts_angular\JS_COMMON.js" />
     <Content Include="js\map.js" />
     <Content Include="js\maps\fusioncharts.usa.js" />

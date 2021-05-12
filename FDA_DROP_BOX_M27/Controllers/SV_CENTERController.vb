@@ -545,8 +545,8 @@ Namespace Controllers
         ''' <returns></returns>
         Function ADD_DATA_INV(ByVal XML As String, ByVal XML2 As String, ByVal TOKEN As String, ByVal CTZNO As String) As JsonResult
             Dim obj = JsonConvert.DeserializeObject(XML)
-            Dim jss As New JavaScriptSerializer
-            Dim bb As MODEL_BOX = jss.Deserialize(XML, GetType(MODEL_BOX))
+            'Dim jss As New JavaScriptSerializer
+            'Dim bb As MODEL_BOX = jss.Deserialize(XML, GetType(MODEL_BOX))
             Dim result As String = ""
             Dim chk As Boolean = True
             Dim TR_ID As String = ""
