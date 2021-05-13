@@ -27,7 +27,7 @@ End Code
                 </td>
                 <td>
                     <select class="dropdown">
-                        <option>Default</option>
+                        <option ng-repeat="x in REF_CERT" value="{{x.IDA}}">{{x.CER_NUMBER}}</option>
                     </select>
                 </td>
             </tr>

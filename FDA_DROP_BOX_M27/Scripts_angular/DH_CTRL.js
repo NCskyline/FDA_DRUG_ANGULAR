@@ -6,11 +6,18 @@
     function pageload() {
         
 
-        var data_CNT = CENTER_SV.GETDATA_SYSISOCNT();
+        var data_CNT = CENTER_SV.SP_MASTER_sysisocnt();
         data_CNT.then(function (datas) {
             $scope.CNT_LIST = datas.data;
             $scope.states = loadClaim($scope.CNT_LIST);
         }, function () { });
+
+        var data_REF_CERT = CENTER_SV.SP_MASTER_CER_PK_BY_FK_IDA(24153);
+        data_REF_CERT.then(function (datas) {
+            $scope.REF_CERT = datas.data;
+            $scope.states = loadClaim($scope.REF_CERT);
+        }, function () { })
+
     }
 
 

@@ -14,6 +14,17 @@
         return response;
     };
 
+    this.SP_MASTER_CER_PK_BY_FK_IDA = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_MASTER_CER_PK_BY_FK_IDA"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
+
 
     this.UPDATE_BOX_INV = function (model, model2) {
         var response = $http({
@@ -85,6 +96,18 @@
         });
         return response;
     };
+    //
+    this.SP_MASTER_sysisocnt = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_MASTER_sysisocnt"),
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+
 
     this.SP_GET_ISO = function () {
         var response = $http({
