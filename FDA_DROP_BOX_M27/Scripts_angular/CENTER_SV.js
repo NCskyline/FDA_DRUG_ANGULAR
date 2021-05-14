@@ -375,4 +375,17 @@
         });
         return response;
     };
+
+    this.SP_GET_DATA_LCN = function (CITIZEN,lcnno,pvncd) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_GET_DATA_LCN"),
+            params: {
+                CITIZEN: CITIZEN,
+                lcnno: lcnno,
+                pvncd: pvncd
+            }
+        });
+        return response;
+    };
 });

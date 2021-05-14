@@ -141,8 +141,141 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
         End Function
 
+        Function SP_GET_DATA_LCN(ByVal CITIZIN As String, ByVal lcnno As String, ByVal PVNCD As Integer) As JsonResult
 
 
+            Dim dt As New DataTable
+            Dim command As String = " "
+            Dim bao_aa As New BAO
+            command = "select * from dbo.Vw_SP_DALCN_SEARCH_EDIT "
+
+
+            Dim str_where As String = ""
+            Dim dt2 As New DataTable
+
+            If CITIZIN = "" And lcnno = "" Then
+                'If pvncd = 10 Then
+                '    RadGrid1.DataSource = dt
+                'Else
+                '    RadGrid1.DataSource = dt.Select("pvncd = '" & pvncd & "'")
+                'End If
+                command &= str_where
+            Else
+                If CITIZIN <> "" Then
+                    str_where = "where CITIZEN_ID_AUTHORIZE='" & CITIZIN & "'"
+                    If lcnno <> "" Then
+                        If str_where <> "" Then
+                            str_where &= " and lcnno_no like '%" & lcnno & "%'"
+                        Else
+                            str_where &= "lcnno_no like '%" & lcnno & "%'"
+                        End If
+
+                    End If
+                    'r_result = dt.Select(str_where)
+                    command &= str_where
+                Else
+                    If str_where = "" Then
+                        If str_where <> "" Then
+                            If lcnno <> "" Then
+                                str_where &= " and lcnno_no like '%" & lcnno & "%'"
+                            End If
+                        Else
+                            If lcnno <> "" Then
+                                str_where = "where lcnno_no like '%" & lcnno & "%'"
+
+                            End If
+                        End If
+                        'r_result = dt.Select(str_where)
+                        command &= str_where
+                    Else
+                        If lcnno <> "" Then
+                            str_where = "where lcnno_no like '%" & lcnno & "%'"
+
+                        End If
+                        'r_result = dt.Select(str_where)
+                        command &= str_where
+                    End If
+                    'r_result = dt.Select(str_where)
+                    'command &= str_where
+                End If
+                'dt2 = dt.Clone
+
+                'For Each dr As DataRow In r_result
+                '    dt2.Rows.Add(dr.ItemArray)
+                'Next
+
+
+
+
+                '----new
+
+            End If
+            'pvncd = 12
+            'If rdl_stat.SelectedValue = 0 Then
+            '    If PVNCD = 10 Then
+            '        'RadGrid1.DataSource = dt2
+
+            '        'command &= str_where
+            '    Else
+            '        'RadGrid1.DataSource = dt2.Select("pvncd = '" & pvncd & "'")
+            '        If command.Contains("where") Then
+            '            command &= " and pvncd = '" & PVNCD & "' and lcntpcd <> 'ผย1' "
+            '        Else
+            '            command &= "where pvncd = '" & PVNCD & "' and lcntpcd <> 'ผย1'"
+            '        End If
+
+            '    End If
+
+            'ElseIf rdl_stat.SelectedValue = 1 Then
+            '    If PVNCD = 10 Then
+            '        'RadGrid1.DataSource = dt2.Select("lcn_stat=0")
+            '        If command.Contains("where") Then
+            '            command &= " and lcn_stat=0"
+            '        Else
+            '            If command.Contains("pvncd") Then
+            '                command &= " and lcn_stat=0 and lcntpcd <> 'ผย1' "
+            '            Else
+            '                command &= "where lcn_stat=0 and lcntpcd <> 'ผย1' "
+            '            End If
+            '        End If
+
+            '    Else
+            '        'RadGrid1.DataSource = dt2.Select("lcn_stat=0 and pvncd = '" & pvncd & "'")
+            '        If command.Contains("where") Then
+            '            command &= " and lcn_stat=0 and pvncd = '" & PVNCD & "'"
+            '        Else
+            '            command &= "where lcn_stat=0 and pvncd = '" & PVNCD & "'"
+            '        End If
+
+            '    End If
+
+            'ElseIf rdl_stat.SelectedValue = 2 Then
+            '    If PVNCD = 10 Then
+            '        If command.Contains("where") Then
+            '            command &= " and lcn_stat=0"
+            '        Else
+            '            If command.Contains("pvncd") Then
+            '                command &= " and lcn_stat=0  and lcntpcd <> 'ผย1' "
+            '            Else
+            '                command &= "where lcn_stat=0  and lcntpcd <> 'ผย1' "
+            '            End If
+            '        End If
+            '    Else
+            '        'RadGrid1.DataSource = dt2.Select("lcn_stat=1 and pvncd = '" & pvncd & "'")
+            '        If command.Contains("where") Then
+            '            command &= " and lcn_stat=1 and pvncd = '" & PVNCD & "'"
+            '        Else
+            '            command &= "where lcn_stat=1 and pvncd = '" & PVNCD & "'"
+            '        End If
+            '    End If
+
+            'End If
+            dt = bao_aa.Queryds(command)
+
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
 
 #End Region
 

@@ -184,6 +184,7 @@
     <Compile Include="Controllers\DRController.vb" />
     <Compile Include="Controllers\DR_EDIT_REQUESTController.vb" />
     <Compile Include="Controllers\LCNController.vb" />
+    <Compile Include="Controllers\OtherController.vb" />
     <Compile Include="Controllers\SV_CENTERController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
@@ -359,6 +360,7 @@
     <Content Include="fonts\summernote\summernote.ttf" />
     <Content Include="fonts\summernote\summernote.woff" />
     <Content Include="Scripts_angular\AUTHEN_STAFF_CTRL.js" />
+    <Content Include="Scripts_angular\LCN_CTRL.js" />
     <Content Include="Web References\WS_FLATTEN\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
@@ -423,6 +425,30 @@
     <Content Include="Views\DR\INPUT_PRODUCCER.vbhtml" />
     <Content Include="Views\DR\INPUT_PRODUCCER_IN.vbhtml" />
     <Content Include="Views\DR\INPUT_SUB_DRUG_ANIMAL.vbhtml" />
+    <Content Include="Views\LCN\FRM_LCN_DRUG_SEARCH.vbhtml" />
+    <Content Include="Views\LCN\FRM_LCN_STAFF_LCN_INFORMATION.vbhtml" />
+    <Content Include="Views\LCN\FRM_STAFF_LCN_ADD_LOCATION.vbhtml" />
+    <Content Include="Views\LCN\FRM_STAFF_LCN_ADD_LOCATION_KEEP.vbhtml" />
+    <Content Include="Views\LCN\FRM_STAFF_LCN_CHANGE_BSN.vbhtml" />
+    <Content Include="Views\LCN\FRM_STAFF_LCN_CHANGE_LCNSNM.vbhtml" />
+    <Content Include="Views\LCN\FRM_STAFF_LCN_PHR_INSERT.vbhtml" />
+    <Content Include="Views\LCN\FRM_STAFF_LCN_SEARCH.vbhtml" />
+    <Content Include="Views\LCN\FRM_STAFF_LCN_SELECT_LOCATION_NEW.vbhtml" />
+    <Content Include="Views\LCN\INPUT_BOJOD_3_4_1.vbhtml" />
+    <Content Include="Views\LCN\INPUT_KHOPO_WO_JO_3_2.vbhtml" />
+    <Content Include="Views\LCN\INPUT_KHOPO_WO_JO_4_2.vbhtml" />
+    <Content Include="Views\LCN\INPUT_KHOTO_WO_JO_3_2.vbhtml" />
+    <Content Include="Views\LCN\INPUT_KHOTO_WO_JO_4_2.vbhtml" />
+    <Content Include="Views\LCN\INPUT_KHO_WO_JO_3_2.vbhtml" />
+    <Content Include="Views\LCN\INPUT_KHO_WO_JO_4_2.vbhtml" />
+    <Content Include="Views\LCN\INPUT_MODIFY_BOJOD3_4.vbhtml" />
+    <Content Include="Views\LCN\INPUT_MODIFY_PORDOJ_3_2.vbhtml" />
+    <Content Include="Views\LCN\INPUT_PORDOJ_3_4_1.vbhtml" />
+    <Content Include="Views\LCN\INPUT_PORDOJ_3_4_1_Tan.vbhtml" />
+    <Content Include="Views\Other\INPUT_DRUG_Project_Summary.vbhtml" />
+    <Content Include="Views\Other\INPUT_Reseach_Project_Summary.vbhtml" />
+    <Content Include="Views\DH\INPUT_CHEMICAL_RQT.vbhtml" />
+    <Content Include="Views\DH\FRM_CHEMICAL_MAIN.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
