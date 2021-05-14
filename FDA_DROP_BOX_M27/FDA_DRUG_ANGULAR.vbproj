@@ -183,6 +183,7 @@
     <Compile Include="Controllers\DLController.vb" />
     <Compile Include="Controllers\DR_EDIT_REQUESTController.vb" />
     <Compile Include="Controllers\LCNController.vb" />
+    <Compile Include="Controllers\OtherController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -255,6 +256,73 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\FDA_DROP_BOX_M27.dll" />
+    <Content Include="bin\FDA_DROP_BOX_M27.pdb" />
+    <Content Include="bin\FDA_DROP_BOX_M27.xml" />
+    <Content Include="bin\FDA_DROP_BOX_M27.XmlSerializers.dll" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -292,6 +360,7 @@
     <Content Include="css\icomoon\fonts\icomoon.eot" />
     <Content Include="css\icomoon\fonts\icomoon.ttf" />
     <Content Include="css\icomoon\fonts\icomoon.woff" />
+    <Content Include="Images\garuda\Capture_Garuda.PNG" />
     <Content Include="Images\layout\icon\Thumbs.db" />
     <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\common.js" />
@@ -356,6 +425,7 @@
     <Content Include="fonts\summernote\summernote.ttf" />
     <Content Include="fonts\summernote\summernote.woff" />
     <Content Include="Scripts_angular\AUTHEN_STAFF_CTRL.js" />
+    <Content Include="Scripts_angular\LCN_CTRL.js" />
     <Content Include="Web References\WS_FLATTEN\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
@@ -367,6 +437,24 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Linq_DRUG.designer.vb</LastGenOutput>
     </Content>
+    <Content Include="bin\FDA_DROP_BOX_M27.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\Web.config" />
+    <None Include="bin\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="bin\Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
     <None Include="Linq\Linq_DRUG.dbml.layout">
       <DependentUpon>Linq_DRUG.dbml</DependentUpon>
     </None>
@@ -391,12 +479,33 @@
     <Content Include="Views\LCN\INPUTdalcn_output_2.vbhtml" />
     <Content Include="Views\LCN\INPUTdalcn_output_3.vbhtml" />
     <Content Include="Views\LCN\INPUTdalcn_output_4.vbhtml" />
-    <Content Include="Views\LCN\INPUT_ChangLocation_3_4_3_BUY.vbhtml" />
     <Content Include="Views\LCN\INPUT_NORDOJ_3_4_1.vbhtml" />
     <Content Include="Views\LCN\INPUT_NORYOR_1.vbhtml" />
     <Content Include="Views\LCN\INPUT_PORYOR_1.vbhtml" />
     <Content Include="Views\LCN\INPUT_SORDOJ_3_4_1.vbhtml" />
     <Content Include="Views\LCN\INPUT_SORDOJ_3_4_1_Tan.vbhtml" />
+    <Content Include="Views\LCN\INPUT_BOJOD_3_4_1.vbhtml" />
+    <Content Include="Views\LCN\INPUT_KHO_WO_JO_3_2.vbhtml" />
+    <Content Include="Views\LCN\INPUT_KHO_WO_JO_4_2.vbhtml" />
+    <Content Include="Views\LCN\INPUT_MODIFY_BOJOD3_4.vbhtml" />
+    <Content Include="Views\LCN\INPUT_MODIFY_PORDOJ_3_2.vbhtml" />
+    <Content Include="Views\LCN\INPUT_KHOTO_WO_JO_3_2.vbhtml" />
+    <Content Include="Views\LCN\INPUT_KHOTO_WO_JO_4_2.vbhtml" />
+    <Content Include="Views\LCN\INPUT_KHOPO_WO_JO_3_2.vbhtml" />
+    <Content Include="Views\LCN\INPUT_KHOPO_WO_JO_4_2.vbhtml" />
+    <Content Include="Views\LCN\INPUT_PORDOJ_3_4_1.vbhtml" />
+    <Content Include="Views\LCN\INPUT_PORDOJ_3_4_1_Tan.vbhtml" />
+    <Content Include="Views\Other\INPUT_DRUG_Project_Summary.vbhtml" />
+    <Content Include="Views\Other\INPUT_Reseach_Project_Summary.vbhtml" />
+    <Content Include="Views\LCN\FRM_STAFF_LCN_SEARCH.vbhtml" />
+    <Content Include="Views\LCN\FRM_LCN_STAFF_LCN_INFORMATION.vbhtml" />
+    <Content Include="Views\LCN\FRM_STAFF_LCN_ADD_LOCATION.vbhtml" />
+    <Content Include="Views\LCN\FRM_STAFF_LCN_ADD_LOCATION_KEEP.vbhtml" />
+    <Content Include="Views\LCN\FRM_STAFF_LCN_SELECT_LOCATION_NEW.vbhtml" />
+    <Content Include="Views\LCN\FRM_STAFF_LCN_CHANGE_BSN.vbhtml" />
+    <Content Include="Views\LCN\FRM_STAFF_LCN_CHANGE_LCNSNM.vbhtml" />
+    <Content Include="Views\LCN\FRM_STAFF_LCN_PHR_INSERT.vbhtml" />
+    <Content Include="Views\LCN\FRM_LCN_DRUG_SEARCH.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
