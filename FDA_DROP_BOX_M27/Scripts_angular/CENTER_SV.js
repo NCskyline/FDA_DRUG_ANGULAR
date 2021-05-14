@@ -24,6 +24,41 @@
         });
         return response;
     };
+    
+    this.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY = function (identify,lcnsid) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY"),
+            params: {
+                identify: identify,
+                lcnsid: lcnsid
+            }
+        });
+        return response;
+    };
+    
+
+    this.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA = function (lctida) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA"),
+            params: {
+                LOCATION_ADDRESS_IDA: lctida
+            }
+        });
+        return response;
+    };
+
+    this.GET_LCNNO_SHOW = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_LCN_NO"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
 
 
     this.UPDATE_BOX_INV = function (model, model2) {

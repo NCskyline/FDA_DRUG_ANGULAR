@@ -319,6 +319,7 @@
     <Content Include="js\jquery-fusioncharts.min.js" />
     <Content Include="js\jquery.circlechart.js" />
     <Content Include="Scripts_angular\CENTER_SV.js" />
+    <Content Include="Scripts_angular\CERT_GMP_CTRL.js" />
     <Content Include="Scripts_angular\DH_CTRL.js" />
     <Content Include="Scripts_angular\JS_COMMON.js" />
     <Content Include="js\map.js" />
