@@ -37,7 +37,7 @@
 
 
 <h1 style="text-align:left;font-size:24px;">
-    <strong>แบบ ส.ว.จ. ๓/๔-๑</strong>
+    <strong>แบบ ข.ว.จ. ๓/๔-๑</strong>
 </h1>
 <br />
 <div class="title1">
@@ -46,7 +46,7 @@
         ผู้ขออนุญาติ<br />
         หรือ<br />
         ผู้ดำเนินกิจการ<br />
-        ขนาด ๓ x ๔ ซม.<br />
+        ขนาด ๓ นิ้ว<br />
     </label>
 </div>
 
@@ -179,7 +179,7 @@
 <h2 style="font-size:24px;">
     <strong>๑. ข้อมูลผู้ขอรับใบอนุญาต</strong>
 </h2>
-<table style="width:90%;margin-left:5%" @*border="1"*@>
+<table style="width:90%" @*border="1"*@>
     <tr>
         <td style="font-size:20px" width="40%">
             ข้าพเจ้า (ชื่อบุคคล/นิติบุคคล)
@@ -224,14 +224,6 @@
     </tr>
     <tr>
         <td style="font-size:20px">
-            เลขรหัสประจำบ้าน
-        </td>
-        <td style="font-size:20px" colspan="6">
-            text
-        </td>
-    </tr>
-    <tr>
-        <td style="font-size:20px">
             อยู่เลขที่
         </td>
         <td style="font-size:20px" colspan="6">
@@ -260,10 +252,10 @@
 <h2 style="font-size:24px;">
     <strong>๒. ข้อมูลผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำำเนินกิจการเกี่ยวกับใบอนุญาต</strong>
 </h2>
-<table style="width:90%;margin-left:5%" @*border="1"*@>
+<table style="width:90%" @*border="1"*@>
     <tr>
         <td style="font-size:20px" width="40%">
-            ข้าพเจ้า
+            ชื่อ
         </td>
         <td style="font-size:20px" colspan="6">
             text
@@ -305,14 +297,6 @@
     </tr>
     <tr>
         <td style="font-size:20px">
-            เลขรหัสประจำบ้าน
-        </td>
-        <td style="font-size:20px" colspan="6">
-            text
-        </td>
-    </tr>
-    <tr>
-        <td style="font-size:20px">
             อยู่เลขที่
         </td>
         <td style="font-size:20px" colspan="6">
@@ -327,25 +311,11 @@
             text
         </td>
     </tr>
-    <tr>
-        <td style="font-size:20px">
-            E-mail
-        </td>
-        <td style="font-size:20px" colspan="6">
-            text
-        </td>
-    </tr>
-
 </table>
 
-<br />
-
+<div style="font-size:20px"><strong>๓. ข้อมูลการขออนุญาต</strong></div>
+<div style="font-size:20px;margin-left:5%">(๓.๑) <strong><u>กรณีขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔</u></strong></div>
 <table style="width:100%;font-size:20px" @*border="1"*@>
-    <tr>
-        <td colspan="4">
-            <p><strong>๓. ข้อมูลสถานที่นำเข้า</strong></p>
-        </td>
-    </tr>
     <tr>
         <td>
             ณ สถานที่ชื่อ
@@ -375,79 +345,241 @@
             text
         </td>
     </tr>
-</table>
-
-<table style="width:100%;font-size:20px" @*border="1"*@>
     <tr>
-        <td style="font-size:20px;width:70%">
-            โดยได้รับอนุญาตให้ผลิต/ขาย/นำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาตเลขที่
-        </td>
-        <td style="font-size:20px">
-            text
-        </td>
-    </tr>
-</table>
-
-<table style="width:100%;font-size:20px" @*border="1"*@>
-    <tr>
-        <td style="width:15%">
+        <td>
             โดยมีเภสัชกรชื่อ  1.
         </td>
         <td>
-            text
+            <input style="width:100%" />
         </td>
         <td style="width:30%">
             ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่
         </td>
         <td>
+            <input style="width:100%" />
+        </td>
+    </tr>
+</table>
+<br />
+<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
+<input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
+<br />
+<table style="width:100%;font-size:20px" @*border="1"*@>
+    <tr>
+        <td>
+            เป็นผู้รับอนุญาตขายยาแผนใบอนุญาตเลขที่
+        </td>
+        <td style="width:50%">
+            text
+        </td>
+        <td>
+            ตามกฎหมายว่าด้วยยา
+        </td>
+    </tr>
+</table>
+<div style="font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
+
+<div style="font-size:20px;margin-left:5%"><strong>(๓.๒) <u>กรณีขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ โดยการขายส่งตรง</u></strong></div>
+<table style="width:100%;font-size:20px" @*border="1"*@>
+    <tr>
+        <td colspan="2">
+            ผู้ขอรับใบอนุญาตได้รับอนุญาตให้ผลิต/ขาย/หรือนำเข้าซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาต
+        </td>
+    </tr>
+    <tr>
+        <td  colspan="2">
+            ผู้ขอรับใบอนุญาตได้รับอนุญาตให้ผลิต/ขาย/หรือนำเข้าซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาต
+        </td>
+    </tr>
+    <tr>
+        <td style="width:10%">
+            เลขที่
+        </td>
+        <td >
+            <input style="width:100%" />
+        </td>
+    </tr>
+</table>
+<div style="font-size:20px;margin-left:5%"><strong>(๓.๓) <u> กรณีขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ ในบริเวณสถานที่ที่มีการประชุม</u></strong></div>
+
+<table style="width:100%;font-size:20px" @*border="1"*@>
+    <tr>
+        <td colspan="4">
+            ผู้ขอรับใบอนุญาตได้รับอนุญาตให้ผลิต/ขาย/หรือนำเข้าซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาต
+        </td>
+    </tr>
+    <tr>
+        <td style="width:20%" >
+            เลขที่
+        </td>
+        <td colspan="4">
+            text
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            ขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในบริเวณสถานที่ที่มีการประชุม ณ
+        </td>
+    </tr>
+    <tr>
+        <td style="width:10%">
+            สถานที่ชื่อ
+        </td>
+        <td colspan="4">
+            text
+        </td>
+    </tr>
+    <tr>
+        <td  >
+            เลขรหัสประจำบ้าน
+        </td>
+        <td colspan="4">
+            text
+        </td>
+    </tr>
+    <tr>
+        <td >
+            ตั้งอยู่เลขที่
+        </td>
+        <td colspan="4">
+            text
+        </td>
+    </tr>
+    <tr>
+        <td >
+            โทรศัพท์/มือถือ
+        </td>
+        <td colspan="4">
+            text
+        </td>
+    </tr>
+    <tr>
+        <td >
+            ตั้งแต่วันที่ 
+        </td>
+        <td>
+            text
+        </td>
+        <td style="width:20%">
+            ถึงวันที่
+        </td>
+        <td>
             text
         </td>
     </tr>
 </table>
 
+<table style="width:100%;font-size:20px" @*border="1"*@>
+    <tr>
+        <td colspan="7">
+            <p>
+                <strong>
+                    ๔. ข้อมูลสถานที่เก็บ (กรณีเป็นสถานที่คนละแห่งกับสถานที่ตาม ๓)
+                </strong>
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:17%">
+            ณ สถานที่ชื่อ
+        </td>
+        <td colspan="4">
+            <select>
+                <option>1</option>
+            </select>
+        </td>
+        <td style="width:15%">
+            เลขรหัสประจำบ้าน
+        </td>
+        <td>
+            text
+        </td>
+    </tr>
+    <tr>
+        <td>
+            ตั้งอยู่เลขที่
+        <td colspan="7">
+            text
+        </td>
+    </tr>
+    <tr>
+        <td>
+            โทรศัพท์ / มือถือ
+        </td>
+        <td colspan="7">
+            text
+        </td>
+    </tr>
+
+</table>
 <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
 <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
-<div style="font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
+<br />
 <br />
 
-
-
-<div style=";font-size:20px"><strong>๔. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
-<div style="margin-left:5%;font-size:20px"><strong>๔.๑ กรณีขอรับใบอนุญาต (กรณีรายใหม่)</strong></div>
+<div style=";font-size:20px"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
+<div style="margin-left:5%;font-size:20px"><strong>๕.๑ <u>กรณีขอรับใบอนุญาต (กรณีรายใหม่)</u></strong></div>
+<div style="margin-left:8%;font-size:20px"><strong>๕.๑.๑ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong></div>
 <table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
     <tr>
         <td>
-            (๑) คำรับรองของผู้รับอนุญาตและเภสัชกรผู้ควบคุมกิจการ
+            (๑) สำเนาใบอนุญาตขายยาแผนปัจจุบันตามกฎหมายว่าด้วยยา
         </td>
     </tr>
     <tr>
         <td>
-            (๒) รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการ
-            เกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
+            (๒) คำรับรองของผู้รับอนุญาตและเภสัชกรผู้ควบคุมกิจการ
         </td>
     </tr>
     <tr>
         <td>
-            (๓) สำเนาใบอนุญาตประกอบวิชาชีพเภสัชกรรม
+            (๓) รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้ง
         </td>
     </tr>
     <tr>
         <td>
-            (๔) หนังสือแต่งตั้งผู้ดำเนินกิจการ กรณีผู้ขอรับใบอนุญาตเป็นนิติบุคคล
+            ให้ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
         </td>
     </tr>
     <tr>
         <td>
-            (๕) แผนที่แสดงที่ตั้งและแผนผังแสดงที่นำเข้าหรือเก็บซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ของสถานประกอบการ
+            (๔) สำเนาใบอนุญาตประกอบวิชาชีพเภสัชกรรม
         </td>
     </tr>
     <tr>
         <td>
-            (๖) รูปถ่ายแสดงที่นำำเข้าหรือเก็บซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ของสถานประกอบการจำำนวน ๑ รูป
+            (๕) หนังสือแต่งตั้งผู้ดำเนินกิจการ กรณีผู้ขอรับใบอนุญาตเป็นนิติบุคคล
         </td>
     </tr>
 </table>
-<div style="margin-left:5%;font-size:20px"><strong>๔.๒ กรณีขอต่ออายุใบอนุญาต</strong></div>
+<div style="margin-left:8%;font-size:20px"><strong>๕.๑.๒ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ โดยการขายส่งตรง</strong></div>
+<table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+    <tr>
+        <td>
+            (๑) สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี
+        </td>
+    </tr>
+    <tr>
+        <td>
+            (๒) รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้
+        </td>
+    </tr>
+    <tr>
+        <td>
+            ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
+        </td>
+    </tr>
+</table>
+<div style="margin-left:8%;font-size:20px"><strong>๕.๑.๓ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ ในบริเวณสถานที่ที่มีการประชุม</strong></div>
+<table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+    <tr>
+        <td>
+            (๑) สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี
+        </td>
+    </tr>
+</table>
+
+<div style="margin-left:5%;font-size:20px"><strong>๕.๒ กรณีขอต่ออายุใบอนุญาต</strong></div>
 <table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
     <tr>
         <td>
@@ -462,7 +594,7 @@
     </tr>
 
 </table>
-<div style="margin-left:5%;font-size:20px"><strong>๔.๓ กรณีขอรับใบแทนใบอนุญาต</strong></div>
+<div style="margin-left:5%;font-size:20px"><strong>๕.๓ กรณีขอรับใบแทนใบอนุญาต</strong></div>
 <table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
     <tr>
         <td>
@@ -528,7 +660,6 @@
     </tr>
 
 </table>
-
 
 
 

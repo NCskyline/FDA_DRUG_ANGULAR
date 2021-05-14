@@ -67,8 +67,8 @@
                     <div class="page-header">
                         <div class="card-tab-control page-header-content header-elements-md-inline container">
                             @*<div class="tab-content">
-                                <div data-index="1" class="tab-content-item active"><i class="h-icon fas fa-bookmark"></i>DATA</div>
-                            </div>*@
+                                    <div data-index="1" class="tab-content-item active"><i class="h-icon fas fa-bookmark"></i>DATA</div>
+                                </div>*@
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -94,6 +94,7 @@
             โทรศัพท์ 0-2590-7000
         </div>
     </footer>
+    <script src="~/Scripts_angular/LCN_CTRL.js"></script>
 </body>
 </html>
 

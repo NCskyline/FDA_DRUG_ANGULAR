@@ -117,7 +117,14 @@ Public Class BAO
     End Function
 
 
-
+    Public Function Queryds(ByVal Commands As String) As DataTable
+        Dim dt As New DataTable
+        Dim MyConnection As SqlConnection = New SqlConnection(ConfigurationManager.ConnectionStrings("LGT_DRUGConnectionString").ConnectionString)
+        Dim mySqlDataAdapter As SqlDataAdapter = New SqlDataAdapter(Commands, MyConnection)
+        mySqlDataAdapter.Fill(dt)
+        MyConnection.Close()
+        Return dt
+    End Function
 
 
     Public Function SP_CHECK_PERMISSON_SYSTEM(ByVal CTZNO As String, ByVal NITI_IDENTIFY As String, ByVal systemid As String) As DataTable

@@ -197,28 +197,30 @@
     </tr>
 </table>
 <div margin-bottom: 10px;></div>
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" border="1">
     <tr>
-        <td style="width:150px">
+        <td style="width:13%">
             โดยมีเภสัชกรชั้น
         </td>
-        <td style="text-align:left" width="100">
+        <td style="text-align:left;width:8%">
             <input style="width:100%" />
         </td>
-        <td style="text-align:center; width:80px">
+        <td style="text-align:center;width:5%">
             ชื่อ
         </td>
-        <td style="text-align:left" width="70">
-            <input style="width:100%" />
+        <td style="text-align:left ;width:7.5%">
+            <select>
+                <option>1</option>
+            </select>
         </td>
         <td style="text-align:left">
-            <input style="width:548px" />
+            <input style="width:50%" />
         </td>
     </tr>
 </table>
 <table style="width:100%">
     <tr>
-        <td style="font-size:20px;width:400px">
+        <td style="font-size:20px;width:33.5%">
             เลขที่บัตรประชาชนใบอนุญาตประชาชน
         </td>
         <td>
