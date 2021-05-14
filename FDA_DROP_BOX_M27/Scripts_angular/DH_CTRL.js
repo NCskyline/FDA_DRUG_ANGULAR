@@ -16,7 +16,7 @@
         data_REF_CERT.then(function (datas) {
             $scope.REF_CERT = datas.data;
             $scope.states = loadClaim($scope.REF_CERT);
-        }, function () { })
+        }, function () { });
 
     }
 
