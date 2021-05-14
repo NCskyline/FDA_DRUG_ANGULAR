@@ -32,6 +32,24 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
         End Function
+        '
+        Function SP_MASTER_CER_PK_BY_FK_IDA(ByVal FK_IDA As String)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_MASTER_CER_PK_BY_FK_IDA(22069)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+        'SP_MASTER_CER_PK_BY_FK_IDA
+        Function SP_MASTER_sysisocnt()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_MASTER_sysisocnt()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
 
         Function SP_GET_BOX_APPROVE(ByVal TR_ID As String) As JsonResult
             Dim DT As New DataTable
@@ -545,8 +563,8 @@ Namespace Controllers
         ''' <returns></returns>
         Function ADD_DATA_INV(ByVal XML As String, ByVal XML2 As String, ByVal TOKEN As String, ByVal CTZNO As String) As JsonResult
             Dim obj = JsonConvert.DeserializeObject(XML)
-            Dim jss As New JavaScriptSerializer
-            Dim bb As MODEL_BOX = jss.Deserialize(XML, GetType(MODEL_BOX))
+            'Dim jss As New JavaScriptSerializer
+            'Dim bb As MODEL_BOX = jss.Deserialize(XML, GetType(MODEL_BOX))
             Dim result As String = ""
             Dim chk As Boolean = True
             Dim TR_ID As String = ""

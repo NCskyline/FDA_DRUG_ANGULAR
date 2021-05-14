@@ -4,7 +4,8 @@ Public Class BAO
     Private _conn As String = System.Configuration.ConfigurationManager.ConnectionStrings("FDA_MDC27ConnectionString").ConnectionString
     Private _con_CPN As String = System.Configuration.ConfigurationManager.ConnectionStrings("LGTCPNConnectionString").ConnectionString
     Private _conn_CPN As String = System.Configuration.ConfigurationManager.ConnectionStrings("LGTPERMISSIONConnectionString").ConnectionString
-
+    Private _con_d As String = System.Configuration.ConfigurationManager.ConnectionStrings("LGT_DRUGConnectionString").ConnectionString
+    '
 
     Public Function SP_GET_DRUG_PRODUCT_ESUB(ByVal register As String) As DataTable
         Dim clsds As New ClassDataset
@@ -16,6 +17,28 @@ Public Class BAO
 
         End Try
         Return dta
+    End Function
+    Public Function SP_MASTER_CER_PK_BY_FK_IDA(ByVal FK_IDA As Integer) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_MASTER_CER_PK_BY_FK_IDA @FK_IDA =  " & FK_IDA
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_MASTER_CER_PK_BY_FK_IDA"
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+        Return dt
+    End Function
+    Public Function SP_MASTER_sysisocnt() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_MASTER_sysisocnt"
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_MASTER_sysisocnt"
+        Return dt
     End Function
     Public Function SP_SYSISOCNT() As DataTable
         Dim clsds As New ClassDataset
