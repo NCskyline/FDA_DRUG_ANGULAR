@@ -171,6 +171,7 @@
     <Compile Include="CLASS\DAO\DAO_DRUG.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DH.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DI.vb" />
+    <Compile Include="CLASS\MODEL\MODEL_DL.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DR.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DS.vb" />
     <Compile Include="CLASS\MODEL\MODEL_LCN.vb" />

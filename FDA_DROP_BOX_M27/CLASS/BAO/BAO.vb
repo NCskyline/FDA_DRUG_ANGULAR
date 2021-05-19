@@ -32,6 +32,50 @@ Public Class BAO
 
         Return dt
     End Function
+
+    Public Function SP_MAS_DRUG_SHAPE() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec dbo.SP_MAS_DRUG_SHAPE "
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+
+        Return dt
+    End Function
+
+    Public Function SP_MASTER_drclass() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_MASTER_drclass"
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_MASTER_drclass"
+        Return dt
+    End Function
+    Public Function SP_dactg() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec dbo.SP_dactg "
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+
+        Return dt
+    End Function
+    Public Function SP_dosage_form() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec dbo.SP_dosage_form "
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+
+        Return dt
+    End Function
     Public Function SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(ByVal LOCATION_ADDRESS_IDA As Integer) As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA @LOCATION_ADDRESS_IDA = " & LOCATION_ADDRESS_IDA

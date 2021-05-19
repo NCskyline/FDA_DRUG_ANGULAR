@@ -4,6 +4,8 @@
     pageload();
 
     function pageload() {
+
+
         var data_CNT = CENTER_SV.SP_MASTER_sysisocnt();
         data_CNT.then(function (datas) {
             $scope.CNT_LIST = datas.data;
@@ -15,6 +17,44 @@
             $scope.UNIT_PHYSIC = datas.data;
             $scope.states = loadClaim($scope.UNIT_PHYSIC);
         }, function () { });
+
+        
+        var data_dactg = CENTER_SV.SP_dactg();
+        data_dactg.then(function (datas) {
+            $scope.dactg = datas.data;
+            $scope.states = loadClaim($scope.dactg);
+        }, function () { });
+        
+        var data_drclass = CENTER_SV.SP_MASTER_drclass();
+        data_drclass.then(function (datas) {
+            $scope.drclass = datas.data;
+            $scope.states = loadClaim($scope.drclass);
+        }, function () { });
+
+        var data_drdosage = CENTER_SV.SP_dosage_form();
+        data_drdosage.then(function (datas) {
+            $scope.drdosage = datas.data;
+            $scope.states = loadClaim($scope.drdosage);
+        }, function () { });
+        
+        var data_BIO_UNIT = CENTER_SV.GET_MAS_BIO_UNIT();
+        data_BIO_UNIT.then(function (datas) {
+            $scope.BIO_UNIT = datas.data;
+            $scope.states = loadClaim($scope.BIO_UNIT);
+        }, function () { });
+
+        var data_DRUG_PACKAGING = CENTER_SV.GET_DRUG_PACKAGING();
+        data_DRUG_PACKAGING.then(function (datas) {
+            $scope.DRUG_PACKAGING = datas.data;
+            $scope.states = loadClaim($scope.DRUG_PACKAGING);
+        }, function () { });
+
+        var data_DRUG_SHAPE = CENTER_SV.SP_MAS_DRUG_SHAPE();
+        data_DRUG_SHAPE.then(function (datas) {
+            $scope.DRUG_SHAPE = datas.data;
+            $scope.states = loadClaim($scope.DRUG_SHAPE);
+        }, function () { });
+
     }
 
 
