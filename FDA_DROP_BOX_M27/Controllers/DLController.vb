@@ -12,6 +12,9 @@ Namespace Controllers
             Return View()
         End Function
         '
+        Function INPUT_ANIMAL() As ActionResult
+            Return View()
+        End Function
         Function INPUT_DL() As ActionResult
             Return View()
         End Function

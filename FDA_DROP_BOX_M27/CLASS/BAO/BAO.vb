@@ -6,7 +6,45 @@ Public Class BAO
     Private _conn_CPN As String = System.Configuration.ConfigurationManager.ConnectionStrings("LGTPERMISSIONConnectionString").ConnectionString
     Private _con_d As String = System.Configuration.ConfigurationManager.ConnectionStrings("LGT_DRUGConnectionString").ConnectionString
     '
+    Public Function SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(ByVal identify As String, ByVal LCNSID As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY @lcnsid='" & LCNSID & "' ,@identify= '" & identify & "'"
+        ' Dim sql As String = "exec SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY @lcnsid=" & "0" & " ,@identify=" & "0"
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_CPN).Tables(0)
 
+        Catch ex As Exception
+
+        End Try
+        Return dt
+    End Function
+    Public Function SP_DRUG_UNIT_PHYSIC() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec dbo.SP_DRUG_UNIT_PHYSIC "
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+
+        Return dt
+    End Function
+    Public Function SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(ByVal LOCATION_ADDRESS_IDA As Integer) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA @LOCATION_ADDRESS_IDA = " & LOCATION_ADDRESS_IDA
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+
+        Catch ex As Exception
+
+        End Try
+        dt.TableName = "SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA"
+        Return dt
+    End Function
     Public Function SP_GET_DRUG_PRODUCT_ESUB(ByVal register As String) As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_GET_DRUG_PRODUCT_ESUB @register= '" & register & "'"

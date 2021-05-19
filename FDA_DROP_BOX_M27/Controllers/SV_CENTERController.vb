@@ -32,7 +32,24 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
         End Function
+
+        Function SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(ByVal identify As String, ByVal LCNSID As String)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(identify, LCNSID)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
         '
+        Function SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(ByVal LOCATION_ADDRESS_IDA As Integer)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(LOCATION_ADDRESS_IDA)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_MASTER_CER_PK_BY_FK_IDA(ByVal FK_IDA As String)
             Dim dt As New DataTable
             Dim bao As New BAO
@@ -46,6 +63,15 @@ Namespace Controllers
             Dim dt As New DataTable
             Dim bao As New BAO
             dt = bao.SP_MASTER_sysisocnt()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+        '
+        Function SP_DRUG_UNIT_PHYSIC()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_DRUG_UNIT_PHYSIC()
             Dim clsds As New ClassDataset
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
@@ -280,8 +306,58 @@ Namespace Controllers
 #End Region
 
 #Region "GET_DATA"
+        Function GET_LCN_NO(ByVal IDA As Integer) As JsonResult
+            Dim MODEL_LIST As New List(Of MODEL_LCN)
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(IDA)
+            Dim lcnno_format As String = ""
+            For Each dao.fields In dao.datas
+                Dim lcnno_auto As Integer = 0
+                Try
+                    lcnno_auto = dao.fields.lcnno
+                Catch ex As Exception
+
+                End Try
+                Try
+                    If Len(lcnno_auto) > 0 Then
+
+                        If Right(Left(lcnno_auto, 3), 1) = "5" Then
+                            lcnno_format = "จ. " & CStr(CInt(Right(lcnno_auto, 4))) & "/25" & Left(lcnno_auto, 2)
+                        Else
+                            lcnno_format = dao.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                        End If
+                        'lcnno_format = dao.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                    End If
+                Catch ex As Exception
+
+                End Try
+                Dim dao_dalcntype As New DAO_DRUG.ClsDBdalcntype
+                dao_dalcntype.GetDataby_lcntpcd(dao.fields.lcntpcd)
 
 
+                Dim M_LCN As New MODEL_LCN
+                With M_LCN
+                    .LCNNO_SHOW = lcnno_format
+                    Try
+                        .TYPE_IMPORT = dao_dalcntype.fields.lcntpnm
+                    Catch ex As Exception
+
+                    End Try
+
+                End With
+                MODEL_LIST.Add(M_LCN)
+            Next
+
+
+            Return Json(MODEL_LIST, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function GET_DATA_DRAMLTYPE_ALL() As JsonResult
+            Dim dao As New DAO_DRUG.TB_dramltype
+            dao.GetDataAll()
+
+            Return Json(dao.datas, JsonRequestBehavior.AllowGet)
+        End Function
         Function GET_LIST_LCN(ByVal IDENTIFY As String, ByVal TOKEN As String, ByVal CTZNO As String) As JsonResult
             Dim MODEL_LIST As New List(Of MODEL_LCN)
 
