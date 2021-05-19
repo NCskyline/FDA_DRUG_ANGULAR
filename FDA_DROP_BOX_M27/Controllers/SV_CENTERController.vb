@@ -67,6 +67,15 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
         End Function
+        '
+        Function SP_DRUG_UNIT_PHYSIC()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_DRUG_UNIT_PHYSIC()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
 
         Function SP_GET_BOX_APPROVE(ByVal TR_ID As String) As JsonResult
             Dim DT As New DataTable
@@ -341,6 +350,13 @@ Namespace Controllers
 
 
             Return Json(MODEL_LIST, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function GET_DATA_DRAMLTYPE_ALL() As JsonResult
+            Dim dao As New DAO_DRUG.TB_dramltype
+            dao.GetDataAll()
+
+            Return Json(dao.datas, JsonRequestBehavior.AllowGet)
         End Function
         Function GET_LIST_LCN(ByVal IDENTIFY As String, ByVal TOKEN As String, ByVal CTZNO As String) As JsonResult
             Dim MODEL_LIST As New List(Of MODEL_LCN)

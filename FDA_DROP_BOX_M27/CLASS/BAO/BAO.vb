@@ -19,6 +19,19 @@ Public Class BAO
         End Try
         Return dt
     End Function
+    Public Function SP_DRUG_UNIT_PHYSIC() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec dbo.SP_DRUG_UNIT_PHYSIC "
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+
+        Return dt
+    End Function
     Public Function SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(ByVal LOCATION_ADDRESS_IDA As Integer) As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA @LOCATION_ADDRESS_IDA = " & LOCATION_ADDRESS_IDA
