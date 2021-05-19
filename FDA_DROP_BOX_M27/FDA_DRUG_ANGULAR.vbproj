@@ -363,7 +363,6 @@
     <Content Include="fonts\summernote\summernote.ttf" />
     <Content Include="fonts\summernote\summernote.woff" />
     <Content Include="Scripts_angular\AUTHEN_STAFF_CTRL.js" />
-    <Content Include="Scripts_angular\LCN_CTRL.js" />
     <Content Include="Web References\WS_FLATTEN\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
