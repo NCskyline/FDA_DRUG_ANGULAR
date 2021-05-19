@@ -60,4 +60,23 @@
             _LCN_TYPE = value
         End Set
     End Property
+
+    Private _LCNNO_SHOW As String
+    Public Property LCNNO_SHOW() As String
+        Get
+            Return _LCNNO_SHOW
+        End Get
+        Set(ByVal value As String)
+            _LCNNO_SHOW = value
+        End Set
+    End Property
+    Private _TYPE_IMPORT As String
+    Public Property TYPE_IMPORT() As String
+        Get
+            Return _TYPE_IMPORT
+        End Get
+        Set(ByVal value As String)
+            _TYPE_IMPORT = value
+        End Set
+    End Property
 End Class
