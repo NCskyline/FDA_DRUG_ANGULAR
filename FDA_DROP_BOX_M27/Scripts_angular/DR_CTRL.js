@@ -1,4 +1,4 @@
-﻿app.controller('DL_CTRL', function ($scope, CENTER_SV, $http, $location) {
+﻿app.controller('DR_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     //CHK_TOKEN();
     pageload();
@@ -18,13 +18,13 @@
             $scope.states = loadClaim($scope.UNIT_PHYSIC);
         }, function () { });
 
-        
+
         var data_dactg = CENTER_SV.SP_dactg();
         data_dactg.then(function (datas) {
             $scope.dactg = datas.data;
             $scope.states = loadClaim($scope.dactg);
         }, function () { });
-        
+
         var data_drclass = CENTER_SV.SP_MASTER_drclass();
         data_drclass.then(function (datas) {
             $scope.drclass = datas.data;
@@ -36,7 +36,7 @@
             $scope.drdosage = datas.data;
             $scope.states = loadClaim($scope.drdosage);
         }, function () { });
-        
+
         var data_BIO_UNIT = CENTER_SV.GET_MAS_BIO_UNIT();
         data_BIO_UNIT.then(function (datas) {
             $scope.BIO_UNIT = datas.data;
@@ -54,11 +54,14 @@
             $scope.DRUG_SHAPE = datas.data;
             $scope.states = loadClaim($scope.DRUG_SHAPE);
         }, function () { });
+
+        
         var data_drkdofdrg = CENTER_SV.SP_drkdofdrg();
         data_drkdofdrg.then(function (datas) {
             $scope.drkdofdrg = datas.data;
             $scope.states = loadClaim($scope.drkdofdrg);
         }, function () { });
+
     }
 
 

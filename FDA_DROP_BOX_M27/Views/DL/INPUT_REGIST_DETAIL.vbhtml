@@ -142,7 +142,11 @@ End Code
             <td style="padding:0px 0px 0px 50px;">
                 แก้ไขเป็น
             </td>
-            <td style="padding:0px 0px 0px 50px;"></td>
+            <td style="padding:0px 0px 0px 50px;">
+                <select id="drug_type" style="width:100px;">
+                    <option ng-repeat="x in drkdofdrg" value="{{x.kindcd}}">{{x.thakindnm}}</option>
+                </select>
+            </td>
         </tr>
         <tr>
             <td>

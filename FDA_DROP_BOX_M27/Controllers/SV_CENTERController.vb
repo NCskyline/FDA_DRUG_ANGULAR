@@ -42,6 +42,14 @@ Namespace Controllers
 
         End Function
 
+        Function SP_drkdofdrg()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_drkdofdrg()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(ByVal identify As String, ByVal LCNSID As String)
             Dim dt As New DataTable
             Dim bao As New BAO

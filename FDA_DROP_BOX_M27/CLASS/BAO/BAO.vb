@@ -32,7 +32,15 @@ Public Class BAO
 
         Return dt
     End Function
+    Public Function SP_drkdofdrg() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec dbo.SP_drkdofdrg"
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_drkdofdrg"
 
+        Return dt
+    End Function
     Public Function SP_MAS_DRUG_SHAPE() As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec dbo.SP_MAS_DRUG_SHAPE "

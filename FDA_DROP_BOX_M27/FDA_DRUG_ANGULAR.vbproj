@@ -324,6 +324,7 @@
     <Content Include="Scripts_angular\CERT_GMP_CTRL.js" />
     <Content Include="Scripts_angular\DH_CTRL.js" />
     <Content Include="Scripts_angular\DL_CTRL.js" />
+    <Content Include="Scripts_angular\DR_CTRL.js" />
     <Content Include="Scripts_angular\JS_COMMON.js" />
     <Content Include="js\map.js" />
     <Content Include="js\maps\fusioncharts.usa.js" />

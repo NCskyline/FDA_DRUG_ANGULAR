@@ -219,6 +219,17 @@
         return response;
     };
 
+    this.SP_drkdofdrg = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_drkdofdrg"),
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+
     this.SP_GET_ISO = function () {
         var response = $http({
             method: "post",
