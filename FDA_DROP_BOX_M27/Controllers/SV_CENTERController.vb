@@ -414,6 +414,52 @@ Namespace Controllers
 
             Return Json(MODEL_LIST, JsonRequestBehavior.AllowGet)
         End Function
+        Function GET_dramltype() As JsonResult
+            Dim MODEL_LIST As New List(Of MODEL_DR)
+            Dim dao As New DAO_DRUG.TB_dramltype
+            dao.GetDataAll()
+            For Each dao.fields In dao.datas
+                Dim M_DR As New MODEL_DR
+                With M_DR
+                    .amltpnm = dao.fields.amltpnm
+                    .amltpcd = dao.fields.amltpcd
+                End With
+                MODEL_LIST.Add(M_DR)
+            Next
+
+            Return Json(MODEL_LIST, JsonRequestBehavior.AllowGet)
+        End Function
+        Function GET_dramlsubtp(ByVal amltpcd As String) As JsonResult
+            Dim MODEL_LIST As New List(Of MODEL_DR)
+            Dim dao As New DAO_DRUG.TB_dramlsubtp
+            dao.GetDataby_amltpcd(amltpcd)
+            For Each dao.fields In dao.datas
+                Dim M_DR As New MODEL_DR
+                With M_DR
+                    .amlsubnm = dao.fields.amlsubnm
+                    .amlsubcd = dao.fields.amlsubcd
+                End With
+                MODEL_LIST.Add(M_DR)
+            Next
+
+            Return Json(MODEL_LIST, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function GET_dramlusetp(ByVal amlsubcd As String) As JsonResult
+            Dim MODEL_LIST As New List(Of MODEL_DR)
+            Dim dao As New DAO_DRUG.TB_dramlusetp
+            dao.GetDataby_cd(amlsubcd)
+            For Each dao.fields In dao.datas
+                Dim M_DR As New MODEL_DR
+                With M_DR
+                    .usetpnm = dao.fields.usetpnm
+                    .usetpcd = dao.fields.usetpcd
+                End With
+                MODEL_LIST.Add(M_DR)
+            Next
+
+            Return Json(MODEL_LIST, JsonRequestBehavior.AllowGet)
+        End Function
         Function GET_DRUG_PACKAGING() As JsonResult
             Dim MODEL_LIST As New List(Of MODEL_DL)
             Dim dao As New DAO_DRUG.TB_MAS_DRUG_PACKAGING

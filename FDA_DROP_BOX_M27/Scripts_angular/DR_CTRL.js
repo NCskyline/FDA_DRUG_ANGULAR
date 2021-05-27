@@ -62,6 +62,32 @@
             $scope.states = loadClaim($scope.drkdofdrg);
         }, function () { });
 
+        
+        var data_dramltype = CENTER_SV.GET_dramltype();
+        data_dramltype.then(function (datas) {
+            $scope.dramltype = datas.data;
+            $scope.states = loadClaim($scope.dramltype);
+        }, function () { });
+
+        //var id = '@Html.IdFor( o => o.model )';
+        //var dropdown = $("#" + id);
+        //var vall = dropdown.val();
+        var e = document.getElementById("ddl_dramltype");
+        var vall = e.options[e.selectedIndex].value;
+        var data_dramlsubtp = CENTER_SV.GET_dramlsubtp(vall);
+        data_dramlsubtp.then(function (datas) {
+            $scope.dramlsubtp = datas.data;
+            $scope.states = loadClaim($scope.dramlsubtp);
+        }, function () { });
+
+        
+        var e = document.getElementById("ddl_dramlsubtp");
+        var val2 = e.options[e.selectedIndex].value;
+        var data_dramlusetp = CENTER_SV.GET_dramlusetp(val2);
+        data_dramlusetp.then(function (datas) {
+            $scope.dramlusetp = datas.data;
+            $scope.states = loadClaim($scope.dramlusetp);
+        }, function () { });
     }
 
 

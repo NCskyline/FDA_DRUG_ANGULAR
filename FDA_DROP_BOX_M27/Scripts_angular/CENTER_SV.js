@@ -164,6 +164,37 @@
         return response;
     };
     
+    this.GET_dramltype = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_dramltype"),
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+    this.GET_dramlsubtp = function (amltpcd) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_dramlsubtp"),
+            params: {
+                amltpcd: amltpcd
+            }
+        });
+        return response;
+    };
+    this.GET_dramlsubtp = function (amlsubcd) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_dramlusetp"),
+            params: {
+                amlsubcd: amlsubcd
+            }
+        });
+        return response;
+    };
+
     this.SP_MASTER_drclass = function () {
         var response = $http({
             method: "post",
