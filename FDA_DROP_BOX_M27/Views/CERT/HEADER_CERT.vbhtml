@@ -3,7 +3,7 @@
 End Code
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>
-<div class="ic" ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP">
+<div class="ic" ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP" ng-init="pageloadCERT()">
     <h1></h1>
     <table width="100%" style="font-family:'TH SarabunPSK';font-size:22px;">
         <tr>
@@ -11,7 +11,7 @@ End Code
                 เลขที่ใบอนุญาต :
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
-                <label ng-repeat="x in LCN_SHOW">{{x.LCNNO_SHOW}}</label>
+                <label>{{LCNNO_SHOW}}</label>
             </td>
         </tr>
         <tr>
@@ -19,7 +19,7 @@ End Code
                 ประเภท :
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
-                <label ng-repeat="x in LCN_SHOW">{{x.TYPE_IMPORT}}</label>
+                <label>{{TYPE_IMPORT}}</label>
             </td>
         </tr>
         <tr>
@@ -27,7 +27,7 @@ End Code
                 ชื่อผู้รับอนุญาต :
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;padding-top:10px;">
-                <label ng-repeat="x in LCN_NAME">{{x.thanm}}</label>
+                <label>{{thanm}}</label>
             </td>
         </tr>
         <tr>
@@ -36,7 +36,7 @@ End Code
             </td>
             
             <td style="border-bottom:dotted;border-bottom-width:thin;">
-                <label ng-repeat="x in LCN_LCT">{{x.thanameplace}}</label>
+                <label>{{thanameplace}}</label>
             </td>
         </tr>
         <tr>
@@ -44,7 +44,7 @@ End Code
                 อยู่เลขที่ : 
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
-                <label ng-repeat="x in LCN_LCT">{{x.fulladdr3}}</label>
+                <label>{{fulladdr3}}</label>
             </td>
         </tr>
         <tr>
@@ -52,7 +52,7 @@ End Code
                 โทรศัพท์ :
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
-                <label ng-repeat="x in LCN_LCT">{{x.tel}}</label>
+                <label>{{tel}}</label>
             </td>
         </tr>
         <tr>
@@ -60,11 +60,11 @@ End Code
                 โทรสาร :
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
-                <label ng-repeat="x in LCN_LCT">{{x.fax}}</label>
+                <label>{{fax}}</label>
             </td>
         </tr>
     </table>
-    <div ng-include="">
+    <div ng-include="INPUT">
 
     </div>
 </div>

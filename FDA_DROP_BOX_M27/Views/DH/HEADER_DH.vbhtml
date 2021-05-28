@@ -21,7 +21,7 @@ End Code*@
 
 
 
-<div ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="pageloadDH('31')">
+<div ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="pageloadDH(PROCESS)">
     <table width="100%" style="font-family:'TH SarabunPSK';font-size:25px;">
         <tr>
             <td width="20%" align="right">

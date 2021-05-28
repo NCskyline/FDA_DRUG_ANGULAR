@@ -32,7 +32,7 @@
 
         if (sessionStorage.DH_PROCESS_ID == '31') {
             $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (Certificate of GMP)';
-            $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
+            $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
 
             var dataGMP = CENTER_SV.SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden(LCN_IDA, PROCESS, CITIZEN);
             dataGMP.then(function (datas) {
@@ -41,33 +41,43 @@
         }
         else if (sessionStorage.DH_PROCESS_ID == '32') {
             $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (ISO)';
-            $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
+            $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
         }
         else if (sessionStorage.DH_PROCESS_ID == '33') {
             $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (HACCP)';
-            $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
+            $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
         }
         else if (sessionStorage.DH_PROCESS_ID == '34') {
             $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (หลักฐานการขายไปยังประเทศที่มีระบบควบคุมคุณภาพการผลิตที่ อย ยอมรับ)';
-            $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
+            $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
         }
         else if (sessionStorage.DH_PROCESS_ID == '36') {
             $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (เอกสารอื่นๆ ที่ อย เห็นชอบ)';
-            $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
+            $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
         }
         
     };
 
-    $scope.INPUT_DH = function () {
-        REDIRECT('../DH/HEADER_DH');
+    $scope.INPUT_CERT = function () {
+        REDIRECT('../CERT/HEADER_CERT');
     };
      
-    $scope.pageloadDH = function (KEY) {
+    $scope.pageloadCERT = function (KEY) {
        
         if (KEY == '31') {
-
+            $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_AR');
+        }
+        else if (KEY == '32') {
+            $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_AR');
+        }
+        else if (KEY == '33') {
+            $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_IR');
+        }
+        else if (KEY == '34') {
+            $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_IN');
+        }
+        else if (KEY == '36') {
             $scope.INPUT = SET_URL_SV('../DH/INPUT_CHEMICAL_RQT');
-
         }
        
         listree();

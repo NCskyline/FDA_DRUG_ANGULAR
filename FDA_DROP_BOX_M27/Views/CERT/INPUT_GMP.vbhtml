@@ -1,8 +1,6 @@
 ﻿@Code
-    ViewData("Title") = "CERT_GMP_CTRL"
+    Layout = ""
 End Code
-<script src="~/Scripts_angular/CENTER_SV.js"></script>
-<script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>
 <script>
     angular.module('radioExample', [])
         .controller('ExampleController', ['$scope', function ($scope) {
@@ -15,7 +13,7 @@ End Code
             };
         }]);
 </script>
-<div class="ic" ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP">
+<div class="ic">
     <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
         <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ</b>
     </h2>

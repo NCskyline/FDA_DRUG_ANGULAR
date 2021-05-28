@@ -436,7 +436,7 @@ Namespace Controllers
 
 #Region "GET_DATA"
         Function GET_LCN_NO(ByVal IDA As Integer) As JsonResult
-            Dim MODEL_LIST As New List(Of MODEL_LCN)
+            Dim model As New MODEL_LCN
             Dim dao As New DAO_DRUG.ClsDBdalcn
             dao.GetDataby_IDA(IDA)
             Dim lcnno_format As String = ""
@@ -464,8 +464,8 @@ Namespace Controllers
                 dao_dalcntype.GetDataby_lcntpcd(dao.fields.lcntpcd)
 
 
-                Dim M_LCN As New MODEL_LCN
-                With M_LCN
+                ''Dim model As New MODEL_LCN
+                With model
                     .LCNNO_SHOW = lcnno_format
                     Try
                         .TYPE_IMPORT = dao_dalcntype.fields.lcntpnm
@@ -474,11 +474,11 @@ Namespace Controllers
                     End Try
 
                 End With
-                MODEL_LIST.Add(M_LCN)
+
             Next
 
 
-            Return Json(MODEL_LIST, JsonRequestBehavior.AllowGet)
+            Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
 
         'Function GET_MAS_BIO_UNIT(ByVal IDA As Integer) As JsonResult
