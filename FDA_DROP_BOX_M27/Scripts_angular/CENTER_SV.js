@@ -143,6 +143,123 @@
         return response;
     };
 
+    this.SP_dactg = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_dactg"),
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+    this.SP_DRUG_UNIT_PHYSIC = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_DRUG_UNIT_PHYSIC"),
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+    
+    this.GET_dramltype = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_dramltype"),
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+    this.GET_dramlsubtp = function (amltpcd) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_dramlsubtp"),
+            params: {
+                amltpcd: amltpcd
+            }
+        });
+        return response;
+    };
+    this.GET_dramlsubtp = function (amlsubcd) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_dramlusetp"),
+            params: {
+                amlsubcd: amlsubcd
+            }
+        });
+        return response;
+    };
+
+    this.SP_MASTER_drclass = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_MASTER_drclass"),
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+    
+    this.SP_dosage_form = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_dosage_form"),
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+    
+    this.GET_MAS_BIO_UNIT = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_MAS_BIO_UNIT"),
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+    
+    this.GET_DRUG_PACKAGING = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_DRUG_PACKAGING"),
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+    
+    this.SP_MAS_DRUG_SHAPE = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_MAS_DRUG_SHAPE"),
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+
+    this.SP_drkdofdrg = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_drkdofdrg"),
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
 
     this.SP_GET_ISO = function () {
         var response = $http({

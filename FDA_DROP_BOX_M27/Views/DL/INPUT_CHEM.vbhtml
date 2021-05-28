@@ -153,7 +153,7 @@ End Code
                         <td>
                             @*<telerik:RadComboBox ID="rcb_unit" Runat="server" Filter="Contains">
         </telerik:RadComboBox>*@
-                            <select class="dropdown" id="rcb_unit">
+                            <select class="dropdown" id="rcb_unit2">
                                 <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                             </select>
                         </td>

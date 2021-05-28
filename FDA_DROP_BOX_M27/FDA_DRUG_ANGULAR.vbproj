@@ -172,6 +172,7 @@
     <Compile Include="CLASS\DAO\DAO_DRUG.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DH.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DI.vb" />
+    <Compile Include="CLASS\MODEL\MODEL_DL.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DR.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DS.vb" />
     <Compile Include="CLASS\MODEL\MODEL_LCN.vb" />
@@ -333,6 +334,7 @@
     <Content Include="Scripts_angular\CERT_GMP_CTRL.js" />
     <Content Include="Scripts_angular\DH_CTRL.js" />
     <Content Include="Scripts_angular\DL_CTRL.js" />
+    <Content Include="Scripts_angular\DR_CTRL.js" />
     <Content Include="Scripts_angular\JS_COMMON.js" />
     <Content Include="js\map.js" />
     <Content Include="js\maps\fusioncharts.usa.js" />
@@ -372,7 +374,6 @@
     <Content Include="fonts\summernote\summernote.ttf" />
     <Content Include="fonts\summernote\summernote.woff" />
     <Content Include="Scripts_angular\AUTHEN_STAFF_CTRL.js" />
-    <Content Include="Scripts_angular\LCN_CTRL.js" />
     <Content Include="Web References\WS_FLATTEN\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>

@@ -42,6 +42,23 @@ Namespace Controllers
 
         End Function
 
+        Function SP_MAS_DRUG_SHAPE()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_MAS_DRUG_SHAPE()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
+        Function SP_drkdofdrg()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_drkdofdrg()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(ByVal identify As String, ByVal LCNSID As String)
             Dim dt As New DataTable
             Dim bao As New BAO
@@ -77,6 +94,14 @@ Namespace Controllers
 
         End Function
         '
+        Function SP_dactg()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_dactg()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_DRUG_UNIT_PHYSIC()
             Dim dt As New DataTable
             Dim bao As New BAO
@@ -86,6 +111,23 @@ Namespace Controllers
 
         End Function
 
+        Function SP_MASTER_drclass()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_MASTER_drclass()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
+        Function SP_dosage_form()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_dosage_form()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_GET_BOX_APPROVE(ByVal TR_ID As String) As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO
@@ -431,6 +473,86 @@ Namespace Controllers
             Return Json(MODEL_LIST, JsonRequestBehavior.AllowGet)
         End Function
 
+        'Function GET_MAS_BIO_UNIT(ByVal IDA As Integer) As JsonResult
+        '    Dim dao As New DAO_DRUG.TB_MAS_BIO_UNIT
+        '    dao.GetDataALL()
+        '    Return Json(dao.datas, JsonRequestBehavior.AllowGet)
+        'End Function
+        Function GET_MAS_BIO_UNIT() As JsonResult
+            Dim MODEL_LIST As New List(Of MODEL_DL)
+            Dim dao As New DAO_DRUG.TB_MAS_BIO_UNIT
+            dao.GetDataALL()
+            For Each dao.fields In dao.datas
+                Dim M_DL As New MODEL_DL
+                With M_DL
+                    .IDA_BIO = dao.fields.IDA
+                    .BIO_UNIT = dao.fields.BIO_UNIT
+                End With
+                MODEL_LIST.Add(M_DL)
+            Next
+
+            Return Json(MODEL_LIST, JsonRequestBehavior.AllowGet)
+        End Function
+        Function GET_dramltype() As JsonResult
+            Dim MODEL_LIST As New List(Of MODEL_DR)
+            Dim dao As New DAO_DRUG.TB_dramltype
+            dao.GetDataAll()
+            For Each dao.fields In dao.datas
+                Dim M_DR As New MODEL_DR
+                With M_DR
+                    .amltpnm = dao.fields.amltpnm
+                    .amltpcd = dao.fields.amltpcd
+                End With
+                MODEL_LIST.Add(M_DR)
+            Next
+
+            Return Json(MODEL_LIST, JsonRequestBehavior.AllowGet)
+        End Function
+        Function GET_dramlsubtp(ByVal amltpcd As String) As JsonResult
+            Dim MODEL_LIST As New List(Of MODEL_DR)
+            Dim dao As New DAO_DRUG.TB_dramlsubtp
+            dao.GetDataby_amltpcd(amltpcd)
+            For Each dao.fields In dao.datas
+                Dim M_DR As New MODEL_DR
+                With M_DR
+                    .amlsubnm = dao.fields.amlsubnm
+                    .amlsubcd = dao.fields.amlsubcd
+                End With
+                MODEL_LIST.Add(M_DR)
+            Next
+
+            Return Json(MODEL_LIST, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function GET_dramlusetp(ByVal amlsubcd As String) As JsonResult
+            Dim MODEL_LIST As New List(Of MODEL_DR)
+            Dim dao As New DAO_DRUG.TB_dramlusetp
+            dao.GetDataby_cd(amlsubcd)
+            For Each dao.fields In dao.datas
+                Dim M_DR As New MODEL_DR
+                With M_DR
+                    .usetpnm = dao.fields.usetpnm
+                    .usetpcd = dao.fields.usetpcd
+                End With
+                MODEL_LIST.Add(M_DR)
+            Next
+
+            Return Json(MODEL_LIST, JsonRequestBehavior.AllowGet)
+        End Function
+        Function GET_DRUG_PACKAGING() As JsonResult
+            Dim MODEL_LIST As New List(Of MODEL_DL)
+            Dim dao As New DAO_DRUG.TB_MAS_DRUG_PACKAGING
+            dao.GetDataAll()
+            For Each dao.fields In dao.datas
+                Dim M_DL As New MODEL_DL
+                With M_DL
+                    .UOP_CODE = dao.fields.UOP_CODE
+                    .PACKAGING_NAME = dao.fields.PACKAGING_NAME
+                End With
+                MODEL_LIST.Add(M_DL)
+            Next
+            Return Json(MODEL_LIST, JsonRequestBehavior.AllowGet)
+        End Function
         Function GET_DATA_DRAMLTYPE_ALL() As JsonResult
             Dim dao As New DAO_DRUG.TB_dramltype
             dao.GetDataAll()
