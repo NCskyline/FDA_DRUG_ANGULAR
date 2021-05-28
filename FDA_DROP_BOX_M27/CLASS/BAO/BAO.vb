@@ -28,6 +28,14 @@ Public Class BAO
         Return dta
     End Function
 
+    Public Function SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden(ByVal IDA As String, ByVal CER_TYPE As String, ByVal iden As String) As DataTable
+        Dim sql As String = "exec SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden @FK_IDA='" & IDA & "',@CER_TYPE='" & CER_TYPE & "',@iden='" & iden & "'"
+        Dim dta As New DataTable
+        dta = Queryds(sql)
+        dta.TableName = "SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden"
+        Return dta
+    End Function
+
     Public Function SP_DRUG_UNIT_PHYSIC() As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec dbo.SP_DRUG_UNIT_PHYSIC "

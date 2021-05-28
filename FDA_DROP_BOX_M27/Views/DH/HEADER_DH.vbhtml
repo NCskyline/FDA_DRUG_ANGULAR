@@ -21,7 +21,7 @@ End Code*@
 
 
 
-<div ng-init="pageload('31')">
+<div ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="pageloadDH('31')">
     <table width="100%" style="font-family:'TH SarabunPSK';font-size:25px;">
         <tr>
             <td width="20%" align="right">
@@ -38,7 +38,7 @@ End Code*@
     <table width="100%" style="font-family:'TH SarabunPSK';font-size:25px;">
         <tr>
             <td width="25%">
-                <form name="myForm" ng-controller="ExampleController">
+                <form name="myForm" >
                     <label>
                         <input type="radio" ng-model="LCN.TYPE" value="1">
                         ผลิต
@@ -75,7 +75,7 @@ End Code*@
     <table width="100%" style="font-family:'TH SarabunPSK';font-size:25px;">
         <tr>
             <td width="25%">
-                <form name="myForm" ng-controller="ExampleController">
+                <form name="myForm" >
                     <label>
                         <input type="radio" ng-model="LCN.TYPE" value="1">
                         ผลิต
@@ -89,7 +89,7 @@ End Code*@
             </td>
             <td>
 
-                <form name="myForm" ng-controller="ExampleController">
+                <form name="myForm" >
                     ซึ่ง
                     <label>
                         <input type="radio" ng-model="LCN.TYPE" value="1">

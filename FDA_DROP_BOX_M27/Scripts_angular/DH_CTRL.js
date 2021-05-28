@@ -1,16 +1,21 @@
 ﻿app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     //CHK_TOKEN();
+    var LCN_IDA = sessionStorage.LCN_IDA;
+    var LCT_IDA = sessionStorage.LCT_IDA;
+    var PROCESS = sessionStorage.DH_PROCESS_ID;
+    var CITIZEN = '0000000000000';
    
     $scope.pageload = function () {
 
-        var IDA = sessionStorage.LCN_IDA;
-        var getdata = CENTER_SV.GET_INFORMATION(IDA);
+        
+        var getdata = CENTER_SV.GET_INFORMATION(LCN_IDA);
         getdata.then(function (datas) {
             $scope.LCNNO_NO = datas.data.lcnno;
             $scope.thanameplace = datas.data.thanameplace;
             $scope.nameOperator = datas.data.nameOperator;
         }, function () { });
+
        
 
         var data_CNT = CENTER_SV.SP_MASTER_sysisocnt();
@@ -28,6 +33,11 @@
         if (sessionStorage.DH_PROCESS_ID == '31') {
             $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (Certificate of GMP)';
             $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
+
+            var dataGMP = CENTER_SV.SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden(LCN_IDA, PROCESS, CITIZEN);
+            dataGMP.then(function (datas) {
+                $scope.DATA_GMP = datas.data;
+            }, function () { });
         }
         else if (sessionStorage.DH_PROCESS_ID == '32') {
             $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (ISO)';
@@ -46,6 +56,10 @@
             $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
         }
         
+    };
+
+    $scope.INPUT_DH = function () {
+        REDIRECT('../DH/HEADER_DH');
     };
      
     $scope.pageloadDH = function (KEY) {

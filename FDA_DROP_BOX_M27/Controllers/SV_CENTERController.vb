@@ -424,6 +424,14 @@ Namespace Controllers
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
 
+        Function SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden(ByVal IDA As String, ByVal CER_TYPE As String, ByVal iden As String) As JsonResult
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden(IDA, CER_TYPE, iden)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+        End Function
+
 #End Region
 
 #Region "GET_DATA"

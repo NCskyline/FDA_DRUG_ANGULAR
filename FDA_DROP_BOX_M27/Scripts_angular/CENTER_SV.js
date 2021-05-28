@@ -573,4 +573,17 @@
         });
         return response;
     };
+
+    this.SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden = function (IDA,CER_TYPE,IDEN) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden"),
+            params: {
+                IDA: IDA,
+                CER_TYPE: CER_TYPE,
+                IDEN: IDEN
+            }
+        });
+        return response;
+    };
 });

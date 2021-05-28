@@ -20,6 +20,10 @@ End Code
                     <td>{{nameOperator}}</td>
                 </tr>
             </table>
+            
+            <div align="right">
+                <button ng-click="INPUT_DH()">สร้างคำขอ</button>
+            </div>
             <hr />
             <div class="row">
                 <div class="col-sm-12">
@@ -39,19 +43,19 @@ End Code
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="datas in LIST_CER | filter : filter">
+                                <tr ng-repeat="datas in DATA_GMP">
 
-                                    <td>{{datas.RCVNO}}</td>
-                                    <td>{{datas.datercvno}}</td>
-                                    <td>{{datas.PROCESS_DESCRIPTION}}</td>
-                                    <td>{{datas.REF_CODE}}</td>
-                                    <td>{{datas.XML_NAME}}</td>
+                                    <td>{{datas.thacntnm}}</td>
+                                    <td>{{datas.CER_NUMBER}}</td>
+                                    <td>{{datas.REQUEST_DATE}}</td>
                                     <td>{{datas.STATUS_NAME}}</td>
-                                    <td>{{datas.STATUS_NAME}}</td>
-                                    <td>{{datas.STATUS_NAME}}</td>
+                                    <td>{{datas.TR_ID}}</td>
+                                    <td>{{datas.EXP_DATE_EXTEND}}</td>
+                                    <td>{{datas.FOREIGN_LOCATION_NAME}}</td>
+                                    <td>{{datas.REMARK}}</td>
                                     <td>
                                         <span class="fa fa-eye"></span>
-                                        <a ng-click="SELECT_LCN(datas,'12')">
+                                        <a ng-click="SELECT_CER(datas,'12')">
                                             เลือก
                                         </a>
                                     </td>
