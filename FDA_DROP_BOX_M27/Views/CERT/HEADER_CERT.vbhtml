@@ -3,7 +3,7 @@
 End Code
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>
-<div class="ic" ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP" ng-init="pageloadCERT()">
+<div class="ic" ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP" >
     <h1></h1>
     <table width="100%" style="font-family:'TH SarabunPSK';font-size:22px;">
         <tr>
