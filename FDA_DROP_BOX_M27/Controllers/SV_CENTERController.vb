@@ -24,6 +24,15 @@ Namespace Controllers
 #End Region
 
 #Region "STORE"
+
+        Function SP_GET_LCN(ByVal CITIZEN As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_DDL_LCN_DI_DH(CITIZEN)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_GET_INV_HISTORY(ByVal CTZNO As String)
             Dim dt As New DataTable
             Dim bao As New BAO
@@ -303,6 +312,76 @@ Namespace Controllers
 
         End Function
 
+        Function GET_INFORMATION(ByVal IDA As Integer) As JsonResult
+
+            Dim model As New MODEL_DH
+            Try
+
+                Dim Tb As New DAO_DRUG.TB_DALCN_LOCATION_ADDRESS                               ' ประกาศตัวแปรเพื่อเรียกใช้
+                Dim TbNO As New DAO_DRUG.ClsDBdalcn                                     ' ประกาศตัวแปรเพื่อเรียกใช้
+                Dim tb_location As New DAO_DRUG.TB_DALCN_LOCATION_BSN
+
+                TbNO.GetDataby_IDA(IDA)                                                 'การ where 
+                Tb.GetDataby_IDA(TbNO.fields.FK_IDA)                                    'การ where 
+
+                Try
+                    tb_location.GetDataby_LCN_IDA(IDA)
+                Catch ex As Exception
+
+                End Try
+                'การ where
+                Try
+
+                Catch ex As Exception
+
+                End Try
+                'lbl_lcnno.Text = TbNO.fields.LCNNO_DISPLAY
+                Dim lcnno As String = ""
+                Dim rcvno As String = ""
+                Try
+                    lcnno = TbNO.fields.lcntpcd & " " & CInt(Right(TbNO.fields.lcnno, 5)) & "/" & Left(TbNO.fields.lcnno, 2)
+                Catch ex As Exception
+
+                End Try
+                Try
+                    rcvno = CInt(Right(TbNO.fields.rcvno, 5)) & "/" & Left(TbNO.fields.rcvno, 2)
+                Catch ex As Exception
+
+                End Try
+                Try
+                    If TbNO.fields.lcnno IsNot Nothing Then
+                        Dim raw_lcn As String = TbNO.fields.lcnno
+                        model.lcnno = lcnno 'CStr(CInt((Right(raw_lcn, 5))) & "/25" & Left(raw_lcn, 2))
+                    End If
+                Catch ex As Exception
+
+                End Try
+
+                model.rcvno = rcvno                                    ' เอาข้อมูลมาโชว์ที่  label
+                Try
+                    model.rcvdate = CDate(TbNO.fields.rcvdate).ToLongDateString()       ' เอาข้อมูล แล้วเปลี่ยนตัดค่า เวลาออก
+                Catch ex As Exception
+
+                End Try
+
+                model.thanameplace = Tb.fields.thanameplace                          ' เอาข้อมูลมาโชว์ที่  label
+                model.nameOperator = TbNO.fields.BSN_THAIFULLNAME             ' เอาข้อมูลมาโชว์ที่  label
+
+                If model.nameOperator = "" Then
+                    Try
+                        Dim dao_lcns As New DAO_CPN.clsDBsyslcnsnm
+                        dao_lcns.GetDataby_lcnsid(TbNO.fields.bsnid)
+                        model.nameOperator = dao_lcns.fields.prefixnm & dao_lcns.fields.thanm & " " & dao_lcns.fields.thalnm
+                    Catch ex As Exception
+
+                    End Try
+                End If
+            Catch ex As Exception
+
+            End Try
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+
 #End Region
 
 #Region "GET_DATA"
@@ -358,6 +437,9 @@ Namespace Controllers
 
             Return Json(dao.datas, JsonRequestBehavior.AllowGet)
         End Function
+
+
+
         Function GET_LIST_LCN(ByVal IDENTIFY As String, ByVal TOKEN As String, ByVal CTZNO As String) As JsonResult
             Dim MODEL_LIST As New List(Of MODEL_LCN)
 

@@ -149,8 +149,31 @@
         End Set
     End Property
 
-    'Public Enum ABC
-    '    สบ3 = 1 'TESTETSET
-    '    สบ5 = 3
-    'End Enum
+    Private _DH_PROCESS_ID As String
+    Public Property DH_PROCESS_ID() As String
+        Get
+            Return _DH_PROCESS_ID
+        End Get
+        Set(ByVal value As String)
+            _DH_PROCESS_ID = value
+        End Set
+    End Property
+    Private _LCN_IDA As String
+    Public Property LCN_IDA() As String
+        Get
+            Return _LCN_IDA
+        End Get
+        Set(ByVal value As String)
+            _LCN_IDA = value
+        End Set
+    End Property
+    Private _LCT_IDA As String
+    Public Property LCT_IDA() As String
+        Get
+            Return _LCT_IDA
+        End Get
+        Set(ByVal value As String)
+            _LCT_IDA = value
+        End Set
+    End Property
 End Class

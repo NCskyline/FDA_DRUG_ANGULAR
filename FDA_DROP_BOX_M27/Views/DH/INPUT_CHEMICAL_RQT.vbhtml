@@ -1,5 +1,5 @@
 ﻿@Code
-    ViewData("Title") = "INPUT_CHEMICAL_RQT"
+    Layout = ""
 End Code
 
 <h2>เพิ่มสาร</h2>
@@ -56,24 +56,24 @@ End Code
         <td>แนบเอกสารเพิ่มเติม</td>
         <td>
             @*<table style="width:100%;">
-                <tr>
-                    <td colspan="2"><asp:FileUpload ID="FileUpload1" runat="server" />
-                    </td>
+                    <tr>
+                        <td colspan="2"><asp:FileUpload ID="FileUpload1" runat="server" />
+                        </td>
 
-                </tr>
-                <tr>
-                    <td>
-                        
-                        <asp:HyperLink ID="hp_file_name" runat="server" style="display:none;" Target="_blank"></asp:HyperLink>
-                    </td>
+                    </tr>
+                    <tr>
+                        <td>
 
-                    <td>
-                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/file_delete.png" Width="28px" Height="28px"
-                                         ToolTip="ลบข้อมูล" style="display:none;" OnClientClick="return confirm('ต้องการลบหรือไม่');" />
-                    </td>
+                            <asp:HyperLink ID="hp_file_name" runat="server" style="display:none;" Target="_blank"></asp:HyperLink>
+                        </td>
 
-                </tr>
-            </table>*@
+                        <td>
+                            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/file_delete.png" Width="28px" Height="28px"
+                                             ToolTip="ลบข้อมูล" style="display:none;" OnClientClick="return confirm('ต้องการลบหรือไม่');" />
+                        </td>
+
+                    </tr>
+                </table>*@
 
         </td>
     </tr>
@@ -92,10 +92,10 @@ End Code
                 &nbsp;&nbsp;
 
             </div>
-           
+
 
 
         </td>
     </tr>
-    
+
 </table>

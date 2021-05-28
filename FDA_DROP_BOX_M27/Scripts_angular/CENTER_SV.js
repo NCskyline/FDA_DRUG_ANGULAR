@@ -423,4 +423,37 @@
         });
         return response;
     };
+
+    this.GET_TREEVIEW = function (GROUP_NAME , HEAD_ID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_TREEVIEW"),
+            params: {
+               
+                GROUP_NAME: GROUP_NAME,
+                HEAD_ID: HEAD_ID
+            }
+        });
+        return response;
+    };
+    this.SP_GET_LCN = function (CITIZEN) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_GET_LCN"),
+            params: {
+                CITIZEN: CITIZEN
+            }
+        });
+        return response;
+    };
+    this.GET_INFORMATION = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_INFORMATION"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
 });

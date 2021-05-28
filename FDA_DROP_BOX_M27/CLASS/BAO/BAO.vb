@@ -19,6 +19,15 @@ Public Class BAO
         End Try
         Return dt
     End Function
+
+    Public Function SP_DDL_LCN_DI_DH(ByVal iden As String) As DataTable
+        Dim sql As String = "exec SP_DDL_LCN_DI_DH @iden='" & iden & "'"
+        Dim dta As New DataTable
+        dta = Queryds(sql)
+        dta.TableName = "SP_DDL_LCN_DI_DH"
+        Return dta
+    End Function
+
     Public Function SP_DRUG_UNIT_PHYSIC() As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec dbo.SP_DRUG_UNIT_PHYSIC "

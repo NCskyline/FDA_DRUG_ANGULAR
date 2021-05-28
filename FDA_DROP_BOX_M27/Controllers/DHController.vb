@@ -29,5 +29,14 @@ Namespace Controllers
         Function INPUT_CHEMICAL_RQT() As ActionResult
             Return View()
         End Function
+        Function FRM_MAIN_PAGE_PHESAJ() As ActionResult
+            Return View()
+        End Function
+        Function FRM_MAIN_DH() As ActionResult
+            Return View()
+        End Function
+        Function FRM_SELECT_LCN() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace

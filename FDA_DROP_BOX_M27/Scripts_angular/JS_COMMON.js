@@ -54,7 +54,7 @@ function CHK_TOKEN() {
         LCN_ADDR = sessionStorage.LCN_ADDR;
         LCN_NAME = sessionStorage.LCN_NAME;
         COMPANY_NAME = sessionStorage.COMPANY_NAME;
-        PVNCD = sessionStorage.PVCODE
+        PVNCD = sessionStorage.PVCODE;
 
         var THANM = 'ชื่อ-นามสกุล ' + sessionStorage.THANM + ' ผู้รับอนุญาต ' + COMPANY_NAME;
         document.getElementById("result").innerHTML = THANM;
