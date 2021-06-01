@@ -55,10 +55,10 @@
                             <div class="listree-submenu-heading">สารเคมีที่มีส่วนผสมของสารออกฤทธิ์</div>
                             <ul class="listree-submenu-items">
                                 <li>
-                                    <a ng-click="DATA_GMP('950002')">สารเคมีชนิดสารเดี่ยว</a>
+                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=37">สารเคมีชนิดสารเดี่ยว</a>
                                 </li>
                                 <li>
-                                    <a ng-click="DATA_GMP('950002')">สารเคมีชนิดสารผสม</a>
+                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=38">สารเคมีชนิดสารผสม</a>
                                 </li>
                             </ul>
                             <div class="listree-submenu-heading">สารเคมีที่ไม่มีส่วนผสมของสารออกฤทธิ์</div>

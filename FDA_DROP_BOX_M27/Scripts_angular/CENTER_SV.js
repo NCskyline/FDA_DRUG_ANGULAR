@@ -586,4 +586,16 @@
         });
         return response;
     };
+
+    this.SP_DH15RQT_BY_IDA = function (lcn_ida,process_id) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_DH15RQT_BY_IDA"),
+            params: {
+                lcn_ida: lcn_ida,
+                process_id: process_id
+            }
+        });
+        return response;
+    };
 });

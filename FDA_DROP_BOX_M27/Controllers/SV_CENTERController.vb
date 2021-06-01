@@ -84,6 +84,15 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
         End Function
+
+        Function SP_DH15RQT_BY_IDA(ByVal LCN_IDA As Integer, ByVal PROCESS_ID As Integer)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_DH15RQT_BY_IDA(LCN_IDA, PROCESS_ID)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+        End Function
+
         'SP_MASTER_CER_PK_BY_FK_IDA
         Function SP_MASTER_sysisocnt()
             Dim dt As New DataTable

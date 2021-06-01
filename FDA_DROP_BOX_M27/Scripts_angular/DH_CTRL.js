@@ -9,7 +9,7 @@
 
     $scope.pageload = function () {
 
-        //$state.reload();
+        var PROCESS_ID = sessionStorage.DH_PROCESS_ID;
 
         var getdata = CENTER_SV.GET_INFORMATION(LCN_IDA);
         getdata.then(function (datas) {
@@ -30,70 +30,83 @@
 
         }, function () { });
 
-        if (sessionStorage.DH_PROCESS_ID == '31') {
-            $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (Certificate of GMP)';
-            $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
+        if (PROCESS_ID == '31' || PROCESS_ID == '32' || PROCESS_ID == '33' || PROCESS_ID == '34' || PROCESS_ID == '36') {
 
-            var dataGMP = CENTER_SV.SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden(LCN_IDA, sessionStorage.DH_PROCESS_ID, CITIZEN);
+            if (PROCESS_ID == '31') {
+                $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (Certificate of GMP)';
+                $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
+
+            }
+            else if (PROCESS_ID == '32') {
+                $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (ISO)';
+                $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
+            }
+            else if (PROCESS_ID == '33') {
+                $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (HACCP)';
+                $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
+            }
+            else if (PROCESS_ID == '34') {
+                $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (หลักฐานการขายไปยังประเทศที่มีระบบควบคุมคุณภาพการผลิตที่ อย ยอมรับ)';
+                $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
+            }
+            else if (PROCESS_ID == '36') {
+                $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (เอกสารอื่นๆ ที่ อย เห็นชอบ)';
+                $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
+            }
+
+            var dataGMP = CENTER_SV.SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden(LCN_IDA, PROCESS_ID, CITIZEN);
             dataGMP.then(function (datas) {
                 $scope.DATA_GMP = datas.data;
             }, function () { });
         }
-        else if (sessionStorage.DH_PROCESS_ID == '32') {
-            $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (ISO)';
-            $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
-        }
-        else if (sessionStorage.DH_PROCESS_ID == '33') {
-            $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (HACCP)';
-            $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
-        }
-        else if (sessionStorage.DH_PROCESS_ID == '34') {
-            $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (หลักฐานการขายไปยังประเทศที่มีระบบควบคุมคุณภาพการผลิตที่ อย ยอมรับ)';
-            $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
-        }
-        else if (sessionStorage.DH_PROCESS_ID == '36') {
-            $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (เอกสารอื่นๆ ที่ อย เห็นชอบ)';
-            $scope.SUB_PATH = SET_URL_SV('../CERT/FRM_CERT_MAIN');
-        }
-        else if (sessionStorage.DH_PROCESS_ID == '23') {
-            $scope.HEADER = '( เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา )';
-            $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
-        }
-        else if (sessionStorage.DH_PROCESS_ID == '24') {
-            $scope.HEADER = '( เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา )';
-            $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
-        }
-        else if (sessionStorage.DH_PROCESS_ID == '25') {
-            $scope.HEADER = '( ไม่เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา )';
-            $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
-        }
-        else if (sessionStorage.DH_PROCESS_ID == '26') {
-            $scope.HEADER = '( ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา )';
-            $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
+        else if (PROCESS_ID == '23' || PROCESS_ID == '24' || PROCESS_ID == '25' || PROCESS_ID == '26') {
+
+            if (PROCESS_ID == '23') {
+                $scope.HEADER = '( เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา )';
+                $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
+            }
+            else if (PROCESS_ID == '24') {
+                $scope.HEADER = '( เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา )';
+                $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
+            }
+            else if (PROCESS_ID == '25') {
+                $scope.HEADER = '( ไม่เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา )';
+                $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
+            }
+            else if (PROCESS_ID == '26') {
+                $scope.HEADER = '( ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา )';
+                $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
+            }
+
+            var dataDH = CENTER_SV.SP_DH15RQT_BY_IDA(LCN_IDA, PROCESS_ID);
+            dataDH.then(function (datas) {
+                $scope.DATA_DH = datas.data;
+            }, function () { });
         }
     };
 
     $scope.INPUT_CERT = function () {
         REDIRECT('../CERT/HEADER_CERT');
     };
-     
-    $scope.pageloadCERT = function (KEY) {
 
-        if (KEY == '23') {
+    $scope.INPUT_DH = function () {
+        REDIRECT('../DH/HEADER_DH');
+    };
+
+    $scope.pageloadDH = function () {
+        var PROCESS_ID = sessionStorage.DH_PROCESS_ID;
+        if (PROCESS_ID == '23') {
             $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_AR');
         }
-        else if (KEY == '24') {
-            $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_AR');
+        else if (PROCESS_ID == '24') {
+            $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_AN');
         }
-        else if (KEY == '25') {
-            $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_AR');
+        else if (PROCESS_ID == '25') {
+            $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_IR');
         }
-        else if (KEY == '26') {
-            $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_AR');
+        else if (PROCESS_ID == '26') {
+            $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_IN');
         }
-        
-       
-        listree();
 
     };
 
@@ -124,7 +137,9 @@
         
     };
 
-   
+    $scope.BTN_BACK = function () {
+        REDIRECT('../DH/FRM_MAIN_PAGE_PHESAJ');
+    };
 
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });

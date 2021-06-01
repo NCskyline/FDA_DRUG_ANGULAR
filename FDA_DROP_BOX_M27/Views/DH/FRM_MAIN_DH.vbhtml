@@ -14,7 +14,7 @@ End Code
             </table>
 
             <div align="right">
-                <button ng-click="INPUT_CERT()">สร้างคำขอ</button>
+                <button ng-click="INPUT_DH()">สร้างคำขอ</button>
             </div>
             <hr />
             <div>1.สามารถพิมพ์ใบสั่งชำระเงินจากระบบไปชำระได้ที่ ธนาคารไทยพาณิชย์ ทุกสาขา ตู้ATMของธนาคาร หรือชำระผ่าน SCBeasy หรือMobile appication ของธนาคาร</div>
@@ -28,27 +28,25 @@ End Code
                         <table style="margin-top:10px;width:100%;" class="table table-condensed">
                             <thead>
                                 <tr>
-                                    <th>ประเทศ</th>
-                                    <th>เลขที่ CER</th>
+                                    <th>เลขที่รับคำขอ</th>
                                     <th>วันที่ยื่นคำขอ</th>
                                     <th>สถานะ</th>
-                                    <th>รหัสดำเนินการ</th>
-                                    <th>ใช้ได้ถึง</th>
-                                    <th>ชื่อผู้ผลิตต่างประเทศ</th>
+                                    <th>รหัส 15 หลัก</th>
+                                    <th>ชื่อสาร</th>
+                                    <th>รหัสการดำเนินการ</th>
                                     <th>เหตุผลการคืนคำขอ</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="datas in DATA_GMP">
+                                <tr ng-repeat="datas in DATA_DH">
 
-                                    <td>{{datas.thacntnm}}</td>
-                                    <td>{{datas.CER_NUMBER}}</td>
+                                    <td>{{datas.rcvdate}}</td>
                                     <td>{{datas.REQUEST_DATE}}</td>
                                     <td>{{datas.STATUS_NAME}}</td>
+                                    <td>{{datas.phm15dgt}}</td>
+                                    <td>{{datas.CAS_NAME}}</td>
                                     <td>{{datas.TR_ID}}</td>
-                                    <td>{{datas.EXP_DATE_EXTEND}}</td>
-                                    <td>{{datas.FOREIGN_LOCATION_NAME}}</td>
                                     <td>{{datas.REMARK}}</td>
                                     <td>
                                         <span class="fa fa-eye"></span>

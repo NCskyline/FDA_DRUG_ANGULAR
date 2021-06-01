@@ -21,7 +21,7 @@ End Code*@
 
 
 
-<div ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="pageloadDH(PROCESS)">
+<div class="ic" ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="pageloadDH()">
     <table width="100%" style="font-family:'TH SarabunPSK';font-size:25px;">
         <tr>
             <td width="20%" align="right">
@@ -107,6 +107,9 @@ End Code*@
     <br />
     <div class="row">
         <div ng-include="INPUT" style="width:100%;"></div>
+    </div>
+    <div style="text-align:center">
+        <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
     </div>
 </div>
 

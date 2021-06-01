@@ -28,6 +28,14 @@ Public Class BAO
         Return dta
     End Function
 
+    Function SP_DH15RQT_BY_IDA(ByVal LCN_IDA As Integer, ByVal PROCESS_ID As Integer) As DataTable
+        Dim sql As String = "exec SP_DH15RQT_BY_IDA @IDA='" & LCN_IDA & "',@PROCESS='" & PROCESS_ID & "'"
+        Dim dta As New DataTable
+        dta = Queryds(sql)
+        dta.TableName = "SP_DH15RQT_BY_IDA"
+        Return dta
+    End Function
+
     Public Function SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden(ByVal IDA As String, ByVal CER_TYPE As String, ByVal iden As String) As DataTable
         Dim sql As String = "exec SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden @FK_IDA='" & IDA & "',@CER_TYPE='" & CER_TYPE & "',@iden='" & iden & "'"
         Dim dta As New DataTable

@@ -60,7 +60,6 @@
         var obj = {
            
         };
-
         $scope.LIST_GMP.push(obj);
     }
 

@@ -1,9 +1,9 @@
 ﻿@Code
-    ViewData("Title") = "คำขอจดแจ้งเภสัชเคมีภัณฑ์เป็นสารออกฤทธิ์ตามทะเบียนตำรับยาผลิตในประเทศ"
+    Layout = ""
 End Code
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/DH_CTRL.js"></script>
-<div class="ic" ng-controller="DH_CTRL" ng-app="ANGULAR_APP">
+<div class="ic">
     <center>
         <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2> <br />
         <h2>
