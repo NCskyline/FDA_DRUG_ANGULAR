@@ -58,7 +58,7 @@
 
     function LIST_GMP() {
         var obj = {
-           ddd:''
+           
         };
 
         $scope.LIST_GMP.push(obj);
