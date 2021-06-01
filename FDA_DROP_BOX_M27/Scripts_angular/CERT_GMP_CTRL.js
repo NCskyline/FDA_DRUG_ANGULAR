@@ -3,7 +3,7 @@
     //CHK_TOKEN();
     var LCN_IDA = sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;
-    var PROCESS = sessionStorage.DH_PROCESS_ID;
+    var PROCESS = QueryString("PROCESS");
     var CITIZEN = '0000000000000';
 
 
@@ -15,12 +15,6 @@
         data_CNT.then(function (datas) {
             $scope.CNT_LIST = datas.data;
          
-        }, function () { });
-
-        var data_REF_CERT = CENTER_SV.SP_MASTER_CER_PK_BY_FK_IDA(24153);
-        data_REF_CERT.then(function (datas) {
-            $scope.REF_CERT = datas.data;
-           
         }, function () { });
 
         var data_HEADER_CERT = CENTER_SV.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(CITIZEN , '');
@@ -58,8 +52,17 @@
         else if (PROCESS == '36') {
             $scope.INPUT = SET_URL_SV('');
         }
+
+        LIST_GMP();
     }
 
+    function LIST_GMP() {
+        var obj = {
+           
+        };
+
+        $scope.LIST_GMP.push(obj);
+    }
 
 
 

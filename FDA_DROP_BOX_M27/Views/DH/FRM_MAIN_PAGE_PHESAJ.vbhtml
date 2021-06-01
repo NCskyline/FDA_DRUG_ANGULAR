@@ -13,38 +13,38 @@
             <ul class="listree">
                 <li>
                     <div class="listree-submenu-heading">ก. ลงทะเบียนสถานที่ผลิต</div>
-                    <ul class="listree-submenu-items">
+                    <ul class="listree-submenu-items" style="color:black">
                         <li>
-                            <a ng-click="DATA_GMP('31')">1.Certificate of GMP</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=31">1.Certificate of GMP</a>  @*ng-click="DATA_GMP('31')"*@
                         </li>
                         <li>
-                            <a ng-click="DATA_GMP('32')">2.ISO</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=32">2.ISO</a>
                         </li>
                         <li>
-                            <a ng-click="DATA_GMP('33')">3.HACCP</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=33">3.HACCP</a>
                         </li>
                         <li>
-                            <a ng-click="DATA_GMP('34')">4.Purchase Order</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=34">4.Purchase Order</a>
                         </li>
                         <li>
-                            <a ng-click="DATA_GMP('36')">5.Other</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=36">5.Other</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <div class="listree-submenu-heading">ข. เภสัชเคมีภัณฑ์</div>
-                    <ul class="listree-submenu-items">
+                    <ul class="listree-submenu-items" style="color:black">
                         <li>
-                            <a ng-click="DATA_GMP('950002')">1. เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา (ผลิต)</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=23">1. เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา (ผลิต)</a>
                         </li>
                         <li>
-                            <a ng-click="DATA_GMP('950002')">2. เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา (ผลิต)</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=24">2. เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา (ผลิต)</a>
                         </li>
                         <li>
-                            <a ng-click="DATA_GMP('950002')">3. ไม่เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา (ผลิต)</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=25">3. ไม่เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา (ผลิต)</a>
                         </li>
                         <li>
-                            <a ng-click="DATA_GMP('950002')">4. ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา (ผลิต)</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=26">4. ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา (ผลิต)</a>
                         </li>
                     </ul>
                 </li>

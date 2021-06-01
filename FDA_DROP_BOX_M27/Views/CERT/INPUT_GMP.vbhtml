@@ -13,7 +13,7 @@ End Code
             };
         }]);
 </script>
-<div class="ic">
+<div class="ic" ng-repeat="datas in LIST_GMP">
     <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
         <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ</b>
     </h2>
