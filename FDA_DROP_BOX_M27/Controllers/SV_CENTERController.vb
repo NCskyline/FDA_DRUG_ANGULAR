@@ -441,6 +441,15 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
         End Function
 
+        Function SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(ByVal iden As String, ByVal mt As Integer, ByVal st As Integer, ByVal aori As String) As JsonResult
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(iden, mt, st, aori)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
 #End Region
 
 #Region "GET_DATA"

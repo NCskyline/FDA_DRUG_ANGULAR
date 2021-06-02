@@ -3,7 +3,7 @@
     //CHK_TOKEN();
     var LCN_IDA = sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;
-    var PROCESS = QueryString("PROCESS");
+    var PROCESS = sessionStorage.DH_PROCESS_ID;
     var CITIZEN = '0000000000000';
 
 
@@ -53,7 +53,7 @@
             $scope.INPUT = SET_URL_SV('');
         }
 
-        LIST_GMP();
+        //LIST_GMP();
     }
 
     function LIST_GMP() {

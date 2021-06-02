@@ -83,6 +83,51 @@
                 $scope.DATA_DH = datas.data;
             }, function () { });
         }
+        
+    };
+
+    $scope.DATA_CHE1 = function (PROCESS) {
+
+        $scope.HEADER = 'เพิ่มสารเคมีที่มีส่วนผสมของสารออกฤทธิ์ชนิดสารเดี่ยว';
+        $scope.SUB_PATH = SET_URL_SV('../DH/FRM_CHEMICAL_MAIN');
+
+        var dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '1', 'A');
+        dataCHE.then(function (datas) {
+            $scope.DATA_CHEMICAL = datas.data;
+        }, function () { });
+    };
+
+    $scope.DATA_CHE2 = function (PROCESS) {
+
+        $scope.HEADER = 'เพิ่มสารเคมีที่มีส่วนผสมของสารออกฤทธิ์ชนิดสารผสม';
+        $scope.SUB_PATH = SET_URL_SV('../DH/FRM_CHEMICAL_MAIN');
+
+        var dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '2', 'A');
+        dataCHE.then(function (datas) {
+            $scope.DATA_CHEMICAL = datas.data;
+        }, function () { });
+    };
+
+    $scope.DATA_CHE3 = function (PROCESS) {
+
+        $scope.HEADER = 'เพิ่มสารเคมีที่ไม่มีส่วนผสมของสารออกฤทธิ์ชนิดสารเดี่ยว';
+        $scope.SUB_PATH = SET_URL_SV('../DH/FRM_CHEMICAL_MAIN');
+
+        dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '1', 'I');
+        dataCHE.then(function (datas) {
+            $scope.DATA_CHEMICAL = datas.data;
+        }, function () { });
+    };
+
+    $scope.DATA_CHE4 = function (PROCESS) {
+
+        $scope.HEADER = 'เพิ่มสารเคมีที่ไม่มีส่วนผสมของสารออกฤทธิ์ชนิดสารผสม';
+        $scope.SUB_PATH = SET_URL_SV('../DH/FRM_CHEMICAL_MAIN');
+
+        dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '2', 'I');
+        dataCHE.then(function (datas) {
+            $scope.DATA_CHEMICAL = datas.data;
+        }, function () { });
     };
 
     $scope.INPUT_CERT = function () {

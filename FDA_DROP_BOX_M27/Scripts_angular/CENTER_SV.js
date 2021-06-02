@@ -598,4 +598,18 @@
         });
         return response;
     };
+
+    this.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE = function (IDEN,MT,ST,AORI) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE"),
+            params: {
+                IDEN: IDEN,
+                MT: MT,
+                ST: ST,
+                AORI: AORI
+            }
+        });
+        return response;
+    };
 });

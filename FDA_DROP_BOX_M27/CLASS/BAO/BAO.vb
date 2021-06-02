@@ -36,6 +36,19 @@ Public Class BAO
         Return dta
     End Function
 
+    Public Function SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(ByVal iden As String, ByVal mt As Integer, ByVal st As Integer, ByVal aori As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE @iden = '" & iden & "', @mt=" & mt & " , @st=" & st & ",@aori='" & aori & "'"
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+        Return dt
+    End Function
+
     Public Function SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden(ByVal IDA As String, ByVal CER_TYPE As String, ByVal iden As String) As DataTable
         Dim sql As String = "exec SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden @FK_IDA='" & IDA & "',@CER_TYPE='" & CER_TYPE & "',@iden='" & iden & "'"
         Dim dta As New DataTable
