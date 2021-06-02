@@ -21,7 +21,7 @@ End Code
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="datas in DATA_CHEMICAL">
+                    <tr ng-repeat="datas in DATA_CHEMICAL.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))">
 
                         <td>{{datas.RCVNO}}</td>
                         <td>{{datas.iowanm}}</td>
@@ -34,13 +34,13 @@ End Code
                             </a>
                         </td>
                     </tr>
+
                 </tbody>
-                <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
-                                ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
-                                boundary-link-numbers="true" rotate="false" max-size="maxSize">
-                </uib-pagination>
             </table>
         </div>
     </div>
+    <pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" 
+                class="pagination-sm" items-per-page="itemsPerPage">
+    </pagination>
 </div>
 

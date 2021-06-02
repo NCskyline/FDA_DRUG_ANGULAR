@@ -83,7 +83,6 @@
                 $scope.DATA_DH = datas.data;
             }, function () { });
         }
-        
     };
 
     $scope.DATA_CHE1 = function (PROCESS) {
@@ -94,6 +93,13 @@
         var dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '1', 'A');
         dataCHE.then(function (datas) {
             $scope.DATA_CHEMICAL = datas.data;
+
+            $scope.viewby = 10;
+            $scope.totalItems = $scope.DATA_CHEMICAL.length;
+            $scope.currentPage = 1;
+            $scope.itemsPerPage = $scope.viewby;
+            $scope.maxSize = 5; //Number of pager buttons to show
+
         }, function () { });
     };
 
@@ -105,6 +111,12 @@
         var dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '2', 'A');
         dataCHE.then(function (datas) {
             $scope.DATA_CHEMICAL = datas.data;
+
+            $scope.viewby = 10;
+            $scope.totalItems = $scope.DATA_CHEMICAL.length;
+            $scope.currentPage = 1;
+            $scope.itemsPerPage = $scope.viewby;
+            $scope.maxSize = 5; //Number of pager buttons to show
         }, function () { });
     };
 
@@ -116,6 +128,12 @@
         dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '1', 'I');
         dataCHE.then(function (datas) {
             $scope.DATA_CHEMICAL = datas.data;
+
+            $scope.viewby = 10;
+            $scope.totalItems = $scope.DATA_CHEMICAL.length;
+            $scope.currentPage = 1;
+            $scope.itemsPerPage = $scope.viewby;
+            $scope.maxSize = 5; //Number of pager buttons to show
         }, function () { });
     };
 
@@ -127,6 +145,12 @@
         dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '2', 'I');
         dataCHE.then(function (datas) {
             $scope.DATA_CHEMICAL = datas.data;
+
+            $scope.viewby = 10;
+            $scope.totalItems = $scope.DATA_CHEMICAL.length;
+            $scope.currentPage = 1;
+            $scope.itemsPerPage = $scope.viewby;
+            $scope.maxSize = 5; //Number of pager buttons to show
         }, function () { });
     };
 
@@ -184,6 +208,15 @@
 
     $scope.BTN_BACK = function () {
         REDIRECT('../DH/FRM_MAIN_PAGE_PHESAJ');
+    };
+
+    $scope.pageChanged = function () {
+        console.log('Page changed to: ' + $scope.currentPage);
+    };
+
+    $scope.setItemsPerPage = function (num) {
+        $scope.itemsPerPage = num;
+        $scope.currentPage = 1; //reset to first page
     };
 
 }).controller('appController', ['$scope', function ($scope) {

@@ -1,10 +1,9 @@
 ﻿
 <link rel="stylesheet" href="../dist/listree.min.css" />
-<script src="../js/dist/listree.umd.min.js"></script>
 <script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/DH_CTRL.js"></script>
-
+<link href="../css/bootstrap_limitless.min.css" rel="stylesheet" />
 
 <div class="ic" ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()">
 
@@ -77,9 +76,10 @@
         </div>
         <div class="part part-2-3 no-bg">
 
-            <div ng-include="SUB_PATH" >
+            <div ng-include="SUB_PATH">
 
             </div>
+            
         </div>
     </div>
 </div>
