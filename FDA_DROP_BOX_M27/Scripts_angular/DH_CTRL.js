@@ -18,18 +18,6 @@
             $scope.nameOperator = datas.data.nameOperator;
         }, function () { });
 
-        var data_CNT = CENTER_SV.SP_MASTER_sysisocnt();
-        data_CNT.then(function (datas) {
-            $scope.CNT_LIST = datas.data;
-
-        }, function () { });
-
-        var data_REF_CERT = CENTER_SV.SP_MASTER_CER_PK_BY_FK_IDA(24153);
-        data_REF_CERT.then(function (datas) {
-            $scope.REF_CERT = datas.data;
-
-        }, function () { });
-
         if (PROCESS_ID == '31' || PROCESS_ID == '32' || PROCESS_ID == '33' || PROCESS_ID == '34' || PROCESS_ID == '36') {
 
             if (PROCESS_ID == '31') {
@@ -177,6 +165,17 @@
             $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_IN');
         }
 
+        var data_CNT = CENTER_SV.SP_MASTER_sysisocnt();
+        data_CNT.then(function (datas) {
+            $scope.CNT_LIST = datas.data;
+
+        }, function () { });
+
+        var data_REF_CERT = CENTER_SV.SP_MASTER_CER_PK_BY_FK_IDA(LCN_IDA);
+        data_REF_CERT.then(function (datas) {
+            $scope.REF_CERT = datas.data;
+
+        }, function () { });
     };
 
     $scope.GET_LCN = function (KEY) {

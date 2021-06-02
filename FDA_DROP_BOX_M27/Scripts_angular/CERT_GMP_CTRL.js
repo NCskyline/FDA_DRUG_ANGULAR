@@ -6,7 +6,6 @@
     var PROCESS = sessionStorage.DH_PROCESS_ID;
     var CITIZEN = '0000000000000';
 
-
     pageload();
 
     function pageload() {
