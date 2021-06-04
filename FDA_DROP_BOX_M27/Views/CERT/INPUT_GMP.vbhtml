@@ -186,4 +186,31 @@ End Code
             </td>
         </tr>
     </table>
+    <br />
+
+    <div>
+        <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
+            ไฟล์แนบ
+        </h2>
+        <table width="100%" style="font-family:'TH SarabunPSK';font-size:20px;">
+            <tr>
+                <td>
+                    ใบ CER GMP
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                     อื่นๆ
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    @*<div>
+        <center>
+            <input type="button" id="btn_save" value="บันทึก" class="btn-lg" />
+        </center>
+        
+    </div>*@
     </div>

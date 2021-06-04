@@ -5,5 +5,6 @@
     Public rcvdate As Date
     Public thanameplace As String
     Public nameOperator As String
+    Public _CER As New CER
 
 End Class

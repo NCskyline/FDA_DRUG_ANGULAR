@@ -82,9 +82,14 @@ End Code
             <div style="text-align: center;">
                 <table>
                     <tr>
-                        <td><asp:Button ID="btn_save" runat="server" Text="บันทึก" CssClass="btn-lg" /></td>
-                        <td><asp:Button ID="btn_edit" runat="server" Text="แก้ไข" CssClass="btn-lg" /></td>
-                        <td><asp:Button ID="btn_close" runat="server" Text="ปิดหน้าต่าง" CssClass="btn-lg" /></td>
+                        <td><input type="button" ID="btn_save" value="บันทึก" />
+                        </td>
+                        <td>
+                            <input type="button" ID="btn_edit" value="แก้ไข" />
+                        </td>
+                        <td>
+                            <input type="button" ID="btn_close" value="ปิดหน้าต่าง" />
+                        </td>
                     </tr>
                 </table>
 

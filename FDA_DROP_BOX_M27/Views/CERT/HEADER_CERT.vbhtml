@@ -67,4 +67,7 @@ End Code
     <div ng-include="INPUT">
 
     </div>
+    <div style="text-align:center">
+        <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+    </div>
 </div>

@@ -61,7 +61,9 @@
         };
         $scope.LIST_GMP.push(obj);
     }
-
+    $scope.BTN_BACK = function () {
+        REDIRECT('../DH/FRM_MAIN_PAGE_PHESAJ');
+    };
 
 
 
