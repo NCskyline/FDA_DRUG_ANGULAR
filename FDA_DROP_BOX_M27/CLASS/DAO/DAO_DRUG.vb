@@ -7438,6 +7438,7 @@ Namespace DAO_DRUG
 
             datas = (From p In db.MAS_ADMIN_BUTTONs Where p.BTN_GROUP = BtnGroup And p.IDgroup = idGroup Select p Order By p.SEQ Ascending)
             For Each Me.fields In datas
+
             Next
         End Sub
         Public Sub GetDataby_Btn_Group(ByVal IDgroup As Integer)

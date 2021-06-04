@@ -205,6 +205,10 @@
         
     };
 
+    $scope.ADD_CHEMICAL = function () {
+        REDIRECT('../DH/INPUT_CHEMICAL_RQT');
+    };
+
     $scope.BTN_BACK = function () {
         REDIRECT('../DH/FRM_MAIN_PAGE_PHESAJ');
     };

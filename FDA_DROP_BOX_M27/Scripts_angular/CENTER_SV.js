@@ -355,6 +355,13 @@
         return response;
     };
 
+    this.SETMODEL_DH = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SETMODEL_DH")
+        });
+        return response;
+    };
 
     this.GET_DATAPROCESS = function (P_ID) {
         var response = $http({
@@ -612,4 +619,6 @@
         });
         return response;
     };
+
+   
 });
