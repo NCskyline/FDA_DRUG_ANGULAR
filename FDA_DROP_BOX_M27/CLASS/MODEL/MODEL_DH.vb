@@ -10,6 +10,8 @@
     Public Address As String
     Public Province As String
     Public Country As String
+    Public MFD_DATE As Date
+    Public EXP_DATE As Date
     Public _CER As New CER
 
 

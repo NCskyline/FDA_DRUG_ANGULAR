@@ -66,9 +66,9 @@
    
     
 
-    $scope.BTN_SAVE_GMP = function () {
-
-        var Getdata = CENTER_SV.INSERT_DATE($scope.LIST_GMP);
+    $scope.BTN_SAVE = function () {
+        var data = $scope.LIST_GMP;
+        var Getdata = CENTER_SV.INSERT_DATE(data);
         Getdata.then(function (datas) {
            
 
