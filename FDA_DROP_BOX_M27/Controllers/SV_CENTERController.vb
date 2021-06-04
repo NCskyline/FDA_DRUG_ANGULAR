@@ -498,7 +498,14 @@ Namespace Controllers
 
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
+        Function test_dh() As JsonResult
+            Dim model_dhs As New MODEL_DH
+            model_dhs._CER.TR_ID = 0
 
+
+
+
+        End Function
         'Function GET_MAS_BIO_UNIT(ByVal IDA As Integer) As JsonResult
         '    Dim dao As New DAO_DRUG.TB_MAS_BIO_UNIT
         '    dao.GetDataALL()
