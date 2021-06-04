@@ -699,9 +699,13 @@ Namespace Controllers
 
             End If
 
-
-
             Return Json(_CLS, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function GET_BTN_DATA() As Object
+            Dim dao As New DAO_DRUG.TB_MAS_ADMIN_BUTTON
+
+            Return 0
         End Function
 
 

@@ -176,4 +176,40 @@
             _LCT_IDA = value
         End Set
     End Property
+    Private _SET_MAIN_PAGE1 As Object
+    Public Property SET_MAIN_PAGE1() As Object
+        Get
+            Return _SET_MAIN_PAGE1
+        End Get
+        Set(ByVal value As Object)
+            _SET_MAIN_PAGE1 = value
+        End Set
+    End Property
+    Private _SET_MAIN_PAGE2 As Object
+    Public Property SET_MAIN_PAGE2() As Object
+        Get
+            Return _SET_MAIN_PAGE2
+        End Get
+        Set(ByVal value As Object)
+            _SET_MAIN_PAGE2 = value
+        End Set
+    End Property
+    Private _SET_MAIN_PAGE3 As Object
+    Public Property SET_MAIN_PAGE3() As Object
+        Get
+            Return _SET_MAIN_PAGE3
+        End Get
+        Set(ByVal value As Object)
+            _SET_MAIN_PAGE3 = value
+        End Set
+    End Property
+    Private _SET_MAIN_PAGE4 As Object
+    Public Property SET_MAIN_PAGE4() As Object
+        Get
+            Return _SET_MAIN_PAGE4
+        End Get
+        Set(ByVal value As Object)
+            _SET_MAIN_PAGE4 = value
+        End Set
+    End Property
 End Class
