@@ -3,7 +3,7 @@
 app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
 
-    $scope.loading = true;
+    //$scope.loading = true;
 
     $scope.DOC_ID = 0;
     $scope.DOC_TITLE = "TEST";
@@ -27,7 +27,14 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 sessionStorage.CITIZEN_ID_AUTHORIZE = datas.data.CITIZEN_ID_AUTHORIZE;
                 sessionStorage.THANM = datas.data.THANM;
 
-                window.location = "/Master_Page/MAIN_MASTER"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
+                $scope.SET_MAIN_PAGE1 = datas.data.SET_MAIN_PAGE1;
+                $scope.SET_MAIN_PAGE2 = datas.data.SET_MAIN_PAGE2;
+                $scope.SET_MAIN_PAGE3 = datas.data.SET_MAIN_PAGE3;
+                $scope.SET_MAIN_PAGE4 = datas.data.SET_MAIN_PAGE4;
+
+
+
+                //window.location = "/Master_Page/MAIN_MASTER"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
                 //window.location = "/DRUG_DROPBOX/HOME/FRM_STAFF_LIST"; 
             }
             else {

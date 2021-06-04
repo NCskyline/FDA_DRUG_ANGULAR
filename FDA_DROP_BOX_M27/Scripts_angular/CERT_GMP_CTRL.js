@@ -7,6 +7,7 @@
     var CITIZEN = '0000000000000';
 
     pageload();
+    //LIST_GMP();
 
     function pageload() {
 
@@ -14,6 +15,12 @@
         data_CNT.then(function (datas) {
             $scope.CNT_LIST = datas.data;
          
+        }, function () { });
+
+        var MODLE_GMP = CENTER_SV.SETMODEL_DH();
+        MODLE_GMP.then(function (datas) {
+            $scope.LIST_GMP = datas.data;
+
         }, function () { });
 
         var data_HEADER_CERT = CENTER_SV.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(CITIZEN , '');
@@ -52,17 +59,21 @@
             $scope.INPUT = SET_URL_SV('');
         }
 
-        //LIST_GMP();
+        
     }
 
-    function LIST_GMP() {
-        var obj = {
+    
+   
+    
+
+    $scope.BTN_SAVE_GMP = function () {
+
+        var Getdata = CENTER_SV.INSERT_DATE($scope.LIST_GMP);
+        Getdata.then(function (datas) {
            
-        };
-        $scope.LIST_GMP.push(obj);
-    }
 
-
+        }, function () { });
+    };
 
 
 

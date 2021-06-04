@@ -136,7 +136,15 @@
             _MENU_ID = value
         End Set
     End Property
-
+    Private _IDgroup As String
+    Public Property IDgroup() As String
+        Get
+            Return _IDgroup
+        End Get
+        Set(ByVal value As String)
+            _IDgroup = value
+        End Set
+    End Property
 
 
     Private _ADDR As String

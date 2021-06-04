@@ -646,6 +646,11 @@ Namespace Controllers
                 _CLS.THANM = "นายทดสอบ ระบบ"
                 _CLS.TOKEN = TOKEN
                 _CLS.CODE = "900"
+                _CLS.SET_MAIN_PAGE1 = GET_BTN_DATA(0, 21020)
+                _CLS.SET_MAIN_PAGE2 = GET_BTN_DATA(1, 21020)
+                _CLS.SET_MAIN_PAGE3 = GET_BTN_DATA(2, 21020)
+                _CLS.SET_MAIN_PAGE4 = GET_BTN_DATA(3, 21020)
+
             Else
 
 
@@ -663,6 +668,7 @@ Namespace Controllers
                 _CLS.PVCODE = clsxml.Get_Value_XML("pvcode")
                 _CLS.THANM = clsxml.Get_Value_XML("Name")
                 _CLS.CODE = clsxml.Get_Value_XML("CODE")
+                _CLS.IDgroup = clsxml.Get_Value_XML("IDgroup")
 
                 'Dim xml_c As String = ""
                 'ดึงชื่อคน LOGIN เข้าระบบ
@@ -694,7 +700,10 @@ Namespace Controllers
                 '    _CLS.THANM_CUSTOMER = clsxml.Get_Value_XML("prefixnm") & " " & clsxml.Get_Value_XML("thanm")
                 'End If
 
-
+                _CLS.SET_MAIN_PAGE1 = GET_BTN_DATA(0, 21020)
+                _CLS.SET_MAIN_PAGE2 = GET_BTN_DATA(1, 21020)
+                _CLS.SET_MAIN_PAGE3 = GET_BTN_DATA(2, 21020)
+                _CLS.SET_MAIN_PAGE4 = GET_BTN_DATA(3, 21020)
 
 
             End If
@@ -702,10 +711,11 @@ Namespace Controllers
             Return Json(_CLS, JsonRequestBehavior.AllowGet)
         End Function
 
-        Function GET_BTN_DATA() As Object
+        Function GET_BTN_DATA(ByVal BTN_GROUP As Integer, ByVal IDgroup As Integer) As Object
             Dim dao As New DAO_DRUG.TB_MAS_ADMIN_BUTTON
+            dao.GetDataby_Btn_Group_and_IdGroup(BTN_GROUP, IDgroup)
 
-            Return 0
+            Return dao.datas
         End Function
 
 
@@ -719,6 +729,11 @@ Namespace Controllers
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
 
+        Function SETMODEL_DH() As JsonResult
+            Dim MODEL As New MODEL_DH
+
+            Return Json(MODEL, JsonRequestBehavior.AllowGet)
+        End Function
 
         Public Function SETMODEL_LIST() As JsonResult
             Dim MODEL As New MODEL_FILELIST

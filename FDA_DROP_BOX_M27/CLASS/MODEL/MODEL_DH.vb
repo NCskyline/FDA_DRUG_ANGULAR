@@ -5,5 +5,13 @@
     Public rcvdate As Date
     Public thanameplace As String
     Public nameOperator As String
+    Public Certificate_Number As String
+    Public Manufacturer As String
+    Public Address As String
+    Public Province As String
+    Public Country As String
+    Public _CER As New CER
+
+
 
 End Class
