@@ -4,82 +4,74 @@
 
 <div ng-controller="AUTHEN_STAFF_CTRL" ng-app="ANGULAR_APP">
 
-    <div class="part part-1-3 no-bg">
-       <div ng-repeat="datas in SET_MAIN_PAGE1">
-           <div>ระบบจัดการ</div>
-           <div>{{datas.BTN_NAME}}</div>
-       </div>
-    </div>
-    <div>
-
-
-    </div>
-        
-
-</div>
-    @*<div class="content-part">
+    <div class="content-part no-pm">
         <div class="part part-1-3">
+            <div align="center"><h3>ระบบจัดการ</h3></div>
+            <div ng-repeat="datas in SET_MAIN_PAGE1">
+                <div class="l-sign"><span class="ss"></span></div>
+                <div>
+                    <div data-target="s1" class="l-item s{{$index+1}}">
+                        <span ng-show="loadarray[$index].LOADING" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.PAGE_PATH , datas.PAGE_NAME , datas.PROCESS_ID , $index , datas.PROCESS_NAME)" style="width:100%;background-color:darkgrey">
+                            @*<i class="h-icon fas fa-bookmark"></i>*@
+                            {{datas.BTN_NAME}}
+                        </div>
+                    </div>
+                </div>
 
-            <div class="card-tab-control page-header-content header-elements-md-inline container">
-                <div class="tab-content" ng-repeat="datas in fildata  = (FULL_MODEL.SET_PAGE_MAIN | filter: {PROCESS_ID : 203000})">
-                <div class="tab-content" ng-repeat="datas in SET_MAIN_PAGE1">
-                    <div>
-                        <div>
-                            ระบบจัดการ
-                        </div>
-                        <div data-index="{{datas.IDA}}" class="tab-content-item " ng-click="BTN_MENU_POPUP_CLICK(datas.PAGE_PATH,datas.PAGE_NAME,datas.IDA)">
-                            <i class="h-icon fas fa-bookmark"></i>
+            </div>
+            
+            <div align="center"><h3>ระบบสถานที่ด้านยา</h3></div>
+            <div ng-repeat="datas in SET_MAIN_PAGE2">
+                <div class="l-sign"><span class="ss"></span></div>
+                <div>
+                    <div data-target="s1" class="l-item s{{$index+1}}">
+                        <span ng-show="loadarray[$index].LOADING" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.PAGE_PATH , datas.PAGE_NAME , datas.PROCESS_ID , $index , datas.PROCESS_NAME)" style="width:100%;background-color:darkgrey">
+                            @*<i class="h-icon fas fa-bookmark"></i>*@
                             {{datas.BTN_NAME}}
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-tab-control page-header-content header-elements-md-inline container">
-                <div class="tab-content" ng-repeat="datas in fildata  = (FULL_MODEL.SET_PAGE_MAIN | filter: {PROCESS_ID : 203000})">
-                <div class="tab-content" ng-repeat="datas in SET_MAIN_PAGE2">
-                    <div>
-                        <div>
-                            ระบบสถานที่ด้านยา
-                        </div>
-                        <div data-index="{{datas.IDA}}" class="tab-content-item " ng-click="BTN_MENU_POPUP_CLICK(datas.PAGE_PATH,datas.PAGE_NAME,datas.IDA)">
-                            <i class="h-icon fas fa-bookmark"></i>
-                            {{datas.BTN_NAME}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-tab-control page-header-content header-elements-md-inline container">
-                <div class="tab-content" ng-repeat="datas in fildata  = (FULL_MODEL.SET_PAGE_MAIN | filter: {PROCESS_ID : 203000})">
-                <div class="tab-content" ng-repeat="datas in SET_MAIN_PAGE3">
-                    <div>
-                        <div>
-                            ระบบผลิตภัณฑ์ยา
-                        </div>
-                        <div data-index="{{datas.IDA}}" class="tab-content-item " ng-click="BTN_MENU_POPUP_CLICK(datas.PAGE_PATH,datas.PAGE_NAME,datas.IDA)">
-                            <i class="h-icon fas fa-bookmark"></i>
-                            {{datas.BTN_NAME}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-tab-control page-header-content header-elements-md-inline container">
-                <div class="tab-content" ng-repeat="datas in fildata  = (FULL_MODEL.SET_PAGE_MAIN | filter: {PROCESS_ID : 203000})">
-                <div class="tab-content" ng-repeat="datas in SET_MAIN_PAGE4">
-                    <div>
-                        <div>
-                            ระบบเภสัชเคมีภัณฑ์
-                        </div>
-                        <div data-index="{{datas.IDA}}" class="tab-content-item " ng-click="BTN_MENU_POPUP_CLICK(datas.PAGE_PATH,datas.PAGE_NAME,datas.IDA)">
-                            <i class="h-icon fas fa-bookmark"></i>
-                            {{datas.BTN_NAME}}
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+            </div>
+            
+            <div align="center"><h3>ระบบผลิตภัณฑ์ยา</h3></div>
+            <div ng-repeat="datas in SET_MAIN_PAGE3">
+                <div class="l-sign"><span class="ss"></span></div>
+                <div>
+                    <div data-target="s1" class="l-item s{{$index+1}}">
+                        <span ng-show="loadarray[$index].LOADING" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.PAGE_PATH , datas.PAGE_NAME , datas.PROCESS_ID , $index , datas.PROCESS_NAME)" style="width:100%;background-color:darkgrey">
+                            @*<i class="h-icon fas fa-bookmark"></i>*@
+                            {{datas.BTN_NAME}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div align="center"><h3>ระบบเภสัชเคมีภัณฑ์</h3></div>
+            <div ng-repeat="datas in SET_MAIN_PAGE4">
+                <div class="l-sign"><span class="ss"></span></div>
+                <div>
+                    <div data-target="s1" class="l-item s{{$index+1}}">
+                        <span ng-show="loadarray[$index].LOADING" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.PAGE_PATH , datas.PAGE_NAME , datas.PROCESS_ID , $index , datas.PROCESS_NAME)" style="width:100%;background-color:darkgrey">
+                            @*<i class="h-icon fas fa-bookmark"></i>*@
+                            {{datas.BTN_NAME}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+           
         </div>
         <div class="part part-2-3">
 
-        </div>
-    </div>*@
 
+        </div>
+    </div>
+
+</div>
+ 
