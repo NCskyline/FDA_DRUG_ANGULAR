@@ -37,6 +37,19 @@
         return response;
     };
     
+    
+    this.INSERT_CERT_GMP = function (aa) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/INSERT_CERT_GMP"),
+            params: {
+                //identify: identify,
+                aa: aa
+            }
+        });
+        return response;
+    };
+
 
     this.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA = function (lctida) {
         var response = $http({
