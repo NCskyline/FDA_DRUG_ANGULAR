@@ -4,7 +4,7 @@
     var LCN_IDA = sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;
     var PROCESS = sessionStorage.DH_PROCESS_ID;
-    var CITIZEN = '0000000000000';
+    var CITIZEN = '0105527028430';
 
     pageload();
     //LIST_GMP();
@@ -40,7 +40,10 @@
         data_LCN_SHOW.then(function (datas) {
             $scope.LCNNO_SHOW = datas.data.LCNNO_SHOW;
             $scope.TYPE_IMPORT = datas.data.TYPE_IMPORT;
-    
+            $scope.thanm = datas.data.NAME;
+            $scope.fulladdr2 = datas.data.FULL_ADDR;
+            $scope.tel = datas.data.TEL;
+            $scope.fax = datas.data.FAX;
         }, function () { });
 
         if (PROCESS == '31') {
@@ -68,11 +71,11 @@
 
     $scope.BTN_SAVE = function () {
         var data = $scope.LIST_GMP;
-        var Getdata = CENTER_SV.INSERT_DATE(data);
-        Getdata.then(function (datas) {
+        //var Getdata = CENTER_SV.INSERT_DATE(data);  
+        //Getdata.then(function (datas) {
            
 
-        }, function () { });
+        //}, function () { });
     };
 
 

@@ -44,7 +44,7 @@ End Code
                 อยู่เลขที่ :
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
-                <label>{{fulladdr3}}</label>
+                <label>{{fulladdr2}}</label>
             </td>
         </tr>
         <tr>
