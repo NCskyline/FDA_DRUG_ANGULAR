@@ -12,7 +12,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
     pageload();
 
     function pageload() {
-        Swal.showLoading();
+       
         //var token = QueryString("Token");
         var token = "PASS";
         sessionStorage.token = token;
