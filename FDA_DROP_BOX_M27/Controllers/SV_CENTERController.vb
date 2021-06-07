@@ -482,7 +482,14 @@ Namespace Controllers
                 dao_dalcntype.GetDataby_lcntpcd(dao.fields.lcntpcd)
 
 
+                Dim dt_name As New DataTable
+                Dim bao As New BAO
+                dt_name = bao.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(dao.fields.CITIZEN_ID_AUTHORIZE, 0)
                 ''Dim model As New MODEL_LCN
+
+                Dim dt_addr As New DataTable
+
+                dt_addr = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(dao.fields.FK_IDA)
                 With model
                     .LCNNO_SHOW = lcnno_format
                     Try
@@ -490,6 +497,35 @@ Namespace Controllers
                     Catch ex As Exception
 
                     End Try
+
+                    For Each dr As DataRow In dt_name.Rows
+                        .NAME = dr("thanm")
+                    Next
+
+                    For Each dr As DataRow In dt_addr.Rows
+                        Try
+                            .THANAMEPLACE = dr("thanameplace")
+                        Catch ex As Exception
+
+                        End Try
+                        Try
+                            .FULL_ADDR = dr("fulladdr2")
+                        Catch ex As Exception
+
+                        End Try
+                        Try
+                            .TEL = dr("tel1")
+                        Catch ex As Exception
+
+                        End Try
+                        Try
+                            .FAX = dr("fax")
+                        Catch ex As Exception
+
+                        End Try
+
+                    Next
+
 
                 End With
 

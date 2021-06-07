@@ -79,4 +79,41 @@
             _TYPE_IMPORT = value
         End Set
     End Property
+
+    Private _THANAMEPLACE As String
+    Public Property THANAMEPLACE() As String
+        Get
+            Return _THANAMEPLACE
+        End Get
+        Set(ByVal value As String)
+            _THANAMEPLACE = value
+        End Set
+    End Property
+    Private _FULL_ADDR As String
+    Public Property FULL_ADDR() As String
+        Get
+            Return _FULL_ADDR
+        End Get
+        Set(ByVal value As String)
+            _FULL_ADDR = value
+        End Set
+    End Property
+    Private _TEL As String
+    Public Property TEL() As String
+        Get
+            Return _TEL
+        End Get
+        Set(ByVal value As String)
+            _TEL = value
+        End Set
+    End Property
+    Private _FAX As String
+    Public Property FAX() As String
+        Get
+            Return _FAX
+        End Get
+        Set(ByVal value As String)
+            _FAX = value
+        End Set
+    End Property
 End Class
