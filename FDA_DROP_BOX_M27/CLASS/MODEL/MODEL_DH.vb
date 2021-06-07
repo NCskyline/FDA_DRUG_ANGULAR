@@ -12,8 +12,19 @@
     Public Country As String
     Public MFD_DATE As Date
     Public EXP_DATE As Date
-    Public _CER As New CER
 
 
 
+End Class
+
+Public Class MODEL_CER_GMP
+    Private _CER As New CER
+    Public Property CER() As CER
+        Get
+            Return _CER
+        End Get
+        Set(ByVal value As CER)
+            _CER = value
+        End Set
+    End Property
 End Class

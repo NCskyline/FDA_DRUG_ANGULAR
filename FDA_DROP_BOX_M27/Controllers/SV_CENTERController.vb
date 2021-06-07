@@ -500,7 +500,7 @@ Namespace Controllers
         End Function
         Function test_dh() As JsonResult
             Dim model_dhs As New MODEL_DH
-            model_dhs._CER.TR_ID = 0
+            ''model_dhs._CER.TR_ID = 0
 
 
 
@@ -737,7 +737,7 @@ Namespace Controllers
         End Function
 
         Function SETMODEL_DH() As JsonResult
-            Dim MODEL As New MODEL_DH
+            Dim MODEL As New MODEL_CER_GMP
 
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function

@@ -3,7 +3,7 @@
 End Code
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>
-<div class="ic" ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP" >
+<div class="ic" ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP">
     <h1></h1>
     <table width="100%" style="font-family:'TH SarabunPSK';font-size:22px;">
         <tr>
@@ -34,14 +34,14 @@ End Code
             <td style="height:25px">
                 สถานที่ ชื่อ :
             </td>
-            
+
             <td style="border-bottom:dotted;border-bottom-width:thin;">
                 <label>{{thanameplace}}</label>
             </td>
         </tr>
         <tr>
             <td style="height:25px">
-                อยู่เลขที่ : 
+                อยู่เลขที่ :
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
                 <label>{{fulladdr3}}</label>
@@ -69,5 +69,8 @@ End Code
     </div>
     <div style="text-align:center">
         <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+    </div>
+    <div style="text-align:center">
+        <input type="button" class="btn btn-lg" ng-click="BTN_SAVE()" value="บันทึก" />
     </div>
 </div>
