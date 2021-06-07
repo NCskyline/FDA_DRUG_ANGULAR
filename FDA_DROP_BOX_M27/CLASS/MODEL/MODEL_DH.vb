@@ -13,23 +13,6 @@
     Public MFD_DATE As Date
     Public EXP_DATE As Date
 
-    ''' <summary>
-    ''' เลขที่ใบรับรอง (Certificate Number)
-    ''' </summary>
-    Public CERTIFICATION_NUMBER_ALL As String
-    ''' <summary>
-    ''' ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer) --CER_DETAIL_MANUFACTURE 
-    ''' </summary>
-    Public NAME_ADDRESS As String
-    ''' <summary>
-    ''' ที่อยู่ (Address) CER_DETAIL_MANUFACTURE
-    ''' </summary>
-    Public ADDRESS_NUMBER As String
-    ''' <summary>
-    ''' เมือง (City / Province/ State) --CER_DETAIL_MANUFACTURE 
-    ''' </summary>
-    Public ADDRESS_CITY As String
-
 End Class
 
 Public Class MODEL_CER_GMP

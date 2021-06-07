@@ -44,7 +44,7 @@
             url: SET_URL_SV("/SV_CENTER/INSERT_CERT_GMP"),
             params: {
                 //identify: identify,
-                aa: aa
+                XML: JSON.stringify(aa),
             }
         });
         return response;
