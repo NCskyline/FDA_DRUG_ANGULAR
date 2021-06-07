@@ -1085,6 +1085,16 @@ Namespace Controllers
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
 
         End Function
+
+        Function INSERT_CERT_GMP(ByVal Json_item As String) As JsonResult
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_CER_GMP = jss.Deserialize(Json_item, GetType(MODEL_CER_GMP))
+            Dim dao As New DAO_DRUG.TB_CER
+            dao.fields = bb.CER
+
+            Return Json(msg_r, JsonRequestBehavior.AllowGet)
+        End Function
+
 #End Region
 
 #Region "UPDATE_DATA"

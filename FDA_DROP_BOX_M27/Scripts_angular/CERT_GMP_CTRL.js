@@ -70,12 +70,12 @@
     
 
     $scope.BTN_SAVE = function () {
-        var data = $scope.LIST_GMP;
-        //var Getdata = CENTER_SV.INSERT_DATE(data);  
-        //Getdata.then(function (datas) {
+       // var data = $scope.LIST_GMP;
+        var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP);  
+        Getdata.then(function (datas) {
            
 
-        //}, function () { });
+        }, function () { });
     };
 
 
