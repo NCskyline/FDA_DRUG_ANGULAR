@@ -65,7 +65,19 @@
         
     }
 
-    
+    $scope.ADD_CHEM_LIST = function () {
+        var obj = {
+            IDA:'',
+            ROW_ID:'',
+            CAS_ID:'',
+            CAS_NO:'',
+            CAS_NAME:'',
+            FK_IDA:'',
+            TR_ID:'',
+            INN_NAME:''
+        };
+        $scope.GMP_CHEM.push(obj);
+    };
    
     
 

@@ -233,7 +233,7 @@
     this.GET_MAS_BIO_UNIT = function () {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/SV_CENTER/GET_MAS_BIO_UNIT"),
+            url: SET_URL_SV("/SV_CENTER/GET_MAS_BIO_UNIT")
             //params: {
             //    PRODUCT_GROUP: PRODUCT_GROUP
             //}

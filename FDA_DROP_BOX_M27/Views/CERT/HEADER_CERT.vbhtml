@@ -67,10 +67,49 @@ End Code
     <div ng-include="INPUT">
 
     </div>
+    <div>
+        <div>
+            <input class="form-control" ng-model="iowanm" />
+            <button class="btn btn-lg" ng-click="BTN_SEARCH_CHEM(iowanm)" value="ค้นหาสารที่นี่"></button>
+        </div>
+        <div>
+            <table style="width:100%;height:200%" border="1" >
+                <thead>
+                    <tr>
+                        <th>ชื่อสาร</th>
+                        <th>A or I</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="datas in LIST_CHEM">
+                        <th>{{datas.ss}}</th>
+                        <th>{{datas.AA}}</th>
+                        <th ng-click="BTN_ADD_CHEM(datas.ss,datas.AA)">เลือกสาร</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ลำดับ</th>
+                        <th>ชื่อสาร</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="datas in GMP_CHEM">
+                        <th>{{$index + 1}}</th>
+                        <th>{{datas.CAS_NAME}}</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <div style="text-align:center">
         <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
-    </div>
-    <div style="text-align:center">
         <input type="button" class="btn btn-lg" ng-click="BTN_SAVE()" value="บันทึก" />
     </div>
+
 </div>

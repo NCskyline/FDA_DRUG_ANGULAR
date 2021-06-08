@@ -207,10 +207,4 @@ End Code
             </tr>
         </table>
     </div>
-    @*<div>
-        <center>
-            <input type="button" id="btn_save" value="บันทึก" class="btn-lg" />
-        </center>
-        
-    </div>*@
-    </div>
+</div>
