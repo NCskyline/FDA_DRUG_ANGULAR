@@ -90,7 +90,7 @@ End Code
                 7. วันเดือนปีที่ออกหนังสือ GMP (Issue Date)<font color="red">*</font> :
             </td>
             <td>
-                <md-datepicker ng-model="datas.CREATE_DATE" md-placeholder="Enter date"
+                <md-datepicker ng-model="datas.DOCUMENT_DATE" md-placeholder="Enter date"
                                input-aria-describedby="datepicker-description"
                                input-aria-labelledby="datepicker-header "></md-datepicker>
             </td>
@@ -100,7 +100,7 @@ End Code
                 วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
             </td>
             <td>
-                <md-datepicker ng-model="datas.REQUEST_DATE" md-placeholder="Enter date"
+                <md-datepicker ng-model="datas.EXP_DOCUMENT_DATE" md-placeholder="Enter date"
                                input-aria-describedby="datepicker-description"
                                input-aria-labelledby="datepicker-header "></md-datepicker>
             </td>

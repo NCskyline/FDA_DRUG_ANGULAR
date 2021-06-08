@@ -83,7 +83,7 @@
 
     $scope.BTN_SAVE = function () {
        // var data = $scope.LIST_GMP;
-        var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP);  
+        var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP,  $scope.LIST_GMP, PROCESS);  
         Getdata.then(function (datas) {
            
 

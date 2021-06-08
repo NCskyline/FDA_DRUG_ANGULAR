@@ -476,6 +476,7 @@
     <Content Include="Views\DH\FRM_MAIN_PAGE_PHESAJ.vbhtml" />
     <Content Include="Views\DH\FRM_SELECT_LCN.vbhtml" />
     <Content Include="Views\AUTHEN\FRM_STAFF_MAIN.vbhtml" />
+    <Content Include="Views\CERT\INPUT_PICS.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
