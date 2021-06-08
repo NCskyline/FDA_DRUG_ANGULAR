@@ -17,7 +17,7 @@ Namespace Controllers
         Public _PATH_BOX_TEMPLATE As String = System.Configuration.ConfigurationManager.AppSettings("PATH_BOX_TEMPLATE")
         Dim msg_r As New MODEL_RESULT
         Dim BAO_L As New BAO_DROPBOX
-
+        Public _CLS As New CLS_SESSION
 
 #Region "PDF"
 
@@ -680,7 +680,7 @@ Namespace Controllers
         Function GET_AUTHEN(ByVal TOKEN As String) As JsonResult
             'CHECK_URL()
 
-            Dim _CLS As New CLS_SESSION
+
 
             If TOKEN = "PASS" Then
                 _CLS.CITIZEN_ID = "0105522020724" ''"1100400181875"
@@ -1086,18 +1086,62 @@ Namespace Controllers
 
         End Function
 
-        Function INSERT_CERT_GMP(ByVal XML As String) As JsonResult
+        Function INSERT_CERT_GMP(ByVal XML_CERT As String, ByVal XML_CHEM As String, ByVal _ProcessID As String) As JsonResult
             Dim jss As New JavaScriptSerializer
-            Dim bb As MODEL_CER_GMP = jss.Deserialize(XML, GetType(MODEL_CER_GMP))
+            Dim bb As MODEL_CER_GMP = jss.Deserialize(XML_CERT, GetType(MODEL_CER_GMP))
+            'Dim bbm As MODEL_CER_GMP = jss.Deserialize(XML_MANUFAC, GetType(MODEL_CER_GMP))
+            Dim bbc As MODEL_CER_GMP = jss.Deserialize(XML_CHEM, GetType(MODEL_CER_GMP))
+
+
             Dim bao_tran As New BAO
-            'bao_tran.insert_transection_new("")
+            Dim tr_id As Integer = 0
+            'tr_id = bao_tran.insert_transection_new(_ProcessID, _CLS.CITIZEN_ID, _CLS.CITIZEN_ID_AUTHORIZE)
 
 
             Dim dao As New DAO_DRUG.TB_CER
             dao.fields = bb.CER
+            'dao.insert()
 
+            Dim IDA As Integer = dao.fields.IDA
 
+            Dim dao_manu As New DAO_DRUG.TB_CER_DETAIL_MANUFACTURE
+            dao_manu.fields = bb.CER_DETAIL_MANUFACTURE
+            dao_manu.fields.FK_IDA = IDA
+            'dao_manu.insert()
 
+            'Dim dao_chem As New DAO_DRUG.TB_CER_DETAIL_CASCHEMICAL
+            'For Each dao_chem.fields In bbc.CER_DETAIL_CASCHEMICAL
+            '    Dim i As Integer = 1
+
+            '    Dim dao_chem1 As New DAO_DRUG.TB_CER_DETAIL_CASCHEMICAL
+            '    With dao_chem1.fields
+            '        Try
+            '            .CAS_ID = dao_chem.fields.CAS_ID
+            '        Catch ex As Exception
+
+            '        End Try
+            '        Try
+            '            .CAS_NAME = dao_chem.fields.CAS_NAME
+            '        Catch ex As Exception
+
+            '        End Try
+            '        Try
+            '            .CAS_NO = dao_chem.fields.CAS_NO
+            '        Catch ex As Exception
+
+            '        End Try
+            '        Try
+            '            .INN_NAME = dao_chem.fields.INN_NAME
+            '        Catch ex As Exception
+
+            '        End Try
+            '        .FK_IDA = IDA
+            '        .ROW_ID = i
+            '        .TR_ID = tr_id
+            '    End With
+            '    dao_chem1.insert()
+            '    i += 1
+            'Next
 
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
         End Function

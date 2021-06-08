@@ -25,4 +25,24 @@ Public Class MODEL_CER_GMP
             _CER = value
         End Set
     End Property
+
+    Private _CER_DETAIL_MANUFACTURE As CER_DETAIL_MANUFACTURE
+    Public Property CER_DETAIL_MANUFACTURE() As CER_DETAIL_MANUFACTURE
+        Get
+            Return _CER_DETAIL_MANUFACTURE
+        End Get
+        Set(ByVal value As CER_DETAIL_MANUFACTURE)
+            _CER_DETAIL_MANUFACTURE = value
+        End Set
+    End Property
+
+    Private _CER_DETAIL_CASCHEMICAL As New List(Of CER_DETAIL_CASCHEMICAL)
+    Public Property CER_DETAIL_CASCHEMICAL() As List(Of CER_DETAIL_CASCHEMICAL)
+        Get
+            Return _CER_DETAIL_CASCHEMICAL
+        End Get
+        Set(ByVal value As List(Of CER_DETAIL_CASCHEMICAL))
+            _CER_DETAIL_CASCHEMICAL = value
+        End Set
+    End Property
 End Class
