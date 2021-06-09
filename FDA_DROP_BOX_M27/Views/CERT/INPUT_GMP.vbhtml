@@ -31,7 +31,7 @@ End Code
                 2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.MANUFACTURER_CONFORMS_TO" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="datas.NAME_ADDRESS" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -39,7 +39,7 @@ End Code
                 3. ที่อยู่ (Address)<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.ADDRESS_DETAIL" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="datas.ADDRESS_NUMBER" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -47,7 +47,7 @@ End Code
                 4. เมือง (City / Province/ State)<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.CITY_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="datas.ADDRESS_CITY" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -55,7 +55,7 @@ End Code
                 5. ประเทศ (Country<font color="red">*</font> :
             </td>
             <td>
-                <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="datas.COUNTRY_IDA">
+                <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="datas.COUNTRY_ID">
                     <option value="0">--กรุณาเลือก--</option>
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
@@ -114,19 +114,21 @@ End Code
             </td>
         </tr>
         <tr>
-            <td class="auto-style1">
-                <asp:CheckBox ID="cb_DEPARTMENT_REGIST_CER_TYPE" runat="server" Text="ชื่อหน่วยงานรัฐของประเทศผู้ผลิต" />
+            <td >
+                <input type="radio" ng-model="datas.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="1" />
+              ชื่อหน่วยงานรัฐของประเทศผู้ผลิต
             </td>
-            <td class="auto-style1">
-                <asp:Label ID="lbl_DEPARTMENT_REGIST_CER_NAME" runat="server" Text="-"></asp:Label>
+            <td rowspan="2" ;">
+                <input class="form-control inline" ng-model="datas.DEPARTMENT_REGIST_CER_NAME" style="font-family:'TH SarabunPSK';font-size:20px;height:100px;" type="text" />
             </td>
         </tr>
         <tr>
             <td style="height:25px">
-                <asp:CheckBox ID="cb_DEPARTMENT_REGIST_CER_TYPE2" runat="server" Text="ชื่อหน่วยงานอื่นที่ได้รับการรับรองจากหน่วยงานรัฐของประเทศผู้ผลิต" />
+                <input type="radio" ng-model="datas.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="2" />
+                ชื่อหน่วยงานอื่นที่ได้รับการรับรองจากหน่วยงานรัฐของประเทศผู้ผลิต
             </td>
             <td>
-                <asp:Label ID="lbl_DEPARTMENT_REGIST_CER_NAME2" runat="server" Text="-"></asp:Label>
+                
             </td>
         </tr>
         <tr>
@@ -139,18 +141,16 @@ End Code
                     <tr>
                         <td style="height:25px">
                             <form name="rdl_gmp">
-                                <label>
-                                    <input type="radio" ng-model="color.name" value="1">
+
+                                    <input type="radio" ng-model="color.STANDARD_ID" id="Rdl_gmpt" value="1">
                                     PIC / S GMP
-                                </label>
-                                <label>
-                                    <input type="radio" ng-model="color.name" ng-value="2">
+
+                                    <input type="radio" ng-model="color.STANDARD_ID" id="Rdl_gmpt" ng-value="2">
                                     WHO GMP
-                                </label>
-                                <label>
-                                    <input type="radio" ng-model="color.name" value="3">
+
+                                    <input type="radio" ng-model="color.STANDARD_ID" id="Rdl_gmpt" value="3">
                                     National GMP
-                                </label>
+
                             </form>
                         </td>
                         <td>
@@ -161,8 +161,7 @@ End Code
                                 <option value="0">--กรุณาเลือก--</option>
                                 <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                             </select>
-                            @*&nbsp;
-                            <asp:Label ID="lbl_iso_gmp" runat="server" Text="-"></asp:Label> &nbsp;*@
+
                         </td>
                     </tr>
                 </table>

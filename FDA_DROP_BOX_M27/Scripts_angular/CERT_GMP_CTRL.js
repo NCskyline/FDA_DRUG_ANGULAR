@@ -18,7 +18,9 @@
         }, function () { });
 
         var MODLE_GMP = CENTER_SV.SETMODEL_DH();
+        
         MODLE_GMP.then(function (datas) {
+            //$scope.LIST_GMP = [];
             $scope.LIST_GMP = datas.data;
 
         }, function () { });
@@ -71,6 +73,7 @@
         
     }
 
+
     $scope.ADD_CHEM_LIST = function () {
         var obj = {
             IDA:'',
@@ -95,12 +98,115 @@
     };
 
     $scope.BTN_SAVE = function () {
-       // var data = $scope.LIST_GMP;
-        var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP,  $scope.LIST_GMP, PROCESS);  
-        Getdata.then(function (datas) {
-           
+        var cEmpty = 0
+        if (PROCESS == '31') {
+            if ($scope.LIST_GMP.COUNTRY_ID == 0) {
+                cEmpty = cEmpty + 1;
+            }
 
-        }, function () { });
+            if ($scope.LIST_GMP.NAME_ADDRESS.trim.length < 2 ) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.ADDRESS_NUMBER.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+
+            if ($scope.LIST_GMP.ADDRESS_CITY.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.COUNTRY_GMP == 0) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.CERTIFICATION_NUMBER_ALL.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+        }
+        else if (PROCESS == '32') {
+            if ($scope.LIST_GMP.COUNTRY_ID == 0) {
+                cEmpty = cEmpty + 1;
+            }
+
+            if ($scope.LIST_GMP.NAME_ADDRESS.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.ADDRESS_NUMBER.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+
+            if ($scope.LIST_GMP.ADDRESS_CITY.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.COUNTRY_GMP == 0) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.CERTIFICATION_NUMBER_ALL.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+        }
+        else if (PROCESS == '33') {
+          
+            if ($scope.LIST_GMP.NAME_ADDRESS.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.ADDRESS_NUMBER.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+
+            if ($scope.LIST_GMP.ADDRESS_CITY.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.CERTIFICATION_NUMBER_ALL.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+
+            if ($scope.LIST_GMP.DEPARTMENT_REGIST_CER_NAME.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+        }
+        //else if (PROCESS == '34') {
+        //    $scope.INPUT = SET_URL_SV('../CERT/INPUT_CERT_OTHER');
+        //}
+        else if (PROCESS == '36') {
+            if ($scope.LIST_GMP.CERTIFICATION_NUMBER_ALL.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.DEPARTMENT_REGIST_CER_DOCNO.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.COUNTRY_ID == 0) {
+                cEmpty = cEmpty + 1;
+            }
+        }
+
+
+
+       // var data = $scope.LIST_GMP;
+
+        
+        if (cEmpty == 0) {
+            var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP, $scope.LIST_GMP, PROCESS);
+                Getdata.then(function (datas) {
+                    Swal.fire({
+                        title: 'ERROR',
+                        text: 'บันทึกข้อมูลเรียบร้อย',
+                        icon: 'ดฟสหำ',
+                        confirmButtonColor: '#3085d6',
+                        confirmButtonText: 'OK'
+
+                    });
+                 });
+        } else {
+            Swal.fire({
+                title: 'ERROR',
+                text: 'กรุณากรอกข้อมูลให้ครบถ้วน',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+
+        }
+        
     };
 
 

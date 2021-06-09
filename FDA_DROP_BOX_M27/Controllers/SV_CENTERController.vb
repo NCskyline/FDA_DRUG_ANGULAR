@@ -1105,17 +1105,18 @@ Namespace Controllers
             Dim bao_tran As New BAO
             Dim tr_id As Integer = 0
             'tr_id = bao_tran.insert_transection_new(_ProcessID, _CLS.CITIZEN_ID, _CLS.CITIZEN_ID_AUTHORIZE)
-
-
             Dim dao As New DAO_DRUG.TB_CER
-            dao.fields = bb.CER
+            For Each aa In bb.MODEL_GMP
+                dao.fields = aa.CER
+            Next
+
             'dao.insert()
 
             Dim IDA As Integer = dao.fields.IDA
 
-            Dim dao_manu As New DAO_DRUG.TB_CER_DETAIL_MANUFACTURE
-            dao_manu.fields = bb.CER_DETAIL_MANUFACTURE
-            dao_manu.fields.FK_IDA = IDA
+            'Dim dao_manu As New DAO_DRUG.TB_CER_DETAIL_MANUFACTURE
+            'dao_manu.fields = bb.CER_DETAIL_MANUFACTURE
+            'dao_manu.fields.FK_IDA = IDA
             'dao_manu.insert()
 
             'Dim dao_chem As New DAO_DRUG.TB_CER_DETAIL_CASCHEMICAL
