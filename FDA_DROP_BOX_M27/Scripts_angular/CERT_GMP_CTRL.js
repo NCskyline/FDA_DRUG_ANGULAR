@@ -36,6 +36,12 @@
            
         }, function () { });
 
+        var GetdataCHEM = CENTER_SV.SP_MAS_CHEMICAL_by_IOWANM_AND_AORI("", "A");
+        GetdataCHEM.then(function (datas) {
+            $scope.LIST_CHEM = datas.data;
+          
+        }, function () { });
+
         var data_LCN_SHOW = CENTER_SV.GET_LCNNO_SHOW(LCN_IDA);
         data_LCN_SHOW.then(function (datas) {
             $scope.LCNNO_SHOW = datas.data.LCNNO_SHOW;
@@ -79,7 +85,14 @@
         $scope.GMP_CHEM.push(obj);
     };
    
-    
+    $scope.BTN_SEARCH_CHEM = function (IOWANM) {
+
+        var GetdataCHEM = CENTER_SV.SP_MAS_CHEMICAL_by_IOWANM_AND_AORI(IOWANM , "A");
+        GetdataCHEM.then(function (datas) {
+            $scope.LIST_CHEM = datas.data;
+
+        }, function () { });
+    };
 
     $scope.BTN_SAVE = function () {
        // var data = $scope.LIST_GMP;

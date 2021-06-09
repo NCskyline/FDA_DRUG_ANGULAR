@@ -101,7 +101,14 @@ Public Class BAO
         Return int_no + 1
     End Function
 
+    Public Function SP_MAS_CHEMICAL_by_IOWANM_AND_AORI(ByVal IOWANM As String, ByVal aori As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_MAS_CHEMICAL_by_IOWANM_AND_AORI @IOWANM='" & IOWANM & "' ,@aori='" & aori & "'"
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
 
+        Return dt
+    End Function
 
 
     Public Function SP_DDL_LCN_DI_DH(ByVal iden As String) As DataTable

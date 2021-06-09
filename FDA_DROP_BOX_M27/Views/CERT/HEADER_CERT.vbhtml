@@ -1,8 +1,24 @@
 ﻿@Code
     ViewData("Title") = "HEADER_CERT"
 End Code
+
+
+@*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>*@
+@*<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>*@
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"></script>
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#myTable').dataTable();
+        var rowCount = $("#myTable tr").length;
+        console.log("Row count value is"+rowCount);
+    });
+</script>
+
 <div class="ic" ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP">
     <h1></h1>
     <table width="100%" style="font-family:'TH SarabunPSK';font-size:22px;">
@@ -72,20 +88,20 @@ End Code
             <input class="form-control" ng-model="iowanm" />
             <button class="btn btn-lg" ng-click="BTN_SEARCH_CHEM(iowanm)" value="ค้นหาสารที่นี่"></button>
         </div>
-        <div>
-            <table style="width:100%;height:200%" border="1" >
+        <div class="ic">
+            <table id="myTable" class="display">
                 <thead>
                     <tr>
-                        <th>ชื่อสาร</th>
-                        <th>A or I</th>
+                        <th style="align-content:center">ชื่อสาร</th>
+                        <th style="align-content:center">A or I</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-repeat="datas in LIST_CHEM">
-                        <th>{{datas.ss}}</th>
-                        <th>{{datas.AA}}</th>
-                        <th ng-click="BTN_ADD_CHEM(datas.ss,datas.AA)">เลือกสาร</th>
+                        <th>{{datas.iowanm}}</th>
+                        <th>{{datas.aori}}</th>
+                        <th ng-click="BTN_ADD_CHEM(datas.iowanm,datas.aori)">เลือกสาร</th>
                     </tr>
                 </tbody>
             </table>

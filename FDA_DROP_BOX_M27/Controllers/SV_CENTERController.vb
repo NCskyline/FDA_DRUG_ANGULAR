@@ -59,6 +59,15 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
         End Function
+
+        Function SP_MAS_CHEMICAL_by_IOWANM_AND_AORI(ByVal iowanm As String, ByVal aori As String) As JsonResult
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_MAS_CHEMICAL_by_IOWANM_AND_AORI(iowanm, "A")
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+        End Function
+
         Function SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(ByVal identify As String, ByVal LCNSID As String)
             Dim dt As New DataTable
             Dim bao As New BAO

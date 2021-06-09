@@ -636,5 +636,17 @@
         return response;
     };
 
+    this.SP_MAS_CHEMICAL_by_IOWANM_AND_AORI = function (IOWANM, AORI) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_MAS_CHEMICAL_by_IOWANM_AND_AORI"),
+            params: {
+               
+                IOWANM: IOWANM,
+                AORI: AORI
+            }
+        });
+        return response;
+    };
    
 });

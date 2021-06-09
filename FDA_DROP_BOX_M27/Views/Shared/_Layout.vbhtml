@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name='created_by' content='This is example, please fill you name.'>
 
+
     <!-- Core template -->
     <link rel="stylesheet" type="text/css" href="~/css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="~/css/icomoon/styles.css" />
@@ -23,10 +24,11 @@
     @*<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>*@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- 
+
     <!-- CSS page -->
     <link rel="stylesheet" type="text/css" href="~/css/page.css" />
     <!-- End CSS page -->
