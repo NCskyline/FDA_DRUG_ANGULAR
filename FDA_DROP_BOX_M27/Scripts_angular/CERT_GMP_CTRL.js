@@ -20,7 +20,7 @@
         var MODLE_GMP = CENTER_SV.SETMODEL_DH();
         
         MODLE_GMP.then(function (datas) {
-            //$scope.LIST_GMP = [];
+            
             $scope.LIST_GMP = datas.data;
 
         }, function () { });
@@ -100,10 +100,12 @@
     $scope.BTN_SAVE = function () {
         var cEmpty = 0
         if (PROCESS == '31') {
-            if ($scope.LIST_GMP.COUNTRY_ID == 0) {
+            if ($scope.LIST_GMP.CER.COUNTRY_ID == 0) {
                 cEmpty = cEmpty + 1;
             }
-
+            if ($scope.LIST_GMP.CER.CERTIFICATION_NUMBER_ALL.trim.length < 2) {
+                cEmpty = cEmpty + 1;
+            }
             if ($scope.LIST_GMP.NAME_ADDRESS.trim.length < 2 ) {
                 cEmpty = cEmpty + 1;
             }
@@ -117,9 +119,7 @@
             if ($scope.LIST_GMP.COUNTRY_GMP == 0) {
                 cEmpty = cEmpty + 1;
             }
-            if ($scope.LIST_GMP.CERTIFICATION_NUMBER_ALL.trim.length < 2) {
-                cEmpty = cEmpty + 1;
-            }
+            
         }
         else if (PROCESS == '32') {
             if ($scope.LIST_GMP.COUNTRY_ID == 0) {

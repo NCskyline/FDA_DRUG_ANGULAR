@@ -782,6 +782,7 @@ Namespace Controllers
         End Function
 
         Function SETMODEL_DH() As JsonResult
+
             Dim MODEL As New MODEL_CER_GMP
 
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
@@ -1106,9 +1107,9 @@ Namespace Controllers
             Dim tr_id As Integer = 0
             'tr_id = bao_tran.insert_transection_new(_ProcessID, _CLS.CITIZEN_ID, _CLS.CITIZEN_ID_AUTHORIZE)
             Dim dao As New DAO_DRUG.TB_CER
-            For Each aa In bb.MODEL_GMP
-                dao.fields = aa.CER
-            Next
+
+            ''dao.fields = bb.CER
+
 
             'dao.insert()
 

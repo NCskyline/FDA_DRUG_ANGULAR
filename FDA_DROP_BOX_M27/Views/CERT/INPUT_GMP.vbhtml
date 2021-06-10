@@ -13,7 +13,7 @@ End Code
             };
         }]);
 </script>
-<div class="ic" ng-repeat="datas in LIST_GMP">
+<div class="ic" > @*ng-repeat="datas in LIST_GMP"*@
     <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
         <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ</b>
     </h2>
@@ -23,7 +23,7 @@ End Code
                 1. เลขที่ใบรับรอง (Certificate Number)<font color="red">*</font>  :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.CERTIFICATION_NUMBER_ALL" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER.CERTIFICATION_NUMBER_ALL" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -55,7 +55,7 @@ End Code
                 5. ประเทศ (Country<font color="red">*</font> :
             </td>
             <td>
-                <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="datas.COUNTRY_ID">
+                <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID">
                     <option value="0">--กรุณาเลือก--</option>
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>

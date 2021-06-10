@@ -4289,6 +4289,8 @@ Namespace DAO_DRUG
         Inherits MAINCONTEXT
 
         Public fields As New CER_DETAIL_MANUFACTURE
+
+
         Public Sub GetDataby_IDA(ByVal IDA As Integer)
             datas = (From p In db.CER_DETAIL_MANUFACTUREs Where p.IDA = IDA Select p)
             For Each Me.fields In datas
