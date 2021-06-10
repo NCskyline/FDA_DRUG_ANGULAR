@@ -1,10 +1,33 @@
-﻿app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
+﻿app.filter('startFrom', function () {
+    return function (input, start) {
+        if (input) {
+            start = +start;
+            return input.slice(start);
+        }
+        return [];
+    };
+});
+app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     //CHK_TOKEN();
     var LCN_IDA = sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;
     var PROCESS = sessionStorage.DH_PROCESS_ID;
     var CITIZEN = '0105527028430';
+
+    $scope.currentPage = 0;
+    $scope.paging = {
+        total: 10,
+        current: 1,
+        onPageChanged: loadPages
+    };
+    function loadPages() {
+        console.log('Current page is : ' + $scope.paging.current);
+
+        // TODO : Load current page Data here
+
+        $scope.currentPage = $scope.paging.current;
+    }
 
     pageload();
     //LIST_GMP();
@@ -42,8 +65,12 @@
         var GetdataCHEM = CENTER_SV.SP_MAS_CHEMICAL_by_IOWANM_AND_AORI("", "A");
         GetdataCHEM.then(function (datas) {
             $scope.LIST_CHEM = datas.data;
-            console.log(datas.data);
-            
+            var auto = $scope.LIST_CHEM.length;
+            $scope.currentPage = 1;
+            $scope.entryLimit = 10;
+            $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
+            $scope.loading_profile = false;
+            $scope.product_show = true;
         }, function () { });
 
         var data_LCN_SHOW = CENTER_SV.GET_LCNNO_SHOW(LCN_IDA);
@@ -211,9 +238,12 @@
         
     };
 
+    
+
    
 
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });
     $scope.$on('UNLOAD', function () { $scope.loading = false; alert('2'); });
 }]);
+

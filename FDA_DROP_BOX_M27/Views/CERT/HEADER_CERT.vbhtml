@@ -3,21 +3,11 @@
 End Code
 
 
-@*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>*@
-@*<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>*@
-<script type="text/javascript" src="http://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"></script>
-<script type="text/javascript" src="http://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src=" https://rawgithub.com/l-lin/angular-datatables/v0.4.3/dist/angular-datatables.min.js"></script>
-<script src="~/Scripts_angular/CENTER_SV.js"></script>
-<script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
+<script src="../Scripts_angular/CENTER_SV.js"></script>
+<script src="../Scripts_angular/CERT_GMP_CTRL.js"></script>
 
-<script>
-    $(document).ready(function () {
-        $('#myTable').dataTable();
-       
-    });
-</script>
+
 
 <div class="ic" ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP">
     <h1></h1>
@@ -97,17 +87,24 @@ End Code
                         <th></th>
                     </tr>
                 </thead>
-                <tbody ng-repeat="datas in LIST_CHEM">
-                    <tr>
+                <tbody>
+                    <tr ng-repeat="datas in LIST_CHEM | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
                         <th>{{datas.iowanm}}</th>
                         <th>{{datas.aori}}</th>
                         <th ng-click="BTN_ADD_CHEM(datas.iowanm,datas.aori)">เลือกสาร</th>
                     </tr>
                 </tbody>
             </table>
+            <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
+                            ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
+                            boundary-link-numbers="true" rotate="false" max-size="maxSize">
+            </uib-pagination>
+            <button type="button" class="btn btn-primary" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
+            <button type="button" class="btn btn-primary" ng-disabled="currentPage >= LIST_CHEM.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
         </div>
+
         <div>
-            <table>
+            <table class="dataTable">
                 <thead>
                     <tr>
                         <th>ลำดับ</th>
