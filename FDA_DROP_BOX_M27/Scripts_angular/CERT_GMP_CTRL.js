@@ -211,13 +211,7 @@
         
     };
 
-    $scope.vm = {};
-    $scope.vm.dtInstance = {};
-    $scope.vm.dtColumnDefs = [DTColumnDefBuilder.newColumnDef(2).notSortable()];
-    $scope.vm.dtOptions = DTOptionsBuilder.newOptions()
-        .withOption('paging', true)
-        .withOption('searching', false)
-        .withOption('info', false);
+   
 
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });

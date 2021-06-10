@@ -42,13 +42,19 @@
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/INSERT_CERT_GMP"),
-            params: {
-                //identify: identify,
+            dataType: "json",
+            data: {
                 XML_CERT: JSON.stringify(aa),
-                //XML_MANUFAC: JSON.stringify(bb),
-                //XML_CHEM: JSON.stringify(cc),
                 _ProcessID: ProcessID
             }
+            //params: {
+            //    //identify: identify,
+               
+            //    //XML_MANUFAC: JSON.stringify(bb),
+            //    //XML_CHEM: JSON.stringify(cc),
+                
+            
+            //}
         });
         return response;
     };
