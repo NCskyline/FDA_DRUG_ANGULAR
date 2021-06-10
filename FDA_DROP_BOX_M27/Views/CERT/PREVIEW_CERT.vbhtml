@@ -5,7 +5,7 @@ End Code
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>
 <div class="ic" ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP">
-    <div ng-show="PROCESS == '31'" ng-repeat="datas in LIST_GMP">
+    <div ng-show="PROCESS == '31'">
         @*ng-repeat="datas in LIST_GMP"*@
         <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
             <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ</b>
