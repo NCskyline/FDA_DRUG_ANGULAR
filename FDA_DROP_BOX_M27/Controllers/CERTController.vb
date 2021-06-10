@@ -27,5 +27,8 @@ Namespace Controllers
         Function INPUT_CERT_OTHER() As ActionResult
             Return View()
         End Function
+        Function PREVIEW_CERT() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
