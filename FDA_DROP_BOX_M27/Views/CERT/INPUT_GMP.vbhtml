@@ -31,7 +31,7 @@ End Code
                 2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.NAME_ADDRESS" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.NAME_ADDRESS" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -39,7 +39,7 @@ End Code
                 3. ที่อยู่ (Address)<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.ADDRESS_NUMBER" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -47,7 +47,7 @@ End Code
                 4. เมือง (City / Province/ State)<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.ADDRESS_CITY" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -66,7 +66,7 @@ End Code
                 รหัสไปรษณีย์ (Post code/Zip code) :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.ZIPCODE" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -74,7 +74,7 @@ End Code
                 6. Manufacturer&quot;s License Number :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.MANUFACTURER_LICENCE_NUMBER" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER.MANUFACTURER_LICENCE_NUMBER" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -82,7 +82,7 @@ End Code
                 Global Location Number (GLN) :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.GLN" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -90,7 +90,7 @@ End Code
                 7. วันเดือนปีที่ออกหนังสือ GMP (Issue Date)<font color="red">*</font> :
             </td>
             <td>
-                <md-datepicker ng-model="datas.DOCUMENT_DATE" md-placeholder="Enter date"
+                <md-datepicker ng-model="LIST_GMP.CER.DOCUMENT_DATE" md-placeholder="Enter date"
                                input-aria-describedby="datepicker-description"
                                input-aria-labelledby="datepicker-header "></md-datepicker>
             </td>
@@ -100,7 +100,7 @@ End Code
                 วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
             </td>
             <td>
-                <md-datepicker ng-model="datas.EXP_DOCUMENT_DATE" md-placeholder="Enter date"
+                <md-datepicker ng-model="LIST_GMP.CER.EXP_DOCUMENT_DATE" md-placeholder="Enter date"
                                input-aria-describedby="datepicker-description"
                                input-aria-labelledby="datepicker-header "></md-datepicker>
             </td>
@@ -115,16 +115,16 @@ End Code
         </tr>
         <tr>
             <td >
-                <input type="radio" ng-model="datas.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="1" />
+                <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="1" />
               ชื่อหน่วยงานรัฐของประเทศผู้ผลิต
             </td>
             <td rowspan="2" ;">
-                <input class="form-control inline" ng-model="datas.DEPARTMENT_REGIST_CER_NAME" style="font-family:'TH SarabunPSK';font-size:20px;height:100px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME" style="font-family:'TH SarabunPSK';font-size:20px;height:100px;" type="text" />
             </td>
         </tr>
         <tr>
             <td style="height:25px">
-                <input type="radio" ng-model="datas.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="2" />
+                <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="2" />
                 ชื่อหน่วยงานอื่นที่ได้รับการรับรองจากหน่วยงานรัฐของประเทศผู้ผลิต
             </td>
             <td>
@@ -142,13 +142,13 @@ End Code
                         <td style="height:25px">
                             <form name="rdl_gmp">
 
-                                    <input type="radio" ng-model="color.STANDARD_ID" id="Rdl_gmpt" value="1">
+                                    <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" value="1">
                                     PIC / S GMP
 
-                                    <input type="radio" ng-model="color.STANDARD_ID" id="Rdl_gmpt" ng-value="2">
+                                    <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="2">
                                     WHO GMP
 
-                                    <input type="radio" ng-model="color.STANDARD_ID" id="Rdl_gmpt" value="3">
+                                    <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" value="3">
                                     National GMP
 
                             </form>
@@ -157,7 +157,7 @@ End Code
                             &nbsp; ประเทศ<font color="red">*</font>
                         </td>
                         <td>
-                            <select style="font-family:'TH SarabunPSK';font-size:20px;">
+                            <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_GMP">
                                 <option value="0">--กรุณาเลือก--</option>
                                 <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                             </select>

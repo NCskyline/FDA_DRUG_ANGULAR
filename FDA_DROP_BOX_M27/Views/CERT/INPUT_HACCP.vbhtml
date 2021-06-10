@@ -3,7 +3,7 @@
 End Code
 @*<script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>*@
-<div class="ic" ng-repeat="datas in LIST_GMP">
+<div class="ic" >
     <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
         แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
     </h2>
@@ -13,7 +13,7 @@ End Code
                 1. Certification number/Registration Number/License Number<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.CERTIFICATION_NUMBER_ALL" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER.CERTIFICATION_NUMBER_ALL" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -21,7 +21,7 @@ End Code
                 2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.NAME_ADDRESS" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.NAME_ADDRESS" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -29,7 +29,7 @@ End Code
                 3. ที่อยู่ (Address)<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.ADDRESS_NUMBER" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -37,7 +37,7 @@ End Code
                 4. เมือง (City / Province/ State)<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.ADDRESS_CITY" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -45,7 +45,7 @@ End Code
                 5. ประเทศ (Country)<font color="red">*</font> :
             </td>
             <td>
-                <select style="font-family:'TH SarabunPSK';font-size:20px;" id="ddl_country1" ng-model="datas.COUNTRY_ID">
+                <select style="font-family:'TH SarabunPSK';font-size:20px;" id="ddl_country1" ng-model="LIST_GMP.CER.COUNTRY_ID">
                     <option value="0">--กรุณาเลือก--</option>
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
@@ -56,7 +56,7 @@ End Code
                 รหัสไปรษณีย์ (Post code/Zip code) :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.ZIPCODE" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -64,7 +64,7 @@ End Code
                 6. Organization Code (รหัสองค์กร)<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.ORGANIZATION_CODE" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ORGANIZATION_CODE" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -72,7 +72,7 @@ End Code
                 Global Location Number (GLN) :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.GLN" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -80,7 +80,7 @@ End Code
                 7. วันเดือนปีที่ออกหนังสือ HACCP (Issue Date)<font color="red">*</font> :
             </td>
             <td>
-                <md-datepicker ng-model="datas.DOCUMENT_DATE" md-placeholder="Enter date" id="start_date"
+                <md-datepicker ng-model="LIST_GMP.CER.DOCUMENT_DATE" md-placeholder="Enter date" id="start_date"
                                input-aria-describedby="datepicker-description"
                                input-aria-labelledby="datepicker-header "></md-datepicker>
             </td>
@@ -90,7 +90,7 @@ End Code
                 วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
             </td>
             <td>
-                <md-datepicker ng-model="datas.EXP_DOCUMENT_DATE" md-placeholder="Enter date" id="end_date"
+                <md-datepicker ng-model="LIST_GMP.CER.EXP_DOCUMENT_DATE" md-placeholder="Enter date" id="end_date"
                                input-aria-describedby="datepicker-description"
                                input-aria-labelledby="datepicker-header "></md-datepicker>
             </td>
@@ -100,7 +100,7 @@ End Code
                 8. หน่วยงานที่ออกใบรับรอง (Certification Body)
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.DEPARTMENT_REGIST_CER_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
 
             </td>
         </tr>
@@ -109,7 +109,7 @@ End Code
                 ประเทศของหน่วยงานที่ออกใบรับรอง :
             </td>
             <td>
-                <select style="font-family:'TH SarabunPSK';font-size:20px;" id="ddl_country2" ng-model="datas.COUNTRY_OF_DEPARTMENT_IDA">
+                <select style="font-family:'TH SarabunPSK';font-size:20px;" id="ddl_country2" ng-model="LIST_GMP.CER.COUNTRY_OF_DEPARTMENT_IDA">
                     <option value="0">--กรุณาเลือก--</option>
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
@@ -120,7 +120,7 @@ End Code
                 9. สถานที่ผลิตได้มาตฐาน HACCP ตาม :
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.LOCATION_STANDARD" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
 
 
             </td>
@@ -136,7 +136,7 @@ End Code
                 10. ขอบเขตของประเภทยาที่รับรอง
             </td>
             <td>
-                <input class="form-control inline" ng-model="datas.CER_SCOPE" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER.CER_SCOPE" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
     </table>
