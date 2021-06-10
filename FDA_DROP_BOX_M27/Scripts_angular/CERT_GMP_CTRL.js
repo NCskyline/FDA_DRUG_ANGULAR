@@ -103,63 +103,63 @@
             if ($scope.LIST_GMP.CER.COUNTRY_ID == 0) {
                 cEmpty = cEmpty + 1;
             }
-            if ($scope.LIST_GMP.CER.CERTIFICATION_NUMBER_ALL.trim.length < 2) {
+            if ($scope.LIST_GMP.CER.CERTIFICATION_NUMBER_ALL.trim().length < 2) {
                 cEmpty = cEmpty + 1;
             }
-            if ($scope.LIST_GMP.NAME_ADDRESS.trim.length < 2 ) {
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.NAME_ADDRESS.trim().length < 2 ) {
                 cEmpty = cEmpty + 1;
             }
-            if ($scope.LIST_GMP.ADDRESS_NUMBER.trim.length < 2) {
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER.trim().length < 2) {
                 cEmpty = cEmpty + 1;
             }
 
-            if ($scope.LIST_GMP.ADDRESS_CITY.trim.length < 2) {
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY.trim().length < 2) {
                 cEmpty = cEmpty + 1;
             }
-            if ($scope.LIST_GMP.COUNTRY_GMP == 0) {
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_GMP == 0) {
                 cEmpty = cEmpty + 1;
             }
             
         }
         else if (PROCESS == '32') {
-            if ($scope.LIST_GMP.COUNTRY_ID == 0) {
+            if ($scope.LIST_GMP.CER.COUNTRY_ID == 0) {
                 cEmpty = cEmpty + 1;
             }
 
-            if ($scope.LIST_GMP.NAME_ADDRESS.trim.length < 2) {
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.NAME_ADDRESS.trim().length < 2) {
                 cEmpty = cEmpty + 1;
             }
-            if ($scope.LIST_GMP.ADDRESS_NUMBER.trim.length < 2) {
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER.trim().length < 2) {
                 cEmpty = cEmpty + 1;
             }
 
-            if ($scope.LIST_GMP.ADDRESS_CITY.trim.length < 2) {
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY.trim().length < 2) {
                 cEmpty = cEmpty + 1;
             }
-            if ($scope.LIST_GMP.COUNTRY_GMP == 0) {
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_GMP == 0) {
                 cEmpty = cEmpty + 1;
             }
-            if ($scope.LIST_GMP.CERTIFICATION_NUMBER_ALL.trim.length < 2) {
+            if ($scope.LIST_GMP.CER.CERTIFICATION_NUMBER_ALL.trim().length < 2) {
                 cEmpty = cEmpty + 1;
             }
         }
         else if (PROCESS == '33') {
           
-            if ($scope.LIST_GMP.NAME_ADDRESS.trim.length < 2) {
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.NAME_ADDRESS.trim().length < 2) {
                 cEmpty = cEmpty + 1;
             }
-            if ($scope.LIST_GMP.ADDRESS_NUMBER.trim.length < 2) {
-                cEmpty = cEmpty + 1;
-            }
-
-            if ($scope.LIST_GMP.ADDRESS_CITY.trim.length < 2) {
-                cEmpty = cEmpty + 1;
-            }
-            if ($scope.LIST_GMP.CERTIFICATION_NUMBER_ALL.trim.length < 2) {
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER.trim().length < 2) {
                 cEmpty = cEmpty + 1;
             }
 
-            if ($scope.LIST_GMP.DEPARTMENT_REGIST_CER_NAME.trim.length < 2) {
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY.trim().length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.CER.CERTIFICATION_NUMBER_ALL.trim().length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+
+            if ($scope.LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME.trim().length < 2) {
                 cEmpty = cEmpty + 1;
             }
         }
@@ -167,13 +167,13 @@
         //    $scope.INPUT = SET_URL_SV('../CERT/INPUT_CERT_OTHER');
         //}
         else if (PROCESS == '36') {
-            if ($scope.LIST_GMP.CERTIFICATION_NUMBER_ALL.trim.length < 2) {
+            if ($scope.LIST_GMP.CER.CERTIFICATION_NUMBER_ALL.trim().length < 2) {
                 cEmpty = cEmpty + 1;
             }
-            if ($scope.LIST_GMP.DEPARTMENT_REGIST_CER_DOCNO.trim.length < 2) {
+            if ($scope.LIST_GMP.CER.DEPARTMENT_REGIST_CER_DOCNO.trim().length < 2) {
                 cEmpty = cEmpty + 1;
             }
-            if ($scope.LIST_GMP.COUNTRY_ID == 0) {
+            if ($scope.LIST_GMP.CER.COUNTRY_ID == 0) {
                 cEmpty = cEmpty + 1;
             }
         }
@@ -184,7 +184,7 @@
 
         
         if (cEmpty == 0) {
-            var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP, $scope.LIST_GMP, PROCESS);
+            var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP, PROCESS);
                 Getdata.then(function (datas) {
                     Swal.fire({
                         title: 'ERROR',

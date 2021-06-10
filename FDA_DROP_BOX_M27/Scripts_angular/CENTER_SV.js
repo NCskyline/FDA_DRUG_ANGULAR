@@ -38,7 +38,7 @@
     };
     
     
-    this.INSERT_CERT_GMP = function (aa,cc,ProcessID) {
+    this.INSERT_CERT_GMP = function (aa,ProcessID) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/INSERT_CERT_GMP"),
@@ -46,7 +46,7 @@
                 //identify: identify,
                 XML_CERT: JSON.stringify(aa),
                 //XML_MANUFAC: JSON.stringify(bb),
-                XML_CHEM: JSON.stringify(cc),
+                //XML_CHEM: JSON.stringify(cc),
                 _ProcessID: ProcessID
             }
         });
