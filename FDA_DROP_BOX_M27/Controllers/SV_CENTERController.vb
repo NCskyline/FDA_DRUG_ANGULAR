@@ -543,6 +543,26 @@ Namespace Controllers
 
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
+        Function GET_PREVIEW_CERT(ByVal IDA As Integer) As JsonResult
+            IDA = 41941
+            Dim model As New MODEL_CER_GMP
+            Dim dao_cer As New DAO_DRUG.TB_CER
+            Dim dao_manu As New DAO_DRUG.TB_CER_DETAIL_MANUFACTURE
+            dao_cer.GetDataby_IDA2(IDA)
+            dao_manu.GetDataby_FK_IDA(IDA)
+            Try
+                model.CER = dao_cer.fields
+            Catch ex As Exception
+
+            End Try
+            Try
+                model.CER_DETAIL_MANUFACTURE = dao_manu.fields
+            Catch ex As Exception
+
+            End Try
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+
         Function test_dh() As JsonResult
             Dim model_dhs As New MODEL_DH
             ''model_dhs._CER.TR_ID = 0
@@ -1108,7 +1128,7 @@ Namespace Controllers
             'tr_id = bao_tran.insert_transection_new(_ProcessID, _CLS.CITIZEN_ID, _CLS.CITIZEN_ID_AUTHORIZE)
             Dim dao As New DAO_DRUG.TB_CER
 
-            ''dao.fields = bb.CER
+            dao.fields = bb.CER
 
 
             'dao.insert()

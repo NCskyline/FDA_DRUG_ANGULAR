@@ -1,18 +1,7 @@
 ﻿@Code
     Layout = ""
 End Code
-<script>
-    angular.module('radioExample', [])
-        .controller('ExampleController', ['$scope', function ($scope) {
-            $scope.color = {
-                name: 'blue'
-            };
-            $scope.specialValue = {
-                "id": "12345",
-                "value": "green"
-            };
-        }]);
-</script>
+
 <div class="ic" > @*ng-repeat="datas in LIST_GMP"*@
     <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
         <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ</b>
@@ -180,8 +169,7 @@ End Code
                 10. ขอบเขตของประเภทยาที่รับรอง
             </td>
             <td>
-                <asp:Label ID="lbl_CER_SCOPE" runat="server" Text="-"></asp:Label>
-                <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER.CER_SCOPE" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
     </table>

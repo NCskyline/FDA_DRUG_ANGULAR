@@ -83,6 +83,19 @@
     };
 
 
+    this.GET_PREVIEW_CERT = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_PREVIEW_CERT"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
+
+
+
     this.UPDATE_BOX_INV = function (model, model2) {
         var response = $http({
             method: "post",

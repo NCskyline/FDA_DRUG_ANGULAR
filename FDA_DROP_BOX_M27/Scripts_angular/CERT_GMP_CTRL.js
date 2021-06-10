@@ -56,6 +56,15 @@
             $scope.fax = datas.data.FAX;
         }, function () { });
 
+        var Set_PREVIEW = CENTER_SV.GET_PREVIEW_CERT(IDA);
+
+        Set_PREVIEW.then(function (datas) {
+
+            $scope.LIST_GMP = datas.data;
+        }, function () { });
+
+
+
         if (PROCESS == '31') {
             $scope.INPUT = SET_URL_SV('../CERT/INPUT_GMP');
         }
@@ -199,7 +208,7 @@
                  });
         } else {
             Swal.fire({
-                title: 'ERROR',
+                title: 'SUCCESS',
                 text: 'กรุณากรอกข้อมูลให้ครบถ้วน',
                 icon: 'ดฟสหำ',
                 confirmButtonColor: '#3085d6',
