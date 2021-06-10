@@ -22,6 +22,7 @@
         MODLE_GMP.then(function (datas) {
             
             $scope.LIST_GMP = datas.data;
+            
 
         }, function () { });
 
@@ -41,7 +42,8 @@
         var GetdataCHEM = CENTER_SV.SP_MAS_CHEMICAL_by_IOWANM_AND_AORI("", "A");
         GetdataCHEM.then(function (datas) {
             $scope.LIST_CHEM = datas.data;
-          
+            console.log(datas.data);
+            
         }, function () { });
 
         var data_LCN_SHOW = CENTER_SV.GET_LCNNO_SHOW(LCN_IDA);
@@ -103,7 +105,7 @@
             if ($scope.LIST_GMP.CER.COUNTRY_ID == 0) {
                 cEmpty = cEmpty + 1;
             }
-            if ($scope.LIST_GMP.CER.CERTIFICATION_NUMBER_ALL.trim.length < 2) {
+            if ($scope.LIST_GMP.CER.CERTIFICATION_NUMBER_ALL.trim().length < 2) {
                 cEmpty = cEmpty + 1;
             }
             if ($scope.LIST_GMP.NAME_ADDRESS.trim.length < 2 ) {
@@ -209,7 +211,13 @@
         
     };
 
-
+    $scope.vm = {};
+    $scope.vm.dtInstance = {};
+    $scope.vm.dtColumnDefs = [DTColumnDefBuilder.newColumnDef(2).notSortable()];
+    $scope.vm.dtOptions = DTOptionsBuilder.newOptions()
+        .withOption('paging', true)
+        .withOption('searching', false)
+        .withOption('info', false);
 
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });

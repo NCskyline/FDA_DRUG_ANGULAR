@@ -8,14 +8,14 @@ End Code
 @*<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>*@
 <script type="text/javascript" src="http://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"></script>
 <script type="text/javascript" src="http://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src=" https://rawgithub.com/l-lin/angular-datatables/v0.4.3/dist/angular-datatables.min.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>
 
 <script>
     $(document).ready(function () {
         $('#myTable').dataTable();
-        var rowCount = $("#myTable tr").length;
-        console.log("Row count value is"+rowCount);
+       
     });
 </script>
 
@@ -89,16 +89,16 @@ End Code
             <button class="btn btn-lg" ng-click="BTN_SEARCH_CHEM(iowanm)" value="ค้นหาสารที่นี่"></button>
         </div>
         <div class="ic">
-            <table id="myTable" class="display">
+            <table id="myTable" datatable="ng" class="dataTable">
                 <thead>
                     <tr>
-                        <th style="align-content:center">ชื่อสาร</th>
-                        <th style="align-content:center">A or I</th>
+                        <th>ชื่อสาร</th>
+                        <th>A or I</th>
                         <th></th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr ng-repeat="datas in LIST_CHEM">
+                <tbody ng-repeat="datas in LIST_CHEM">
+                    <tr>
                         <th>{{datas.iowanm}}</th>
                         <th>{{datas.aori}}</th>
                         <th ng-click="BTN_ADD_CHEM(datas.iowanm,datas.aori)">เลือกสาร</th>

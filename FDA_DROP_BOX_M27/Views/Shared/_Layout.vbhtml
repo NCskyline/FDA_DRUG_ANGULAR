@@ -26,9 +26,16 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css" />
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
-
+    @*<script src="~/Scripts/datatables.min.js"></script>
+        <script src="~/js/jquery.dataTables.js"></script>
+        <script src="~/js/jquery.dataTables.min.js"></script>*@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+
+    @*<script src="~/Scripts/datatables.min.js"></script>*@
+    <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
+
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
     <!-- CSS page -->
     <link rel="stylesheet" type="text/css" href="~/css/page.css" />
     <!-- End CSS page -->
