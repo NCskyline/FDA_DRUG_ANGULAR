@@ -1,10 +1,11 @@
 ﻿@Code
     ViewData("Title") = "PREVIEW_CERT"
 End Code
+<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>
-<div class="ic" ng-repeat="datas in LIST_GMP">
-    <div ng-show="PROCESS == '31'">
+<div class="ic" ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP">
+    <div ng-show="PROCESS == '31'" ng-repeat="datas in LIST_GMP">
         @*ng-repeat="datas in LIST_GMP"*@
         <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
             <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ</b>
@@ -23,7 +24,7 @@ End Code
                     2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
                 </td>
                 <td>
-                    
+
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.NAME_ADDRESS}}</label>
                 </td>
             </tr>
@@ -32,7 +33,7 @@ End Code
                     3. ที่อยู่ (Address)<font color="red">*</font> :
                 </td>
                 <td>
-                    
+
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER}}</label>
                 </td>
             </tr>
@@ -41,7 +42,7 @@ End Code
                     4. เมือง (City / Province/ State)<font color="red">*</font> :
                 </td>
                 <td>
-                   
+
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY}}</label>
                 </td>
             </tr>
@@ -51,9 +52,9 @@ End Code
                 </td>
                 <td>
                     <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID">
-            <option value="0">--กรุณาเลือก--</option>
-            <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
-        </select>
+                        <option value="0">--กรุณาเลือก--</option>
+                        <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
+                    </select>
                     @*<label>{{LCNNO_SHOW}}</label>*@
                 </td>
             </tr>
@@ -156,9 +157,9 @@ End Code
                             </td>
                             <td>
                                 @*<select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_GMP">
-            <option value="0">--กรุณาเลือก--</option>
-            <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
-        </select>*@
+                                        <option value="0">--กรุณาเลือก--</option>
+                                        <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
+                                    </select>*@
                                 <label>{{LCNNO_SHOW}}</label>
                             </td>
                         </tr>
@@ -179,7 +180,7 @@ End Code
                 </td>
                 <td>
                     <asp:Label ID="lbl_CER_SCOPE" runat="server" Text="-"></asp:Label>
-                   <label>{{LCNNO_SHOW}}</label>
+                    <label>{{LCNNO_SHOW}}</label>
                 </td>
             </tr>
         </table>

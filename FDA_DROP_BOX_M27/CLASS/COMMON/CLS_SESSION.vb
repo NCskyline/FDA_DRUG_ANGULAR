@@ -220,4 +220,14 @@
             _SET_MAIN_PAGE4 = value
         End Set
     End Property
+
+    Private _IDA As String
+    Public Property IDA() As String
+        Get
+            Return _IDA
+        End Get
+        Set(ByVal value As String)
+            _IDA = value
+        End Set
+    End Property
 End Class

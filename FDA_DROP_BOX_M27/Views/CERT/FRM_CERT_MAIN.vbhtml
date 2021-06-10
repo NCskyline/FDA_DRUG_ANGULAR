@@ -54,7 +54,7 @@ End Code
                                 <td>{{datas.REMARK}}</td>
                                 <td>
                                     <span class="fa fa-eye"></span>
-                                    <a ng-click="SELECT_CER(datas,'12')">
+                                    <a ng-click="SELECT_CER(datas.IDA)">
                                         เลือก
                                     </a>
                                 </td>

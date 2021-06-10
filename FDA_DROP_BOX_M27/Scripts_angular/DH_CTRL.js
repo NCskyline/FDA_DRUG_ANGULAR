@@ -205,6 +205,11 @@
         
     };
 
+    $scope.SELECT_CER = function (IDA) {
+        sessionStorage.IDA = IDA;
+        REDIRECT('../CERT/PREVIEW_CERT');
+    };
+
     $scope.ADD_CHEMICAL = function () {
         REDIRECT('../DH/INPUT_CHEMICAL_RQT');
     };
