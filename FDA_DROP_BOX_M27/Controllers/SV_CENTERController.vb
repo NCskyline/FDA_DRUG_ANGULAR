@@ -832,6 +832,10 @@ Namespace Controllers
 
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
+        Function SETMODEL_CHEM() As JsonResult
+            Dim MODEL As New MODEL_CHEMICAL
+            Return Json(MODEL, JsonRequestBehavior.AllowGet)
+        End Function
 
         Public Function SETMODEL_LIST() As JsonResult
             Dim MODEL As New MODEL_FILELIST

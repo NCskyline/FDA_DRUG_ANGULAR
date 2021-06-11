@@ -5,10 +5,10 @@
 <script src="../Scripts_angular/DH_CTRL.js"></script>
 <link href="../css/bootstrap_limitless.min.css" rel="stylesheet" />
 
-<div class="ic" ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()">
+<div ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()">
 
-    <div class="content-part">
-        <div class="part part-1-3 no-bg">
+    <div class="content-part ">
+        <div class="part part-1-3 ic">
             <ul class="listree">
                 <li>
                     <div class="listree-submenu-heading">ก. ลงทะเบียนสถานที่ผลิต</div>
@@ -74,7 +74,7 @@
                 </li>
             </ul>
         </div>
-        <div class="part part-2-3 no-bg">
+        <div class="part part-2-3 ic">
 
             <div ng-include="SUB_PATH">
 

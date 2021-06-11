@@ -15,22 +15,18 @@
 
 End Class
 
-Public Class MODEL_CER_GMP_DEMO
+Public Class MODEL_CHEMICAL
 
-    'Public DEPARTMENT_REGIST_CER_TYPE As String
-    'Public DEPARTMENT_REGIST_CER_NAME As String
-    'Public CER_DETAIL_MANUFACTURE As CER_DETAIL_MANUFACTURE
-    'Public CERTIFICATION_NUMBER_ALL As String
-    'Public MANUFACTURER_LICENCE_NUMBER As String
-    'Private _CER_DETAIL_CASCHEMICAL As New List(Of CER_DETAIL_CASCHEMICAL)
-    'Public Property CER_DETAIL_CASCHEMICAL() As List(Of CER_DETAIL_CASCHEMICAL)
-    '    Get
-    '        Return _CER_DETAIL_CASCHEMICAL
-    '    End Get
-    '    Set(ByVal value As List(Of CER_DETAIL_CASCHEMICAL))
-    '        _CER_DETAIL_CASCHEMICAL = value
-    '    End Set
-    'End Property
+    Private _MODEL_CHEM As New CHEMICAL_REQUEST
+    Public Property MODEL_CHEM() As CHEMICAL_REQUEST
+        Get
+            Return _MODEL_CHEM
+        End Get
+        Set(ByVal value As CHEMICAL_REQUEST)
+            _MODEL_CHEM = value
+        End Set
+    End Property
+
 End Class
 
 Public Class MODEL_CER_GMP

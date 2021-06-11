@@ -2,20 +2,26 @@
     Layout = ""
 End Code*@
 
+    <script src="~/Scripts_angular/ANGULAR_APP.js"></script>
+    <script src="~/Scripts_angular/CENTER_SV.js"></script>
+    <script src="~/Scripts_angular/DH_CTRL.js"></script>
 
-    <div>
+
+    <div class="ic" ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="loadmodel()">
         <h2>เพิ่มสาร</h2>
         <table class="table">
             <tr>
                 <td width="30%">วันที่</td>
                 <td>
-                    <label>11-11-2000</label>
+                    <md-datepicker ng-model="LIST_CHEM.DOCUMENT_DATE" md-placeholder="Enter date"
+                    input-aria-describedby="datepicker-description"
+                    input-aria-labelledby="datepicker-header "></md-datepicker>
                 </td>
             </tr>
             <tr>
                 <td>ชื่อสาร</td>
                 <td>
-                    <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_CHEM.iowanm" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -90,8 +96,7 @@ End Code*@
                             </tr>
                         </table>
 
-                        &nbsp;&nbsp;
-                        &nbsp;&nbsp;
+             
 
                     </div>
 

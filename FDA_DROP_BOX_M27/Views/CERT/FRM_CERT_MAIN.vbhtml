@@ -19,11 +19,14 @@ End Code
                 <td>{{nameOperator}}</td>
             </tr>
         </table>
-
-        <div align="right">
-            <button ng-click="INPUT_CERT()">สร้างคำขอ</button>
-        </div>
         <hr />
+        <table style="width:100%">
+            <tr>
+                <td style="width:100%"><input style="width:60%" class="form-control" placeholder="ค้นหา..." ng-model="filter" /></td>
+                <td align="right"><button class="btn btn-lg" ng-click="INPUT_CERT()">สร้างคำขอ</button></td>
+            </tr>
+        </table>
+        <br />
         <div class="row">
             <div class="col-sm-12">
                 <div class="card" style=" border-top: 10px solid #277210;">
@@ -42,7 +45,7 @@ End Code
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="datas in DATA_GMP">
+                            <tr ng-repeat="datas in DATA_GMP | filter : filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
 
                                 <td>{{datas.thacntnm}}</td>
                                 <td>{{datas.CER_NUMBER}}</td>
@@ -54,17 +57,22 @@ End Code
                                 <td>{{datas.REMARK}}</td>
                                 <td>
                                     <span class="fa fa-eye"></span>
-                                    <a ng-click="SELECT_CER(datas.IDA)">
+                                    <a ng-click="SELECT_CER(datas)">
                                         เลือก
                                     </a>
                                 </td>
                             </tr>
                         </tbody>
-                        <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
-                                        ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
-                                        boundary-link-numbers="true" rotate="false" max-size="maxSize">
-                        </uib-pagination>
                     </table>
+                    <hr />
+                    <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
+                                    ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
+                                    boundary-link-numbers="true" rotate="false" max-size="maxSize">
+                    </uib-pagination>
+                    <div align="right">
+                        <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
+                        <button type="button" class="btn btn-sm" ng-disabled="currentPage >= DATA_GMP.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
+                    </div>
                 </div>
             </div>
         </div>

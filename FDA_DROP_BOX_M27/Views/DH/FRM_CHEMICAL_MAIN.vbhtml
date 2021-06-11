@@ -3,10 +3,17 @@
 End Code
 
 <div><h3 style="color:red">{{HEADER}}</h3></div>
-<div align="right">
-    <button ng-click="ADD_CHEMICAL()">เพิ่มสาร</button>
+<div >
+    
 </div>
 <hr />
+<table style="width:100%">
+    <tr>
+        <td style="width:100%"><input style="width:60%" class="form-control" placeholder="ค้นหา..." ng-model="filter" /></td>
+        <td align="right"><button class="btn btn-lg" ng-click="ADD_CHEMICAL()">เพิ่มสาร</button></td>
+    </tr>    
+</table>
+<br />
 <div class="row">
     <div class="col-sm-12">
         <div class="card" style=" border-top: 10px solid #277210;">
@@ -16,17 +23,17 @@ End Code
                         <th>เลขรับ</th>
                         <th>ชื่อสาร</th>
                         <th>สถานะ</th>
-                        <th>iowa</th>
+                        <th>รหัสสาร</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="datas in DATA_CHEMICAL.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))">
+                    <tr ng-repeat="datas in DATA_CHEMICAL | filter : filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
 
                         <td>{{datas.RCVNO}}</td>
                         <td>{{datas.iowanm}}</td>
                         <td>{{datas.STATUS_NAME}}</td>
-                        <td>{{datas.iowacd}}</td>
+                        <td>{{datas.iowa}}</td>
                         <td>
                             <span class="fa fa-eye"></span>
                             <a ng-click="SELECT_CER(datas,'12')">
@@ -34,13 +41,20 @@ End Code
                             </a>
                         </td>
                     </tr>
-
                 </tbody>
+
             </table>
+            <hr />
+            <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
+                            ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
+                            boundary-link-numbers="true" rotate="false" max-size="maxSize">
+            </uib-pagination>
+            <div align="right">
+                <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
+                <button type="button" class="btn btn-sm" ng-disabled="currentPage >= DATA_CHEMICAL.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
+            </div>
         </div>
     </div>
-    <pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" 
-                class="pagination-sm" items-per-page="itemsPerPage">
-    </pagination>
+    
 </div>
 

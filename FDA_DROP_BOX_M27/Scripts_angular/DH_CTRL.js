@@ -1,22 +1,52 @@
-﻿app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
+﻿app.filter('startFrom', function () {
+    return function (input, start) {
+        if (input) {
+            start = +start;
+            return input.slice(start);
+        }
+        return [];
+    };
+});
+app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     //CHK_TOKEN();
     var LCN_IDA = sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;
     var PROCESS = QueryString("PROCESS");
-    var CITIZEN = '0105527028430';
-    
+    var CITIZEN = '0000000000000'///'0105527028430';
+
+    //------------------------------ PAGINGNATION ---------------------------//
+
+    $scope.currentPage = 0;
+    $scope.paging = {
+        total: 20,
+        current: 1,
+        onPageChanged: loadPages
+    };
+    function loadPages() {
+        console.log('Current page is : ' + $scope.paging.current);
+
+        // TODO : Load current page Data here
+
+        $scope.currentPage = $scope.paging.current;
+    }
+
+    //----------------------------------------------------------------------//
 
     $scope.pageload = function () {
 
         var PROCESS_ID = sessionStorage.DH_PROCESS_ID;
 
-        var getdata = CENTER_SV.GET_INFORMATION(LCN_IDA);
-        getdata.then(function (datas) {
-            $scope.LCNNO_NO = datas.data.lcnno;
-            $scope.thanameplace = datas.data.thanameplace;
-            $scope.nameOperator = datas.data.nameOperator;
-        }, function () { });
+        if (PROCESS_ID === '') {
+
+            var getdata = CENTER_SV.GET_INFORMATION(LCN_IDA);
+            getdata.then(function (datas) {
+                $scope.LCNNO_NO = datas.data.lcnno;
+                $scope.thanameplace = datas.data.thanameplace;
+                $scope.nameOperator = datas.data.nameOperator;
+            }, function () { });
+        }
+        
 
         if (PROCESS_ID == '31' || PROCESS_ID == '32' || PROCESS_ID == '33' || PROCESS_ID == '34' || PROCESS_ID == '36') {
 
@@ -45,6 +75,11 @@
             var dataGMP = CENTER_SV.SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden(LCN_IDA, PROCESS_ID, CITIZEN);
             dataGMP.then(function (datas) {
                 $scope.DATA_GMP = datas.data;
+                $scope.currentPage = 1;
+                $scope.entryLimit = 20;
+                $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
+                $scope.loading_profile = false;
+                $scope.product_show = true;
             }, function () { });
         }
         else if (PROCESS_ID == '23' || PROCESS_ID == '24' || PROCESS_ID == '25' || PROCESS_ID == '26') {
@@ -69,6 +104,11 @@
             var dataDH = CENTER_SV.SP_DH15RQT_BY_IDA(LCN_IDA, PROCESS_ID);
             dataDH.then(function (datas) {
                 $scope.DATA_DH = datas.data;
+                $scope.currentPage = 1;
+                $scope.entryLimit = 20;
+                $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
+                $scope.loading_profile = false;
+                $scope.product_show = true;
             }, function () { });
         }
     };
@@ -82,11 +122,11 @@
         dataCHE.then(function (datas) {
             $scope.DATA_CHEMICAL = datas.data;
 
-            $scope.viewby = 10;
-            $scope.totalItems = $scope.DATA_CHEMICAL.length;
             $scope.currentPage = 1;
-            $scope.itemsPerPage = $scope.viewby;
-            $scope.maxSize = 5; //Number of pager buttons to show
+            $scope.entryLimit = 20;
+            $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
+            $scope.loading_profile = false;
+            $scope.product_show = true;
 
         }, function () { });
     };
@@ -100,11 +140,11 @@
         dataCHE.then(function (datas) {
             $scope.DATA_CHEMICAL = datas.data;
 
-            $scope.viewby = 10;
-            $scope.totalItems = $scope.DATA_CHEMICAL.length;
             $scope.currentPage = 1;
-            $scope.itemsPerPage = $scope.viewby;
-            $scope.maxSize = 5; //Number of pager buttons to show
+            $scope.entryLimit = 20;
+            $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
+            $scope.loading_profile = false;
+            $scope.product_show = true;
         }, function () { });
     };
 
@@ -117,11 +157,11 @@
         dataCHE.then(function (datas) {
             $scope.DATA_CHEMICAL = datas.data;
 
-            $scope.viewby = 10;
-            $scope.totalItems = $scope.DATA_CHEMICAL.length;
             $scope.currentPage = 1;
-            $scope.itemsPerPage = $scope.viewby;
-            $scope.maxSize = 5; //Number of pager buttons to show
+            $scope.entryLimit = 20;
+            $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
+            $scope.loading_profile = false;
+            $scope.product_show = true;
         }, function () { });
     };
 
@@ -134,12 +174,20 @@
         dataCHE.then(function (datas) {
             $scope.DATA_CHEMICAL = datas.data;
 
-            $scope.viewby = 10;
-            $scope.totalItems = $scope.DATA_CHEMICAL.length;
             $scope.currentPage = 1;
-            $scope.itemsPerPage = $scope.viewby;
-            $scope.maxSize = 5; //Number of pager buttons to show
+            $scope.entryLimit = 20;
+            $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
+            $scope.loading_profile = false;
+            $scope.product_show = true;
         }, function () { });
+    };
+
+    $scope.loadmodel = function () {
+
+        var getModel = CENTER_SV.SETMODEL_CHEM();
+        getModel.then(function (datas) {
+            $scope.LIST_CHEM = datas.data;
+        });
     };
 
     $scope.INPUT_CERT = function () {
@@ -205,8 +253,8 @@
         
     };
 
-    $scope.SELECT_CER = function (IDA) {
-        sessionStorage.IDA = IDA;
+    $scope.SELECT_CER = function (datas) {
+        sessionStorage.IDA = datas.IDA;
         REDIRECT('../CERT/PREVIEW_CERT');
     };
 
@@ -218,14 +266,7 @@
         REDIRECT('../DH/FRM_MAIN_PAGE_PHESAJ');
     };
 
-    $scope.pageChanged = function () {
-        console.log('Page changed to: ' + $scope.currentPage);
-    };
-
-    $scope.setItemsPerPage = function (num) {
-        $scope.itemsPerPage = num;
-        $scope.currentPage = 1; //reset to first page
-    };
+    
 
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });

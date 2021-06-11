@@ -399,6 +399,14 @@
         return response;
     };
 
+    this.SETMODEL_CHEM = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SETMODEL_CHEM")
+        });
+        return response;
+    };
+
     this.GET_DATAPROCESS = function (P_ID) {
         var response = $http({
             method: "post",
