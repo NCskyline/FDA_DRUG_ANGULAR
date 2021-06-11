@@ -544,7 +544,7 @@ Namespace Controllers
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
         Function GET_PREVIEW_CERT(ByVal IDA As Integer) As JsonResult
-            IDA = 41941
+            'IDA = 41941
             Dim model As New MODEL_CER_GMP
             Dim dao_cer As New DAO_DRUG.TB_CER
             Dim dao_manu As New DAO_DRUG.TB_CER_DETAIL_MANUFACTURE
