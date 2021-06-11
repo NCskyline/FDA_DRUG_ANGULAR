@@ -51,6 +51,38 @@
         End Sub
 
     End Class
+    Public Class clsDBsysisocnt
+        Inherits MAINCONTEXT1
+        Public fields As New sysisocnt
+        Public Sub insert()
+            db_cpn.sysisocnts.InsertOnSubmit(fields)
+            db_cpn.SubmitChanges()
+        End Sub
+        Public Sub update()
+            db_cpn.SubmitChanges()
+        End Sub
+        Public Sub delete()
+            db_cpn.sysisocnts.DeleteOnSubmit(fields)
+            db_cpn.SubmitChanges()
+        End Sub
+
+        Public Sub GetDataAll()
+            datas = (From p In db_cpn.sysisocnts Select p)
+            For Each Me.fields In datas
+            Next
+        End Sub
+        Public Sub GetDataby_IDA(ByVal IDA As Integer)
+            datas = (From p In db_cpn.sysisocnts Where p.IDA = IDA Select p)
+            For Each Me.fields In datas
+            Next
+        End Sub
+        Public Sub GetDataby_alpha3(ByVal alpha3 As String)
+            datas = (From p In db_cpn.sysisocnts Where p.alpha3 = alpha3 Select p)
+            For Each Me.fields In datas
+            Next
+        End Sub
+
+    End Class
     Public Class clsDBsyslctnm
         Inherits MAINCONTEXT1
         Public fields As New syslctnm

@@ -101,8 +101,7 @@ End Code
                 8. หน่วยงานที่ออกใบรับรอง (Certification Body)<font color="red">*</font>
             </td>
             <td>
-                <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
-
+                <input class="form-control inline" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>

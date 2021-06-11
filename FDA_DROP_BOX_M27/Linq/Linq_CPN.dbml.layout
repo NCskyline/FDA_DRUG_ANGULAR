@@ -86,5 +86,11 @@
         <elementListCompartment Id="b0905f24-90be-456c-aa6d-7d6ad0fce5d0" absoluteBounds="4.515, 1.96, 1.9700000000000002, 6.979939778645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="70a3487f-5a9f-4431-ad83-ae98957a8202" isExpanded="false" absoluteBounds="4.5, 2.5, 2, 0.45">
+      <DataClassMoniker Name="/Linq_CPNDataContext/sysisocnt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7cc29b8e-c3d1-48fc-8ac5-642da363f467" absoluteBounds="4.515, 2.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

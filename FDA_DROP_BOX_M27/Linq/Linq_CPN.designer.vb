@@ -103,6 +103,12 @@ Partial Public Class Linq_CPNDataContext
     End Sub
   Partial Private Sub Deletesyslcnsid(instance As syslcnsid)
     End Sub
+  Partial Private Sub Insertsysisocnt(instance As sysisocnt)
+    End Sub
+  Partial Private Sub Updatesysisocnt(instance As sysisocnt)
+    End Sub
+  Partial Private Sub Deletesysisocnt(instance As sysisocnt)
+    End Sub
   #End Region
 	
 	Public Sub New()
@@ -211,6 +217,12 @@ Partial Public Class Linq_CPNDataContext
 	Public ReadOnly Property syslcnsids() As System.Data.Linq.Table(Of syslcnsid)
 		Get
 			Return Me.GetTable(Of syslcnsid)
+		End Get
+	End Property
+	
+	Public ReadOnly Property sysisocnts() As System.Data.Linq.Table(Of sysisocnt)
+		Get
+			Return Me.GetTable(Of sysisocnt)
 		End Get
 	End Property
 End Class
@@ -7651,6 +7663,222 @@ Partial Public Class syslcnsid
 				Me._gmail = value
 				Me.SendPropertyChanged("gmail")
 				Me.OngmailChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.sysisocnt")>  _
+Partial Public Class sysisocnt
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _alpha3 As String
+	
+	Private _isocode As System.Nullable(Of Integer)
+	
+	Private _alpha2 As String
+	
+	Private _engcntnm As String
+	
+	Private _thacntnm As String
+	
+	Private _IDA As Integer
+	
+	Private _short_engcntnm As String
+	
+	Private _short_thacntnm As String
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub Onalpha3Changing(value As String)
+    End Sub
+    Partial Private Sub Onalpha3Changed()
+    End Sub
+    Partial Private Sub OnisocodeChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnisocodeChanged()
+    End Sub
+    Partial Private Sub Onalpha2Changing(value As String)
+    End Sub
+    Partial Private Sub Onalpha2Changed()
+    End Sub
+    Partial Private Sub OnengcntnmChanging(value As String)
+    End Sub
+    Partial Private Sub OnengcntnmChanged()
+    End Sub
+    Partial Private Sub OnthacntnmChanging(value As String)
+    End Sub
+    Partial Private Sub OnthacntnmChanged()
+    End Sub
+    Partial Private Sub OnIDAChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnIDAChanged()
+    End Sub
+    Partial Private Sub Onshort_engcntnmChanging(value As String)
+    End Sub
+    Partial Private Sub Onshort_engcntnmChanged()
+    End Sub
+    Partial Private Sub Onshort_thacntnmChanging(value As String)
+    End Sub
+    Partial Private Sub Onshort_thacntnmChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_alpha3", DbType:="VarChar(3) NOT NULL", CanBeNull:=false)>  _
+	Public Property alpha3() As String
+		Get
+			Return Me._alpha3
+		End Get
+		Set
+			If (String.Equals(Me._alpha3, value) = false) Then
+				Me.Onalpha3Changing(value)
+				Me.SendPropertyChanging
+				Me._alpha3 = value
+				Me.SendPropertyChanged("alpha3")
+				Me.Onalpha3Changed
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_isocode", DbType:="Int")>  _
+	Public Property isocode() As System.Nullable(Of Integer)
+		Get
+			Return Me._isocode
+		End Get
+		Set
+			If (Me._isocode.Equals(value) = false) Then
+				Me.OnisocodeChanging(value)
+				Me.SendPropertyChanging
+				Me._isocode = value
+				Me.SendPropertyChanged("isocode")
+				Me.OnisocodeChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_alpha2", DbType:="VarChar(2)")>  _
+	Public Property alpha2() As String
+		Get
+			Return Me._alpha2
+		End Get
+		Set
+			If (String.Equals(Me._alpha2, value) = false) Then
+				Me.Onalpha2Changing(value)
+				Me.SendPropertyChanging
+				Me._alpha2 = value
+				Me.SendPropertyChanged("alpha2")
+				Me.Onalpha2Changed
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_engcntnm", DbType:="Char(260)")>  _
+	Public Property engcntnm() As String
+		Get
+			Return Me._engcntnm
+		End Get
+		Set
+			If (String.Equals(Me._engcntnm, value) = false) Then
+				Me.OnengcntnmChanging(value)
+				Me.SendPropertyChanging
+				Me._engcntnm = value
+				Me.SendPropertyChanged("engcntnm")
+				Me.OnengcntnmChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_thacntnm", DbType:="VarChar(255)")>  _
+	Public Property thacntnm() As String
+		Get
+			Return Me._thacntnm
+		End Get
+		Set
+			If (String.Equals(Me._thacntnm, value) = false) Then
+				Me.OnthacntnmChanging(value)
+				Me.SendPropertyChanging
+				Me._thacntnm = value
+				Me.SendPropertyChanged("thacntnm")
+				Me.OnthacntnmChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDA", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property IDA() As Integer
+		Get
+			Return Me._IDA
+		End Get
+		Set
+			If ((Me._IDA = value)  _
+						= false) Then
+				Me.OnIDAChanging(value)
+				Me.SendPropertyChanging
+				Me._IDA = value
+				Me.SendPropertyChanged("IDA")
+				Me.OnIDAChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_short_engcntnm", DbType:="VarChar(255)")>  _
+	Public Property short_engcntnm() As String
+		Get
+			Return Me._short_engcntnm
+		End Get
+		Set
+			If (String.Equals(Me._short_engcntnm, value) = false) Then
+				Me.Onshort_engcntnmChanging(value)
+				Me.SendPropertyChanging
+				Me._short_engcntnm = value
+				Me.SendPropertyChanged("short_engcntnm")
+				Me.Onshort_engcntnmChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_short_thacntnm", DbType:="VarChar(255)")>  _
+	Public Property short_thacntnm() As String
+		Get
+			Return Me._short_thacntnm
+		End Get
+		Set
+			If (String.Equals(Me._short_thacntnm, value) = false) Then
+				Me.Onshort_thacntnmChanging(value)
+				Me.SendPropertyChanging
+				Me._short_thacntnm = value
+				Me.SendPropertyChanged("short_thacntnm")
+				Me.Onshort_thacntnmChanged
 			End If
 		End Set
 	End Property

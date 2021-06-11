@@ -376,4 +376,16 @@
       <Column Name="gmail" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.sysisocnt" Member="sysisocnts">
+    <Type Name="sysisocnt">
+      <Column Name="alpha3" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="isocode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="alpha2" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="engcntnm" Type="System.String" DbType="Char(260)" CanBeNull="true" />
+      <Column Name="thacntnm" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="short_engcntnm" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="short_thacntnm" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>
