@@ -63,6 +63,4 @@ Public Class MODEL_CER_GMP
     'Public EXP_DOCUMENT_DATE As Date
     'Public STANDARD_ID As String
 
-
-
 End Class

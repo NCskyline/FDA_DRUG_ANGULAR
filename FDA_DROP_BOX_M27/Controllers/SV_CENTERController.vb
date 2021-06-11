@@ -1116,9 +1116,10 @@ Namespace Controllers
 
         End Function
 
-        Function INSERT_CERT_GMP(ByVal XML_CERT As String, ByVal _ProcessID As String) As JsonResult
+        Function INSERT_CERT_GMP(ByVal XML_CERT As String, ByVal XML_CHEM As String, ByVal _ProcessID As String) As JsonResult
             Dim jss As New JavaScriptSerializer
             Dim bb As MODEL_CER_GMP = jss.Deserialize(XML_CERT, GetType(MODEL_CER_GMP))
+
             'Dim bbm As MODEL_CER_GMP = jss.Deserialize(XML_MANUFAC, GetType(MODEL_CER_GMP))
             'Dim bbc As MODEL_CER_GMP = jss.Deserialize(XML_CHEM, GetType(MODEL_CER_GMP))
 
@@ -1139,6 +1140,9 @@ Namespace Controllers
             dao_manu.fields = bb.CER_DETAIL_MANUFACTURE
             'dao_manu.fields.FK_IDA = IDA
             'dao_manu.insert()
+            Dim dao_chem As New DAO_DRUG.TB_CER_DETAIL_CASCHEMICAL
+            Dim jss2 As New JavaScriptSerializer
+            dao_chem.Details = jss2.Deserialize(XML_CHEM, GetType(List(Of CER_DETAIL_CASCHEMICAL)))
 
             'Dim dao_chem As New DAO_DRUG.TB_CER_DETAIL_CASCHEMICAL
             'For Each dao_chem.fields In bbc.CER_DETAIL_CASCHEMICAL
