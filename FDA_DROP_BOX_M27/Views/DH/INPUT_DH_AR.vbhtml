@@ -1,8 +1,8 @@
 ﻿@Code
     Layout = ""
 End Code
-<script src="../Scripts_angular/CENTER_SV.js"></script>
-<script src="../Scripts_angular/DH_CTRL.js"></script>
+@*<script src="../Scripts_angular/CENTER_SV.js"></script>
+<script src="../Scripts_angular/DH_CTRL.js"></script>*@
 <div class="ic">
     <center>
         <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2> <br />
@@ -25,7 +25,8 @@ End Code
                 Ref Cer
             </td>
             <td>
-                <select class="dropdown">
+                <select class="dropdown" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA">
+                    <option value="0">--กรุณาเลือก--</option>
                     <option ng-repeat="x in REF_CERT" value="{{x.IDA}}">{{x.CER_NUMBER}}</option>
                 </select>
             </td>
@@ -38,7 +39,7 @@ End Code
             </td>
             <td width="30%">
                 <label>
-
+                    {{LIST_DH.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME}}
                 </label>
             </td>
             <td>
@@ -46,7 +47,7 @@ End Code
             </td>
             <td width="10%">
                 <label>
-
+                    {{LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME}}
                 </label>
             </td>
         </tr>
@@ -55,16 +56,15 @@ End Code
                 ชื่อผู้แทนจำหน่ายในต่างประเทศ (ซื้อผ่าน)
             </td>
             <td>
-                <label>
-
-                </label>
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
             <td>
                 ประเทศ
             </td>
             <td>
-                <select>
-                    <option ng-repeat="x in CNT_LIST" value="{{x.engcntnm}}">{{x.engcntnm}}</option>
+                <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
+                    <option value="0">--กรุณาเลือก--</option>
+                    <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
             </td>
         </tr>
@@ -77,7 +77,7 @@ End Code
             </td>
             <td>
                 <label>
-
+                    {{LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME}}
                 </label>
             </td>
         </tr>
@@ -87,7 +87,7 @@ End Code
             </td>
             <td>
                 <label>
-
+                    {{LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME}}
                 </label>
             </td>
         </tr>
@@ -98,16 +98,16 @@ End Code
                 ชื่อการค้า <font color="red">*</font>
             </td>
             <td>
-                <input />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.TRADING_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
 
         </tr>
         <tr>
             <td>
-                มาตรฐาน (ตำำรายา)
+                มาตรฐาน (ตำรายา)
             </td>
             <td>
-                <input />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
     </table>
