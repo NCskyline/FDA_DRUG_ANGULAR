@@ -548,6 +548,7 @@ Namespace Controllers
             Dim model As New MODEL_CER_GMP
             Dim dao_cer As New DAO_DRUG.TB_CER
             Dim dao_manu As New DAO_DRUG.TB_CER_DETAIL_MANUFACTURE
+            Dim dao_iso As New DAO_CPN.clsDBsysisocnt
             dao_cer.GetDataby_IDA2(IDA)
             dao_manu.GetDataby_FK_IDA(IDA)
             Try
@@ -557,6 +558,30 @@ Namespace Controllers
             End Try
             Try
                 model.CER_DETAIL_MANUFACTURE = dao_manu.fields
+            Catch ex As Exception
+
+            End Try
+            Try
+                dao_iso.GetDataby_IDA(dao_manu.fields.COUNTRY_GMP)
+                model.COUNTRY_GMP_SHOW = dao_iso.fields.engcntnm
+            Catch ex As Exception
+
+            End Try
+            Try
+                dao_iso.GetDataby_IDA(dao_manu.fields.COUNTRY_ID)
+                model.COUNTRY_NAME = dao_iso.fields.engcntnm
+            Catch ex As Exception
+
+            End Try
+            Try
+                dao_iso.GetDataby_IDA(dao_cer.fields.COUNTRY_OF_DEPARTMENT_IDA)
+                model.COUNTRY_OF_DEPARTMENT_NAME = dao_iso.fields.engcntnm
+            Catch ex As Exception
+
+            End Try
+            Try
+                dao_iso.GetDataby_IDA(dao_cer.fields.BUYER_COUNTRY)
+                model.BUYER_COUNTRY_NAME = dao_iso.fields.engcntnm
             Catch ex As Exception
 
             End Try

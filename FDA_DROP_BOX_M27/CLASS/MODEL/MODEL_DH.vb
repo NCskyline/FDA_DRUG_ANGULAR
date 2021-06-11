@@ -53,6 +53,10 @@ Public Class MODEL_CER_GMP
             _CER_DETAIL_MANUFACTURE = value
         End Set
     End Property
+    Public COUNTRY_GMP_SHOW As String
+    Public COUNTRY_NAME As String
+    Public COUNTRY_OF_DEPARTMENT_NAME As String
+    Public BUYER_COUNTRY_NAME As String
     'Public NAME_ADDRESS As String
     'Public ADDRESS_NUMBER As String
     'Public ADDRESS_CITY As String

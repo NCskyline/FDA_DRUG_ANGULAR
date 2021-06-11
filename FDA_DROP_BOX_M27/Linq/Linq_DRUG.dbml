@@ -545,19 +545,6 @@
       <Column Name="stngvl" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.sysisocnt" Member="sysisocnts">
-    <Type Name="sysisocnt">
-      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="alpha3" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
-      <Column Name="isocode" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="alpha2" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
-      <Column Name="engcntnm" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="thacntnm" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="offengnm" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="offthanm" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="maincd" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.TRANSACTION_DOWNLOAD" Member="TRANSACTION_DOWNLOADs">
     <Type Name="TRANSACTION_DOWNLOAD">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

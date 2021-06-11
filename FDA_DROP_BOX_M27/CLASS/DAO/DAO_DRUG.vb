@@ -4695,43 +4695,43 @@ Namespace DAO_DRUG
             db.SubmitChanges()
         End Sub
     End Class
-    Public Class clsDBsysisocnt
-        Inherits MAINCONTEXT
-        Public fields As New sysisocnt
-        Public Sub insert()
-            db.sysisocnts.InsertOnSubmit(fields)
-            db.SubmitChanges()
-        End Sub
-        Public Sub update()
-            db.SubmitChanges()
-        End Sub
-        Public Sub delete()
-            db.sysisocnts.DeleteOnSubmit(fields)
-            db.SubmitChanges()
-        End Sub
+    'Public Class clsDBsysisocnt
+    '    Inherits MAINCONTEXT
+    '    Public fields As New sysisocnt
+    '    Public Sub insert()
+    '        db.sysisocnts.InsertOnSubmit(fields)
+    '        db.SubmitChanges()
+    '    End Sub
+    '    Public Sub update()
+    '        db.SubmitChanges()
+    '    End Sub
+    '    Public Sub delete()
+    '        db.sysisocnts.DeleteOnSubmit(fields)
+    '        db.SubmitChanges()
+    '    End Sub
 
-        Public Sub GetDataAll()
-            datas = (From p In db.sysisocnts Select p)
-            For Each Me.fields In datas
-            Next
-        End Sub
-        Public Sub GetData_alpha3(ByVal alpha3 As String)
-            datas = (From p In db.sysisocnts Where p.alpha3 = alpha3 Select p)
-            For Each Me.fields In datas
-            Next
-        End Sub
-        Public Sub GetData_engcntnm(ByVal engcntnm As String)
-            datas = (From p In db.sysisocnts Where p.engcntnm = engcntnm Select p)
-            For Each Me.fields In datas
-            Next
-        End Sub
-        Public Sub GetDataby_IDA(ByVal IDA As String)
-            datas = (From p In db.sysisocnts Where p.IDA = IDA Select p)
-            For Each Me.fields In datas
+    '    Public Sub GetDataAll()
+    '        datas = (From p In db.sysisocnts Select p)
+    '        For Each Me.fields In datas
+    '        Next
+    '    End Sub
+    '    Public Sub GetData_alpha3(ByVal alpha3 As String)
+    '        datas = (From p In db.sysisocnts Where p.alpha3 = alpha3 Select p)
+    '        For Each Me.fields In datas
+    '        Next
+    '    End Sub
+    '    Public Sub GetData_engcntnm(ByVal engcntnm As String)
+    '        datas = (From p In db.sysisocnts Where p.engcntnm = engcntnm Select p)
+    '        For Each Me.fields In datas
+    '        Next
+    '    End Sub
+    '    Public Sub GetDataby_IDA(ByVal IDA As String)
+    '        datas = (From p In db.sysisocnts Where p.IDA = IDA Select p)
+    '        For Each Me.fields In datas
 
-            Next
-        End Sub
-    End Class
+    '        Next
+    '    End Sub
+    'End Class
 
 
 
