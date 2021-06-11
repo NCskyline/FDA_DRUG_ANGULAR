@@ -26,7 +26,8 @@ End Code
                 Ref Cer
             </td>
             <td>
-                <select class="dropdown">
+                <select class="dropdown" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA">
+                    <option value="0">--กรุณาเลือก--</option>
                     <option ng-repeat="x in REF_CERT" value="{{x.IDA}}">{{x.CER_NUMBER}}</option>
                 </select>
             </td>
@@ -39,7 +40,7 @@ End Code
             </td>
             <td width="30%">
                 <label>
-
+                    {{LIST_DH.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME}}
                 </label>
             </td>
             <td>
@@ -47,7 +48,7 @@ End Code
             </td>
             <td width="10%">
                 <label>
-
+                    {{LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME}}
                 </label>
             </td>
         </tr>
@@ -56,16 +57,15 @@ End Code
                 ชื่อผู้แทนจำหน่ายในต่างประเทศ (ซื้อผ่าน)
             </td>
             <td>
-                <label>
-
-                </label>
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
             <td>
                 ประเทศ
             </td>
             <td>
-                <select>
-                    <option ng-repeat="x in CNT_LIST" value="{{x.engcntnm}}">{{x.engcntnm}}</option>
+                <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
+                    <option value="0">--กรุณาเลือก--</option>
+                    <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
             </td>
         </tr>
@@ -78,7 +78,7 @@ End Code
             </td>
             <td>
                 <label>
-
+                    {{LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME}}
                 </label>
             </td>
         </tr>
@@ -88,7 +88,7 @@ End Code
             </td>
             <td>
                 <label>
-
+                    {{LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME}}
                 </label>
             </td>
         </tr>
@@ -98,8 +98,8 @@ End Code
             <td>
                 ชื่อการค้า <font color="red">*</font>
             </td>
-            <td colspan="3">
-                <input />
+            <td>
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.TRADING_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
 
         </tr>
@@ -107,8 +107,8 @@ End Code
             <td>
                 มาตรฐาน (ตำรายา)
             </td>
-            <td colspan="3">
-                <input />
+            <td>
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -116,13 +116,13 @@ End Code
                 จำนวน
             </td>
             <td>
-                <input />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.unit_alpha3" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
             <td>
                 ปริมาณ
             </td>
             <td>
-                <input />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.amount" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
             </td>
         </tr>
     </table>
@@ -133,17 +133,17 @@ End Code
     <table>
         <tr>
             <td>
-                <form name="myForm" ng-controller="ExampleController">
+                <form name="myForm" >
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="1">
+                        <input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="1">
                         ใช้ในการผลิตยาตัวอย่างเพื่อขอขึ้นทะเบียนตำรับยา
                     </label> <br />
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="2">
+                        <input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="2">
                         ใช้ในการพัฒนาตำรับยาที่ได้เลขทะเบียนแล้ว
                     </label> <br />
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="2">
+                        <input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="3">
                         อื่น ๆ (ระบุ)
                     </label>
                     <input />
@@ -155,35 +155,35 @@ End Code
     <table>
         <tr>
             <td>
-                <form name="myForm" ng-controller="ExampleController">
+                <form name="myForm">
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="1">
+                        <input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH1" value="1">
                         สำเนา ผ.ย. ๘ ที่ได้รับอนุมัติแล้ว พร้อมหนังสือสั่งซื้อจากผู้รับอนุญาตผลิตยา
                     </label> <br />
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="2">
-                        สำเนาใบอนุญาตผลิตในต่างประเทศ และรับรองสำำเนาโดยผู้รับอนุญาตที่ขอจดแจ้งเภสัชเคมีภัณฑ์
+                        <input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH2" value="1">
+                        สำเนาใบอนุญาตผลิตในต่างประเทศ และรับรองสำเนาโดยผู้รับอนุญาตที่ขอจดแจ้งเภสัชเคมีภัณฑ์
                     </label> <br />
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="2">
+                        <input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH3" value="1">
                         สำเนาใบสำคัญการขึ้นทะเบียนตำรับยา และสำเนา ท.ย.๑ หน้า๑ และหน้า๒/แบบ ย.๑ หน้า๓
                     </label> <br />
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="2">
+                        <input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH4" value="1">
                         สำเนารายงานผลการตรวจวิเคราะห์คุณภาพ (Certification of Analysis) ซึ่งระบุข้อกำหนดมาตราฐาน
                         (Specifications)
                     </label> <br />
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="2">
+                        <input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH5" value="1">
                         สำเนาหนังสือรับรองมาตราฐานหลักเกณฑ์วิธีการที่ดีในการผลิตเภสัชเคมีภัณฑ์
                         (GoodManufacturing Practice) ตามมาตราฐานองค์การอนามัยโลกหรือเทียบเท่า (กรณีนำเข้า)
                         (Specifications)
                     </label> <br />
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="2">
+                        <input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH6" value="1">
                         อื่น ๆ (ระบุ)
                     </label>
-                    <input />
+                    <input class="form-control inline" ng-model="LIST_DH.dh15rqt.OTHER_ATTACH" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
                 </form>
             </td>
         </tr>

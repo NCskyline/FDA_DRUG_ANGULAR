@@ -372,75 +372,75 @@ Namespace Controllers
 
         End Function
 
-        Function GET_INFORMATION(ByVal IDA As Integer) As JsonResult
+        'Function GET_INFORMATION(ByVal IDA As Integer) As JsonResult
 
-            Dim model As New MODEL_DH
-            Try
+        '    Dim model As New MODEL_DH
+        '    Try
 
-                Dim Tb As New DAO_DRUG.TB_DALCN_LOCATION_ADDRESS                               ' ประกาศตัวแปรเพื่อเรียกใช้
-                Dim TbNO As New DAO_DRUG.ClsDBdalcn                                     ' ประกาศตัวแปรเพื่อเรียกใช้
-                Dim tb_location As New DAO_DRUG.TB_DALCN_LOCATION_BSN
+        '        Dim Tb As New DAO_DRUG.TB_DALCN_LOCATION_ADDRESS                               ' ประกาศตัวแปรเพื่อเรียกใช้
+        '        Dim TbNO As New DAO_DRUG.ClsDBdalcn                                     ' ประกาศตัวแปรเพื่อเรียกใช้
+        '        Dim tb_location As New DAO_DRUG.TB_DALCN_LOCATION_BSN
 
-                TbNO.GetDataby_IDA(IDA)                                                 'การ where 
-                Tb.GetDataby_IDA(TbNO.fields.FK_IDA)                                    'การ where 
+        '        TbNO.GetDataby_IDA(IDA)                                                 'การ where 
+        '        Tb.GetDataby_IDA(TbNO.fields.FK_IDA)                                    'การ where 
 
-                Try
-                    tb_location.GetDataby_LCN_IDA(IDA)
-                Catch ex As Exception
+        '        Try
+        '            tb_location.GetDataby_LCN_IDA(IDA)
+        '        Catch ex As Exception
 
-                End Try
-                'การ where
-                Try
+        '        End Try
+        '        'การ where
+        '        Try
 
-                Catch ex As Exception
+        '        Catch ex As Exception
 
-                End Try
-                'lbl_lcnno.Text = TbNO.fields.LCNNO_DISPLAY
-                Dim lcnno As String = ""
-                Dim rcvno As String = ""
-                Try
-                    lcnno = TbNO.fields.lcntpcd & " " & CInt(Right(TbNO.fields.lcnno, 5)) & "/" & Left(TbNO.fields.lcnno, 2)
-                Catch ex As Exception
+        '        End Try
+        '        'lbl_lcnno.Text = TbNO.fields.LCNNO_DISPLAY
+        '        Dim lcnno As String = ""
+        '        Dim rcvno As String = ""
+        '        Try
+        '            lcnno = TbNO.fields.lcntpcd & " " & CInt(Right(TbNO.fields.lcnno, 5)) & "/" & Left(TbNO.fields.lcnno, 2)
+        '        Catch ex As Exception
 
-                End Try
-                Try
-                    rcvno = CInt(Right(TbNO.fields.rcvno, 5)) & "/" & Left(TbNO.fields.rcvno, 2)
-                Catch ex As Exception
+        '        End Try
+        '        Try
+        '            rcvno = CInt(Right(TbNO.fields.rcvno, 5)) & "/" & Left(TbNO.fields.rcvno, 2)
+        '        Catch ex As Exception
 
-                End Try
-                Try
-                    If TbNO.fields.lcnno IsNot Nothing Then
-                        Dim raw_lcn As String = TbNO.fields.lcnno
-                        model.lcnno = lcnno 'CStr(CInt((Right(raw_lcn, 5))) & "/25" & Left(raw_lcn, 2))
-                    End If
-                Catch ex As Exception
+        '        End Try
+        '        Try
+        '            If TbNO.fields.lcnno IsNot Nothing Then
+        '                Dim raw_lcn As String = TbNO.fields.lcnno
+        '                model.lcnno = lcnno 'CStr(CInt((Right(raw_lcn, 5))) & "/25" & Left(raw_lcn, 2))
+        '            End If
+        '        Catch ex As Exception
 
-                End Try
+        '        End Try
 
-                model.rcvno = rcvno                                    ' เอาข้อมูลมาโชว์ที่  label
-                Try
-                    model.rcvdate = CDate(TbNO.fields.rcvdate).ToLongDateString()       ' เอาข้อมูล แล้วเปลี่ยนตัดค่า เวลาออก
-                Catch ex As Exception
+        '        model.rcvno = rcvno                                    ' เอาข้อมูลมาโชว์ที่  label
+        '        Try
+        '            model.rcvdate = CDate(TbNO.fields.rcvdate).ToLongDateString()       ' เอาข้อมูล แล้วเปลี่ยนตัดค่า เวลาออก
+        '        Catch ex As Exception
 
-                End Try
+        '        End Try
 
-                model.thanameplace = Tb.fields.thanameplace                          ' เอาข้อมูลมาโชว์ที่  label
-                model.nameOperator = TbNO.fields.BSN_THAIFULLNAME             ' เอาข้อมูลมาโชว์ที่  label
+        '        model.thanameplace = Tb.fields.thanameplace                          ' เอาข้อมูลมาโชว์ที่  label
+        '        model.nameOperator = TbNO.fields.BSN_THAIFULLNAME             ' เอาข้อมูลมาโชว์ที่  label
 
-                If model.nameOperator = "" Then
-                    Try
-                        Dim dao_lcns As New DAO_CPN.clsDBsyslcnsnm
-                        dao_lcns.GetDataby_lcnsid(TbNO.fields.bsnid)
-                        model.nameOperator = dao_lcns.fields.prefixnm & dao_lcns.fields.thanm & " " & dao_lcns.fields.thalnm
-                    Catch ex As Exception
+        '        If model.nameOperator = "" Then
+        '            Try
+        '                Dim dao_lcns As New DAO_CPN.clsDBsyslcnsnm
+        '                dao_lcns.GetDataby_lcnsid(TbNO.fields.bsnid)
+        '                model.nameOperator = dao_lcns.fields.prefixnm & dao_lcns.fields.thanm & " " & dao_lcns.fields.thalnm
+        '            Catch ex As Exception
 
-                    End Try
-                End If
-            Catch ex As Exception
+        '            End Try
+        '        End If
+        '    Catch ex As Exception
 
-            End Try
-            Return Json(model, JsonRequestBehavior.AllowGet)
-        End Function
+        '    End Try
+        '    Return Json(model, JsonRequestBehavior.AllowGet)
+        'End Function
 
         Function SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden(ByVal IDA As String, ByVal CER_TYPE As String, ByVal iden As String) As JsonResult
             Dim dt As New DataTable
@@ -834,6 +834,13 @@ Namespace Controllers
         End Function
         Function SETMODEL_CHEM() As JsonResult
             Dim MODEL As New MODEL_CHEMICAL
+            Return Json(MODEL, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function SETMODEL_DHA() As JsonResult
+
+            Dim MODEL As New MODEL_DH
+
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
 

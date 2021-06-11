@@ -48,6 +48,17 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         }
         
 
+
+        var MODLE_DH = CENTER_SV.SETMODEL_DHA();
+
+        MODLE_DH.then(function (datas) {
+
+            $scope.LIST_DH = datas.data;
+
+
+        }, function () { });
+
+
         if (PROCESS_ID == '31' || PROCESS_ID == '32' || PROCESS_ID == '33' || PROCESS_ID == '34' || PROCESS_ID == '36') {
 
             if (PROCESS_ID == '31') {
@@ -82,21 +93,21 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 $scope.product_show = true;
             }, function () { });
         }
-        else if (PROCESS_ID == '23' || PROCESS_ID == '24' || PROCESS_ID == '25' || PROCESS_ID == '26') {
+        else if (PROCESS_ID == '14' || PROCESS_ID == '15' || PROCESS_ID == '16' || PROCESS_ID == '17') {
 
-            if (PROCESS_ID == '23') {
+            if (PROCESS_ID == '14') {
                 $scope.HEADER = '( เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา )';
                 $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
             }
-            else if (PROCESS_ID == '24') {
+            else if (PROCESS_ID == '15') {
                 $scope.HEADER = '( เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา )';
                 $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
             }
-            else if (PROCESS_ID == '25') {
+            else if (PROCESS_ID == '16') {
                 $scope.HEADER = '( ไม่เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา )';
                 $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
             }
-            else if (PROCESS_ID == '26') {
+            else if (PROCESS_ID == '17') {
                 $scope.HEADER = '( ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา )';
                 $scope.SUB_PATH = SET_URL_SV('../DH/FRM_MAIN_DH');
             }
@@ -200,16 +211,16 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     $scope.pageloadDH = function () {
         var PROCESS_ID = sessionStorage.DH_PROCESS_ID;
-        if (PROCESS_ID == '23') {
+        if (PROCESS_ID == '14') {
             $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_AR');
         }
-        else if (PROCESS_ID == '24') {
+        else if (PROCESS_ID == '15') {
             $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_AN');
         }
-        else if (PROCESS_ID == '25') {
+        else if (PROCESS_ID == '16') {
             $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_IR');
         }
-        else if (PROCESS_ID == '26') {
+        else if (PROCESS_ID == '17') {
             $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_IN');
         }
 

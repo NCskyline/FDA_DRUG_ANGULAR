@@ -1,17 +1,57 @@
 ﻿Public Class MODEL_DH
+    Private _dh15rqt As New dh15rqt
+    Public Property dh15rqt() As dh15rqt
+        Get
+            Return _dh15rqt
+        End Get
+        Set(ByVal value As dh15rqt)
+            _dh15rqt = value
+        End Set
+    End Property
 
-    Public lcnno As String
-    Public rcvno As String
-    Public rcvdate As Date
-    Public thanameplace As String
-    Public nameOperator As String
-    Public Certificate_Number As String
-    Public Manufacturer As String
-    Public Address As String
-    Public Province As String
-    Public Country As String
-    Public MFD_DATE As Date
-    Public EXP_DATE As Date
+    Private _DH15_DETAIL_CASCHEMICAL As New DH15_DETAIL_CASCHEMICAL
+    Public Property DH15_DETAIL_CASCHEMICAL() As DH15_DETAIL_CASCHEMICAL
+        Get
+            Return _DH15_DETAIL_CASCHEMICAL
+        End Get
+        Set(ByVal value As DH15_DETAIL_CASCHEMICAL)
+            _DH15_DETAIL_CASCHEMICAL = value
+        End Set
+    End Property
+
+    Private _DH15_DETAIL_CER As New DH15_DETAIL_CER
+    Public Property DH15_DETAIL_CER() As DH15_DETAIL_CER
+        Get
+            Return _DH15_DETAIL_CER
+        End Get
+        Set(ByVal value As DH15_DETAIL_CER)
+            _DH15_DETAIL_CER = value
+        End Set
+    End Property
+
+    Private _DH15_DETAIL_MANUFACTURE As New DH15_DETAIL_MANUFACTURE
+    Public Property DH15_DETAIL_MANUFACTURE() As DH15_DETAIL_MANUFACTURE
+        Get
+            Return _DH15_DETAIL_MANUFACTURE
+        End Get
+        Set(ByVal value As DH15_DETAIL_MANUFACTURE)
+            _DH15_DETAIL_MANUFACTURE = value
+        End Set
+    End Property
+
+
+    'Public lcnno As String
+    'Public rcvno As String
+    'Public rcvdate As Date
+    'Public thanameplace As String
+    'Public nameOperator As String
+    'Public Certificate_Number As String
+    'Public Manufacturer As String
+    'Public Address As String
+    'Public Province As String
+    'Public Country As String
+    'Public MFD_DATE As Date
+    'Public EXP_DATE As Date
 
 End Class
 
