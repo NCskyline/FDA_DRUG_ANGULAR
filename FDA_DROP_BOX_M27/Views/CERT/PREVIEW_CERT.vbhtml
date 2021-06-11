@@ -7,7 +7,7 @@ End Code
 
 <div class="ic" ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP">
     @*-------------GMP------------------*@
-    <div>
+    <div ng-show="LIST_GMP.CER.CER_TYPE == '31'">
         @*ng-repeat="datas in LIST_GMP"  ng-show="PROCESS == '31'" *@
         <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
             <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ</b>
@@ -213,7 +213,7 @@ End Code
     @*-------------GMP------------------*@
 
     @*-------------ISO------------------*@
-    <div>
+    <div ng-show="LIST_GMP.CER.CER_TYPE == '32'">
         <h2 style="font-family:'TH SarabunPSK';font-size:40px;">
             แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
         </h2>
@@ -341,7 +341,7 @@ End Code
     </div>
     @*-------------ISO------------------*@
     @*-------------HACCP------------------*@
-    <div class="ic">
+    <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '33'">
         <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
             แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
         </h2>
@@ -472,7 +472,7 @@ End Code
     </div>
     @*-------------HACCP------------------*@
     @*-------------PICS------------------*@
-    <div class="ic">
+    <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '34'">
         <h2 style="font-family:'TH SarabunPSK';font-size:40px;">
             แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
         </h2>
@@ -594,7 +594,7 @@ End Code
     </div>
     @*-------------PICS------------------*@
     @*-------------OTHER------------------*@
-    <div class="ic">
+    <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '36'">
         <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
             แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
         </h2>

@@ -92,6 +92,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
             $scope.LIST_GMP = datas.data;
             $scope.LIST_GMP.CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE($scope.LIST_GMP.CER.DOCUMENT_DATE));
             $scope.LIST_GMP.CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE($scope.LIST_GMP.CER.EXP_DOCUMENT_DATE));
+
         }, function () { });
 
 
@@ -131,7 +132,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         };
         $scope.GMP_CHEM.push(obj);
 
-        var dta = $scope.GMP_CHEM;
+        //var dta = $scope.GMP_CHEM;
         //$scope.GMP_CHEM.splice(0, 1, {
         //    CAS_ID: datas.IDA,
         //    CAS_NAME: datas.iowanm
