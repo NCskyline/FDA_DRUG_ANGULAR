@@ -15,6 +15,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     var PROCESS = QueryString("PROCESS");
     var CITIZEN = '0000000000000'///'0105527028430';
 
+    $scope.PROCESS_CHEM = '';
     //------------------------------ PAGINGNATION ---------------------------//
 
     $scope.currentPage = 0;
@@ -132,6 +133,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         var dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '1', 'A');
         dataCHE.then(function (datas) {
             $scope.DATA_CHEMICAL = datas.data;
+            $scope.PROCESS_CHEM = PROCESS;
 
             $scope.currentPage = 1;
             $scope.entryLimit = 20;
@@ -150,6 +152,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         var dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '2', 'A');
         dataCHE.then(function (datas) {
             $scope.DATA_CHEMICAL = datas.data;
+            $scope.PROCESS_CHEM = PROCESS;
 
             $scope.currentPage = 1;
             $scope.entryLimit = 20;
@@ -167,6 +170,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '1', 'I');
         dataCHE.then(function (datas) {
             $scope.DATA_CHEMICAL = datas.data;
+            $scope.PROCESS_CHEM = PROCESS;
 
             $scope.currentPage = 1;
             $scope.entryLimit = 20;
@@ -184,6 +188,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '2', 'I');
         dataCHE.then(function (datas) {
             $scope.DATA_CHEMICAL = datas.data;
+            $scope.PROCESS_CHEM = PROCESS;
 
             $scope.currentPage = 1;
             $scope.entryLimit = 20;
@@ -210,6 +215,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     };
 
     $scope.pageloadDH = function () {
+
         var PROCESS_ID = sessionStorage.DH_PROCESS_ID;
         if (PROCESS_ID == '14') {
             $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_AR');
@@ -247,6 +253,32 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
             });
         }   
         sessionStorage.DH_PROCESS_ID = PROCESS;
+    };
+
+    $scope.BTN_ADD_CHEM = function (datas) {
+
+        var obj = {
+
+            IDA: Int32Array,
+            ROW_ID: '',
+            CAS_ID: datas.IDA,
+            CAS_NO: '',
+            CAS_NAME: datas.iowanm,
+            FK_IDA: Int32Array,
+            TR_ID: Int32Array,
+            INN_NAME: ''
+
+        };
+        $scope.GMP_CHEM.push(obj);
+    };
+
+    $scope.BTN_SEARCH_CHEM = function (IOWANM) {
+
+        var GetdataCHEM = CENTER_SV.SP_MAS_CHEMICAL_by_IOWANM_AND_AORI(IOWANM, "A");
+        GetdataCHEM.then(function (datas) {
+            $scope.LIST_CHEM = datas.data;
+
+        }, function () { });
     };
 
     $scope.DATA_GMP = function (PROCEESS) {

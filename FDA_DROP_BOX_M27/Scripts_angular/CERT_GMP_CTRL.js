@@ -120,6 +120,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
     $scope.BTN_ADD_CHEM = function (datas) {
         
         var obj = {
+
             IDA: Int32Array,
             ROW_ID:'',
             CAS_ID: datas.IDA,
@@ -130,14 +131,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
             INN_NAME:''
            
         };
-        $scope.GMP_CHEM.push(obj);
-
-        //var dta = $scope.GMP_CHEM;
-        //$scope.GMP_CHEM.splice(0, 1, {
-        //    CAS_ID: datas.IDA,
-        //    CAS_NAME: datas.iowanm
-        //});
-        
+        $scope.GMP_CHEM.push(obj);        
     };
    
     $scope.BTN_SEARCH_CHEM = function (IOWANM) {
