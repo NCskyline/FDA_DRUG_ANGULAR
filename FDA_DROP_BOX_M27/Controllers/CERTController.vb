@@ -30,5 +30,10 @@ Namespace Controllers
         Function PREVIEW_CERT() As ActionResult
             Return View()
         End Function
+        Function FRM_CERT_STAFFF_SEARCH() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
+
+

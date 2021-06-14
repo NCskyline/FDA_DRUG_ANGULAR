@@ -38,5 +38,9 @@ Namespace Controllers
         Function FRM_SELECT_LCN() As ActionResult
             Return View()
         End Function
+        Function PREVIEW_CHEMICAL() As ActionResult
+            Return View()
+        End Function
+
     End Class
 End Namespace

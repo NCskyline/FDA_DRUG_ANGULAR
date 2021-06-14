@@ -890,6 +890,12 @@ Namespace Controllers
             Return dao.datas
         End Function
 
+        Function GETDATA_CHEMICAL(ByVal IDA As Integer) As JsonResult
+            Dim dao As New DAO_DRUG.TB_CHEMICAL_REQUEST
+            dao.GetDataby_IDA(IDA)
+
+            Return Json(dao.fields, JsonRequestBehavior.AllowGet)
+        End Function
 
 #End Region
 
