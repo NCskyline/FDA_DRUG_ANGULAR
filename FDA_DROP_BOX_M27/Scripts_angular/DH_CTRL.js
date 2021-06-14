@@ -48,18 +48,6 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
             }, function () { });
         }
         
-
-
-        var MODLE_DH = CENTER_SV.SETMODEL_DHA();
-
-        MODLE_DH.then(function (datas) {
-
-            $scope.LIST_DH = datas.data;
-
-
-        }, function () { });
-
-
         if (PROCESS_ID == '31' || PROCESS_ID == '32' || PROCESS_ID == '33' || PROCESS_ID == '34' || PROCESS_ID == '36') {
 
             if (PROCESS_ID == '31') {
@@ -239,6 +227,13 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         var data_REF_CERT = CENTER_SV.SP_MASTER_CER_PK_BY_FK_IDA(LCN_IDA);
         data_REF_CERT.then(function (datas) {
             $scope.REF_CERT = datas.data;
+
+        }, function () { });
+
+        var MODLE_DH = CENTER_SV.SETMODEL_DHA();
+        MODLE_DH.then(function (datas) {
+
+            $scope.LIST_DH = datas.data;
 
         }, function () { });
     };
