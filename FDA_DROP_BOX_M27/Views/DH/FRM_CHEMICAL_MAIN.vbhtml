@@ -36,8 +36,8 @@ End Code
                         <td>{{datas.iowa}}</td>
                         <td>
                             <span class="fa fa-eye"></span>
-                            <a ng-click="SELECT_CER(datas,'12')">
-                                เลือก
+                            <a ng-click="EDIT_CHEM(datas.IDA)">
+                                แก้ไขฝ/ดูข้อมูล
                             </a>
                         </td>
                     </tr>

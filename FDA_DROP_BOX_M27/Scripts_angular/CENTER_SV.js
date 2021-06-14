@@ -676,5 +676,14 @@
         });
         return response;
     };
-   
+    this.GETDATA_CHEMICAL = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GETDATA_CHEMICAL"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
 });

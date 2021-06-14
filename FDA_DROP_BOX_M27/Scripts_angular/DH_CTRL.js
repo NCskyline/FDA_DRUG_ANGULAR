@@ -13,7 +13,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     var LCN_IDA = sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;
     var PROCESS = QueryString("PROCESS");
-    var CITIZEN = '0000000000000'///'0105527028430';
+    var CITIZEN = '0105527028430'//'0105527028430';0000000000000
 
     $scope.PROCESS_CHEM = '';
     //------------------------------ PAGINGNATION ---------------------------//
@@ -188,10 +188,19 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     $scope.loadmodel = function () {
 
+        var IDA = sessionStorage.IDA
+
         var getModel = CENTER_SV.SETMODEL_CHEM();
         getModel.then(function (datas) {
             $scope.LIST_CHEM = datas.data;
         });
+
+        var dataEDIT = CENTER_SV.GETDATA_CHEMICAL(IDA);
+        dataEDIT.then(function (datas) {
+            $scope.DATA_CHEM = datas.data;
+            $scope.DATA_CHEM.REQUEST_DATE = filwill(CHANGE_FORMATDATE($scope.DATA_CHEM.REQUEST_DATE));
+
+        }, function () { });
     };
 
     $scope.INPUT_CERT = function () {
@@ -276,6 +285,11 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         }, function () { });
     };
 
+    $scope.EDIT_CHEM = function (IDA) {
+        sessionStorage.IDA = IDA;
+        REDIRECT('../DH/PREVIEW_CHEMICAL');
+    };
+
     $scope.DATA_GMP = function (PROCEESS) {
 
         sessionStorage.DH_PROCESS_ID = PROCEESS;
@@ -304,7 +318,30 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         REDIRECT('../DH/FRM_MAIN_PAGE_PHESAJ');
     };
 
-    
+    function CV_DATE(data) {
+        return new Date(parseInt(data.replace('/Date(', '').replace(')/', ''))).toLocaleDateString('th-TH');
+    }
+
+    function filwill(dateString) {
+        try {
+            var dateArray = dateString.split("/");
+            dateString = dateArray[1] + "/" + dateArray[0] + "/" + dateArray[2];
+        }
+        catch (err) {
+
+        }
+        return dateString;
+    }
+
+    //แปลงเวลา เข้าข้อมูล (แสดง)
+    function CHANGE_FORMATDATE(DATE_CHANGE) {
+        var dateString = DATE_CHANGE.substr(6);
+        var currentTime = new Date(parseInt(dateString));
+        var month = currentTime.getMonth() + 1;
+        var day = currentTime.getDate();
+        var year = currentTime.getFullYear();
+        return DATE_CHANGE = day + "/" + month + "/" + year;
+    }
 
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });
