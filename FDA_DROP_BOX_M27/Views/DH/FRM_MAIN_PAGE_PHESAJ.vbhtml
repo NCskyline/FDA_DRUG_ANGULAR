@@ -7,7 +7,7 @@
 
 <div ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()">
 
-    <div class="content-part ">
+    <div class="content-part " style="width:100%">
         <div class="part part-1-3 ic">
             <ul class="listree">
                 <li>

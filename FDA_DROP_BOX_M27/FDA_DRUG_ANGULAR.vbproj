@@ -485,6 +485,7 @@
     <Content Include="Views\CERT\INPUT_PICS.vbhtml" />
     <Content Include="Views\CERT\PREVIEW_CERT.vbhtml" />
     <Content Include="Views\DH\PREVIEW_CHEMICAL.vbhtml" />
+    <Content Include="Views\CERT\FRM_CERT_STAFFF_SEARCH.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
