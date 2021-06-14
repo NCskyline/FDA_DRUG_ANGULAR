@@ -52,6 +52,11 @@
     Public Country As String
     Public MFD_DATE As Date
     Public EXP_DATE As Date
+    Public NAME As String
+    Public LCN_TYPE As Integer
+    Public LCN_NO_DISPLAY As String
+    Public FULL_ADDR As String
+    Public TEL As String
 
 End Class
 

@@ -28,11 +28,12 @@ End Code*@
                 ข้าพเจ้า
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;" align="center">
-                testtttttttttttttttttttttttt
+                <label></label>
             </td>
             <td>
                 ผู้รับอนุญาต
             </td>
+         
         </tr>
     </table>
     <table width="100%" style="font-family:'TH SarabunPSK';font-size:25px;">
@@ -55,6 +56,7 @@ End Code*@
             <td style="border-bottom:dotted;border-bottom-width:thin;">
                 <span style="padding-left:5px;" />  TESTTTTTTTTTTTTTTTTTTTTTT
             </td>
+           
         </tr>
 
     </table>
@@ -64,12 +66,14 @@ End Code*@
             <td colspan="2" style="border-bottom:dotted;border-bottom-width:thin;">
                 dddddddddddddddddd
             </td>
+            <td></td>
         </tr>
         <tr>
             <td>หมายเลขโทรศัพท์ </td>
             <td colspan="2" style="border-bottom:dotted;border-bottom-width:thin;">
-                1234556 มีความประสงค์ขอ
+                1234556 
             </td>
+            <td>มีความประสงค์ขอ</td>
         </tr>
     </table>
     <table width="100%" style="font-family:'TH SarabunPSK';font-size:25px;">

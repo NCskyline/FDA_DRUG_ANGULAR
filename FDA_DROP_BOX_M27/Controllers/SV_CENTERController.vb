@@ -543,6 +543,81 @@ Namespace Controllers
 
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
+        Function GET_INFORMARION_DH(ByVal LCN_IDA As Integer) As JsonResult
+            Dim model As New MODEL_DH
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(LCN_IDA)
+            Dim dt_name As New DataTable
+            Dim bao As New BAO
+            dt_name = bao.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(dao.fields.CITIZEN_ID_AUTHORIZE, 0)
+            Dim dt_addr As New DataTable
+
+            dt_addr = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(dao.fields.FK_IDA)
+            With model
+                For Each dr As DataRow In dt_name.Rows
+                    Try
+                        .NAME = dr("thanm")
+                    Catch ex As Exception
+
+                    End Try
+
+
+                Next
+
+                Try
+                    If dao.fields.lcntpcd.Contains("ผย") Then
+                        .LCN_TYPE = 1
+                    ElseIf dao.fields.lcntpcd.Contains("นย") Then
+                        .LCN_TYPE = 2
+                    End If
+                Catch ex As Exception
+
+                End Try
+                Dim lcnno_auto As Integer = 0
+                Try
+                    lcnno_auto = dao.fields.lcnno
+                Catch ex As Exception
+
+                End Try
+                Try
+                    If Len(lcnno_auto) > 0 Then
+
+                        If Right(Left(lcnno_auto, 3), 1) = "5" Then
+                            .LCN_NO_DISPLAY = "จ. " & CStr(CInt(Right(lcnno_auto, 4))) & "/25" & Left(lcnno_auto, 2)
+                        Else
+                            .LCN_NO_DISPLAY = dao.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                        End If
+
+                    End If
+                Catch ex As Exception
+
+                End Try
+
+                For Each dr As DataRow In dt_addr.Rows
+                    Try
+                        .thanameplace = dr("thanameplace")
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        .FULL_ADDR = dr("fulladdr2")
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        .TEL = dr("tel1")
+                    Catch ex As Exception
+
+                    End Try
+                Next
+
+
+            End With
+
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+
         Function GET_PREVIEW_CERT(ByVal IDA As Integer) As JsonResult
             'IDA = 41941
             Dim model As New MODEL_CER_GMP
