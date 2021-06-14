@@ -372,75 +372,75 @@ Namespace Controllers
 
         End Function
 
-        'Function GET_INFORMATION(ByVal IDA As Integer) As JsonResult
+        Function GET_INFORMATION(ByVal IDA As Integer) As JsonResult
 
-        '    Dim model As New MODEL_DH
-        '    Try
+            Dim model As New MODEL_DH
+            Try
 
-        '        Dim Tb As New DAO_DRUG.TB_DALCN_LOCATION_ADDRESS                               ' ประกาศตัวแปรเพื่อเรียกใช้
-        '        Dim TbNO As New DAO_DRUG.ClsDBdalcn                                     ' ประกาศตัวแปรเพื่อเรียกใช้
-        '        Dim tb_location As New DAO_DRUG.TB_DALCN_LOCATION_BSN
+                Dim Tb As New DAO_DRUG.TB_DALCN_LOCATION_ADDRESS                               ' ประกาศตัวแปรเพื่อเรียกใช้
+                Dim TbNO As New DAO_DRUG.ClsDBdalcn                                     ' ประกาศตัวแปรเพื่อเรียกใช้
+                Dim tb_location As New DAO_DRUG.TB_DALCN_LOCATION_BSN
 
-        '        TbNO.GetDataby_IDA(IDA)                                                 'การ where 
-        '        Tb.GetDataby_IDA(TbNO.fields.FK_IDA)                                    'การ where 
+                TbNO.GetDataby_IDA(IDA)                                                 'การ where 
+                Tb.GetDataby_IDA(TbNO.fields.FK_IDA)                                    'การ where 
 
-        '        Try
-        '            tb_location.GetDataby_LCN_IDA(IDA)
-        '        Catch ex As Exception
+                Try
+                    tb_location.GetDataby_LCN_IDA(IDA)
+                Catch ex As Exception
 
-        '        End Try
-        '        'การ where
-        '        Try
+                End Try
+                'การ where
+                Try
 
-        '        Catch ex As Exception
+                Catch ex As Exception
 
-        '        End Try
-        '        'lbl_lcnno.Text = TbNO.fields.LCNNO_DISPLAY
-        '        Dim lcnno As String = ""
-        '        Dim rcvno As String = ""
-        '        Try
-        '            lcnno = TbNO.fields.lcntpcd & " " & CInt(Right(TbNO.fields.lcnno, 5)) & "/" & Left(TbNO.fields.lcnno, 2)
-        '        Catch ex As Exception
+                End Try
+                'lbl_lcnno.Text = TbNO.fields.LCNNO_DISPLAY
+                Dim lcnno As String = ""
+                Dim rcvno As String = ""
+                Try
+                    lcnno = TbNO.fields.lcntpcd & " " & CInt(Right(TbNO.fields.lcnno, 5)) & "/" & Left(TbNO.fields.lcnno, 2)
+                Catch ex As Exception
 
-        '        End Try
-        '        Try
-        '            rcvno = CInt(Right(TbNO.fields.rcvno, 5)) & "/" & Left(TbNO.fields.rcvno, 2)
-        '        Catch ex As Exception
+                End Try
+                Try
+                    rcvno = CInt(Right(TbNO.fields.rcvno, 5)) & "/" & Left(TbNO.fields.rcvno, 2)
+                Catch ex As Exception
 
-        '        End Try
-        '        Try
-        '            If TbNO.fields.lcnno IsNot Nothing Then
-        '                Dim raw_lcn As String = TbNO.fields.lcnno
-        '                model.lcnno = lcnno 'CStr(CInt((Right(raw_lcn, 5))) & "/25" & Left(raw_lcn, 2))
-        '            End If
-        '        Catch ex As Exception
+                End Try
+                Try
+                    If TbNO.fields.lcnno IsNot Nothing Then
+                        Dim raw_lcn As String = TbNO.fields.lcnno
+                        model.lcnno = lcnno 'CStr(CInt((Right(raw_lcn, 5))) & "/25" & Left(raw_lcn, 2))
+                    End If
+                Catch ex As Exception
 
-        '        End Try
+                End Try
 
-        '        model.rcvno = rcvno                                    ' เอาข้อมูลมาโชว์ที่  label
-        '        Try
-        '            model.rcvdate = CDate(TbNO.fields.rcvdate).ToLongDateString()       ' เอาข้อมูล แล้วเปลี่ยนตัดค่า เวลาออก
-        '        Catch ex As Exception
+                model.rcvno = rcvno                                    ' เอาข้อมูลมาโชว์ที่  label
+                Try
+                    model.rcvdate = CDate(TbNO.fields.rcvdate).ToLongDateString()       ' เอาข้อมูล แล้วเปลี่ยนตัดค่า เวลาออก
+                Catch ex As Exception
 
-        '        End Try
+                End Try
 
-        '        model.thanameplace = Tb.fields.thanameplace                          ' เอาข้อมูลมาโชว์ที่  label
-        '        model.nameOperator = TbNO.fields.BSN_THAIFULLNAME             ' เอาข้อมูลมาโชว์ที่  label
+                model.thanameplace = Tb.fields.thanameplace                          ' เอาข้อมูลมาโชว์ที่  label
+                model.nameOperator = TbNO.fields.BSN_THAIFULLNAME             ' เอาข้อมูลมาโชว์ที่  label
 
-        '        If model.nameOperator = "" Then
-        '            Try
-        '                Dim dao_lcns As New DAO_CPN.clsDBsyslcnsnm
-        '                dao_lcns.GetDataby_lcnsid(TbNO.fields.bsnid)
-        '                model.nameOperator = dao_lcns.fields.prefixnm & dao_lcns.fields.thanm & " " & dao_lcns.fields.thalnm
-        '            Catch ex As Exception
+                If model.nameOperator = "" Then
+                    Try
+                        Dim dao_lcns As New DAO_CPN.clsDBsyslcnsnm
+                        dao_lcns.GetDataby_lcnsid(TbNO.fields.bsnid)
+                        model.nameOperator = dao_lcns.fields.prefixnm & dao_lcns.fields.thanm & " " & dao_lcns.fields.thalnm
+                    Catch ex As Exception
 
-        '            End Try
-        '        End If
-        '    Catch ex As Exception
+                    End Try
+                End If
+            Catch ex As Exception
 
-        '    End Try
-        '    Return Json(model, JsonRequestBehavior.AllowGet)
-        'End Function
+            End Try
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
 
         Function SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden(ByVal IDA As String, ByVal CER_TYPE As String, ByVal iden As String) As JsonResult
             Dim dt As New DataTable
@@ -1217,6 +1217,47 @@ Namespace Controllers
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
         End Function
 
+        Function INSERT_DH(ByVal XML_DH As String, ByVal _ProcessID As String, ByVal IDA_CER As Integer) As JsonResult
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_DH = jss.Deserialize(XML_DH, GetType(MODEL_DH))
+            Dim bao_tran As New BAO
+            Dim tr_id As Integer = 0
+            'tr_id = bao_tran.insert_transection_new(_ProcessID, _CLS.CITIZEN_ID, _CLS.CITIZEN_ID_AUTHORIZE)
+            Dim dao As New DAO_DRUG.ClsDBdh15rqt
+
+            dao.fields = bb.dh15rqt
+            dao.fields.IDENTIFY = _CLS.CITIZEN_ID_AUTHORIZE
+
+            'dao.insert()
+
+            Dim IDA As Integer = dao.fields.IDA
+
+            Dim dao_DH15_DETAIL_MANUFACTURE_CER As New DAO_DRUG.TB_DH15_DETAIL_MANUFACTURE
+            Dim dao_CER_DETAIL_MANUFACTURE As New DAO_DRUG.TB_CER_DETAIL_MANUFACTURE
+            dao_CER_DETAIL_MANUFACTURE.GetDataby_FK_IDA(IDA_CER)
+
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.TR_ID = tr_id
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.FK_IDA = IDA
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.ADDRESS_CITY = dao_CER_DETAIL_MANUFACTURE.fields.ADDRESS_CITY
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.ADDRESS_NUMBER = dao_CER_DETAIL_MANUFACTURE.fields.ADDRESS_NUMBER
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.CER_DATE = dao_CER_DETAIL_MANUFACTURE.fields.CER_DATE
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.COMPANY_NAME = dao_CER_DETAIL_MANUFACTURE.fields.COMPANY_NAME
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.COUNTRY = dao_CER_DETAIL_MANUFACTURE.fields.COUNTRY
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.COUNTRY_GMP = dao_CER_DETAIL_MANUFACTURE.fields.COUNTRY_GMP
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.COUNTRY_ID = dao_CER_DETAIL_MANUFACTURE.fields.COUNTRY_ID
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.GLN = dao_CER_DETAIL_MANUFACTURE.fields.GLN
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.LOCATION_STANDARD = dao_CER_DETAIL_MANUFACTURE.fields.LOCATION_STANDARD
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.NAME_ADDRESS = dao_CER_DETAIL_MANUFACTURE.fields.NAME_ADDRESS
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.SALE_DATE = dao_CER_DETAIL_MANUFACTURE.fields.SALE_DATE
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.STANDARD_ID = dao_CER_DETAIL_MANUFACTURE.fields.STANDARD_ID
+            dao_DH15_DETAIL_MANUFACTURE_CER.fields.ZIPCODE = dao_CER_DETAIL_MANUFACTURE.fields.ZIPCODE
+
+            dao_DH15_DETAIL_MANUFACTURE_CER.insert()
+
+
+
+            Return Json(msg_r, JsonRequestBehavior.AllowGet)
+        End Function
 #End Region
 
 #Region "UPDATE_DATA"
