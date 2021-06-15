@@ -209,9 +209,29 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 cEmpty = cEmpty + 1;
             }
         }
-        //else if (PROCESS == '34') {
-        //    $scope.INPUT = SET_URL_SV('../CERT/INPUT_CERT_OTHER');
-        //}
+        else if (PROCESS == '34') {
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER.trim().length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY.trim().length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.CER.COUNTRY_ID == 0) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD == 0) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.CER_DETAIL_MANUFACTURE.BUYER_COUNTRY == 0) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.CER.BUYER_NAME.trim().length < 2) {
+                cEmpty = cEmpty + 1;
+            }
+            if ($scope.LIST_GMP.CER.BUYER_STANDARD == 0) {
+                cEmpty = cEmpty + 1;
+            }
+        }
         else if (PROCESS == '36') {
             if ($scope.LIST_GMP.CER.CERTIFICATION_NUMBER_ALL.trim().length < 2) {
                 cEmpty = cEmpty + 1;
