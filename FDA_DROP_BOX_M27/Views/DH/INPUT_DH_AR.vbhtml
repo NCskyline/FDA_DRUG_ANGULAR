@@ -77,7 +77,7 @@ End Code
             </td>
             <td>
                 <label>
-                    {{LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME}}
+                    {{LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE}}
                 </label>
             </td>
         </tr>
@@ -87,7 +87,7 @@ End Code
             </td>
             <td>
                 <label>
-                    {{LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME}}
+                    {{LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE}}
                 </label>
             </td>
         </tr>

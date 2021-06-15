@@ -57,7 +57,9 @@
     Public LCN_NO_DISPLAY As String
     Public FULL_ADDR As String
     Public TEL As String
-
+    Public REF_CER_NO As String
+    Public COUNTRY_NAME As String
+    Public AGENT_COUNTRY_NAME As String
 End Class
 
 Public Class MODEL_CHEMICAL

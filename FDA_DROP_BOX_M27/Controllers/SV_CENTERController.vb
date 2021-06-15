@@ -662,7 +662,68 @@ Namespace Controllers
             End Try
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
+        Function GET_PREVIEW_DH(ByVal IDA As Integer) As JsonResult
+            Dim model As New MODEL_DH
+            Dim dao As New DAO_DRUG.ClsDBdh15rqt
+            dao.GetDataby_IDA(IDA)
+            Dim dao_dcer As New DAO_DRUG.TB_DH15_DETAIL_CER
+            Dim dao_iso As New DAO_CPN.clsDBsysisocnt
+            Try
+                dao_dcer.GetDataby_FK_IDA(IDA)
+            Catch ex As Exception
 
+            End Try
+
+            Dim dao_c As New DAO_DRUG.TB_CER
+            Dim dao_manu As New DAO_DRUG.TB_DH15_DETAIL_MANUFACTURE
+
+            Try
+                dao_manu.GetData_by_FK_IDA(IDA)
+            Catch ex As Exception
+
+            End Try
+            Try
+                dao_c.GetDataby_IDA2(dao_dcer.fields.CER_DETAIL_CHEMICAL_IDA)
+            Catch ex As Exception
+
+            End Try
+            Try
+                model.REF_CER_NO = dao_c.fields.CER_FORMAT
+            Catch ex As Exception
+
+            End Try
+            Try
+                model.dh15rqt = dao.fields
+            Catch ex As Exception
+
+            End Try
+            Try
+                model.DH15_DETAIL_CER = dao_dcer.fields
+            Catch ex As Exception
+
+            End Try
+            Try
+                model.DH15_DETAIL_MANUFACTURE = dao_manu.fields
+            Catch ex As Exception
+
+            End Try
+            Try
+                dao_iso.GetDataby_IDA(dao_manu.fields.COUNTRY_ID)
+                model.COUNTRY_NAME = dao_iso.fields.engcntnm
+            Catch ex As Exception
+
+            End Try
+            Try
+
+                dao_iso = New DAO_CPN.clsDBsysisocnt
+                dao_iso.GetDataby_IDA(dao.fields.AGENT_COUNTRY_ID)
+                model.COUNTRY_NAME = dao_iso.fields.engcntnm
+            Catch ex As Exception
+
+            End Try
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
         Function test_dh() As JsonResult
             Dim model_dhs As New MODEL_DH
             ''model_dhs._CER.TR_ID = 0
@@ -1333,7 +1394,7 @@ Namespace Controllers
             dao_DH15_DETAIL_MANUFACTURE_CER.fields.STANDARD_ID = dao_CER_DETAIL_MANUFACTURE.fields.STANDARD_ID
             dao_DH15_DETAIL_MANUFACTURE_CER.fields.ZIPCODE = dao_CER_DETAIL_MANUFACTURE.fields.ZIPCODE
 
-            dao_DH15_DETAIL_MANUFACTURE_CER.insert()
+            'dao_DH15_DETAIL_MANUFACTURE_CER.insert()
 
 
 

@@ -4840,6 +4840,12 @@ Namespace DAO_DRUG
             For Each Me.fields In datas
             Next
         End Sub
+        Public Sub GetData_by_FK_IDA(ByVal FK_IDA As Integer)
+
+            datas = (From p In db.DH15_DETAIL_MANUFACTUREs Where p.FK_IDA = FK_IDA Select p)
+            For Each Me.fields In datas
+            Next
+        End Sub
     End Class
 
 

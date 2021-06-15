@@ -41,6 +41,8 @@ Namespace Controllers
         Function PREVIEW_CHEMICAL() As ActionResult
             Return View()
         End Function
-
+        Function PREVIEW_DH() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
