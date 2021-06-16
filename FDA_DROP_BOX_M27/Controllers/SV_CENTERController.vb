@@ -620,12 +620,16 @@ Namespace Controllers
 
         Function GET_PREVIEW_CERT(ByVal IDA As Integer) As JsonResult
             'IDA = 41941
+            Dim DT As DataTable
             Dim model As New MODEL_CER_GMP
             Dim dao_cer As New DAO_DRUG.TB_CER
+            Dim dao_chem As New DAO_DRUG.TB_CER_DETAIL_CASCHEMICAL
             Dim dao_manu As New DAO_DRUG.TB_CER_DETAIL_MANUFACTURE
             Dim dao_iso As New DAO_CPN.clsDBsysisocnt
             dao_cer.GetDataby_IDA2(IDA)
             dao_manu.GetDataby_FK_IDA(IDA)
+            dao_chem.GetDataby_FK_IDA(IDA)
+
             Try
                 model.CER = dao_cer.fields
             Catch ex As Exception
@@ -633,6 +637,11 @@ Namespace Controllers
             End Try
             Try
                 model.CER_DETAIL_MANUFACTURE = dao_manu.fields
+            Catch ex As Exception
+
+            End Try
+            Try
+                model.CER_DETAIL_CASCHEMICAL = dao_chem.Details
             Catch ex As Exception
 
             End Try

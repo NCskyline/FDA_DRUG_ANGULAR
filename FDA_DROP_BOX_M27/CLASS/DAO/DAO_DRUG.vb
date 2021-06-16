@@ -4256,6 +4256,7 @@ Namespace DAO_DRUG
         Public Sub GetDataby_FK_IDA(ByVal FK_IDA As Integer)
             datas = (From p In db.CER_DETAIL_CASCHEMICALs Where p.FK_IDA = FK_IDA Select p)
             For Each Me.fields In datas
+                AddDetails()
             Next
         End Sub
         Public Sub GetDataby_FK_IDA_DET(ByVal FK_IDA As Integer)

@@ -88,14 +88,16 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         var Set_PREVIEW = CENTER_SV.GET_PREVIEW_CERT(IDA);
 
         Set_PREVIEW.then(function (datas) {
-
+            
             $scope.LIST_GMP = datas.data;
+           
             $scope.LIST_GMP.CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE($scope.LIST_GMP.CER.DOCUMENT_DATE));
             $scope.LIST_GMP.CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE($scope.LIST_GMP.CER.EXP_DOCUMENT_DATE));
+            
 
         }, function () { });
 
-
+        $scope.INPUT_CHEM = SET_URL_SV('../CERT/PREVIEW_CHEMICAL');
 
         if (PROCESS == '31') {
             $scope.INPUT = SET_URL_SV('../CERT/INPUT_GMP');

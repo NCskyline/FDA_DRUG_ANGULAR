@@ -33,6 +33,12 @@ Namespace Controllers
         Function FRM_CERT_STAFFF_SEARCH() As ActionResult
             Return View()
         End Function
+
+        Function PREVIEW_CHEMICAL() As ActionResult
+            Return View()
+        End Function
+
+
     End Class
 End Namespace
 

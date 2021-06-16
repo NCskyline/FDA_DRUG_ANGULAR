@@ -189,7 +189,10 @@ End Code
             </tr>
         </table>
         <br />
+        <div ng-include="INPUT_CHEM">
 
+        </div>
+        <br />
         <div>
             <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
                 ไฟล์แนบ
@@ -338,6 +341,11 @@ End Code
                 </td>
             </tr>
         </table>
+        <br />
+        <div ng-include="INPUT_CHEM">
+
+        </div>
+        <br />
     </div>
     @*-------------ISO------------------*@
     @*-------------HACCP------------------*@
@@ -469,6 +477,11 @@ End Code
                 </td>
             </tr>
         </table>
+        <br />
+        <div ng-include="INPUT_CHEM">
+
+        </div>
+        <br />
     </div>
     @*-------------HACCP------------------*@
     @*-------------PICS------------------*@
@@ -591,6 +604,11 @@ End Code
                 </td>
             </tr>
         </table>
+        <br />
+        <div ng-include="INPUT_CHEM">
+
+        </div>
+        <br />
     </div>
     @*-------------PICS------------------*@
     @*-------------OTHER------------------*@
@@ -730,6 +748,11 @@ End Code
                 </td>
             </tr>
         </table>
+        <br />
+        <div ng-include="INPUT_CHEM">
+
+        </div>
+        <br />
     </div>
     @*-------------OTHER------------------*@
 

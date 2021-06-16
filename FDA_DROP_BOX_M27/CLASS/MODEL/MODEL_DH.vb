@@ -96,6 +96,16 @@ Public Class MODEL_CER_GMP
             _CER_DETAIL_MANUFACTURE = value
         End Set
     End Property
+
+    Private _CER_DETAIL_CASCHEMICAL As New List(Of CER_DETAIL_CASCHEMICAL)
+    Public Property CER_DETAIL_CASCHEMICAL() As List(Of CER_DETAIL_CASCHEMICAL)
+        Get
+            Return _CER_DETAIL_CASCHEMICAL
+        End Get
+        Set(ByVal value As List(Of CER_DETAIL_CASCHEMICAL))
+            _CER_DETAIL_CASCHEMICAL = value
+        End Set
+    End Property
     Public COUNTRY_GMP_SHOW As String
     Public COUNTRY_NAME As String
     Public COUNTRY_OF_DEPARTMENT_NAME As String
