@@ -93,11 +93,11 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
            
             $scope.LIST_GMP.CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE($scope.LIST_GMP.CER.DOCUMENT_DATE));
             $scope.LIST_GMP.CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE($scope.LIST_GMP.CER.EXP_DOCUMENT_DATE));
-            
+            $scope.INPUT_CHEM = SET_URL_SV('../CERT/PREVIEW_CHEMICAL');
 
         }, function () { });
 
-        $scope.INPUT_CHEM = SET_URL_SV('../CERT/PREVIEW_CHEMICAL');
+        
 
         if (PROCESS == '31') {
             $scope.INPUT = SET_URL_SV('../CERT/INPUT_GMP');
@@ -284,10 +284,10 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
     function filwill(dateString) {
         try {
             var dateArray = dateString.split("/");
-            dateString = dateArray[1] + "/" + dateArray[0] + "/" + dateArray[2];
+            dateString = dateArray[0]; //+ "/" + dateArray[0] + "/" + dateArray[2];
         }
         catch (err) {
-            var msg = 'ERROR';
+
         }
         return dateString;
     }
@@ -297,9 +297,34 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         var dateString = DATE_CHANGE.substr(6);
         var currentTime = new Date(parseInt(dateString));
         var month = currentTime.getMonth() + 1;
+        if (month == '01') {
+            month = "ม.ค.";
+        } else if (month == '02') {
+            month = "ก.พ.";
+        } else if (month == '03') {
+            month = "มี.ค.";
+        } else if (month == '04') {
+            month = "เม.ษ.";
+        } else if (month == '05') {
+            month = "พ.ค.";
+        } else if (month == '06') {
+            month = "มิ.ย.";
+        } else if (month == '07') {
+            month = "ก.ค.";
+        } else if (month == '08') {
+            month = "ส.ค.";
+        } else if (month == '09') {
+            month = "ก.ย.";
+        } else if (month == '10') {
+            month = "ต.ค.";
+        } else if (month == '11') {
+            month = "พ.ย.";
+        } else if (month == '12') {
+            month = "ธ.ค.";
+        }
         var day = currentTime.getDate();
-        var year = currentTime.getFullYear();
-        return DATE_CHANGE = day + "/" + month + "/" + year;
+        var year = currentTime.getFullYear() + 543;
+        return DATE_CHANGE = day + " " + month + " " + year;
     }
 
     $scope.deleteCHEM = function (data,i) {
