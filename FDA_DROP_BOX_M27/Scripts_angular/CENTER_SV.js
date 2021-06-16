@@ -686,4 +686,26 @@
         });
         return response;
     };
+
+    this.SETMODEL_DHA = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SETMODEL_DHA"),
+            params: {
+                
+            }
+        });
+        return response;
+    };
+
+    this.GET_PREVIEW_DH = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_PREVIEW_DH"),
+            params: {
+                IDA:IDA
+            }
+        });
+        return response;
+    };
 });

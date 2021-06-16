@@ -34,16 +34,16 @@
                     <div class="listree-submenu-heading">ข. เภสัชเคมีภัณฑ์</div>
                     <ul class="listree-submenu-items" style="color:black">
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=23">1. เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา (ผลิต)</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=14">1. เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา (ผลิต)</a>
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=24">2. เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา (ผลิต)</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=15">2. เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา (ผลิต)</a>
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=25">3. ไม่เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา (ผลิต)</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=16">3. ไม่เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา (ผลิต)</a>
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=26">4. ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา (ผลิต)</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=17">4. ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา (ผลิต)</a>
                         </li>
                     </ul>
                 </li>

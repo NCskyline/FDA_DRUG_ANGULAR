@@ -1322,39 +1322,38 @@ Namespace Controllers
             Dim jss2 As New JavaScriptSerializer
             dao_chem.Details = jss2.Deserialize(XML_CHEM, GetType(List(Of CER_DETAIL_CASCHEMICAL)))
 
-            'Dim dao_chem As New DAO_DRUG.TB_CER_DETAIL_CASCHEMICAL
-            'For Each dao_chem.fields In bbc.CER_DETAIL_CASCHEMICAL
-            '    Dim i As Integer = 1
+            For Each dao_chem.fields In dao_chem.Details
+                Dim i As Integer = 1
 
-            '    Dim dao_chem1 As New DAO_DRUG.TB_CER_DETAIL_CASCHEMICAL
-            '    With dao_chem1.fields
-            '        Try
-            '            .CAS_ID = dao_chem.fields.CAS_ID
-            '        Catch ex As Exception
+                Dim dao_chem1 As New DAO_DRUG.TB_CER_DETAIL_CASCHEMICAL
+                With dao_chem1.fields
+                    Try
+                        .CAS_ID = dao_chem.fields.CAS_ID
+                    Catch ex As Exception
 
-            '        End Try
-            '        Try
-            '            .CAS_NAME = dao_chem.fields.CAS_NAME
-            '        Catch ex As Exception
+                    End Try
+                    Try
+                        .CAS_NAME = dao_chem.fields.CAS_NAME
+                    Catch ex As Exception
 
-            '        End Try
-            '        Try
-            '            .CAS_NO = dao_chem.fields.CAS_NO
-            '        Catch ex As Exception
+                    End Try
+                    Try
+                        .CAS_NO = dao_chem.fields.CAS_NO
+                    Catch ex As Exception
 
-            '        End Try
-            '        Try
-            '            .INN_NAME = dao_chem.fields.INN_NAME
-            '        Catch ex As Exception
+                    End Try
+                    Try
+                        .INN_NAME = dao_chem.fields.INN_NAME
+                    Catch ex As Exception
 
-            '        End Try
-            '        .FK_IDA = IDA
-            '        .ROW_ID = i
-            '        .TR_ID = tr_id
-            '    End With
-            '    dao_chem1.insert()
-            '    i += 1
-            'Next
+                    End Try
+                    .FK_IDA = IDA
+                    .ROW_ID = i
+                    .TR_ID = tr_id
+                End With
+                'dao_chem1.insert()
+                i += 1
+            Next
 
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
         End Function
@@ -1371,6 +1370,7 @@ Namespace Controllers
             dao.fields.IDENTIFY = _CLS.CITIZEN_ID_AUTHORIZE
 
             'dao.insert()
+
 
             Dim IDA As Integer = dao.fields.IDA
 

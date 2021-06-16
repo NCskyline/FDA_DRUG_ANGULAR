@@ -12,6 +12,12 @@ End Code
                     <td>{{LCNNO_NO}}</td>
                 </tr>
             </table>
+            <br />
+            
+            <div style="color:red">1.สามารถพิมพ์ใบสั่งชำระเงินจากระบบไปชำระได้ที่ ธนาคารไทยพาณิชย์ ทุกสาขา ตู้ATMของธนาคาร หรือชำระผ่าน SCBeasy หรือMobile appication ของธนาคาร</div>
+            <div style="color:red">2.เพื่อป้องกันไม่ให้เกิดปัญหาการชำระเงิน แนะนำ ใช้เครื่องพิมพ์ ชนิดเลเซอร์ในการพิมพ์ใบสั่งชำระ</div>
+            <div style="color:red">3.ไม่สามารถออกใบสั่งชำระที่ออกจากระบบอื่นที่ไม่ได้ออกมาจากระบบเภสัชเคมีภัณฑ์นี้ได้</div>
+            <div style="color:red">*หากพบปัญหาในการใช้งาน ขอความกรุณาแจ้งมาที่ drug-smarthelp@fda.moph.go.th ด้วยครับ</div>
             <hr />
             <table style="width:100%">
                 <tr>
@@ -19,12 +25,6 @@ End Code
                     <td align="right"><button class="btn btn-lg" ng-click="INPUT_DH()">สร้างคำขอ</button></td>
                 </tr>
             </table>
-            <br />
-            <hr />
-            <div>1.สามารถพิมพ์ใบสั่งชำระเงินจากระบบไปชำระได้ที่ ธนาคารไทยพาณิชย์ ทุกสาขา ตู้ATMของธนาคาร หรือชำระผ่าน SCBeasy หรือMobile appication ของธนาคาร</div>
-            <div>2.เพื่อป้องกันไม่ให้เกิดปัญหาการชำระเงิน แนะนำ ใช้เครื่องพิมพ์ ชนิดเลเซอร์ในการพิมพ์ใบสั่งชำระ</div>
-            <div>3.ไม่สามารถออกใบสั่งชำระที่ออกจากระบบอื่นที่ไม่ได้ออกมาจากระบบเภสัชเคมีภัณฑ์นี้ได้</div>
-            <div>*หากพบปัญหาในการใช้งาน ขอความกรุณาแจ้งมาที่ drug-smarthelp@fda.moph.go.th ด้วยครับ</div>
             <br />
             <div class="row">
                 <div class="col-sm-12">
@@ -60,11 +60,6 @@ End Code
                                     </td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                            </tfoot>
                         </table>
                         <hr />
                         <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"

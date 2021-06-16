@@ -38,15 +38,13 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
         var PROCESS_ID = sessionStorage.DH_PROCESS_ID;
 
-        if (PROCESS_ID === '') {
-
-            var getdata = CENTER_SV.GET_INFORMATION(LCN_IDA);
-            getdata.then(function (datas) {
-                $scope.LCNNO_NO = datas.data.lcnno;
-                $scope.thanameplace = datas.data.thanameplace;
-                $scope.nameOperator = datas.data.nameOperator;
-            }, function () { });
-        }
+        var getdata = CENTER_SV.GET_INFORMATION(LCN_IDA);
+        getdata.then(function (datas) {
+            $scope.LCNNO_NO = datas.data.lcnno;
+            $scope.thanameplace = datas.data.thanameplace;
+            $scope.nameOperator = datas.data.nameOperator;
+        }, function () { });
+ 
         
         if (PROCESS_ID == '31' || PROCESS_ID == '32' || PROCESS_ID == '33' || PROCESS_ID == '34' || PROCESS_ID == '36') {
 
@@ -214,6 +212,8 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     $scope.pageloadDH = function () {
 
         var PROCESS_ID = sessionStorage.DH_PROCESS_ID;
+        var IDA = sessionStorage.IDA;
+
         if (PROCESS_ID == '14') {
             $scope.INPUT = SET_URL_SV('../DH/INPUT_DH_AR');
         }
@@ -244,7 +244,17 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
             $scope.LIST_DH = datas.data;
 
+        }, function () { });  
+
+        var getdataDH = CENTER_SV.GET_PREVIEW_DH(IDA);
+        getdataDH.then(function (datas) {
+
+            $scope.LIST_DH = datas.data;
+            $scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE($scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE));
+            $scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE($scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE));
+
         }, function () { });
+        
     };
 
     $scope.GET_LCN = function (KEY) {
@@ -310,6 +320,11 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         REDIRECT('../CERT/PREVIEW_CERT');
     };
 
+    $scope.SELECT_DH = function (datas) {
+        sessionStorage.IDA = datas.IDA;
+        REDIRECT('../DH/PREVIEW_DH');
+    };
+
     $scope.ADD_CHEMICAL = function () {
         REDIRECT('../DH/INPUT_CHEMICAL_RQT');
     };
@@ -325,7 +340,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     function filwill(dateString) {
         try {
             var dateArray = dateString.split("/");
-            dateString = dateArray[1] + "/" + dateArray[0] + "/" + dateArray[2];
+            dateString = dateArray[0]; //+ "/" + dateArray[0] + "/" + dateArray[2];
         }
         catch (err) {
 
@@ -338,9 +353,34 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         var dateString = DATE_CHANGE.substr(6);
         var currentTime = new Date(parseInt(dateString));
         var month = currentTime.getMonth() + 1;
+        if (month == '01') {
+            month = "ม.ค.";
+        } else if (month == '02') {
+            month = "ก.พ.";
+        } else if (month == '03') {
+            month = "มี.ค.";
+        } else if (month == '04') {
+            month = "เม.ษ.";
+        } else if (month == '05') {
+            month = "พ.ค.";
+        } else if (month == '06') {
+            month = "มิ.ย.";
+        } else if (month == '07') {
+            month = "ก.ค.";
+        } else if (month == '08') {
+            month = "ส.ค.";
+        } else if (month == '09') {
+            month = "ก.ย.";
+        } else if (month == '10') {
+            month = "ต.ค.";
+        } else if (month == '11') {
+            month = "พ.ย.";
+        } else if (month == '12') {
+            month = "ธ.ค.";
+        }
         var day = currentTime.getDate();
-        var year = currentTime.getFullYear();
-        return DATE_CHANGE = day + "/" + month + "/" + year;
+        var year = currentTime.getFullYear()+543;
+        return DATE_CHANGE = day + " " + month + " " + year;
     }
 
 }).controller('appController', ['$scope', function ($scope) {

@@ -285,7 +285,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
             dateString = dateArray[1] + "/" + dateArray[0] + "/" + dateArray[2];
         }
         catch (err) {
-
+            var msg = 'ERROR';
         }
         return dateString;
     }

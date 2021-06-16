@@ -4,9 +4,10 @@ End Code
 <script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/DH_CTRL.js"></script>
-<div class="ic" ng-controller="DH_CTRL" ng-app="ANGULAR_APP">
+
+<div class="ic" ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="pageloadDH()">
     @*-------------AR------------------*@
-    <div class="ic">
+    <div class="ic" ng-show="LIST_DH.dh15rqt.PROCESS_ID == '14'">
         <center>
             <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2> <br />
             <h2>
@@ -59,9 +60,7 @@ End Code
                     ชื่อผู้แทนจำหน่ายในต่างประเทศ (ซื้อผ่าน)
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
                     <label>{{LIST_DH.dh15rqt.AGENT_NAME}}</label>
-
                 </td>
                 <td>
                     ประเทศ
@@ -71,7 +70,7 @@ End Code
                             <option value="0">--กรุณาเลือก--</option>
                             <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                         </select>*@
-                    <label>{{LIST_DH.COUNTRY_NAME}}</label>
+                    <label>{{LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME}}</label>
 
                 </td>
             </tr>
@@ -125,7 +124,7 @@ End Code
     </div>
     @*-------------AR------------------*@
     @*-------------AN------------------*@
-    <div class="ic">
+    <div class="ic" ng-show="LIST_DH.dh15rqt.PROCESS_ID == '15'">
 
         <center>
             <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2> <br />
@@ -148,10 +147,11 @@ End Code
                     Ref Cer
                 </td>
                 <td>
-                    <select class="dropdown" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA">
+                    @*<select class="dropdown" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA">
                         <option value="0">--กรุณาเลือก--</option>
                         <option ng-repeat="x in REF_CERT" value="{{x.IDA}}">{{x.CER_NUMBER}}</option>
-                    </select>
+                    </select>*@
+                    <label>{{LIST_DH.REF_CER_NO}}</label>
                 </td>
             </tr>
         </table>
@@ -325,7 +325,7 @@ End Code
     </div>
     @*-------------AN------------------*@
     @*-------------IR------------------*@
-    <div class="ic">
+    <div class="ic" ng-show="LIST_DH.dh15rqt.PROCESS_ID == '16'">
         <center>
             <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2> <br />
             <h2>
@@ -409,7 +409,7 @@ End Code
     </div>
     @*-------------IR------------------*@
     @*-------------IN------------------*@
-    <div class="ic">
+    <div class="ic"  ng-show="LIST_DH.dh15rqt.PROCESS_ID == '17'">
         <center>
             <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2> <br />
             <h2>
