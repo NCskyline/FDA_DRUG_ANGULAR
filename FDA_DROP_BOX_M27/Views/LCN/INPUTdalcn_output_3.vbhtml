@@ -105,7 +105,7 @@
             เขียนที่
         </td>
         <td style="width:40%">
-            <input style="text-align:center; width:100%">
+            <input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
     <tr>
@@ -113,7 +113,7 @@
             วันที่
         </td>
         <td>
-            <md-datepicker ng-model="datas.MFD_DATE" md-placeholder="Enter date"
+            <md-datepicker ng-model="LIST_LCN.dalcn.WRITE_DATE" md-placeholder="Enter date"
                            input-aria-describedby="datepicker-description"
                            input-aria-labelledby="datepicker-header ">
             </md-datepicker>
@@ -128,7 +128,7 @@
             ข้าพเจ้า
         </td>
         <td style="text-align:center; font-size:20px">
-            text
+            <label>{{LIST_LCN.thanm}}</label>
         </td>
     </tr>
 </table>
@@ -138,13 +138,13 @@
 </div>
 <br />
 
-<table style=" font-size:20px;width:100%" @*border="1"*@ ;>
+<table style=" font-size:20px;width:100%" @*border="1"*@ >
     <tr>
         <td>
             ซึ่งมีผู้ดำเนินกิจการ ชื่อ
         </td>
         <td style="text-align:left;width:2000px">
-            text
+            <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
         </td>
         <td colspan="4">
             (เฉพาะกรณีนิติบุคคล)
@@ -155,13 +155,13 @@
             เลขบัญประจำตัวประชาชน
         </td>
         <td style="text-align:left;width:2000px">
-            text
+            <label>{{LIST_LCN.BSN_IDENTIFY}}</label>
         </td>
         <td>
             อายุ
         </td>
         <td>
-            <input style="width:70px">
+            <label>{{LIST_LCN.AGE}}</label>
         </td>
         <td>
             ปี
@@ -170,11 +170,12 @@
             สัญชาติ
         </td>
         <td>
-            <input style="width:100px" />
+            <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
 
     </tr>
 </table>
+
 
 <table style="font-size:20px;width:100%" @*border="1"*@>
     <tr>
@@ -182,7 +183,7 @@
             อยู่เลขที่
         </td>
         <td style="text-align:left" colspan="3">
-            text
+            <label>{{LIST_LCN.fulladdr_bsn}}</label>
         </td>
 
     </tr>
@@ -191,7 +192,7 @@
             โทรศัพท์
         </td>
         <td style="text-align:left">
-            text
+            <label>{{LIST_LCN.BSN_TELEPHONE}}</label>
         </td>
     </tr>
     <tr>
@@ -199,7 +200,7 @@
             โทรศัพท์มือถือ
         </td>
         <td style="text-align:left">
-            text
+            <label>{{LIST_LCN.BSN_FAX}}</label>
         </td>
     </tr>
     <tr>
@@ -207,7 +208,7 @@
             E-mail
         </td>
         <td>
-            <input />
+            <input class="form-control inline" ng-model="LIST_LCN.dalcn.Email" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
 </table>
@@ -220,31 +221,31 @@
             ชื่อ
         </td>
         <td style="text-align:left">
-            text
+            <label>{{LIST_LCN.thanameplace}}</label>
         </td>
     </tr>
     <tr>
-        <td>
+        <td style="width:50%">
             อยู่เลขที่
         </td>
         <td>
-            text
+            <label>{{LIST_LCN.fulladdr2}}</label>
         </td>
     </tr>
     <tr>
-        <td>
+        <td style="width:50%">
             โทรศัพท์
         </td>
         <td>
-            text
+            <label>{{LIST_LCN.tel}}</label>
         </td>
     </tr>
     <tr>
-        <td>
+        <td style="width:50%">
             โทรศัพท์มือถือ
         </td>
         <td>
-            text
+            <label>{{LIST_LCN.fax}}</label>
         </td>
     </tr>
 </table>
@@ -308,7 +309,7 @@
             ผู้ประกอบวิชาชีพเภสัชกรรม ชั้น
         </td>
         <td>
-            text
+            <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_LEVEL" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
     <tr>
@@ -316,10 +317,15 @@
             ชื่อ
         </td>
         <td style="width:10%">
-            text
+        <td style="width:10%">
+            <select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
+                <option value="0">--กรุณาเลือก--</option>
+                <option ng-repeat="x in PREFIX" value="{{x.IDA}}">{{x.prefixnm}}</option>
+            </select>
+        </td>
         </td>
         <td>
-            text
+            <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
     <tr>
@@ -327,7 +333,7 @@
             เลขบัตรประจำตัวประชาชน
         </td>
         <td>
-            text
+            <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CTZNO" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
 </table>
@@ -339,7 +345,7 @@
             ผู้ประกอบวิชา
         </td>
         <td>
-            text
+            <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_NUM" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
 </table>
@@ -365,7 +371,7 @@
             ผู้ประกอบวิชาชีพการสัตวแพทย์ ชั้น
         </td>
         <td>
-            text
+            <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_LEVEL" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
         <td style="text-align:center; width:10%">
             สาขา
@@ -379,10 +385,13 @@
             ชื่อ
         </td>
         <td style="width:10%">
-            text
+            <select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
+                <option value="0">--กรุณาเลือก--</option>
+                <option ng-repeat="x in PREFIX" value="{{x.IDA}}">{{x.prefixnm}}</option>
+            </select>
         </td>
         <td>
-            text
+            <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
     <tr>
@@ -390,7 +399,7 @@
             เลขบัตรประจำตัวประชาชน
         </td>
         <td>
-            text
+            <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CTZNO" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
 
     </tr>
@@ -403,7 +412,7 @@
 
         </td>
         <td>
-            text
+            <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_NUM" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
 </table>
@@ -429,7 +438,7 @@
             <strong>เวลาทำการ (เวลาปฏิบัติการ ของผู้มีหน้าที่ปฏิบัติการ)</strong>
         </td>
         <td>
-            <input style="width:100%" />
+            <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_WORK_TIME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
 </table>
@@ -459,7 +468,7 @@
             (ลายมือชื่อ)
         </td>
         <td style="width:50%;text-align:center">
-            text
+            
         </td>
         <td style="text-align:left">
             ผู้ขออนุญาต
@@ -470,7 +479,7 @@
             (
         </td>
         <td style="width:50%;text-align:center">
-            text
+            <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
         </td>
         <td style="text-align:left">
             ตัวบรรจง)
