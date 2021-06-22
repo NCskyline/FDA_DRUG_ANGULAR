@@ -9,12 +9,12 @@ End Code
     @*-------------GMP------------------*@
     <div ng-show="LIST_GMP.CER.CER_TYPE == '31'">
         @*ng-repeat="datas in LIST_GMP"  ng-show="PROCESS == '31'" *@
-        <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
+        <h2 style="font-family:'TH SarabunPSK';font-size:40px;">
             <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ</b>
         </h2>
-        <table width="100%" style="font-family:'TH SarabunPSK';font-size:20px;" class="table">
+        <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;" class="table">
             <tr>
-                <td style="height:25px;width:35%;">
+                <td style="height:25px;width:35%">
                     1. เลขที่ใบรับรอง (Certificate Number)<font color="red">*</font>  :
                 </td>
                 <td>
@@ -220,7 +220,7 @@ End Code
         <h2 style="font-family:'TH SarabunPSK';font-size:40px;">
             แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
         </h2>
-        <table width="100%" style="font-family:'TH SarabunPSK';font-size:20px;">
+        <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;">
             <tr>
                 <td style="height:25px;width:35%;">
                     1. Certification Number/Registration Number/License Number<font color="red">*</font> :
@@ -350,10 +350,10 @@ End Code
     @*-------------ISO------------------*@
     @*-------------HACCP------------------*@
     <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '33'">
-        <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
+        <h2 style="font-family:'TH SarabunPSK';font-size:40px;">
             แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
         </h2>
-        <table width="100%" style="font-family:'TH SarabunPSK';font-size:20px;">
+        <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;">
             <tr>
                 <td style="height:25px;width:35%;">
                     1. Certification number/Registration Number/License Number<font color="red">*</font> :
@@ -489,7 +489,7 @@ End Code
         <h2 style="font-family:'TH SarabunPSK';font-size:40px;">
             แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
         </h2>
-        <table width="100%" style="font-family:'TH SarabunPSK';font-size:20px;">
+        <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;">
             <tr>
                 <td style="height:25px">
                     1. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
@@ -613,10 +613,10 @@ End Code
     @*-------------PICS------------------*@
     @*-------------OTHER------------------*@
     <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '36'">
-        <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
+        <h2 style="font-family:'TH SarabunPSK';font-size:40px;">
             แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
         </h2>
-        <table width="100%" style="font-family:'TH SarabunPSK';font-size:20px;">
+        <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;">
             <tr>
                 <td style="height:25px;width:35%;">
                     1. Reference Number<font color="red">*</font> :
@@ -626,7 +626,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td>
                     2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
                 </td>
                 <td>
