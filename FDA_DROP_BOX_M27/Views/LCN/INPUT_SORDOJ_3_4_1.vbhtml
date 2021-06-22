@@ -102,10 +102,10 @@
             <strong>สำหรับผลิต</strong>
         </td>
         <td>
-            <input type="radio" name="gender" checked /> <strong>วัตถุออกฤทธิ์ในประเภท ๓</strong>
+            <input type="radio" name="gender" ng-model="LIST_LCN.dalcn.CHK_SELL_TYPE" id="rdl_CHK_SELL_TYPE"/> <strong>วัตถุออกฤทธิ์ในประเภท ๓</strong>
         </td>
         <td>
-            <input type="radio" name="gender" /> <strong>วัตถุออกฤทธิ์ในประเภท ๔</strong>
+            <input type="radio" name="gender" ng-model="LIST_LCN.dalcn.CHK_SELL_TYPE" id="rdl_CHK_SELL_TYPE" /> <strong>วัตถุออกฤทธิ์ในประเภท ๔</strong>
         </td>
     </tr>
     <tr>
@@ -118,7 +118,7 @@
 <table style="width:100%; font-size:20px">
     <tr>
         <td style="width:20%">
-            <input type="radio" name="gender" checked /> <strong>ขอรับใบอนุญาต</strong>
+            <input type="radio" name="gender" checked="checked"/> <strong>ขอรับใบอนุญาต</strong>
         </td>
     </tr>
     <tr>
@@ -158,7 +158,7 @@
             เขียนที่
         </td>
         <td style="width:40%">
-            <input style="text-align:center; width:100%">
+            <input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
     <tr>
@@ -166,13 +166,12 @@
             วันที่
         </td>
         <td>
-            <md-datepicker ng-model="datas.MFD_DATE" md-placeholder="Enter date"
+            <md-datepicker ng-model="LIST_LCN.dalcn.WRITE_DATE" md-placeholder="Enter date"
                            input-aria-describedby="datepicker-description"
                            input-aria-labelledby="datepicker-header ">
             </md-datepicker>
         </td>
     </tr>
-
 </table>
 <br />
 
@@ -185,7 +184,7 @@
             ข้าพเจ้า (ชื่อบุคคล/นิติบุคคล)
         </td>
         <td style="font-size:20px" colspan="6">
-            text
+            <label>{{LIST_LCN.thanm}}</label>
         </td>
     </tr>
     <tr>
@@ -194,7 +193,7 @@
         </td>
 
         <td style="font-size:20px" colspan="6">
-            text
+            <label>{{LIST_LCN.CITIZEN_AUTHORIZE}}</label>
         </td>
     </tr>
     <tr>
@@ -219,7 +218,7 @@
             หรือทะเบียนนิติบุคคล/บัตรประจำตัวผู้เสียภาษี เลขที่
         </td>
         <td style="font-size:20px" colspan="6">
-            text
+            <label>{{LIST_LCN.identify}}</label>
         </td>
     </tr>
     <tr>
@@ -227,7 +226,7 @@
             เลขรหัสประจำบ้าน
         </td>
         <td style="font-size:20px" colspan="6">
-            text
+            <label>{{LIST_LCN.HOUSENO}}</label>
         </td>
     </tr>
     <tr>
@@ -235,7 +234,7 @@
             อยู่เลขที่
         </td>
         <td style="font-size:20px" colspan="6">
-            text
+            <label>{{LIST_LCN.fulladdr2}}</label>
         </td>
     </tr>
     <tr>
@@ -243,7 +242,7 @@
             โทรศัพท์/มือถือ
         </td>
         <td style="font-size:20px" colspan="6">
-            text
+            <label>{{LIST_LCN.tel}}</label>
         </td>
     </tr>
     <tr>
@@ -251,22 +250,23 @@
             E-mail
         </td>
         <td style="font-size:20px" colspan="6">
-            text
+            <label>{{LIST_LCN.Email}}</label>
         </td>
     </tr>
 
 </table>
 
 <h2 style="font-size:24px;">
-    <strong>๒. ข้อมูลผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำำเนินกิจการเกี่ยวกับใบอนุญาต</strong>
+    <strong>๒. ข้อมูลผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต</strong>
 </h2>
 <table style="width:90%;margin-left:5%" @*border="1"*@>
     <tr>
         <td style="font-size:20px" width="40%">
-            ข้าพเจ้า
+            ชื่อ
         </td>
         <td style="font-size:20px" colspan="6">
-            text
+
+            <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
         </td>
     </tr>
     <tr>
@@ -275,7 +275,7 @@
         </td>
 
         <td style="font-size:20px" colspan="6">
-            text
+            <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
         </td>
     </tr>
     <tr>
@@ -283,13 +283,13 @@
             หรือบัตรประจำตัวอื่นที่ทางราชการออกให้ คือ
         </td>
         <td style="font-size:20px;width:20%">
-            text
+            <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
         </td>
         <td style="font-size:20px;width:5%">
             เลขที่
         </td>
         <td style="font-size:20px ;width:15%;text-align:center">
-            text
+            <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
         </td>
         <td style="font-size:20px">
             (กรณีไม่ใช่ผู้มีสัญชาติไทย)
@@ -300,7 +300,7 @@
             หรือทะเบียนนิติบุคคล/บัตรประจำตัวผู้เสียภาษี เลขที่
         </td>
         <td style="font-size:20px" colspan="6">
-            text
+            <label>{{LIST_LCN.BSN_IDENTIFY}}</label>
         </td>
     </tr>
     <tr>
@@ -308,7 +308,7 @@
             เลขรหัสประจำบ้าน
         </td>
         <td style="font-size:20px" colspan="6">
-            text
+            <label>{{LIST_LCN.BSN_HOUSENO}}</label>
         </td>
     </tr>
     <tr>
@@ -316,7 +316,7 @@
             อยู่เลขที่
         </td>
         <td style="font-size:20px" colspan="6">
-            text
+            <label>{{LIST_LCN.fulladdr2}}</label>
         </td>
     </tr>
     <tr>
@@ -324,7 +324,7 @@
             โทรศัพท์/มือถือ
         </td>
         <td style="font-size:20px" colspan="6">
-            text
+            <label>{{LIST_LCN.BSN_TEL}}</label>
         </td>
     </tr>
     <tr>
@@ -332,18 +332,31 @@
             E-mail
         </td>
         <td style="font-size:20px" colspan="6">
-            text
+            <label>{{LIST_LCN.dalcn.Email}}</label>
         </td>
     </tr>
-
 </table>
+
+@*<table>
+    <tr>
+        <td>
+            มีความประสงค์ขอรับอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ เนื่องจาก
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+
+        </td>
+    </tr>
+</table>*@
 
 <br />
 
 <table style="width:100%;font-size:20px" @*border="1"*@>
     <tr>
         <td colspan="4">
-            <p><strong>๓. ข้อมูลสถานที่นำเข้า</strong></p>
+            <p><strong>๓. ข้อมูลสถานที่ส่งออก</strong></p>
         </td>
     </tr>
     <tr>
@@ -351,20 +364,20 @@
             ณ สถานที่ชื่อ
         </td>
         <td>
-            text
+            <label>{{LIST_LCN.thanameplace}}</label>
         </td>
         <td>
             เลขรหัสประจำบ้าน
         </td>
         <td>
-            text
+            <label>{{LIST_LCN.HOUSENO}}</label>
         </td>
     </tr>
     <tr>
         <td>
             ตั้งอยู่เลขที่
         <td colspan="4">
-            text
+            <label>{{LIST_LCN.fulladdr2}}</label>
         </td>
     </tr>
     <tr>
@@ -372,22 +385,73 @@
             โทรศัพท์/มือถือ
         </td>
         <td colspan="4">
-            text
+            <label>{{LIST_LCN.tel}}</label>
         </td>
     </tr>
-</table>
-
-<table style="width:100%;font-size:20px" @*border="1"*@>
     <tr>
         <td style="font-size:20px;width:70%">
             โดยได้รับอนุญาตให้ผลิต/ขาย/นำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาตเลขที่
         </td>
         <td style="font-size:20px">
-            text
+            <label>{{LIST_LCN.HEAD_LCNNO_NCT}}</label>
         </td>
     </tr>
 </table>
 
+@*<table style="width:100%;font-size:20px">
+    <tr>
+        <td style="font-size:20px;width:70%">
+            โดยได้รับอนุญาตให้ผลิต/ขาย/นำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาตเลขที่
+        </td>
+        <td style="font-size:20px">
+            <label>{{LIST_LCN.dalcn.Email}}</label>
+        </td>
+        <td>
+            ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่
+        </td>
+        <td>
+
+        </td>
+    </tr>
+    
+</table>*@
+@*<table>
+    <tr>
+        <td colspan="4">
+            ๓. ข้อมูลสถานที่นำเข้า
+        </td>
+    </tr>
+    <tr>
+        <td>
+            ณ สถานที่ชื่อ
+        </td>
+        <td>
+            <label>{{LIST_LCN.thanameplace}}</label>
+        </td>
+        <td>
+            เลขรหัสประจำบ้าน
+        </td>
+        <td>
+            <label>{{LIST_LCN.HOUSENO}}</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            ตั้งอยู่เลขที่
+        </td>
+        <td colspan="3">
+            <label>{{LIST_LCN.HOUSENO}}</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            โทรศัพท์/มือถือ
+        </td>
+        <td colspan="3">
+            <label>{{LIST_LCN.HOUSENO}}</label>
+        </td>
+    </tr>
+</table>*@
 <table style="width:100%;font-size:20px" @*border="1"*@>
     <tr>
         <td style="width:15%">
