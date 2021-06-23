@@ -183,6 +183,7 @@
     <Compile Include="Controllers\AUTHENController.vb" />
     <Compile Include="Controllers\CERTController.vb" />
     <Compile Include="Controllers\DHController.vb" />
+    <Compile Include="Controllers\DH_STAFFController.vb" />
     <Compile Include="Controllers\DLController.vb" />
     <Compile Include="Controllers\DRController.vb" />
     <Compile Include="Controllers\DR_EDIT_REQUESTController.vb" />
@@ -489,6 +490,13 @@
     <Content Include="Views\DH\PREVIEW_DH.vbhtml" />
     <Content Include="Views\CERT\PREVIEW_CHEMICAL.vbhtml" />
     <Content Include="Views\LCN\INPUT_DA_YORBOR.vbhtml" />
+    <Content Include="Views\DH_STAFF\FRM_STAFF_CER_MAIN.vbhtml" />
+    <Content Include="Views\DH_STAFF\FRM_DH_MAIN_STAFF.vbhtml" />
+    <Content Include="Views\DH_STAFF\FRM_CHEMICAL_STAFF_MAIN.vbhtml" />
+    <Content Include="Views\DH_STAFF\FRM_DH_SEARCH.vbhtml" />
+    <Content Include="Views\DH_STAFF\FRM_CHEMICAL_STAFF_SEARCH.vbhtml" />
+    <Content Include="Views\DH_STAFF\FRM_CER_STAFF_SEARCH.vbhtml" />
+    <Content Include="Views\LCN_STAFF\FRM_LCN_DRUG.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>

@@ -48,6 +48,26 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
       //  GET_LIST_WAIT();
     }
 
+    $scope.BTN_SUB_MENU_CLICK = function (BTN_GROUP, IDgroup, SEQ) {
+
+        if (BTN_GROUP == '0') {
+            gg;
+        } else if (BTN_GROUP == '1') {
+            gg;
+        } else if (BTN_GROUP == '2') {
+            gg;
+        } else if (BTN_GROUP == '3') {
+
+            if (SEQ == '1') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DH_STAFF/FRM_STAFF_CER_MAIN');
+            } else if (SEQ == '2') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DH_STAFF/FRM_DH_MAIN_STAFF');
+            } else if (SEQ == '3') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DH_STAFF/FRM_CHEMICAL_STAFF_MAIN');
+            }
+        }
+    };
+
 
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });

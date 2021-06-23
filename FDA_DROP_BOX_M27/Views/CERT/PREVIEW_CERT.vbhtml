@@ -14,7 +14,7 @@ End Code
         </h2>
         <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;" class="table">
             <tr>
-                <td style="height:25px;width:35%">
+                <td style="height:25px;width:35%;font-weight: bolder">
                     1. เลขที่ใบรับรอง (Certificate Number)<font color="red">*</font>  :
                 </td>
                 <td>
@@ -22,7 +22,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight: bolder">
                     2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
                 </td>
                 <td>
@@ -31,7 +31,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight: bolder">
                     3. ที่อยู่ (Address)<font color="red">*</font> :
                 </td>
                 <td>
@@ -40,7 +40,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight: bolder">
                     4. เมือง (City / Province/ State)<font color="red">*</font> :
                 </td>
                 <td>
@@ -49,8 +49,8 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
-                    5. ประเทศ (Country<font color="red">*</font> :
+                <td style="height:25px;font-weight: bolder">
+                    5. ประเทศ (Country)<font color="red">*</font> :
                 </td>
                 <td>
                     @*<select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID">
@@ -61,7 +61,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight: bolder">
                     รหัสไปรษณีย์ (Post code/Zip code) :
                 </td>
                 <td>
@@ -69,7 +69,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight: bolder">
                     6. Manufacturer&quot;s License Number :
                 </td>
                 <td>
@@ -78,7 +78,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight: bolder">
                     Global Location Number (GLN) :
                 </td>
                 <td>
@@ -86,7 +86,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight: bolder">
                     7. วันเดือนปีที่ออกหนังสือ GMP (Issue Date)<font color="red">*</font> :
                 </td>
                 <td>
@@ -98,7 +98,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight: bolder">
                     วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
                 </td>
                 <td>
@@ -109,7 +109,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight: bolder">
                     8. หน่วยงานที่ออกใบรับรอง<font color="red">*</font>
                 </td>
                 <td>
@@ -128,14 +128,14 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight: bolder">
                     <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="2" />
                     ชื่อหน่วยงานอื่นที่ได้รับการรับรองจากหน่วยงานรัฐของประเทศผู้ผลิต
                 </td>
                 <td></td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight: bolder">
                     9. สถานที่ผลิตได้มาตรฐาน GMP ตาม<font color="red">*</font> :
 
                 </td>
@@ -222,7 +222,7 @@ End Code
         </h2>
         <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;">
             <tr>
-                <td style="height:25px;width:35%;">
+                <td style="height:25px;width:35%;font-weight:bolder">
                     1. Certification Number/Registration Number/License Number<font color="red">*</font> :
                 </td>
                 <td>
@@ -230,7 +230,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
                 </td>
                 <td>
@@ -238,7 +238,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     3. ที่อยู่ (Address)<font color="red">*</font> :
                 </td>
                 <td>
@@ -246,7 +246,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     4. เมือง (City / Province/ State)<font color="red">*</font> :
                 </td>
                 <td>
@@ -254,7 +254,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     5. ประเทศ (Country)<font color="red">*</font> :
                 </td>
                 <td>
@@ -262,7 +262,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     รหัสไปรษณีย์ (Post code/Zip code) :
                 </td>
                 <td>
@@ -270,7 +270,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     6. Organization Code (รหัสองค์กร) :
                 </td>
                 <td>
@@ -278,7 +278,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height: 25px;font-weight:bolder">
                     Global Location Number (GLN) :
                 </td>
                 <td>
@@ -286,7 +286,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     7. วันเดือนปีที่ออกหนังสือ ISO (Issue Date)<font color="red">*</font> :
                 </td>
                 <td>
@@ -294,7 +294,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     วันเดือนปีที่หมดอายุ (Expiry Date) :
                 </td>
                 <td>
@@ -302,7 +302,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     8. หน่วยงานที่ออกใบรับรอง (Certification Body)<font color="red">*</font>
                 </td>
                 <td>
@@ -311,7 +311,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     ประเทศของหน่วยงานที่ออกใบรับรอง :
                 </td>
                 <td>
@@ -319,7 +319,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     9. สถานที่ผลิตได้มาตรฐาน ISO ที่เกี่ยวกับการผลิต<font color="red">*</font> :
                 </td>
                 <td>
@@ -333,7 +333,7 @@ End Code
         </h2>
         <table width="100%">
             <tr>
-                <td style="height:25px;width:35%;">
+                <td style="height:25px;width:35%;font-weight:bolder">
                     10. ขอบเขตของประเภทยาที่รับรอง
                 </td>
                 <td>
@@ -350,12 +350,13 @@ End Code
     @*-------------ISO------------------*@
     @*-------------HACCP------------------*@
     <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '33'">
-        <h2 style="font-family:'TH SarabunPSK';font-size:40px;">
+        <h2 style="        font-family: 'TH SarabunPSK';
+        font-size: 40px;">
             แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
         </h2>
         <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;">
             <tr>
-                <td style="height:25px;width:35%;">
+                <td style="height:25px;width:35%;font-weight:bolder">
                     1. Certification number/Registration Number/License Number<font color="red">*</font> :
                 </td>
                 <td>
@@ -363,7 +364,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
                 </td>
                 <td>
@@ -371,7 +372,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     3. ที่อยู่ (Address)<font color="red">*</font> :
                 </td>
                 <td>
@@ -379,7 +380,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     4. เมือง (City / Province/ State)<font color="red">*</font> :
                 </td>
                 <td>
@@ -387,7 +388,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     5. ประเทศ (Country)<font color="red">*</font> :
                 </td>
                 <td>
@@ -395,7 +396,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     รหัสไปรษณีย์ (Post code/Zip code) :
                 </td>
                 <td>
@@ -403,7 +404,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     6. Organization Code (รหัสองค์กร)<font color="red">*</font> :
                 </td>
                 <td>
@@ -411,7 +412,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     Global Location Number (GLN) :
                 </td>
                 <td>
@@ -419,7 +420,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     7. วันเดือนปีที่ออกหนังสือ HACCP (Issue Date)<font color="red">*</font> :
                 </td>
                 <td>
@@ -427,7 +428,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
                 </td>
                 <td>
@@ -435,7 +436,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     8. หน่วยงานที่ออกใบรับรอง (Certification Body)
                 </td>
                 <td>
@@ -444,7 +445,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     ประเทศของหน่วยงานที่ออกใบรับรอง :
                 </td>
                 <td>
@@ -453,7 +454,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     9. สถานที่ผลิตได้มาตฐาน HACCP ตาม :
                 </td>
                 <td>
@@ -469,7 +470,7 @@ End Code
         </h2>
         <table width="100%">
             <tr>
-                <td style="height:25px;width:35%;">
+                <td style="height:25px;width:35%;font-weight:bolder">
                     10. ขอบเขตของประเภทยาที่รับรอง
                 </td>
                 <td>
@@ -491,7 +492,7 @@ End Code
         </h2>
         <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;">
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     1. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
                 </td>
                 <td>
@@ -499,7 +500,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     2. ที่อยู่ (Address)<font color="red">*</font> :
                 </td>
                 <td>
@@ -507,7 +508,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     3. เมือง (City / Province/ State)<font color="red">*</font> :
                 </td>
                 <td>
@@ -515,7 +516,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     4. ประเทศ (Country)<font color="red">*</font> :
                 </td>
                 <td>
@@ -523,7 +524,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     รหัสไปรษณีย์ (Post code/Zip code) :
                 </td>
                 <td>
@@ -531,7 +532,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     5. สถานที่ผลิตได้มาตรฐาน GMP ตาม (โปรดระบุ) :
                 </td>
                 <td>
@@ -544,7 +545,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height: 25px;font-weight:bolder">
                     Global Location Number (GLN) :
                 </td>
                 <td>
@@ -552,7 +553,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     6. วันเดือนปีการขายที่ระบุในหลักฐานการขาย<font color="red">*</font> :
                 </td>
                 <td>
@@ -560,7 +561,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     7. ชื่อผู้ซื้อ (Purchaser)<font color="red">*</font>
                 </td>
                 <td>
@@ -570,7 +571,7 @@ End Code
             </tr>
 
             <tr>
-                <td style="height:25px">
+                <td style="height: 25px;font-weight:bolder">
                     8. ประเทศผู้ซื้อ (Purchaser's Country*)<font color="red">*</font>
                 </td>
                 <td>
@@ -579,7 +580,7 @@ End Code
             </tr>
 
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     9. มาตราฐานสถานที่ผลิตยาสำเร็จรูปของประเทศผู้ซื้อได้ GMP ตาม (โปรดระบุ)<font color="red">*</font> :
                 </td>
                 <td>
@@ -596,7 +597,7 @@ End Code
         </h2>
         <table width="100%">
             <tr>
-                <td style="height:25px;width:35%;">
+                <td style="height:25px;width:35%;font-weight:bolder">
                     10. ขอบเขตของประเภทยาที่รับรอง
                 </td>
                 <td>
@@ -618,7 +619,7 @@ End Code
         </h2>
         <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;">
             <tr>
-                <td style="height:25px;width:35%;">
+                <td style="height:25px;width:35%;font-weight:bolder">
                     1. Reference Number<font color="red">*</font> :
                 </td>
                 <td>
@@ -626,7 +627,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td>
+                <td style="font-weight:bolder">
                     2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
                 </td>
                 <td>
@@ -635,7 +636,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     3. ที่อยู่ (Address)<font color="red">*</font> :
                 </td>
                 <td>
@@ -644,7 +645,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     4. เมือง (City / Province/ State)<font color="red">*</font> :
                 </td>
                 <td>
@@ -653,7 +654,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     5. ประเทศ (Country)<font color="red">*</font> :
                 </td>
                 <td>
@@ -661,7 +662,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     รหัสไปรษณีย์ (Post code/Zip code) :
                 </td>
                 <td>
@@ -669,7 +670,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     6. Manufactur&#39;s License Number<font color="red">*</font> :
                 </td>
                 <td>
@@ -678,7 +679,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     Global Location Number (GLN) :
                 </td>
                 <td>
@@ -686,7 +687,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     7. หน่วยงานที่ออกเอกสาร<font color="red">*</font> :
                 </td>
                 <td>
@@ -694,7 +695,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     ประเทศ (Country)<font color="red">*</font> :
                 </td>
                 <td>
@@ -702,7 +703,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td>
+                <td style="font-weight:bolder">
                     8. เลขหนังสือให้ความเห็นชอบ<font color="red">*</font> :
                 </td>
                 <td>
@@ -710,7 +711,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     9. วันเดือนปีที่ออกหนังสือ (Issue Date)<font color="red">*</font> :
                 </td>
                 <td>
@@ -718,7 +719,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
                 </td>
                 <td>
@@ -726,7 +727,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px">
+                <td style="height:25px;font-weight:bolder">
                     ประเทศของหน่วยงานที่ออกใบรับรอง :
                 </td>
                 <td>
@@ -740,7 +741,7 @@ End Code
         </h2>
         <table width="100%">
             <tr>
-                <td style="height:25px;width:35%;">
+                <td style="height:25px;width:35%;font-weight:bolder">
                     10. ขอบข่าย
                 </td>
                 <td>

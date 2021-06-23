@@ -12,7 +12,7 @@
                 <div>
                     <div data-target="s1" class="l-item s{{$index+1}}">
                         <span ng-show="loadarray[$index].LOADING" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.PAGE_PATH , datas.PAGE_NAME , datas.PROCESS_ID , $index , datas.PROCESS_NAME)" style="width:100%;background-color:#EEEEE6">
+                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.BTN_GROUP , datas.IDgroup , datas.SEQ)" style="width:100%;background-color:#EEEEE6">
                             @*<i class="h-icon fas fa-bookmark"></i>*@
                             {{datas.BTN_NAME}}
                         </div>
@@ -27,7 +27,7 @@
                 <div>
                     <div data-target="s1" class="l-item s{{$index+1}}">
                         <span ng-show="loadarray[$index].LOADING" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.PAGE_PATH , datas.PAGE_NAME , datas.PROCESS_ID , $index , datas.PROCESS_NAME)" style="width:100%;background-color:darkgrey">
+                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.BTN_GROUP , datas.IDgroup , datas.SEQ)" style="width:100%;background-color:darkgrey">
                             @*<i class="h-icon fas fa-bookmark"></i>*@
                             {{datas.BTN_NAME}}
                         </div>
@@ -42,7 +42,7 @@
                 <div>
                     <div data-target="s1" class="l-item s{{$index+1}}">
                         <span ng-show="loadarray[$index].LOADING" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.PAGE_PATH , datas.PAGE_NAME , datas.PROCESS_ID , $index , datas.PROCESS_NAME)" style="width:100%;background-color:darkgrey">
+                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.BTN_GROUP , datas.IDgroup , datas.SEQ)" style="width:100%;background-color:darkgrey">
                             @*<i class="h-icon fas fa-bookmark"></i>*@
                             {{datas.BTN_NAME}}
                         </div>
@@ -57,7 +57,7 @@
                 <div>
                     <div data-target="s1" class="l-item s{{$index+1}}">
                         <span ng-show="loadarray[$index].LOADING" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.PAGE_PATH , datas.PAGE_NAME , datas.PROCESS_ID , $index , datas.PROCESS_NAME)" style="width:100%;background-color:darkgrey">
+                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.BTN_GROUP , datas.IDgroup , datas.SEQ)" style="width:100%;background-color:darkgrey">
                             @*<i class="h-icon fas fa-bookmark"></i>*@
                             {{datas.BTN_NAME}}
                         </div>
@@ -69,6 +69,9 @@
         </div>
         <div class="part part-2-3">
 
+            <div ng-include="SUB_MAIN_PAGE">
+
+            </div>
 
         </div>
     </div>

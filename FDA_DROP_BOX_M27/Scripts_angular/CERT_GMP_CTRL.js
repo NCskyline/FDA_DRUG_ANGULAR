@@ -146,7 +146,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
     };
 
     $scope.BTN_SAVE = function () {
-        var cEmpty = 0
+        var cEmpty = 0;
         if (PROCESS == '31') {
             if ($scope.LIST_GMP.CER.COUNTRY_ID == 0) {
                 cEmpty = cEmpty + 1;
