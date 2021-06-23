@@ -271,7 +271,7 @@
         </td>
 
         <td style="font-size:20px" colspan="6">
-            <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
+            <label>{{LIST_LCN.BSN_IDENTIFY}}</label>
         </td>
     </tr>
     <tr>
@@ -365,7 +365,7 @@
             ตั้งอยู่เลขที่
         </td>
         <td colspan="3">
-            <label>{{LIST_LCN.HOUSENO}}</label>
+            <label>{{LIST_LCN.fulladdr2}}</label>
         </td>
     </tr>
     <tr>
@@ -373,7 +373,7 @@
             โทรศัพท์/มือถือ
         </td>
         <td colspan="3">
-            <label>{{LIST_LCN.HOUSENO}}</label>
+            <label>{{LIST_LCN.tel}}</label>
         </td>
     </tr>
 </table>
