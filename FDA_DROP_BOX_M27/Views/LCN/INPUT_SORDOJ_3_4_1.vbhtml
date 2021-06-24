@@ -201,13 +201,13 @@
             หรือบัตรประจำตัวอื่นที่ทางราชการออกให้ คือ
         </td>
         <td style="font-size:20px;width:20%">
-            text
+            
         </td>
         <td style="font-size:20px;width:5%">
             เลขที่
         </td>
         <td style="font-size:20px ;width:15%;text-align:center">
-            text
+            
         </td>
         <td style="font-size:20px">
             (กรณีไม่ใช่ผู้มีสัญชาติไทย)
