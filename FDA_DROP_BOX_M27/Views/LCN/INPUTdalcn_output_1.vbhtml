@@ -93,7 +93,7 @@
 <h2 style="text-align:center;font-size:24px;">
     <strong>คำขออนุญาตขายยาแผนปัจจุบัน</strong>
 </h2>
-
+@*process =101 *@
 
 
 <div style="text-align:center">
@@ -257,7 +257,7 @@
 
     <tr>
         <td>
-            <input class="checkbox" type="radio" ng-model="LIST_LCN.dalcn.AGENT_COUNTRY_ID" value="1"/>
+            <input class="checkbox" type="radio" ng-model="LIST_LCN.dalcn.AGENT_COUNTRY_ID" value="1" />
         </td>
         <td>
             ขายปลีก
@@ -387,7 +387,7 @@
         </td>
     </tr>
     <tr>
-        <td style="width:30%" >
+        <td style="width:30%">
             <strong>เวลาทำการ (เวลาปฏิบัติการ ของผู้มีหน้าที่ปฏิบัติการ)</strong>
         </td>
         <td>
@@ -419,9 +419,7 @@
         <td>
             (ลายมือชื่อ)
         </td>
-        <td style="width:50%;text-align:center">
-            
-        </td>
+        <td style="width:50%;text-align:center"></td>
         <td style="text-align:left">
             ผู้ขออนุญาต
         </td>

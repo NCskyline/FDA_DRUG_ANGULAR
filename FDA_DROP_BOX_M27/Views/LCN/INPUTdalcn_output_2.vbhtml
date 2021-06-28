@@ -92,7 +92,7 @@
 <h2 style="text-align:center;font-size:24px;">
     <strong>เฉพาะยาบรรจุเสร็จที่ไม่ใช่ยาอันตรายหรือยาควบคุม</strong>
 </h2>
-
+@*process =102 *@
 
 
 <div style="text-align:center">
@@ -138,7 +138,7 @@
 </div>
 <br />
 
-<table style=" font-size:20px;width:100%" @*border="1"*@ >
+<table style=" font-size:20px;width:100%" @*border="1"*@>
     <tr>
         <td>
             ซึ่งมีผู้ดำเนินกิจการ ชื่อ
@@ -342,9 +342,7 @@
         <td style="width:20%">
             โดยมี ผู้ประกอบวิชาชีพ
         </td>
-        <td>
-            
-        </td>
+        <td></td>
     </tr>
     <tr>
         <td style="width:10%">
@@ -376,7 +374,7 @@
             ใบอนุญาตประกอบวิชาชีพ เลขที่
         </td>
         <td>
-           <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_JOB" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+            <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_JOB" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
 
         </td>
         <td style="width:10%;text-align:center">
@@ -391,7 +389,7 @@
 <table style="font-size:20px;width:100%" @*border="1"*@>
     <tr>
         <td style="width:10%">
-            <input class="checkbox" type="radio" id="rdl_type" value="2"/>
+            <input class="checkbox" type="radio" id="rdl_type" value="2" />
         </td>
         <td colspan="3">
             ผู้ได้รับการอบรมตามมาตรา ๔๘ แห่งพระราชบัญญัติยา (ฉบับที่ ๓) พ.ศ. ๒๕๒๒
@@ -490,9 +488,7 @@
         <td>
             (ลายมือชื่อ)
         </td>
-        <td style="width:50%;text-align:center">
-            
-        </td>
+        <td style="width:50%;text-align:center"></td>
         <td style="text-align:left">
             ผู้ขออนุญาต
         </td>

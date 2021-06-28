@@ -96,6 +96,8 @@
     <strong>คำขอรับใบอนุญาต คำขอต่ออายุใบอนุญาต คำขอรับใบแทน</strong><br />
     <strong>ใบอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
 </h2>
+@*process =1111,1112 *@
+
 <table style="width:70%; font-size:20px;margin:auto;text-align:center" @*border="1"*@>
     <tr>
         <td>
@@ -125,15 +127,11 @@
         <td>
             <input type="radio" name="gender" /> <strong>ขอต่ออายุใบอนุญาตเลขที่</strong>
         </td>
-        <td>
-            
-        </td>
+        <td></td>
         <td style="width:10%">
             <strong>ประจำปี พ.ศ.</strong>
         </td>
-        <td>
-            
-        </td>
+        <td></td>
     </tr>
     <tr>
         <td>
@@ -386,15 +384,11 @@
         <td style="width:15%">
             โดยมีเภสัชกรชื่อ  1.
         </td>
-        <td>
-            
-        </td>
+        <td></td>
         <td style="width:30%">
             ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่
         </td>
-        <td>
-            
-        </td>
+        <td></td>
     </tr>
 </table>
 <div style="font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>

@@ -96,6 +96,7 @@
     <strong>คำขอรับใบอนุญาต คำขอต่ออายุใบอนุญาต คำขอรับใบแทน</strong><br />
     <strong>ใบอนุญาตผลิตวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
 </h2>
+@*process =127,128 *@
 <table style="width:70%; font-size:20px;margin:auto;text-align:center" @*border="1"*@>
     <tr>
         <td>
@@ -429,9 +430,9 @@
 <table style="width:100%;font-size:20px" @*border="1"*@>
     <tr>
         <td colspan="7">
-                <strong>
-                    ๔. ข้อมูลสถานที่เก็บ (กรณีเป็นสถานที่คนละแห่งกับสถานที่ตาม ๓)
-                </strong>         
+            <strong>
+                ๔. ข้อมูลสถานที่เก็บ (กรณีเป็นสถานที่คนละแห่งกับสถานที่ตาม ๓)
+            </strong>
         </td>
     </tr>
     <tr>

@@ -85,7 +85,7 @@
 <div style="clear:both"></div>
 <br />
 <br />
-
+@*process =103 *@
 <h2 style="text-align:center;font-size:24px;">
     <strong>คำขออนุญาตขายยาแผนปัจจุบัน</strong>
 </h2>
@@ -138,7 +138,7 @@
 </div>
 <br />
 
-<table style=" font-size:20px;width:100%" @*border="1"*@ >
+<table style=" font-size:20px;width:100%" @*border="1"*@>
     <tr>
         <td>
             ซึ่งมีผู้ดำเนินกิจการ ชื่อ
@@ -467,9 +467,7 @@
         <td>
             (ลายมือชื่อ)
         </td>
-        <td style="width:50%;text-align:center">
-            
-        </td>
+        <td style="width:50%;text-align:center"></td>
         <td style="text-align:left">
             ผู้ขออนุญาต
         </td>

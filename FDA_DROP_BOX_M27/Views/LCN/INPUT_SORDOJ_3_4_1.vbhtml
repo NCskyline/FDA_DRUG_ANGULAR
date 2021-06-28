@@ -96,13 +96,15 @@
     <strong>คำขอรับใบอนุญาต คำขอต่ออายุใบอนุญาต คำขอรับใบแทน</strong><br />
     <strong>ใบอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
 </h2>
+@*process =133,134 *@
+
 <table style="width:70%; font-size:20px;margin:auto;text-align:center" @*border="1"*@>
     <tr>
         <td>
             <strong>สำหรับผลิต</strong>
         </td>
         <td>
-            <input type="radio" name="gender" ng-model="LIST_LCN.dalcn.CHK_SELL_TYPE" id="rdl_CHK_SELL_TYPE"/> <strong>วัตถุออกฤทธิ์ในประเภท ๓</strong>
+            <input type="radio" name="gender" ng-model="LIST_LCN.dalcn.CHK_SELL_TYPE" id="rdl_CHK_SELL_TYPE" /> <strong>วัตถุออกฤทธิ์ในประเภท ๓</strong>
         </td>
         <td>
             <input type="radio" name="gender" ng-model="LIST_LCN.dalcn.CHK_SELL_TYPE" id="rdl_CHK_SELL_TYPE" /> <strong>วัตถุออกฤทธิ์ในประเภท ๔</strong>
@@ -118,7 +120,7 @@
 <table style="width:100%; font-size:20px">
     <tr>
         <td style="width:20%">
-            <input type="radio" name="gender" checked="checked"/> <strong>ขอรับใบอนุญาต</strong>
+            <input type="radio" name="gender" checked="checked" /> <strong>ขอรับใบอนุญาต</strong>
         </td>
     </tr>
     <tr>
@@ -200,15 +202,11 @@
         <td style="font-size:20px">
             หรือบัตรประจำตัวอื่นที่ทางราชการออกให้ คือ
         </td>
-        <td style="font-size:20px;width:20%">
-            
-        </td>
+        <td style="font-size:20px;width:20%"></td>
         <td style="font-size:20px;width:5%">
             เลขที่
         </td>
-        <td style="font-size:20px ;width:15%;text-align:center">
-            
-        </td>
+        <td style="font-size:20px ;width:15%;text-align:center"></td>
         <td style="font-size:20px">
             (กรณีไม่ใช่ผู้มีสัญชาติไทย)
         </td>
@@ -338,18 +336,18 @@
 </table>
 
 @*<table>
-    <tr>
-        <td>
-            มีความประสงค์ขอรับอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ เนื่องจาก
-        </td>
+        <tr>
+            <td>
+                มีความประสงค์ขอรับอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ เนื่องจาก
+            </td>
 
-    </tr>
-    <tr>
-        <td>
+        </tr>
+        <tr>
+            <td>
 
-        </td>
-    </tr>
-</table>*@
+            </td>
+        </tr>
+    </table>*@
 
 <br />
 
@@ -399,59 +397,59 @@
 </table>
 
 @*<table style="width:100%;font-size:20px">
-    <tr>
-        <td style="font-size:20px;width:70%">
-            โดยได้รับอนุญาตให้ผลิต/ขาย/นำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาตเลขที่
-        </td>
-        <td style="font-size:20px">
-            <label>{{LIST_LCN.dalcn.Email}}</label>
-        </td>
-        <td>
-            ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่
-        </td>
-        <td>
+        <tr>
+            <td style="font-size:20px;width:70%">
+                โดยได้รับอนุญาตให้ผลิต/ขาย/นำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาตเลขที่
+            </td>
+            <td style="font-size:20px">
+                <label>{{LIST_LCN.dalcn.Email}}</label>
+            </td>
+            <td>
+                ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่
+            </td>
+            <td>
 
-        </td>
-    </tr>
-    
-</table>*@
+            </td>
+        </tr>
+
+    </table>*@
 @*<table>
-    <tr>
-        <td colspan="4">
-            ๓. ข้อมูลสถานที่นำเข้า
-        </td>
-    </tr>
-    <tr>
-        <td>
-            ณ สถานที่ชื่อ
-        </td>
-        <td>
-            <label>{{LIST_LCN.thanameplace}}</label>
-        </td>
-        <td>
-            เลขรหัสประจำบ้าน
-        </td>
-        <td>
-            <label>{{LIST_LCN.HOUSENO}}</label>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            ตั้งอยู่เลขที่
-        </td>
-        <td colspan="3">
-            <label>{{LIST_LCN.HOUSENO}}</label>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            โทรศัพท์/มือถือ
-        </td>
-        <td colspan="3">
-            <label>{{LIST_LCN.HOUSENO}}</label>
-        </td>
-    </tr>
-</table>*@
+        <tr>
+            <td colspan="4">
+                ๓. ข้อมูลสถานที่นำเข้า
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ณ สถานที่ชื่อ
+            </td>
+            <td>
+                <label>{{LIST_LCN.thanameplace}}</label>
+            </td>
+            <td>
+                เลขรหัสประจำบ้าน
+            </td>
+            <td>
+                <label>{{LIST_LCN.HOUSENO}}</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ตั้งอยู่เลขที่
+            </td>
+            <td colspan="3">
+                <label>{{LIST_LCN.HOUSENO}}</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                โทรศัพท์/มือถือ
+            </td>
+            <td colspan="3">
+                <label>{{LIST_LCN.HOUSENO}}</label>
+            </td>
+        </tr>
+    </table>*@
 <table style="width:100%;font-size:20px" @*border="1"*@>
     <tr>
         <td style="width:15%">

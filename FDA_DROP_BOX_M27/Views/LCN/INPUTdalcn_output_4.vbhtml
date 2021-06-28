@@ -85,10 +85,10 @@
 <br />
 
 <h2 style="text-align:center;font-size:24px;">
-    <strong>คำขออนุญาตผลิตยาแผนปัจจุบัน</strong>
+    <strong>คำขออนุญาตขายส่งยาแผนปัจจุบัน</strong>
 </h2>
 
-
+@*process =104 *@
 
 <div style="text-align:center">
     <hr style=" border-top:2px dotted ;width:17%" />
@@ -251,7 +251,7 @@
 
     <tr>
         <td>
-            <input class="checkbox" type="radio"  value="13" id="rdl_sell_type"/>
+            <input class="checkbox" type="radio" value="13" id="rdl_sell_type" />
         </td>
         <td>
             ขายส่งยาสำเร็จรูป
@@ -406,9 +406,7 @@
         <td>
             (ลายมือชื่อ)
         </td>
-        <td style="width:50%;text-align:center">
-            
-        </td>
+        <td style="width:50%;text-align:center"></td>
         <td style="text-align:left">
             ผู้ขออนุญาต
         </td>
