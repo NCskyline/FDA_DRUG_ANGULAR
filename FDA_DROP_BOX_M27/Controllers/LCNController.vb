@@ -98,5 +98,8 @@ Namespace Controllers
         Function FRM_LCN_NEWS() As ActionResult
             Return View()
         End Function
+        Function INPUT_ChangLocation_3_4_3_BUY() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace

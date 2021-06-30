@@ -13,8 +13,8 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
 
     function pageload() {
        
-        //var token = QueryString("Token");
-        var token = "PASS";
+        var token = QueryString("Token");
+        //var token = "PASS";
         sessionStorage.token = token;
 
         var getData = CENTER_SV.GET_AUTHEN(token);
