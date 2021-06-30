@@ -68,6 +68,13 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         }
     };
 
+    $scope.BTN_LOT_RELEASE = function (Month, Year) {
+        var getdata = CENTER_SV.GET_LOT_RELEASE(Month, Year);
+        getdata.then(function (datas) {
+            $scope.data = datas.data.RESULT;
+        });
+    };
+
 
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });

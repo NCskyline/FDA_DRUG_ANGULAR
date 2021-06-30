@@ -708,4 +708,17 @@
         });
         return response;
     };
+
+    this.GET_LOT_RELEASE = function (Month, Year) {
+        var response = $http({
+            method: "post",
+            url: "http://ilabplus.dmsc.moph.go.th/DMSC_Service/GetLotReleaseInfo",
+            dataType: "json",
+            params: {
+                Month: Month,
+                Year: Year
+            }
+        });
+        return response;
+    };
 });

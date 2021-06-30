@@ -1,5 +1,5 @@
 ﻿@Code
-    ViewData("Title") = "INPUT_CERT_OTHER"
+    Layout = ""
 
 End Code
 @*<script src="~/Scripts_angular/CENTER_SV.js"></script>
