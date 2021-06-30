@@ -110,7 +110,14 @@ Public Class BAO
         Return dt
     End Function
 
-
+    Public Function SP_LOCATION_BSN_BY_IDENTIFY(ByVal iden As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_LOCATION_BSN_BY_IDENTIFY @iden = '" & iden & "'"
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_LOCATION_BSN_BY_IDENTIFY"
+        Return dt
+    End Function
     Public Function SP_DDL_LCN_DI_DH(ByVal iden As String) As DataTable
         Dim sql As String = "exec SP_DDL_LCN_DI_DH @iden='" & iden & "'"
         Dim dta As New DataTable

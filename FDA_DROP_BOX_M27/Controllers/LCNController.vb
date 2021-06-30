@@ -95,5 +95,8 @@ Namespace Controllers
         Function FRM_LCN_DRUG_SEARCH() As ActionResult
             Return View()
         End Function
+        Function INPUT_DA_YORBOR() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace

@@ -371,6 +371,14 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
         End Function
+        Function GET_LCN_INFORMATION_INPUT(ByVal BSN_IDENTIFY As String, ByVal IDENTIFY As String) As JsonResult
+            Dim model As New MODEL_LCN
+            Dim bao As New BAO
+            Dim dt As New DataTable
+            dt = bao.SP_LOCATION_BSN_BY_IDENTIFY(BSN_IDENTIFY)
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
 
         Function GET_INFORMATION(ByVal IDA As Integer) As JsonResult
 
