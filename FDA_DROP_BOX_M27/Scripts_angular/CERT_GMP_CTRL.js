@@ -57,6 +57,10 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
            
         }, function () { });
 
+        var getData_LIST = CENTER_SV.SETMODEL_LIST();
+        getData_LIST.then(function (datas) {
+            $scope.DOC_LIST = datas.data;
+        }, function () { });
         
         var data_LCN_LCT = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(LCT_IDA);
         data_LCN_LCT.then(function (datas) {
@@ -109,10 +113,10 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
             $scope.INPUT = SET_URL_SV('../CERT/INPUT_HACCP');
         }
         else if (PROCESS == '34') {
-            $scope.INPUT = SET_URL_SV('../CERT/INPUT_CERT_OTHER');
+            $scope.INPUT = SET_URL_SV('../CERT/INPUT_PICS');
         }
         else if (PROCESS == '36') {
-            $scope.INPUT = SET_URL_SV('');
+            $scope.INPUT = SET_URL_SV('../CERT/INPUT_CERT_OTHER');
         }
 
         
@@ -304,7 +308,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         } else if (month == '03') {
             month = "มี.ค.";
         } else if (month == '04') {
-            month = "เม.ษ.";
+            month = "เม.ย.";
         } else if (month == '05') {
             month = "พ.ค.";
         } else if (month == '06') {
@@ -326,6 +330,31 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         var year = currentTime.getFullYear() + 543;
         return DATE_CHANGE = day + " " + month + " " + year;
     }
+
+    $scope.ADD_FILE_LIST = function () {
+        var obj = {
+            TR_ID: '',
+            DES: '',
+            FILENAME: '',
+            FILE_DATA: '',
+            PATH: '',
+            FLAG: ''
+        };
+        $scope.DOC_LIST.FILE_LISTs.push(obj);
+    };
+
+    $scope.deleteRow = function (datas, i) {
+        if (datas.PIORITY == 'HIGH') {
+            ERR_DATA(datas.DES + ' : เป็นเอกสารบังคับไม่สามารถลบออกได้');
+        }
+        else if (datas.PIORITY == 'LOW') {
+
+            ERR_DATA(datas.DES + ' : ไม่สามารถลบออกได้');
+        }
+        else {
+            $scope.DOC_LIST.FILE_LISTs.splice(i, 1);
+        }
+    };
 
     $scope.deleteCHEM = function (data,i) {
         $scope.GMP_CHEM.splice(i, 1);

@@ -1,5 +1,5 @@
 ﻿@Code
-    ViewData("Title") = "INPUT_HACCP"
+    Layout = ""
 End Code
 @*<script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>*@

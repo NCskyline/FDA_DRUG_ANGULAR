@@ -1,8 +1,8 @@
 ﻿@Code
-    ViewData("Title") = "INPUT_PICS"
+    Layout = ""
 End Code
 
-<h2>INPUT_PICS</h2>
+@*<h2>INPUT_PICS</h2>*@
 
 <div class="ic">
     <h2 style="font-family:'TH SarabunPSK';font-size:40px;">

@@ -383,6 +383,7 @@
     <Content Include="fonts\summernote\summernote.ttf" />
     <Content Include="fonts\summernote\summernote.woff" />
     <Content Include="Scripts_angular\AUTHEN_STAFF_CTRL.js" />
+    <Content Include="Scripts_angular\LCN_CTRL.js" />
     <Content Include="Web References\WS_FLATTEN\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
@@ -497,6 +498,8 @@
     <Content Include="Views\DH_STAFF\FRM_CHEMICAL_STAFF_SEARCH.vbhtml" />
     <Content Include="Views\DH_STAFF\FRM_CER_STAFF_SEARCH.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_LCN_DRUG.vbhtml" />
+    <Content Include="Views\LCN\INPUT_SORJOR_1.vbhtml" />
+    <Content Include="Views\LCN\FRM_LCN_NEWS.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
