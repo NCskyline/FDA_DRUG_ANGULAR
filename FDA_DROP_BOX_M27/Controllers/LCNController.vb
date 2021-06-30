@@ -95,8 +95,5 @@ Namespace Controllers
         Function FRM_LCN_DRUG_SEARCH() As ActionResult
             Return View()
         End Function
-        Function FRM_LCN_NEWS() As ActionResult
-            Return View()
-        End Function
     End Class
 End Namespace
