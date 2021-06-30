@@ -10,18 +10,18 @@
             เลขที่บัตรประชาชน 
         </td>
         <td>
-            : <input style="width:70%" /> <input type="button" value="ค้นหา" style="margin-left:1%"/>
+            : <input class="form-control inline" ng-model="LIST_EDIT_LCN.DALCN_PHR.PHR_CTZNO" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+            <input type="button" value="ค้นหา" style="margin-left:1%"/>
         </td>
     </tr>
     <tr>
         <td style="padding-left:4%">
             ประเภทผู้มีหน้าที่ปฏิบัติการ 
         </td>
-        <td >
-            : <select style="width:70%">
-                <option>
-                     --กรุณาเลือก--
-                </option>
+        <td>
+            :  <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_EDIT_LCN.DALCN_PHR.PERSONAL_TYPE">
+                <option value="0">--กรุณาเลือก--</option>
+                <option ng-repeat="x in CNT_daphrcd" value="{{x.phrcd}}">{{x.phrnm}}</option>
             </select>
         </td>
     </tr>
@@ -30,7 +30,7 @@
             เภสัชกรชั้น(ถ้ามี)
         </td>
         <td>
-            : <input style="width:70%" />
+            : <input class="form-control inline" ng-model="LIST_EDIT_LCN.DALCN_PHR.PHR_LEVEL" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
     <tr>
@@ -38,11 +38,10 @@
             คำนำหน้าชื่อ 
         </td>
         <td>
-            : <select style="width:70%">
-                <option>
-                    --กรุณาเลือก--
-                </option>
-            </select>
+            :<select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_EDIT_LCN.DALCN_PHR.PHR_PREFIX_ID">
+    <option value="0">--กรุณาเลือก--</option>
+    <option ng-repeat="x in CNT_daphrcd" value="{{x.prefixcd}}">{{x.thanm}}</option>
+</select>
         </td>
     </tr>
     <tr>
@@ -50,7 +49,7 @@
             ชื่อผู้มีหน้าที่ปฏิบัติการ 
         </td>
         <td>
-            : <input style="width:70%" />
+            : <input class="form-control inline" ng-model="LIST_EDIT_LCN.DALCN_PHR.PHR_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
     <tr>
@@ -58,12 +57,15 @@
             เลขที่ใบอนุญาตประกอบ 
         </td>
         <td>
-            : <input style="width:70%" />
+            : <input class="form-control inline" ng-model="LIST_EDIT_LCN.DALCN_PHR.PHR_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
     <tr>
         <td style="padding-left:4%">
             วิชาชีพฯ / โรคศิลปะฯ / เลขอ้างอิงการอบรม
+        </td>
+        <td>
+            <input class="form-control inline" ng-model="LIST_EDIT_LCN.DALCN_PHR.PHR_TEXT_NUM" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
     <tr>
@@ -71,11 +73,8 @@
             สาขา
         </td>
         <td>
-            : <select style="width:70%">
-                <option>
-                    --กรุณาเลือก--
-                </option>
-            </select>
+            :
+            <input class="form-control inline" ng-model="LIST_EDIT_LCN.DALCN_PHR.PHR_VETERINARY_FIELD" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
     <tr>
@@ -83,7 +82,7 @@
             คำอธิบายผู้ประกอบวิชาชีพ 
         </td>
         <td>
-            : <input style="width:70%" />
+            :<input class="form-control inline" ng-model="LIST_EDIT_LCN.DALCN_PHR.PHR_TEXT_JOB" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
     <tr>
@@ -91,11 +90,12 @@
             ช่องติ๊กที่ปรากฎในใบอนุญาต    
         </td>
         <td>
-           : <select style="width:70%">
-                <option>
-                    1
-                </option>
-            </select>
+           :<select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_EDIT_LCN.DALCN_PHR.PHR_MEDICAL_TYPE">
+    <option value="0">--กรุณาเลือก--</option>
+    <option value="1">เภสัชกร</option>
+    <option value="2">ผู้ประกอบวิชาชีพ</option>
+    <option value="3">ผู้ได้รับมอบหมายการอบรมมาตรา 48</option>
+</select>
         </td>
     </tr>
     <tr>
@@ -108,7 +108,7 @@
             เวลาปฏิบัติการ 
         </td>
         <td>
-            : <input style="width:70%" />
+            : <input class="form-control inline" ng-model="LIST_EDIT_LCN.DALCN_PHR.PHR_TEXT_WORK_TIME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
         </td>
     </tr>
     <tr>
@@ -116,11 +116,10 @@
             หน้าที่ (ถ้ามี) 
         </td>
         <td>
-            : <select style="width:70%">
-                <option>
-                    -
-                </option>
-            </select>
+            : <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_EDIT_LCN.DALCN_PHR.PHR_JOB_TYPE">
+    <option value="0">--กรุณาเลือก--</option>
+    <option ng-repeat="x in CNT_functnm" value="{{x.functcd}}">{{x.functnm}}</option>
+</select>
         </td>
     </tr>
     <tr>
@@ -128,11 +127,12 @@
             ตามมาตรา (ถ้ามี) 
         </td>
         <td>
-            : <select style="width:70%">
-                <option>
-                    
-                </option>
-            </select>
+            : <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_EDIT_LCN.DALCN_PHR.PHR_LAW_SECTION">
+    <option value="">--กรุณาเลือก--</option>
+    <option value="1">มาตรา 68</option>
+    <option value="2">มาตรา 69</option>
+    <option value="3">มาตรา 70</option>
+</select>
         </td>
     </tr>
 </table>

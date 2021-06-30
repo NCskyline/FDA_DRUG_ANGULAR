@@ -4,7 +4,37 @@
 <style>
 
 </style>
-<h1>ประเภทสถานที่<span style="margin-left:5%">สถานที่เก็บ</span></h1>
+<div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP">
+    <h1>เลือกสถานที่เก็บ </h1>
+    <table style="width:100%">
+        <tr>
+            <td style="width:20%;padding-left:5%">
+                ชื่อสถานที่เก็บ
+            </td>
+            <td>
+                <select class="dropdown" ng-model="LIST_EDIT_LCN.LOCATION_SELECT">
+                    <option value="0">--กรุณาเลือก--</option>
+                    <option ng-repeat="x in REF_LOCATION" value="{{x.IDA}}">{{x.thanameplace}}</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-left:5%">
+                ที่ตั้ง (ใหม่)
+            </td>
+            <td>
+                <label>{{LIST_EDIT_LCN.fulladdr4}}</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="เลือกข้อมูล" style="margin-left:20%" />
+            </td>
+        </tr>
+    </table>
+</div>
+
+@*<h1>ประเภทสถานที่<span style="margin-left:5%">สถานที่เก็บ</span></h1>
 <br />
 <h1>ชื่อสถานที่</h1>
 <div>
@@ -180,4 +210,4 @@
         </tr>
     </table>
 </div>
-<input type="button" value="บันทึกข้อมูล" style="margin-left:20%" />
+<input type="button" value="บันทึกข้อมูล" style="margin-left:20%" />*@

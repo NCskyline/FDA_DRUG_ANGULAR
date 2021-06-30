@@ -13,7 +13,7 @@
             :
         </td>
         <td>
-            text
+            <label>{{LIST_EDIT_LCN.OLD_LCNNM}}</label>
         </td>
     </tr>
     <tr>
@@ -24,12 +24,12 @@
             :
         </td>
         <td>
-            <input /><input type="button" value="ค้นหา" />
+            <input type="text" ng-model="LIST_EDIT_LCN.txt_ctzid_lcn" /><input type="button" value="ค้นหา" />
         </td>
     </tr>
     <tr>
         <td style="padding-left:46.5%" colspan="3">
-           text
+            <label>{{LIST_EDIT_LCN.NEW_LCNNM}}</label>
         </td>
     </tr>
 </table> 

@@ -13,7 +13,7 @@
             :
         </td>
         <td>
-            text
+            <label>{{LIST_EDIT_LCN.OLD_BSN_THAIFULLNAME}}</label>
         </td>
     </tr>
     <tr>
@@ -24,7 +24,7 @@
             :
         </td>
         <td>
-            text
+            <label>{{LIST_EDIT_LCN.OLD_fulladdr}}</label>
         </td>
     </tr>
     <tr>
@@ -35,7 +35,7 @@
             :
         </td>
         <td >
-            <input /> <input type="button" value="ค้นหา"/>
+            <input type="text" ng-model="LIST_EDIT_LCN.txt_ctzid" />  <input type="button" value="ค้นหา"/>
         </td>
     </tr>
     <tr>
@@ -46,7 +46,7 @@
             :
         </td>
         <td>
-            text
+            <label>{{LIST_EDIT_LCN.NEW_BSN_THAIFULLNAME}}</label>
         </td>
     </tr>
     <tr>
@@ -57,7 +57,7 @@
             :
         </td>
         <td>
-            text
+            <label>{{LIST_EDIT_LCN.NEW_fulladdr}}</label>
         </td>
     </tr>
 </table>

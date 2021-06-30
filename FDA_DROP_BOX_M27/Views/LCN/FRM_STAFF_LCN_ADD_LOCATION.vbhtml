@@ -1,16 +1,13 @@
-﻿<script>
-
-</script>
-<style>
-</style>
-<script src="../Scripts_angular/CENTER_SV.js"></script>
-<script src="~/Scripts_angular/LCN_CTRL.js"></script>
+﻿
+@*<script src="../Scripts_angular/CENTER_SV.js"></script>
+<script src="~/Scripts_angular/LCN_CTRL.js"></script>*@
 <div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP">
     <h1>เลือกที่ตั้ง</h1>
     <table style="width:100%">
         <tr>
             <td colspan="2">
-                <input type="radio" name="radio" ng-model="checked" value="1" style="margin-left:20%"  /> เลือกสถานที่  <input type="radio" name="radio" ng-model="checked" value="2" />	อ้างอิงสถานที่
+                <input type="radio" name="radio" ng-model="checked" value="1" style="margin-left:20%" /> เลือกสถานที่
+                <input type="radio" name="radio" value="2" />อ้างอิงสถานที่
             </td>
         </tr>
     </table>
@@ -20,10 +17,9 @@
                 ชื่อที่ตั้ง
             </td>
             <td>
-                <select style="width:70%">
-                    <option>
-                        1
-                    </option>
+                <select class="dropdown" ng-model="LIST_EDIT_LCN.LOCATION_SELECT">
+                    <option value="0">--กรุณาเลือก--</option>
+                    <option ng-repeat="x in REF_LOCATION" value="{{x.IDA}}">{{x.thanameplace}}</option>
                 </select>
             </td>
         </tr>
@@ -32,7 +28,7 @@
                 ที่ตั้ง (ใหม่)
             </td>
             <td>
-                text
+                <label>{{LIST_EDIT_LCN.fulladdr4}}</label>
             </td>
         </tr>
         <tr>
@@ -41,7 +37,8 @@
             </td>
         </tr>
     </table>
-    <br />
+    </div>
+    @*<br />
     <div ng-switch="checked">
         <div ng-switch-when="1">
             <table style="width:100%">
@@ -235,4 +232,4 @@
             <input type="button" value="บันทึกเเละใช้สถานที่" style="margin-left:20%" />
         </div>
     </div>
-</div>
+</div>*@
