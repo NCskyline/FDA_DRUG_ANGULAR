@@ -91,7 +91,7 @@
 <div style="clear:both"></div>
 <br />
 <br />
-
+@*process =131,132 *@
 <h2 style="text-align:center;font-size:24px;">
     <strong>คำขอรับใบอนุญาต คำขอต่ออายุใบอนุญาต คำขอรับใบแทน</strong><br />
     <strong>ใบอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
@@ -125,19 +125,15 @@
         <td>
             <input type="radio" name="gender" /> <strong>ขอต่ออายุใบอนุญาตเลขที่</strong>
         </td>
-        <td>
-            
-        </td>
+        <td></td>
         <td style="width:10%">
             <strong>ประจำปี พ.ศ.</strong>
         </td>
-        <td>
-            
-        </td>
+        <td></td>
     </tr>
     <tr>
         <td>
-            <input type="radio" name="gender"/> <strong>ขอรับใบแทนใบอนุญาต</strong>
+            <input type="radio" name="gender" /> <strong>ขอรับใบแทนใบอนุญาต</strong>
         </td>
         <td>
             เนื่องจากใบอนุญาต
@@ -200,9 +196,7 @@
         <td style="font-size:20px">
             หรือบัตรประจำตัวอื่นที่ทางราชการออกให้ คือ
         </td>
-        <td style="font-size:20px;width:20%">
-            
-        </td>
+        <td style="font-size:20px;width:20%"></td>
         <td style="font-size:20px;width:5%">
             เลขที่
         </td>
@@ -470,7 +464,7 @@
         <td style="width:15%">
             เลขรหัสประจำบ้าน
         </td>
-        <td >
+        <td>
             text
         </td>
     </tr>
@@ -485,11 +479,11 @@
         <td>
             โทรศัพท์ / มือถือ
         </td>
-        <td colspan="7" >
+        <td colspan="7">
             text
         </td>
     </tr>
-  
+
 </table>
 <table style="width:100%;font-size:20px" @*border="1"*@>
     <tr>
@@ -499,7 +493,7 @@
         <td style="width:30%">
             text
         </td>
-        <td >
+        <td>
             ตามกฎหมายว่าด้วยยา
         </td>
     </tr>

@@ -465,7 +465,7 @@
     <Content Include="Views\LCN\FRM_STAFF_LCN_CHANGE_LCNSNM.vbhtml" />
     <Content Include="Views\LCN\FRM_STAFF_LCN_PHR_INSERT.vbhtml" />
     <Content Include="Views\LCN\FRM_STAFF_LCN_SEARCH.vbhtml" />
-    <Content Include="Views\LCN\FRM_STAFF_LCN_SELECT_LOCATION_NEW.vbhtml" />
+    <Content Include="Views\LCN\NO_USE\FRM_STAFF_LCN_SELECT_LOCATION_NEW.vbhtml" />
     <Content Include="Views\LCN\INPUT_BOJOD_3_4_1.vbhtml" />
     <Content Include="Views\LCN\NO_USE\INPUT_KHOPO_WO_JO_3_2.vbhtml" />
     <Content Include="Views\LCN\NO_USE\INPUT_KHOPO_WO_JO_4_2.vbhtml" />

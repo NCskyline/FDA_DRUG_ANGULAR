@@ -88,7 +88,7 @@
     <strong>คำขออนุญาตผลิตยาแผนปัจจุบัน</strong>
 </h2>
 
-
+@*process =106 *@
 
 <div style="text-align:center">
     <hr style=" border-top:2px dotted ;width:17%" />
@@ -355,7 +355,7 @@
 <br />
 <div style="font-size:20px;margin-left:10%">
     โดยมีเภสัชกรชั้นหนึ่ง ตามรายการชื่อผู้มีหน้าที่ปฏิบัติการที่แนบท้าย (เอกสารแนบ ๒) เป็นผู้มีหน้าที่ปฏิบัติการ
-    
+
 </div>
 <div style="font-size:20px">
     ตามมาตรา ๓๘ แห่งพระราชบัญญัติยา พ.ศ.๒๕๑๐

@@ -96,6 +96,7 @@
     <strong>คำขอรับใบอนุญาต คำขอต่ออายุใบอนุญาต คำขอรับใบแทน</strong><br />
     <strong>ใบอนุญาตผลิตวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
 </h2>
+@*process =1107,1108 *@
 <table style="width:70%; font-size:20px;margin:auto;text-align:center" @*border="1"*@>
     <tr>
         <td>
@@ -400,15 +401,11 @@
         <td>
             โดยมีเภสัชกรชื่อ  1.
         </td>
-        <td>
-            
-        </td>
+        <td></td>
         <td style="width:30%;text-align:center">
             ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่
         </td>
-        <td>
-            
-        </td>
+        <td></td>
     </tr>
 </table>
 <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />

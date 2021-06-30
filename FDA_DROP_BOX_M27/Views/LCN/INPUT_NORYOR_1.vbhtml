@@ -179,6 +179,7 @@
     ขอรับใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร
 </div>
 
+@*process =105 *@
 <table style="font-size:20px;width:100%" @*border="1"*@>
     <tr>
         <td style="width:500px">
