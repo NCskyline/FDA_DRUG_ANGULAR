@@ -173,4 +173,14 @@
             _FAX = value
         End Set
     End Property
+
+    Public thanm As String
+    Public BSN_THAIFULLNAME As String
+    Public BSN_IDENTIFY As String
+    Public AGE As String
+    Public BSN_FULL_ADDR As String
+    Public BSN_TELEPHONE As String
+    Public BSN_FAX As String
+    Public fulladdr3 As String
+    Public Mobile As String
 End Class

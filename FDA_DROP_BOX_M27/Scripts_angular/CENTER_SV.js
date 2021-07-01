@@ -37,7 +37,32 @@
         return response;
     };
     
+    this.GET_LCN_INFORMATION_INPUT = function (BSN_IDENTIFY, IDENTIFY, LCT_IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_LCN_INFORMATION_INPUT"),
+            params: {
+                BSN_IDENTIFY: BSN_IDENTIFY,
+                IDENTIFY: IDENTIFY,
+                LCT_IDA: LCT_IDA
+            }
+        });
+        return response;
+    };
+
     
+    this.GET_LCN_INFORMATION_BSN_INPUT = function (BSN_IDENTIFY) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_LCN_INFORMATION_BSN_INPUT"),
+            params: {
+                BSN_IDENTIFY: BSN_IDENTIFY
+            }
+        });
+        return response;
+    };
+
+
     this.INSERT_CERT_GMP = function (aa,bb,ProcessID) {
         var response = $http({
             method: "post",
@@ -200,6 +225,17 @@
         return response;
     };
     
+    this.SP_SYSPREFIX = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_SYSPREFIX"),
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+
     this.GET_dramltype = function () {
         var response = $http({
             method: "post",

@@ -6,6 +6,14 @@ Public Class BAO
     Private _conn_CPN As String = System.Configuration.ConfigurationManager.ConnectionStrings("LGTPERMISSIONConnectionString").ConnectionString
     Private _con_d As String = System.Configuration.ConfigurationManager.ConnectionStrings("LGT_DRUGConnectionString").ConnectionString
     '
+    Public Function SP_SYSPREFIX() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_SYSPREFIX"
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_CPN).Tables(0)
+            dt.TableName = "SP_SYSPREFIX"
+        Return dt
+    End Function
     Public Function SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(ByVal identify As String, ByVal LCNSID As String) As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY @lcnsid='" & LCNSID & "' ,@identify= '" & identify & "'"

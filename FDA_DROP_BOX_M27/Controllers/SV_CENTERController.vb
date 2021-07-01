@@ -138,6 +138,15 @@ Namespace Controllers
 
         End Function
 
+        Function SP_SYSPREFIX()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_SYSPREFIX()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
         Function SP_dosage_form()
             Dim dt As New DataTable
             Dim bao As New BAO
@@ -371,12 +380,118 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
         End Function
-        Function GET_LCN_INFORMATION_INPUT(ByVal BSN_IDENTIFY As String, ByVal IDENTIFY As String) As JsonResult
+        Function GET_LCN_INFORMATION_INPUT(ByVal BSN_IDENTIFY As String, ByVal IDENTIFY As String, ByVal LCT_IDA As String) As JsonResult
             Dim model As New MODEL_LCN
             Dim bao As New BAO
-            Dim dt As New DataTable
-            dt = bao.SP_LOCATION_BSN_BY_IDENTIFY(BSN_IDENTIFY)
+            Dim dt_tha As New DataTable
+            dt_tha = bao.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(IDENTIFY, "")
+            For Each dr As DataRow In dt_tha.Rows
+                Try
+                    model.thanm = dr("thanm")
+                Catch ex As Exception
 
+                End Try
+
+            Next
+            Dim dt_bsn As New DataTable
+            dt_bsn = bao.SP_LOCATION_BSN_BY_IDENTIFY(BSN_IDENTIFY)
+            For Each dr As DataRow In dt_bsn.Rows
+                Try
+                    model.BSN_THAIFULLNAME = dr("BSN_THAIFULLNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_IDENTIFY = dr("BSN_IDENTIFY")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.AGE = dr("AGE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_FULL_ADDR = dr("BSN_FULL_ADDR")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_TELEPHONE = dr("BSN_TELEPHONE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_FAX = dr("BSN_FAX")
+                Catch ex As Exception
+
+                End Try
+            Next
+            Dim dt_addr As New DataTable
+            dt_addr = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(LCT_IDA)
+            For Each dr As DataRow In dt_addr.Rows
+                Try
+                    model.THANAMEPLACE = dr("thanameplace")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.fulladdr3 = dr("fulladdr3")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.TEL = dr("tel")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.Mobile = dr("fax")
+                Catch ex As Exception
+
+                End Try
+            Next
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function GET_LCN_INFORMATION_BSN_INPUT(ByVal BSN_IDENTIFY As String) As JsonResult
+            Dim model As New MODEL_LCN
+            Dim bao As New BAO
+            Dim dt_bsn As New DataTable
+            dt_bsn = BAO.SP_LOCATION_BSN_BY_IDENTIFY(BSN_IDENTIFY)
+            For Each dr As DataRow In dt_bsn.Rows
+                Try
+                    model.BSN_THAIFULLNAME = dr("BSN_THAIFULLNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_IDENTIFY = dr("BSN_IDENTIFY")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.AGE = dr("AGE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_FULL_ADDR = dr("BSN_FULL_ADDR")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_TELEPHONE = dr("BSN_TELEPHONE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_FAX = dr("BSN_FAX")
+                Catch ex As Exception
+
+                End Try
+            Next
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
 
