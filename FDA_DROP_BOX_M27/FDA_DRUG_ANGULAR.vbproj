@@ -428,7 +428,6 @@
     <Content Include="Views\LCN\INPUTdalcn_output_2.vbhtml" />
     <Content Include="Views\LCN\INPUTdalcn_output_3.vbhtml" />
     <Content Include="Views\LCN\INPUTdalcn_output_4.vbhtml" />
-    <Content Include="Views\LCN\INPUT_ChangLocation_3_4_3_BUY.vbhtml" />
     <Content Include="Views\LCN\INPUT_NORDOJ_3_4_1.vbhtml" />
     <Content Include="Views\LCN\INPUT_NORYOR_1.vbhtml" />
     <Content Include="Views\LCN\INPUT_PORYOR_1.vbhtml" />
@@ -500,6 +499,7 @@
     <Content Include="Views\LCN_STAFF\FRM_LCN_DRUG.vbhtml" />
     <Content Include="Views\LCN\INPUT_SORJOR_1.vbhtml" />
     <Content Include="Views\LCN\FRM_LCN_NEWS.vbhtml" />
+    <Content Include="Views\AUTHEN\LOT_RELEASE.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>

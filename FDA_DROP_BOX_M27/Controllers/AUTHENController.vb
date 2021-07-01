@@ -14,5 +14,8 @@ Namespace Controllers
         Function FRM_STAFF_MAIN() As ActionResult
             Return View()
         End Function
+        Function LOT_RELEASE() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
