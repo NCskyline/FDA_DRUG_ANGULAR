@@ -500,6 +500,9 @@
     <Content Include="Views\LCN\INPUT_SORJOR_1.vbhtml" />
     <Content Include="Views\LCN\FRM_LCN_NEWS.vbhtml" />
     <Content Include="Views\AUTHEN\LOT_RELEASE.vbhtml" />
+    <Content Include="Views\LCN\FRM_LCN_DRUG.vbhtml" />
+    <Content Include="Views\LCN\FRM_LCN_NCT_SEARCH.vbhtml" />
+    <Content Include="Views\LCN\FRM_EDIT_LCN_MAIN.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -1535,6 +1538,7 @@
     <Folder Include="Scripts_angular\DR\" />
     <Folder Include="Views\DI\" />
     <Folder Include="Views\DS\" />
+    <Folder Include="Views\NCT\" />
     <Folder Include="Views\SV_CENTER\" />
   </ItemGroup>
   <ItemGroup>
