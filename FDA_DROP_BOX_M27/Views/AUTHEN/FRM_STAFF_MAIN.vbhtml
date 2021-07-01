@@ -72,7 +72,7 @@
             <div ng-include="SUB_MAIN_PAGE">
 
             </div>
-            <button class="btn btn-lg" ng-click="BTN_LOT_RELEASE('5','2564')">GET</button>
+           
         </div>
     </div>
 

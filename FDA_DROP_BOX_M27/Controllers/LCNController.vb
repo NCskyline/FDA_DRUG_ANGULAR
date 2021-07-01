@@ -95,5 +95,19 @@ Namespace Controllers
         Function FRM_LCN_DRUG_SEARCH() As ActionResult
             Return View()
         End Function
+        Function FRM_LCN_NEWS() As ActionResult
+            Return View()
+        End Function
+        Function FRM_LCN_DRUG() As ActionResult
+            Return View()
+        End Function
+        Function FRM_LCN_NCT_SEARCH() As ActionResult
+            Return View()
+        End Function
+        Function FRM_EDIT_LCN_MAIN() As ActionResult
+            Return View()
+        End Function
+
+
     End Class
 End Namespace
