@@ -3,13 +3,24 @@
     $scope.CITIZEN = "";
     $scope.lcnno = "";
     var LCN_IDA = sessionStorage.LCN_IDA;
-    var LCT_IDA = sessionStorage.LCT_IDA;
+    var LCT_IDA = sessionStorage.LCT_IDA;  //117194
     var PROCESS = QueryString("PROCESS");
     var CITIZEN = '0105527028430';//'0105527028430';0000000000000
     var BSN_IDENTIFY = "";
     var IDENTIFY = "0000000000000";
-    var LCT_IDA = 117194;
+    //var LCT_IDA = 117194;
+
     Pageload();
+    LOAD_MODEL();
+
+    function LOAD_MODEL() {
+
+        var data = CENTER_SV.GET_FULLDATA_LCN();
+        data.then(function (datas) {
+            $scope.FULL_MODEL = datas.data;
+
+        }, function () { });
+    }
 
     function Pageload() {
 
@@ -20,9 +31,16 @@
 
         }, function () { });
 
-
     }
-    
+
+    $scope.BTN_MENU = function (process) {
+
+        if (process == '101' || process == '103' || process == '104' || process == '105' || process == '106' || process == '107' || process == '108' || process == '109') {
+            $scope.FULL_MODEL.PROCESS = process;
+            $scope.SUB_PATH = SET_URL_SV('../LCN/FRM_LCN_DRUG');
+        }
+        
+    };
 
     $scope.Search_lcnno = function (CITIZEN, lcnno, pvncd) {
         var GetData = CENTER_SV.SP_GET_DATA_LCN(CITIZEN, lcnno, pvncd);

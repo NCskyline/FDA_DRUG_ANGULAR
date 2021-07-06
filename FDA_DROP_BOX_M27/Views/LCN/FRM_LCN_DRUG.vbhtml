@@ -1,10 +1,13 @@
-﻿
+﻿@Code
+    Layout = ""
+End Code
+
 
 
 <div>
     <div>
         <div>
-            <table width="100%"  border="1">
+            <table width="100%" border="1">
                 <tr>
                     <td width="20%">lcnnoType</td>
                     <td align="right">เลขบัตรผู้ดำเนิน</td>
