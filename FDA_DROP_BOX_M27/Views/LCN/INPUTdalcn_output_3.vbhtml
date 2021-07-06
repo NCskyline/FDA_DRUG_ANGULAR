@@ -55,14 +55,18 @@
                     เลขรับที่
                 </td>
 
-                <td colspan="3"></td>
+                <td colspan="3">
+                    <label>{{LCN_LIST.RCVNO_DISPLAY}}</label>
+                </td>
             </tr>
             <tr>
                 <td style="text-align:left">
                     วันที่
                 </td>
 
-                <td colspan="3"></td>
+                <td colspan="3">
+                    <label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label>
+                </td>
             </tr>
             <tr>
                 <td style="text-align:left">

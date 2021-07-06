@@ -58,7 +58,7 @@
             </td>
 
             <td colspan="3">
-                text
+                <label>{{LCN_LIST.RCVNO_DISPLAY}}</label>
             </td>
         </tr>
         <tr>
@@ -67,7 +67,7 @@
             </td>
 
             <td colspan="3">
-                text
+                <label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label>
             </td>
         </tr>
         <tr>
@@ -76,9 +76,7 @@
 
             </td>
 
-            <td>
-                text
-            </td>
+            <td></td>
             <td style="text-align:right;width:25%">
                 ผู้รับคำขอ
             </td>

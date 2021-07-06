@@ -183,4 +183,6 @@
     Public BSN_FAX As String
     Public fulladdr3 As String
     Public Mobile As String
+    Public RCVNO_DISPLAY As String
+    Public RCV_DATE_DISPLAY As String
 End Class
