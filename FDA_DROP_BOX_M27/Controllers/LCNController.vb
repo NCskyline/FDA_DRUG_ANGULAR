@@ -127,5 +127,14 @@ Namespace Controllers
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
 
+        Function SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(ByVal IDA As String)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
     End Class
 End Namespace
