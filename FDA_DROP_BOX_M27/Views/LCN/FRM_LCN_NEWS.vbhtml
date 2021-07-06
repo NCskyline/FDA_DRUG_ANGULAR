@@ -14,28 +14,28 @@
                     <div class="listree-submenu-heading">ขออนุญาตสถานที่ด้านยาแห่งใหม่</div>
                     <ul class="listree-submenu-items" style="color:black">
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=31">ขย1</a>  @*ng-click="DATA_GMP('31')"*@
+                            <a ng-click="BTN_MENU('101')" style="color:#06B716">ขย1</a>  @*ng-click="DATA_GMP('31')"*@
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=32">ขย3</a>
+                            <a ng-click="BTN_MENU('103')" style="color:#06B716">ขย3</a>
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=33">ขย4</a>
+                            <a ng-click="BTN_MENU('104')" style="color:#06B716">ขย4</a>
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=34">นย1</a>
+                            <a ng-click="BTN_MENU('105')" style="color:#06B716">นย1</a>
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=36">ผย1</a>
+                            <a href="../LCN/FRM_LCN_DRUG?PROCESS=106">ผย1</a>
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=36">ขยบ</a>
+                            <a href="../LCN/FRM_LCN_DRUG?PROCESS=107">ขยบ</a>
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=36">นยบ</a>
+                            <a href="../LCN/FRM_LCN_DRUG?PROCESS=108">นยบ</a>
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=36">ผยบ</a>
+                            <a href="../LCN/FRM_LCN_DRUG?PROCESS=109">ผยบ</a>
                         </li>
                     </ul>
                 </li>
@@ -46,28 +46,28 @@
                             <div class="listree-submenu-heading">วัตถุออกฤทธิ์จิตและประสาทประเภท ๓ , ๔</div>
                             <ul class="listree-submenu-items" style="color:black">
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๓</a>
+                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=131">นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=15">นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๔</a>
+                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=132">นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๔</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=16">ขายวัตถุออกฤทธิ์ฯในประเภท ๓</a>
+                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=123">ขายวัตถุออกฤทธิ์ฯในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=17">ขายวัตถุออกฤทธิ์ฯในประเภท ๔</a>
+                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=124">ขายวัตถุออกฤทธิ์ฯในประเภท ๔</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=17">ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๓</a>
+                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=133">ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=17">ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๔</a>
+                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=134">ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๔</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=17">ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๓</a>
+                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=125">ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=17">ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๔</a>
+                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=126">ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๔</a>
                                 </li>
                             </ul>
                         </li>
@@ -75,13 +75,13 @@
                             <div class="listree-submenu-heading">ยาเสพติดให้โทษประเภทที่ ๓ หรือ ๔</div>
                             <ul class="listree-submenu-items" style="color:black">
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">นำเข้ายาเสพติดให้โทษในประเภท ๓</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">นำเข้ายาเสพติดให้โทษในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=15">ส่งออกยาเสพติดให้โทษในประเภท ๓</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=15">ส่งออกยาเสพติดให้โทษในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=16">จำหน่ายยาเสพติดให้โทษในประเภท ๓</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=16">จำหน่ายยาเสพติดให้โทษในประเภท ๓</a>
                                 </li>
                             </ul>
                         </li>
@@ -89,10 +89,10 @@
                             <div class="listree-submenu-heading">ผลิตวัตถุออกฤทธิ์ฯประเภท ๓ หรือ ๔</div>
                             <ul class="listree-submenu-items" style="color:black">
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">ผลิตวัตถุออกฤทธิ์ฯในประเภท ๓</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">ผลิตวัตถุออกฤทธิ์ฯในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=15">ผลิตวัตถุออกฤทธิ์ฯในประเภท ๔</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=15">ผลิตวัตถุออกฤทธิ์ฯในประเภท ๔</a>
                                 </li>
                             </ul>
                         </li>
@@ -100,7 +100,7 @@
                             <div class="listree-submenu-heading">ผลิตยาเสพติดให้โทษประเภทที่ ๓ หรือ ๔</div>
                             <ul class="listree-submenu-items" style="color:black">
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">ผลิตยาเสพติดให้โทษในประเภท ๓</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">ผลิตยาเสพติดให้โทษในประเภท ๓</a>
                                 </li>
                             </ul>
                         </li>
@@ -110,46 +110,46 @@
                     <div class="listree-submenu-heading">คำขอแก้ไข/คำขอใบแทน/คำขอต่ออายุ</div>
                     <ul class="listree-submenu-items">
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=14">คำขอแก้ไขใบอนุญาตวัตถุออกฤทธิ์และยาเสพติด</a>
+                            <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอแก้ไขใบอนุญาตวัตถุออกฤทธิ์และยาเสพติด</a>
                         </li>
                         <li>
                             <div class="listree-submenu-heading">คำขอใบแทนใบอนุญาตวัตถุออกฤทธิ์และยาเสพติด</div>
                             <ul class="listree-submenu-items">
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=101">คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 3 ประชุม</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 3 ประชุม</a>
                                 </li>
                                 <li>
-                                    <a href="../DH/FRM_SELECT_LCN?PROCESS=14">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 4 ประชุม</a>
+                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 4 ประชุม</a>
                                 </li>
                             </ul>
                         </li>

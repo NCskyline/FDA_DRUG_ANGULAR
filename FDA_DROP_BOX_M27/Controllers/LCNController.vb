@@ -108,6 +108,24 @@ Namespace Controllers
             Return View()
         End Function
 
+    End Class
+
+    Public Class LCN_CENTERController
+        Inherits Controller
+
+        Function GET_FULL_MODEL() As JsonResult
+            Dim model As New MODEL_LCN
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function CODE_CENTER(ByVal MODEL As MODEL_LCN)
+
+            Select Case MODEL.FUNC_CODE
+                Case "FUNC-DATA"
+
+            End Select
+            Return Json(MODEL, JsonRequestBehavior.AllowGet)
+        End Function
 
     End Class
 End Namespace

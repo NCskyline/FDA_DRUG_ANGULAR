@@ -1,5 +1,21 @@
 ﻿app.service("CENTER_SV", function ($http, Upload) {
 
+    this.GET_FULL_MODEL_LCN = function () {
+        return $http.get("../LCN_CENTER/GET_FULL_MODEL");
+    };
+
+    this.GET_FULLDATA_LCN = function (MODEL) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/LCN_CENTER/CODE_CENTER"),
+            dataType: "json",
+            data: {
+                MODEL: MODEL
+            }
+        });
+        return response;
+    };
+
     this.SP_GET_BOX_CTZNO = function () {
         var response = $http({
             method: "post",

@@ -174,6 +174,26 @@
         End Set
     End Property
 
+    Private _FUNC_CODE As String
+    Public Property FUNC_CODE() As String
+        Get
+            Return _FUNC_CODE
+        End Get
+        Set(ByVal value As String)
+            _FUNC_CODE = value
+        End Set
+    End Property
+
+    Private _PROCESS As String
+    Public Property PROCESS() As String
+        Get
+            Return _PROCESS
+        End Get
+        Set(ByVal value As String)
+            _PROCESS = value
+        End Set
+    End Property
+
     Public thanm As String
     Public BSN_THAIFULLNAME As String
     Public BSN_IDENTIFY As String
