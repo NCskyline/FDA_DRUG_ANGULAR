@@ -16,6 +16,20 @@
         return response;
     };
 
+    
+    this.GET_FULLDATA_LCN_EDIT = function (MODEL) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/LCN_CENTER/CODE_CENTER"),
+            dataType: "json",
+            data: {
+                MODEL: MODEL
+            }
+        });
+        return response;
+    };
+
+
     this.SP_GET_BOX_CTZNO = function () {
         var response = $http({
             method: "post",
@@ -41,6 +55,16 @@
         return response;
     };
     
+    this.GET_LCN_EDIT = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_LCN_EDIT"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
     this.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY = function (identify,lcnsid) {
         var response = $http({
             method: "post",
@@ -67,6 +91,30 @@
     };
 
     
+    this.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP = function (LOCATION_TYPE_CD, IDENTIFY) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP"),
+            params: {
+                LOCATION_TYPE_CD: LOCATION_TYPE_CD,
+                IDENTIFY: IDENTIFY
+            }
+        });
+        return response;
+    };
+
+    //this.GET_LCN_INFORMATION_BSN_INPUT = function (LOCATION_TYPE_CD,iden) {
+    //    var response = $http({
+    //        method: "post",
+    //        url: SET_URL_SV("/SV_CENTER/SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP"),
+    //        params: {
+    //            LOCATION_TYPE_CD: LOCATION_TYPE_CD,
+    //            iden: iden
+    //        }
+    //    });
+    //    return response;
+    //};
+
     this.GET_LCN_INFORMATION_BSN_INPUT = function (BSN_IDENTIFY) {
         var response = $http({
             method: "post",
@@ -458,6 +506,17 @@
         });
         return response;
     };
+
+
+    this.SETMODEL_EDIT_LCN = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SETMODEL_EDIT_LCN")
+        });
+        return response;
+    };
+
+
 
     this.GET_DATAPROCESS = function (P_ID) {
         var response = $http({

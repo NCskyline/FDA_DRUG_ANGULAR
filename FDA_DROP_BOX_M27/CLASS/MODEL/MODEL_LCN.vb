@@ -206,3 +206,32 @@
     Public RCVNO_DISPLAY As String
     Public RCV_DATE_DISPLAY As String
 End Class
+
+Public Class MODEL_EDIT_LCN
+    Private _FUNC_CODE As String
+    Public Property FUNC_CODE() As String
+        Get
+            Return _FUNC_CODE
+        End Get
+        Set(ByVal value As String)
+            _FUNC_CODE = value
+        End Set
+    End Property
+
+    Public fulladdr_no_keep As String
+    Public thanameplace As String
+    Public fulladdr4 As String
+    Public thanm As String
+    Public BSN_THAIFULLNAME As String
+    Public BSN_IDENTIFY As String
+    Public AGE As String
+    Public BSN_FULL_ADDR As String
+    Public BSN_TELEPHONE As String
+    Public BSN_FAX As String
+    Public fulladdr3 As String
+    Public Mobile As String
+    Public RCVNO_DISPLAY As String
+    Public RCV_DATE_DISPLAY As String
+
+
+End Class

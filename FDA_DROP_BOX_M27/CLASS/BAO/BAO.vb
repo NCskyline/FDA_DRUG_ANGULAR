@@ -34,6 +34,20 @@ Public Class BAO
         End If
         Return int_year.ToString()
     End Function
+
+    Public Function SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2(ByVal LOCATION_TYPE_CD As Integer, ByVal iden As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2 @LOCATION_TYPE_CD= " & LOCATION_TYPE_CD & " ,@iden= '" & iden & "'"
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+        dt.TableName = "SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSID"
+        Return dt
+    End Function
+
     Public Function insert_transection_new(ByVal processid As String, ByVal _CITIZEN_ID As String, ByVal _CITIZEN_ID_AUTHORIZE As String) As Integer            'สร้างเลขดำเนินการ
         Dim _year As Integer
         _year = con_year(Date.Now.Year)

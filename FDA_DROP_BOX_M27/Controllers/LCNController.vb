@@ -126,7 +126,10 @@ Namespace Controllers
             End Select
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
-
+        Function GET_FULL_MODEL_EDIT() As JsonResult
+            Dim model As New MODEL_EDIT_LCN
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
         Function SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(ByVal IDA As String)
             Dim dt As New DataTable
             Dim bao As New BAO
@@ -135,6 +138,13 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
         End Function
+        Function SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2(ByVal LOCATION_TYPE_CD As Integer, ByVal iden As String)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2(LOCATION_TYPE_CD, iden)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
+        End Function
     End Class
 End Namespace
