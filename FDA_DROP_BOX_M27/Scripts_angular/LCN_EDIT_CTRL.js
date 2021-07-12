@@ -74,7 +74,6 @@
            
         }
         else {
-            //$scope.LIST_EDIT_LCN.fulladdr = 'haha';
             var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
             Data_location.then(function (datas) {
                 $scope.LIST_LABEL = datas.data;
@@ -86,7 +85,7 @@
     };
 
     $scope.BTN_CLICKs = function (IDA) {
-        alert('FUCK ' + IDA);
+        alert(IDA);
     };
 
 });
