@@ -150,12 +150,12 @@
     };
 
 
-    this.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA = function (lctida) {
+    this.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA = function (LOCATION_ADDRESS_IDA) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA"),
             params: {
-                LOCATION_ADDRESS_IDA: lctida
+                LOCATION_ADDRESS_IDA: LOCATION_ADDRESS_IDA
             }
         });
         return response;

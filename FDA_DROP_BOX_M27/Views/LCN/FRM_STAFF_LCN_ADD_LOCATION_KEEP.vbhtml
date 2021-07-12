@@ -13,9 +13,9 @@
                 ชื่อสถานที่เก็บ
             </td>
             <td>
-                @*ng-change="Bind_Data_ddl(LIST_EDIT_LCN.LOCATION_SELECT)"*@
-                <select class="dropdown" ng-model="LIST_EDIT_LCN.LOCATION_SELECT">
-                    <option value="0">--กรุณาเลือก--</option>
+ 
+                <select class="dropdown" ng-model="LIST_EDIT_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_EDIT_LCN.LOCATION_SELECT)">
+                   
                     <option ng-repeat="x in REF_LOCATION" value="{{x.IDA}}">{{x.thanameplace}}</option>
                 </select>
             </td>
@@ -25,12 +25,12 @@
                 ที่ตั้ง (ใหม่)
             </td>
             <td >
-                <label>{{LIST_EDIT_LCN.fulladdr4}}</label>
+                <label>{{LIST_LABEL.fulladdr}}</label>
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                <input type="button" value="เลือกข้อมูล" style="margin-left:20%" />
+                <input type="button" value="เลือกข้อมูล" style="margin-left:20%" ng-click="BTN_CLICKs(LIST_EDIT_LCN.LOCATION_SELECT)" />
             </td>
         </tr>
     </table>

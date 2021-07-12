@@ -14,14 +14,14 @@
     Pageload();
     //LOAD_MODEL();
     //MODEL_EDIT_LCN
-    function LOAD_MODEL() {
+    //function LOAD_MODEL() {
 
-        var data = CENTER_SV.GET_FULLDATA_LCN_EDIT();
-        data.then(function (datas) {
-            $scope.FULL_MODEL = datas.data;
+    //    var data = CENTER_SV.GET_FULLDATA_LCN_EDIT();
+    //    data.then(function (datas) {
+    //        $scope.FULL_MODEL = datas.data;
 
-        }, function () { });
-    }
+    //    }, function () { });
+    //}
     function Pageload() {
         var MODEL_EDIT_LCN = CENTER_SV.SETMODEL_EDIT_LCN();
         MODEL_EDIT_LCN.then(function (datas) {
@@ -44,13 +44,13 @@
         }, function () { });
 
 
-        var GET_LCN_EDIT = CENTER_SV.GET_LCN_EDIT(IDA);
-        GET_LCN_EDIT.then(function (datas) {
+        //var GET_LCN_EDIT = CENTER_SV.GET_LCN_EDIT(IDA);
+        //GET_LCN_EDIT.then(function (datas) {
 
-            $scope.LIST_EDIT_LCN = datas.data;
+        //    $scope.LIST_EDIT_LCN = datas.data;
 
 
-        }, function () { });
+        //}, function () { });
     }
 
     
@@ -58,13 +58,35 @@
 
         var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
         Data_location.then(function (datas) {
-            $scope.LIST_EDIT_LCN = datas.data;
+            $scope.LIST_LABEL = datas.data;
+            //$scope.LIST_EDIT_LCN.fulladdr = datas.data.fulladdr;
         }, function () { });
     };
     
+    $scope.getdetails = function (IDA) {
+       
+        if (IDA == "0") {
+            var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
+            Data_location.then(function (datas) {
+                $scope.LIST_LABEL = datas.data;
+                $scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr; 
+            }, function () { });
+           
+        }
+        else {
+            //$scope.LIST_EDIT_LCN.fulladdr = 'haha';
+            var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
+            Data_location.then(function (datas) {
+                $scope.LIST_LABEL = datas.data;
+                $scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr;
+            }, function () { });
 
+        }
+    
+    };
 
-
-
+    $scope.BTN_CLICKs = function (IDA) {
+        alert('FUCK ' + IDA);
+    };
 
 });
