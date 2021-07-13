@@ -64,23 +64,12 @@
     };
     
     $scope.getdetails = function (IDA) {
-       
-        if (IDA == "0") {
+    
             var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
             Data_location.then(function (datas) {
                 $scope.LIST_LABEL = datas.data;
                 $scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr; 
             }, function () { });
-           
-        }
-        else {
-            var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
-            Data_location.then(function (datas) {
-                $scope.LIST_LABEL = datas.data;
-                $scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr;
-            }, function () { });
-
-        }
     
     };
 
