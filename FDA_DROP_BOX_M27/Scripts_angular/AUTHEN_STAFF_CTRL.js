@@ -33,9 +33,14 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 $scope.SET_MAIN_PAGE4 = datas.data.SET_MAIN_PAGE4;
 
 
+                if (datas.data.menuid == '') {
+                    //window.location = "/AUTHEN/FRM_DATA_REQUEST"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
 
-                //window.location = "/Master_Page/MAIN_MASTER"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
-                //window.location = "/DRUG_DROPBOX/HOME/FRM_STAFF_LIST"; 
+                } else {
+                    //window.location = "/Master_Page/MAIN_MASTER"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
+                    //window.location = "/DRUG_DROPBOX/HOME/FRM_STAFF_LIST"; 
+                }
+                
             }
             else {
 
@@ -46,6 +51,10 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         }, function () { });
 
       //  GET_LIST_WAIT();
+        var getData_LIST = CENTER_SV.SETMODEL_LIST();
+        getData_LIST.then(function (datas) {
+            $scope.DOC_LIST = datas.data;
+        }, function () { });
     }
 
     $scope.BTN_SUB_MENU_CLICK = function (BTN_GROUP, IDgroup, SEQ) {
@@ -75,6 +84,78 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         });
     };
 
+    $scope.UPLOAD_PDFs = function (values) {
+        var files = values.FILE_DATA;
+        var ADDFILE = CENTER_SV.UPLOAD_PDF(CITIZEN_NO, TOKEN, files);
+        ADDFILE.then(function (datas) {
+            var result = datas.data;
+            if (result.MSG_RESULT == "ERR") {
+                ERR_DATA('การบันทึกไฟล์ของท่านมีปัญหา');
+            }
+            else if (result.MSG_RESULT == "SUCCESS") {
+                values.PATH = result.DATA_VALUE;
+                values.FLAG = "PASS";
+                $scope.Upload = "PASS";
+            }
+            OPEN_BUTTON();
+        }, function () {
+            ERR_DATA('การบันทึกไฟล์ของท่านมีปัญหา');
+            OPEN_BUTTON();
+        });
+
+
+    };
+
+    $scope.ADD_DATA = function () {
+        var getData = CENTER_SV.UPDATE_BOX_INV($scope.DOC, $scope.INV_LIST);
+        getData.then(function (datas) {
+            var TR_ID = QueryString('TR_ID');
+            $scope.filedata = [];
+            var obj = $scope.DOC_LIST.FILE_LISTs;
+            angular.forEach(obj, function (value, key) {
+                var DES = value.DES;
+                var FILEs = value.FILE_DATA;
+                value.TR_ID = TR_ID;
+                value.FILE_DATA = '';
+
+            });
+
+            var ADDFILE = CENTER_SV.UPLOAD_PDF_V2($scope.DOC_LIST.FILE_LISTs, $scope.filedata);
+            ADDFILE.then(function (datas) {
+                success_data('ดำเนินการแก้ไขเรียบร้อย');
+                REDIRECT("/HOME/FRM_CUSTOMER_LIST");
+            }, function () {
+
+                success_data('ดำเนินการแก้ไขเรียบร้อย');
+            });
+
+        }, function () { });
+    };
+
+    $scope.ADD_FILE_LIST = function () {
+        var obj = {
+            TR_ID: '',
+            DES: '',
+            FILENAME: '',
+            FILE_DATA: '',
+            PATH: '',
+            FLAG: ''
+        };
+        $scope.DOC_LIST.FILE_LISTs.push(obj);
+    };
+
+    $scope.deleteRow = function (datas, i) {
+        if (datas.PIORITY == 'HIGH') {
+            ERR_DATA(datas.DES + ' : เป็นเอกสารบังคับไม่สามารถลบออกได้');
+        }
+        else if (datas.PIORITY == 'LOW') {
+
+            ERR_DATA(datas.DES + ' : ไม่สามารถลบออกได้');
+        }
+        else {
+            $scope.DOC_LIST.FILE_LISTs.splice(i, 1);
+        }
+    };
 
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });

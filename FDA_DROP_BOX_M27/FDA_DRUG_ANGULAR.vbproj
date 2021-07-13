@@ -193,6 +193,11 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Linq\Linq_ADV.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Linq_ADV.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Linq\Linq_CPN.designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -402,6 +407,14 @@
       <LastGenOutput>Linq_CPN.designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Linq\Linq_ADV.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Linq_ADV.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Linq\Linq_ADV.dbml.layout">
+      <DependentUpon>Linq_ADV.dbml</DependentUpon>
+    </None>
     <None Include="Linq\Linq_CPN.dbml.layout">
       <DependentUpon>Linq_CPN.dbml</DependentUpon>
     </None>
@@ -504,6 +517,13 @@
     <Content Include="Views\LCN\FRM_LCN_DRUG.vbhtml" />
     <Content Include="Views\LCN\FRM_LCN_NCT_SEARCH.vbhtml" />
     <Content Include="Views\LCN\FRM_EDIT_LCN_MAIN.vbhtml" />
+    <Content Include="Views\AUTHEN\FRM_DATA_REQUEST.vbhtml" />
+    <Content Include="Views\LCN\INPUT_PDF_DRUG_KORYOR15.vbhtml" />
+    <Content Include="Views\LCN\INPUT_DRUG_NORYOR9.vbhtml" />
+    <Content Include="Views\LCN\INPUT_DRUG_PORYOR9.vbhtml" />
+    <Content Include="Views\LCN\INPUT_DRUG_YORBOR13.vbhtml" />
+    <Content Include="Views\LCN\INPUT_DRUG_YORBOR16.vbhtml" />
+    <Content Include="Views\LCN\INPUT_DRUG_YORSOR19.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>

@@ -42,6 +42,21 @@
         
     };
 
+    $scope.BTN_INPUT = function () {
+
+        if ($scope.FULL_MODEL.PROCESS == '101') {
+            REDIRECT('../LCN/INPUTdalcn_output_1');
+        } else if ($scope.FULL_MODEL.PROCESS == '103') {
+            REDIRECT('../LCN/INPUTdalcn_output_3');
+        } else if ($scope.FULL_MODEL.PROCESS == '104') {
+            REDIRECT('../LCN/INPUTdalcn_output_4');
+        } else if ($scope.FULL_MODEL.PROCESS == '105') {
+            REDIRECT('../LCN/INPUT_NORYOR_1');
+        } else if ($scope.FULL_MODEL.PROCESS == '106') {
+            REDIRECT('../LCN/INPUT_PORYOR_1');
+        }
+    };
+
     $scope.Search_lcnno = function (CITIZEN, lcnno, pvncd) {
         var GetData = CENTER_SV.SP_GET_DATA_LCN(CITIZEN, lcnno, pvncd);
         GetData.then(function (datas) {
