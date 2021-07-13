@@ -31,7 +31,8 @@
         <script src="~/js/jquery.dataTables.min.js"></script>*@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    
+    <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,200;0,300;1,300&display=swap" rel="stylesheet"> 
+
     @*<script src="~/Scripts/datatables.min.js"></script>*@
     @*<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
 

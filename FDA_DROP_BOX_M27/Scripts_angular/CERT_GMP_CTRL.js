@@ -347,11 +347,13 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         if (datas.PIORITY == 'HIGH') {
             ERR_DATA(datas.DES + ' : เป็นเอกสารบังคับไม่สามารถลบออกได้');
         }
-        else if (datas.PIORITY == 'LOW') {
+        else if (datas.PIORITY == 'LOW')
+        {
 
             ERR_DATA(datas.DES + ' : ไม่สามารถลบออกได้');
         }
-        else {
+        else
+        {
             $scope.DOC_LIST.FILE_LISTs.splice(i, 1);
         }
     };

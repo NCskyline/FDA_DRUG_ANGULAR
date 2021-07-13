@@ -17,5 +17,8 @@ Namespace Controllers
         Function LOT_RELEASE() As ActionResult
             Return View()
         End Function
+        Function FRM_DATA_REQUEST() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace

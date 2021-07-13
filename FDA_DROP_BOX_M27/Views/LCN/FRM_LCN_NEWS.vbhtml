@@ -7,7 +7,7 @@
 
 <div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP">
 
-    <div class="content-part " style="width:100%">
+    <div class="content-part " style="width:100%;font-family:'Taviraj'">
         <div class="part part-1-3 ic">
             <ul class="listree">
                 <li>
@@ -26,16 +26,16 @@
                             <a ng-click="BTN_MENU('105')" style="color:#06B716">นย1</a>
                         </li>
                         <li>
-                            <a href="../LCN/FRM_LCN_DRUG?PROCESS=106">ผย1</a>
+                            <a ng-click="BTN_MENU('106')" style="color:#06B716">ผย1</a>
                         </li>
                         <li>
-                            <a href="../LCN/FRM_LCN_DRUG?PROCESS=107">ขยบ</a>
+                            <a ng-click="BTN_MENU('107')" style="color:#06B716">ขยบ</a>
                         </li>
                         <li>
-                            <a href="../LCN/FRM_LCN_DRUG?PROCESS=108">นยบ</a>
+                            <a ng-click="BTN_MENU('108')" style="color:#06B716">นยบ</a>
                         </li>
                         <li>
-                            <a href="../LCN/FRM_LCN_DRUG?PROCESS=109">ผยบ</a>
+                            <a ng-click="BTN_MENU('109')" style="color:#06B716">ผยบ</a>
                         </li>
                     </ul>
                 </li>
