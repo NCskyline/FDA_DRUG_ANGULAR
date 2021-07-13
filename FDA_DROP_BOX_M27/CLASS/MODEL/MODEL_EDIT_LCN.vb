@@ -63,4 +63,23 @@
     Public RCV_DATE_DISPLAY As String
     Public fulladdr As String
 
+    Public thabuilding As String
+    Public thafloor As String
+    Public tharoom As String
+    Public engnameplace As String
+    Public HOUSENO As String
+    Public thaaddr As String
+    Public thamu As String
+    Public thasoi As String
+    Public tharoad As String
+    Public zipcode As String
+    Public tel As String
+    Public fax As String
+    Public chngwtcd As String
+    Public amphrcd As String
+    Public thmblcd As String
+    Public latitude As String
+    Public longitude As String
+
+
 End Class

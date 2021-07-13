@@ -15,14 +15,13 @@
             <td>
  
                 <select class="dropdown" ng-model="LIST_EDIT_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_EDIT_LCN.LOCATION_SELECT)">
-                   
-                    <option ng-repeat="x in REF_LOCATION" value="{{x.IDA}}">{{x.thanameplace}}</option>
+                    <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
                 </select>
             </td>
         </tr>
         <tr>
             <td style="padding-left:5%">
-                ที่ตั้ง (ใหม่)
+                ที่เก็บ (ใหม่)
             </td>
             <td >
                 <label>{{LIST_LABEL.fulladdr}}</label>
@@ -30,7 +29,8 @@
         </tr>
         <tr>
             <td colspan="2">
-                <input type="button" value="เลือกข้อมูล" style="margin-left:20%" ng-click="BTN_CLICKs(LIST_EDIT_LCN.LOCATION_SELECT)" />
+                <input type="hidden" ng-model="LIST_EDIT_LCN.LOCATION_SELECT" id="txt_hidden" />
+                <input type="button" value="เลือกข้อมูล" style="margin-left:20%" ng-click="BTN_SAVE(LIST_EDIT_LCN.LOCATION_SELECT)" />
             </td>
         </tr>
     </table>
