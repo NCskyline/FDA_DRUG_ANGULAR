@@ -176,6 +176,7 @@
     <Compile Include="CLASS\MODEL\MODEL_DL.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DR.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DS.vb" />
+    <Compile Include="CLASS\MODEL\MODEL_EDIT_LCN.vb" />
     <Compile Include="CLASS\MODEL\MODEL_LCN.vb" />
     <Compile Include="CLASS\MODEL\MODEL_RESULT.vb" />
     <Compile Include="CLASS\MODEL\MODEL_BOX.vb" />

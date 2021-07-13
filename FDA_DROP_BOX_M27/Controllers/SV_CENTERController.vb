@@ -42,6 +42,14 @@ Namespace Controllers
 
         End Function
 
+        Function SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP(ByVal LOCATION_TYPE_CD As String, ByVal IDENTIFY As String)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2(LOCATION_TYPE_CD, IDENTIFY)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_MAS_DRUG_SHAPE()
             Dim dt As New DataTable
             Dim bao As New BAO
@@ -88,7 +96,7 @@ Namespace Controllers
         Function SP_MASTER_CER_PK_BY_FK_IDA(ByVal FK_IDA As String)
             Dim dt As New DataTable
             Dim bao As New BAO
-            dt = bao.SP_MASTER_CER_PK_BY_FK_IDA(22069)
+            dt = bao.SP_MASTER_CER_PK_BY_FK_IDA(FK_IDA)
             Dim clsds As New ClassDataset
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
@@ -856,6 +864,28 @@ Namespace Controllers
 
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
+
+        Function GET_LCN_EDIT(ByVal IDA As Integer) As JsonResult
+            Dim model As New MODEL_EDIT_LCN
+            Dim bao As New BAO
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(IDA)
+            'Dim dt As New DataTable
+            'Try
+            '    dt = bao.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2(2, dao.fields.CITIZEN_ID_AUTHORIZE)
+            'Catch ex As Exception
+
+            'End Try
+            'For Each dr As DataRow In dt.Rows
+            '    Try
+            '        model.fulladdr_no_keep = dr("fulladdr_no")
+            '    Catch ex As Exception
+
+            '    End Try
+            'Next
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+
         Function test_dh() As JsonResult
             Dim model_dhs As New MODEL_DH
             ''model_dhs._CER.TR_ID = 0
@@ -1114,6 +1144,13 @@ Namespace Controllers
         Function SETMODEL_DHA() As JsonResult
 
             Dim MODEL As New MODEL_DH
+
+            Return Json(MODEL, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function SETMODEL_EDIT_LCN() As JsonResult
+
+            Dim MODEL As New MODEL_EDIT_LCN
 
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function

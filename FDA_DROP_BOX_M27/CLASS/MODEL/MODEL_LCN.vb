@@ -206,3 +206,5 @@
     Public RCVNO_DISPLAY As String
     Public RCV_DATE_DISPLAY As String
 End Class
+
+
