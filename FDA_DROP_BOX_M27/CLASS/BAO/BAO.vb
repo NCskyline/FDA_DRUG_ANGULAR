@@ -242,6 +242,18 @@ Public Class BAO
 
         Return dt
     End Function
+    Public Function SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_1(ByVal LOCATION_TYPE_CD As Integer, ByVal iden As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_1 @LOCATION_TYPE_CD= " & LOCATION_TYPE_CD & " ,@iden= '" & iden & "'"
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+
+        Catch ex As Exception
+
+        End Try
+        Return dt
+    End Function
     Public Function SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(ByVal LOCATION_ADDRESS_IDA As Integer) As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA @LOCATION_ADDRESS_IDA = " & LOCATION_ADDRESS_IDA

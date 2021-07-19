@@ -93,6 +93,17 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
         End Function
+
+
+        Function SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_1(ByVal LOCATION_TYPE_CD As Integer, ByVal IDENTIFY As String)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_1(LOCATION_TYPE_CD, IDENTIFY)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
         Function SP_MASTER_CER_PK_BY_FK_IDA(ByVal FK_IDA As String)
             Dim dt As New DataTable
             Dim bao As New BAO

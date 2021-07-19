@@ -259,7 +259,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
             var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP, $scope.GMP_CHEM, PROCESS);
                 Getdata.then(function (datas) {
                     Swal.fire({
-                        title: 'ERROR',
+                        title: 'SUCCESS',
                         text: 'บันทึกข้อมูลเรียบร้อย',
                         icon: 'ดฟสหำ',
                         confirmButtonColor: '#3085d6',
@@ -269,7 +269,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
                  });
         } else {
             Swal.fire({
-                title: 'SUCCESS',
+                title: 'ERROR',
                 text: 'กรุณากรอกข้อมูลให้ครบถ้วน',
                 icon: 'ดฟสหำ',
                 confirmButtonColor: '#3085d6',

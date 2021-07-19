@@ -102,6 +102,18 @@
         });
         return response;
     };
+    
+    this.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_1 = function (LOCATION_TYPE_CD, IDENTIFY) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_1"),
+            params: {
+                LOCATION_TYPE_CD: LOCATION_TYPE_CD,
+                IDENTIFY: IDENTIFY
+            }
+        });
+        return response;
+    };
 
     //this.GET_LCN_INFORMATION_BSN_INPUT = function (LOCATION_TYPE_CD,iden) {
     //    var response = $http({
