@@ -5,7 +5,7 @@
 
 <div ng-controller="AUTHEN_STAFF_CTRL" ng-app="ANGULAR_APP">
     <div>
-        <input class="text" />
+        
         <button class="btn btn-lg" ng-click="BTN_LOT_RELEASE('5','2564')">GET</button>
     </div>
     <div>

@@ -826,7 +826,7 @@
             Year: Year
         };
         const convertjson = JSON.stringify(jsondata);
-        var response = $http({
+        var response = $https({
             method: "post",
             url: "http://ilabplus.dmsc.moph.go.th/DMSC_Service/GetLotReleaseInfo",
             dataType: "json",
