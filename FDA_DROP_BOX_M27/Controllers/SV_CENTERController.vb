@@ -1490,18 +1490,19 @@ Namespace Controllers
             dao.fields = bb.CER
 
 
-            'dao.insert()
+            dao.insert()
 
             Dim IDA As Integer = dao.fields.IDA
 
             Dim dao_manu As New DAO_DRUG.TB_CER_DETAIL_MANUFACTURE
             dao_manu.fields = bb.CER_DETAIL_MANUFACTURE
-            'dao_manu.fields.FK_IDA = IDA
-            'dao_manu.insert()
+            dao_manu.fields.FK_IDA = IDA
+            dao_manu.insert()
             Dim dao_chem As New DAO_DRUG.TB_CER_DETAIL_CASCHEMICAL
             Dim jss2 As New JavaScriptSerializer
             dao_chem.Details = jss2.Deserialize(XML_CHEM, GetType(List(Of CER_DETAIL_CASCHEMICAL)))
 
+            '''สาร
             For Each dao_chem.fields In dao_chem.Details
                 Dim i As Integer = 1
 
@@ -1531,7 +1532,7 @@ Namespace Controllers
                     .ROW_ID = i
                     .TR_ID = tr_id
                 End With
-                'dao_chem1.insert()
+                dao_chem1.insert()
                 i += 1
             Next
 
