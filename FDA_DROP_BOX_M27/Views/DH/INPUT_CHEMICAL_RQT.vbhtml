@@ -13,7 +13,7 @@ End Code*@
             <tr>
                 <td width="30%">วันที่</td>
                 <td>
-                    <md-datepicker ng-model="LIST_CHEM.DOCUMENT_DATE" md-placeholder="Enter date"
+                    <md-datepicker ng-model="LIST_CHEM.CHEMICAL_REQUEST.REQUEST_DATE" md-placeholder="Enter date"
                     input-aria-describedby="datepicker-description"
                     input-aria-labelledby="datepicker-header "></md-datepicker>
                 </td>
@@ -21,43 +21,43 @@ End Code*@
             <tr>
                 <td>ชื่อสาร</td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_CHEM.iowanm" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline"  ng-model="LIST_CHEM.CHEMICAL_REQUEST.iowanm" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
                 <td>รายละเอียดเพิ่มเติม</td>
                 <td>
-                    <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text"  ng-model="LIST_CHEM.CHEMICAL_REQUEST.DESCRIPTION_OTHER" />
                 </td>
             </tr>
             <tr>
                 <td>CAS NUMBER</td>
                 <td>
-                    <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" ng-model="LIST_CHEM.CHEMICAL_REQUEST.cas_number"/>
                 </td>
             </tr>
             <tr>
                 <td>INN</td>
                 <td>
-                    <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" ng-model="LIST_CHEM.CHEMICAL_REQUEST.INN"/>
                 </td>
             </tr>
             <tr>
                 <td>INN TH</td>
                 <td>
-                    <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" ng-model="LIST_CHEM.CHEMICAL_REQUEST.INN_TH"/>
                 </td>
             </tr>
             <tr>
                 <td>Email สำหรับติดต่อ</td>
                 <td>
-                    <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" ng-model="LIST_CHEM.CHEMICAL_REQUEST.EMAIL"/>
                 </td>
             </tr>
             <tr>
                 <td>เบอร์โทรศัพท์ติดต่อ</td>
                 <td>
-                    <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" ng-model="LIST_CHEM.CHEMICAL_REQUEST.TEL"/>
                 </td>
             </tr>
             <tr>
@@ -107,3 +107,6 @@ End Code*@
 
         </table>
     </div>
+<div>
+
+</div>

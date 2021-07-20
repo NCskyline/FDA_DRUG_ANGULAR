@@ -4404,6 +4404,15 @@ Namespace DAO_DRUG
             For Each Me.fields In datas
             Next
         End Sub
+        Private _Details As New List(Of CHEMICAL_REQUEST)
+        Public Property Details() As List(Of CHEMICAL_REQUEST)
+            Get
+                Return _Details
+            End Get
+            Set(ByVal value As List(Of CHEMICAL_REQUEST))
+                _Details = value
+            End Set
+        End Property
 
         Public Sub GetDataAll()
             datas = (From p In db.CHEMICAL_REQUESTs Select p)

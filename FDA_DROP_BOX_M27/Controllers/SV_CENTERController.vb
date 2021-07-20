@@ -1473,6 +1473,83 @@ Namespace Controllers
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
 
         End Function
+        Function INSERT_CHEM_RQT(ByVal XML_CHEM As String, ByVal _ProcessID As String, ByVal FK_IDA As Integer, ByVal MAIN_TYPE As Integer, ByVal SUB_TYPE As Integer, ByVal aori As String) As JsonResult
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_CHEMICAL = jss.Deserialize(XML_CHEM, GetType(MODEL_CHEMICAL))
+
+            Dim dao As New DAO_DRUG.TB_CHEMICAL_REQUEST
+
+
+            Dim jss2 As New JavaScriptSerializer
+
+
+            'Dim dao2 As New DAO_DRUG.TB_CHEMICAL_REQUEST
+            dao.Details = jss2.Deserialize(XML_CHEM, GetType(List(Of CHEMICAL_REQUEST)))
+            dao.fields.REQUEST_DATE = Date.Now
+            'Try
+            '    dao.fields.iowanm = dao2.fields.iowanm
+            'Catch ex As Exception
+
+            'End Try
+            'Try
+            '    dao.fields.DESCRIPTION_OTHER = dao2.fields.DESCRIPTION_OTHER
+            'Catch ex As Exception
+
+            'End Try
+            'Try
+            '    dao.fields.cas_number = dao2.fields.cas_number
+            'Catch ex As Exception
+
+            'End Try
+            'Try
+            '    dao.fields.INN = dao2.fields.INN
+            'Catch ex As Exception
+
+            'End Try
+            'Try
+            '    dao.fields.EMAIL = dao2.fields.EMAIL
+            'Catch ex As Exception
+
+            'End Try
+            'Try
+            '    dao.fields.TEL = dao2.fields.TEL
+            'Catch ex As Exception
+
+            'End Try
+            'Try
+            '    dao.fields.INN_TH = dao2.fields.INN_TH
+            'Catch ex As Exception
+
+            'End Try
+
+            Try
+                dao.fields.FK_IDA = FK_IDA
+            Catch ex As Exception
+
+            End Try
+            Try
+                dao.fields.IDENTIFY = _CLS.CITIZEN_ID
+            Catch ex As Exception
+
+            End Try
+            Try
+                dao.fields.CITIZEN_ID_AUTHORIZE = _CLS.CITIZEN_ID_AUTHORIZE
+            Catch ex As Exception
+
+            End Try
+            dao.fields.STATUS_ID = 1
+            dao.fields.MAIN_TYPE = MAIN_TYPE 'Request.QueryString("mt")
+            dao.fields.SUB_TYPE = SUB_TYPE 'Request.QueryString("st")
+            dao.fields.aori = aori 'Request.QueryString("t")
+            Try
+                dao.fields.PROCESS_ID = _ProcessID 'Request.QueryString("process")
+            Catch ex As Exception
+
+            End Try
+            dao.insert()
+
+            Return Json(msg_r, JsonRequestBehavior.AllowGet)
+        End Function
 
         Function INSERT_CERT_GMP(ByVal XML_CERT As String, ByVal XML_CHEM As String, ByVal _ProcessID As String) As JsonResult
             Dim jss As New JavaScriptSerializer
