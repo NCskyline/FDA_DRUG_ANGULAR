@@ -528,7 +528,13 @@
         return response;
     };
 
-
+    this.SETMODEL_CHEMICAL = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SETMODEL_CHEMICAL")
+        });
+        return response;
+    };
 
     this.GET_DATAPROCESS = function (P_ID) {
         var response = $http({
@@ -674,6 +680,20 @@
         });
         return response;
     };
+
+    
+    this.GET_DETAIL_CHEM_RQT_STAFF = function (IDA_CHEM_RQT) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_DETAIL_CHEM_RQT_STAFF"), //ไปดูที่ไฟล์ DATA_CENTERController.vb
+            dataType: "json",
+            data: {
+                IDA_CHEM_RQT: IDA_CHEM_RQT
+            }
+        });
+        return response;
+    };
+
 
     this.UPDATE_DATA_STAFF = function (TR_ID, STATUS_ID, REMARK) {
         var response = $http({

@@ -348,6 +348,7 @@
     <Content Include="Scripts_angular\CENTER_SV.js" />
     <Content Include="Scripts_angular\CERT_GMP_CTRL.js" />
     <Content Include="Scripts_angular\DH_CTRL.js" />
+    <Content Include="Scripts_angular\DH_STAFF_CTRL.js" />
     <Content Include="Scripts_angular\DL_CTRL.js" />
     <Content Include="Scripts_angular\DR_CTRL.js" />
     <Content Include="Scripts_angular\JS_COMMON.js" />
@@ -525,6 +526,7 @@
     <Content Include="Views\LCN\INPUT_DRUG_YORBOR13.vbhtml" />
     <Content Include="Views\LCN\INPUT_DRUG_YORBOR16.vbhtml" />
     <Content Include="Views\LCN\INPUT_DRUG_YORSOR19.vbhtml" />
+    <Content Include="Views\DH_STAFF\FRM_CHEMICAL_STAFF_COMFIRM_TEXT.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>

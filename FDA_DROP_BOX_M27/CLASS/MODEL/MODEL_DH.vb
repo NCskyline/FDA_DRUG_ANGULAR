@@ -64,16 +64,19 @@ End Class
 
 Public Class MODEL_CHEMICAL
 
-    Private _MODEL_CHEM As New CHEMICAL_REQUEST
-    Public Property MODEL_CHEM() As CHEMICAL_REQUEST
+    Private _CHEMICAL_REQUEST As New CHEMICAL_REQUEST
+    Public Property CHEMICAL_REQUEST() As CHEMICAL_REQUEST
         Get
-            Return _MODEL_CHEM
+            Return _CHEMICAL_REQUEST
         End Get
         Set(ByVal value As CHEMICAL_REQUEST)
-            _MODEL_CHEM = value
+            _CHEMICAL_REQUEST = value
         End Set
     End Property
 
+    Public iowanm_show As String
+    Public cas_number_show As String
+    Public aori_show As String
 End Class
 
 Public Class MODEL_CER_GMP

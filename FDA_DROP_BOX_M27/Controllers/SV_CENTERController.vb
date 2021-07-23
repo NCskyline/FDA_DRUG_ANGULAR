@@ -685,6 +685,14 @@ Namespace Controllers
 
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
+        Function GET_DETAIL_CHEM_RQT_STAFF(ByVal IDA_CHEM_RQT As Integer) As JsonResult
+            Dim model As New MODEL_CHEMICAL
+            Dim dao As New DAO_DRUG.TB_CHEMICAL_REQUEST
+            dao.GetDataby_IDA(IDA_CHEM_RQT)
+            model.CHEMICAL_REQUEST = dao.fields
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
         Function GET_INFORMARION_DH(ByVal LCN_IDA As Integer) As JsonResult
             Dim model As New MODEL_DH
             Dim dao As New DAO_DRUG.ClsDBdalcn
@@ -1165,7 +1173,12 @@ Namespace Controllers
 
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
+        Function SETMODEL_CHEMICAL() As JsonResult
 
+            Dim MODEL As New MODEL_CHEMICAL
+
+            Return Json(MODEL, JsonRequestBehavior.AllowGet)
+        End Function
         Public Function SETMODEL_LIST() As JsonResult
             Dim MODEL As New MODEL_FILELIST
             Dim filelist As New FILE_LIST

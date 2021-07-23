@@ -14,10 +14,10 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     var LCT_IDA = sessionStorage.LCT_IDA;
     var PROCESS = QueryString("PROCESS");
     var CITIZEN = '0105527028430'//'0105527028430';0000000000000
-
+    var IDA_CHEM_RQT = 8728 ;
     $scope.PROCESS_CHEM = '';
     //------------------------------ PAGINGNATION ---------------------------//
-
+   
     $scope.currentPage = 0;
     $scope.paging = {
         total: 20,
@@ -33,7 +33,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     }
 
     //----------------------------------------------------------------------//
-
+    
     $scope.pageload = function () {
 
         var PROCESS_ID = sessionStorage.DH_PROCESS_ID;
@@ -110,6 +110,10 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
             }, function () { });
         }
     };
+
+
+    
+
 
     $scope.DATA_CHE1 = function (PROCESS) {
 

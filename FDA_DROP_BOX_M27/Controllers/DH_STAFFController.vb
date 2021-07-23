@@ -17,6 +17,8 @@ Namespace Controllers
         Function FRM_CHEMICAL_STAFF_MAIN() As ActionResult
             Return View()
         End Function
-
+        Function FRM_CHEMICAL_STAFF_COMFIRM_TEXT() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
