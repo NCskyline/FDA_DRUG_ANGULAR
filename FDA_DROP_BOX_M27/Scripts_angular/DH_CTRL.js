@@ -13,7 +13,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     var LCN_IDA = sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;
     var PROCESS = QueryString("PROCESS");
-    var CITIZEN = '0105527028430'//'0105527028430';0000000000000
+    var CITIZEN = '0000000000000';//'0105527028430';0000000000000
     var IDA_CHEM_RQT = 8728 ;
     $scope.PROCESS_CHEM = '';
     //------------------------------ PAGINGNATION ---------------------------//
@@ -371,7 +371,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         } else if (month == '03') {
             month = "มี.ค.";
         } else if (month == '04') {
-            month = "เม.ษ.";
+            month = "เม.ย.";
         } else if (month == '05') {
             month = "พ.ค.";
         } else if (month == '06') {
