@@ -92,11 +92,11 @@ End Code*@
                             <tr>
                                 <td>
                                    
-                                    <input type="button" ID="btn_save" class="btn btn-lg" ng-click="BTN_SAVE()" value="บันทึก" />
+                                    <input type="button" ID="btn_save" class="btn btn-lg" ng-click="BTN_SAVE_CHEM()" value="บันทึก" />
                                 </td>
                                 <td>
                                     @*<asp:Button ID="btn_edit" runat="server" Text="แก้ไข" CssClass="btn-lg" />*@
-                                    <input type="button" ID="btn_edit" class="btn btn-lg" ng-click="BTN_EDIT()" value="แก้ไข" />
+                                    <input type="button" ID="btn_edit" class="btn btn-lg" ng-click="BTN_EDIT_CHEM()" value="แก้ไข" />
                                 </td>
                                 <td><input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" /></td>
                             </tr>

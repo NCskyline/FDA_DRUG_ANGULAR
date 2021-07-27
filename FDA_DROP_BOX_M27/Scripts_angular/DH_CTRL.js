@@ -344,6 +344,89 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         REDIRECT('../DH/FRM_MAIN_PAGE_PHESAJ');
     };
 
+    $scope.BTN_SAVE_CHEM = function () {
+        var cEmpty = 0;
+        if (LIST_CHEM.CHEMICAL_REQUEST.iowanm.trim().length < 2) {
+            cEmpty = cEmpty + 1;
+        }
+
+        //if (LIST_CHEM.CHEMICAL_REQUEST.iowanm.trim().length < 2) {
+        //    cEmpty = cEmpty + 1;
+        //}
+        //if (LIST_CHEM.CHEMICAL_REQUEST.iowanm.trim().length < 2) {
+        //    cEmpty = cEmpty + 1;
+        //}
+        //if (LIST_CHEM.CHEMICAL_REQUEST.iowanm.trim().length < 2) {
+        //    cEmpty = cEmpty + 1;
+        //}
+
+        if (cEmpty == 0) {
+            var Getdata = CENTER_SV.INSERT_CHEM_RQT($scope.LIST_GMP, PROCEESS, FK_IDA, MAIN_TYPE, SUB_TYPE, aori);
+            Getdata.then(function (datas) {
+                Swal.fire({
+                    title: 'SUCCESS',
+                    text: 'บันทึกข้อมูลเรียบร้อย',
+                    icon: 'ดฟสหำ',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+
+                });
+            });
+        } else {
+            Swal.fire({
+                title: 'ERROR',
+                text: 'กรุณากรอกชื่อสาร',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+
+        }
+
+    };
+    $scope.BTN_EDIT_CHEM = function () {
+        var cEmpty = 0;
+        if (LIST_CHEM.CHEMICAL_REQUEST.iowanm.trim().length < 2) {
+            cEmpty = cEmpty + 1;
+        }
+
+        //if (LIST_CHEM.CHEMICAL_REQUEST.iowanm.trim().length < 2) {
+        //    cEmpty = cEmpty + 1;
+        //}
+        //if (LIST_CHEM.CHEMICAL_REQUEST.iowanm.trim().length < 2) {
+        //    cEmpty = cEmpty + 1;
+        //}
+        //if (LIST_CHEM.CHEMICAL_REQUEST.iowanm.trim().length < 2) {
+        //    cEmpty = cEmpty + 1;
+        //}
+
+        if (cEmpty == 0) {
+            var Getdata = CENTER_SV.UPDATE_CHEM_RQT($scope.LIST_GMP,IDA);
+            Getdata.then(function (datas) {
+                Swal.fire({
+                    title: 'SUCCESS',
+                    text: 'บันทึกข้อมูลเรียบร้อย',
+                    icon: 'ดฟสหำ',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+
+                });
+            });
+        } else {
+            Swal.fire({
+                title: 'ERROR',
+                text: 'กรุณากรอกชื่อสาร',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+
+        }
+
+    };
+
     function CV_DATE(data) {
         return new Date(parseInt(data.replace('/Date(', '').replace(')/', ''))).toLocaleDateString('th-TH');
     }

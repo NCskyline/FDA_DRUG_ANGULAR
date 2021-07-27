@@ -1564,6 +1564,23 @@ Namespace Controllers
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
         End Function
 
+        Function UPDATE_CHEM_RQT(ByVal XML_CHEM As String, ByVal IDA As Integer) As JsonResult
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_CHEMICAL = jss.Deserialize(XML_CHEM, GetType(MODEL_CHEMICAL))
+
+            Dim dao As New DAO_DRUG.TB_CHEMICAL_REQUEST
+            dao.GetDataby_IDA(IDA)
+
+            Dim jss2 As New JavaScriptSerializer
+
+
+            'Dim dao2 As New DAO_DRUG.TB_CHEMICAL_REQUEST
+            dao.Details = jss2.Deserialize(XML_CHEM, GetType(List(Of CHEMICAL_REQUEST)))
+
+            dao.update()
+
+            Return Json(msg_r, JsonRequestBehavior.AllowGet)
+        End Function
         Function INSERT_CERT_GMP(ByVal XML_CERT As String, ByVal XML_CHEM As String, ByVal _ProcessID As String) As JsonResult
             Dim jss As New JavaScriptSerializer
             Dim bb As MODEL_CER_GMP = jss.Deserialize(XML_CERT, GetType(MODEL_CER_GMP))

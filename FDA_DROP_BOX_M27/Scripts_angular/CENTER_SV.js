@@ -160,7 +160,37 @@
         });
         return response;
     };
+    
+    this.INSERT_CHEM_RQT = function (LIST_GMP, PROCEESS, FK_IDA, MAIN_TYPE, SUB_TYPE, aori) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/INSERT_CHEM_RQT"),
+            dataType: "json",
+            data: {
+                XML_CHEM: JSON.stringify(LIST_GMP),
+                _ProcessID: PROCEESS,
+                FK_IDA: FK_IDA,
+                MAIN_TYPE: MAIN_TYPE,
+                SUB_TYPE: SUB_TYPE,
+                aori: aori
+            }
+        });
+        return response;
+    };
 
+    
+    this.UPDATE_CHEM_RQT = function (LIST_GMP, IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/UPDATE_CHEM_RQT"),
+            dataType: "json",
+            data: {
+                XML_CHEM: JSON.stringify(LIST_GMP),
+               IDA:IDA
+            }
+        });
+        return response;
+    };
 
     this.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA = function (LOCATION_ADDRESS_IDA) {
         var response = $http({
