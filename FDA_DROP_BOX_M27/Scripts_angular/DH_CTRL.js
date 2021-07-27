@@ -250,6 +250,13 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
         }, function () { });  
 
+        var getdata = CENTER_SV.GET_INFORMARION_DH(LCN_IDA);
+        getdata.then(function (datas) {
+            $scope.LIST_DH = datas.data;
+        }, function () { });
+
+
+
         var getdataDH = CENTER_SV.GET_PREVIEW_DH(IDA);
         getdataDH.then(function (datas) {
 

@@ -28,7 +28,7 @@ End Code*@
                 ข้าพเจ้า
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;" align="center">
-                <label>{{}}</label>
+                <label>{{LIST_DH.NAME}}</label>
             </td>
             <td>
                 ผู้รับอนุญาต
@@ -41,11 +41,11 @@ End Code*@
             <td width="25%">
                 <form name="myForm">
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="1">
+                        <input type="radio" ng-model="LIST_DH.LCN_TYPE" value="1">
                         ผลิต
                     </label>
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="2">
+                        <input type="radio" ng-model="LIST_DH.LCN_TYPE" value="2">
                         นำหรือสั่ง เข้ามาในราชอาณาจักร ซึ่งยาแผนปัจจุบัน
                     </label>
                 </form>
@@ -54,7 +54,7 @@ End Code*@
                 ใบอนุญาต เลขที่
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
-                <span style="padding-left:5px;" />  TESTTTTTTTTTTTTTTTTTTTTTT
+                <span style="padding-left:5px;" />  <label>{{LIST_DH.LCN_NO_DISPLAY}}</label>
             </td>
            
         </tr>
@@ -64,14 +64,14 @@ End Code*@
         <tr>
             <td width="8%">อยู่เลขที่ </td>
             <td colspan="2" style="border-bottom:dotted;border-bottom-width:thin;">
-                dddddddddddddddddd
+                <label>{{LIST_DH.FULL_ADDR}}</label>
             </td>
             <td></td>
         </tr>
         <tr>
             <td>หมายเลขโทรศัพท์ </td>
             <td colspan="2" style="border-bottom:dotted;border-bottom-width:thin;">
-                1234556 
+                <label>{{LIST_DH.TEL}}</label>
             </td>
             <td>มีความประสงค์ขอ</td>
         </tr>
@@ -96,11 +96,11 @@ End Code*@
                 <form name="myForm">
                     ซึ่ง
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="1">
+                        <input type="radio" ng-model="LIST_DH.LCN_TYPE" value="1">
                         เภสัชเคมีภัณฑ์เดี่ยว
                     </label>
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="2">
+                        <input type="radio" ng-model="LIST_DH.LCN_TYPE" value="2">
                         เภสัชเคมีภัณฑ์กึ่งสำเร็จรูป
                     </label>
                 </form>
