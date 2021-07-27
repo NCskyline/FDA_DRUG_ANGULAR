@@ -548,6 +548,19 @@
         return response;
     };
 
+    
+    this.GET_INFORMARION_DH = function (LCN_IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_INFORMARION_DH"),
+            params: {
+                LCN_IDA: LCN_IDA
+            }
+        });
+        return response;
+    };
+
+
     this.GETDATA_DRUG_PRODUCT = function (register) {
         var response = $http({
             method: "post",
