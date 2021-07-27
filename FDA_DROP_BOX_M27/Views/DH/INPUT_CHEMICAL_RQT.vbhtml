@@ -90,9 +90,15 @@ End Code*@
                     <div style="text-align: center;">
                         <table>
                             <tr>
-                                <td><asp:Button ID="btn_save" runat="server" Text="บันทึก" CssClass="btn-lg" /></td>
-                                <td><asp:Button ID="btn_edit" runat="server" Text="แก้ไข" CssClass="btn-lg" /></td>
-                                <td><asp:Button ID="btn_close" runat="server" Text="ปิดหน้าต่าง" CssClass="btn-lg" /></td>
+                                <td>
+                                   
+                                    <input type="button" ID="btn_save" class="btn btn-lg" ng-click="BTN_SAVE()" value="บันทึก" />
+                                </td>
+                                <td>
+                                    @*<asp:Button ID="btn_edit" runat="server" Text="แก้ไข" CssClass="btn-lg" />*@
+                                    <input type="button" ID="btn_edit" class="btn btn-lg" ng-click="BTN_EDIT()" value="แก้ไข" />
+                                </td>
+                                <td><input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" /></td>
                             </tr>
                         </table>
 

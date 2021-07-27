@@ -28,7 +28,7 @@ End Code*@
                 ข้าพเจ้า
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;" align="center">
-                <label></label>
+                <label>{{}}</label>
             </td>
             <td>
                 ผู้รับอนุญาต
