@@ -61,7 +61,7 @@ function CHK_TOKEN() {
 
 
 
-        document.getElementById("app").innerHTML = "DRUG DROPBOX";
+        document.getElementById("app").innerHTML = "ระบบยา";
     }
 }
 

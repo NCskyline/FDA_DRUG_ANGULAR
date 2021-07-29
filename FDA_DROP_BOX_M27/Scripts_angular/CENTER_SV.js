@@ -302,7 +302,7 @@
     this.SP_MASTER_sysisocnt = function () {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/SV_CENTER/SP_MASTER_sysisocnt"),
+            url: SET_URL_SV("/SV_CENTER/SP_MASTER_sysisocnt")
             //params: {
             //    PRODUCT_GROUP: PRODUCT_GROUP
             //}
@@ -313,7 +313,7 @@
     this.SP_dactg = function () {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/SV_CENTER/SP_dactg"),
+            url: SET_URL_SV("/SV_CENTER/SP_dactg")
             //params: {
             //    PRODUCT_GROUP: PRODUCT_GROUP
             //}
@@ -323,7 +323,7 @@
     this.SP_DRUG_UNIT_PHYSIC = function () {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/SV_CENTER/SP_DRUG_UNIT_PHYSIC"),
+            url: SET_URL_SV("/SV_CENTER/SP_DRUG_UNIT_PHYSIC")
             //params: {
             //    PRODUCT_GROUP: PRODUCT_GROUP
             //}
@@ -334,7 +334,7 @@
     this.SP_SYSPREFIX = function () {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/SV_CENTER/SP_SYSPREFIX"),
+            url: SET_URL_SV("/SV_CENTER/SP_SYSPREFIX")
             //params: {
             //    PRODUCT_GROUP: PRODUCT_GROUP
             //}
@@ -345,7 +345,7 @@
     this.GET_dramltype = function () {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/SV_CENTER/GET_dramltype"),
+            url: SET_URL_SV("/SV_CENTER/GET_dramltype")
             //params: {
             //    PRODUCT_GROUP: PRODUCT_GROUP
             //}
@@ -376,7 +376,7 @@
     this.SP_MASTER_drclass = function () {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/SV_CENTER/SP_MASTER_drclass"),
+            url: SET_URL_SV("/SV_CENTER/SP_MASTER_drclass")
             //params: {
             //    PRODUCT_GROUP: PRODUCT_GROUP
             //}
@@ -387,7 +387,7 @@
     this.SP_dosage_form = function () {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/SV_CENTER/SP_dosage_form"),
+            url: SET_URL_SV("/SV_CENTER/SP_dosage_form")
             //params: {
             //    PRODUCT_GROUP: PRODUCT_GROUP
             //}
@@ -409,7 +409,7 @@
     this.GET_DRUG_PACKAGING = function () {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/SV_CENTER/GET_DRUG_PACKAGING"),
+            url: SET_URL_SV("/SV_CENTER/GET_DRUG_PACKAGING")
             //params: {
             //    PRODUCT_GROUP: PRODUCT_GROUP
             //}
@@ -420,7 +420,7 @@
     this.SP_MAS_DRUG_SHAPE = function () {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/SV_CENTER/SP_MAS_DRUG_SHAPE"),
+            url: SET_URL_SV("/SV_CENTER/SP_MAS_DRUG_SHAPE")
             //params: {
             //    PRODUCT_GROUP: PRODUCT_GROUP
             //}
@@ -431,7 +431,7 @@
     this.SP_drkdofdrg = function () {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/SV_CENTER/SP_drkdofdrg"),
+            url: SET_URL_SV("/SV_CENTER/SP_drkdofdrg")
             //params: {
             //    PRODUCT_GROUP: PRODUCT_GROUP
             //}
@@ -505,16 +505,7 @@
         return response;
     };
 
-    this.GETDATA_DRDOSAGE = function () {
-        var response = $http({
-            method: "post",
-            url: SET_URL_SV("/SV_CENTER/SP_GET_DRDOSAGE")
-
-        });
-        return response;
-    };
-
-    this.GET_AUTHEN = function (TOKEN) {
+    this.GET_AUTHEN_DATA = function (TOKEN) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/GET_AUTHEN"),
@@ -524,6 +515,17 @@
         });
         return response;
     };
+
+    this.GETDATA_DRDOSAGE = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_GET_DRDOSAGE")
+
+        });
+        return response;
+    };
+
+   
     
     this.SET_MODEL = function () {
         var response = $http({

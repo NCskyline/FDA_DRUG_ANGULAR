@@ -8,7 +8,7 @@ Namespace Controllers
         Function Index() As ActionResult
             Return View()
         End Function
-        Function AUTHEN_GATWAY() As ActionResult
+        Function AUTHEN() As ActionResult
             Return View()
         End Function
         Function FRM_STAFF_MAIN() As ActionResult

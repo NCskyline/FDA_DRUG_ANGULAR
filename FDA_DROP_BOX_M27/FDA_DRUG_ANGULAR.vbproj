@@ -397,7 +397,6 @@
       <LastGenOutput>Reference.vb</LastGenOutput>
     </Content>
     <Content Include="Views\DH\FRM_MAIN_DH.vbhtml" />
-    <Content Include="Views\AUTHEN\AUTHEN_GATWAY.vbhtml" />
     <Content Include="Linq\Linq_DRUG.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <SubType>Designer</SubType>
@@ -527,6 +526,7 @@
     <Content Include="Views\LCN\INPUT_DRUG_YORBOR16.vbhtml" />
     <Content Include="Views\LCN\INPUT_DRUG_YORSOR19.vbhtml" />
     <Content Include="Views\DH_STAFF\FRM_CHEMICAL_STAFF_COMFIRM_TEXT.vbhtml" />
+    <Content Include="Views\AUTHEN\AUTHEN.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>

@@ -12,13 +12,12 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
     pageload();
 
     function pageload() {
-        Swal.showLoading();
-        //var token = QueryString("Token");
-        var token = "PASS";
+        //Swal.showLoading();
+        var token = QueryString("Token");
+        //var token = "PASS";
         sessionStorage.token = token;
 
-        var getData = CENTER_SV.GET_AUTHEN(token);
-    
+        var getData = CENTER_SV.GET_AUTHEN_DATA(token);
 
         getData.then(function (datas) {
             $scope.AUTHEN = datas.data;
@@ -29,8 +28,8 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 sessionStorage.COMPANY_NAME = datas.data.COMPANY_NAME;
 
  
-                window.location = "/HOME/FRM_CUSTOMER_LCN"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
-                //window.location = "/DRUG_DROPBOX/HOME/FRM_CUSTOMER_LCN"; 
+                window.location = "/DH/FRM_MAIN_PAGE_PHESAJ"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
+               // window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PHESAJ";
             }
             else {
 

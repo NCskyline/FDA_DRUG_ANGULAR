@@ -604,6 +604,84 @@ Namespace Controllers
 #End Region
 
 #Region "GET_DATA"
+
+        Function GET_AUTHEN(ByVal TOKEN As String) As JsonResult
+            'CHECK_URL()
+
+
+
+            If TOKEN = "PASS" Then
+                _CLS.CITIZEN_ID = "0105522020724" ''"1100400181875"
+                _CLS.CITIZEN_ID_AUTHORIZE = "0105522020724" '"0105540078852"
+                _CLS.COMPANY_NAME = "บริษัท เทสออนลี่ จำกัด มหาขน"
+                _CLS.THANM = "นายทดสอบ ระบบ"
+                _CLS.TOKEN = TOKEN
+                _CLS.CODE = "900"
+                _CLS.SET_MAIN_PAGE1 = GET_BTN_DATA(0, 21020)
+                _CLS.SET_MAIN_PAGE2 = GET_BTN_DATA(1, 21020)
+                _CLS.SET_MAIN_PAGE3 = GET_BTN_DATA(2, 21020)
+                _CLS.SET_MAIN_PAGE4 = GET_BTN_DATA(3, 21020)
+
+            Else
+
+
+                Dim ws As New WS_AUTHEN.Authentication
+                Dim xml As String = ""
+                xml = ws.Authen_Login(TOKEN)
+
+                Dim clsxml As New Cls_XML
+                clsxml.ReadData(xml)
+                _CLS.CITIZEN_ID = clsxml.Get_Value_XML("Citizen_ID")
+                _CLS.CITIZEN_ID_AUTHORIZE = clsxml.Get_Value_XML("CITIEZEN_ID_AUTHORIZE")
+                _CLS.TOKEN = TOKEN
+                _CLS.GROUPS = clsxml.Get_Value_XML("Groups")
+                _CLS.SYSTEM_ID = clsxml.Get_Value_XML("System_ID")
+                _CLS.PVCODE = clsxml.Get_Value_XML("pvcode")
+                _CLS.THANM = clsxml.Get_Value_XML("Name")
+                _CLS.CODE = clsxml.Get_Value_XML("CODE")
+                _CLS.IDgroup = clsxml.Get_Value_XML("IDgroup")
+
+                'Dim xml_c As String = ""
+                'ดึงชื่อคน LOGIN เข้าระบบ
+                Dim ws_c As New WS_GET_CPN.WS_DATA_CENTER
+                'xml_c = ws_c.GET_DATA_IDENTIFY(_CLS.CITIZEN_ID, "0994000165676", "FUSION", "P@ssw0rdfusion440")
+                'clsxml.ReadData(xml_c)
+                'Dim CUSTOMER_NAME As String = clsxml.Get_Value_XML("thanm")
+                '_CLS.THANM = CUSTOMER_NAME
+
+                Dim xml_COM As String = ""
+                xml_COM = ws_c.GET_DATA_IDENTIFY(_CLS.CITIZEN_ID_AUTHORIZE, "0994000165676", "FUSION", "P@ssw0rdfusion440")
+                clsxml.ReadData(xml_COM)
+                Dim COMPANY_NAME As String = clsxml.Get_Value_XML("prefixnm") & " " & clsxml.Get_Value_XML("thanm") & " " & clsxml.Get_Value_XML("thalnm")
+                _CLS.COMPANY_NAME = COMPANY_NAME
+                _CLS.ADDR = clsxml.Get_Value_XML("Fulladdr")
+
+                'If CUSTOMER_NAME = "" Then 'กรณีไม่เจอ
+                '    'ดึงกรมการปกครอง
+                '    xml_c = ws_c.FDA_IDENTIFY(_CLS.CITIZEN_ID, "0994000165676", "FUSION", "P@ssw0rdfusion440")
+                '    clsxml.ReadData(xml_c) 'อ่าน XML อีกรอบ
+                '    CUSTOMER_NAME = clsxml.Get_Value_XML("prefixnm") & " " & clsxml.Get_Value_XML("thanm")
+                '    If CUSTOMER_NAME = "" Then 'เป็นค่าว่งอีกรอบเอาจาก สพร 
+                '        Dim dao_e As New DAO_CPN.TB_SYSEMAIL
+                '        dao_e.GetDataby_CTZNO(_CLS.CITIZEN_ID)
+                '        CUSTOMER_NAME = dao_e.fields.NAME
+                '    End If
+                '    _CLS.THANM_CUSTOMER = CUSTOMER_NAME
+                'Else
+                '    _CLS.THANM_CUSTOMER = clsxml.Get_Value_XML("prefixnm") & " " & clsxml.Get_Value_XML("thanm")
+                'End If
+
+                _CLS.SET_MAIN_PAGE1 = GET_BTN_DATA(0, 21020)
+                _CLS.SET_MAIN_PAGE2 = GET_BTN_DATA(1, 21020)
+                _CLS.SET_MAIN_PAGE3 = GET_BTN_DATA(2, 21020)
+                _CLS.SET_MAIN_PAGE4 = GET_BTN_DATA(3, 21020)
+
+
+            End If
+
+            Return Json(_CLS, JsonRequestBehavior.AllowGet)
+
+        End Function
         Function GET_LCN_NO(ByVal IDA As Integer) As JsonResult
             Dim model As New MODEL_LCN
             Dim dao As New DAO_DRUG.ClsDBdalcn
@@ -770,7 +848,7 @@ Namespace Controllers
 
         Function GET_PREVIEW_CERT(ByVal IDA As Integer) As JsonResult
             'IDA = 41941
-            Dim DT As DataTable
+            'Dim DT As DataTable
             Dim model As New MODEL_CER_GMP
             Dim dao_cer As New DAO_DRUG.TB_CER
             Dim dao_chem As New DAO_DRUG.TB_CER_DETAIL_CASCHEMICAL
@@ -911,7 +989,7 @@ Namespace Controllers
 
 
 
-
+            Return Json(model_dhs, JsonRequestBehavior.AllowGet)
         End Function
         'Function GET_MAS_BIO_UNIT(ByVal IDA As Integer) As JsonResult
         '    Dim dao As New DAO_DRUG.TB_MAS_BIO_UNIT
@@ -1048,82 +1126,7 @@ Namespace Controllers
 
 
 
-        Function GET_AUTHEN(ByVal TOKEN As String) As JsonResult
-            'CHECK_URL()
 
-
-
-            If TOKEN = "PASS" Then
-                _CLS.CITIZEN_ID = "0105522020724" ''"1100400181875"
-                _CLS.CITIZEN_ID_AUTHORIZE = "0105522020724" '"0105540078852"
-                _CLS.COMPANY_NAME = "บริษัท เทสออนลี่ จำกัด มหาขน"
-                _CLS.THANM = "นายทดสอบ ระบบ"
-                _CLS.TOKEN = TOKEN
-                _CLS.CODE = "900"
-                _CLS.SET_MAIN_PAGE1 = GET_BTN_DATA(0, 21020)
-                _CLS.SET_MAIN_PAGE2 = GET_BTN_DATA(1, 21020)
-                _CLS.SET_MAIN_PAGE3 = GET_BTN_DATA(2, 21020)
-                _CLS.SET_MAIN_PAGE4 = GET_BTN_DATA(3, 21020)
-
-            Else
-
-
-                Dim ws As New WS_AUTHEN.Authentication
-                Dim xml As String = ""
-                xml = ws.Authen_Login(TOKEN)
-
-                Dim clsxml As New Cls_XML
-                clsxml.ReadData(xml)
-                _CLS.CITIZEN_ID = clsxml.Get_Value_XML("Citizen_ID")
-                _CLS.CITIZEN_ID_AUTHORIZE = clsxml.Get_Value_XML("CITIEZEN_ID_AUTHORIZE")
-                _CLS.TOKEN = TOKEN
-                _CLS.GROUPS = clsxml.Get_Value_XML("Groups")
-                _CLS.SYSTEM_ID = clsxml.Get_Value_XML("System_ID")
-                _CLS.PVCODE = clsxml.Get_Value_XML("pvcode")
-                _CLS.THANM = clsxml.Get_Value_XML("Name")
-                _CLS.CODE = clsxml.Get_Value_XML("CODE")
-                _CLS.IDgroup = clsxml.Get_Value_XML("IDgroup")
-
-                'Dim xml_c As String = ""
-                'ดึงชื่อคน LOGIN เข้าระบบ
-                Dim ws_c As New WS_GET_CPN.WS_DATA_CENTER
-                'xml_c = ws_c.GET_DATA_IDENTIFY(_CLS.CITIZEN_ID, "0994000165676", "FUSION", "P@ssw0rdfusion440")
-                'clsxml.ReadData(xml_c)
-                'Dim CUSTOMER_NAME As String = clsxml.Get_Value_XML("thanm")
-                '_CLS.THANM = CUSTOMER_NAME
-
-                Dim xml_COM As String = ""
-                xml_COM = ws_c.GET_DATA_IDENTIFY(_CLS.CITIZEN_ID_AUTHORIZE, "0994000165676", "FUSION", "P@ssw0rdfusion440")
-                clsxml.ReadData(xml_COM)
-                Dim COMPANY_NAME As String = clsxml.Get_Value_XML("prefixnm") & " " & clsxml.Get_Value_XML("thanm") & " " & clsxml.Get_Value_XML("thalnm")
-                _CLS.COMPANY_NAME = COMPANY_NAME
-                _CLS.ADDR = clsxml.Get_Value_XML("Fulladdr")
-
-                'If CUSTOMER_NAME = "" Then 'กรณีไม่เจอ
-                '    'ดึงกรมการปกครอง
-                '    xml_c = ws_c.FDA_IDENTIFY(_CLS.CITIZEN_ID, "0994000165676", "FUSION", "P@ssw0rdfusion440")
-                '    clsxml.ReadData(xml_c) 'อ่าน XML อีกรอบ
-                '    CUSTOMER_NAME = clsxml.Get_Value_XML("prefixnm") & " " & clsxml.Get_Value_XML("thanm")
-                '    If CUSTOMER_NAME = "" Then 'เป็นค่าว่งอีกรอบเอาจาก สพร 
-                '        Dim dao_e As New DAO_CPN.TB_SYSEMAIL
-                '        dao_e.GetDataby_CTZNO(_CLS.CITIZEN_ID)
-                '        CUSTOMER_NAME = dao_e.fields.NAME
-                '    End If
-                '    _CLS.THANM_CUSTOMER = CUSTOMER_NAME
-                'Else
-                '    _CLS.THANM_CUSTOMER = clsxml.Get_Value_XML("prefixnm") & " " & clsxml.Get_Value_XML("thanm")
-                'End If
-
-                _CLS.SET_MAIN_PAGE1 = GET_BTN_DATA(0, 21020)
-                _CLS.SET_MAIN_PAGE2 = GET_BTN_DATA(1, 21020)
-                _CLS.SET_MAIN_PAGE3 = GET_BTN_DATA(2, 21020)
-                _CLS.SET_MAIN_PAGE4 = GET_BTN_DATA(3, 21020)
-
-
-            End If
-
-            Return Json(_CLS, JsonRequestBehavior.AllowGet)
-        End Function
 
         Function GET_BTN_DATA(ByVal BTN_GROUP As Integer, ByVal IDgroup As Integer) As Object
             Dim dao As New DAO_DRUG.TB_MAS_ADMIN_BUTTON
@@ -1609,7 +1612,7 @@ Namespace Controllers
             Dim jss2 As New JavaScriptSerializer
             dao_chem.Details = jss2.Deserialize(XML_CHEM, GetType(List(Of CER_DETAIL_CASCHEMICAL)))
 
-            '''สาร
+            ''สาร
             For Each dao_chem.fields In dao_chem.Details
                 Dim i As Integer = 1
 

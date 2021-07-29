@@ -97,26 +97,26 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
            
             $scope.LIST_GMP.CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE($scope.LIST_GMP.CER.DOCUMENT_DATE));
             $scope.LIST_GMP.CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE($scope.LIST_GMP.CER.EXP_DOCUMENT_DATE));
-            $scope.INPUT_CHEM = SET_URL_SV('../CERT/PREVIEW_CHEMICAL');
+            $scope.INPUT_CHEM = SET_URL_SV('/CERT/PREVIEW_CHEMICAL');
 
         }, function () { });
 
         
 
         if (PROCESS == '31') {
-            $scope.INPUT = SET_URL_SV('../CERT/INPUT_GMP');
+            $scope.INPUT = SET_URL_SV('/CERT/INPUT_GMP');
         }
         else if (PROCESS == '32') {
-            $scope.INPUT = SET_URL_SV('../CERT/INPUT_ISO');
+            $scope.INPUT = SET_URL_SV('/CERT/INPUT_ISO');
         }
         else if (PROCESS == '33') {
-            $scope.INPUT = SET_URL_SV('../CERT/INPUT_HACCP');
+            $scope.INPUT = SET_URL_SV('/CERT/INPUT_HACCP');
         }
         else if (PROCESS == '34') {
-            $scope.INPUT = SET_URL_SV('../CERT/INPUT_PICS');
+            $scope.INPUT = SET_URL_SV('/CERT/INPUT_PICS');
         }
         else if (PROCESS == '36') {
-            $scope.INPUT = SET_URL_SV('../CERT/INPUT_CERT_OTHER');
+            $scope.INPUT = SET_URL_SV('/CERT/INPUT_CERT_OTHER');
         }
 
         
