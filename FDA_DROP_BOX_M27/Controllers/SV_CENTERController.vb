@@ -1575,9 +1575,14 @@ Namespace Controllers
 
 
             'Dim dao2 As New DAO_DRUG.TB_CHEMICAL_REQUEST
-            dao.Details = jss2.Deserialize(XML_CHEM, GetType(List(Of CHEMICAL_REQUEST)))
+            Try
+                dao.Details = jss2.Deserialize(XML_CHEM, GetType(List(Of CHEMICAL_REQUEST)))
 
-            dao.update()
+                dao.update()
+            Catch ex As Exception
+
+            End Try
+
 
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
         End Function
@@ -1591,7 +1596,7 @@ Namespace Controllers
 
             Dim bao_tran As New BAO
             Dim tr_id As Integer = 0
-            'tr_id = bao_tran.insert_transection_new(_ProcessID, _CLS.CITIZEN_ID, _CLS.CITIZEN_ID_AUTHORIZE)
+            tr_id = bao_tran.insert_transection_new(_ProcessID, _CLS.CITIZEN_ID, _CLS.CITIZEN_ID_AUTHORIZE)
             Dim dao As New DAO_DRUG.TB_CER
 
             dao.fields = bb.CER
@@ -1608,10 +1613,10 @@ Namespace Controllers
             Dim dao_chem As New DAO_DRUG.TB_CER_DETAIL_CASCHEMICAL
             Dim jss2 As New JavaScriptSerializer
             dao_chem.Details = jss2.Deserialize(XML_CHEM, GetType(List(Of CER_DETAIL_CASCHEMICAL)))
-
+            Dim i As Integer = 1
             '''สาร
             For Each dao_chem.fields In dao_chem.Details
-                Dim i As Integer = 1
+
 
                 Dim dao_chem1 As New DAO_DRUG.TB_CER_DETAIL_CASCHEMICAL
                 With dao_chem1.fields
@@ -1651,13 +1656,13 @@ Namespace Controllers
             Dim bb As MODEL_DH = jss.Deserialize(XML_DH, GetType(MODEL_DH))
             Dim bao_tran As New BAO
             Dim tr_id As Integer = 0
-            'tr_id = bao_tran.insert_transection_new(_ProcessID, _CLS.CITIZEN_ID, _CLS.CITIZEN_ID_AUTHORIZE)
+            tr_id = bao_tran.insert_transection_new(_ProcessID, _CLS.CITIZEN_ID, _CLS.CITIZEN_ID_AUTHORIZE)
             Dim dao As New DAO_DRUG.ClsDBdh15rqt
 
             dao.fields = bb.dh15rqt
             dao.fields.IDENTIFY = _CLS.CITIZEN_ID_AUTHORIZE
 
-            'dao.insert()
+            dao.insert()
 
 
             Dim IDA As Integer = dao.fields.IDA
@@ -1682,7 +1687,7 @@ Namespace Controllers
             dao_DH15_DETAIL_MANUFACTURE_CER.fields.STANDARD_ID = dao_CER_DETAIL_MANUFACTURE.fields.STANDARD_ID
             dao_DH15_DETAIL_MANUFACTURE_CER.fields.ZIPCODE = dao_CER_DETAIL_MANUFACTURE.fields.ZIPCODE
 
-            'dao_DH15_DETAIL_MANUFACTURE_CER.insert()
+            dao_DH15_DETAIL_MANUFACTURE_CER.insert()
 
 
 
