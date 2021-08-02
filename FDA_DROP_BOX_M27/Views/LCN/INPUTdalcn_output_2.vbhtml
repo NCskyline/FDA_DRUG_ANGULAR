@@ -48,7 +48,7 @@
     </label>
 </div>
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
-    <div class="title2">
+    <div class="title2" style="font-family:'TH SarabunPSK';font-size:24px;">
         <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" @*border="1"*@>
             <tr>
                 <td style="text-align:left;width:20%">
@@ -268,35 +268,38 @@
 
         <table style="width:50%">
             <tr>
-                <td style="font-size:20px">
+                <td>
                     ชื่อสถานที่เก็บ ( 1 ) :
                 </td>
-                <td style="font-size:20px">
-                    <input style="width:100%" />
+                <td>
+                    <select class="dropdown" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
+                        <option value="0">--กรุณาเลือก--</option>
+                        <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
+                    </select>
                 </td>
             </tr>
-            <tr style="font-size:20px">
+            <tr>
                 <td>
                     อยู่เลขที่
                 </td>
                 <td>
-                    <input style="width:100%" />
+                    <label>{{LIST_LABEL.fulladdr}}</label>
                 </td>
             </tr>
-            <tr style="font-size:20px">
+            <tr>
                 <td>
                     โทรศัพท์
                 </td>
                 <td>
-                    <input style="width:100%" />
+                    <label>{{LIST_LABEL.tel}}</label>
                 </td>
             </tr>
-            <tr style="font-size:20px">
+            <tr style="font-size: 20px">
                 <td>
                     โทรศัพท์มือถือ
                 </td>
                 <td>
-                    <input style="width:100%" />
+                    <label>{{LIST_LABEL.Mobile}}</label>
                 </td>
             </tr>
         </table>
@@ -305,7 +308,7 @@
         <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
         <br />
         <br />
-        @*<table style="font-size:20px;width:100%" >
+        <table style="font-size:20px;width:100%" >
             <tr>
                 <td style="width:20%">
                     โดยมีเภสัชกรชั้น
@@ -347,7 +350,7 @@
                     เภสัชกรรมเลขที่
                 </td>
             </tr>
-        </table>*@
+        </table>
         <hr />
         <table style="font-size:20px;width:100%" @*border="1"*@>
             <tr>
@@ -481,20 +484,20 @@
 
 
         <div style="font-size:20px">
-            ข้าพเจ้าขอรับรองว่าในระยะเวลาสองปีก่อนยื่นคำำขอนี้ ข้าพเจ้าไม่เคยได้รับโทษจำำคุกโดยคำำพิพากษาถึงที่สุดหรือคำำสั่งที่ชอบด้วยกฎหมายให้จำำคุกในความผิดที่
-            กฎหมายบัญญัติ ให้ถือเอาการกระทำำโดยทุจริตเป็นองค์ประกอบหรือในความผิดตามกฎหมายว่าด้วยยาเสพติดให้โทษ กฎหมายว่าด้วยวัตถุที่ออกฤทธิ์ต่อจิตและ
+            ข้าพเจ้าขอรับรองว่าในระยะเวลาสองปีก่อนยื่นคำขอนี้ ข้าพเจ้าไม่เคยได้รับโทษจำคุกโดยคำพิพากษาถึงที่สุดหรือคำสั่งที่ชอบด้วยกฎหมายให้จำคุกในความผิดที่
+            กฎหมายบัญญัติ ให้ถือเอาการกระทำโดยทุจริตเป็นองค์ประกอบหรือในความผิดตามกฎหมายว่าด้วยยาเสพติดให้โทษ กฎหมายว่าด้วยวัตถุที่ออกฤทธิ์ต่อจิตและ
             ประสาท กฎหมายว่าด้วยการขายยาหรือพระราชบัญญัตินี้
             ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ
         </div>
         <br />
-        <div style="margin-left:10%;font-size:20px">(๑) รูปถ่ายของผู้ขออนุญาต ขนาด ๓ x ๔ เซนติเมตร จำำนวน ๓ รูป</div>
+        <div style="margin-left:10%;font-size:20px">(๑) รูปถ่ายของผู้ขออนุญาต ขนาด ๓ x ๔ เซนติเมตร จำนวน ๓ รูป</div>
         <div style="margin-left:10%;font-size:20px">(๒) เอกสารแสดงการเป็นเจ้าของกิจการและหลักทรัพย์</div>
-        <div style="margin-left:10%;font-size:20px">(๓) สำเนาทะเบียนบ้านของผู้ขออนุญาต (กรณีบุคคลธรรมดาเป็นผู้ขออนุญาต) หรือ ผู้ดำำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
+        <div style="margin-left:10%;font-size:20px">(๓) สำเนาทะเบียนบ้านของผู้ขออนุญาต (กรณีบุคคลธรรมดาเป็นผู้ขออนุญาต) หรือ ผู้ดำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
         <div style="margin-left:10%;font-size:20px">(๔) ใบรับรองของผู้ประกอบวิชาชีพเวชกรรมซึ่งรับรองว่าผู้ขออนุญาตไม่เป็นโรคตามมาตรา ๑๔ (๖) แห่งพระราชบัญญัติยา พ.ศ. ๒๕๑๐</div>
         <div style="margin-left:10%;font-size:20px">(๕) สัญญาระหว่างผู้ขออนุญาตและเภสัชกร ซึ่งรับจะเป็นผู้มีหน้าที่ปฏิบัติการของผู้ขออนุญาต</div>
         <div style="margin-left:10%;font-size:20px">(๖) สำเนาหรือรูปถ่ายใบอนุญาตประกอบวิชาชีพเภสัชกรรมของเภสัชกรทุกคน ซึ่งรับจะเป็นผู้มีหน้าที่ปฏิบัติการของผู้ขออนุญาต</div>
-        <div style="margin-left:10%;font-size:20px">(๗) เอกสารแสดงว่าเป็นผู้ดำำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
-        <div style="margin-left:10%;font-size:20px">(๘) เอกสารอื่นๆ ถ้าจำำเป็น</div>
+        <div style="margin-left:10%;font-size:20px">(๗) เอกสารแสดงว่าเป็นผู้ดำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
+        <div style="margin-left:10%;font-size:20px">(๘) เอกสารอื่นๆ ถ้าจำเป็น</div>
         <br />
         <br />
         <br />

@@ -223,7 +223,7 @@
                 E-mail
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_LCN.dalcn.Email" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_LCN.dalcn.Email" style="font-family:'TH SarabunPSK';" type="text" />
             </td>
         </tr>
     </table>
@@ -269,35 +269,38 @@
 
     <table style="width:50%">
         <tr>
-            <td style="font-size:20px">
+            <td>
                 ชื่อสถานที่เก็บ ( 1 ) :
             </td>
-            <td style="font-size:20px">
-                <input style="width:100%" />
+            <td>
+                <select class="dropdown" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
+                    <option value="0">--กรุณาเลือก--</option>
+                    <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
+                </select>
             </td>
         </tr>
-        <tr style="font-size:20px">
+        <tr>
             <td>
                 อยู่เลขที่
             </td>
             <td>
-                <input style="width:100%" />
+                <label>{{LIST_LABEL.fulladdr}}</label>
             </td>
         </tr>
-        <tr style="font-size:20px">
+        <tr>
             <td>
                 โทรศัพท์
             </td>
             <td>
-                <input style="width:100%" />
+                <label>{{LIST_LABEL.tel}}</label>
             </td>
         </tr>
-        <tr style="font-size:20px">
+        <tr style="font-size: 20px">
             <td>
                 โทรศัพท์มือถือ
             </td>
             <td>
-                <input style="width:100%" />
+                <label>{{LIST_LABEL.Mobile}}</label>
             </td>
         </tr>
     </table>
