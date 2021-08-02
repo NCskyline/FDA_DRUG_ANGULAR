@@ -3,7 +3,7 @@
     $scope.CITIZEN = "";
     $scope.lcnno = "";
     var LCN_IDA = sessionStorage.LCN_IDA;
-    var LCT_IDA = sessionStorage.LCT_IDA;  //117194
+    var LCT_IDA = 117194; //sessionStorage.LCT_IDA;  //
     var PROCESS = QueryString("PROCESS");
     var CITIZEN = '0105527028430';//'0105527028430';0000000000000
     var BSN_IDENTIFY = "";
@@ -80,8 +80,18 @@
         }, function () { });
 
         
+        var data_keep = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP('2', IDENTIFY);
+        data_keep.then(function (datas) {
+            $scope.REF_LOCATION_KEEP = datas.data;
+
+        }, function () { });
+
 
     };
+
+
+
+
 
     //var myApp = angular.module("ANGULAR_APP", []);
     //myApp.controller("LCN_CTRL", function ($scope) {
@@ -100,7 +110,15 @@
     //        $scope.LIST_LCN = datas.data;
     //    }, function () { });
     //};
+    $scope.getdetails = function (IDA) {
 
+        var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
+        Data_location.then(function (datas) {
+            $scope.LIST_LABEL = datas.data;
+            $scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr;
+        }, function () { });
+
+    };
 
     $scope.BTN_Search_BSN = function (BSN_IDENTIFY) {
 

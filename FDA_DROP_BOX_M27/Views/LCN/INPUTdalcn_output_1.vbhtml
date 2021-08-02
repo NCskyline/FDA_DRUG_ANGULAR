@@ -48,10 +48,12 @@
             color: #dd2c00;
             margin-left: 15px;
         }
+
+      
 </style>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="" >
-    <div style="font-family:'Taviraj'">
+    <div style="font-family:'TH SarabunPSK';font-size:24px;">
         <h1 style="text-align:right;font-size:24px;">
             <strong>แบบ ข.ย.๑</strong>
         </h1>
@@ -105,9 +107,9 @@
         <br />
         <br />
 
-        <h2 style="text-align:center;font-size:24px;">
+        <h1 style="text-align:center;">
             <strong>คำขออนุญาตขายยาแผนปัจจุบัน</strong>
-        </h2>
+        </h1>
         @*process =101 *@
 
 
@@ -115,13 +117,13 @@
             <hr style=" border-top:2px dotted ;width:17%" />
         </div>
 
-        <table style="width:100%; font-size:20px">
+        <table style="width:100%">
             <tr>
                 <td style="text-align:right;width:90%">
                     เขียนที่
                 </td>
                 <td style="width:40%">
-                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'TH SarabunPSK';" type="text" />
                 </td>
             </tr>
             <tr>
@@ -141,17 +143,17 @@
         <br />
         <table style="width:100%;">
             <tr>
-                <td style="font-size:20px" width="5%">
+                <td width="5%">
                     ข้าพเจ้า
                 </td>
-                <td style="text-align:center; font-size:20px">
-                    <label>{{LIST_LCN.thanm}}</label>
+                <td style="text-align:center;">
+                    <label >{{LIST_LCN.thanm}}</label>
                 </td>
             </tr>
             <tr>
                 <td>
                 </td>
-                <td style="text-align:center;font-size:16px">
+                <td style="text-align:center;">
                     (ชื่อผู้ขออนุญาต)
                 </td>
             </tr>
@@ -181,7 +183,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                                    <input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'TH SarabunPSK';" type="text" />
                                 </td>
                                 <td>
                                     <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
@@ -205,7 +207,7 @@
                     สัญชาติ
                 </td>
                 <td style="text-align:left;width:10%;">
-                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'TH SarabunPSK';" type="text" />
                 </td>
 
             </tr>
@@ -242,7 +244,7 @@
                     E-mail
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.Email" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.Email" style="font-family:'TH SarabunPSK';" type="text" />
                 </td>
             </tr>
         </table>
@@ -293,27 +295,16 @@
 
             <tr>
                 <td>
-                    <input class="checkbox" type="radio" ng-model="LIST_LCN.dalcn.CHK_SELL_TYPE" value="1" />
+                    <form name="rdl_gmp">
+
+
+                        <label><input type="radio" ng-model="LIST_LCN.dalcn.CHK_SELL_TYPE" id="Rdl_gmpt" value="1"> ขายปลีก</label><br />
+                        <label><input type="radio" ng-model="LIST_LCN.dalcn.CHK_SELL_TYPE" id="Rdl_gmpt" value="2"> ขายส่ง</label><br />
+                        <label><input type="radio" ng-model="LIST_LCN.dalcn.CHK_SELL_TYPE" id="Rdl_gmpt" value="3"> ปรุงยาสำหรับผู้ป่วยเฉพาะราย(เฉพาะขายปลีกเท่านั้น)</label>
+
+                    </form>
                 </td>
-                <td>
-                    ขายปลีก
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input class="checkbox" type="radio" ng-model="LIST_LCN.dalcn.CHK_SELL_TYPE" value="2" />
-                </td>
-                <td>
-                    ขายส่ง
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input class="checkbox" type="radio" ng-model="LIST_LCN.dalcn.CHK_SELL_TYPE" value="3" />
-                </td>
-                <td>
-                    ปรุงยาสำหรับผู้ป่วยเฉพาะราย(เฉพาะขายปลีกเท่านั้น)
-                </td>
+               
             </tr>
         </table>
         <br />
@@ -326,27 +317,30 @@
 
         <table style="width:50%">
             <tr>
-                <td style="font-size:20px">
+                <td>
                     ชื่อสถานที่เก็บ ( 1 ) :
                 </td>
-                <td style="font-size:20px">
-                    <input style="width:100%" />
+                <td>
+                    <select class="dropdown" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
+                        <option value="0">--กรุณาเลือก--</option>
+                        <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
+                    </select>
                 </td>
             </tr>
-            <tr style="font-size:20px">
+            <tr>
                 <td>
                     อยู่เลขที่
                 </td>
                 <td>
-                    <input style="width:100%" />
+                    <label>{{LIST_LABEL.fulladdr}}</label>
                 </td>
             </tr>
-            <tr style="font-size:20px">
+            <tr>
                 <td>
                     โทรศัพท์
                 </td>
                 <td>
-                    <input style="width:100%" />
+                    <label>{{LIST_LABEL.tel}}</label>
                 </td>
             </tr>
             <tr style="font-size: 20px">
@@ -354,7 +348,7 @@
                     โทรศัพท์มือถือ
                 </td>
                 <td>
-                    <input style="width:100%" />
+                    <label>{{LIST_LABEL.Mobile}}</label>
                 </td>
             </tr>
         </table>
@@ -369,7 +363,7 @@
                     โดยมีเภสัชกรชั้น
                 </td>
                 <td style="width:10%">
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_LEVEL" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_LEVEL" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
                 </td>
                 <td style="text-align:center">
                     ชื่อ
@@ -381,7 +375,7 @@
                     </select>
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -389,7 +383,7 @@
                     เลขบัตรประจำตัวประชาชน
                 </td>
                 <td colspan="4">
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CTZNO" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CTZNO" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -397,7 +391,7 @@
                     ใบอนุญาตประกอบวิชาชีพ
                 </td>
                 <td colspan="4">
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_NUM" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_NUM" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -411,7 +405,7 @@
         <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
         <hr />
 
-        <table style="font-size:16px;width:100%">
+        <table style="width:100%">
             <tr>
                 <td style="text-align:center" colspan="2">
                     <strong>(ถ้ามีมากกว่าหนึ่งคนให้แจ้งเพิ่มเติมท้ายคำขอนี้จน)</strong>
@@ -433,14 +427,14 @@
         </table>
         <br />
 
-        <div style="font-size:20px">
-            ข้าพเจ้าขอรับรองว่าในระยะเวลาสองปีก่อนยื่นคำขอนี้ ข้าพเจ้าไม่เคยได้รับโทษจำำคุกโดยคำำพิพากษาถึงที่สุดหรือคำสั่งที่ชอบด้วยกฎหมายให้จำคุกในความผิดที่
+        <div>
+            ข้าพเจ้าขอรับรองว่าในระยะเวลาสองปีก่อนยื่นคำขอนี้ ข้าพเจ้าไม่เคยได้รับโทษจำคุกโดยคำพิพากษาถึงที่สุดหรือคำสั่งที่ชอบด้วยกฎหมายให้จำคุกในความผิดที่
             กฎหมายบัญญัติ ให้ถือเอาการกระทำโดยทุจริตเป็นองค์ประกอบหรือในความผิดตามกฎหมายว่าด้วยยาเสพติดให้โทษ กฎหมายว่าด้วยวัตถุที่ออกฤทธิ์ต่อจิตและ
             ประสาท กฎหมายว่าด้วยการขายยาหรือพระราชบัญญัตินี้
             ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ
         </div>
         <br />
-        <div style="margin-left:10%;font-size:20px">(๑) รูปถ่ายของผู้ขออนุญาต ขนาด ๓ x ๔ เซนติเมตร จำำนวน ๓ รูป</div>
+        <div style="margin-left:10%;font-size:20px">(๑) รูปถ่ายของผู้ขออนุญาต ขนาด ๓ x ๔ เซนติเมตร จำนวน ๓ รูป</div>
         <div style="margin-left:10%;font-size:20px">(๒) เอกสารแสดงการเป็นเจ้าของกิจการและหลักทรัพย์</div>
         <div style="        margin-left: 10%;
         font-size: 20px
@@ -448,7 +442,7 @@
         <div style="margin-left:10%;font-size:20px">(๔) ใบรับรองของผู้ประกอบวิชาชีพเวชกรรมซึ่งรับรองว่าผู้ขออนุญาตไม่เป็นโรคตามมาตรา ๑๔ (๖) แห่งพระราชบัญญัติยา พ.ศ. ๒๕๑๐</div>
         <div style="margin-left:10%;font-size:20px">(๕) สัญญาระหว่างผู้ขออนุญาตและเภสัชกร ซึ่งรับจะเป็นผู้มีหน้าที่ปฏิบัติการของผู้ขออนุญาต</div>
         <div style="margin-left:10%;font-size:20px">(๖) สำเนาหรือรูปถ่ายใบอนุญาตประกอบวิชาชีพเภสัชกรรมของเภสัชกรทุกคน ซึ่งรับจะเป็นผู้มีหน้าที่ปฏิบัติการของผู้ขออนุญาต</div>
-        <div style="margin-left:10%;font-size:20px">(๗) เอกสารแสดงว่าเป็นผู้ดำำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
+        <div style="margin-left:10%;font-size:20px">(๗) เอกสารแสดงว่าเป็นผู้ดำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
         <br />
         <br />
         <br />

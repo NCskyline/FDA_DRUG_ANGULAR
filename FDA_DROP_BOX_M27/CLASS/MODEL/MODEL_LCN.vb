@@ -205,6 +205,7 @@
     Public Mobile As String
     Public RCVNO_DISPLAY As String
     Public RCV_DATE_DISPLAY As String
+    Public LOCATION_SELECT As String
 End Class
 
 
