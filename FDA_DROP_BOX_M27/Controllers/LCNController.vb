@@ -107,7 +107,9 @@ Namespace Controllers
         Function FRM_EDIT_LCN_MAIN() As ActionResult
             Return View()
         End Function
-
+        Function INPUT_DA_YORBOR() As ActionResult
+            Return View()
+        End Function
     End Class
 
     Public Class LCN_CENTERController

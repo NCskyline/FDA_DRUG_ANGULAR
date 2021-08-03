@@ -4,7 +4,7 @@
     $scope.lcnno = "";
     var LCN_IDA = sessionStorage.LCN_IDA;
     var LCT_IDA = 117194; //sessionStorage.LCT_IDA;  //
-    var PROCESS = QueryString("PROCESS");
+    var PROCESS = 108; //QueryString("PROCESS");
     var CITIZEN = '0105527028430';//'0105527028430';0000000000000
     var BSN_IDENTIFY = "";
     var IDENTIFY = "0000000000000";
@@ -76,7 +76,7 @@
         MODLE_LCN.then(function (datas) {
 
             $scope.LIST_LCN = datas.data;
-
+            $scope.LIST_LCN.PROCESS = PROCESS;
         }, function () { });
 
         
@@ -125,6 +125,7 @@
         var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, IDENTIFY, LCT_IDA);
         MODLE_LCN.then(function (datas) {
             $scope.LIST_LCN = datas.data;
+            $scope.LIST_LCN.PROCESS = PROCESS;
         }, function () { });
     };
 });
