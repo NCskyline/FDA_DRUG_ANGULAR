@@ -12,8 +12,14 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
     pageload();
 
     function pageload() {
-        //Swal.showLoading();
-        var token = QueryString("Token");
+
+        var token = '';
+        if (location.hostname == 'localhost') {
+            token = "PASS";
+        } else {
+            token = QueryString("Token");
+        }
+        
         //var token = "PASS";
         sessionStorage.token = token;
 

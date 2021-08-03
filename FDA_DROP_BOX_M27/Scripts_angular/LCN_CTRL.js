@@ -4,11 +4,12 @@
     $scope.lcnno = "";
     var LCN_IDA = sessionStorage.LCN_IDA;
     var LCT_IDA = 117194; //sessionStorage.LCT_IDA;  //
-    var PROCESS = QueryString("PROCESS");
+    $scope.PROCESS = QueryString("PROCESS");
     var CITIZEN = '0105527028430';//'0105527028430';0000000000000
     var BSN_IDENTIFY = "";
     var IDENTIFY = "0000000000000";
     //var LCT_IDA = 117194;
+    
 
     Pageload();
     LOAD_MODEL();
@@ -39,7 +40,6 @@
             $scope.FULL_MODEL.PROCESS = process;
             $scope.SUB_PATH = SET_URL_SV('../LCN/FRM_LCN_DRUG');
         }
-        
     };
 
     $scope.BTN_INPUT = function () {
@@ -54,6 +54,18 @@
             REDIRECT('../LCN/INPUT_NORYOR_1');
         } else if ($scope.FULL_MODEL.PROCESS == '106') {
             REDIRECT('../LCN/INPUT_PORYOR_1');
+        } else if ($scope.FULL_MODEL.PROCESS == '107' || $scope.FULL_MODEL.PROCESS == '108' || $scope.FULL_MODEL.PROCESS == '109') {           
+            REDIRECT('/LCN/INPUT_DA_YORBOR?PROCESS=' + $scope.FULL_MODEL.PROCESS);
+        }
+    };
+
+    $scope.YORBOR = function () {
+        if ($scope.PROCESS == '107') {
+            $scope.headLCN = 'ขายยาแผนโบราณ';
+        } else if ($scope.PROCESS == '108') {
+            $scope.headLCN = 'นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร';
+        } else if ($scope.PROCESS == '109') {
+            $scope.headLCN = 'ผลิตยาแผนโบราณ';
         }
     };
 
@@ -71,6 +83,7 @@
         var url = "../LCN/FRM_LCN_STAFF_LCN_INFORMATION";
         REDIRECT(url);
     };
+
     $scope.pageload = function () {
         var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY,IDENTIFY, LCT_IDA);
         MODLE_LCN.then(function (datas) {
@@ -126,5 +139,10 @@
         MODLE_LCN.then(function (datas) {
             $scope.LIST_LCN = datas.data;
         }, function () { });
+    };
+
+    $scope.BTN_BACK = function () {
+       
+        REDIRECT('../LCN/FRM_LCN_NEWS');
     };
 });

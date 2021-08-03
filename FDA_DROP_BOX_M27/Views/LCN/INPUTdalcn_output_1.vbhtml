@@ -469,4 +469,7 @@
             </tr>
         </table>
     </div>
+    <div>
+        <input type="button" class="btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+    </div>
 </div>

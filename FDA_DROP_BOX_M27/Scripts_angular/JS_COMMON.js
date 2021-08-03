@@ -11,6 +11,11 @@
 
 function REDIRECT(urls) {
     var host = '';
+    if (location.hostname == 'localhost') {
+        host = '';
+    } else {
+        host = 'FDA_DRUG_ANGULAR_DEMO';
+    }
     var full_url = host + urls;
     window.location = full_url;
 }
@@ -18,6 +23,11 @@ function REDIRECT(urls) {
 
 function SET_URL_SV(url) {
     var host = '';
+    if (location.hostname == 'localhost') {
+        host = '';
+    } else {
+        host = 'FDA_DRUG_ANGULAR_DEMO';
+    }
     var full_url = host + url;
     return full_url;
 }
