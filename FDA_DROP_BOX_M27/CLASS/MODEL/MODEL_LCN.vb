@@ -197,6 +197,8 @@
     Public thanm As String
     Public BSN_THAIFULLNAME As String
     Public BSN_IDENTIFY As String
+    Public IDENTIFY As String
+    Public HOUSENO As String
     Public AGE As String
     Public BSN_FULL_ADDR As String
     Public BSN_TELEPHONE As String
@@ -206,6 +208,7 @@
     Public RCVNO_DISPLAY As String
     Public RCV_DATE_DISPLAY As String
     Public LOCATION_SELECT As String
+    Public HEAD_LCNNO_NCT As String
 End Class
 
 

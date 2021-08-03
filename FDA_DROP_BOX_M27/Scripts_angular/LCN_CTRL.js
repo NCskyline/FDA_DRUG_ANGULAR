@@ -4,10 +4,11 @@
     $scope.lcnno = "";
     var LCN_IDA = sessionStorage.LCN_IDA;
     var LCT_IDA = 117194; //sessionStorage.LCT_IDA;  //
-    var PROCESS = 108; //QueryString("PROCESS");
+    var PROCESS = 131; //QueryString("PROCESS");
     var CITIZEN = '0105527028430';//'0105527028430';0000000000000
     var BSN_IDENTIFY = "";
     var IDENTIFY = "0000000000000";
+    var HEAD_LCN_IDA = 49409;
     //var LCT_IDA = 117194;
 
     Pageload();
@@ -80,7 +81,7 @@
         REDIRECT(url);
     };
     $scope.pageload = function () {
-        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY,IDENTIFY, LCT_IDA);
+        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, IDENTIFY, LCT_IDA, HEAD_LCN_IDA);
         MODLE_LCN.then(function (datas) {
 
             $scope.LIST_LCN = datas.data;
@@ -130,7 +131,7 @@
 
     $scope.BTN_Search_BSN = function (BSN_IDENTIFY) {
 
-        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, IDENTIFY, LCT_IDA);
+        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, IDENTIFY, LCT_IDA, HEAD_LCN_IDA);
         MODLE_LCN.then(function (datas) {
             $scope.LIST_LCN = datas.data;
             $scope.LIST_LCN.PROCESS = PROCESS;

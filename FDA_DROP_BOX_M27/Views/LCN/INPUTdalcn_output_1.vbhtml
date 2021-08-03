@@ -178,7 +178,6 @@
                     เลขบัญประจำตัวประชาชน
                 </td>
                 <td style="text-align:left;width:30%;">
-                    @*<label>{{LIST_LCN.BSN_IDENTIFY}}</label>*@
                     <form action="javascript:void(0)">
                         <table>
                             <tr>

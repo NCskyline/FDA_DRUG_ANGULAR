@@ -77,14 +77,15 @@
         return response;
     };
     
-    this.GET_LCN_INFORMATION_INPUT = function (BSN_IDENTIFY, IDENTIFY, LCT_IDA) {
+    this.GET_LCN_INFORMATION_INPUT = function (BSN_IDENTIFY, IDENTIFY, LCT_IDA, HEAD_LCN_IDA) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/GET_LCN_INFORMATION_INPUT"),
             params: {
                 BSN_IDENTIFY: BSN_IDENTIFY,
                 IDENTIFY: IDENTIFY,
-                LCT_IDA: LCT_IDA
+                LCT_IDA: LCT_IDA,
+                HEAD_LCN_IDA: HEAD_LCN_IDA
             }
         });
         return response;
