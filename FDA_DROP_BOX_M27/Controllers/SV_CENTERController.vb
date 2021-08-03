@@ -166,6 +166,16 @@ Namespace Controllers
 
         End Function
 
+        Function SP_SYSPREFIX_PERSON()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_SYSPREFIX_PERSON()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
+
         Function SP_dosage_form()
             Dim dt As New DataTable
             Dim bao As New BAO
@@ -399,7 +409,7 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
         End Function
-        Function GET_LCN_INFORMATION_INPUT(ByVal BSN_IDENTIFY As String, ByVal IDENTIFY As String, ByVal LCT_IDA As String) As JsonResult
+        Function GET_LCN_INFORMATION_INPUT(ByVal BSN_IDENTIFY As String, ByVal IDENTIFY As String, ByVal LCT_IDA As String, ByVal HEAD_LCN_IDA As String) As JsonResult
             Dim model As New MODEL_LCN
             Dim bao As New BAO
             Dim dt_tha As New DataTable
@@ -412,6 +422,35 @@ Namespace Controllers
                 End Try
 
             Next
+            model.IDENTIFY = IDENTIFY
+            Dim lcnno_auto As String = ""
+            Dim lcnno_format As String = ""
+            Try
+                Dim dao_main As New DAO_DRUG.ClsDBdalcn
+                dao_main.GetDataby_IDA(HEAD_LCN_IDA)
+                Try
+                    lcnno_auto = dao_main.fields.lcnno
+                Catch ex As Exception
+
+                End Try
+                Try
+                    If Len(lcnno_auto) > 0 Then
+
+                        If Right(Left(lcnno_auto, 3), 1) = "5" Then
+                            lcnno_format = "จ. " & CStr(CInt(Right(lcnno_auto, 4))) & "/25" & Left(lcnno_auto, 2)
+                        Else
+                            lcnno_format = dao_main.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                        End If
+                        'lcnno_format = dao.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                    End If
+                Catch ex As Exception
+
+                End Try
+
+                model.HEAD_LCNNO_NCT = lcnno_format
+            Catch ex As Exception
+
+            End Try
             Dim dt_bsn As New DataTable
             dt_bsn = bao.SP_LOCATION_BSN_BY_IDENTIFY(BSN_IDENTIFY)
             For Each dr As DataRow In dt_bsn.Rows
@@ -466,6 +505,11 @@ Namespace Controllers
                 End Try
                 Try
                     model.Mobile = dr("fax")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.HOUSENO = dr("HOUSENO")
                 Catch ex As Exception
 
                 End Try

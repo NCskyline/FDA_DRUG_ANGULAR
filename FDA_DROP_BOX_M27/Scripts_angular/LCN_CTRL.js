@@ -8,6 +8,7 @@
     var CITIZEN = '0105527028430';//'0105527028430';0000000000000
     var BSN_IDENTIFY = "";
     var IDENTIFY = "0000000000000";
+    var HEAD_LCN_IDA = 49409;
     //var LCT_IDA = 117194;
     
 
@@ -26,13 +27,21 @@
     function Pageload() {
 
         //listree();
-        var data_prefix = CENTER_SV.SP_SYSPREFIX();
-        data_prefix.then(function (datas) {
-            $scope.PREFIX = datas.data;
+    //    var data_prefix = CENTER_SV.SP_SYSPREFIX();
+    //    data_prefix.then(function (datas) {
+    //        $scope.PREFIX = datas.data;
 
-        }, function () { });
+    //    }, function () { });
 
-    }
+    //}
+    var data_prefix = CENTER_SV.SP_SYSPREFIX_PERSON();
+    data_prefix.then(function (datas) {
+        $scope.PREFIX = datas.data;
+
+    }, function () { });
+
+}
+
 
     $scope.BTN_MENU = function (process) {
 
@@ -85,11 +94,11 @@
     };
 
     $scope.pageload = function () {
-        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY,IDENTIFY, LCT_IDA);
+        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, IDENTIFY, LCT_IDA, HEAD_LCN_IDA);
         MODLE_LCN.then(function (datas) {
 
             $scope.LIST_LCN = datas.data;
-
+            $scope.LIST_LCN.PROCESS = PROCESS;
         }, function () { });
 
         
@@ -135,9 +144,10 @@
 
     $scope.BTN_Search_BSN = function (BSN_IDENTIFY) {
 
-        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, IDENTIFY, LCT_IDA);
+        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, IDENTIFY, LCT_IDA, HEAD_LCN_IDA);
         MODLE_LCN.then(function (datas) {
             $scope.LIST_LCN = datas.data;
+            $scope.LIST_LCN.PROCESS = PROCESS;
         }, function () { });
     };
 
