@@ -11,7 +11,16 @@ Public Class BAO
         Dim sql As String = "exec SP_SYSPREFIX"
         Dim dt As New DataTable
         dt = clsds.dsQueryselect(sql, _con_CPN).Tables(0)
-            dt.TableName = "SP_SYSPREFIX"
+        dt.TableName = "SP_SYSPREFIX"
+        Return dt
+    End Function
+    '
+    Public Function SP_SYSPREFIX_PERSON() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_SYSPREFIX_PERSON"
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_CPN).Tables(0)
+        dt.TableName = "SP_SYSPREFIX_PERSON"
         Return dt
     End Function
     Public Function SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(ByVal identify As String, ByVal LCNSID As String) As DataTable

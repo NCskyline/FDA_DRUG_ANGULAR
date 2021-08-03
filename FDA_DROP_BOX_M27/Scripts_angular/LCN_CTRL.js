@@ -25,13 +25,21 @@
     function Pageload() {
 
         //listree();
-        var data_prefix = CENTER_SV.SP_SYSPREFIX();
-        data_prefix.then(function (datas) {
-            $scope.PREFIX = datas.data;
+    //    var data_prefix = CENTER_SV.SP_SYSPREFIX();
+    //    data_prefix.then(function (datas) {
+    //        $scope.PREFIX = datas.data;
 
-        }, function () { });
+    //    }, function () { });
 
-    }
+    //}
+    var data_prefix = CENTER_SV.SP_SYSPREFIX_PERSON();
+    data_prefix.then(function (datas) {
+        $scope.PREFIX = datas.data;
+
+    }, function () { });
+
+}
+
 
     $scope.BTN_MENU = function (process) {
 

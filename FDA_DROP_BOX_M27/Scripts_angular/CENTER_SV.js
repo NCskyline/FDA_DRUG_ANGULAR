@@ -341,7 +341,16 @@
         });
         return response;
     };
-
+    this.SP_SYSPREFIX_PERSON = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_SYSPREFIX_PERSON")
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
     this.GET_dramltype = function () {
         var response = $http({
             method: "post",

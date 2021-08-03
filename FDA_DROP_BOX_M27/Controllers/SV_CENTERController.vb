@@ -166,6 +166,16 @@ Namespace Controllers
 
         End Function
 
+        Function SP_SYSPREFIX_PERSON()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_SYSPREFIX_PERSON()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
+
         Function SP_dosage_form()
             Dim dt As New DataTable
             Dim bao As New BAO
