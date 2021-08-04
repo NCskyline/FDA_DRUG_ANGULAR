@@ -40,7 +40,7 @@
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
     <div style="font-family:'TH SarabunPSK';font-size:24px;">
         <h1 style="text-align:left;font-size:24px;">
-            <strong>แบบ น.ว.จ. ๓/๔-๑</strong>
+            <strong>แบบ ข.ว.จ. ๓/๔-๑</strong>
         </h1>
         <br />
         <div class="title1">
@@ -49,12 +49,12 @@
                 ผู้ขออนุญาติ<br />
                 หรือ<br />
                 ผู้ดำเนินกิจการ<br />
-                ขนาด ๓ x ๔ ซม.<br />
+                ขนาด ๓ นิ้ว<br />
             </label>
         </div>
 
         <div class="title2">
-            <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" >
+            <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" @*border="1"*@>
                 <tr>
                     <td style="text-align:left;width:20%">
                         เลขรับที่
@@ -92,21 +92,22 @@
         <div style="clear:both"></div>
         <br />
         <br />
-        @*process =131,132 *@
+
         <h2 style="text-align:center;font-size:24px;">
             <strong>คำขอรับใบอนุญาต คำขอต่ออายุใบอนุญาต คำขอรับใบแทน</strong><br />
-            <strong>ใบอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
+            <strong>ใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
         </h2>
-        <table style="width:70%; font-size:20px;margin:auto;text-align:center">
+        @*process =123,124 *@
+        <table style="width:70%; font-size:20px;margin:auto;text-align:center" @*border="1"*@>
             <tr>
                 <td>
-                    <strong>สำหรับนำเข้า</strong>
+                    <strong>สำหรับขาย</strong>
                 </td>
                 <td>
-                    <input type="radio" name="gender" ng-model="LIST_LCN.PROCESS" ng-value="131" id="rdl_CHK_SELL_TYPE" disabled="disabled"/> <strong>วัตถุออกฤทธิ์ในประเภท ๓</strong>
+                    <input type="radio" name="gender" ng-model="LIST_LCN.PROCESS" ng-value="125" id="rdl_CHK_SELL_TYPE" disabled="disabled" /> <strong>วัตถุออกฤทธิ์ในประเภท ๓</strong>
                 </td>
                 <td>
-                    <input type="radio" name="gender" ng-model="LIST_LCN.PROCESS" ng-value="132" id="rdl_CHK_SELL_TYPE" disabled="disabled"/> <strong>วัตถุออกฤทธิ์ในประเภท ๔</strong>
+                    <input type="radio" name="gender" ng-model="LIST_LCN.PROCESS" ng-value="126" id="rdl_CHK_SELL_TYPE" disabled="disabled" /> <strong>วัตถุออกฤทธิ์ในประเภท ๔</strong>
                 </td>
             </tr>
             <tr>
@@ -119,7 +120,7 @@
         <table style="width:100%; font-size:20px">
             <tr>
                 <td style="width:20%">
-                    <input type="checkbox" name="gender"  disabled="disabled" ng-checked="true"/> <strong>ขอรับใบอนุญาต</strong>
+                    <input type="checkbox" name="gender" disabled="disabled" ng-checked="true" /> <strong>ขอรับใบอนุญาต</strong>
                 </td>
             </tr>
             <tr>
@@ -134,16 +135,16 @@
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" name="gender" disabled="disabled"/> <strong>ขอรับใบแทนใบอนุญาต</strong>
+                    <input type="checkbox" name="gender" disabled="disabled" /> <strong>ขอรับใบแทนใบอนุญาต</strong>
                 </td>
                 <td>
                     เนื่องจากใบอนุญาต
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" disabled="disabled"/> <strong>สูญหาย</strong>
+                    <input class="checkbox" type="checkbox" disabled="disabled" /> <strong>สูญหาย</strong>
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" disabled="disabled"/> <strong>ถูกทำลายหรือลบเลือนในสาระสำคัญ</strong>
+                    <input class="checkbox" type="checkbox" disabled="disabled" /> <strong>ถูกทำลายหรือลบเลือนในสาระสำคัญ</strong>
                 </td>
             </tr>
         </table>
@@ -175,7 +176,7 @@
         <h2 style="font-size:24px;">
             <strong>๑. ข้อมูลผู้ขอรับใบอนุญาต</strong>
         </h2>
-        <table style="width:90%;margin-left:5%" @*border="1"*@>
+        <table style="width:90%" @*border="1"*@>
             <tr>
                 <td style="font-size:20px" width="40%">
                     ข้าพเจ้า (ชื่อบุคคล/นิติบุคคล)
@@ -201,9 +202,7 @@
                 <td style="font-size:20px;width:5%">
                     เลขที่
                 </td>
-                <td style="font-size:20px ;width:15%;text-align:center">
-                    
-                </td>
+                <td style="font-size:20px ;width:15%;text-align:center"></td>
                 <td style="font-size:20px">
                     (กรณีไม่ใช่ผู้มีสัญชาติไทย)
                 </td>
@@ -253,7 +252,7 @@
         <h2 style="font-size:24px;">
             <strong>๒. ข้อมูลผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต</strong>
         </h2>
-        <table style="width:90%;margin-left:5%" @*border="1"*@>
+        <table style="width:90%" @*border="1"*@>
             <tr>
                 <td style="font-size:20px" width="40%">
                     ข้าพเจ้า
@@ -332,82 +331,11 @@
                     <label>{{LIST_LCN.BSN_TELEPHONE}}</label>
                 </td>
             </tr>
-            <tr>
-                <td style="font-size:20px">
-                    E-mail
-                </td>
-                <td style="font-size:20px" colspan="6">
-                    <label>{{LIST_LCN.dalcn.Email}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="font-size:20px" colspan="2">
-                    โดยได้รับอนุญาตนำสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร เลขที่
-                </td>
-                <td style="font-size:20px" colspan="2">
-                    <label>{{LIST_LCN.HEAD_LCNNO_NCT}}</label>
-                </td>
-                <td style="font-size:20px">
-                    ตามกฎหมายว่าด้วยยา
-                </td>
-            </tr>
         </table>
 
-        <table style="width:90%;font-size:20px" @*border="1"*@>
-            <tr>
-                <td colspan="2">
-                    <p style="margin-left:5%">มีความประสงค์ขอรับอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ เนื่องจาก</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <form name="rdl_gmp">
-
-                        <label>
-                            <input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_thaaddr" id="chbl_typeee" value="1">
-                            นำเข้ามาเป็นวัตถุดิบเพื่อจำหน่าย
-                        </label>
-                        <label>
-                            <input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_engaddr" id="chbl_typeee" ng-value="1">
-                            นำเข้ามาเป็นวัตถุดิบเพื่อผลิตวัตถุตำรับ
-                        </label>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <form name="rdl_gmp">
-                        <label>
-                            <input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_room" id="chbl_typeee" value="1">
-                            นำเข้ามาเป็นผลิตภัณฑ์สำเร็จรูปเพื่อจำหน่าย
-                        </label>
-                        <label>
-                            <input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_engsoi" id="chbl_typeee" ng-value="1">
-                            นำเข้ามาเป็นผลิตภัณฑ์สำเร็จรูปเพื่อส่งออก
-                        </label>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <form name="rdl_gmp">
-                        <label>
-                            <input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_floor" id="chbl_typeee" value="1">
-                            อื่นๆ (โปรดระบุ)
-                        </label>
-                        <input type="text" ng-model="LIST_LCN.dalcn.syslctaddr_thasoi" id="chbl_typeee" ng-value="1">
-                    </form>
-                </td>
-            </tr>
-        </table>
-        <br />
-
+        <div style="font-size:20px"><strong>๓. ข้อมูลการขออนุญาต</strong></div>
+        <div style="font-size:20px;margin-left:5%">(๓.๑) <strong><u>กรณีขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔</u></strong></div>
         <table style="width:100%;font-size:20px" @*border="1"*@>
-            <tr>
-                <td colspan="4">
-                    ๓. ข้อมูลสถานที่นำเข้า
-                </td>
-            </tr>
             <tr>
                 <td>
                     ณ สถานที่ชื่อ
@@ -439,20 +367,20 @@
                 </td>
             </tr>
             <tr>
-                <td width="20%">
+                <td>
                     โดยมีเภสัชกรชื่อ  1.
-                    <select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID" style="width:200px;">
+                </td>
+                <td>
+                    <select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
                         <option value="0">--กรุณาเลือก--</option>
                         <option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
                     </select>
-                </td>
-                <td align="left">
                     <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
                 </td>
-                <td style="width:15%">
+                <td style="width:30%">
                     ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่
                 </td>
-                <td align="left">
+                <td>
                     <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_NUM" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
                 </td>
             </tr>
@@ -461,8 +389,106 @@
         <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
         <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
         <br />
-        <div style="margin-left:5%;font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
-        <br />
+        <table style="width:100%;font-size:20px" @*border="1"*@>
+            <tr>
+                <td>
+                    เป็นผู้รับอนุญาตขายยาแผนใบอนุญาตเลขที่
+                </td>
+                <td style="width:50%">
+                    <label>{{LIST_LCN.HEAD_LCNNO_NCT}}</label>
+                </td>
+                <td>
+                    ตามกฎหมายว่าด้วยยา
+                </td>
+            </tr>
+        </table>
+        <div style="font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
+
+        <div style="font-size:20px;margin-left:5%"><strong>(๓.๒) <u>กรณีขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ โดยการขายส่งตรง</u></strong></div>
+        <table style="width:100%;font-size:20px" @*border="1"*@>
+            <tr>
+                <td colspan="2">
+                    ผู้ขอรับใบอนุญาตได้รับอนุญาตให้ผลิต/ขาย/หรือนำเข้าซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาต
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    ผู้ขอรับใบอนุญาตได้รับอนุญาตให้ผลิต/ขาย/หรือนำเข้าซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาต
+                </td>
+            </tr>
+            <tr>
+                <td style="width:10%">
+                    เลขที่
+                </td>
+                <td>
+                    <label>{{LIST_LCN.HEAD_LCNNO}}</label>
+                </td>
+            </tr>
+        </table>
+        <div style="font-size:20px;margin-left:5%"><strong>(๓.๓) <u> กรณีขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ ในบริเวณสถานที่ที่มีการประชุม</u></strong></div>
+
+        <table style="width:100%;font-size:20px" @*border="1"*@>
+            <tr>
+                <td colspan="4">
+                    ผู้ขอรับใบอนุญาตได้รับอนุญาตให้ผลิต/ขาย/หรือนำเข้าซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาต
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%">
+                    เลขที่
+                </td>
+                <td colspan="4">
+                    <label>{{LIST_LCN.HEAD_LCNNO}}</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    ขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในบริเวณสถานที่ที่มีการประชุม ณ
+                </td>
+            </tr>
+            <tr>
+                <td style="width:10%">
+                    สถานที่ชื่อ
+                </td>
+                <td colspan="4">
+                    <label>{{LIST_LCN.thanameplace}}</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    เลขรหัสประจำบ้าน
+                </td>
+                <td colspan="4">
+                    <label>{{LIST_LCN.HOUSENO}}</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ตั้งอยู่เลขที่
+                </td>
+                <td colspan="3">
+                    <label>{{LIST_LCN.fulladdr2}}</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    โทรศัพท์/มือถือ
+                </td>
+                <td colspan="3">
+                    <label>{{LIST_LCN.tel}}</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ตั้งแต่วันที่
+                </td>
+                <td></td>
+                <td style="width:20%">
+                    ถึงวันที่
+                </td>
+                <td></td>
+            </tr>
+        </table>
 
         <table style="width:100%;font-size:20px" @*border="1"*@>
             <tr>
@@ -509,61 +535,73 @@
             </tr>
 
         </table>
-        <table style="width:100%;font-size:20px" @*border="1"*@>
-            <tr>
-                <td style="width:50%">
-                    โดยได้รับอนุญาตนำสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร เลขที่
-                </td>
-                <td style="width:30%">
-                    <label>{{LIST_LCN.HEAD_LCNNO_NCT}}</label>
-                </td>
-                <td>
-                    ตามกฎหมายว่าด้วยยา
-                </td>
-            </tr>
-        </table>
-        <br />
         <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
         <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
         <br />
-        <div style="margin-left:5%;font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
         <br />
 
         <div style=";font-size:20px"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
-        <div style="margin-left:5%;font-size:20px"><strong>๕.๑ กรณีขอรับใบอนุญาต (กรณีรายใหม่)</strong></div>
+        <div style="margin-left:5%;font-size:20px"><strong>๕.๑ <u>กรณีขอรับใบอนุญาต (กรณีรายใหม่)</u></strong></div>
+        <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๑ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong></div>
         <table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
             <tr>
                 <td>
-                    (๑) คำรับรองของผู้รับอนุญาตและเภสัชกรผู้ควบคุมกิจการ
+                    (๑) สำเนาใบอนุญาตขายยาแผนปัจจุบันตามกฎหมายว่าด้วยยา
                 </td>
             </tr>
             <tr>
                 <td>
-                    (๒) รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการ
-                    เกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
+                    (๒) คำรับรองของผู้รับอนุญาตและเภสัชกรผู้ควบคุมกิจการ
                 </td>
             </tr>
             <tr>
                 <td>
-                    (๓) สำเนาใบอนุญาตประกอบวิชาชีพเภสัชกรรม
+                    (๓) รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้ง
                 </td>
             </tr>
             <tr>
                 <td>
-                    (๔) หนังสือแต่งตั้งผู้ดำเนินกิจการ กรณีผู้ขอรับใบอนุญาตเป็นนิติบุคคล
+                    ให้ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
                 </td>
             </tr>
             <tr>
                 <td>
-                    (๕) แผนที่แสดงที่ตั้งและแผนผังแสดงที่นำเข้าหรือเก็บซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ของสถานประกอบการ
+                    (๔) สำเนาใบอนุญาตประกอบวิชาชีพเภสัชกรรม
                 </td>
             </tr>
             <tr>
                 <td>
-                    (๖) รูปถ่ายแสดงที่นำำเข้าหรือเก็บซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ของสถานประกอบการจำำนวน ๑ รูป
+                    (๕) หนังสือแต่งตั้งผู้ดำเนินกิจการ กรณีผู้ขอรับใบอนุญาตเป็นนิติบุคคล
                 </td>
             </tr>
         </table>
+        <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๒ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ โดยการขายส่งตรง</strong></div>
+        <table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+            <tr>
+                <td>
+                    (๑) สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    (๒) รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
+                </td>
+            </tr>
+        </table>
+        <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๓ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ ในบริเวณสถานที่ที่มีการประชุม</strong></div>
+        <table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+            <tr>
+                <td>
+                    (๑) สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี
+                </td>
+            </tr>
+        </table>
+
         <div style="margin-left:5%;font-size:20px"><strong>๕.๒ กรณีขอต่ออายุใบอนุญาต</strong></div>
         <table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
             <tr>
@@ -608,9 +646,7 @@
                 <td style="text-align:right">
                     (ลายมือชื่อ)
                 </td>
-                <td style="text-align:center;width:40%">
-             
-                </td>
+                <td style="text-align:center;width:40%"></td>
                 <td>
                     ผู้ขอรับใบอนุญาต/ผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการ
                 </td>
@@ -645,8 +681,8 @@
             </tr>
 
         </table>
-        </div>
     </div>
+</div>
 
 
 

@@ -390,12 +390,15 @@
                     ใบอนุญาตประกอบวิชาชีพ
                 </td>
                 <td colspan="4">
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_NUM" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    
                 </td>
             </tr>
             <tr>
                 <td>
                     เภสัชกรรมเลขที่
+                </td>
+                <td>
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_NUM" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
                 </td>
             </tr>
         </table>

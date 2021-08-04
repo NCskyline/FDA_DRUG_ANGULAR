@@ -4,7 +4,7 @@
     $scope.lcnno = "";
     var LCN_IDA = sessionStorage.LCN_IDA;
     var LCT_IDA = 117194; //sessionStorage.LCT_IDA;  //
-    $scope.PROCESS = QueryString("PROCESS");
+    var PROCESS = 123; //QueryString("PROCESS");
     var CITIZEN = '0105527028430';//'0105527028430';0000000000000
     var BSN_IDENTIFY = "";
     var IDENTIFY = "0000000000000";
