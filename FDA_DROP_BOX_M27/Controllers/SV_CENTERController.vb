@@ -17,7 +17,7 @@ Namespace Controllers
         Public _PATH_BOX_TEMPLATE As String = System.Configuration.ConfigurationManager.AppSettings("PATH_BOX_TEMPLATE")
         Dim msg_r As New MODEL_RESULT
         Dim BAO_L As New BAO_DROPBOX
-        Public _CLS As New CLS_SESSION
+
 
 #Region "PDF"
 
@@ -104,10 +104,10 @@ Namespace Controllers
 
         End Function
 
-        Function SP_MASTER_CER_PK_BY_FK_IDA(ByVal FK_IDA As String)
+        Function SP_MASTER_CER_PK_BY_FK_IDA(ByVal IDA As String) As JsonResult
             Dim dt As New DataTable
             Dim bao As New BAO
-            dt = bao.SP_MASTER_CER_PK_BY_FK_IDA(FK_IDA)
+            dt = bao.SP_MASTER_CER_PK_BY_FK_IDA(IDA)
             Dim clsds As New ClassDataset
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
@@ -1094,11 +1094,11 @@ Namespace Controllers
 
         Function GET_AUTHEN(ByVal TOKEN As String) As JsonResult
             'CHECK_URL()
-
+            Dim _CLS As New CLS_SESSION
 
 
             If TOKEN = "PASS" Then
-                _CLS.CITIZEN_ID = "0105522020724" ''"1100400181875"
+                _CLS.CITIZEN_ID = "0105522020724" ''"1100400181875" 0105522020724
                 _CLS.CITIZEN_ID_AUTHORIZE = "0105522020724" '"0105540078852"
                 _CLS.COMPANY_NAME = "บริษัท เทสออนลี่ จำกัด มหาขน"
                 _CLS.THANM = "นายทดสอบ ระบบ"
@@ -1585,12 +1585,12 @@ Namespace Controllers
 
             End Try
             Try
-                dao.fields.IDENTIFY = _CLS.CITIZEN_ID
+                dao.fields.IDENTIFY = bb.session.CITIZEN_ID
             Catch ex As Exception
 
             End Try
             Try
-                dao.fields.CITIZEN_ID_AUTHORIZE = _CLS.CITIZEN_ID_AUTHORIZE
+                dao.fields.CITIZEN_ID_AUTHORIZE = bb.session.CITIZEN_ID_AUTHORIZE
             Catch ex As Exception
 
             End Try
@@ -1640,7 +1640,7 @@ Namespace Controllers
 
             Dim bao_tran As New BAO
             Dim tr_id As Integer = 0
-            tr_id = bao_tran.insert_transection_new(_ProcessID, _CLS.CITIZEN_ID, _CLS.CITIZEN_ID_AUTHORIZE)
+            tr_id = bao_tran.insert_transection_new(_ProcessID, bb.session.CITIZEN_ID, bb.session.CITIZEN_ID_AUTHORIZE)
             Dim dao As New DAO_DRUG.TB_CER
 
             dao.fields = bb.CER
@@ -1700,11 +1700,11 @@ Namespace Controllers
             Dim bb As MODEL_DH = jss.Deserialize(XML_DH, GetType(MODEL_DH))
             Dim bao_tran As New BAO
             Dim tr_id As Integer = 0
-            tr_id = bao_tran.insert_transection_new(_ProcessID, _CLS.CITIZEN_ID, _CLS.CITIZEN_ID_AUTHORIZE)
+            tr_id = bao_tran.insert_transection_new(_ProcessID, bb.session.CITIZEN_ID, bb.session.CITIZEN_ID_AUTHORIZE)
             Dim dao As New DAO_DRUG.ClsDBdh15rqt
 
             dao.fields = bb.dh15rqt
-            dao.fields.IDENTIFY = _CLS.CITIZEN_ID_AUTHORIZE
+            dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
 
             dao.insert()
 

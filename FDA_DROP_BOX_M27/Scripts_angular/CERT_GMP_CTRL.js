@@ -9,12 +9,12 @@
 });
 app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
-    //CHK_TOKEN();
+    CHK_TOKEN();
     var LCN_IDA = sessionStorage.LCN_IDA;
     var IDA = sessionStorage.IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;
     var PROCESS = sessionStorage.DH_PROCESS_ID;
-    var CITIZEN = '0105527028430';
+    var CITIZEN = '0105527028430'; 
     $scope.GMP_CHEM = [];
 
     $scope.currentPage = 0;
@@ -47,7 +47,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         MODLE_GMP.then(function (datas) {
             
             $scope.LIST_GMP = datas.data;
-            
+            $scope.LIST_GMP.session = sessionStorage;
 
         }, function () { });
 
@@ -70,7 +70,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
         var GetdataCHEM = CENTER_SV.SP_MAS_CHEMICAL_by_IOWANM_AND_AORI("", "A");
         GetdataCHEM.then(function (datas) {
-            $scope.LIST_CHEM = datas.data;
+            $scope.LIST_CHEM = '';
             var auto = $scope.LIST_CHEM.length;
             $scope.currentPage = 1;
             $scope.entryLimit = 10;
@@ -249,14 +249,9 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 cEmpty = cEmpty + 1;
             }
         }
-
-
-
-       // var data = $scope.LIST_GMP;
-
-        
+      
         if (cEmpty == 0) {
-            var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP, $scope.GMP_CHEM, PROCESS);
+            var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP, $scope.GMP_CHEM, PROCESS, sessionStorage);
                 Getdata.then(function (datas) {
                     Swal.fire({
                         title: 'SUCCESS',

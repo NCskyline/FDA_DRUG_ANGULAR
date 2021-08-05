@@ -25,7 +25,7 @@ End Code
                 Ref Cer
             </td>
             <td>
-                <select class="dropdown" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA">
+                <select class="form-control" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA">
                     <option value="0">--กรุณาเลือก--</option>
                     <option ng-repeat="x in REF_CERT" value="{{x.IDA}}">{{x.CER_NUMBER}}</option>
                 </select>

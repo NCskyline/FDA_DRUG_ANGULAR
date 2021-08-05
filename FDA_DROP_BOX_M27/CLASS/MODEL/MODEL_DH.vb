@@ -1,4 +1,14 @@
 ﻿Public Class MODEL_DH
+
+    Private _session As CLS_SESSION
+    Public Property session() As CLS_SESSION
+        Get
+            Return _session
+        End Get
+        Set(ByVal value As CLS_SESSION)
+            _session = value
+        End Set
+    End Property
     Private _dh15rqt As New dh15rqt
     Public Property dh15rqt() As dh15rqt
         Get
@@ -77,6 +87,17 @@ Public Class MODEL_CHEMICAL
     Public iowanm_show As String
     Public cas_number_show As String
     Public aori_show As String
+
+    Private _session As CLS_SESSION
+    Public Property session() As CLS_SESSION
+        Get
+            Return _session
+        End Get
+        Set(ByVal value As CLS_SESSION)
+            _session = value
+        End Set
+    End Property
+
 End Class
 
 Public Class MODEL_CER_GMP
@@ -122,5 +143,14 @@ Public Class MODEL_CER_GMP
     'Public DOCUMENT_DATE As Date
     'Public EXP_DOCUMENT_DATE As Date
     'Public STANDARD_ID As String
+    Private _session As CLS_SESSION
+    Public Property session() As CLS_SESSION
+        Get
+            Return _session
+        End Get
+        Set(ByVal value As CLS_SESSION)
+            _session = value
+        End Set
+    End Property
 
 End Class
