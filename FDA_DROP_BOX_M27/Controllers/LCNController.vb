@@ -47,6 +47,12 @@ Namespace Controllers
         Function INPUT_BOJOD_3_4_2() As ActionResult
             Return View()
         End Function
+        Function INPUT_BOJOD_3_4_3() As ActionResult
+            Return View()
+        End Function
+        Function INPUT_BOJOD_3_4_1_Tan() As ActionResult
+            Return View()
+        End Function
         Function INPUT_KHO_WO_JO_3_2() As ActionResult
             Return View()
         End Function

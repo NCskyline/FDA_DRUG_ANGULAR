@@ -515,6 +515,93 @@ Namespace Controllers
                 End Try
             Next
 
+
+
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+        Function GET_LCN_SUBTITUTE_INPUT(ByVal BSN_IDENTIFY As String, ByVal LCN_IDA As Integer) As JsonResult
+            Dim model As New MODEL_LCN
+            Dim bao As New BAO
+            Dim dt_bsn As New DataTable
+            dt_bsn = bao.SP_LOCATION_BSN_BY_IDENTIFY(BSN_IDENTIFY)
+            For Each dr As DataRow In dt_bsn.Rows
+                Try
+                    model.BSN_THAIFULLNAME = dr("BSN_THAIFULLNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_IDENTIFY = dr("BSN_IDENTIFY")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.AGE = dr("AGE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_FULL_ADDR = dr("BSN_FULL_ADDR")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_TELEPHONE = dr("BSN_TELEPHONE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_FAX = dr("BSN_FAX")
+                Catch ex As Exception
+
+                End Try
+            Next
+            Dim dt_addr As New DataTable
+            dt_addr = bao.SP_MASTER_DALCN_DETAIL_LOCATION_KEEP_BY_IDA(LCN_IDA)
+            For Each dr As DataRow In dt_addr.Rows
+                Try
+                    model.KEEP_THANAMEPLACE = dr("thanameplace")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.KEEP_FULL_ADDR = dr("fulladdr2")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.TEL = dr("tel")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.Mobile = dr("fax")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.HOUSENO = dr("HOUSENO")
+                Catch ex As Exception
+
+                End Try
+            Next
+
+            Dim dt_phr As New DataTable
+            dt_phr = bao.SP_PHR_NOT_ROW_1_BY_FK_IDA(LCN_IDA)
+            For Each dr As DataRow In dt_phr.Rows
+                Try
+                    model.PHR_NAME = dr("PHR_NAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.PHR_TEXT_NUM = dr("PHR_TEXT_NUM")
+                Catch ex As Exception
+
+                End Try
+
+            Next
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
 

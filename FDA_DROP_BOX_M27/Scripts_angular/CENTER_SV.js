@@ -90,7 +90,19 @@
         });
         return response;
     };
-
+    
+    this.GET_LCN_SUBTITUTE_INPUT = function (BSN_IDENTIFY, LCN_IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_LCN_SUBTITUTE_INPUT"),
+            params: {
+                BSN_IDENTIFY: BSN_IDENTIFY,
+                LCN_IDA: LCN_IDA
+            }
+        });
+        return response;
+    };
+    
     
     this.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP = function (LOCATION_TYPE_CD, IDENTIFY) {
         var response = $http({

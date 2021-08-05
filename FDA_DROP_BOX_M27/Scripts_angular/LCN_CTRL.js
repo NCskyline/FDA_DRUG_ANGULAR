@@ -2,11 +2,11 @@
 
     $scope.CITIZEN = "";
     $scope.lcnno = "";
-    var LCN_IDA = sessionStorage.LCN_IDA;
+    var LCN_IDA = 70335; //sessionStorage.LCN_IDA;
     var LCT_IDA = 117194; //sessionStorage.LCT_IDA;  //
     var PROCESS = 123; //QueryString("PROCESS");
     var CITIZEN = '0105527028430';//'0105527028430';0000000000000
-    var BSN_IDENTIFY = "";
+    var BSN_IDENTIFY = "1710500118665";
     var IDENTIFY = "0000000000000";
     var HEAD_LCN_IDA = 49409;
     //var LCT_IDA = 117194;
@@ -99,9 +99,10 @@
 
             $scope.LIST_LCN = datas.data;
             $scope.LIST_LCN.PROCESS = PROCESS;
+
         }, function () { });
 
-        
+
         var data_keep = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP('2', IDENTIFY);
         data_keep.then(function (datas) {
             $scope.REF_LOCATION_KEEP = datas.data;
@@ -137,7 +138,39 @@
         var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
         Data_location.then(function (datas) {
             $scope.LIST_LABEL = datas.data;
-            $scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr;
+            //$scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr;
+        }, function () { });
+
+
+
+
+
+    };
+
+    $scope.getdetails_onload = function () {
+
+        var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(LCT_IDA);
+        Data_location.then(function (datas) {
+            $scope.LIST_LABEL = datas.data;
+            //$scope.LIST_LABEL.thanameplace = datas.data[0].thanameplace;
+            //$scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr;
+        }, function () { });
+
+    };
+    $scope.getdetails_phr = function () {
+        var data_phr = CENTER_SV.GET_LCN_SUBTITUTE_INPUT(BSN_IDENTIFY, LCN_IDA);
+        data_phr.then(function (datas) {
+
+            $scope.LIST_PHR = datas.data;
+        }, function () { });
+
+    };
+    
+    $scope.getdetails_keep = function () {
+        var data_phr = CENTER_SV.GET_LCN_SUBTITUTE_INPUT(BSN_IDENTIFY, LCN_IDA);
+        data_phr.then(function (datas) {
+
+            $scope.LIST_KEEP = datas.data;
         }, function () { });
 
     };

@@ -40,6 +40,17 @@
             _DALCN_DETAIL_LOCATION_KEEP = value
         End Set
     End Property
+    Private _DALCN_NCT_SUBSTITUTE As DALCN_NCT_SUBSTITUTE
+    Public Property DALCN_NCT_SUBSTITUTE() As DALCN_NCT_SUBSTITUTE
+        Get
+            Return _DALCN_NCT_SUBSTITUTE
+        End Get
+        Set(ByVal value As DALCN_NCT_SUBSTITUTE)
+            _DALCN_NCT_SUBSTITUTE = value
+        End Set
+    End Property
+
+
     Public Property LCN_IDA() As String
         Get
             Return _LCN_IDA
@@ -209,6 +220,14 @@
     Public RCV_DATE_DISPLAY As String
     Public LOCATION_SELECT As String
     Public HEAD_LCNNO_NCT As String
+
+    Public KEEP_THANAMEPLACE As String
+    Public KEEP_FULL_ADDR As String
+    Public KEEP_TEL As String
+
+
+    Public PHR_NAME As String
+    Public PHR_TEXT_NUM As String
 End Class
 
 

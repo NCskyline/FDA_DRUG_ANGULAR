@@ -276,6 +276,34 @@ Public Class BAO
         dt.TableName = "SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA"
         Return dt
     End Function
+
+    Public Function SP_MASTER_DALCN_DETAIL_LOCATION_KEEP_BY_IDA(ByVal LCN_IDA As Integer) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_MASTER_DALCN_DETAIL_LOCATION_KEEP_BY_IDA @FK_IDA = " & LCN_IDA
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+
+        Catch ex As Exception
+
+        End Try
+        dt.TableName = "SP_MASTER_DALCN_DETAIL_LOCATION_KEEP_BY_IDA"
+        Return dt
+    End Function
+    Public Function SP_PHR_NOT_ROW_1_BY_FK_IDA(ByVal FK_IDA As Integer) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_PHR_NOT_ROW_1_BY_FK_IDA @FK_IDA =  " & FK_IDA
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+        dt.TableName = "SP_PHR_NOT_ROW_1_BY_FK_IDA"
+
+        Return dt
+    End Function
     Public Function SP_GET_DRUG_PRODUCT_ESUB(ByVal register As String) As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_GET_DRUG_PRODUCT_ESUB @register= '" & register & "'"
