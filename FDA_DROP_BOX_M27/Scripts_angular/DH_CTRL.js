@@ -227,9 +227,9 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         else if (PROCESS_ID == '16') {
             $scope.INPUT = SET_URL_SV('/DH/INPUT_DH_IR');
         }
-        else if (PROCESS_ID == '17') {
-            $scope.INPUT = SET_URL_SV('/DH/INPUT_DH_IN');
-        }
+        //else if (PROCESS_ID == '17') {
+        //    $scope.INPUT = SET_URL_SV('/DH/INPUT_DH_IN');
+        //}
 
         var data_CNT = CENTER_SV.SP_MASTER_sysisocnt();
         data_CNT.then(function (datas) {
@@ -247,12 +247,16 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         MODLE_DH.then(function (datas) {
 
             $scope.LIST_DH = datas.data;
+            $scope.LIST_DH.session = sessionStorage;
 
         }, function () { });  
 
         var getdata = CENTER_SV.GET_INFORMARION_DH(LCN_IDA);
         getdata.then(function (datas) {
+
             $scope.LIST_DH = datas.data;
+            $scope.LIST_DH.session = sessionStorage;
+
         }, function () { });
 
 
@@ -425,6 +429,31 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
         }
 
+    };
+
+    $scope.BTN_SAVE_DH = function () {
+        var Getdata = CENTER_SV.INSERT_DH($scope.LIST_DH, PROCESS);
+        Getdata.then(function (datas) {
+            if (datas.data.Result == "success") {
+                Swal.fire({
+                    title: 'SUCCESS',
+                    text: 'บันทึกข้อมูลเรียบร้อย',
+                    icon: 'ดฟสหำ',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+
+                });
+            } else {
+                Swal.fire({
+                    title: 'ERROR',
+                    text: 'กรุณากรอกข้อมูลให้ถูกต้อง',
+                    icon: 'ดฟสหำ',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+
+                });
+            }
+        });
     };
 
     function CV_DATE(data) {

@@ -151,6 +151,18 @@
         return response;
     };
 
+    this.INSERT_DH = function (data, ProcessID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/INSERT_DH"),
+            dataType: "json",
+            data: {
+                XML_DH: JSON.stringify(data),
+                _ProcessID: ProcessID
+            }
+        });
+        return response;
+    };
 
     this.INSERT_CERT_GMP = function (aa,bb,ProcessID) {
         var response = $http({
@@ -161,15 +173,8 @@
                 XML_CERT: JSON.stringify(aa),
                 XML_CHEM: JSON.stringify(bb),
                 _ProcessID: ProcessID
-            }
-            //params: {
-            //    //identify: identify,
-               
-            //    //XML_MANUFAC: JSON.stringify(bb),
-            //    //XML_CHEM: JSON.stringify(cc),
                 
-            
-            //}
+            }
         });
         return response;
     };
