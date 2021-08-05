@@ -186,7 +186,7 @@ End Code*@
         </div>
     </div>
     <div style="text-align:center">
-        <input type="button" class="btn btn-lg" ng-click="BTN_SAVE()" value="บันทึก" />
+        <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_DH()" value="บันทึก" />
         <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
     </div>
 </div>

@@ -431,6 +431,31 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     };
 
+    $scope.BTN_SAVE_DH = function () {
+        var Getdata = CENTER_SV.INSERT_DH($scope.LIST_DH, PROCESS);
+        Getdata.then(function (datas) {
+            if (datas.data.Result == "success") {
+                Swal.fire({
+                    title: 'SUCCESS',
+                    text: 'บันทึกข้อมูลเรียบร้อย',
+                    icon: 'ดฟสหำ',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+
+                });
+            } else {
+                Swal.fire({
+                    title: 'ERROR',
+                    text: 'กรุณากรอกข้อมูลให้ถูกต้อง',
+                    icon: 'ดฟสหำ',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+
+                });
+            }
+        });
+    };
+
     function CV_DATE(data) {
         return new Date(parseInt(data.replace('/Date(', '').replace(')/', ''))).toLocaleDateString('th-TH');
     }

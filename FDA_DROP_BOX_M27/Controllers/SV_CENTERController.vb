@@ -1695,47 +1695,54 @@ Namespace Controllers
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
         End Function
 
-        Function INSERT_DH(ByVal XML_DH As String, ByVal _ProcessID As String, ByVal IDA_CER As Integer) As JsonResult
-            Dim jss As New JavaScriptSerializer
-            Dim bb As MODEL_DH = jss.Deserialize(XML_DH, GetType(MODEL_DH))
-            Dim bao_tran As New BAO
-            Dim tr_id As Integer = 0
-            tr_id = bao_tran.insert_transection_new(_ProcessID, bb.session.CITIZEN_ID, bb.session.CITIZEN_ID_AUTHORIZE)
-            Dim dao As New DAO_DRUG.ClsDBdh15rqt
+        Function INSERT_DH(ByVal XML_DH As String, ByVal _ProcessID As String) As JsonResult
 
-            dao.fields = bb.dh15rqt
-            dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
+            Dim Result As String
 
-            dao.insert()
+            Try
+                Dim jss As New JavaScriptSerializer
+                Dim bb As MODEL_DH = jss.Deserialize(XML_DH, GetType(MODEL_DH))
+                Dim bao_tran As New BAO
+                Dim tr_id As Integer = 0
 
+                tr_id = bao_tran.insert_transection_new(_ProcessID, bb.session.CITIZEN_ID, bb.session.CITIZEN_ID_AUTHORIZE)
+                Dim dao As New DAO_DRUG.ClsDBdh15rqt
 
-            Dim IDA As Integer = dao.fields.IDA
+                dao.fields = bb.dh15rqt
+                dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
 
-            Dim dao_DH15_DETAIL_MANUFACTURE_CER As New DAO_DRUG.TB_DH15_DETAIL_MANUFACTURE
-            Dim dao_CER_DETAIL_MANUFACTURE As New DAO_DRUG.TB_CER_DETAIL_MANUFACTURE
-            dao_CER_DETAIL_MANUFACTURE.GetDataby_FK_IDA(IDA_CER)
-
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.TR_ID = tr_id
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.FK_IDA = IDA
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.ADDRESS_CITY = dao_CER_DETAIL_MANUFACTURE.fields.ADDRESS_CITY
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.ADDRESS_NUMBER = dao_CER_DETAIL_MANUFACTURE.fields.ADDRESS_NUMBER
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.CER_DATE = dao_CER_DETAIL_MANUFACTURE.fields.CER_DATE
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.COMPANY_NAME = dao_CER_DETAIL_MANUFACTURE.fields.COMPANY_NAME
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.COUNTRY = dao_CER_DETAIL_MANUFACTURE.fields.COUNTRY
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.COUNTRY_GMP = dao_CER_DETAIL_MANUFACTURE.fields.COUNTRY_GMP
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.COUNTRY_ID = dao_CER_DETAIL_MANUFACTURE.fields.COUNTRY_ID
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.GLN = dao_CER_DETAIL_MANUFACTURE.fields.GLN
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.LOCATION_STANDARD = dao_CER_DETAIL_MANUFACTURE.fields.LOCATION_STANDARD
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.NAME_ADDRESS = dao_CER_DETAIL_MANUFACTURE.fields.NAME_ADDRESS
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.SALE_DATE = dao_CER_DETAIL_MANUFACTURE.fields.SALE_DATE
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.STANDARD_ID = dao_CER_DETAIL_MANUFACTURE.fields.STANDARD_ID
-            dao_DH15_DETAIL_MANUFACTURE_CER.fields.ZIPCODE = dao_CER_DETAIL_MANUFACTURE.fields.ZIPCODE
-
-            dao_DH15_DETAIL_MANUFACTURE_CER.insert()
+                dao.insert()
 
 
+                Dim IDA As Integer = dao.fields.IDA
 
-            Return Json(msg_r, JsonRequestBehavior.AllowGet)
+                Dim dao_DH15_DETAIL_MANUFACTURE_CER As New DAO_DRUG.TB_DH15_DETAIL_MANUFACTURE
+                Dim dao_CER_DETAIL_MANUFACTURE As New DAO_DRUG.TB_CER_DETAIL_MANUFACTURE
+                dao_CER_DETAIL_MANUFACTURE.GetDataby_FK_IDA(bb.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA)
+
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.TR_ID = tr_id
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.FK_IDA = IDA
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.ADDRESS_CITY = dao_CER_DETAIL_MANUFACTURE.fields.ADDRESS_CITY
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.ADDRESS_NUMBER = dao_CER_DETAIL_MANUFACTURE.fields.ADDRESS_NUMBER
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.CER_DATE = dao_CER_DETAIL_MANUFACTURE.fields.CER_DATE
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.COMPANY_NAME = dao_CER_DETAIL_MANUFACTURE.fields.COMPANY_NAME
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.COUNTRY = dao_CER_DETAIL_MANUFACTURE.fields.COUNTRY
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.COUNTRY_GMP = dao_CER_DETAIL_MANUFACTURE.fields.COUNTRY_GMP
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.COUNTRY_ID = dao_CER_DETAIL_MANUFACTURE.fields.COUNTRY_ID
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.GLN = dao_CER_DETAIL_MANUFACTURE.fields.GLN
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.LOCATION_STANDARD = dao_CER_DETAIL_MANUFACTURE.fields.LOCATION_STANDARD
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.NAME_ADDRESS = dao_CER_DETAIL_MANUFACTURE.fields.NAME_ADDRESS
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.SALE_DATE = dao_CER_DETAIL_MANUFACTURE.fields.SALE_DATE
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.STANDARD_ID = dao_CER_DETAIL_MANUFACTURE.fields.STANDARD_ID
+                dao_DH15_DETAIL_MANUFACTURE_CER.fields.ZIPCODE = dao_CER_DETAIL_MANUFACTURE.fields.ZIPCODE
+
+                dao_DH15_DETAIL_MANUFACTURE_CER.insert()
+                Result = "success"
+            Catch ex As Exception
+                Result = "false"
+            End Try
+
+            Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function
 #End Region
 
