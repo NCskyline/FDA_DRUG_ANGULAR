@@ -120,6 +120,9 @@ Namespace Controllers
             Return View()
         End Function
 
+        Function INPUT_NORDOJ_3_4_1_Tan() As ActionResult
+            Return View()
+        End Function
     End Class
 
     Public Class LCN_CENTERController
