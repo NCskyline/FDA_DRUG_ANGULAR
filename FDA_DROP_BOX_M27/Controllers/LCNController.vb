@@ -138,11 +138,14 @@ Namespace Controllers
             End Select
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
+
+#Region "STORE"
         Function GET_FULL_MODEL_EDIT() As JsonResult
             Dim model As New MODEL_EDIT_LCN
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
         Function SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(ByVal IDA As String)
+
             Dim dt As New DataTable
             Dim bao As New BAO
             dt = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA)
@@ -158,5 +161,261 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
         End Function
+
+        Function SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(ByVal LOCATION_ADDRESS_IDA As Integer)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(LOCATION_ADDRESS_IDA)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
+        Function SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP(ByVal LOCATION_TYPE_CD As String, ByVal IDENTIFY As String)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2(LOCATION_TYPE_CD, IDENTIFY)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+#End Region
+
+#Region "GET DATA"
+
+        Function GET_LCN_SUBTITUTE_INPUT(ByVal BSN_IDENTIFY As String, ByVal LCN_IDA As Integer) As JsonResult
+            Dim model As New MODEL_LCN
+            Dim bao As New BAO
+            Dim dt_bsn As New DataTable
+            dt_bsn = bao.SP_LOCATION_BSN_BY_IDENTIFY(BSN_IDENTIFY)
+            For Each dr As DataRow In dt_bsn.Rows
+                Try
+                    model.BSN_THAIFULLNAME = dr("BSN_THAIFULLNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_IDENTIFY = dr("BSN_IDENTIFY")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.AGE = dr("AGE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_FULL_ADDR = dr("BSN_FULL_ADDR")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_TELEPHONE = dr("BSN_TELEPHONE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_FAX = dr("BSN_FAX")
+                Catch ex As Exception
+
+                End Try
+            Next
+            Dim dt_addr As New DataTable
+            dt_addr = bao.SP_MASTER_DALCN_DETAIL_LOCATION_KEEP_BY_IDA(LCN_IDA)
+            For Each dr As DataRow In dt_addr.Rows
+                Try
+                    model.KEEP_THANAMEPLACE = dr("thanameplace")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.KEEP_FULL_ADDR = dr("fulladdr2")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.TEL = dr("tel")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.Mobile = dr("fax")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.HOUSENO = dr("HOUSENO")
+                Catch ex As Exception
+
+                End Try
+            Next
+
+            Dim dt_phr As New DataTable
+            dt_phr = bao.SP_PHR_NOT_ROW_1_BY_FK_IDA(LCN_IDA)
+            For Each dr As DataRow In dt_phr.Rows
+                Try
+                    model.PHR_NAME = dr("PHR_NAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.PHR_TEXT_NUM = dr("PHR_TEXT_NUM")
+                Catch ex As Exception
+
+                End Try
+
+            Next
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function GET_LCN_INFORMATION_INPUT(ByVal BSN_IDENTIFY As String, ByVal IDENTIFY As String, ByVal LCT_IDA As String, ByVal HEAD_LCN_IDA As String) As JsonResult
+            Dim model As New MODEL_LCN
+            Dim bao As New BAO
+            Dim dt_tha As New DataTable
+            dt_tha = bao.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(IDENTIFY, "")
+            For Each dr As DataRow In dt_tha.Rows
+                Try
+                    model.thanm = dr("thanm")
+                Catch ex As Exception
+
+                End Try
+
+            Next
+            model.IDENTIFY = IDENTIFY
+            Dim lcnno_auto As String = ""
+            Dim lcnno_format As String = ""
+            Try
+                Dim dao_main As New DAO_DRUG.ClsDBdalcn
+                dao_main.GetDataby_IDA(HEAD_LCN_IDA)
+                Try
+                    lcnno_auto = dao_main.fields.lcnno
+                Catch ex As Exception
+
+                End Try
+                Try
+                    If Len(lcnno_auto) > 0 Then
+
+                        If Right(Left(lcnno_auto, 3), 1) = "5" Then
+                            lcnno_format = "จ. " & CStr(CInt(Right(lcnno_auto, 4))) & "/25" & Left(lcnno_auto, 2)
+                        Else
+                            lcnno_format = dao_main.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                        End If
+                        'lcnno_format = dao.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                    End If
+                Catch ex As Exception
+
+                End Try
+
+                model.HEAD_LCNNO_NCT = lcnno_format
+            Catch ex As Exception
+
+            End Try
+            Dim dt_bsn As New DataTable
+            dt_bsn = bao.SP_LOCATION_BSN_BY_IDENTIFY(BSN_IDENTIFY)
+            For Each dr As DataRow In dt_bsn.Rows
+                Try
+                    model.BSN_THAIFULLNAME = dr("BSN_THAIFULLNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_IDENTIFY = dr("BSN_IDENTIFY")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.AGE = dr("AGE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_FULL_ADDR = dr("BSN_FULL_ADDR")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_TELEPHONE = dr("BSN_TELEPHONE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_FAX = dr("BSN_FAX")
+                Catch ex As Exception
+
+                End Try
+            Next
+            Dim dt_addr As New DataTable
+            dt_addr = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(LCT_IDA)
+            For Each dr As DataRow In dt_addr.Rows
+                Try
+                    model.THANAMEPLACE = dr("thanameplace")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.fulladdr3 = dr("fulladdr3")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.TEL = dr("tel")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.Mobile = dr("fax")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.HOUSENO = dr("HOUSENO")
+                Catch ex As Exception
+
+                End Try
+            Next
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function GET_LCN_INFORMATION_BSN_INPUT(ByVal BSN_IDENTIFY As String) As JsonResult
+            Dim model As New MODEL_LCN
+            Dim bao As New BAO
+            Dim dt_bsn As New DataTable
+            dt_bsn = bao.SP_LOCATION_BSN_BY_IDENTIFY(BSN_IDENTIFY)
+            For Each dr As DataRow In dt_bsn.Rows
+                Try
+                    model.BSN_THAIFULLNAME = dr("BSN_THAIFULLNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_IDENTIFY = dr("BSN_IDENTIFY")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.AGE = dr("AGE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_FULL_ADDR = dr("BSN_FULL_ADDR")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_TELEPHONE = dr("BSN_TELEPHONE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_FAX = dr("BSN_FAX")
+                Catch ex As Exception
+
+                End Try
+            Next
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+#End Region
+
     End Class
 End Namespace

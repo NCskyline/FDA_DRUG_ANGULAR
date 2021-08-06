@@ -1,5 +1,6 @@
 ﻿app.controller('LCN_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
+    CHK_TOKEN();
     $scope.CITIZEN = "";
     $scope.lcnno = "";
     var LCN_IDA = 70335; //sessionStorage.LCN_IDA;
@@ -34,13 +35,13 @@
     //    }, function () { });
 
     //}
-    var data_prefix = CENTER_SV.SP_SYSPREFIX_PERSON();
-    data_prefix.then(function (datas) {
-        $scope.PREFIX = datas.data;
+        var data_prefix = CENTER_SV.SP_SYSPREFIX_PERSON();
+        data_prefix.then(function (datas) {
+            $scope.PREFIX = datas.data;
 
-    }, function () { });
+        }, function () { });
 
-}
+    }
 
 
     $scope.BTN_MENU = function (process) {
@@ -54,15 +55,15 @@
     $scope.BTN_INPUT = function () {
 
         if ($scope.FULL_MODEL.PROCESS == '101') {
-            REDIRECT('../LCN/INPUTdalcn_output_1');
+            REDIRECT('/LCN/INPUTdalcn_output_1');
         } else if ($scope.FULL_MODEL.PROCESS == '103') {
-            REDIRECT('../LCN/INPUTdalcn_output_3');
+            REDIRECT('/LCN/INPUTdalcn_output_3');
         } else if ($scope.FULL_MODEL.PROCESS == '104') {
-            REDIRECT('../LCN/INPUTdalcn_output_4');
+            REDIRECT('/LCN/INPUTdalcn_output_4');
         } else if ($scope.FULL_MODEL.PROCESS == '105') {
-            REDIRECT('../LCN/INPUT_NORYOR_1');
+            REDIRECT('/LCN/INPUT_NORYOR_1');
         } else if ($scope.FULL_MODEL.PROCESS == '106') {
-            REDIRECT('../LCN/INPUT_PORYOR_1');
+            REDIRECT('/LCN/INPUT_PORYOR_1');
         } else if ($scope.FULL_MODEL.PROCESS == '107' || $scope.FULL_MODEL.PROCESS == '108' || $scope.FULL_MODEL.PROCESS == '109') {           
             REDIRECT('/LCN/INPUT_DA_YORBOR?PROCESS=' + $scope.FULL_MODEL.PROCESS);
         }
@@ -89,16 +90,17 @@
         sessionStorage.CITIZEN_ID_AUTHORIZE = datas.CITIZEN;
         sessionStorage.LCNNO = datas.lcnno;
 
-        var url = "../LCN/FRM_LCN_STAFF_LCN_INFORMATION";
+        var url = "/LCN/FRM_LCN_STAFF_LCN_INFORMATION";
         REDIRECT(url);
     };
-
+    
     $scope.pageload = function () {
         var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, IDENTIFY, LCT_IDA, HEAD_LCN_IDA);
         MODLE_LCN.then(function (datas) {
 
             $scope.LIST_LCN = datas.data;
             $scope.LIST_LCN.PROCESS = PROCESS;
+            $scope.LIST_LCN.session = sessionStorage;
 
         }, function () { });
 
@@ -141,10 +143,6 @@
             //$scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr;
         }, function () { });
 
-
-
-
-
     };
 
     $scope.getdetails_onload = function () {
@@ -186,6 +184,6 @@
 
     $scope.BTN_BACK = function () {
        
-        REDIRECT('../LCN/FRM_LCN_NEWS');
+        REDIRECT('/LCN/FRM_LCN_NEWS');
     };
 });
