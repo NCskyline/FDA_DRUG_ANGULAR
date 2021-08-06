@@ -1,5 +1,14 @@
 ﻿Public Class MODEL_LCN
 
+    Private _session As CLS_SESSION
+    Public Property session() As CLS_SESSION
+        Get
+            Return _session
+        End Get
+        Set(ByVal value As CLS_SESSION)
+            _session = value
+        End Set
+    End Property
     Private _LCN_IDA As String
 
     Private _dalcn As New dalcn

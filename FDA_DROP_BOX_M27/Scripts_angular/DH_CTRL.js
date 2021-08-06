@@ -190,11 +190,12 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     $scope.loadmodel = function () {
 
-        var IDA = sessionStorage.IDA
+        var IDA = sessionStorage.IDA;
 
         var getModel = CENTER_SV.SETMODEL_CHEM();
         getModel.then(function (datas) {
             $scope.LIST_CHEM = datas.data;
+            $scope.LIST_CHEM.session = sessionStorage;
         });
 
         var dataEDIT = CENTER_SV.GETDATA_CHEMICAL(IDA);

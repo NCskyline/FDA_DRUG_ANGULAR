@@ -4,7 +4,8 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
 
     $scope.loading = true;
-
+    //var Trigger = QueryString("Trigger");
+    var Trigger = "LCN";
     $scope.DOC_ID = 0;
     $scope.DOC_TITLE = "TEST";
     $scope.IS_USE = 0;
@@ -33,8 +34,12 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 sessionStorage.THANM = datas.data.THANM;
                 sessionStorage.COMPANY_NAME = datas.data.COMPANY_NAME;
 
- 
-                window.location = "/DH/FRM_MAIN_PAGE_PHESAJ"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
+                if (Trigger == "LCN") {
+                    window.location = "/LCN/FRM_LCN_NEWS";
+                } else if (Trigger == "DH") {
+                    window.location = "/DH/FRM_MAIN_PAGE_PHESAJ"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
+                }
+               
                // window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PHESAJ";
             }
             else {
