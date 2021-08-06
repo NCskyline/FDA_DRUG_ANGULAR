@@ -11,7 +11,7 @@ End Code
 
 <div class="ic" ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP">
     <h1></h1>
-    <table width="100%" style="font-family:'TH SarabunPSK';font-size:22px;">
+    <table width="100%" style="font-family:'Taviraj';font-size:22px;">
         <tr>
             <td width="20%" style="height:25px">
                 เลขที่ใบอนุญาต :

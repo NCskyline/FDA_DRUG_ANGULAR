@@ -9,7 +9,7 @@ End Code
         <tr>
             <td>ประเภทสัตว์ :</td>
             <td>
-                <select style="font-family:'TH SarabunPSK';font-size:20px;" id="ddl_dramltype">
+                <select style="font-family:'Taviraj';font-size:20px;" id="ddl_dramltype">
                     <option value="0">--กรุณาเลือก--</option>
                     <option ng-repeat="x in DRAMLTYPE_ALL" value="{{x.amltpcd}}">{{x.amltpnm}}</option>
                 </select>

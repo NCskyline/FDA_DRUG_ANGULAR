@@ -45,7 +45,7 @@ End Code*@
                                 <td>
 
 
-                                    <input class="form-control inline" ng-model="iowanm_search" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                                    <input class="form-control inline" ng-model="iowanm_search" style="font-family:'Taviraj';font-size:20px;" type="text" />
                                 </td>
                                 <td>
                                     <input type="button" value="ค้นหา" />
@@ -107,25 +107,25 @@ End Code*@
                             <tr>
                                 <td>ชื่อสาร</td>
                                 <td>
-                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.iowanm" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.iowanm" style="font-family:'Taviraj';font-size:20px;" type="text" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>CAS NO.</td>
                                 <td>
-                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.cas_number" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.cas_number" style="font-family:'Taviraj';font-size:20px;" type="text" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>INN</td>
                                 <td>
-                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.INN" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.INN" style="font-family:'Taviraj';font-size:20px;" type="text" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>INN TH</td>
                                 <td>
-                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.INN_TH" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.INN_TH" style="font-family:'Taviraj';font-size:20px;" type="text" />
                                 </td>
                             </tr>
                             <tr>
@@ -147,33 +147,33 @@ End Code*@
                                 <td>iowacd</td>
                                 <td>
         
-                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.iowa" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.iowa" style="font-family:'Taviraj';font-size:20px;" type="text" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>Run NO.</td>
                                 <td>
-                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.runno" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.runno" style="font-family:'Taviraj';font-size:20px;" type="text" />
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>salt</td>
                                 <td>
-                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.salt" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.salt" style="font-family:'Taviraj';font-size:20px;" type="text" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>syn</td>
                                 <td>
-                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.syn" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.syn" style="font-family:'Taviraj';font-size:20px;" type="text" />
                                 </td>
                             </tr>
                  
                             <tr>
                                 <td>dv</td>
                                 <td>
-                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.add_digit" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.add_digit" style="font-family:'Taviraj';font-size:20px;" type="text" />
                                 </td>
                             </tr>
                             <tr>
@@ -214,7 +214,7 @@ End Code*@
                                 <td>
                                     <input type="checkbox" ng-model="LIST_CHEM.CHEMICAL_REQUEST.IS_ATC"/>
                                     &nbsp;(ถ้ามี)
-                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.ATC_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                                    <input class="form-control inline" ng-model="LIST_CHEM.CHEMICAL_REQUEST.ATC_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
                                 </td>
                             </tr>
 

@@ -3,7 +3,7 @@
 End Code
 @*<script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/DH_CTRL.js"></script>*@
-<div class="ic">
+<div class="ic" style="font-family:'Taviraj';font-size:20px;">
     <center>
         <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2> <br />
         <h2>
@@ -56,13 +56,13 @@ End Code
                 ชื่อผู้แทนจำหน่ายในต่างประเทศ (ซื้อผ่าน)
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
             <td>
                 ประเทศ
             </td>
             <td>
-                <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
+                <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
                     <option value="0">--กรุณาเลือก--</option>
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
@@ -98,7 +98,7 @@ End Code
                 ชื่อการค้า <font color="red">*</font>
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.TRADING_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.TRADING_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
 
         </tr>
@@ -107,7 +107,7 @@ End Code
                 มาตรฐาน (ตำรายา)
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
     </table>

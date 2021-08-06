@@ -16,43 +16,43 @@
         <tr>
             <td>ชื่อสาร</td>
             <td>
-                <input class="form-control inline" ng-model="DATA_CHEM.iowanm" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="DATA_CHEM.iowanm" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
             <td>รายละเอียดเพิ่มเติม</td>
             <td>
-                <input class="form-control inline" ng-model="DATA_CHEM.DESCRIPTION_OTHER" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="DATA_CHEM.DESCRIPTION_OTHER" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
             <td>CAS NUMBER</td>
             <td>
-                <input class="form-control inline" ng-model="DATA_CHEM.cas_number" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="DATA_CHEM.cas_number" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
             <td>INN</td>
             <td>
-                <input class="form-control inline" ng-model="DATA_CHEM.INN" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="DATA_CHEM.INN" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
             <td>INN TH</td>
             <td>
-                <input class="form-control inline" ng-model="DATA_CHEM.INN_TH" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="DATA_CHEM.INN_TH" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
             <td>Email สำหรับติดต่อ</td>
             <td>
-                <input class="form-control inline" ng-model="DATA_CHEM.EMAIL" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="DATA_CHEM.EMAIL" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
             <td>เบอร์โทรศัพท์ติดต่อ</td>
             <td>
-                <input class="form-control inline" ng-model="DATA_CHEM.TEL" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="DATA_CHEM.TEL" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
