@@ -48,7 +48,7 @@
     </label>
 </div>
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
-    <div class="title2" style="font-family:'TH SarabunPSK';font-size:24px;">
+    <div class="title2" style="font-family:'Taviraj';font-size:24px;">
         <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" @*border="1"*@>
             <tr>
                 <td style="text-align:left;width:20%">
@@ -104,7 +104,7 @@
                     เขียนที่
                 </td>
                 <td style="width:40%">
-                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -162,7 +162,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                                    <input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'Taviraj';font-size:20px;" type="text" />
                                 </td>
                                 <td>
                                     <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
@@ -186,7 +186,7 @@
                     สัญชาติ
                 </td>
                 <td style="text-align:left;width:10%;">
-                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
 
             </tr>
@@ -222,7 +222,7 @@
                     E-mail
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.Email" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.Email" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
         </table>
@@ -314,7 +314,7 @@
                     โดยมีเภสัชกรชั้น
                 </td>
                 <td style="width:10%">
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_LEVEL" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_LEVEL" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
                 <td style="text-align:center">
                     ชื่อ
@@ -326,7 +326,7 @@
                     </select>
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -334,7 +334,7 @@
                     เลขบัตรประจำตัวประชาชน
                 </td>
                 <td colspan="4">
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CTZNO" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CTZNO" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -342,7 +342,7 @@
                     ใบอนุญาตประกอบวิชาชีพ
                 </td>
                 <td colspan="4">
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_NUM" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_NUM" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -373,7 +373,7 @@
                     </select>
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -381,7 +381,7 @@
                     เลขบัตรประจำตัวประชาชน
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CTZNO" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CTZNO" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
 
             </tr>
@@ -392,14 +392,14 @@
                     ใบอนุญาตประกอบวิชาชีพ เลขที่
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_JOB" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_JOB" style="font-family:'Taviraj';font-size:20px;" type="text" />
 
                 </td>
                 <td style="width:10%;text-align:center">
                     เลขที่
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_NUM" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_NUM" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
         </table>
@@ -425,7 +425,7 @@
                     </select>
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -433,7 +433,7 @@
                     เลขบัตรประจำตัวประชาชน
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CTZNO" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CTZNO" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
 
             </tr>
@@ -442,7 +442,7 @@
                     หนังสือรับรองการอบรมตามมาตรา ๔๘ แห่งพระราชบัญิญัติยา (ฉบับที่ ๓) พ.ศ. ๒๕๒๒ เลขที่
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CERTIFICATE_TRAINING" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CERTIFICATE_TRAINING" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
         </table>
@@ -464,7 +464,7 @@
                     <strong>เวลาทำการ (เวลาปฏิบัติการ ของผู้มีหน้าที่ปฏิบัติการ)</strong>
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_WORK_TIME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_WORK_TIME" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
         </table>
@@ -516,7 +516,7 @@
                     (
                 </td>
                 <td style="width:50%;text-align:center">
-                    <input class="form-control inline" ng-model="LIST_LCN.BSN_THAIFULLNAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.BSN_THAIFULLNAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
                 <td style="text-align:left">
                     ตัวบรรจง)

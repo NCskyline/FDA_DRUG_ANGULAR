@@ -9,10 +9,10 @@ End Code
     @*-------------GMP------------------*@
     <div ng-show="LIST_GMP.CER.CER_TYPE == '31'">
         @*ng-repeat="datas in LIST_GMP"  ng-show="PROCESS == '31'" *@
-        <h2 style="font-family:'TH SarabunPSK';font-size:40px;">
+        <h2 style="font-family:'Taviraj';font-size:40px;">
             <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ</b>
         </h2>
-        <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;" class="table">
+        <table width="100%" style="font-family:'Taviraj';font-size:32px;" class="table">
             <tr>
                 <td style="height:25px;width:35%;font-weight: bolder">
                     1. เลขที่ใบรับรอง (Certificate Number)<font color="red">*</font>  :
@@ -53,7 +53,7 @@ End Code
                     5. ประเทศ (Country)<font color="red">*</font> :
                 </td>
                 <td>
-                    @*<select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID">
+                    @*<select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID">
                             <option value="0">--กรุณาเลือก--</option>
                             <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                         </select>*@
@@ -122,7 +122,7 @@ End Code
                     ชื่อหน่วยงานรัฐของประเทศผู้ผลิต
                 </td>
                 <td rowspan="2" ;">
-                    @*<input class="form-control inline" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME" style="font-family:'TH SarabunPSK';font-size:20px;height:100px;" type="text" />*@
+                    @*<input class="form-control inline" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME" style="font-family:'Taviraj';font-size:20px;height:100px;" type="text" />*@
                     <label>{{LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME}}</label>
 
                 </td>
@@ -160,7 +160,7 @@ End Code
                                 &nbsp; ประเทศ<font color="red">*</font>
                             </td>
                             <td style="height:25px">
-                                @*<select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_GMP">
+                                @*<select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_GMP">
                                         <option value="0">--กรุณาเลือก--</option>
                                         <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                                     </select>*@
@@ -174,7 +174,7 @@ End Code
             </tr>
         </table>
         <br />
-        <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
+        <h2 style="font-family:'Taviraj';font-size:24px;">
             <b> รายละเอียดผลิตภัณฑ์ที่ได้รับการรับรอง </b>
         </h2>
         <table width="100%">
@@ -194,10 +194,10 @@ End Code
         </div>
         <br />
         <div>
-            <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
+            <h2 style="font-family:'Taviraj';font-size:24px;">
                 ไฟล์แนบ
             </h2>
-            <table width="100%" style="font-family:'TH SarabunPSK';font-size:20px;">
+            <table width="100%" style="font-family:'Taviraj';font-size:20px;">
                 <tr>
                     <td>
                         ใบ CER GMP
@@ -217,10 +217,10 @@ End Code
 
     @*-------------ISO------------------*@
     <div ng-show="LIST_GMP.CER.CER_TYPE == '32'">
-        <h2 style="font-family:'TH SarabunPSK';font-size:40px;">
+        <h2 style="font-family:'Taviraj';font-size:40px;">
             แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
         </h2>
-        <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;">
+        <table width="100%" style="font-family:'Taviraj';font-size:32px;">
             <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
                     1. Certification Number/Registration Number/License Number<font color="red">*</font> :
@@ -350,11 +350,11 @@ End Code
     @*-------------ISO------------------*@
     @*-------------HACCP------------------*@
     <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '33'">
-        <h2 style="        font-family: 'TH SarabunPSK';
+        <h2 style="        font-family: 'Taviraj';
         font-size: 40px;">
             แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
         </h2>
-        <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;">
+        <table width="100%" style="font-family:'Taviraj';font-size:32px;">
             <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
                     1. Certification number/Registration Number/License Number<font color="red">*</font> :
@@ -465,7 +465,7 @@ End Code
             </tr>
         </table>
         <br />
-        <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
+        <h2 style="font-family:'Taviraj';font-size:24px;">
             รายละเอียดผลิตภัณฑ์ที่ได้รับการรับรอง
         </h2>
         <table width="100%">
@@ -487,10 +487,10 @@ End Code
     @*-------------HACCP------------------*@
     @*-------------PICS------------------*@
     <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '34'">
-        <h2 style="font-family:'TH SarabunPSK';font-size:40px;">
+        <h2 style="font-family:'Taviraj';font-size:40px;">
             แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
         </h2>
-        <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;">
+        <table width="100%" style="font-family:'Taviraj';font-size:32px;">
             <tr>
                 <td style="height:25px;font-weight:bolder">
                     1. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
@@ -536,7 +536,7 @@ End Code
                     5. สถานที่ผลิตได้มาตรฐาน GMP ตาม (โปรดระบุ) :
                 </td>
                 <td>
-                    <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD">
+                    <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD">
                         <option value="0">--กรุณาเลือก--</option>
                         <option value="1">PIC/S</option>
                         <option value="2">National GMP</option>
@@ -565,7 +565,7 @@ End Code
                     7. ชื่อผู้ซื้อ (Purchaser)<font color="red">*</font>
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_GMP.CER.BUYER_NAME" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_GMP.CER.BUYER_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
                     <label>{{LIST_GMP.CER.BUYER_NAME}}</label>
                 </td>
             </tr>
@@ -584,7 +584,7 @@ End Code
                     9. มาตราฐานสถานที่ผลิตยาสำเร็จรูปของประเทศผู้ซื้อได้ GMP ตาม (โปรดระบุ)<font color="red">*</font> :
                 </td>
                 <td>
-                    <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_GMP.CER.BUYER_STANDARD">
+                    <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.BUYER_STANDARD">
                         <option value="0">--กรุณาเลือก--</option>
                         <option value="1">ประเทศตามชื่อสมาชิก PIC/S</option>
                     </select>
@@ -614,10 +614,10 @@ End Code
     @*-------------PICS------------------*@
     @*-------------OTHER------------------*@
     <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '36'">
-        <h2 style="font-family:'TH SarabunPSK';font-size:40px;">
+        <h2 style="font-family:'Taviraj';font-size:40px;">
             แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
         </h2>
-        <table width="100%" style="font-family:'TH SarabunPSK';font-size:32px;">
+        <table width="100%" style="font-family:'Taviraj';font-size:32px;">
             <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
                     1. Reference Number<font color="red">*</font> :
@@ -736,7 +736,7 @@ End Code
             </tr>
         </table>
         <br />
-        <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
+        <h2 style="font-family:'Taviraj';font-size:24px;">
             รายละเอียดผลิตภัณฑ์
         </h2>
         <table width="100%">

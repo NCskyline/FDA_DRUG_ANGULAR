@@ -11,7 +11,7 @@ End Code
     <tr>
         <td style="width:5%">สถานะ</td>
         <td>
-            <select style="font-family:'TH SarabunPSK';font-size:20px;">
+            <select style="font-family:'Taviraj';font-size:20px;">
                 <option value="0">--กรุณาเลือก--</option>
             </select>
         </td>

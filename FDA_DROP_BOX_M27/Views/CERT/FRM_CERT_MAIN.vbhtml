@@ -2,7 +2,7 @@
     Layout = ""
 End Code
 
-<div>
+<div style="font-family:'Taviraj';width:100%">
     <div><h3 style="color:red">{{HEADER}}</h3></div>
     <div>
         <table>

@@ -3,16 +3,16 @@
 End Code
 
 <div class="ic" > @*ng-repeat="datas in LIST_GMP"*@
-    <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
+    <h2 style="font-family:'Taviraj';font-size:24px;">
         <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ</b>
     </h2>
-    <table width="100%" style="font-family:'TH SarabunPSK';font-size:20px;" >
+    <table width="100%" style="font-family:'Taviraj';font-size:20px;" >
         <tr>
             <td style="height:25px;width:35%;">
                 1. เลขที่ใบรับรอง (Certificate Number)<font color="red">*</font>  :
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER.CERTIFICATION_NUMBER_ALL" style="font-family:'TH SarabunPSK';font-size:20px;font:lighter" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER.CERTIFICATION_NUMBER_ALL" style="font-family:'Taviraj';font-size:20px;font:lighter" type="text" />
             </td>
         </tr>
         <tr>
@@ -20,7 +20,7 @@ End Code
                 2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.NAME_ADDRESS" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.NAME_ADDRESS" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -28,7 +28,7 @@ End Code
                 3. ที่อยู่ (Address)<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -36,7 +36,7 @@ End Code
                 4. เมือง (City / Province/ State)<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -44,7 +44,7 @@ End Code
                 5. ประเทศ (Country<font color="red">*</font> :
             </td>
             <td>
-                <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID">
+                <select style="font-family:'Taviraj';font-size:20px;" class="form-control inline" ng-model="LIST_GMP.CER.COUNTRY_ID">
                     <option value="0">--กรุณาเลือก--</option>
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
@@ -55,7 +55,7 @@ End Code
                 รหัสไปรษณีย์ (Post code/Zip code) :
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -63,7 +63,7 @@ End Code
                 6. Manufacturer&quot;s License Number :
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER.MANUFACTURER_LICENCE_NUMBER" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER.MANUFACTURER_LICENCE_NUMBER" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -71,7 +71,7 @@ End Code
                 Global Location Number (GLN) :
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -108,7 +108,7 @@ End Code
               ชื่อหน่วยงานรัฐของประเทศผู้ผลิต
             </td>
             <td rowspan="2" ;">
-                <input class="form-control inline" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME" style="font-family:'TH SarabunPSK';font-size:20px;height:100px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME" style="font-family:'Taviraj';font-size:20px;height:100px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -146,7 +146,7 @@ End Code
                             &nbsp; ประเทศ<font color="red">*</font>
                         </td>
                         <td>
-                            <select style="font-family:'TH SarabunPSK';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_GMP">
+                            <select style="font-family:'Taviraj';font-size:20px;" class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_GMP">
                                 <option value="0">--กรุณาเลือก--</option>
                                 <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                             </select>
@@ -160,7 +160,7 @@ End Code
         </tr>
     </table>
     <br />
-    <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
+    <h2 style="font-family:'Taviraj';font-size:24px;">
         <b> รายละเอียดผลิตภัณฑ์ที่ได้รับการรับรอง </b>
     </h2>
     <table width="100%">
@@ -169,17 +169,17 @@ End Code
                 10. ขอบเขตของประเภทยาที่รับรอง
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER.CER_SCOPE" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER.CER_SCOPE" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
     </table>
     <br />
 
     <div>
-        <h2 style="font-family:'TH SarabunPSK';font-size:24px;">
+        <h2 style="font-family:'Taviraj';font-size:24px;">
             ไฟล์แนบ
         </h2>
-        <table width="100%" style="font-family:'TH SarabunPSK';font-size:20px;">
+        <table width="100%" style="font-family:'Taviraj';font-size:20px;">
             <tr>
                 <td>
                     ใบ CER GMP

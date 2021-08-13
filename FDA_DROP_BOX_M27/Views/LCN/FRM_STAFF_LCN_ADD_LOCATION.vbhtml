@@ -76,7 +76,7 @@
                     ชื่อสถานที่ (ภาษาไทย)
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.thanameplace" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.thanameplace" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -84,7 +84,7 @@
                     ชื่อสถานที่ (ภาษาอังกฤษ)
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.engnameplace" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.engnameplace" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -92,7 +92,7 @@
                     รหัสประจำบ้าน
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.HOUSENO" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.HOUSENO" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -100,7 +100,7 @@
                     เลขที่
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.thaaddr" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.thaaddr" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -108,7 +108,7 @@
                     อาคาร/ตึก
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.thabuilding" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.thabuilding" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -116,7 +116,7 @@
                     ชั้น
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.thafloor" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />*กรุณากรอกคำว่า "ชั้น" เช่น ชั้น 3
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.thafloor" style="font-family:'Taviraj';font-size:20px;" type="text" />*กรุณากรอกคำว่า "ชั้น" เช่น ชั้น 3
                 </td>
             </tr>
             <tr>
@@ -124,7 +124,7 @@
                     ห้อง
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.tharoom" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />*กรุณากรอกคำว่า "ห้อง" เช่น ห้อง 241
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.tharoom" style="font-family:'Taviraj';font-size:20px;" type="text" />*กรุณากรอกคำว่า "ห้อง" เช่น ห้อง 241
                 </td>
             </tr>
             <tr>
@@ -132,7 +132,7 @@
                     หมู่
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.thamu" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />*กรุณากรอกคำว่า "อาคาร" เช่น อาคาร 1
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.thamu" style="font-family:'Taviraj';font-size:20px;" type="text" />*กรุณากรอกคำว่า "อาคาร" เช่น อาคาร 1
                 </td>
             </tr>
             <tr>
@@ -140,7 +140,7 @@
                     ซอย
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.thasoi" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.thasoi" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -148,7 +148,7 @@
                     ถนน
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.tharoad" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.tharoad" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -192,7 +192,7 @@
                     รหัสไปรษณีย์
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.zipcode" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.zipcode" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -200,7 +200,7 @@
                     โทรศัพท์
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.tel" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.tel" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -208,7 +208,7 @@
                     โทรศัพท์มือถือ
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.Mobile" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.Mobile" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -216,7 +216,7 @@
                     โทรสาร
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.fax" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.fax" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -224,7 +224,7 @@
                     latitude(ถ้าไม่มีใส่ 0)
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.latitude" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.latitude" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -232,7 +232,7 @@
                     longitude(ถ้าไม่มีใส่ 0)
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.longitude" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_EDIT_LCN.longitude" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
         </table>

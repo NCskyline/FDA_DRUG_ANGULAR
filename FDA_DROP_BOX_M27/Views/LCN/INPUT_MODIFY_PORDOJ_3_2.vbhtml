@@ -115,7 +115,7 @@
             เขียนที่
         </td>
         <td style="width:40%">
-            <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.WRITE_AT" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+            <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.WRITE_AT" style="font-family:'Taviraj';font-size:20px;" type="text" />
         </td>
     </tr>
     <tr>
