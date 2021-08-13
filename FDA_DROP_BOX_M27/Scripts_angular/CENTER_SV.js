@@ -178,6 +178,23 @@
         });
         return response;
     };
+
+    
+    this.INSERT_LCN_EDIT_RQT = function (aa, ProcessID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/INSERT_LCN_EDIT_RQT"),
+            dataType: "json",
+            data: {
+                XML_EDIT: JSON.stringify(aa),
+                _ProcessID: ProcessID
+
+            }
+        });
+        return response;
+    };
+
+
     
     this.INSERT_CHEM_RQT = function (LIST_GMP, PROCEESS, FK_IDA, MAIN_TYPE, SUB_TYPE, aori) {
         var response = $http({
