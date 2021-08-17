@@ -201,7 +201,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         var dataEDIT = CENTER_SV.GETDATA_CHEMICAL(IDA);
         dataEDIT.then(function (datas) {
             $scope.DATA_CHEM = datas.data;
-            $scope.DATA_CHEM.REQUEST_DATE = filwill(CHANGE_FORMATDATE($scope.DATA_CHEM.REQUEST_DATE));
+            $scope.DATA_CHEM.REQUEST_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.DATA_CHEM.REQUEST_DATE)));
 
         }, function () { });
     };
@@ -271,6 +271,18 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
         }, function () { });
         
+    };
+
+    $scope.REF_CER = function (IDA) {
+        var obj = $scope.REF_CERT;
+        angular.forEach(obj,function(value){
+            if (IDA == value.IDA) {
+                $scope.LIST_DH.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME = value.FOREIGN_LOCATION_NAME;
+                $scope.LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME = value.engcntnm;
+                $scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(value.DOCUMENT_DATE));
+                $scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(value.EXP_DOCUMENT_DATE));
+            }
+        });
     };
 
     $scope.GET_LCN = function (KEY) {
@@ -474,8 +486,8 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     //แปลงเวลา เข้าข้อมูล (แสดง)
     function CHANGE_FORMATDATE(DATE_CHANGE) {
-        var dateString = DATE_CHANGE.substr(6);
-        var currentTime = new Date(parseInt(dateString));
+        var dateString = DATE_CHANGE;
+        var currentTime = new Date(dateString);
         var month = currentTime.getMonth() + 1;
         if (month == '01') {
             month = "ม.ค.";
@@ -503,7 +515,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
             month = "ธ.ค.";
         }
         var day = currentTime.getDate();
-        var year = currentTime.getFullYear()+543;
+        var year = currentTime.getFullYear() + 543;
         return DATE_CHANGE = day + " " + month + " " + year;
     }
 

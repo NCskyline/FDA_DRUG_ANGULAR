@@ -12,7 +12,7 @@ End Code
         <h2 style="font-family:'Taviraj';font-size:40px;">
             <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ</b>
         </h2>
-        <table width="100%" style="font-family:'Taviraj';font-size:32px;" class="table">
+        <table width="100%" style="font-family:'Taviraj';font-size:26px;" class="table">
             <tr>
                 <td style="height:25px;width:35%;font-weight: bolder">
                     1. เลขที่ใบรับรอง (Certificate Number)<font color="red">*</font>  :
@@ -177,7 +177,7 @@ End Code
         <h2 style="font-family:'Taviraj';font-size:24px;">
             <b> รายละเอียดผลิตภัณฑ์ที่ได้รับการรับรอง </b>
         </h2>
-        <table width="100%">
+        <table width="100%" style="font-family:'Taviraj';font-size:24px;">
             <tr>
                 <td style="height:25px;width:35%;">
                     10. ขอบเขตของประเภทยาที่รับรอง
@@ -217,10 +217,10 @@ End Code
 
     @*-------------ISO------------------*@
     <div ng-show="LIST_GMP.CER.CER_TYPE == '32'">
-        <h2 style="font-family:'Taviraj';font-size:40px;">
+        <h2 style="font-family:'Taviraj';font-size:26px;">
             แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
         </h2>
-        <table width="100%" style="font-family:'Taviraj';font-size:32px;">
+        <table width="100%" style="font-family:'Taviraj';font-size:24px;">
             <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
                     1. Certification Number/Registration Number/License Number<font color="red">*</font> :

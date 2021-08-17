@@ -925,17 +925,24 @@
     };
 
     this.GET_LOT_RELEASE = function (Month, Year) {
-        const jsondata = {
+        var requestData = {
             Month: Month,
             Year: Year
         };
-        const convertjson = JSON.stringify(jsondata);
-        var response = $https({
+        var response = $http({
             method: "post",
-            url: "http://ilabplus.dmsc.moph.go.th/DMSC_Service/GetLotReleaseInfo",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'charset': 'utf-8'
+            },
+            url: "https://ilabplus.dmsc.moph.go.th/DMSC_Service/GetLotReleaseInfo",
             dataType: "json",
-            datas: convertjson
+            data: JSON.stringify(requestData)
         });
         return response; 
     };
 });
+
+
+
