@@ -70,6 +70,7 @@
     Public REF_CER_NO As String
     Public COUNTRY_NAME As String
     Public AGENT_COUNTRY_NAME As String
+    Public CHK_TYPE_LCN As String
 End Class
 
 Public Class MODEL_CHEMICAL

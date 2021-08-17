@@ -413,6 +413,16 @@ Namespace Controllers
                 End Try
                 'การ where
                 Try
+                    If TbNO.fields.lcntpcd = "ผย1" Then
+                        model.CHK_TYPE_LCN = 1
+                    ElseIf TbNO.fields.lcntpcd = "นย1" Then
+                        model.CHK_TYPE_LCN = 2
+                    End If
+                Catch ex As Exception
+
+                End Try
+
+                Try
 
                 Catch ex As Exception
 
@@ -1574,6 +1584,19 @@ Namespace Controllers
                 dao.fields = bb.dh15rqt
                 dao.fields.TR_ID = tr_id
                 dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
+                If _ProcessID = 14 Then
+                    dao.fields.QUOTA_TYPE = "00"
+                ElseIf _ProcessID = 15 Then
+                    dao.fields.QUOTA_TYPE = "01"
+                ElseIf _ProcessID = 16 Then
+                    dao.fields.QUOTA_TYPE = "00"
+                ElseIf _ProcessID = 17 Then
+                    dao.fields.QUOTA_TYPE = "01"
+                ElseIf _ProcessID = 18 Then
+                    dao.fields.QUOTA_TYPE = "00"
+                End If
+
+
 
                 dao.insert()
 
