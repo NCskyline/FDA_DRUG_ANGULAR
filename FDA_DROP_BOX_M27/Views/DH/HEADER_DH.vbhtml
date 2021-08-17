@@ -41,11 +41,11 @@ End Code*@
             <td width="25%">
                 <form name="myForm">
                     <label>
-                        <input type="radio" ng-model="LIST_DH.LCN_TYPE" value="1">
+                        <input type="radio" ng-model="LIST_DH.CHK_TYPE_LCN" value="1">
                         ผลิต
                     </label>
                     <label>
-                        <input type="radio" ng-model="LIST_DH.LCN_TYPE" value="2">
+                        <input type="radio" ng-model="LIST_DH.CHK_TYPE_LCN" value="2">
                         นำหรือสั่ง เข้ามาในราชอาณาจักร ซึ่งยาแผนปัจจุบัน
                     </label>
                 </form>
@@ -81,11 +81,11 @@ End Code*@
             <td width="25%">
                 <form name="myForm">
                     <label>
-                        <input type="radio" ng-model="LIST_DH.LCN_TYPE" value="1">
+                        <input type="radio" ng-model="LIST_DH.CHK_TYPE_LCN" value="1">
                         ผลิต
                     </label>
                     <label>
-                        <input type="radio" ng-model="LIST_DH.LCN_TYPE" value="2">
+                        <input type="radio" ng-model="LIST_DH.CHK_TYPE_LCN" value="2">
                         นำหรือสั่งเข้ามาในราชอาณาจักร
                     </label>
                 </form>
