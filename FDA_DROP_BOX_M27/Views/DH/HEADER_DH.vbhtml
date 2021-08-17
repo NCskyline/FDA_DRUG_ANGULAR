@@ -107,12 +107,12 @@ End Code*@
             </td>
         </tr>
     </table>
-    มีรายละเอียดดังนี้
+    <div style="font-family:'Taviraj';font-size:25px;">มีรายละเอียดดังนี้</div>
     <br />
     <div class="row">
         <div ng-include="INPUT" style="width:100%;"></div>
     </div>
-    <div ng-show="PROCESS_ID == '16' || PROCESS_ID == '17'">
+    <div ng-show="PROCESS_ID == '16'">
         <div>
             <table width="100%">
                 <tr>

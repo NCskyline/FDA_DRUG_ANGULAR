@@ -518,7 +518,6 @@
     <Content Include="Views\LCN\FRM_LCN_DRUG.vbhtml" />
     <Content Include="Views\LCN\FRM_LCN_NCT_SEARCH.vbhtml" />
     <Content Include="Views\LCN\FRM_EDIT_LCN_MAIN.vbhtml" />
-    <Content Include="Views\AUTHEN\FRM_DATA_REQUEST.vbhtml" />
     <Content Include="Views\LCN\INPUT_PDF_DRUG_KORYOR15.vbhtml" />
     <Content Include="Views\LCN\INPUT_DRUG_NORYOR9.vbhtml" />
     <Content Include="Views\LCN\INPUT_DRUG_PORYOR9.vbhtml" />

@@ -5,12 +5,21 @@
 
 <div ng-controller="AUTHEN_STAFF_CTRL" ng-app="ANGULAR_APP">
     <div>
-        
-        <button class="btn btn-lg" ng-click="BTN_LOT_RELEASE('5','2564')">GET</button>
+        <table>
+            <tr>
+                <td>เดือน</td>
+                <td><input type="text" class="form-control" ng-model="Month" /></td>
+            </tr>
+            <tr>
+                <td>ปี</td>
+                <td><input type="text" class="form-control" ng-model="Year" /></td>
+            </tr>
+        </table>
+        <button class="btn btn-lg" ng-click="BTN_LOT_RELEASE(Month,Year)">GET</button>
     </div>
     <div>
         <table>
-            <tr ng-repeat="datas in data.bulkdata">
+            <tr ng-repeat="datas in datas.data">
                 <td>{{CertificateNo}}</td>
                 <td>{{LotAllowTotal}}</td>
                 <td>{{LotAllowTotalUnitType}}</td>
@@ -18,4 +27,5 @@
             </tr>
         </table>
     </div>
+    
 </div>

@@ -13,11 +13,15 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
 
     function pageload() {
        
-        //var token = QueryString("Token");
-        var token = "PASS";
+        var token = '';
+        if (location.hostname == 'localhost') {
+            token = "PASS";
+        } else {
+            token = QueryString("Token");
+        }
         sessionStorage.token = token;
 
-        var getData = CENTER_SV.GET_AUTHEN(token);
+        var getData = CENTER_SV.GET_AUTHEN_DATA(token);
     
 
         getData.then(function (datas) {
@@ -80,7 +84,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
     $scope.BTN_LOT_RELEASE = function (Month, Year) {
         var getdata = CENTER_SV.GET_LOT_RELEASE(Month, Year);
         getdata.then(function (datas) {
-            $scope.data = datas.data.RESULT;
+            $scope.data = datas.data;
         });
     };
 

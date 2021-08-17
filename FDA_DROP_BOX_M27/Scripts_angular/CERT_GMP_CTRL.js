@@ -90,13 +90,12 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         }, function () { });
 
         var Set_PREVIEW = CENTER_SV.GET_PREVIEW_CERT(IDA);
-
         Set_PREVIEW.then(function (datas) {
             
             $scope.LIST_GMP = datas.data;
            
-            $scope.LIST_GMP.CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE($scope.LIST_GMP.CER.DOCUMENT_DATE));
-            $scope.LIST_GMP.CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE($scope.LIST_GMP.CER.EXP_DOCUMENT_DATE));
+            $scope.LIST_GMP.CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_GMP.CER.DOCUMENT_DATE)));
+            $scope.LIST_GMP.CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_GMP.CER.EXP_DOCUMENT_DATE)));
             $scope.INPUT_CHEM = SET_URL_SV('/CERT/PREVIEW_CHEMICAL');
 
         }, function () { });
@@ -278,7 +277,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
     };
 
     function CV_DATE(data) {
-        return new Date(parseInt(data.replace('/Date(', '').replace(')/', ''))).toLocaleDateString('th-TH');
+        return new Date(parseInt(data.replace('/Date(', '').replace(')/', ''))).toLocaleDateString();
     }
 
     function filwill(dateString) {
@@ -294,8 +293,8 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     //แปลงเวลา เข้าข้อมูล (แสดง)
     function CHANGE_FORMATDATE(DATE_CHANGE) {
-        var dateString = DATE_CHANGE.substr(6);
-        var currentTime = new Date(parseInt(dateString));
+        var dateString = DATE_CHANGE;
+        var currentTime = new Date(dateString);
         var month = currentTime.getMonth() + 1;
         if (month == '01') {
             month = "ม.ค.";
@@ -323,7 +322,12 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
             month = "ธ.ค.";
         }
         var day = currentTime.getDate();
-        var year = currentTime.getFullYear() + 543;
+        var year = currentTime.getFullYear();
+        if (year > 2500) {
+            year = year - 543;
+        } else {
+            year = year + 543;
+        }
         return DATE_CHANGE = day + " " + month + " " + year;
     }
 

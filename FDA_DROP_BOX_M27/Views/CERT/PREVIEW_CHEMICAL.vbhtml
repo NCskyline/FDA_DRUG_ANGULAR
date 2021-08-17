@@ -2,7 +2,7 @@
     Layout = ""
 End Code
 
-    <div align="center">
+    <div align="center" style="font-family:'Taviraj';font-size:26px">
         <div style="width:80%">
             <table class="dataTable">
                 <thead>
