@@ -25,7 +25,7 @@ End Code
                 Ref Cer
             </td>
             <td>
-                <select class="form-control" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA" ng-change="REF_CER(LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA)">
+                <select class="form-control" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA" ng-change="Getdetails_REF_CER(LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA)">
                     <option value="0">--กรุณาเลือก--</option>
                     <option ng-repeat="x in REF_CERT" value="{{x.IDA}}">{{x.CER_NUMBER}}</option>
                 </select>
@@ -34,20 +34,20 @@ End Code
     </table>
     <table width="100%">
         <tr>
-            <td width="20%">
+            <td>
                 ชื่อผู้ผลิต
             </td>
-            <td width="50%">
+            <td width="30%">
                 <label>
-                    {{LIST_DH.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME}}
+                    {{LIST_REF_CERT.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME}}
                 </label>
             </td>
-            <td  width="10%" align="center">
+            <td>
                 ประเทศ
             </td>
-            <td width="20%">
+            <td width="10%">
                 <label>
-                    {{LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME}}
+                    {{LIST_REF_CERT.DH15_DETAIL_CER.COUNTRY_NAME}}
                 </label>
             </td>
         </tr>
@@ -58,11 +58,11 @@ End Code
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
-            <td align="center">
+            <td>
                 ประเทศ
             </td>
             <td>
-                <select style="font-family:'Taviraj';font-size:20px;" class="form-control inline"  ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
+                <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
                     <option value="0">--กรุณาเลือก--</option>
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
@@ -70,9 +70,9 @@ End Code
         </tr>
     </table>
     <br />
-    <table width="100%">
+    <table>
         <tr>
-            <td width="20%">
+            <td>
                 วันเดือนปีที่ออกใบรับรอง
             </td>
             <td>
@@ -94,7 +94,7 @@ End Code
     </table>
     <table width="100%">
         <tr>
-            <td width="20%">
+            <td>
                 ชื่อการค้า <font color="red">*</font>
             </td>
             <td>

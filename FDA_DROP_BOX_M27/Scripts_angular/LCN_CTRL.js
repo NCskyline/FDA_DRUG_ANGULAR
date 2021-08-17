@@ -182,6 +182,21 @@
         }, function () { });
     };
 
+    $scope.BTN_SAVE_EDIT = function () {
+
+        var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP, $scope.GMP_CHEM, PROCESS, sessionStorage);
+        Getdata.then(function (datas) {
+            Swal.fire({
+                title: 'SUCCESS',
+                text: 'บันทึกข้อมูลเรียบร้อย',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+        });
+    }
+
     $scope.BTN_BACK = function () {
        
         REDIRECT('/LCN/FRM_LCN_NEWS');

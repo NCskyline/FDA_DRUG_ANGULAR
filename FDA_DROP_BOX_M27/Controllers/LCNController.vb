@@ -123,6 +123,35 @@ Namespace Controllers
         Function INPUT_NORDOJ_3_4_1_Tan() As ActionResult
             Return View()
         End Function
+        Function INPUT_KORYOR15() As ActionResult
+            Return View()
+        End Function
+        Function INPUT_KORYOR16() As ActionResult
+            Return View()
+        End Function
+        Function INPUT_KORYOR17() As ActionResult
+            Return View()
+        End Function
+
+
+        Function INPUT_NORYOR10() As ActionResult
+            Return View()
+        End Function
+        Function INPUT_NORYOR11() As ActionResult
+            Return View()
+        End Function
+        Function INPUT_PORYOR10() As ActionResult
+            Return View()
+        End Function
+        Function INPUT_PORYOR11() As ActionResult
+            Return View()
+        End Function
+        Function INPUT_PORYOR12() As ActionResult
+            Return View()
+        End Function
+        Function INPUT_YORBOR16() As ActionResult
+            Return View()
+        End Function
     End Class
 
     Public Class LCN_CENTERController

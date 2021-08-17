@@ -26,7 +26,7 @@ End Code
                 Ref Cer
             </td>
             <td>
-                <select class="dropdown" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA" ng-change="REF_CER(LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA)">
+                <select class="form-control" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA" ng-change="Getdetails_REF_CER(LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA)">
                     <option value="0">--กรุณาเลือก--</option>
                     <option ng-repeat="x in REF_CERT" value="{{x.IDA}}">{{x.CER_NUMBER}}</option>
                 </select>
@@ -40,7 +40,7 @@ End Code
             </td>
             <td width="30%">
                 <label>
-                    {{LIST_DH.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME}}
+                    {{LIST_REF_CERT.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME}}
                 </label>
             </td>
             <td>
@@ -48,7 +48,7 @@ End Code
             </td>
             <td width="10%">
                 <label>
-                    {{LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME}}
+                    {{LIST_REF_CERT.DH15_DETAIL_CER.COUNTRY_NAME}}
                 </label>
             </td>
         </tr>
@@ -78,7 +78,7 @@ End Code
             </td>
             <td>
                 <label>
-                    {{LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE}}
+                    {{LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME}}
                 </label>
             </td>
         </tr>
@@ -88,7 +88,7 @@ End Code
             </td>
             <td>
                 <label>
-                    {{LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE}}
+                    {{LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME}}
                 </label>
             </td>
         </tr>
@@ -133,7 +133,7 @@ End Code
     <table>
         <tr>
             <td>
-                <form name="myForm" >
+                <form name="myForm">
                     <label>
                         <input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="1">
                         ใช้ในการผลิตยาตัวอย่างเพื่อขอขึ้นทะเบียนตำรับยา

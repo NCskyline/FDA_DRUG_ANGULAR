@@ -444,6 +444,19 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     };
 
+    $scope.Getdetails_REF_CER = function (IDA) {
+        var data_location = CENTER_SV.GET_REF_CERT_DH(IDA);
+        data_location.then(function (datas) {
+            $scope.LIST_REF_CERT = datas.data;
+            //$scope.LIST_REF_CERT.LOCATION_SELECT = IDA;
+            //$scope.LIST_REF_CERT.LOCATION_TYPE = '2';
+            //$scope.LIST_REF_CERT.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME = datas.data[0].thanameplace;
+
+        }, function () { });
+    };
+
+
+
     $scope.BTN_SAVE_DH = function () {
         var Getdata = CENTER_SV.INSERT_DH($scope.LIST_DH, PROCESS);
         Getdata.then(function (datas) {

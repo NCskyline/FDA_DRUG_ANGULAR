@@ -150,6 +150,19 @@
         });
         return response;
     };
+    
+    this.GET_REF_CERT_DH = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_REF_CERT_DH"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
+
+
 
     this.INSERT_DH = function (data, ProcessID) {
         var response = $http({
@@ -178,6 +191,23 @@
         });
         return response;
     };
+
+    
+    this.INSERT_LCN_EDIT_RQT = function (aa, ProcessID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/INSERT_LCN_EDIT_RQT"),
+            dataType: "json",
+            data: {
+                XML_EDIT: JSON.stringify(aa),
+                _ProcessID: ProcessID
+
+            }
+        });
+        return response;
+    };
+
+
     
     this.INSERT_CHEM_RQT = function (LIST_GMP, PROCEESS, FK_IDA, MAIN_TYPE, SUB_TYPE, aori) {
         var response = $http({

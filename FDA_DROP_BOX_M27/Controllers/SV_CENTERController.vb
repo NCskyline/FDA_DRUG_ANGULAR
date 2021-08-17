@@ -785,6 +785,33 @@ Namespace Controllers
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
 
+        Function GET_REF_CERT_DH(ByVal IDA As Integer) As JsonResult
+            Dim model As New MODEL_DH
+            Dim bao As New BAO
+            Dim dao As New DAO_DRUG.TB_DH15_DETAIL_CER
+            dao.GetDataby_FK_IDA(IDA)
+
+            Try
+                model.DH15_DETAIL_CER = dao.fields
+            Catch ex As Exception
+
+            End Try
+            'Dim dt As New DataTable
+            'Try
+            '    dt = bao.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2(2, dao.fields.CITIZEN_ID_AUTHORIZE)
+            'Catch ex As Exception
+
+            'End Try
+            'For Each dr As DataRow In dt.Rows
+            '    Try
+            '        model.fulladdr_no_keep = dr("fulladdr_no")
+            '    Catch ex As Exception
+
+            '    End Try
+            'Next
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+
         Function test_dh() As JsonResult
             Dim model_dhs As New MODEL_DH
             ''model_dhs._CER.TR_ID = 0
@@ -1545,6 +1572,7 @@ Namespace Controllers
                 Dim dao As New DAO_DRUG.ClsDBdh15rqt
 
                 dao.fields = bb.dh15rqt
+                dao.fields.TR_ID = tr_id
                 dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
 
                 dao.insert()
@@ -1580,6 +1608,27 @@ Namespace Controllers
 
             Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function
+
+        Function INSERT_LCN_EDIT_RQT(ByVal XML_EDIT As String, ByVal _ProcessID As String) As JsonResult
+
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_LCN = jss.Deserialize(XML_EDIT, GetType(MODEL_LCN))
+            Dim bao_tran As New BAO
+            Dim tr_id As Integer = 0
+
+            tr_id = bao_tran.insert_transection_new(_ProcessID, bb.session.CITIZEN_ID, bb.session.CITIZEN_ID_AUTHORIZE)
+            Dim dao As New DAO_DRUG.TB_DALCN_EDIT_REQUEST
+
+            dao.fields = bb.DALCN_EDIT_REQUEST
+            dao.fields.TR_ID = tr_id
+            dao.fields.CITIZEN_ID_AUTHORIZE = bb.session.CITIZEN_ID_AUTHORIZE
+
+            dao.insert()
+
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
+
 #End Region
 
 #Region "UPDATE_DATA"

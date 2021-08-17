@@ -58,7 +58,15 @@
             _DALCN_NCT_SUBSTITUTE = value
         End Set
     End Property
-
+    Private _DALCN_EDIT_REQUEST As New DALCN_EDIT_REQUEST
+    Public Property DALCN_EDIT_REQUEST() As DALCN_EDIT_REQUEST
+        Get
+            Return _DALCN_EDIT_REQUEST
+        End Get
+        Set(ByVal value As DALCN_EDIT_REQUEST)
+            _DALCN_EDIT_REQUEST = value
+        End Set
+    End Property
 
     Public Property LCN_IDA() As String
         Get
