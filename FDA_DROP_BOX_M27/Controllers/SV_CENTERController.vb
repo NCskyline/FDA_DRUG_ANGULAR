@@ -785,6 +785,33 @@ Namespace Controllers
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
 
+        Function GET_REF_CERT_DH(ByVal IDA As Integer) As JsonResult
+            Dim model As New MODEL_DH
+            Dim bao As New BAO
+            Dim dao As New DAO_DRUG.TB_DH15_DETAIL_CER
+            dao.GetDataby_FK_IDA(IDA)
+
+            Try
+                model.DH15_DETAIL_CER = dao.fields
+            Catch ex As Exception
+
+            End Try
+            'Dim dt As New DataTable
+            'Try
+            '    dt = bao.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2(2, dao.fields.CITIZEN_ID_AUTHORIZE)
+            'Catch ex As Exception
+
+            'End Try
+            'For Each dr As DataRow In dt.Rows
+            '    Try
+            '        model.fulladdr_no_keep = dr("fulladdr_no")
+            '    Catch ex As Exception
+
+            '    End Try
+            'Next
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+
         Function test_dh() As JsonResult
             Dim model_dhs As New MODEL_DH
             ''model_dhs._CER.TR_ID = 0

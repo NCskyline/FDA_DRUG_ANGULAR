@@ -50,7 +50,7 @@ End Code*@
                     </label>
                 </form>
             </td>
-            <td align="right">
+            <td align="right" width="10%">
                 ใบอนุญาต เลขที่
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -81,11 +81,11 @@ End Code*@
             <td width="25%">
                 <form name="myForm">
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="1">
+                        <input type="radio" ng-model="LIST_DH.LCN_TYPE" value="1">
                         ผลิต
                     </label>
                     <label>
-                        <input type="radio" ng-model="LCN.TYPE" value="2">
+                        <input type="radio" ng-model="LIST_DH.LCN_TYPE" value="2">
                         นำหรือสั่งเข้ามาในราชอาณาจักร
                     </label>
                 </form>
@@ -96,11 +96,11 @@ End Code*@
                 <form name="myForm">
                     ซึ่ง
                     <label>
-                        <input type="radio" ng-model="LIST_DH.LCN_TYPE" value="1">
+                        <input type="radio" ng-model="LIST_DH.dh15rqt.CHK_TYPE_CHEMICAL" value="1">
                         เภสัชเคมีภัณฑ์เดี่ยว
                     </label>
                     <label>
-                        <input type="radio" ng-model="LIST_DH.LCN_TYPE" value="2">
+                        <input type="radio" ng-model="LIST_DH.dh15rqt.CHK_TYPE_CHEMICAL" value="2">
                         เภสัชเคมีภัณฑ์กึ่งสำเร็จรูป
                     </label>
                 </form>
