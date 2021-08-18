@@ -22,7 +22,7 @@ End Code*@
 
 
 <div class="ic" ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="pageloadDH()">
-    <table width="100%" style="font-family:'Taviraj';font-size:25px;">
+    <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
             <td width="20%" align="right">
                 ข้าพเจ้า
@@ -36,7 +36,7 @@ End Code*@
          
         </tr>
     </table>
-    <table width="100%" style="font-family:'Taviraj';font-size:25px;">
+    <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
             <td width="25%">
                 <form name="myForm">
@@ -60,7 +60,7 @@ End Code*@
         </tr>
 
     </table>
-    <table width="100%" style="font-family:'Taviraj';font-size:25px;">
+    <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
             <td width="8%">อยู่เลขที่ </td>
             <td colspan="2" style="border-bottom:dotted;border-bottom-width:thin;">
@@ -76,7 +76,7 @@ End Code*@
             <td>มีความประสงค์ขอ</td>
         </tr>
     </table>
-    <table width="100%" style="font-family:'Taviraj';font-size:25px;">
+    <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
             <td width="25%">
                 <form name="myForm">
@@ -107,7 +107,7 @@ End Code*@
             </td>
         </tr>
     </table>
-    <div style="font-family:'Taviraj';font-size:25px;">มีรายละเอียดดังนี้</div>
+    <div style="font-family:'Taviraj';font-size:20px;">มีรายละเอียดดังนี้</div>
     <br />
     <div class="row">
         <div ng-include="INPUT" style="width:100%;"></div>

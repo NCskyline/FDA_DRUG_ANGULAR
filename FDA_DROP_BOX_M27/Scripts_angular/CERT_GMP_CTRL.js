@@ -83,6 +83,8 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         data_LCN_SHOW.then(function (datas) {
             $scope.LCNNO_SHOW = datas.data.LCNNO_SHOW;
             $scope.TYPE_IMPORT = datas.data.TYPE_IMPORT;
+            $scope.THANAMEPLACE = datas.data.THANAMEPLACE;
+            $scope.thanameplace = datas.data.THANAMEPLACE;
             $scope.thanm = datas.data.NAME;
             $scope.fulladdr2 = datas.data.FULL_ADDR;
             $scope.tel = datas.data.TEL;
