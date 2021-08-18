@@ -811,8 +811,10 @@ Namespace Controllers
 
             End Try
             Try
+                Dim dao_manu As New DAO_DRUG.TB_CER_DETAIL_MANUFACTURE
+                dao_manu.GetDataby_FK_IDA(IDA)
                 Dim dao_iso As New DAO_CPN.clsDBsysisocnt
-                dao_iso.GetDataby_IDA(dao.fields.COUNTRY_IDA)
+                dao_iso.GetDataby_IDA(dao_manu.fields.COUNTRY_ID)
                 model.COUNTRY_NAME = dao_iso.fields.engcntnm
             Catch ex As Exception
 

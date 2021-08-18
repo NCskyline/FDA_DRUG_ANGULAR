@@ -39,7 +39,7 @@ End Code
             </td>
             <td width="30%"  style="border-bottom:dotted;border-bottom-width:thin;">
                 <label>
-                    {{LIST_REF_CERT.CER.FOREIGN_LOCATION_NAME}}
+                    {{LIST_REF_CERT.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME}}
                 </label>
             </td>
             <td>
@@ -77,7 +77,7 @@ End Code
             </td>
             <td>
                 <label>
-                    {{LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE}}
+                    {{LIST_REF_CERT.CER.DOCUMENT_DATE}}
                 </label>
             </td>
         </tr>
@@ -87,7 +87,7 @@ End Code
             </td>
             <td>
                 <label>
-                    {{LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE}}
+                    {{LIST_REF_CERT.CER.EXP_DOCUMENT_DATE}}
                 </label>
             </td>
         </tr>
