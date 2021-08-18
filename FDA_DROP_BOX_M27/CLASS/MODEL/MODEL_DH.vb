@@ -48,7 +48,15 @@
             _DH15_DETAIL_MANUFACTURE = value
         End Set
     End Property
-
+    Private _CER As New CER
+    Public Property CER() As CER
+        Get
+            Return _CER
+        End Get
+        Set(ByVal value As CER)
+            _CER = value
+        End Set
+    End Property
 
     Public lcnno As String
     Public rcvno As String

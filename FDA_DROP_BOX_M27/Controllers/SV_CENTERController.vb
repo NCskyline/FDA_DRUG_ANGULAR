@@ -798,11 +798,27 @@ Namespace Controllers
         Function GET_REF_CERT_DH(ByVal IDA As Integer) As JsonResult
             Dim model As New MODEL_DH
             Dim bao As New BAO
-            Dim dao As New DAO_DRUG.TB_DH15_DETAIL_CER
-            dao.GetDataby_FK_IDA(IDA)
+            'Dim dao As New DAO_DRUG.TB_DH15_DETAIL_CER
+            'dao.GetDataby_FK_IDA(IDA)
+            Dim dao As New DAO_DRUG.TB_CER
+
+
 
             Try
-                model.DH15_DETAIL_CER = dao.fields
+                dao.GetDataby_IDA2(IDA)
+                model.CER = dao.fields
+            Catch ex As Exception
+
+            End Try
+            Try
+                Dim dao_iso As New DAO_CPN.clsDBsysisocnt
+                dao_iso.GetDataby_IDA(dao.fields.COUNTRY_IDA)
+                model.COUNTRY_NAME = dao_iso.fields.engcntnm
+            Catch ex As Exception
+
+            End Try
+            Try
+
             Catch ex As Exception
 
             End Try

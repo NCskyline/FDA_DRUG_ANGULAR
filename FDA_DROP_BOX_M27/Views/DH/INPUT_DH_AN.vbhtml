@@ -38,17 +38,17 @@ End Code
             <td>
                 ชื่อผู้ผลิต
             </td>
-            <td width="30%">
+            <td width="30%"  style="border-bottom:dotted;border-bottom-width:thin;">
                 <label>
-                    {{LIST_REF_CERT.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME}}
+                    {{LIST_REF_CERT.CER.FOREIGN_LOCATION_NAME}}
                 </label>
             </td>
             <td>
                 ประเทศ
             </td>
-            <td width="10%">
+            <td width="20%"  style="border-bottom:dotted;border-bottom-width:thin;">
                 <label>
-                    {{LIST_REF_CERT.DH15_DETAIL_CER.COUNTRY_NAME}}
+                    {{LIST_REF_CERT.COUNTRY_NAME}}
                 </label>
             </td>
         </tr>

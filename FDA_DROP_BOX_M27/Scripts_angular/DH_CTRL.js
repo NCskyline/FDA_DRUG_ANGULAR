@@ -448,6 +448,8 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         var data_location = CENTER_SV.GET_REF_CERT_DH(IDA);
         data_location.then(function (datas) {
             $scope.LIST_REF_CERT = datas.data;
+            $scope.LIST_REF_CERT.CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_GMP.CER.DOCUMENT_DATE)));
+            $scope.LIST_REF_CERT.CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_GMP.CER.EXP_DOCUMENT_DATE)));
             //$scope.LIST_REF_CERT.LOCATION_SELECT = IDA;
             //$scope.LIST_REF_CERT.LOCATION_TYPE = '2';
             //$scope.LIST_REF_CERT.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME = datas.data[0].thanameplace;

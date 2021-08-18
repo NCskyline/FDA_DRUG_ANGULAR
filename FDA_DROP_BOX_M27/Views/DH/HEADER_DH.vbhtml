@@ -38,7 +38,7 @@ End Code*@
     </table>
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
-            <td width="25%">
+            <td width="30%">
                 <form name="myForm">
                     <label>
                         <input type="radio" ng-model="LIST_DH.CHK_TYPE_LCN" value="1">
@@ -62,7 +62,7 @@ End Code*@
     </table>
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
-            <td width="8%">อยู่เลขที่ </td>
+            <td width="10%">อยู่เลขที่ </td>
             <td colspan="2" style="border-bottom:dotted;border-bottom-width:thin;">
                 <label>{{LIST_DH.FULL_ADDR}}</label>
             </td>
