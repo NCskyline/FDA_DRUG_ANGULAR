@@ -485,7 +485,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     };
 
     function CV_DATE(data) {
-        return new Date(parseInt(data.replace('/Date(', '').replace(')/', ''))).toLocaleDateString('th-TH');
+        return new Date(parseInt(data.replace('/Date(', '').replace(')/', ''))).toLocaleDateString();
     }
 
     function filwill(dateString) {
@@ -530,7 +530,12 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
             month = "ธ.ค.";
         }
         var day = currentTime.getDate();
-        var year = currentTime.getFullYear() + 543;
+        var year = currentTime.getFullYear();
+        if (year > 2500) {
+            year = year - 543;
+        } else {
+            year = year + 543;
+        }
         return DATE_CHANGE = day + " " + month + " " + year;
     }
 
