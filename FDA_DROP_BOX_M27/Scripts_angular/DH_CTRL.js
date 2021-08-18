@@ -216,16 +216,16 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     $scope.pageloadDH = function () {
 
-        var PROCESS_ID = sessionStorage.DH_PROCESS_ID;
+        $scope.PROCESS_ID = sessionStorage.DH_PROCESS_ID;
         var IDA = sessionStorage.IDA;
-
-        if (PROCESS_ID == '14') {
+        
+        if ($scope.PROCESS_ID  == '14') {
             $scope.INPUT = SET_URL_SV('/DH/INPUT_DH_AR');
         }
-        else if (PROCESS_ID == '15') {
+        else if ($scope.PROCESS_ID  == '15') {
             $scope.INPUT = SET_URL_SV('/DH/INPUT_DH_AN');
         }
-        else if (PROCESS_ID == '16') {
+        else if ($scope.PROCESS_ID  == '16') {
             $scope.INPUT = SET_URL_SV('/DH/INPUT_DH_IR');
         }
         //else if (PROCESS_ID == '17') {
