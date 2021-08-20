@@ -79,6 +79,7 @@
     Public COUNTRY_NAME As String
     Public AGENT_COUNTRY_NAME As String
     Public CHK_TYPE_LCN As String
+
 End Class
 
 Public Class MODEL_CHEMICAL
@@ -143,6 +144,8 @@ Public Class MODEL_CER_GMP
     Public COUNTRY_NAME As String
     Public COUNTRY_OF_DEPARTMENT_NAME As String
     Public BUYER_COUNTRY_NAME As String
+    Public STR_DOCUMENT_DATE As String
+    Public STR_EXP_DOCUMENT_DATE As String
     'Public NAME_ADDRESS As String
     'Public ADDRESS_NUMBER As String
     'Public ADDRESS_CITY As String

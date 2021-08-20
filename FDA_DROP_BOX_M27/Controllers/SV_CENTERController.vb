@@ -669,7 +669,6 @@ Namespace Controllers
             dao_cer.GetDataby_IDA2(IDA)
             dao_manu.GetDataby_FK_IDA(IDA)
             dao_chem.GetDataby_FK_IDA(IDA)
-
             Try
                 model.CER = dao_cer.fields
             Catch ex As Exception
@@ -682,6 +681,18 @@ Namespace Controllers
             End Try
             Try
                 model.CER_DETAIL_CASCHEMICAL = dao_chem.Details
+            Catch ex As Exception
+
+            End Try
+            Try
+                model.STR_DOCUMENT_DATE = get_short_month(dao_cer.fields.DOCUMENT_DATE)
+
+            Catch ex As Exception
+
+            End Try
+            Try
+                model.STR_EXP_DOCUMENT_DATE = get_short_month(dao_cer.fields.EXP_DOCUMENT_DATE)
+
             Catch ex As Exception
 
             End Try

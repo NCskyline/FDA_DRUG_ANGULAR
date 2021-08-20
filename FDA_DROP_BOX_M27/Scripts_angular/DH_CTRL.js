@@ -15,6 +15,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     var PROCESS = QueryString("PROCESS");
     var CITIZEN = CITIZEN_ID_AUTHORIZE;//'0000000000000';//'0105527028430';0000000000000
     var IDA_CHEM_RQT = 8728;
+    var STAGE = sessionStorage.STAGE;
     $scope.PROCESS_CHEM = '';
     //------------------------------ PAGINGNATION ---------------------------//
    
@@ -207,10 +208,13 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     };
 
     $scope.INPUT_CERT = function () {
+        sessionStorage.IDA = '0';
+        //sessionStorage.PREVIEW_CERT_IDA = '0';
         REDIRECT('/CERT/HEADER_CERT');
     };
 
     $scope.INPUT_DH = function () {
+        sessionStorage.IDA = '0';
         REDIRECT('/DH/HEADER_DH');
     };
 
@@ -228,9 +232,9 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         else if ($scope.PROCESS_ID  == '16') {
             $scope.INPUT = SET_URL_SV('/DH/INPUT_DH_IR');
         }
-        //else if (PROCESS_ID == '17') {
-        //    $scope.INPUT = SET_URL_SV('/DH/INPUT_DH_IN');
-        //}
+        else if (PROCESS_ID == '17') {
+            $scope.INPUT = SET_URL_SV('/DH/INPUT_DH_IN');
+        }
 
         var data_CNT = CENTER_SV.SP_MASTER_sysisocnt();
         data_CNT.then(function (datas) {
@@ -345,6 +349,8 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     $scope.SELECT_CER = function (datas) {
         sessionStorage.IDA = datas.IDA;
+        //sessionStorage.STAGE = 'SHOW';
+        //sessionStorage.PREVIEW_CERT_IDA = datas.IDA;
         REDIRECT('/CERT/PREVIEW_CERT');
     };
 
