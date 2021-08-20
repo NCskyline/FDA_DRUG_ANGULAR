@@ -31,8 +31,10 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         $scope.currentPage = $scope.paging.current;
     }
 
+    Full_Model();
     pageload();
     //LIST_GMP();
+    
 
     function pageload() {
 
@@ -43,7 +45,6 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         }, function () { });
 
         var MODLE_GMP = CENTER_SV.SETMODEL_DH();
-        
         MODLE_GMP.then(function (datas) {
             
             $scope.LIST_GMP = datas.data;
@@ -123,6 +124,15 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         
     }
 
+    function Full_Model() {
+        var MODLE_GMP = CENTER_SV.SETMODEL_DH();
+        MODLE_GMP.then(function (datas) {
+
+            $scope.LIST_GMP = datas.data;
+            $scope.LIST_GMP.session = sessionStorage;
+
+        }, function () { });
+    }
 
     $scope.BTN_ADD_CHEM = function (datas) {
         
