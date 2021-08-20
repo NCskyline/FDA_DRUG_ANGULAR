@@ -130,16 +130,18 @@ End Code
                     <tr>
                         <td style="height:25px">
                             <form name="rdl_gmp">
-
+                                <label>
                                     <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" value="1">
                                     PIC / S GMP
-
+                                </label>
+                                <label>
                                     <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="2">
                                     WHO GMP
-
+                                </label>
+                                <label>
                                     <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" value="3">
                                     National GMP
-
+                                </label>
                             </form>
                         </td>
                         <td>

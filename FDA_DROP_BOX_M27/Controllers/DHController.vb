@@ -44,6 +44,8 @@ Namespace Controllers
         Function PREVIEW_DH() As ActionResult
             Return View()
         End Function
-
+        Function FRM_MAIN_EMPTY() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace

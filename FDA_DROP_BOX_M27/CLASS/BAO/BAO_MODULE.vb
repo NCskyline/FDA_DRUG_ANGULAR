@@ -121,4 +121,46 @@ Public Module BAO_MODULE
 
         Return chk
     End Function
+    Public Function get_short_month(date_ex As Date) As String
+        Dim str_date As String = ""
+        Dim str_month As String = ""
+        Dim month_num As Integer = Month(date_ex)
+        Dim get_day As Integer = date_ex.Day
+        Dim get_year As Integer
+        If date_ex.Year < 2500 Then
+            get_year = date_ex.Year + 543
+        ElseIf date_ex.Year > 3000 Then
+            get_year = date_ex.Year - 543
+        End If
+
+        Select Case month_num
+            Case 1
+                str_month = "ม.ค."
+            Case 2
+                str_month = "ก.พ."
+            Case 3
+                str_month = "มี.ค."
+            Case 4
+                str_month = "เม.ย."
+            Case 5
+                str_month = "พ.ค."
+            Case 6
+                str_month = "มิ.ย."
+            Case 7
+                str_month = "ก.ค."
+            Case 8
+                str_month = "ส.ค."
+            Case 9
+                str_month = "ก.ย."
+            Case 10
+                str_month = "ต.ค."
+            Case 11
+                str_month = "พ.ย."
+            Case 12
+                str_month = "ธ.ค."
+        End Select
+        str_date = get_day & " " & str_month & " " & get_year
+
+        Return str_date
+    End Function
 End Module

@@ -37,7 +37,8 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 if (Trigger == "LCN") {
                     window.location = "/LCN/FRM_LCN_NEWS";
                 } else if (Trigger == "DH") {
-                    window.location = "/DH/FRM_MAIN_PAGE_PHESAJ"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
+                    //window.location = "/DH/FRM_MAIN_PAGE_PHESAJ"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
+                    window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PHESAJ";
                 }
                
                // window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PHESAJ";

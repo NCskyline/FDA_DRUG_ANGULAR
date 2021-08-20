@@ -12,9 +12,11 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
     CHK_TOKEN();
     var LCN_IDA = sessionStorage.LCN_IDA;
     var IDA = sessionStorage.IDA;
+    var PREVIEW_CERT_IDA = sessionStorage.PREVIEW_CERT_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;
     var PROCESS = sessionStorage.DH_PROCESS_ID;
-    var CITIZEN = '0105527028430'; 
+    var CITIZEN = sessionStorage.IDENTIFY; 
+    var STAGE = sessionStorage.STAGE;
     $scope.GMP_CHEM = [];
 
     $scope.currentPage = 0;

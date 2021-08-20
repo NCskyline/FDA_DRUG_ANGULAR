@@ -9,10 +9,10 @@ End Code
     @*-------------GMP------------------*@
     <div ng-show="LIST_GMP.CER.CER_TYPE == '31'">
         @*ng-repeat="datas in LIST_GMP"  ng-show="PROCESS == '31'" *@
-        <h2 style="font-family:'Taviraj';font-size:40px;">
-            <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ</b>
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ (Certificate of GMP)</b>
         </h2>
-        <table width="100%" style="font-family:'Taviraj';font-size:26px;" class="table">
+        <table width="100%" style="font-family:'Taviraj';font-size:20px;" class="table">
             <tr>
                 <td style="height:25px;width:35%;font-weight: bolder">
                     1. เลขที่ใบรับรอง (Certificate Number)<font color="red">*</font>  :
@@ -90,11 +90,8 @@ End Code
                     7. วันเดือนปีที่ออกหนังสือ GMP (Issue Date)<font color="red">*</font> :
                 </td>
                 <td>
-                    @*<md-datepicker ng-model="LIST_GMP.CER.DOCUMENT_DATE" md-placeholder="Enter date"
-                        input-aria-describedby="datepicker-description"
-                        input-aria-labelledby="datepicker-header "></md-datepicker>*@
-
-                    <label>{{LIST_GMP.CER.DOCUMENT_DATE}}</label>
+                    @*<label>{{LIST_GMP.CER.DOCUMENT_DATE}}</label>*@
+                    <label>{{LIST_GMP.STR_DOCUMENT_DATE}}</label>
                 </td>
             </tr>
             <tr>
@@ -102,10 +99,8 @@ End Code
                     วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
                 </td>
                 <td>
-                    @*<md-datepicker ng-model="LIST_GMP.CER.EXP_DOCUMENT_DATE" md-placeholder="Enter date"
-                        input-aria-describedby="datepicker-description"
-                        input-aria-labelledby="datepicker-header "></md-datepicker>*@
-                    <label>{{LIST_GMP.CER.EXP_DOCUMENT_DATE}}</label>
+                    @*<label>{{LIST_GMP.CER.EXP_DOCUMENT_DATE}}</label>*@
+                    <label>{{LIST_GMP.STR_EXP_DOCUMENT_DATE}}</label>
                 </td>
             </tr>
             <tr>
@@ -145,13 +140,13 @@ End Code
                             <td style="height:25px">
                                 <form name="rdl_gmp">
 
-                                    <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" value="1">
+                                    <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="1">
                                     PIC / S GMP
 
                                     <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="2">
                                     WHO GMP
 
-                                    <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" value="3">
+                                    <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="3">
                                     National GMP
 
                                 </form>
@@ -174,10 +169,10 @@ End Code
             </tr>
         </table>
         <br />
-        <h2 style="font-family:'Taviraj';font-size:24px;">
+        <h2 style="font-family:'Taviraj';font-size:20px;">
             <b> รายละเอียดผลิตภัณฑ์ที่ได้รับการรับรอง </b>
         </h2>
-        <table width="100%" style="font-family:'Taviraj';font-size:24px;">
+        <table width="100%" style="font-family:'Taviraj';font-size:20px;">
             <tr>
                 <td style="height:25px;width:35%;">
                     10. ขอบเขตของประเภทยาที่รับรอง
@@ -194,7 +189,7 @@ End Code
         </div>
         <br />
         <div>
-            <h2 style="font-family:'Taviraj';font-size:24px;">
+            <h2 style="font-family:'Taviraj';font-size:20px;">
                 ไฟล์แนบ
             </h2>
             <table width="100%" style="font-family:'Taviraj';font-size:20px;">
@@ -217,10 +212,10 @@ End Code
 
     @*-------------ISO------------------*@
     <div ng-show="LIST_GMP.CER.CER_TYPE == '32'">
-        <h2 style="font-family:'Taviraj';font-size:26px;">
-            แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
+        <h2 style="font-family:'Taviraj';font-size:20px;">
+            แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ (ISO)
         </h2>
-        <table width="100%" style="font-family:'Taviraj';font-size:24px;">
+        <table width="100%" style="font-family:'Taviraj';font-size:20px;">
             <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
                     1. Certification Number/Registration Number/License Number<font color="red">*</font> :
@@ -350,11 +345,10 @@ End Code
     @*-------------ISO------------------*@
     @*-------------HACCP------------------*@
     <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '33'">
-        <h2 style="        font-family: 'Taviraj';
-        font-size: 40px;">
-            แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
+        <h2 style="font-family: 'Taviraj';font-size: 20px;">
+            แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ (HACCP)
         </h2>
-        <table width="100%" style="font-family:'Taviraj';font-size:32px;">
+        <table width="100%" style="font-family:'Taviraj';font-size:20px;">
             <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
                     1. Certification number/Registration Number/License Number<font color="red">*</font> :
@@ -465,7 +459,7 @@ End Code
             </tr>
         </table>
         <br />
-        <h2 style="font-family:'Taviraj';font-size:24px;">
+        <h2 style="font-family:'Taviraj';font-size:20px;">
             รายละเอียดผลิตภัณฑ์ที่ได้รับการรับรอง
         </h2>
         <table width="100%">
@@ -487,10 +481,10 @@ End Code
     @*-------------HACCP------------------*@
     @*-------------PICS------------------*@
     <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '34'">
-        <h2 style="font-family:'Taviraj';font-size:40px;">
-            แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
+        <h2 style="font-family:'Taviraj';font-size:20px;">
+            แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ (Purchase Order)
         </h2>
-        <table width="100%" style="font-family:'Taviraj';font-size:32px;">
+        <table width="100%" style="font-family:'Taviraj';font-size:20px;">
             <tr>
                 <td style="height:25px;font-weight:bolder">
                     1. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
@@ -614,10 +608,10 @@ End Code
     @*-------------PICS------------------*@
     @*-------------OTHER------------------*@
     <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '36'">
-        <h2 style="font-family:'Taviraj';font-size:40px;">
-            แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
+        <h2 style="font-family:'Taviraj';font-size:20px;">
+            แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ (Other)
         </h2>
-        <table width="100%" style="font-family:'Taviraj';font-size:32px;">
+        <table width="100%" style="font-family:'Taviraj';font-size:20px;">
             <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
                     1. Reference Number<font color="red">*</font> :
@@ -736,7 +730,7 @@ End Code
             </tr>
         </table>
         <br />
-        <h2 style="font-family:'Taviraj';font-size:24px;">
+        <h2 style="font-family:'Taviraj';font-size:20px;">
             รายละเอียดผลิตภัณฑ์
         </h2>
         <table width="100%">
