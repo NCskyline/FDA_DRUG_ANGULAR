@@ -12,6 +12,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     CHK_TOKEN();
     var LCN_IDA = sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;
+    var DO_ST = QueryString("do");
     var PROCESS = QueryString("PROCESS");
     var CITIZEN = CITIZEN_ID_AUTHORIZE;//'0000000000000';//'0105527028430';0000000000000
     var IDA_CHEM_RQT = 8728;
@@ -36,6 +37,10 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     //----------------------------------------------------------------------//
     
     $scope.pageload = function () {
+        if (DO_ST == '1') {
+            sessionStorage.DH_PROCESS_ID = '';
+            sessionStorage.LCN_IDA = '0';
+        }
 
         var PROCESS_ID = sessionStorage.DH_PROCESS_ID;
 
@@ -50,24 +55,24 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         if (PROCESS_ID == '31' || PROCESS_ID == '32' || PROCESS_ID == '33' || PROCESS_ID == '34' || PROCESS_ID == '36') {
 
             if (PROCESS_ID == '31') {
-                $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (Certificate of GMP)';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิต  (Certificate of GMP)';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
 
             }
             else if (PROCESS_ID == '32') {
-                $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (ISO)';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิต  (ISO)';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
             }
             else if (PROCESS_ID == '33') {
-                $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (HACCP)';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิต  (HACCP)';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
             }
             else if (PROCESS_ID == '34') {
-                $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (หลักฐานการขายไปยังประเทศที่มีระบบควบคุมคุณภาพการผลิตที่ อย ยอมรับ)';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิต  (หลักฐานการขายไปยังประเทศที่มีระบบควบคุมคุณภาพการผลิตที่ อย ยอมรับ)';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
             }
             else if (PROCESS_ID == '36') {
-                $scope.HEADER = 'ลงทะเบียน GMP สถานที่ผลิต  (เอกสารอื่นๆ ที่ อย เห็นชอบ)';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิต  (เอกสารอื่นๆ ที่ อย เห็นชอบ)';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
             }
 

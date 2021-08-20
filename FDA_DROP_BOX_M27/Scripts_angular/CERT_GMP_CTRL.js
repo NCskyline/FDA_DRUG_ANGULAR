@@ -277,7 +277,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
     };
 
     $scope.BTN_BACK = function () {
-        REDIRECT('/LCN/FRM_MAIN_PAGE_PHESAJ');
+        REDIRECT('/DH/FRM_MAIN_PAGE_PHESAJ');
     };
 
     function CV_DATE(data) {
