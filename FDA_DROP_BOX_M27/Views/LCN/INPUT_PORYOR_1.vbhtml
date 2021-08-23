@@ -1,4 +1,15 @@
 ﻿<script type="text/javascript">
+    var arr_checked_items = data.data.hobby;
+    var arraySize = arr_checked_items.length;
+    $scope.checkItem = function (id) {
+        var checked = "";
+        for (var i = 0; i <= arraySize; i++) {
+            if (id == arr_checked_items[i]) {
+                checked = "checked";
+            }
+        }
+        return checked;
+    };
 
 </script>
 
@@ -47,14 +58,14 @@
     </div>
 
     <div class="title2">
-        <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" @*border="1"*@>
+        <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px">
             <tr>
                 <td style="text-align:left;width:20%">
                     เลขรับที่
                 </td>
 
                 <td colspan="3">
-                    text
+                    <label>{{LCN_LIST.RCVNO_DISPLAY}}</label>
                 </td>
             </tr>
             <tr>
@@ -63,7 +74,7 @@
                 </td>
 
                 <td colspan="3">
-                    text
+                    <label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label>
                 </td>
             </tr>
             <tr>
@@ -72,9 +83,7 @@
 
                 </td>
 
-                <td>
-                    text
-                </td>
+                <td></td>
                 <td style="text-align:right;width:25%">
                     ผู้รับคำขอ
                 </td>
@@ -101,7 +110,7 @@
                 เขียนที่
             </td>
             <td style="width:40%">
-                <input style="text-align:center; width:100%">
+                <input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'Taviraj';" type="text" />
             </td>
         </tr>
         <tr>
@@ -109,22 +118,28 @@
                 วันที่
             </td>
             <td>
-                <md-datepicker ng-model="datas.MFD_DATE" md-placeholder="Enter date"
+
+                <md-datepicker ng-model="LIST_LCN.dalcn.WRITE_DATE" md-placeholder="Enter date"
                                input-aria-describedby="datepicker-description"
                                input-aria-labelledby="datepicker-header ">
                 </md-datepicker>
             </td>
         </tr>
-
     </table>
     <br />
     <table style="width:100%;" @*border="1"*@>
         <tr>
-            <td style="font-size:20px;" width="200px">
+            <td width="5%">
                 ข้าพเจ้า
             </td>
-            <td style="text-align:left; font-size:20px">
-                text
+            <td style="text-align:center;">
+                <label>{{LIST_LCN.thanm}}</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="text-align:center;">
+                (ชื่อผู้ขออนุญาต)
             </td>
         </tr>
     </table>
@@ -136,17 +151,41 @@
 
     <table style=" font-size:20px;width:100%" @*border="1"*@ ;>
         <tr>
-            <td style="width:600px;">
+            <td>
                 ซึ่งมีผู้ดำเนินกิจการ ชื่อ
             </td>
-            <td style="text-align:center;width:2000px">
-                text
+            <td style="text-align:left;">
+                <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
+            </td>
+            <td colspan="4">
+                (เฉพาะกรณีนิติบุคคล)
+            </td>
+        </tr>
+        <tr>
+            <td style="width:20%;">
+                เลขบัญประจำตัวประชาชน
+            </td>
+            <td style="text-align:left;width:30%;">
+                <form >
+                    <table>
+                        <tr>
+                            <td>
+                                <input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'Taviraj';" type="text" />
+                            </td>
+                            <td>
+                                <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </form>
             </td>
             <td>
                 อายุ
             </td>
-            <td>
-                <input style="width:70px">
+            <td style="text-align: left; width: 20%;" align="center">
+                <label>{{LIST_LCN.AGE}}</label>
             </td>
             <td>
                 ปี
@@ -154,8 +193,8 @@
             <td>
                 สัญชาติ
             </td>
-            <td>
-                <input style="width:100px" />
+            <td style="text-align:left;width:10%;">
+                <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />
             </td>
 
         </tr>
@@ -167,7 +206,7 @@
                 อยู่เลขที่
             </td>
             <td style="text-align:left" colspan="3">
-                text
+                <label>{{LIST_LCN.fulladdr_bsn}}</label>
             </td>
 
         </tr>
@@ -176,7 +215,7 @@
                 โทรศัพท์
             </td>
             <td style="text-align:left">
-                text
+                <label>{{LIST_LCN.BSN_TELEPHONE}}</label>
             </td>
             <td style="text-align:left">
                 ขอรับใบอนุญาต
@@ -192,16 +231,16 @@
             <td style="text-align:left;width:700px">
                 ผลิตยาแผนปัจจุบันโดยมีสถานที่ผลิตยาชื่อ
             </td>
-            <td style="text-align:left;width:2000px">
-                text
+            <td style="text-align:left;">
+                <label>{{LIST_LCN.thanameplace}}</label>
             </td>
         </tr>
         <tr>
-            <td style="width:200px">
+            <td style="width:10%">
                 อยู่เลขที่
             </td>
-            <td style="text-align:left" colspan="3">
-                text
+            <td colspan="2">
+                <label>{{LIST_LCN.fulladdr3}}</label>
             </td>
         </tr>
     </table>
@@ -212,13 +251,16 @@
                 โทรศัพท์
             </td>
             <td style="text-align:left" width="500">
-                text
+                <label>{{LIST_LCN.tel}}</label>
             </td>
+
+        </tr>
+        <tr>
             <td style="width:100px">
                 เวลาทำการ
             </td>
             <td style="text-align:left">
-                <input style="width:50%" />
+                <input type="text" ng-model="LIST_LCN.dalcn.opentime" style="font-family:'Taviraj';font-size:20px;" />
             </td>
         </tr>
     </table>
@@ -243,10 +285,10 @@
                     ยาปราศจากเชื้อ
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.syslcnsid_identify"/>
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.syslcnsid_lcnsid"/>
                 </td>
             </tr>
             <tr>
@@ -254,10 +296,10 @@
                     ยาที่ไม่ใช่ยาปราศจากเชื้อ
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_crtlct" />
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_chngwtcd" />
                 </td>
             </tr>
             <tr>
@@ -265,10 +307,10 @@
                     ยาชีววัตถุ
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_ntcd" />
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox"  ng-model="LIST_LCN.dalcn.lcnsid_taxno"/>
                 </td>
             </tr>
             <tr>
@@ -276,10 +318,10 @@
                     เภสัชเคมีภัณฑ์
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_trdregno" />
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_ctzno" />
                 </td>
             </tr>
             <tr>
@@ -287,10 +329,10 @@
                     เภสัชชีววัตถุ
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_remark" />
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_idst" />
                 </td>
             </tr>
             <tr>
@@ -299,10 +341,10 @@
                 </td>
 
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_phrno" />
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_stfcd" />
                 </td>
             </tr>
             <tr>
@@ -310,10 +352,10 @@
                     ยาเตรียมแอโรโซลสำหรับสูดดมแบบกำหนดขนาดใช้
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_nmprnst" />
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_lstfcd" />
                 </td>
             </tr>
             <tr>
@@ -321,10 +363,10 @@
                     ผลิตภัณฑ์ยาสัตว์ที่ไม่ใช่ยากระตุ้นภูมิคุ้มกัน
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_lcnsidst" />
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_scridst" />
                 </td>
             </tr>
             <tr>
@@ -332,10 +374,10 @@
                     ยาสกัด
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_url" />
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_cncremark" />
                 </td>
             </tr>
             <tr>
@@ -343,10 +385,10 @@
                     ยาอื่นๆ
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_email" />
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" />
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_otaxno" />
                 </td>
             </tr>
         </table>
@@ -368,35 +410,38 @@
 
     <table style="width:50%">
         <tr>
-            <td style="font-size:20px">
+            <td>
                 ชื่อสถานที่เก็บ ( 1 ) :
             </td>
-            <td style="font-size:20px">
-                <input style="width:100%" />
+            <td>
+                <select class="dropdown" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
+                    <option value="0">--กรุณาเลือก--</option>
+                    <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
+                </select>
             </td>
         </tr>
-        <tr style="font-size:20px">
+        <tr>
             <td>
                 อยู่เลขที่
             </td>
             <td>
-                <input style="width:100%" />
+                <label>{{LIST_LABEL.fulladdr}}</label>
             </td>
         </tr>
-        <tr style="font-size:20px">
+        <tr>
             <td>
                 โทรศัพท์
             </td>
             <td>
-                <input style="width:100%" />
+                <label>{{LIST_LABEL.tel}}</label>
             </td>
         </tr>
-        <tr style="font-size:20px">
+        <tr style="font-size: 20px">
             <td>
                 โทรศัพท์มือถือ
             </td>
             <td>
-                <input style="width:100%" />
+                <label>{{LIST_LABEL.Mobile}}</label>
             </td>
         </tr>
     </table>

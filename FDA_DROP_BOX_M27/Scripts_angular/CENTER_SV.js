@@ -177,6 +177,8 @@
         return response;
     };
 
+
+
     this.INSERT_CERT_GMP = function (aa,bb,ProcessID) {
         var response = $http({
             method: "post",

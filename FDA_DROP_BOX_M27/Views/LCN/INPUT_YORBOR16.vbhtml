@@ -1,6 +1,6 @@
 ﻿<script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
-<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+@*<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">*@
     <div style="font-family:'Taviraj';font-size:24px;">
 
         <div>
@@ -43,10 +43,10 @@
                 <td style="text-align:start"> <input type="checkbox" disabled /> ผลิตยาแผนโบราณ</td>
             <tr>
                 <td style="width:50%"></td>
-                <td style=";text-align:start"> <input type="checkbox" disabled/> ขายยาแผนโบราณ</td>
+                <td style="text-align:start"> <input type="checkbox" disabled /> ขายยาแผนโบราณ</td>
             <tr>
                 <td style="width:50%"></td>
-                <td style="width:50%;text-align:start"> <input type="checkbox" disabled/> นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร</td>
+                <td style="width:50%;text-align:start"> <input type="checkbox" disabled /> นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร</td>
             </tr>
         </table>
         <hr />
@@ -93,9 +93,9 @@
         <table>
             <tr>
                 <td style="width:20%;">ได้รับอนุญาตให้</td>
-                <td> <input type="checkbox" /> ผลิตยาแผนโบราณ</td>
-                <td> <input type="checkbox" /> ขายยาแผนโบราณ</td>
-                <td> <input type="checkbox" /> นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร</td>
+                <td> <input type="checkbox" disabled/> ผลิตยาแผนโบราณ</td>
+                <td> <input type="checkbox" disabled/> ขายยาแผนโบราณ</td>
+                <td> <input type="checkbox" disabled/> นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร</td>
             </tr>
         </table>
         <table style="width:100%">
@@ -158,5 +158,10 @@
         </table>
         <hr />
         <div>หมายเหตุ : &nbsp;ใส่เครื่องหมาย &#10004; ในช่อง [  ] หน้าข้อความที่ต้องการ</div>
-</div>
-</div>
+    </div>
+
+    <div style="text-align:center">
+        <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+        <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_EDIT()" value="บันทึก" />
+    </div>
+@*</div>*@

@@ -541,6 +541,7 @@
     <Content Include="Views\LCN\INPUT_PORYOR12.vbhtml" />
     <Content Include="Views\LCN\INPUT_YORBOR16.vbhtml" />
     <Content Include="Views\DH\FRM_MAIN_EMPTY.vbhtml" />
+    <Content Include="Views\LCN\PREVIEW_EDIT_LCN.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>

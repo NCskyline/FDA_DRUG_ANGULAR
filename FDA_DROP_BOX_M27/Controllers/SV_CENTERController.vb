@@ -1507,6 +1507,11 @@ Namespace Controllers
             Catch ex As Exception
 
             End Try
+            Try
+                dao.fields.PROCESS_ID = _ProcessID
+            Catch ex As Exception
+
+            End Try
             dao.fields.STATUS_ID = 1
             dao.fields.MAIN_TYPE = MAIN_TYPE 'Request.QueryString("mt")
             dao.fields.SUB_TYPE = SUB_TYPE 'Request.QueryString("st")
@@ -1543,6 +1548,25 @@ Namespace Controllers
 
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
         End Function
+
+        'Function INSERT_LCN_EDIT(ByVal XML_EDIT As String, ByVal _ProcessID As String) As JsonResult
+        '    Dim jss As New JavaScriptSerializer
+        '    Dim bb As MODEL_LCN = jss.Deserialize(XML_EDIT, GetType(MODEL_LCN))
+
+        '    Dim bao_tran As New BAO
+        '    Dim tr_id As Integer = 0
+        '    tr_id = bao_tran.insert_transection_new(_ProcessID, bb.session.CITIZEN_ID, bb.session.CITIZEN_ID_AUTHORIZE)
+        '    Dim dao As New DAO_DRUG.TB_DALCN_EDIT_REQUEST
+        '    dao.fields.PROCESS_ID = _ProcessID
+        '    dao.fields = bb.DALCN_EDIT_REQUEST
+        '    dao.fields.TR_ID = tr_id
+
+        '    dao.insert()
+
+
+
+        '    Return Json(msg_r, JsonRequestBehavior.AllowGet)
+        'End Function
         Function INSERT_CERT_GMP(ByVal XML_CERT As String, ByVal XML_CHEM As String, ByVal _ProcessID As String) As JsonResult
             Dim jss As New JavaScriptSerializer
             Dim bb As MODEL_CER_GMP = jss.Deserialize(XML_CERT, GetType(MODEL_CER_GMP))
@@ -1686,7 +1710,7 @@ Namespace Controllers
             dao.fields = bb.DALCN_EDIT_REQUEST
             dao.fields.TR_ID = tr_id
             dao.fields.CITIZEN_ID_AUTHORIZE = bb.session.CITIZEN_ID_AUTHORIZE
-
+            dao.fields.PROCESS_ID = _ProcessID
             dao.insert()
 
             Return Json(Result, JsonRequestBehavior.AllowGet)

@@ -208,7 +208,7 @@
 
     $scope.BTN_SAVE_EDIT = function () {
 
-        var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP, $scope.GMP_CHEM, PROCESS, sessionStorage);
+        var Getdata = CENTER_SV.INSERT_LCN_EDIT_RQT($scope.LIST_LCN,PROCESS);
         Getdata.then(function (datas) {
             Swal.fire({
                 title: 'SUCCESS',
