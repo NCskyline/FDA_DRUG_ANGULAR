@@ -15,6 +15,17 @@ Namespace Controllers
         Public _SYSTEM_ID As String = System.Configuration.ConfigurationManager.AppSettings("SYSTEM_ID")
         Public _PATH_BOX As String = System.Configuration.ConfigurationManager.AppSettings("PATH_BOX")
         Public _PATH_BOX_TEMPLATE As String = System.Configuration.ConfigurationManager.AppSettings("PATH_BOX_TEMPLATE")
+        Public _PATH_PDF_TEMPLATE As String = System.Configuration.ConfigurationManager.AppSettings("PATH_PDF_TEMPLATE")    'ที่อยู่ Path
+        Public _PATH_XML_CLASS As String = System.Configuration.ConfigurationManager.AppSettings("PATH_XML_CLASS")          'ที่อยู่ Path
+        Public _PATH_PDF_XML_CLASS As String = System.Configuration.ConfigurationManager.AppSettings("PATH_PDF_XML_CLASS")  'ที่อยู่ Path
+        Public _PATH_PDF_TRADER As String = System.Configuration.ConfigurationManager.AppSettings("PATH_PDF_TRADER")        'ที่อยู่ Path
+        Public _PATH_XML_TRADER As String = System.Configuration.ConfigurationManager.AppSettings("PATH_XML_TRADER")        'ที่อยู่ Path
+        Public _PATH_DEFAULT As String = System.Configuration.ConfigurationManager.AppSettings("PATH_DEFALUT")              'ที่อยู่ Path
+        Public _PATH_EDIT As String = System.Configuration.ConfigurationManager.AppSettings("PATH_EDIT")              'ที่อยู่ Path
+        Public _PATH_SUBS As String = System.Configuration.ConfigurationManager.AppSettings("PATH_EDIT")
+        Public _RDLC As String = System.Configuration.ConfigurationManager.AppSettings("RDLC")
+        Public _PATH_XML_IMPORT As String = System.Configuration.ConfigurationManager.AppSettings("PATH_XML_IMPORT")        'มินทำต้องทำต่อ 5555555555555555555
+        Public _PATH_PDF_IMPORT As String = System.Configuration.ConfigurationManager.AppSettings("PATH_PDF_IMPORT")
         Dim msg_r As New MODEL_RESULT
         Dim BAO_L As New BAO_DROPBOX
 
@@ -1142,7 +1153,7 @@ Namespace Controllers
 #Region "UPLOAD PDF"
         Public Function UPLOAD_PDF(ByVal CITIZEN_ID As String, ByVal TOKEN As String) As JsonResult
             Dim filename As String = ""
-            Dim path As String = _PATH_BOX_TEMPLATE & "\" & CITIZEN_ID & "\" & TOKEN
+            Dim path As String = _PATH_DEFAULT & "\" & CITIZEN_ID & "\" & TOKEN
             Directory.CreateDirectory(path)
             Dim PATHs As String = ""
             Dim path_file As String = ""

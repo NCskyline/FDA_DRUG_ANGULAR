@@ -291,6 +291,11 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         REDIRECT('/DH/FRM_MAIN_PAGE_PHESAJ');
     };
 
+    $scope.PDF_PREVIEW = function (PATH, FILENAME) {
+        var urls = SET_URL_SV('/HOME/OPEN_DOC_PATH?PATH=' + PATH + '&FILENAME=' + FILENAME);
+        window.open(urls);
+    };
+
     function CV_DATE(data) {
         return new Date(parseInt(data.replace('/Date(', '').replace(')/', ''))).toLocaleDateString();
     }

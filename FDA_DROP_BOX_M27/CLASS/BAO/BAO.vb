@@ -539,26 +539,16 @@ Public Class BAO
         Return dts
     End Function
 
-    'Public Function SP_GEN_NO(ByVal PROCESS_ID As Integer, ByVal IDA As Integer)
-    '    Dim GEN_NO As Integer
-    '    Dim dao As New DAO.TB_GEN_NO
-    '    dao.GETDATABY_GEN_NO_MAX(PROCESS_ID)
-    '    If IsNothing(dao.fields.GEN_NO) = True Then
-    '        GEN_NO = 0
-    '    Else
-    '        GEN_NO = dao.fields.GEN_NO
-    '    End If
-    '    GEN_NO = GEN_NO + 1
+    Function SP_CUSTOMER_LCN_BY_FK_IDA(ByVal LCT_IDA As Integer, ByVal Process As String, ByVal Citizen As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_CUSTOMER_LCN_BY_FK_IDA @FK_IDA='" & LCT_IDA & "',@lcntpcd='" & Process & "',@iden='" & Citizen & "'"
+        Dim dts As New DataTable
+        Try
+            dts = clsds.dsQueryselect(sql, _conn).Tables(0)
+        Catch ex As Exception
 
-    '    dao = New DAO.TB_GEN_NO
-    '    With dao.fields
-    '        .GEN_NO = GEN_NO
-    '        .PROCESS_ID = PROCESS_ID
-    '        .FK_BOX_IDA = IDA
-    '    End With
-    '    dao.insert()
-
-    '    Return GEN_NO
-    'End Function
+        End Try
+        Return dts
+    End Function
 
 End Class

@@ -165,8 +165,8 @@ Namespace Controllers
         Function CODE_CENTER(ByVal MODEL As MODEL_LCN)
 
             Select Case MODEL.FUNC_CODE
-                Case "FUNC-DATA"
-
+                Case "FUNC-DATA-REQUEST"
+                    ''SP_CUSTOMER_LCN_BY_FK_IDA()
             End Select
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
@@ -210,6 +210,14 @@ Namespace Controllers
             Dim clsds As New ClassDataset
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
+        End Function
+
+        Function SP_CUSTOMER_LCN_BY_FK_IDA(ByVal LCT_IDA As Integer, ByVal Process As String, ByVal iden As String)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_CUSTOMER_LCN_BY_FK_IDA(LCT_IDA, Process, iden)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
         End Function
 #End Region
 

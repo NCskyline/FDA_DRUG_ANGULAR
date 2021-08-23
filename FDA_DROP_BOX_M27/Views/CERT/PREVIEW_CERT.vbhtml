@@ -668,7 +668,7 @@ End Code
                     6. Manufactur&#39;s License Number<font color="red">*</font> :
                 </td>
                 <td>
-                 
+
                     <label>{{LIST_GMP.CER.MANUFACTURER_LICENCE_NUMBER}}</label>
                 </td>
             </tr>
@@ -751,6 +751,9 @@ End Code
     </div>
     @*-------------OTHER------------------*@
 
-
+    <div style="text-align:center">
+        <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+        <input type="button" class="btn btn-lg" ng-click="PDF_PREVIEW()" value="PDF PREVIEW" />
+    </div>
 
 </div>

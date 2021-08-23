@@ -47,8 +47,32 @@
     $scope.BTN_MENU = function (process) {
 
         if (process == '101' || process == '103' || process == '104' || process == '105' || process == '106' || process == '107' || process == '108' || process == '109') {
+            if (process == '101') {
+                $scope.lcnnoType = 'ขย1';
+            } else if (process == '103') {
+                $scope.lcnnoType = 'ขย3';
+            } else if (process == '104') {
+                $scope.lcnnoType = 'ขย4';
+            } else if (process == '105') {
+                $scope.lcnnoType = 'นย1';
+            } else if (process == '106') {
+                $scope.lcnnoType = 'ผย1';
+            } else if (process == '107') {
+                $scope.lcnnoType = 'ขยบ';
+            } else if (process == '108') {
+                $scope.lcnnoType = 'นยบ';
+            } else if (process == '109') {
+                $scope.lcnnoType = 'ผยบ';
+            } else  $scope.lcnnoType = '';
+            
             $scope.FULL_MODEL.PROCESS = process;
             $scope.SUB_PATH = SET_URL_SV('../LCN/FRM_LCN_DRUG');
+
+            $scope.FULL_MODEL.FUNC_CODE = "FUNC-DATA-REQUEST";
+            var Getdata = CENTER_SV.GET_FULLDATA_LCN($scope.FULL_MODEL);
+            Getdata.then(function (datas) {
+                $scope.LIST_REQUEST = datas.data;
+            }, function () { });
         }
     };
 
@@ -195,10 +219,11 @@
 
             });
         });
-    }
+    };
 
     $scope.BTN_BACK = function () {
-       
         REDIRECT('/LCN/FRM_LCN_NEWS');
     };
+
+   
 });

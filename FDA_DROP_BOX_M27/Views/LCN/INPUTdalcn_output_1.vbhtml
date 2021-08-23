@@ -1,8 +1,11 @@
 ﻿<script type="text/javascript">
 
 </script>
+
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
+
 <style>
     .title1 {
         width: 150px;
@@ -48,12 +51,10 @@
             color: #dd2c00;
             margin-left: 15px;
         }
-
-      
 </style>
 
-<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="" >
-    <div style="font-family:'Taviraj';font-size:24px;">
+<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+    <div style="font-family:'Taviraj';font-size:24px;width:100%">
         <h1 style="text-align:right;font-size:24px;">
             <strong>แบบ ข.ย.๑</strong>
         </h1>
@@ -147,7 +148,7 @@
                     ข้าพเจ้า
                 </td>
                 <td style="text-align:center;">
-                    <label >{{LIST_LCN.thanm}}</label>
+                    <label>{{LIST_LCN.thanm}}</label>
                 </td>
             </tr>
             <tr>
@@ -303,7 +304,7 @@
 
                     </form>
                 </td>
-               
+
             </tr>
         </table>
         <br />
@@ -390,7 +391,6 @@
                     ใบอนุญาตประกอบวิชาชีพ
                 </td>
                 <td colspan="4">
-                    
                 </td>
             </tr>
             <tr>
@@ -438,9 +438,7 @@
         <br />
         <div style="margin-left:10%;font-size:20px">(๑) รูปถ่ายของผู้ขออนุญาต ขนาด ๓ x ๔ เซนติเมตร จำนวน ๓ รูป</div>
         <div style="margin-left:10%;font-size:20px">(๒) เอกสารแสดงการเป็นเจ้าของกิจการและหลักทรัพย์</div>
-        <div style="        margin-left: 10%;
-        font-size: 20px
-">(๓) สำเนาทะเบียนบ้านของผู้ขออนุญาต (กรณีบุคคลธรรมดาเป็นผู้ขออนุญาต) หรือ ผู้ดำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
+        <div style="margin-left:10%;font-size:20px">(๓) สำเนาทะเบียนบ้านของผู้ขออนุญาต (กรณีบุคคลธรรมดาเป็นผู้ขออนุญาต) หรือ ผู้ดำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
         <div style="margin-left:10%;font-size:20px">(๔) ใบรับรองของผู้ประกอบวิชาชีพเวชกรรมซึ่งรับรองว่าผู้ขออนุญาตไม่เป็นโรคตามมาตรา ๑๔ (๖) แห่งพระราชบัญญัติยา พ.ศ. ๒๕๑๐</div>
         <div style="margin-left:10%;font-size:20px">(๕) สัญญาระหว่างผู้ขออนุญาตและเภสัชกร ซึ่งรับจะเป็นผู้มีหน้าที่ปฏิบัติการของผู้ขออนุญาต</div>
         <div style="margin-left:10%;font-size:20px">(๖) สำเนาหรือรูปถ่ายใบอนุญาตประกอบวิชาชีพเภสัชกรรมของเภสัชกรทุกคน ซึ่งรับจะเป็นผู้มีหน้าที่ปฏิบัติการของผู้ขออนุญาต</div>
@@ -471,7 +469,10 @@
             </tr>
         </table>
     </div>
-    <div>
-        <input type="button" class="btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+    <br />
+    <br />
+    <br />
+    <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
+        <input type="button" class="btn btn-lg " ng-click="BTN_BACK()" value="ย้อนกลับ" />
     </div>
 </div>

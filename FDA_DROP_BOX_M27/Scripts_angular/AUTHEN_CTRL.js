@@ -5,7 +5,7 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     $scope.loading = true;
     //var Trigger = QueryString("Trigger");
-    var Trigger = "DH";
+    var Trigger = "LCN";
     $scope.DOC_ID = 0;
     $scope.DOC_TITLE = "TEST";
     $scope.IS_USE = 0;
@@ -40,7 +40,7 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
                     sessionStorage.LCN_IDA = '0';
                     sessionStorage.DH_PROCESS_ID = '';
                     //window.location = "/DH/FRM_MAIN_PAGE_PHESAJ"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
-                    window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PHESAJ";
+                    window.location = "/DH/FRM_MAIN_PAGE_PHESAJ";
                 }
                
                // window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PHESAJ";
