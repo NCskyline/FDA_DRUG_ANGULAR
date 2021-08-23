@@ -127,6 +127,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
     }
 
     function Full_Model() {
+
         var MODLE_GMP = CENTER_SV.SETMODEL_DH();
         MODLE_GMP.then(function (datas) {
 
