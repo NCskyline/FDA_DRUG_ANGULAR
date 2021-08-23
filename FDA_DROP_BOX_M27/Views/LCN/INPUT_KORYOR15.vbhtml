@@ -10,7 +10,7 @@ End Code
         <td style="width:35%"></td>
         <td style="width:35%"></td>
         <td style="width:5%;text-align:right">เลขที่:</td>
-        <td style=" width:25%;text-align:center"></td>
+        <td style=" width:25%;text-align:center"> <label>{{LCN_LIST.RCVNO_DISPLAY}}</label></td>
     </tr>
 </table>
 <table style="width:100%">
@@ -18,7 +18,7 @@ End Code
         <td style="width:35%"></td>
         <td style="width:35%"></td>
         <td style="width:5%;text-align:right">วันที่:</td>
-        <td style=" width:25%;text-align:center"></td>
+        <td style=" width:25%;text-align:center"><label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label></td>
     </tr>
 </table>
 <table style="width:100%">
@@ -31,30 +31,38 @@ End Code
     </tr>
 </table>
 <hr />
-<div> <h3 style="text-align:left">คำขอต่ออายุใบอนุญาต</h3></div>
-<div>
+<div> <h3 style="text-align:center">คำขอต่ออายุใบอนุญาต</h3></div>
+<div style="padding-left:45%;">
     <p style="text-align:left">
-        &nbsp;&nbsp;&nbsp;<input type="checkbox" />ขายยาแผนปัจจุบัน
-        <br />
-        &nbsp;&nbsp;&nbsp;<input type="checkbox" />ขายส่งยาแผนปัจจุบัน
-        <br />
-        &nbsp;&nbsp;&nbsp;<input type="checkbox" />ขายยาแผนปัจจุบันเฉพาะยาบรรจุเสร็จที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ
-        <br />
-        &nbsp;&nbsp;&nbsp;<input type="checkbox" />ขายยาแผนปัจจุบันเฉพาะยาบรรจุเสร็จสำหรับสัตว์
+        <label><input type="checkbox" disabled/>ขายยาแผนปัจจุบัน </label>
+        <br /> <label>
+            <input type="checkbox" disabled/>ขายส่งยาแผนปัจจุบัน
+        </label>
+        <br /> <label>
+            <input type="checkbox" disabled/>ขายยาแผนปัจจุบันเฉพาะยาบรรจุเสร็จที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ
+        </label>
+        <br /> <label><input type="checkbox" disabled/>ขายยาแผนปัจจุบันเฉพาะยาบรรจุเสร็จสำหรับสัตว์</label>
 </div>
 <hr />
-<table style="width:100%">
+<table style="width:100%; font-size:20px">
     <tr>
-        <td style="width:70%"></td>
-        <td>เขียนที่ <input style="width:20%;text-align:right" /></td>
-        <td style="width:10%"></td>
+        <td style="text-align:right;width:90%">
+            เขียนที่
+        </td>
+        <td style="width:40%">
+            <input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'Taviraj';font-size:20px;" type="text" />
+        </td>
     </tr>
-</table>
-<table style="width:100%">
     <tr>
-        <md-datepicker ng-model="datas.MFD_DATE" md-placeholder="Enter date"
-                       input-aria-describedby="datepicker-description"
-                       input-aria-labelledby="datepicker-header "></md-datepicker>
+        <td style="text-align:right;width:100px">
+            วันที่
+        </td>
+        <td>
+            <md-datepicker ng-model="LIST_LCN.dalcn.WRITE_DATE" md-placeholder="Enter date"
+                           input-aria-describedby="datepicker-description"
+                           input-aria-labelledby="datepicker-header ">
+            </md-datepicker>
+        </td>
     </tr>
 </table>
 <br />

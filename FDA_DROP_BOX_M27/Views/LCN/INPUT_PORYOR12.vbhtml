@@ -93,7 +93,7 @@
                 <td style="width:82%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"><label>{{LIST_LCN.tel}}</label></td>
             </tr>
         </table>
-        <td>ขอเปลี่ยนแปลงรายการในใบอนุญาต ดังต่อไปนี้</td>
+        <p>ขอเปลี่ยนแปลงรายการในใบอนุญาต ดังต่อไปนี้</p>
         <table style="width:100%">
             <tr>
                 <td><input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" /></td>
@@ -134,5 +134,9 @@
                 <td style="width:20%;text-align:start">ผู้มีหน้าที่ปฏิบัติการ</td>
             </tr>
         </table>
-        </div>
+    </div>
+    <div style="text-align:center">
+        <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+        <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_EDIT()" value="บันทึก" />
+    </div>
 </div>

@@ -72,34 +72,37 @@
                 <td style="width:13%;">(เฉพาะกรณีนิติบุคคล)</td>
             </tr>
         </table>
-        <table style="width:100%">
+
+        <table style="width:100%;">
             <tr>
                 <td style="width:13%;">เลขที่บัตรประชาชน</td>
                 <td style="width:87%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"> <label>{{LIST_LCN.BSN_IDENTIFY}}</label></td>
             </tr>
         </table>
-        <table>
-            <tr>
-                <td>ได้รับอนุญาตให้ :</td>
-                <td>
-                    <input type="checkbox" name="type_a" ng-model="LIST_LCN.CHK_TYPE" ng-value="1" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายยาแผนปัจจุบัน
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="checkbox" name="type_a" ng-model="LIST_LCN.CHK_TYPE" ng-value="2" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายยาแผนปัจจุบันเฉพาะยาบรรจุเสร็จที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td> <input type="checkbox" name="type_a" ng-model="LIST_LCN.CHK_TYPE" ng-value="3" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายยาแผนปัจจุบันเฉพาะยาบรรจุเสร็จสำหรับสัตว์</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td> <input type="checkbox" name="type_a" ng-model="LIST_LCN.CHK_TYPE" ng-value="4" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายส่งยาแผนปัจจุบัน</td>
-            </tr>
-        </table>
+        <div style="padding-left:30%;">
+            <table>
+                <tr>
+                    <td>ได้รับอนุญาตให้ :</td>
+                    <td>
+                        <input type="checkbox" name="type_a" ng-model="LIST_LCN.CHK_TYPE" ng-value="1" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายยาแผนปัจจุบัน
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="checkbox" name="type_a" ng-model="LIST_LCN.CHK_TYPE" ng-value="2" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายยาแผนปัจจุบันเฉพาะยาบรรจุเสร็จที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <input type="checkbox" name="type_a" ng-model="LIST_LCN.CHK_TYPE" ng-value="3" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายยาแผนปัจจุบันเฉพาะยาบรรจุเสร็จสำหรับสัตว์</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <input type="checkbox" name="type_a" ng-model="LIST_LCN.CHK_TYPE" ng-value="4" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายส่งยาแผนปัจจุบัน</td>
+                </tr>
+            </table>
+        </div>
         <table style="width:100%">
             <tr>
                 <td style="width:13%;">ใบอนุญาตเลขที่</td>
@@ -124,8 +127,9 @@
             <tr>
                 <td>ขอเปลี่ยนแปลงรายการในใบอนุญาต ดังต่อไปนี้</td>
             <tr>
-                <td><input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" />
-                
+                <td>
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" />
+
                 </td>
             </tr>
         </table>
@@ -176,5 +180,9 @@
                 <td style="width:20%;text-align:start">) (ตัวบรรจง)</td>
             </tr>
         </table>
-        </div>
+    </div>
+    <div style="text-align:center">
+        <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+        <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_EDIT()" value="บันทึก" />
+    </div>
 </div>

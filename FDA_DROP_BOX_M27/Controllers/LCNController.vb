@@ -152,6 +152,9 @@ Namespace Controllers
         Function INPUT_YORBOR16() As ActionResult
             Return View()
         End Function
+        Function PREVIEW_EDIT_LCN() As ActionResult
+            Return View()
+        End Function
     End Class
 
     Public Class LCN_CENTERController
