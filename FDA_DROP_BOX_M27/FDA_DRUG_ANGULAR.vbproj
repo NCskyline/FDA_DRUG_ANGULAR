@@ -21,8 +21,7 @@
     <OptionInfer>On</OptionInfer>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>
-    </Use64BitIISExpress>
+    <Use64BitIISExpress>false</Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -542,6 +541,7 @@
     <Content Include="Views\LCN\INPUT_YORBOR16.vbhtml" />
     <Content Include="Views\DH\FRM_MAIN_EMPTY.vbhtml" />
     <Content Include="Views\LCN\PREVIEW_EDIT_LCN.vbhtml" />
+    <Content Include="Views\LCN\INPUT_YORSOR3_ALL_EDIT.vbhtml" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>

@@ -3,13 +3,13 @@
     CHK_TOKEN();
     $scope.CITIZEN = "";
     $scope.lcnno = "";
-    var LCN_IDA = 70335; //sessionStorage.LCN_IDA;
-    var LCT_IDA = 117194; //sessionStorage.LCT_IDA;  //
-    var PROCESS = 123; //QueryString("PROCESS");
+    var LCN_IDA = sessionStorage.LCN_IDA;
+    var LCT_IDA = sessionStorage.LCT_IDA;  //
+    var PROCESS = sessionStorage.PROCESS //QueryString("PROCESS");
     var CITIZEN = '0105527028430';//'0105527028430';0000000000000
-    var BSN_IDENTIFY = "1710500118665";
-    var IDENTIFY = "0000000000000";
-    var HEAD_LCN_IDA = 49409;
+    //var BSN_IDENTIFY = "1710500118665";
+    //var IDENTIFY = "0000000000000";
+    var HEAD_LCN_IDA = sessionStorage.HEAD_LCN_IDA;
     //var LCT_IDA = 117194;
     
 
@@ -135,7 +135,11 @@
 
         }, function () { });
 
+        var data_lct = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2('1', IDENTIFY);
+        data_lct.then(function (datas) {
+            $scope.REF_LOCATION = datas.data;
 
+        }, function () { });
     };
 
 
@@ -164,6 +168,16 @@
         var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
         Data_location.then(function (datas) {
             $scope.LIST_LABEL = datas.data;
+            //$scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr;
+        }, function () { });
+
+    };
+
+    $scope.getdetails_lct = function (IDA) {
+
+        var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
+        Data_location.then(function (datas) {
+            $scope.LIST_LABEL_LCT = datas.data;
             //$scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr;
         }, function () { });
 

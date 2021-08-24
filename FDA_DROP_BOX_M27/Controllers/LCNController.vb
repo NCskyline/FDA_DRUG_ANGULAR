@@ -155,6 +155,10 @@ Namespace Controllers
         Function PREVIEW_EDIT_LCN() As ActionResult
             Return View()
         End Function
+
+        Function INPUT_YORSOR3_ALL_EDIT() As ActionResult
+            Return View()
+        End Function
     End Class
 
     Public Class LCN_CENTERController
@@ -416,6 +420,15 @@ Namespace Controllers
 
                 End Try
             Next
+            Dim dao_phr As New DAO_DRUG.ClsDBDALCN_PHR
+            dao_phr.GetDataby_FK_IDA(HEAD_LCN_IDA)
+
+            Try
+                model.DALCN_PHR = dao_phr.fields
+            Catch ex As Exception
+
+            End Try
+
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
 

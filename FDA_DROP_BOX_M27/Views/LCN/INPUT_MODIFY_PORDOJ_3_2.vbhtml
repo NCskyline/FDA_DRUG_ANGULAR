@@ -51,7 +51,7 @@
     <table style="font-size:20px;margin:auto;margin-top:6%" @*border="1"*@>
         <tr>
             <td>
-                <strong>ใบอนุญาตขายวัตถุออกฤทธิ์</strong>
+                <strong>ใบอนุญาตผลิตวัตถุออกฤทธิ์</strong>
             </td>
             <td>
                 <input type="radio" name="gender" checked /> <strong>ในประเภท ๓</strong>

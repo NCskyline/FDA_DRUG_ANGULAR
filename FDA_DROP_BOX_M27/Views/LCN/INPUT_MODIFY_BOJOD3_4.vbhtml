@@ -65,7 +65,7 @@
                 <strong>เลขที่</strong>
             </td>
             <td colspan="3">
-                text
+                <label>{{LCN_LIST.RCVNO_DISPLAY}}</label>
             </td>
         </tr>
         <tr>
@@ -73,7 +73,7 @@
                 <strong>ณ สถานที่ ชื่อ</strong>
             </td>
             <td colspan="2">
-                text
+                <label>{{LIST_LCN.thanameplace}}</label>
             </td>
         </tr>
     </table>
@@ -86,7 +86,7 @@
             </td>
 
             <td colspan="3">
-                text
+                <label>{{LCN_LIST.RCVNO_DISPLAY}}</label>
             </td>
         </tr>
         <tr>
@@ -95,7 +95,7 @@
             </td>
 
             <td colspan="3">
-                text
+                <label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label>
             </td>
         </tr>
         <tr>
@@ -209,7 +209,7 @@
             อยู่เลขที่
         </td>
         <td style="font-size:20px" colspan="6">
-            <label>{{LIST_LCN.fulladdr2}}</label>
+            <label>{{LIST_LCN.fulladdr3}}</label>
         </td>
     </tr>
     <tr>
@@ -334,7 +334,7 @@
             <strong>สถานที่เดิม</strong> ตั้งอยู่เลขที่
         </td>
         <td>
-            <label>{{LIST_LCN.fulladdr2}}</label>
+            <label>{{LIST_LCN.fulladdr3}}</label>
         </td>
     </tr>
     <tr>
@@ -350,22 +350,28 @@
             <strong>สถานที่ใหม่</strong>
         </td>
         <td>
-            <select>
-                <option>1</option>
+            <select class="dropdown" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails_lct(LIST_LCN.LOCATION_SELECT)">
+                <option value="0">--กรุณาเลือก--</option>
+                <option ng-repeat="x in REF_LOCATION" value="{{x.IDA}}">{{x.thanameplace}}</option>
             </select>
         </td>
     </tr>
     <tr>
         <td>
+            
             ตั้งอยู่เลขที่
         </td>
-        <td></td>
+        <td>
+            <label>{{LIST_LABEL_LCT.fulladdr}}</label>
+        </td>
     </tr>
     <tr>
         <td>
             โทรศัพท์/มือถือ
         </td>
-        <td></td>
+        <td>
+            <label>{{LIST_LABEL_LCT.tel}}</label>
+        </td>
     </tr>
 </table>
 
@@ -405,8 +411,9 @@
             <strong>สถานที่ใหม่</strong>
         </td>
         <td>
-            <select>
-                <option>1</option>
+            <select class="dropdown" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
+                <option value="0">--กรุณาเลือก--</option>
+                <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
             </select>
         </td>
     </tr>
@@ -415,7 +422,7 @@
             ตั้งอยู่เลขที่
         </td>
         <td>
-            text
+            <label>{{LIST_LABEL.fulladdr}}</label>
         </td>
     </tr>
     <tr>
@@ -423,7 +430,7 @@
             โทรศัพท์/มือถือ
         </td>
         <td>
-            text
+            <label>{{LIST_LABEL.tel}}</label>
         </td>
     </tr>
 </table>
@@ -442,7 +449,7 @@
     </tr>
     <tr>
         <td>
-            <input style="width:100%" />
+            <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;" type="text" />
         </td>
     </tr>
 </table>
@@ -453,21 +460,21 @@
             <strong>โดยมีเภสัชกรชื่อ</strong> 1
         </td>
         <td>
-            <input style="width:100%" />
+            <label>{{LSIT_LCN.DALCN_PHR.PHR_NAME}}</label>
         </td>
         <td style="text-align:center">
             ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่
         </td>
         <td>
-            <input style="width:100%" />
+            <label>{{LSIT_LCN.DALCN_PHR.PHR_TEXT_NUM}}</label>
         </td>
     </tr>
-    <tr>
+    @*<tr>
         <td colspan="2">
             <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
             <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
         </td>
-    </tr>
+    </tr>*@
     <tr>
         <td colspan="4">
             เป็นผู้ควบคุมตามมาตรา ๕๑ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙
