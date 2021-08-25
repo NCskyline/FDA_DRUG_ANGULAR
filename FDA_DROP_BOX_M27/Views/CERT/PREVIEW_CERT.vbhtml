@@ -171,7 +171,6 @@ End Code
                     10. ขอบเขตของประเภทยาที่รับรอง
                 </td>
                 <td>
-
                     <label>{{LIST_GMP.CER.CER_SCOPE}}</label>
                 </td>
             </tr>

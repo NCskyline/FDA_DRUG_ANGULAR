@@ -1151,16 +1151,21 @@ Namespace Controllers
 #End Region
 
 #Region "UPLOAD PDF"
-        Public Function UPLOAD_PDF(ByVal CITIZEN_ID As String, ByVal TOKEN As String) As JsonResult
+        Public Function UPLOAD_PDF(ByVal PROCESS_ID As String, ByVal TR_ID As String) As JsonResult
             Dim filename As String = ""
-            Dim path As String = _PATH_DEFAULT & "\" & CITIZEN_ID & "\" & TOKEN
+            Dim path As String = _PATH_DEFAULT & "\upload\"
             Directory.CreateDirectory(path)
             Dim PATHs As String = ""
             Dim path_file As String = ""
+            Dim NAME_REAL As String = ""
+            Dim DD As Integer = 1
+            Dim Count As Integer = 1
             Try
                 For Each s As String In Request.Files
-                    filename = Request.Files(0).FileName
-                    path_file = path & "\" & Date.Now.ToOADate & ".pdf"
+                    NAME_REAL = Request.Files(0).FileName
+                    Dim Type As String = IO.Path.GetExtension(Request.Files(0).FileName).ToString()
+                    filename = "DA-" & PROCESS_ID & "-" & Date.Now.Year & "-" & TR_ID & "-" & DD & Type
+                    path_file = path & filename
                     Dim postedFile As HttpPostedFileBase = Request.Files(0)
 
                     postedFile.SaveAs(path_file)
