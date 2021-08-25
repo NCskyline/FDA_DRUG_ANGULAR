@@ -159,6 +159,13 @@ Namespace Controllers
         Function INPUT_YORSOR3_ALL_EDIT() As ActionResult
             Return View()
         End Function
+        '
+        Function INPUT_YORBOR_14() As ActionResult
+            Return View()
+        End Function
+        Function INPUT_YORSOR3_20_TAN() As ActionResult
+            Return View()
+        End Function
     End Class
 
     Public Class LCN_CENTERController
