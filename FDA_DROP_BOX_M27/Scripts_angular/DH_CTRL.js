@@ -269,17 +269,41 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
         }, function () { });
 
+    };
 
+    $scope.PREVIEW = function () {
 
+        $scope.PROCESS_ID = sessionStorage.DH_PROCESS_ID;
+        if ($scope.PROCESS_ID == '14') {
+            $scope.HEADER_PROCESS = 'เป็นสารออกฤทธิ์ตามทะเบียนตำรับยาผลิตในประเทศ';
+        }
+        else if ($scope.PROCESS_ID == '15') {
+            $scope.HEADER_PROCESS = 'เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา';
+        }
+        else if ($scope.PROCESS_ID == '16') {
+            $scope.HEADER_PROCESS = 'ไม่เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา';
+        }
+        else if (PROCESS_ID == '17') {
+            $scope.HEADER_PROCESS = 'ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ';
+        }
+
+        var getdata = CENTER_SV.GET_INFORMARION_DH(LCN_IDA);
+        getdata.then(function (datas) {
+
+            $scope.LIST_LCN = datas.data;
+            $scope.LIST_LCN.session = sessionStorage;
+
+        }, function () { });
+
+        var IDA = sessionStorage.IDA;
         var getdataDH = CENTER_SV.GET_PREVIEW_DH(IDA);
         getdataDH.then(function (datas) {
 
             $scope.LIST_DH = datas.data;
-            $scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE($scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE));
-            $scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE($scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE));
+            $scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE)));
+            $scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE)));
 
         }, function () { });
-        
     };
 
     $scope.REF_CER = function (IDA) {

@@ -6,7 +6,7 @@ End Code*@
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/DH_CTRL.js"></script>
 
-<script>
+@*<script>
     angular.module('radioExample', [])
         .controller('ExampleController', ['$scope', function ($scope) {
             $scope.color = {
@@ -17,7 +17,7 @@ End Code*@
                 "value": "green"
             };
         }]);
-</script>
+</script>*@
 
 
 
