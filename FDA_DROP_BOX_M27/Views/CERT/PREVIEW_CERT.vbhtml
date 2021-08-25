@@ -18,7 +18,7 @@ End Code
                     1. เลขที่ใบรับรอง (Certificate Number)<font color="red">*</font>  :
                 </td>
                 <td>
-                    <label>{{LIST_GMP.CER.CERTIFICATION_NUMBER_ALL}}</label>
+                    {{LIST_GMP.CER.CERTIFICATION_NUMBER_ALL}}
                 </td>
             </tr>
             <tr>
@@ -27,7 +27,7 @@ End Code
                 </td>
                 <td>
 
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.NAME_ADDRESS}}</label>
+                    {{LIST_GMP.CER_DETAIL_MANUFACTURE.NAME_ADDRESS}}
                 </td>
             </tr>
             <tr>
@@ -36,7 +36,7 @@ End Code
                 </td>
                 <td>
 
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER}}</label>
+                    {{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER}}
                 </td>
             </tr>
             <tr>
@@ -44,8 +44,7 @@ End Code
                     4. เมือง (City / Province/ State)<font color="red">*</font> :
                 </td>
                 <td>
-
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY}}</label>
+                    {{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY}}
                 </td>
             </tr>
             <tr>
@@ -53,11 +52,7 @@ End Code
                     5. ประเทศ (Country)<font color="red">*</font> :
                 </td>
                 <td>
-                    @*<select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID">
-                            <option value="0">--กรุณาเลือก--</option>
-                            <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
-                        </select>*@
-                    <label>{{LIST_GMP.COUNTRY_NAME}}</label>
+                    {{LIST_GMP.COUNTRY_NAME}}
                 </td>
             </tr>
             <tr>
@@ -65,7 +60,7 @@ End Code
                     รหัสไปรษณีย์ (Post code/Zip code) :
                 </td>
                 <td>
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE}}</label>
+                    {{LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE}}
                 </td>
             </tr>
             <tr>
@@ -73,8 +68,7 @@ End Code
                     6. Manufacturer&quot;s License Number :
                 </td>
                 <td>
-
-                    <label>{{LIST_GMP.CER.MANUFACTURER_LICENCE_NUMBER}}</label>
+                    {{LIST_GMP.CER.MANUFACTURER_LICENCE_NUMBER}}
                 </td>
             </tr>
             <tr>
@@ -82,7 +76,7 @@ End Code
                     Global Location Number (GLN) :
                 </td>
                 <td>
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.GLN}}</label>
+                    {{LIST_GMP.CER_DETAIL_MANUFACTURE.GLN}}
                 </td>
             </tr>
             <tr>
@@ -90,8 +84,7 @@ End Code
                     7. วันเดือนปีที่ออกหนังสือ GMP (Issue Date)<font color="red">*</font> :
                 </td>
                 <td>
-                    @*<label>{{LIST_GMP.CER.DOCUMENT_DATE}}</label>*@
-                    <label>{{LIST_GMP.STR_DOCUMENT_DATE}}</label>
+                    {{LIST_GMP.STR_DOCUMENT_DATE}}
                 </td>
             </tr>
             <tr>
@@ -99,8 +92,8 @@ End Code
                     วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
                 </td>
                 <td>
-                    @*<label>{{LIST_GMP.CER.EXP_DOCUMENT_DATE}}</label>*@
-                    <label>{{LIST_GMP.STR_EXP_DOCUMENT_DATE}}</label>
+                   
+                    {{LIST_GMP.STR_EXP_DOCUMENT_DATE}}
                 </td>
             </tr>
             <tr>
@@ -118,7 +111,7 @@ End Code
                 </td>
                 <td rowspan="2" ;">
                     @*<input class="form-control inline" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME" style="font-family:'Taviraj';font-size:20px;height:100px;" type="text" />*@
-                    <label>{{LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME}}</label>
+                    {{LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME}}
 
                 </td>
             </tr>
