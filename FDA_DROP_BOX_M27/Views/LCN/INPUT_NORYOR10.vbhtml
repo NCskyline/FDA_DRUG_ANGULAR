@@ -12,7 +12,7 @@ End Code
             <td style="width:35%"></td>
             <td style="width:35%"></td>
             <td style="width:5%;text-align:right">เลขที่:</td>
-            <td style=" width:25%;text-align:center"></td>
+            <td style=" width:25%;text-align:center"><label>{{LCN_LIST.RCVNO_DISPLAY}}</label></td>
         </tr>
     </table>
     <table style="width:100%">
@@ -20,7 +20,7 @@ End Code
             <td style="width:35%"></td>
             <td style="width:35%"></td>
             <td style="width:5%;text-align:right">วันที่:</td>
-            <td style=" width:25%;text-align:center"></td>
+            <td style=" width:25%;text-align:center"><label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label></td>
         </tr>
     </table>
     <table style="width:100%">
@@ -178,13 +178,13 @@ End Code
         <tr>
             <td>ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ</td>
         <tr>
-            <td>&nbsp;&nbsp;<input type="checkbox" /> หลักฐานประกอบคำขอใบแทนใบอนุญาต</td>
+            <td>&nbsp;&nbsp;<input type="radio" value="1" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอใบแทนใบอนุญาต</td>
         <tr>
             <td>&nbsp;&nbsp;&nbsp;&nbsp; (๑) รูปถ่ายของผู้ดำเนินกิจการ ขนาด ๓ x ๔ เซนติเมตร จำนวน ๒ รูป</td>
         <tr>
             <td>&nbsp;&nbsp;&nbsp;&nbsp; (๒) ใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร ถ้ามี</td>
         <tr>
-            <td>&nbsp;&nbsp;<input type="checkbox" /> หลักฐานประกอบคำขอย้ายสถานที่</td>
+            <td>&nbsp;&nbsp;<input type="radio" value="1" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอย้ายสถานที่</td>
         <tr>
             <td>&nbsp;&nbsp;&nbsp;&nbsp; (๑) ใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรหรือใบแทน</td>
         <tr>
