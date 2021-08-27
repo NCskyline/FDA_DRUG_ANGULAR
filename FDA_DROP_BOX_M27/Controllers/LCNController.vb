@@ -166,6 +166,20 @@ Namespace Controllers
         Function INPUT_YORSOR3_20_TAN() As ActionResult
             Return View()
         End Function
+
+        Function INPUT_PDF_DRUG_KORYOR15() As ActionResult
+            Return View()
+        End Function
+
+        Function INPUT_DRUG_PORYOR9() As ActionResult
+            Return View()
+        End Function
+        Function INPUT_DRUG_NORYOR9() As ActionResult
+            Return View()
+        End Function
+        Function INPUT_DRUG_YORBOR13() As ActionResult
+            Return View()
+        End Function
     End Class
 
     Public Class LCN_CENTERController
