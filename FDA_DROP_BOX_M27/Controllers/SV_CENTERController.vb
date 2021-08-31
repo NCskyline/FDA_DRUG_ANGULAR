@@ -1721,6 +1721,27 @@ Namespace Controllers
             Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function
 
+        Function INSERT_LCN_SUBTITUTE(ByVal XML_SUB As String, ByVal _ProcessID As String) As JsonResult
+
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_LCN = jss.Deserialize(XML_SUB, GetType(MODEL_LCN))
+            Dim bao_tran As New BAO
+            Dim tr_id As Integer = 0
+
+            tr_id = bao_tran.insert_transection_new(_ProcessID, bb.session.CITIZEN_ID, bb.session.CITIZEN_ID_AUTHORIZE)
+            Dim dao As New DAO_DRUG.TB_DALCN_NCT_SUBSTITUTE
+
+            dao.fields = bb.DALCN_NCT_SUBSTITUTE
+            dao.fields.TR_ID = tr_id
+            dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
+            dao.fields.PROCESS_ID = _ProcessID
+
+            dao.insert()
+
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
+
 #End Region
 
 #Region "UPDATE_DATA"

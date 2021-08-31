@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LGT_DRUG" Class="Linq_DRUGDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=10.111.28.132;Initial Catalog=LGT_DRUG;Persist Security Info=True;User ID=fusion" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="LGT_DRUGConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=10.111.28.126;Initial Catalog=LGT_DRUG;Persist Security Info=True;User ID=fusion" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="LGT_DRUGConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.RECIVE" Member="RECIVEs">
     <Type Name="RECIVE">
       <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -6122,35 +6122,6 @@
       <Column Name="CREATEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.DALCN_NCT_SUBSTITUTE" Member="DALCN_NCT_SUBSTITUTEs">
-    <Type Name="DALCN_NCT_SUBSTITUTE">
-      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TR_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="FK_IDA" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="STATUS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CTZNO" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="REMARK" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="IDENTIFY" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="PROCESS_ID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="TEMPLATE_ID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="STAFF_RCV_IDENTIFY" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="PURPOSE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="PURPOSE_ID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="STAFF_SIGN_IDEN" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="rcvno" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="rcvdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="appdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="CONSIDER_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="rcv_group" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="rcv_symbol" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="WRITE_AT" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="WRITE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="CHK_TYPE1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="CHK_TYPE2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="CHK_TYPE3" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="FK_STAFF_OFFER_IDA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.TRANSACTION_UPLOAD" Member="TRANSACTION_UPLOADs">
     <Type Name="TRANSACTION_UPLOAD">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -6921,6 +6892,38 @@
       <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="GROUP_SYSTEM" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="STAFF_NAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DALCN_NCT_SUBSTITUTE" Member="DALCN_NCT_SUBSTITUTEs">
+    <Type Name="DALCN_NCT_SUBSTITUTE">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TR_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_IDA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STATUS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CTZNO" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="REMARK" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IDENTIFY" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PROCESS_ID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TEMPLATE_ID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="STAFF_RCV_IDENTIFY" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PURPOSE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PURPOSE_ID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="STAFF_SIGN_IDEN" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="rcvno" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="rcvdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="appdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CONSIDER_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="rcv_group" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="rcv_symbol" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WRITE_AT" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WRITE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CHK_TYPE1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CHK_TYPE2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CHK_TYPE3" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FK_STAFF_OFFER_IDA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OLD_LCT_IDA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NEW_LCT_IDA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REQUEST_TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
