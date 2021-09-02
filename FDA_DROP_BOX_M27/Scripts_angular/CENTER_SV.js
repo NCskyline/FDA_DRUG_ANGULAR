@@ -179,7 +179,7 @@
 
 
 
-    this.INSERT_CERT_GMP = function (aa,bb,ProcessID) {
+    this.INSERT_CERT_GMP = function (aa,bb,ProcessID,model) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/INSERT_CERT_GMP"),
@@ -187,8 +187,8 @@
             data: {
                 XML_CERT: JSON.stringify(aa),
                 XML_CHEM: JSON.stringify(bb),
-                _ProcessID: ProcessID
-                
+                _ProcessID: ProcessID,
+                model: JSON.stringify(model)
             }
         });
         return response;

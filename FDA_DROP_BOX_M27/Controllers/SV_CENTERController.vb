@@ -1184,77 +1184,65 @@ Namespace Controllers
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
         End Function
 
-        Public Function UPLOAD_PDF_V2(ByVal model As String) As String
+        Public Function UPLOAD_PDF_CERT(ByVal model As String, ByVal TR_ID As String, ByVal PROCESS_ID As String) As String
             Dim result As String = ""
             Try
-
-                'JArray jsonArray = JArray.Parse(jsonArrayString);
-                Dim TR_ID As String = ""
+                Dim TRID As String = ""
                 Dim MODEL_LIST As New MODEL_FILELIST
+
 
                 Dim jsonArray As JArray = JArray.Parse(model)
                 For Each parsedObject As JObject In jsonArray.Children(Of JObject)()
                     Dim filelist As New FILE_LIST
-                    Dim kkk As String = parsedObject("TR_ID")
+                    ''Dim kkk As String = parsedObject("TR_ID")
                     For Each parsedProperty As JProperty In parsedObject.Properties()
                         Dim propertyName As String = parsedProperty.Name
-                        If propertyName = "TR_ID" Then
-                            TR_ID = CStr(parsedProperty.Value)
-                            filelist.TR_ID = CStr(parsedProperty.Value)
-                        ElseIf propertyName = "FILENAME" Then
+                        If propertyName = "FILENAME" Then
                             filelist.FILENAME = CStr(parsedProperty.Value)
-                        ElseIf propertyName = "DES" Then
-                            filelist.DES = CStr(parsedProperty.Value)
-                        ElseIf propertyName = "PATH" Then
-                            filelist.PATH = CStr(parsedProperty.Value)
-                        ElseIf propertyName = "FLAG" Then
-                            filelist.FLAG = CStr(parsedProperty.Value)
-                        ElseIf propertyName = "PIORITY" Then
-                            filelist.PIORITY = CStr(parsedProperty.Value)
-                        ElseIf propertyName = "PROCESS_NAME" Then
-                            filelist.PROCESS_NAME = CStr(parsedProperty.Value)
+                        ElseIf propertyName = "FILE_DATA" Then
+                            filelist.FILE_DATA = CStr(parsedProperty.Value)
                         End If
                     Next
                     MODEL_LIST.FILE_LISTs.Add(filelist)
                 Next
 
+                Dim filename As String = ""
+                Dim PATHs As String = ""
+                Dim path_file As String = ""
+                Dim NAME_REAL As String = ""
+                Dim DD As Integer = 1
+                Dim Count As Integer = 1
+                Dim path As String = "F:\path\DRUG\upload\" ''_PATH_DEFAULT & "\upload\"
+                Directory.CreateDirectory(path) 'สร้าง PATH รอ
+                Dim i As Integer = 0
+                For Each f As FILE_LIST In MODEL_LIST.FILE_LISTs
 
+                    Dim dao As New DAO_DRUG.ClsDBFILE_ATTACH
+                    dao.GetDataby_TR_ID_And_Process(TR_ID, PROCESS_ID)
+                    If dao.Details.Count <> 0 Then
+                        DD = dao.Details.Count + 1
+                    End If
+                    Dim filepath As String = f.PATH
+                    NAME_REAL = f.FILENAME
+                    Dim Type As String = IO.Path.GetExtension(f.FILENAME).ToString()
+                    filename = "DA-" & PROCESS_ID & "-" & Date.Now.Year & "-" & TR_ID & "-" & DD & Type
+                    path_file = path & filename
 
-                'Dim dao_m As New DAO.TB_S_BOX
-                'dao_m.GETDATA_BY_TR_ID(TR_ID)
-                'Dim version As String = dao_m.fields.VERSION
-                'Dim path As String = _PATH_BOX & "\" & TR_ID & "\" & version
-                'Directory.CreateDirectory(path) 'สร้าง PATH รอ
-                'Dim i As Integer = 0
-                'For Each f As FILE_LIST In MODEL_LIST.FILE_LISTs
-                '    Dim filepath As String = f.PATH
+                    Dim postedFile As HttpPostedFileBase = Request.Files(0)
+                    postedFile.SaveAs(path_file)
 
-                '    Dim dao_f As New DAO.TB_FILE_BOX
-                '    With dao_f.fields
-                '        .CREATE_DATE = Date.Now
-                '        .TITEL = f.DES
-                '        .TR_ID = TR_ID
-                '        .PRIORITY = f.PIORITY
-                '        .REMARK = ""
-                '        .REF_TR_ID = ""
-                '    End With
-                '    dao_f.insert()
-                '    If filepath = "" Then
+                    Dim dao_f As New DAO_DRUG.ClsDBFILE_ATTACH
+                    With dao_f.fields
+                        .NAME_FAKE = filename
+                        .NAME_REAL = NAME_REAL
+                        .TYPE = DD
+                        .TRANSACTION_ID = TR_ID
+                        .DESCRIPTION = ""
+                        .PROCESS_ID = PROCESS_ID
+                    End With
+                    dao_f.insert()
 
-                '    Else
-                '        If HAVE_FILE(filepath) = True Then 'กรณีเจอไฟล์
-                '            Dim output_file As String = path & "\" & dao_f.fields.IDA & ".pdf"
-                '            COPY_FILE(filepath, output_file)
-                '            dao_f.fields.FILENAME = f.FILENAME
-                '            dao_f.fields.PATH_FILE = output_file
-                '            dao_f.fields.REF_TR_ID = filepath
-                '            dao_f.fields.REMARK = f.PROCESS_NAME
-                '            dao_f.update()
-                '        Else
-
-                '        End If
-                '    End If
-                'Next
+                Next
                 result = "success"
             Catch ex As Exception
                 result = "ERR"
@@ -1572,7 +1560,7 @@ Namespace Controllers
 
         '    Return Json(msg_r, JsonRequestBehavior.AllowGet)
         'End Function
-        Function INSERT_CERT_GMP(ByVal XML_CERT As String, ByVal XML_CHEM As String, ByVal _ProcessID As String) As JsonResult
+        Function INSERT_CERT_GMP(ByVal XML_CERT As String, ByVal XML_CHEM As String, ByVal _ProcessID As String, ByVal model As String) As JsonResult
             Dim jss As New JavaScriptSerializer
             Dim bb As MODEL_CER_GMP = jss.Deserialize(XML_CERT, GetType(MODEL_CER_GMP))
 
@@ -1586,7 +1574,7 @@ Namespace Controllers
             Dim dao As New DAO_DRUG.TB_CER
 
             dao.fields = bb.CER
-
+            dao.fields.PROCESS_ID = _ProcessID
 
             dao.insert()
 
@@ -1633,6 +1621,8 @@ Namespace Controllers
                 dao_chem1.insert()
                 i += 1
             Next
+
+            UPLOAD_PDF_CERT(model, tr_id, _ProcessID)
 
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
         End Function

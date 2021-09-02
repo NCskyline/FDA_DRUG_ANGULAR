@@ -70,4 +70,5 @@ Public Class FILE_LIST
     Public PATH As String
     Public FLAG As String
     Public PROCESS_NAME As String
+    Public size As Integer
 End Class

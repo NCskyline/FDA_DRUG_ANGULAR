@@ -98,6 +98,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         Set_PREVIEW.then(function (datas) {
             
             $scope.LIST_GMP = datas.data;
+            $scope.LIST_GMP.session = sessionStorage;
            
             $scope.LIST_GMP.CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_GMP.CER.DOCUMENT_DATE)));
             $scope.LIST_GMP.CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_GMP.CER.EXP_DOCUMENT_DATE)));
@@ -264,8 +265,8 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
             }
         }
       
-        if (cEmpty == 0) {
-            var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP, $scope.GMP_CHEM, PROCESS, sessionStorage);
+        if (cEmpty == 0) {           
+            var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP, $scope.GMP_CHEM, PROCESS, $scope.DOC_LIST.FILE_LISTs);
                 Getdata.then(function (datas) {
                     Swal.fire({
                         title: 'SUCCESS',
@@ -361,6 +362,30 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
             FLAG: ''
         };
         $scope.DOC_LIST.FILE_LISTs.push(obj);
+    };
+
+    $scope.selectFileforUpload = function (datas, file) {
+
+        if (file.length == 0) {
+            datas.FILE_DATA = '';
+            datas.FILENAME = '';
+        }
+        else {
+            if (file[0].type == 'application/pdf') {
+                var b = file[0];
+                datas.FILENAME = b.name;
+                datas.FILE_DATA = b;
+            }
+            else {
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'กรุณา UPLOAD FILE',
+                    icon: 'error'
+                });
+                datas.FILE_DATA = '';
+                datas.FILENAME = '';
+            }
+        }
     };
 
     $scope.deleteRow = function (datas, i) {
