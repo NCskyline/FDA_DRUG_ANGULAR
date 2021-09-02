@@ -217,21 +217,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="cc in DATA_LCT | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                                <tr ng-repeat="cc in DATA_LCT">
                                     <td>{{cc.thanameplace}}</td>
                                     <td>{{cc.fulladdr}}</td>
                                 </tr>
                             </tbody>
                         </table>
                         <hr />
-                        <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
-                                        ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
-                                        boundary-link-numbers="true" rotate="false" max-size="maxSize">
-                        </uib-pagination>
-                        @*<div align="right">
-                            <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
-                            <button type="button" class="btn btn-sm" ng-disabled="currentPage >= DATA_LCT.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
-                        </div>*@
                     </div>
                 </div>
             </div>
@@ -267,7 +259,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="datas in DATA_KEEP | filter : filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                            <tr ng-repeat="datas in DATA_KEEP">
 
                                 <td>{{datas.thanameplace}}</td>
                                 <td>{{datas.fulladdr}}</td>
@@ -280,15 +272,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <hr />
-                    <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
-                                    ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
-                                    boundary-link-numbers="true" rotate="false" max-size="maxSize">
-                    </uib-pagination>
-                    <div align="right">
-                        <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
-                        <button type="button" class="btn btn-sm" ng-disabled="currentPage >= DATA_KEEP.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
-                    </div>
+                    <hr />                 
                 </div>
             </div>
         </div>
@@ -317,7 +301,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="cc in DATA_BSN | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                            <tr ng-repeat="cc in DATA_BSN">
                                 <td>{{cc.BSN_THAIFULLNAME}}</td>
                                 <td>{{cc.fulladdr}}</td>
                                 <td>
@@ -336,11 +320,6 @@
                         </tbody>
                     </table>
                     <hr />
-                    <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
-                                    ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
-                                    boundary-link-numbers="true" rotate="false" max-size="maxSize">
-                    </uib-pagination>
-
                 </div>
             </div>
         </div>
@@ -368,7 +347,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="cc in DATA_LCNS | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                            <tr ng-repeat="cc in DATA_LCNS">
                                 <td>{{cc.identify}}</td>
                                 <td>{{cc.thanm}}</td>
                                 <td>
@@ -382,11 +361,6 @@
                         </tbody>
                     </table>
                     <hr />
-                    <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
-                                    ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
-                                    boundary-link-numbers="true" rotate="false" max-size="maxSize">
-                    </uib-pagination>
-
                 </div>
             </div>
         </div>
@@ -415,7 +389,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="cc in DATA_PHR | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                            <tr ng-repeat="cc in DATA_PHR">
                                 <td>{{cc.PHR_CTZNO}}</td>
                                 <td>{{cc.PHR_FULLNAME}}</td>
                                 <td>{{cc.PHR_TEXT_WORK_TIME}}</td>
@@ -431,16 +405,12 @@
                         </tbody>
                     </table>
                     <hr />
-                    <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
-                                    ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
-                                    boundary-link-numbers="true" rotate="false" max-size="maxSize">
-                    </uib-pagination>
-
                 </div>
             </div>
         </div>
         <br />
 
     </div>
+    <div>
     </div>
 </div>
