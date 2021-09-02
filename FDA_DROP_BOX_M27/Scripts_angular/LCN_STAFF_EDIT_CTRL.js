@@ -104,6 +104,44 @@
     };
 
     
+    $scope.getdetails = function (IDA) {
+
+        var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
+        Data_location.then(function (datas) {
+            $scope.LIST_LABEL = datas.data;
+            $scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr;
+        }, function () { });
+
+    };
+
+    $scope.Getdetails_Location = function (IDA) {
+        var data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
+        data_location.then(function (datas) {
+            $scope.LIST_EDIT_LCN = datas.data;
+            $scope.LIST_EDIT_LCN.LOCATION_SELECT = IDA;
+            $scope.LIST_EDIT_LCN.LOCATION_TYPE = '2';
+            $scope.LIST_EDIT_LCN.thanameplace = datas.data[0].thanameplace;
+            $scope.LIST_EDIT_LCN.thabuilding = datas.data[0].thabuilding;
+            $scope.LIST_EDIT_LCN.thafloor = datas.data[0].thafloor;
+            $scope.LIST_EDIT_LCN.tharoom = datas.data[0].tharoom;
+            $scope.LIST_EDIT_LCN.engnameplace = datas.data[0].engnameplace;
+            $scope.LIST_EDIT_LCN.HOUSENO = datas.data[0].HOUSENO;
+            $scope.LIST_EDIT_LCN.thaaddr = datas.data[0].thaaddr;
+            $scope.LIST_EDIT_LCN.thamu = datas.data[0].thamu;
+            $scope.LIST_EDIT_LCN.thasoi = datas.data[0].thasoi;
+            $scope.LIST_EDIT_LCN.tharoad = datas.data[0].tharoad;
+            $scope.LIST_EDIT_LCN.zipcode = datas.data[0].zipcode;
+            $scope.LIST_EDIT_LCN.tel = datas.data[0].tel;
+            $scope.LIST_EDIT_LCN.Mobile = datas.data[0].Mobile;
+            $scope.LIST_EDIT_LCN.fax = datas.data[0].fax;
+            $scope.LIST_EDIT_LCN.chngwtcd = datas.data[0].chngwtcd;
+            $scope.LIST_EDIT_LCN.amphrcd = datas.data[0].amphrcd;
+            $scope.LIST_EDIT_LCN.thmblcd = datas.data[0].thmblcd;
+            $scope.LIST_EDIT_LCN.latitude = datas.data[0].latitude;
+            $scope.LIST_EDIT_LCN.longitude = datas.data[0].longitude;
+
+        }, function () { });
+    };
 
 
 });
