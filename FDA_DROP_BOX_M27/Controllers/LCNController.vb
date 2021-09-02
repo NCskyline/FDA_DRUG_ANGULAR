@@ -77,30 +77,7 @@ Namespace Controllers
         Function INPUT_PORDOJ_3_4_1_Tan() As ActionResult
             Return View()
         End Function
-        Function FRM_STAFF_LCN_SEARCH() As ActionResult
-            Return View()
-        End Function
-        Function FRM_LCN_STAFF_LCN_INFORMATION() As ActionResult
-            Return View()
-        End Function
-        Function FRM_STAFF_LCN_ADD_LOCATION() As ActionResult
-            Return View()
-        End Function
-        Function FRM_STAFF_LCN_ADD_LOCATION_KEEP() As ActionResult
-            Return View()
-        End Function
-        Function FRM_STAFF_LCN_SELECT_LOCATION_NEW() As ActionResult
-            Return View()
-        End Function
-        Function FRM_STAFF_LCN_CHANGE_BSN() As ActionResult
-            Return View()
-        End Function
-        Function FRM_STAFF_LCN_CHANGE_LCNSNM() As ActionResult
-            Return View()
-        End Function
-        Function FRM_STAFF_LCN_PHR_INSERT() As ActionResult
-            Return View()
-        End Function
+
         Function FRM_LCN_DRUG_SEARCH() As ActionResult
             Return View()
         End Function
@@ -201,7 +178,7 @@ Namespace Controllers
 
 #Region "STORE"
         Function GET_FULL_MODEL_EDIT() As JsonResult
-            Dim model As New MODEL_EDIT_LCN
+            Dim model As New MODEL_STAFF_EDIT_LCN
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
         Function SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(ByVal IDA As String)

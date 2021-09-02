@@ -65,6 +65,31 @@
         });
         return response;
     };
+
+    
+    this.GET_LCN_NO_STAFF_EDIT = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_LCN_NO_STAFF_EDIT"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
+    
+    this.SET_LCN_NO_STAFF_EDIT = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SET_LCN_NO_STAFF_EDIT"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
+
+
     this.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY = function (identify,lcnsid) {
         var response = $http({
             method: "post",
@@ -278,6 +303,61 @@
         return response;
     };
 
+    
+    this.GET_LOCATION_STAFF_EDIT = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_LOCATION_STAFF_EDIT"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
+    
+    this.SP_MASTER_DALCN_DETAIL_LOCATION_KEEP_BY_IDA = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_MASTER_DALCN_DETAIL_LOCATION_KEEP_BY_IDA"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
+    
+    this.SP_LOCATION_BSN_BY_LCN_IDA = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_LOCATION_BSN_BY_LCN_IDA"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
+    
+    this.GET_LCNSNM_STAFF_EDIT = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_LCNSNM_STAFF_EDIT"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
+    
+    this.SP_DALCN_PHR_BY_FK_IDA_2 = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_DALCN_PHR_BY_FK_IDA_2"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
 
     this.GET_PREVIEW_CERT = function (IDA) {
         var response = $http({
@@ -373,6 +453,18 @@
         });
         return response;
     };
+
+    this.bind_ddl_lcn_stat = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/bind_ddl_lcn_stat")
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+
 
     this.SP_dactg = function () {
         var response = $http({
