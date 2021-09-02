@@ -44,55 +44,30 @@
 
         var dataLo = CENTER_SV.GET_LOCATION_STAFF_EDIT(LCN_IDA);
         dataLo.then(function (datas) {
-            $scope.DATA_LCT = datas.data;
-            $scope.currentPage = 1;
-            $scope.entryLimit = 20;
-            $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
-            $scope.loading_profile = false;
-            $scope.product_show = true;
+            $scope.DATA_LCT = datas.data;  
         }, function () { });
 
         
         var datakeep = CENTER_SV.SP_MASTER_DALCN_DETAIL_LOCATION_KEEP_BY_IDA(LCN_IDA);
         datakeep.then(function (datas) {
-            $scope.DATA_KEEP = datas.data;
-            $scope.currentPage = 1;
-            $scope.entryLimit = 20;
-            $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
-            $scope.loading_profile = false;
-            $scope.product_show = true;
+            $scope.DATA_KEEP = datas.data;          
         }, function () { });
         
 
         var databsn = CENTER_SV.SP_LOCATION_BSN_BY_LCN_IDA(LCN_IDA);
         databsn.then(function (datas) {
             $scope.DATA_BSN = datas.data;
-            $scope.currentPage = 1;
-            $scope.entryLimit = 20;
-            $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
-            $scope.loading_profile = false;
-            $scope.product_show = true;
         }, function () { });
 
         
         var databsn = CENTER_SV.GET_LCNSNM_STAFF_EDIT(LCN_IDA);
         databsn.then(function (datas) {
             $scope.DATA_LCNS = datas.data;
-            $scope.currentPage = 1;
-            $scope.entryLimit = 20;
-            $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
-            $scope.loading_profile = false;
-            $scope.product_show = true;
         }, function () { });
 
         var databsn = CENTER_SV.SP_DALCN_PHR_BY_FK_IDA_2(LCN_IDA);
         databsn.then(function (datas) {
             $scope.DATA_PHR = datas.data;
-            $scope.currentPage = 1;
-            $scope.entryLimit = 20;
-            $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
-            $scope.loading_profile = false;
-            $scope.product_show = true;
         }, function () { });
 
         //var data_LCN_SHOW = CENTER_SV.SET_LCN_NO_STAFF_EDIT(LCN_IDA);
