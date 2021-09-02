@@ -107,6 +107,9 @@ Namespace Controllers
 
         End Function
 
+
+
+
         Function SP_DH15RQT_BY_IDA(ByVal LCN_IDA As Integer, ByVal PROCESS_ID As Integer)
             Dim dt As New DataTable
             Dim bao As New BAO
@@ -124,6 +127,15 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
         End Function
+        Function bind_ddl_lcn_stat()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_MASTER_dacscd()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+        End Function
+
+
         '
         Function SP_dactg()
             Dim dt As New DataTable
@@ -586,6 +598,203 @@ Namespace Controllers
 
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
+        Function GET_LOCATION_STAFF_EDIT(ByVal IDA As String) As JsonResult
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(IDA)
+            dt = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(dao.fields.FK_IDA)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
+        Function SP_MASTER_DALCN_DETAIL_LOCATION_KEEP_BY_IDA(ByVal IDA As String) As JsonResult
+            Dim dt As New DataTable
+            Dim bao As New BAO
+
+            dt = bao.SP_MASTER_DALCN_DETAIL_LOCATION_KEEP_BY_IDA(IDA)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
+        Function SP_LOCATION_BSN_BY_LCN_IDA(ByVal IDA As String) As JsonResult
+            Dim dt As New DataTable
+            Dim bao As New BAO
+
+            dt = bao.SP_LOCATION_BSN_BY_LCN_IDA(IDA)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
+        Function GET_LCNSNM_STAFF_EDIT(ByVal IDA As String) As JsonResult
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(IDA)
+            dt = bao.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFYV2(dao.fields.CITIZEN_ID_AUTHORIZE, "0")
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
+        Function SP_DALCN_PHR_BY_FK_IDA_2(ByVal IDA As String) As JsonResult
+            Dim dt As New DataTable
+            Dim bao As New BAO
+
+            dt = bao.SP_DALCN_PHR_BY_FK_IDA_2(IDA)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
+        Function GET_LCN_NO_STAFF_EDIT(ByVal IDA As Integer) As JsonResult
+            Dim model As New MODEL_STAFF_EDIT_LCN
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(IDA)
+            Try
+                model.dalcn = dao.fields
+            Catch ex As Exception
+
+            End Try
+            Dim lcnno_format As String = ""
+            For Each dao.fields In dao.datas
+                Dim lcnno_auto As Integer = 0
+                Try
+                    lcnno_auto = dao.fields.lcnno
+                Catch ex As Exception
+
+                End Try
+                Try
+                    If Len(lcnno_auto) > 0 Then
+
+                        If Right(Left(lcnno_auto, 3), 1) = "5" Then
+                            lcnno_format = "จ. " & CStr(CInt(Right(lcnno_auto, 4))) & "/25" & Left(lcnno_auto, 2)
+                        Else
+                            lcnno_format = dao.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                        End If
+                        'lcnno_format = dao.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                    End If
+                Catch ex As Exception
+
+                End Try
+                Dim dao_dalcntype As New DAO_DRUG.ClsDBdalcntype
+                dao_dalcntype.GetDataby_lcntpcd(dao.fields.lcntpcd)
+                Try
+                    model.CITIZEN_ID_AUTHORIZE = dao.fields.CITIZEN_ID_AUTHORIZE
+                Catch ex As Exception
+
+                End Try
+
+                Dim dt_name As New DataTable
+                Dim bao As New BAO
+                dt_name = bao.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(dao.fields.CITIZEN_ID_AUTHORIZE, 0)
+                ''Dim model As New MODEL_LCN
+
+                Dim dt_addr As New DataTable
+
+                dt_addr = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(dao.fields.FK_IDA)
+                With model
+                    .LCNNO_SHOW = lcnno_format
+                    Try
+                        .TYPE_IMPORT = dao_dalcntype.fields.lcntpnm
+                    Catch ex As Exception
+
+                    End Try
+
+                    For Each dr As DataRow In dt_name.Rows
+                        .LCNNAME = dr("thanm")
+                    Next
+
+                    For Each dr As DataRow In dt_addr.Rows
+                        Try
+                            .thanameplace = dr("thanameplace")
+                        Catch ex As Exception
+
+                        End Try
+                        Try
+                            .FULL_ADDR = dr("fulladdr2")
+                        Catch ex As Exception
+
+                        End Try
+                        Try
+                            .TEL = dr("tel1")
+                        Catch ex As Exception
+
+                        End Try
+                        Try
+                            .FAX = dr("fax")
+                        Catch ex As Exception
+
+                        End Try
+
+                    Next
+
+
+                End With
+
+            Next
+            Try
+                Dim dao_bsn As New DAO_DRUG.TB_DALCN_LOCATION_BSN
+                dao_bsn.GetDataby_LCN_IDA(IDA)
+                model.BSN_THAIFULLNAME = dao_bsn.fields.BSN_THAIFULLNAME
+            Catch ex As Exception
+
+            End Try
+            Dim ccc As String = ""
+            Try
+                ccc = dao.fields.cnccscd
+                'dao.fields.cnccscd = Nothing
+                'lbl_statname.Text = dao.fields.
+            Catch ex As Exception
+                ccc = ""
+            End Try
+            Try
+                model.opentime = dao.fields.opentime
+            Catch ex As Exception
+
+            End Try
+            If ccc = "" Then
+                model.cncnm = "คงอยู่"
+            Else
+                Try
+                    Dim dao_cnc As New DAO_DRUG.ClsDBdacscd
+                    dao_cnc.GetData_by_cd(ccc)
+                    model.cncnm = dao_cnc.fields.csnm
+                Catch ex As Exception
+
+                End Try
+
+            End If
+
+            Try
+                model.date_cancel = get_short_month(dao.fields.cncdate)
+            Catch ex As Exception
+
+            End Try
+            Try
+                model.first_appdate = get_short_month(dao.fields.frtappdate)
+            Catch ex As Exception
+
+            End Try
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+        Function SET_LCN_NO_STAFF_EDIT(ByVal IDA As Integer) As JsonResult
+            Dim model As New MODEL_STAFF_EDIT_LCN
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(IDA)
+            Try
+                model.dalcn = dao.fields
+            Catch ex As Exception
+
+            End Try
+
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
         Function GET_DETAIL_CHEM_RQT_STAFF(ByVal IDA_CHEM_RQT As Integer) As JsonResult
             Dim model As New MODEL_CHEMICAL
             Dim dao As New DAO_DRUG.TB_CHEMICAL_REQUEST
@@ -797,7 +1006,7 @@ Namespace Controllers
         End Function
 
         Function GET_LCN_EDIT(ByVal IDA As Integer) As JsonResult
-            Dim model As New MODEL_EDIT_LCN
+            Dim model As New MODEL_STAFF_EDIT_LCN
             Dim bao As New BAO
             Dim dao As New DAO_DRUG.ClsDBdalcn
             dao.GetDataby_IDA(IDA)
@@ -1126,7 +1335,7 @@ Namespace Controllers
 
         Function SETMODEL_EDIT_LCN() As JsonResult
 
-            Dim MODEL As New MODEL_EDIT_LCN
+            Dim MODEL As New MODEL_STAFF_EDIT_LCN
 
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function

@@ -176,7 +176,7 @@
     <Compile Include="CLASS\MODEL\MODEL_DL.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DR.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DS.vb" />
-    <Compile Include="CLASS\MODEL\MODEL_EDIT_LCN.vb" />
+    <Compile Include="CLASS\MODEL\MODEL_STAFF_EDIT_LCN.vb" />
     <Compile Include="CLASS\MODEL\MODEL_LCN.vb" />
     <Compile Include="CLASS\MODEL\MODEL_RESULT.vb" />
     <Compile Include="CLASS\MODEL\MODEL_BOX.vb" />
@@ -189,6 +189,7 @@
     <Compile Include="Controllers\DRController.vb" />
     <Compile Include="Controllers\DR_EDIT_REQUESTController.vb" />
     <Compile Include="Controllers\LCNController.vb" />
+    <Compile Include="Controllers\LCN_STAFF_EDITController.vb" />
     <Compile Include="Controllers\OtherController.vb" />
     <Compile Include="Controllers\SV_CENTERController.vb" />
     <Compile Include="Global.asax.vb">
@@ -392,6 +393,7 @@
     <Content Include="Scripts_angular\AUTHEN_STAFF_CTRL.js" />
     <Content Include="Scripts_angular\LCN_CTRL.js" />
     <Content Include="Scripts_angular\LCN_EDIT_CTRL.js" />
+    <Content Include="Scripts_angular\LCN_STAFF_EDIT_CTRL.js" />
     <Content Include="Web References\WS_FLATTEN\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
@@ -472,13 +474,13 @@
     <Content Include="Views\DR\INPUT_PRODUCCER_IN.vbhtml" />
     <Content Include="Views\DR\INPUT_SUB_DRUG_ANIMAL.vbhtml" />
     <Content Include="Views\LCN\FRM_LCN_DRUG_SEARCH.vbhtml" />
-    <Content Include="Views\LCN\FRM_LCN_STAFF_LCN_INFORMATION.vbhtml" />
-    <Content Include="Views\LCN\FRM_STAFF_LCN_ADD_LOCATION.vbhtml" />
-    <Content Include="Views\LCN\FRM_STAFF_LCN_ADD_LOCATION_KEEP.vbhtml" />
-    <Content Include="Views\LCN\FRM_STAFF_LCN_CHANGE_BSN.vbhtml" />
-    <Content Include="Views\LCN\FRM_STAFF_LCN_CHANGE_LCNSNM.vbhtml" />
-    <Content Include="Views\LCN\FRM_STAFF_LCN_PHR_INSERT.vbhtml" />
-    <Content Include="Views\LCN\FRM_STAFF_LCN_SEARCH.vbhtml" />
+    <Content Include="Views\LCN_STAFF_EDIT\FRM_LCN_STAFF_LCN_INFORMATION.vbhtml" />
+    <Content Include="Views\LCN_STAFF_EDIT\FRM_STAFF_LCN_ADD_LOCATION.vbhtml" />
+    <Content Include="Views\LCN_STAFF_EDIT\FRM_STAFF_LCN_ADD_LOCATION_KEEP.vbhtml" />
+    <Content Include="Views\LCN_STAFF_EDIT\FRM_STAFF_LCN_CHANGE_BSN.vbhtml" />
+    <Content Include="Views\LCN_STAFF_EDIT\FRM_STAFF_LCN_CHANGE_LCNSNM.vbhtml" />
+    <Content Include="Views\LCN_STAFF_EDIT\FRM_STAFF_LCN_PHR_INSERT.vbhtml" />
+    <Content Include="Views\LCN_STAFF_EDIT\FRM_STAFF_LCN_SEARCH.vbhtml" />
     <Content Include="Views\LCN\NO_USE\FRM_STAFF_LCN_SELECT_LOCATION_NEW.vbhtml" />
     <Content Include="Views\LCN\INPUT_BOJOD_3_4_1.vbhtml" />
     <Content Include="Views\LCN\NO_USE\INPUT_KHOPO_WO_JO_3_2.vbhtml" />

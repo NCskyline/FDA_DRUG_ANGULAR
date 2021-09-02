@@ -23,6 +23,35 @@ Public Class BAO
         dt.TableName = "SP_SYSPREFIX_PERSON"
         Return dt
     End Function
+    Public Function SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFYV2(ByVal identify As String, ByVal LCNSID As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFYV2 @lcnsid='" & LCNSID & "' ,@identify= '" & identify & "'"
+        ' Dim sql As String = "exec SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY @lcnsid=" & "0" & " ,@identify=" & "0"
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_CPN).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+        dt.TableName = "SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY"
+        Return dt
+    End Function
+    Public Function SP_DALCN_PHR_BY_FK_IDA_2(ByVal IDA As Integer) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_DALCN_PHR_BY_FK_IDA_2 @IDA =  " & IDA
+        Dim dt As New DataTable
+        dt.TableName = "SP_DALCN_PHR_BY_FK_IDA_2"
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+
+        Catch ex As Exception
+
+        End Try
+
+        Return dt
+    End Function
+
     Public Function SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(ByVal identify As String, ByVal LCNSID As String) As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY @lcnsid='" & LCNSID & "' ,@identify= '" & identify & "'"
@@ -34,6 +63,21 @@ Public Class BAO
         Catch ex As Exception
 
         End Try
+        Return dt
+    End Function
+
+
+    Public Function SP_LOCATION_BSN_BY_LCN_IDA(ByVal IDA As Integer) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_LOCATION_BSN_BY_LCN_IDA @LCN_IDA=" & IDA
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+
+        Catch ex As Exception
+
+        End Try
+        dt.TableName = "SP_LOCATION_BSN_BY_LCN_IDA"
         Return dt
     End Function
     Function con_year(year) As String
@@ -337,6 +381,16 @@ Public Class BAO
         dt.TableName = "SP_MASTER_sysisocnt"
         Return dt
     End Function
+
+    Public Function SP_MASTER_dacscd() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "select * from dacscd"
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_MASTER_dacscd"
+        Return dt
+    End Function
+
     Public Function SP_SYSISOCNT() As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_SYSISOCNT"

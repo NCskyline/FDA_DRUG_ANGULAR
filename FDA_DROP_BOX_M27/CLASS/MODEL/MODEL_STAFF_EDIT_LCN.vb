@@ -1,4 +1,4 @@
-﻿Public Class MODEL_EDIT_LCN
+﻿Public Class MODEL_STAFF_EDIT_LCN
     Private _dalcn As New dalcn
     Public Property dalcn() As dalcn
         Get
@@ -53,6 +53,7 @@
     Public thanm As String
     Public BSN_THAIFULLNAME As String
     Public BSN_IDENTIFY As String
+    Public LCNNO_SHOW As String
     Public AGE As String
     Public BSN_FULL_ADDR As String
     Public BSN_TELEPHONE As String
@@ -80,6 +81,14 @@
     Public thmblcd As String
     Public latitude As String
     Public longitude As String
+    Public TYPE_IMPORT As String
+    Public LCNNAME As String
+    Public FULL_ADDR As String
+    Public CITIZEN_ID_AUTHORIZE As String
+    Public opentime As String
+    Public cncnm As String
+    Public date_cancel As String
+    Public first_appdate As String
 
 
 End Class
