@@ -359,7 +359,9 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
             FILENAME: '',
             FILE_DATA: '',
             PATH: '',
-            FLAG: ''
+            FLAG: '',
+            TYPE: '',
+            SIZE: 0
         };
         $scope.DOC_LIST.FILE_LISTs.push(obj);
     };
@@ -374,7 +376,8 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
             if (file[0].type == 'application/pdf') {
                 var b = file[0];
                 datas.FILENAME = b.name;
-                datas.FILE_DATA = b;
+                datas.SIZE = b.size;
+                datas.TYPE = b.type;
             }
             else {
                 Swal.fire({

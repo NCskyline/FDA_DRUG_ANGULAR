@@ -1354,6 +1354,8 @@ Namespace Controllers
             filelist.PIORITY = ""
             filelist.PATH = ""
             filelist.FLAG = ""
+            filelist.TYPE = ""
+            filelist.SIZE = 0
             MODEL.FILE_LISTs.Add(filelist)
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
@@ -1438,6 +1440,7 @@ Namespace Controllers
                     path_file = path & filename
 
                     Dim postedFile As HttpPostedFileBase = Request.Files(0)
+
                     postedFile.SaveAs(path_file)
 
                     Dim dao_f As New DAO_DRUG.ClsDBFILE_ATTACH
