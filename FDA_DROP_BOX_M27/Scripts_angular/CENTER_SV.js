@@ -267,6 +267,68 @@
         return response;
     };
 
+    this.INSERT_LCN_STAFF_EDIT_KEEP = function (KEEP_ID ,IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/INSERT_LCN_STAFF_EDIT_KEEP"),
+            dataType: "json",
+            data: {
+                KEEP_ID: KEEP_ID,
+                LCN_IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE
+            }
+        });
+        return response;
+    };
+
+    
+    this.INSERT_PHR = function (LIST_EDIT_LCN,IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/INSERT_PHR"),
+            dataType: "json",
+            data: {
+                XML_PHR: JSON.stringify(LIST_EDIT_LCN),
+                LCN_IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE
+            }
+        });
+        return response;
+    };
+    
+    this.UPDATE_PHR = function (PHR_IDA, LIST_EDIT_PHR, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/UPDATE_PHR"),
+            dataType: "json",
+            data: {
+                PHR_IDA: PHR_IDA,
+                XML_PHR: JSON.stringify(LIST_EDIT_PHR),
+                LCN_IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE
+            }
+        });
+        return response;
+    };
+
+
+
+    this.UPDATE_NAME_LCNS = function (LCN_IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/UPDATE_NAME_LCNS"),
+            dataType: "json",
+            data: {
+                LCN_IDA: LCN_IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE
+            }
+        });
+        return response;
+    };
     
     this.UPDATE_CHEM_RQT = function (LIST_GMP, IDA) {
         var response = $http({
@@ -276,6 +338,45 @@
             data: {
                 XML_CHEM: JSON.stringify(LIST_GMP),
                IDA:IDA
+            }
+        });
+        return response;
+    };
+
+    
+    this.GET_BSN_NEW = function (iden) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_BSN_NEW"),
+            dataType: "json",
+            data: {
+               
+                identify: iden
+            }
+        });
+        return response;
+    };
+    
+    this.GET_PHR_DATA_EDIT = function (PHR_IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_PHR_DATA_EDIT"),
+            dataType: "json",
+            data: {
+
+                PHR_IDA: PHR_IDA
+            }
+        });
+        return response;
+    };
+    this.GET_LCNSNM_NEW = function (iden) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_LCNSNM_NEW"),
+            dataType: "json",
+            data: {
+
+                identify: iden
             }
         });
         return response;
@@ -326,12 +427,12 @@
         return response;
     };
     
-    this.SP_LOCATION_BSN_BY_LCN_IDA = function (IDA) {
+    this.SP_LOCATION_BSN_BY_LCN_IDA = function (LCN_IDA) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/SP_LOCATION_BSN_BY_LCN_IDA"),
             params: {
-                IDA: IDA
+                IDA: LCN_IDA
             }
         });
         return response;
@@ -453,6 +554,28 @@
         });
         return response;
     };
+    
+    this.SP_PHR_JOB = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_PHR_JOB")
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+    
+    this.SP_MASTER_DAPHRCD = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_MASTER_DAPHRCD")
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
 
     this.bind_ddl_lcn_stat = function () {
         var response = $http({
@@ -507,6 +630,64 @@
         });
         return response;
     };
+
+    this.SP_SYSCHNGWT = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_SYSCHNGWT")
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+    
+    this.SP_SYSAMPHR = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_SYSAMPHR")
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+    
+    this.SP_SYSTHMBL = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_SYSTHMBL")
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+
+    this.SP_SYSAMPHR_BY_CHNGWTCD = function (CHNGWTCD) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_SYSAMPHR_BY_CHNGWTCD"),
+            params: {
+                CHNGWTCD: CHNGWTCD
+            }
+        });
+        return response;
+    };
+    
+    this.SP_SYSTHMBL_BY_CHNGWTCD_AND_AMPHRCD = function (CHNGWTCD, AMPHRCD) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_SYSTHMBL_BY_CHNGWTCD_AND_AMPHRCD"),
+            params: {
+                CHNGWTCD: CHNGWTCD,
+                AMPHRCD: AMPHRCD
+            }
+        });
+        return response;
+    };
+
+
     this.GET_dramltype = function () {
         var response = $http({
             method: "post",

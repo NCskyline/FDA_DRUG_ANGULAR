@@ -182,29 +182,12 @@
             <table width="100%">
                 <tr>
                     <td style="text-align:right;">
-                        <input type="button" value="เลือกสถานที่ตั้ง" class="btn btn-sm">
+                        <input type="button" value="เลือกสถานที่ตั้ง" class="btn btn-sm" ng-click="CHENGE_LCT()">
                     </td>
                 </tr>
             </table>
 
-            @*<table style="width:100%" border="1">
-                <tr style="background-color:#8CB340">
-                    <td style="width:15%">
-                        <span style="margin-left:5%">ชื่อสถานที่</span>
-                    </td>
-                    <td>
-                        <span style="margin-left:2%">ที่อยู่ตามทะเบียนราษฎร์</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span style="margin-left:5%"> text</span>
-                    </td>
-                    <td>
-                        <span style="margin-left:2%"> text</span>
-                    </td>
-                </tr>
-            </table>*@
+    
             <div class="row">
                 <div class="col-sm-12">
                     <div class="card" style=" border-top: 10px solid #277210;">
@@ -213,13 +196,19 @@
                                 <tr>
                                     <th>ชื่อสถานที่</th>
                                     <th>ที่อยู่ตามทะเบียนราษฎร์</th>
-                                    <th></th>
+                                   
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr ng-repeat="cc in DATA_LCT">
                                     <td>{{cc.thanameplace}}</td>
                                     <td>{{cc.fulladdr}}</td>
+                                    @*<td>
+                                        <span class="fa fa-eye"></span>
+                                        <a ng-click="SELECT_DH(cc)">
+                                            เลือก
+                                        </a>
+                                    </td>*@
                                 </tr>
                             </tbody>
                         </table>
@@ -239,8 +228,8 @@
             <table width="100%">
                 <tr>
                     <td style="text-align:right;">
-                        <input type="button" value="เลือกสถานที่เก็บ" class="btn btn-sm">
-                        <input type="button" value="เพิ่มสถานที่เก็บใหม่" class="btn btn-sm">
+                        <input type="button" value="เลือกสถานที่เก็บ" class="btn btn-sm" ng-click="CHENGE_KEEP()">
+                        @*<input type="button" value="เพิ่มสถานที่เก็บใหม่" class="btn btn-sm">*@
                     </td>
 
                 </tr>
@@ -284,7 +273,7 @@
         <table width="100%">
             <tr>
                 <td style="text-align:right;">
-                    <input type="button" value="เปลี่ยนผู้ดำเนินกิจการ" class="btn btn-sm">
+                    <input type="button" value="เปลี่ยนผู้ดำเนินกิจการ" class="btn btn-sm" ng-click="CHENGE_BSN()">
                 </td>
             </tr>
         </table>
@@ -304,15 +293,15 @@
                             <tr ng-repeat="cc in DATA_BSN">
                                 <td>{{cc.BSN_THAIFULLNAME}}</td>
                                 <td>{{cc.fulladdr}}</td>
-                                <td>
+                                <td style="font-size:18px">
                                     <span class="fa fa-eye"></span>
                                     <a ng-click="">
                                         อัพเดทข้อมูล
                                     </a>
                                 </td>
-                                <td>
+                                <td style="font-size:18px">
                                     <span class="fa fa-eye"></span>
-                                    <a ng-click="">
+                                    <a ng-click="SELECT_BSN_EDIT()">
                                         แก้ไขข้อมูลชื่อ-ที่อยู่เอง
                                     </a>
                                 </td>
@@ -330,7 +319,7 @@
         <table width="100%">
             <tr>
                 <td style="text-align:right;">
-                    <input type="button" value="เปลี่ยนผู้รับอนุญาต" class="btn btn-sm">
+                    <input type="button" value="เปลี่ยนผู้รับอนุญาต" class="btn btn-sm" ng-click="CHENGE_LCNSNM()">
                 </td>
             </tr>
         </table>
@@ -352,7 +341,7 @@
                                 <td>{{cc.thanm}}</td>
                                 <td>
                                     <span class="fa fa-eye"></span>
-                                    <a ng-click="">
+                                    <a ng-click="BTN_UPDATE_LCNSNM()">
                                         อัพเดทข้อมูล
                                     </a>
                                 </td>
@@ -370,7 +359,7 @@
         <table width="100%">
             <tr>
                 <td style="text-align:right;">
-                    <input type="button" value="เพิ่มผู้ที่มีหน้าที่ปฏิบัติ" class="btn btn-sm">
+                    <input type="button" value="เพิ่มผู้ที่มีหน้าที่ปฏิบัติ" class="btn btn-sm" ng-click="BTN_INSERT_PHR()">
                 </td>
             </tr>
         </table>
@@ -396,11 +385,16 @@
                                 <td>{{cc.functnm}}</td>
                                 <td>
                                     <span class="fa fa-eye"></span>
-                                    <a ng-click="">
-                                        อัพเดทข้อมูล
+                                    <a ng-click="BTN_CHOOSE_EDIT_PHR(cc)">
+                                        แก้ไข
                                     </a>
                                 </td>
-
+                                <td>
+                                    <span class="fa fa-eye"></span>
+                                    <a ng-click="">
+                                        ลบถาวร
+                                    </a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

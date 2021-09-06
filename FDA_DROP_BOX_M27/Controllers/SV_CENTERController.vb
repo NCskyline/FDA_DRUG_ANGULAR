@@ -98,6 +98,32 @@ Namespace Controllers
 
         End Function
 
+        Function SP_BSN_LOCATION_ADDRESS_BY_IDA_V2(ByVal IDA As String)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_BSN_LOCATION_ADDRESS_BY_IDA_V2(IDA)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
+        Function SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP(ByVal LOCATION_TYPE_CD As Integer, ByVal IDENTIFY As String)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2(LOCATION_TYPE_CD, IDENTIFY)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+        Function SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(ByVal LOCATION_ADDRESS_IDA As String) As JsonResult
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(LOCATION_ADDRESS_IDA)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
         Function SP_MASTER_CER_PK_BY_FK_IDA(ByVal IDA As String) As JsonResult
             Dim dt As New DataTable
             Dim bao As New BAO
@@ -127,6 +153,25 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
         End Function
+        '
+        Function SP_PHR_JOB()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_PHR_JOB()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
+        Function SP_MASTER_DAPHRCD()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_MASTER_DAPHRCD()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
         Function bind_ddl_lcn_stat()
             Dim dt As New DataTable
             Dim bao As New BAO
@@ -161,6 +206,45 @@ Namespace Controllers
             Dim clsds As New ClassDataset
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
+        End Function
+        Public Function SP_SYSCHNGWT()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_SYSCHNGWT()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+        End Function
+        '
+        Public Function SP_SYSAMPHR()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_SYSAMPHR()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+        End Function
+
+        Public Function SP_SYSTHMBL()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_SYSAMPHR()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+        End Function
+
+        Public Function SP_SYSAMPHR_BY_CHNGWTCD(ByVal CHNGWTCD As String)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_SYSAMPHR_BY_CHNGWTCD(CHNGWTCD)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+        End Function
+
+        Public Function SP_SYSTHMBL_BY_CHNGWTCD_AND_AMPHRCD(ByVal CHNGWTCD As String, ByVal AMPHRCD As String)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_SYSTHMBL_BY_CHNGWTCD_AND_AMPHRCD(CHNGWTCD, AMPHRCD)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
         End Function
 
         Function SP_SYSPREFIX()
@@ -280,7 +364,7 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
         End Function
 
-        Function SP_GET_DATA_LCN(ByVal CITIZIN As String, ByVal lcnno As String, ByVal PVNCD As Integer) As JsonResult
+        Function SP_GET_DATA_LCN(ByVal CITIZEN As String, ByVal lcnno As String, ByVal PVNCD As Integer) As JsonResult
 
 
             Dim dt As New DataTable
@@ -292,7 +376,7 @@ Namespace Controllers
             Dim str_where As String = ""
             Dim dt2 As New DataTable
 
-            If CITIZIN = "" And lcnno = "" Then
+            If CITIZEN = "" And lcnno = "" Then
                 'If pvncd = 10 Then
                 '    RadGrid1.DataSource = dt
                 'Else
@@ -300,8 +384,8 @@ Namespace Controllers
                 'End If
                 command &= str_where
             Else
-                If CITIZIN <> "" Then
-                    str_where = "where CITIZEN_ID_AUTHORIZE='" & CITIZIN & "'"
+                If CITIZEN <> "" Then
+                    str_where = "where CITIZEN_ID_AUTHORIZE='" & CITIZEN & "'"
                     If lcnno <> "" Then
                         If str_where <> "" Then
                             str_where &= " and lcnno_no like '%" & lcnno & "%'"
@@ -650,6 +734,83 @@ Namespace Controllers
 
         End Function
 
+        Function GET_PHR_DATA_EDIT(ByVal PHR_IDA As String) As JsonResult
+            Dim model As New MODEL_STAFF_EDIT_LCN
+            Dim dao As New DAO_DRUG.ClsDBDALCN_PHR
+            dao.GetDataby_IDA(PHR_IDA)
+
+            model.DALCN_PHR = dao.fields
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+        Function GET_BSN_NEW(ByVal identify As String) As JsonResult
+            Dim model As New MODEL_STAFF_EDIT_LCN
+            Dim CITIZEN_ID_AUTHORIZE As String = ""
+            Try
+                CITIZEN_ID_AUTHORIZE = identify
+            Catch ex As Exception
+
+            End Try
+
+            Dim ws2 As New WS_Taxno_TaxnoAuthorize.WebService1
+            Dim ws_taxno = ws2.getProfile_byidentify(CITIZEN_ID_AUTHORIZE)
+
+            Dim dao_syslcnsid As New DAO_CPN.clsDBsyslcnsid
+            dao_syslcnsid.GetDataby_identify(CITIZEN_ID_AUTHORIZE)
+            If dao_syslcnsid.fields.IDA = 0 Then
+                Response.Write("<script type='text/javascript'>alert('ไม่พบข้อมูล');</script> ")
+            Else
+                Try
+                    model.NEW_BSN_THAIFULLNAME = ws_taxno.SYSLCNSNMs.thanm & " " & ws_taxno.SYSLCNSNMs.thalnm
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.PHR_NAME = ws_taxno.SYSLCNSNMs.thanm & " " & ws_taxno.SYSLCNSNMs.thalnm
+                Catch ex As Exception
+
+                End Try
+                Try
+                    'dao_bsn.Getdata_by_fk_id2(dao.fields.FK_IDA)
+                    Dim bao As New BAO
+                    Dim dt As New DataTable
+                    dt = bao.SP_BSN_LOCATION_ADDRESS_BY_IDEN_V2(CITIZEN_ID_AUTHORIZE)
+
+                    For Each dr As DataRow In dt.Rows
+                        model.NEW_BSN_fulladdr = dr("fulladdr")
+                    Next
+                Catch ex As Exception
+
+                End Try
+
+            End If
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function GET_LCNSNM_NEW(ByVal identify As String) As JsonResult
+            Dim model As New MODEL_STAFF_EDIT_LCN
+            Dim dao_lcn As New DAO_CPN.clsDBsyslcnsnm
+            dao_lcn.GetDataby_identify(identify)
+
+            Dim name As String = "0"
+            Try
+                name = dao_lcn.fields.ID
+            Catch ex As Exception
+
+            End Try
+            If name = "0" Then
+
+            Else
+                Try
+                    model.NEW_LCNNM = dao_lcn.fields.thanm & " " & dao_lcn.fields.thalnm
+                Catch ex As Exception
+
+                End Try
+
+            End If
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+
         Function GET_LCN_NO_STAFF_EDIT(ByVal IDA As Integer) As JsonResult
             Dim model As New MODEL_STAFF_EDIT_LCN
             Dim dao As New DAO_DRUG.ClsDBdalcn
@@ -740,6 +901,20 @@ Namespace Controllers
                 Dim dao_bsn As New DAO_DRUG.TB_DALCN_LOCATION_BSN
                 dao_bsn.GetDataby_LCN_IDA(IDA)
                 model.BSN_THAIFULLNAME = dao_bsn.fields.BSN_THAIFULLNAME
+
+                model.OLD_BSN_THAIFULLNAME = dao_bsn.fields.BSN_THAIFULLNAME
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                Dim bao_bsn_addr As New BAO
+                Dim dt_b As New DataTable
+                dt_b = bao_bsn_addr.SP_BSN_LOCATION_ADDRESS_BY_IDA_V2(IDA)
+
+                For Each dr As DataRow In dt_b.Rows
+                    model.OLD_BSN_fulladdr = dr("fulladdr")
+                Next
             Catch ex As Exception
 
             End Try
@@ -1922,6 +2097,209 @@ Namespace Controllers
 
             Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function
+        Function INSERT_PHR(ByVal XML_PHR As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String) As JsonResult
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_STAFF_EDIT_LCN = jss.Deserialize(XML_PHR, GetType(MODEL_STAFF_EDIT_LCN))
+            Dim dao_phr As New DAO_DRUG.ClsDBDALCN_PHR
+            Try
+                dao_phr.fields = bb.DALCN_PHR
+                dao_phr.fields.FK_IDA = LCN_IDA
+                Try
+                    If bb.DALCN_PHR.PERSONAL_TYPE = "12" Or bb.DALCN_PHR.PERSONAL_TYPE = "15" Then
+                        dao_phr.fields.PHR_MEDICAL_TYPE = 3
+                    End If
+                Catch ex As Exception
+
+                End Try
+                Try
+                    Dim dao_pre As New DAO_CPN.TB_sysprefix
+                    dao_pre.Getdata_byid(bb.DALCN_PHR.PHR_PREFIX_ID)
+                    dao_phr.fields.PHR_PREFIX_NAME = dao_pre.fields.thanm
+                Catch ex As Exception
+
+                End Try
+                dao_phr.insert()
+            Catch ex As Exception
+
+            End Try
+
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
+        Function INSERT_LCN_STAFF_EDIT_KEEP(ByVal KEEP_ID As Integer, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String)
+            Dim Result As String = ""
+            'Dim jss As New JavaScriptSerializer
+            'Dim bb As MODEL_STAFF_EDIT_LCN = jss.Deserialize(XML_EDIT, GetType(MODEL_STAFF_EDIT_LCN))
+            Try
+                'Dim dao_keep As New DAO_DRUG.TB_DALCN_DETAIL_LOCATION_KEEP
+                'dao_keep.GetData_by_LCN_IDA(Request.QueryString("ida"))
+                'If dao_keep.fields.IDA <> 0 Then
+                '    dao_keep.delete()
+                'End If
+                Dim _IDA_lo As String = ""
+                Try
+                    _IDA_lo = KEEP_ID
+                Catch ex As Exception
+
+                End Try
+                If _IDA_lo = "0" Then
+                    _IDA_lo = "89791"
+                ElseIf _IDA_lo = "" Then
+                    _IDA_lo = "0"
+                End If
+
+                Dim dao_DALCN_DETAIL_LOCATION_KEEP As New DAO_DRUG.TB_DALCN_DETAIL_LOCATION_KEEP
+                Dim dao_LOCATION_ADDRESS_2 As New DAO_DRUG.TB_DALCN_LOCATION_ADDRESS
+                dao_LOCATION_ADDRESS_2.GetDataby_IDA(_IDA_lo)
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_Branch = dao_LOCATION_ADDRESS_2.fields.Branch
+                Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_chngwtcd = dao_LOCATION_ADDRESS_2.fields.chngwtcd
+                Catch ex As Exception
+
+                End Try
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_CITIZEN_ID = CITIZEN_ID
+
+                Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.TR_ID = 0
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.FK_IDA = LCN_IDA
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LCN_IDA = LCN_IDA
+                Catch ex As Exception
+
+                End Try
+
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.IDENTIFY = CITIZEN_ID_AUTHORIZE
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thathmblnm = dao_LOCATION_ADDRESS_2.fields.thanameplace
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thaaddr = dao_LOCATION_ADDRESS_2.fields.thaaddr
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thasoi = dao_LOCATION_ADDRESS_2.fields.thasoi
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_tharoad = dao_LOCATION_ADDRESS_2.fields.tharoad
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thamu = dao_LOCATION_ADDRESS_2.fields.thamu
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thathmblnm = dao_LOCATION_ADDRESS_2.fields.thathmblnm
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thaamphrnm = dao_LOCATION_ADDRESS_2.fields.thaamphrnm
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thachngwtnm = dao_LOCATION_ADDRESS_2.fields.thachngwtnm
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_tel = dao_LOCATION_ADDRESS_2.fields.tel
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_fax = dao_LOCATION_ADDRESS_2.fields.fax
+                If _IDA_lo = "0" Or _IDA_lo = "" Then
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thanameplace = "ไม่มีสถานที่เก็บ"
+                Else
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thanameplace = dao_LOCATION_ADDRESS_2.fields.thanameplace
+                End If
+
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thaaddr = dao_LOCATION_ADDRESS_2.fields.thaaddr
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thasoi = dao_LOCATION_ADDRESS_2.fields.thasoi
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_tharoad = dao_LOCATION_ADDRESS_2.fields.tharoad
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thamu = dao_LOCATION_ADDRESS_2.fields.thamu
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thathmblnm = dao_LOCATION_ADDRESS_2.fields.thathmblnm
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thaamphrnm = dao_LOCATION_ADDRESS_2.fields.thaamphrnm
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thachngwtnm = dao_LOCATION_ADDRESS_2.fields.thachngwtnm
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_tel = dao_LOCATION_ADDRESS_2.fields.tel
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_fax = dao_LOCATION_ADDRESS_2.fields.fax
+                Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_lcnsid = dao_LOCATION_ADDRESS_2.fields.lcnsid
+                Catch ex As Exception
+
+                End Try
+
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engaddr = dao_LOCATION_ADDRESS_2.fields.engaddr
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_tharoom = dao_LOCATION_ADDRESS_2.fields.tharoom
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thabuilding = dao_LOCATION_ADDRESS_2.fields.thabuilding
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engsoi = dao_LOCATION_ADDRESS_2.fields.engsoi
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engroad = dao_LOCATION_ADDRESS_2.fields.engroad
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_zipcode = dao_LOCATION_ADDRESS_2.fields.zipcode
+                Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_lstfcd = dao_LOCATION_ADDRESS_2.fields.lstfcd
+                Catch ex As Exception
+
+                End Try
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_lmdfdate = dao_LOCATION_ADDRESS_2.fields.lmdfdate
+                Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_IDA = dao_LOCATION_ADDRESS_2.fields.IDA
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_FK_IDA = dao_LOCATION_ADDRESS_2.fields.FK_IDA
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_TR_ID = dao_LOCATION_ADDRESS_2.fields.TR_ID
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_DOWN_ID = dao_LOCATION_ADDRESS_2.fields.DOWN_ID
+                Catch ex As Exception
+
+                End Try
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_CITIZEN_ID = dao_LOCATION_ADDRESS_2.fields.CITIZEN_ID
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_CITIZEN_ID_UPLOAD = dao_LOCATION_ADDRESS_2.fields.CITIZEN_ID_UPLOAD
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_XMLNAME = dao_LOCATION_ADDRESS_2.fields.XMLNAME
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engmu = dao_LOCATION_ADDRESS_2.fields.engmu
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engfloor = dao_LOCATION_ADDRESS_2.fields.engfloor
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engbuilding = dao_LOCATION_ADDRESS_2.fields.engbuilding
+                Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_rcvno = dao_LOCATION_ADDRESS_2.fields.rcvno
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_rcvdate = dao_LOCATION_ADDRESS_2.fields.rcvdate
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_lctcd = dao_LOCATION_ADDRESS_2.fields.lctcd
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_STATUS_ID = dao_LOCATION_ADDRESS_2.fields.STATUS_ID
+                Catch ex As Exception
+
+                End Try
+
+
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engnameplace = dao_LOCATION_ADDRESS_2.fields.engnameplace
+
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_HOUSENO = dao_LOCATION_ADDRESS_2.fields.HOUSENO
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_Branch = dao_LOCATION_ADDRESS_2.fields.Branch
+                Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_LOCATION_TYPE_NORMAL = dao_LOCATION_ADDRESS_2.fields.LOCATION_TYPE_NORMAL
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_LOCATION_TYPE_OTHER = dao_LOCATION_ADDRESS_2.fields.LOCATION_TYPE_OTHER
+                Catch ex As Exception
+
+                End Try
+
+                Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_LOCATION_TYPE_ID = dao_LOCATION_ADDRESS_2.fields.LOCATION_TYPE_ID
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thmblcd = dao_LOCATION_ADDRESS_2.fields.thmblcd
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_chngwtcd = dao_LOCATION_ADDRESS_2.fields.chngwtcd
+                Catch ex As Exception
+
+                End Try
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_SYSTEM_NAME = dao_LOCATION_ADDRESS_2.fields.SYSTEM_NAME
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engthmblnm = dao_LOCATION_ADDRESS_2.fields.engthmblnm
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engamphrnm = dao_LOCATION_ADDRESS_2.fields.engamphrnm
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engchngwtnm = dao_LOCATION_ADDRESS_2.fields.engchngwtnm
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_IDENTIFY = dao_LOCATION_ADDRESS_2.fields.IDENTIFY
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_REMARK = dao_LOCATION_ADDRESS_2.fields.REMARK
+                dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_Mobile = dao_LOCATION_ADDRESS_2.fields.Mobile
+                dao_DALCN_DETAIL_LOCATION_KEEP.insert()
+
+                'KEEP_LOGS_EDIT(LCN_IDA, "เพิ่มสถานที่เก็บใหม่", CITIZEN_ID)
+
+                'Dim ws_update126 As New WS_DRUG_126.WS_DRUG
+                'ws_update126.DRUG_UPDATE_LICEN_126(LCN_IDA, CITIZEN_ID)
+
+
+
+
+            Catch ex As Exception
+
+            End Try
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
+
 
         Function INSERT_LCN_SUBTITUTE(ByVal XML_SUB As String, ByVal _ProcessID As String) As JsonResult
 
@@ -1970,9 +2348,108 @@ Namespace Controllers
         End Function
 
 
+        Function UPDATE_NAME_LCNS(ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String)
+            Dim Result As String = ""
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(LCN_IDA)
+            If dao.fields.CITIZEN_ID_AUTHORIZE <> "" Then
+                Dim ws2 As New WS_Taxno_TaxnoAuthorize.WebService1
+                Dim a As String = ""
+                Try
+                    a = ws2.insert_taxno_authorize(dao.fields.CITIZEN_ID_AUTHORIZE)
+                Catch ex As Exception
+
+                End Try
+                Try
+                    a = ws2.insert_taxno(dao.fields.CITIZEN_ID_AUTHORIZE)
+                Catch ex As Exception
+
+                End Try
+                Try
+                    Dim ws1 As New WS_FDA_CITIZEN.WS_FDA_CITIZEN
+                    ws1.FDA_CITIZEN(dao.fields.CITIZEN_ID_AUTHORIZE, "1102001745831", "fusion", "P@ssw0rdfusion440")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    Dim ws3 As New WS_TRADERS.WS_TRADER
+                    ws3.CallWS_TRADER("fusion", "P@ssw0rdfusion440", dao.fields.CITIZEN_ID_AUTHORIZE)
+                Catch ex As Exception
+
+                End Try
+
+            End If
 
 
+            KEEP_LOGS_EDIT(LCN_IDA, "อัพเดตข้อมูลผู้รับอนุญาต - " & dao.fields.CITIZEN_ID_AUTHORIZE, CITIZEN_ID, url:="")
 
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function UPDATE_PHR(ByVal PHR_IDA As String, ByVal XML_PHR As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String) As JsonResult
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_STAFF_EDIT_LCN = jss.Deserialize(XML_PHR, GetType(MODEL_STAFF_EDIT_LCN))
+            Dim dao_phr As New DAO_DRUG.ClsDBDALCN_PHR
+            dao_phr.GetDataby_IDA(PHR_IDA)
+
+
+            With dao_phr.fields
+                .PHR_NAME = bb.DALCN_PHR.PHR_NAME
+                .PHR_LEVEL = bb.DALCN_PHR.PHR_LEVEL
+                .PHR_PREFIX_ID = bb.DALCN_PHR.PHR_PREFIX_ID
+                .PHR_PREFIX_NAME = bb.DALCN_PHR.PHR_PREFIX_NAME
+                .PHR_CTZNO = bb.DALCN_PHR.PHR_CTZNO
+                .PHR_TEXT_NUM = bb.DALCN_PHR.PHR_TEXT_NUM
+                .PHR_TEXT_WORK_TIME = bb.DALCN_PHR.PHR_TEXT_WORK_TIME
+                .PHR_VETERINARY_FIELD = bb.DALCN_PHR.PHR_VETERINARY_FIELD
+                Try
+                    .PHR_LAW_SECTION = bb.DALCN_PHR.PHR_LAW_SECTION
+                Catch ex As Exception
+
+                End Try
+
+                Try
+                    .PHR_JOB_TYPE = bb.DALCN_PHR.PHR_JOB_TYPE
+                Catch ex As Exception
+
+                End Try
+                Try
+                    Dim dao_pre As New DAO_CPN.TB_sysprefix
+                    dao_pre.Getdata_byid(bb.DALCN_PHR.PHR_PREFIX_ID)
+                    .PHR_PREFIX_NAME = dao_pre.fields.thanm
+                Catch ex As Exception
+
+                End Try
+                Try
+                    .PERSONAL_TYPE = bb.DALCN_PHR.PERSONAL_TYPE 'rdl_per_type.SelectedValue
+                Catch ex As Exception
+
+                End Try
+                Try
+                    If bb.DALCN_PHR.PERSONAL_TYPE = "12" Or bb.DALCN_PHR.PERSONAL_TYPE = "15" Then
+                        dao_phr.fields.PHR_MEDICAL_TYPE = 3
+                    End If
+                Catch ex As Exception
+
+                End Try
+                Try
+                    .PHR_TEXT_JOB = bb.DALCN_PHR.PHR_TEXT_JOB
+                Catch ex As Exception
+
+                End Try
+                Try
+                    .PHR_MEDICAL_TYPE = bb.DALCN_PHR.PHR_MEDICAL_TYPE
+                Catch ex As Exception
+
+                End Try
+            End With
+
+            dao_phr.update()
+
+            KEEP_LOGS_EDIT(PHR_IDA, "แก้ไขผู้ปฏิบัติการจาก " & dao_phr.fields.PHR_NAME & " เป็น " & bb.DALCN_PHR.PHR_NAME, CITIZEN_ID, url:="")
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
 
 
 

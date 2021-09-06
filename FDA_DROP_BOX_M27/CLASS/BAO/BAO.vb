@@ -15,6 +15,86 @@ Public Class BAO
         Return dt
     End Function
     '
+    Public Function SP_BSN_LOCATION_ADDRESS_BY_IDEN_V2(ByVal iden As String) As DataTable
+        Dim sql As String = "exec SP_BSN_LOCATION_ADDRESS_BY_IDEN_V2 @iden='" & iden & "'"
+        Dim dta As New DataTable
+        Dim clsds As New ClassDataset
+        Try
+            dta = clsds.dsQueryselect(sql, _con_CPN).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+        dta.TableName = "SP_BSN_LOCATION_ADDRESS_BY_IDEN"
+        Return dta
+    End Function
+
+    Public Function SP_SYSCHNGWT() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_SYSCHNGWT"
+        Dim dta As New DataTable
+        Try
+            dta = clsds.dsQueryselect(sql, _con_CPN).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+        Return dta
+    End Function
+    '
+    Public Function SP_SYSAMPHR() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_SYSAMPHR"
+        Dim dta As New DataTable
+        Try
+            dta = clsds.dsQueryselect(sql, _con_CPN).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+        Return dta
+    End Function
+
+    Public Function SP_SYSTHMBL() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_SYSTHMBL"
+        Dim dta As New DataTable
+        Try
+            dta = clsds.dsQueryselect(sql, _con_CPN).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+        Return dta
+    End Function
+
+    Public Function SP_SYSAMPHR_BY_CHNGWTCD(ByVal CHNGWTCD As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_SYSAMPHR_BY_CHNGWTCD @chngwt=" & CHNGWTCD
+        Dim dta As New DataTable
+        Try
+            dta = clsds.dsQueryselect(sql, _con_CPN).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+        Return dta
+    End Function
+
+    Public Function SP_SYSTHMBL_BY_CHNGWTCD_AND_AMPHRCD(ByVal CHNGWTCD As String, ByVal AMPHRCD As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_SYSTHMBL_BY_CHNGWTCD_AND_AMPHRCD @chngwtcd=" & CHNGWTCD & ",@amphrcd=" & AMPHRCD
+        Dim dta As New DataTable
+        Try
+            dta = clsds.dsQueryselect(sql, _con_CPN).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+        Return dta
+    End Function
+
+
     Public Function SP_SYSPREFIX_PERSON() As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_SYSPREFIX_PERSON"
@@ -51,6 +131,14 @@ Public Class BAO
 
         Return dt
     End Function
+    Public Function SP_BSN_LOCATION_ADDRESS_BY_IDA_V2(ByVal IDA As Integer) As DataTable
+        Dim sql As String = "exec SP_BSN_LOCATION_ADDRESS_BY_IDA_V2 @IDA=" & IDA
+        Dim dta As New DataTable
+        dta = Queryds(sql)
+        dta.TableName = "SP_BSN_LOCATION_ADDRESS_BY_IDA_V2"
+        Return dta
+    End Function
+
 
     Public Function SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(ByVal identify As String, ByVal LCNSID As String) As DataTable
         Dim clsds As New ClassDataset
@@ -380,6 +468,21 @@ Public Class BAO
         dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
         dt.TableName = "SP_MASTER_sysisocnt"
         Return dt
+    End Function
+    Public Function SP_PHR_JOB() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_PHR_JOB "
+        Dim dta As New DataTable
+        dta = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Return dta
+    End Function
+
+    Public Function SP_MASTER_DAPHRCD() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_MASTER_DAPHRCD "
+        Dim dta As New DataTable
+        dta = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Return dta
     End Function
 
     Public Function SP_MASTER_dacscd() As DataTable

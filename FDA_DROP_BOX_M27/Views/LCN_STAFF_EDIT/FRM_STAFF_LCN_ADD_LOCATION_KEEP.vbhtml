@@ -4,8 +4,8 @@
 <style>
 </style>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
-<script src="~/Scripts_angular/LCN_EDIT_CTRL.js"></script>
-<div ng-controller="LCN_EDIT_CTRL" ng-app="ANGULAR_APP" >
+<script src="~/Scripts_angular/LCN_STAFF_EDIT_CTRL.js"></script>
+<div ng-controller="LCN_STAFF_EDIT_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()">
     <h1>เลือกสถานที่เก็บ </h1>
     <table style="width:100%">
         <tr>
@@ -14,7 +14,7 @@
             </td>
             <td>
  
-                <select class="dropdown" ng-model="LIST_EDIT_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_EDIT_LCN.LOCATION_SELECT)">
+                <select class="dropdown" ng-model="LIST_EDIT_LCN.LOCATION_SELECT" ng-change="getdetails_1(LIST_EDIT_LCN.LOCATION_SELECT)">
                     <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
                 </select>
             </td>
@@ -30,7 +30,7 @@
         <tr>
             <td colspan="2">
                 <input type="hidden" ng-model="LIST_EDIT_LCN.LOCATION_SELECT" id="txt_hidden" />
-                <input type="button" value="เลือกข้อมูล" style="margin-left:20%" ng-click="BTN_SAVE(LIST_EDIT_LCN.LOCATION_SELECT)" />
+                <input type="button" value="เพิ่มข้อมูล" style="margin-left:20%" ng-click="BTN_SAVE_KEEP(LIST_EDIT_LCN.LOCATION_SELECT)" />
             </td>
         </tr>
     </table>
