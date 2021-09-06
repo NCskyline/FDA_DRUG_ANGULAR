@@ -113,7 +113,7 @@
     $scope.SELECT_LCN = function (datas) {
         sessionStorage.CITIZEN_ID_AUTHORIZE = datas.CITIZEN;
         sessionStorage.LCNNO = datas.lcnno;
-
+       
         var url = "/LCN/FRM_LCN_STAFF_LCN_INFORMATION";
         REDIRECT(url);
     };

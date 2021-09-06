@@ -123,6 +123,46 @@ Namespace My
                 Return CType(Me("FDA_DROP_BOX_M27_WS_SIP27_WS_SIP27"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://10.111.28.129/WS_DRUG_UPDATE_LCN_126/WS_DRUG_LCN/WS_DRUG.asmx")>  _
+        Public ReadOnly Property FDA_DROP_BOX_M27_WS_DRUG_126_WS_DRUG() As String
+            Get
+                Return CType(Me("FDA_DROP_BOX_M27_WS_DRUG_126_WS_DRUG"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://10.111.28.108/WS_Taxno_TaxnoAuthorize/WS_Taxno_TaxnoAuthorize.asmx")>  _
+        Public ReadOnly Property FDA_DROP_BOX_M27_WS_Taxno_TaxnoAuthorize_WebService1() As String
+            Get
+                Return CType(Me("FDA_DROP_BOX_M27_WS_Taxno_TaxnoAuthorize_WebService1"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://10.111.28.108/WS_CITIZEN/WS_FDA_CITIZEN.asmx")>  _
+        Public ReadOnly Property FDA_DROP_BOX_M27_WS_FDA_CITIZEN_WS_FDA_CITIZEN() As String
+            Get
+                Return CType(Me("FDA_DROP_BOX_M27_WS_FDA_CITIZEN_WS_FDA_CITIZEN"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://10.111.28.108/WS_TRADER/WS_TRADER.asmx")>  _
+        Public ReadOnly Property FDA_DROP_BOX_M27_WS_TRADERS_WS_TRADER() As String
+            Get
+                Return CType(Me("FDA_DROP_BOX_M27_WS_TRADERS_WS_TRADER"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

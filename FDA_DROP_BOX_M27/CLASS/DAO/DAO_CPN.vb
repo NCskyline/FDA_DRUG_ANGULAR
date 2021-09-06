@@ -49,6 +49,48 @@
             For Each Me.fields In datas
             Next
         End Sub
+        Public Sub GetDataby_identify(ByVal identify As String)
+            datas = (From p In db_cpn.syslcnsids Where p.identify = identify Select p)
+            For Each Me.fields In datas
+            Next
+        End Sub
+    End Class
+    Public Class TB_sysprefix
+        Inherits MAINCONTEXT1
+        Public fields As New sysprefix
+        Private _Details As New List(Of sysprefix)
+        Public Property Details() As List(Of sysprefix)
+            Get
+                Return _Details
+            End Get
+            Set(ByVal value As List(Of sysprefix))
+                _Details = value
+            End Set
+        End Property
+        Public Sub AddDetails()
+            Details.Add(fields)
+            fields = New sysprefix
+        End Sub
+        Public Sub delete()
+            db_cpn.sysprefixes.DeleteOnSubmit(fields)
+            db_cpn.SubmitChanges()
+        End Sub
+
+        Public Sub insert()
+            db_cpn.sysprefixes.InsertOnSubmit(fields)
+            db_cpn.SubmitChanges()
+        End Sub
+
+        Public Sub update()
+            db_cpn.SubmitChanges()
+        End Sub
+
+        Public Sub Getdata_byid(ByVal id As Integer)
+            datas = (From q In db_cpn.sysprefixes Where q.prefixcd = id Select q)
+            For Each Me.fields In datas
+
+            Next
+        End Sub
 
     End Class
     Public Class clsDBsysisocnt
@@ -136,7 +178,11 @@
             For Each Me.fields In datas
             Next
         End Sub
-
+        Public Sub GetDataby_identify(ByVal identify As String)
+            datas = (From p In db_cpn.syslcnsnms Where p.identify = identify Select p)
+            For Each Me.fields In datas
+            Next
+        End Sub
 
         Public Sub GetDataby_thanm(ByVal thanm As String)
             datas = (From p In db_cpn.syslcnsnms Where p.thanm = thanm Select p)

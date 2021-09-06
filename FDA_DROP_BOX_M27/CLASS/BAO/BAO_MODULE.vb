@@ -163,4 +163,17 @@ Public Module BAO_MODULE
 
         Return str_date
     End Function
+
+    <System.Runtime.CompilerServices.Extension()>
+    Public Sub KEEP_LOGS_EDIT(ByVal FK_IDA As Integer, ByVal des As String, ByVal citizen As String, Optional url As String = "")
+        Dim dao As New DAO_DRUG.TB_LOG_EDIT_MIGRATE
+        dao.fields.ACTION_DESCRIPTION = des
+        dao.fields.FK_IDA = FK_IDA
+        dao.fields.CITIZEN_ID = citizen
+        dao.fields.CREATEDATE = Date.Now
+        dao.fields.URL = url
+        dao.insert()
+
+
+    End Sub
 End Module

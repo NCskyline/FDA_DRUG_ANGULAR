@@ -239,6 +239,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\WS_DRUG_126\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_FDA_CITIZEN\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\WS_FLATTEN\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -260,6 +270,16 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\WS_SIP27\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_Taxno_TaxnoAuthorize\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_TRADERS\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -394,6 +414,24 @@
     <Content Include="Scripts_angular\LCN_CTRL.js" />
     <Content Include="Scripts_angular\LCN_EDIT_CTRL.js" />
     <Content Include="Scripts_angular\LCN_STAFF_EDIT_CTRL.js" />
+    <Content Include="Web References\WS_DRUG_126\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </Content>
+    <Content Include="Views\LCN_STAFF_EDIT\FRM_STAFF_LCN_BSN_EDIT_ADDR.vbhtml" />
+    <Content Include="Views\LCN_STAFF_EDIT\FRM_STAFF_LCN_PHR_EDIT.vbhtml" />
+    <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
+    <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WS_FDA_CITIZEN\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </Content>
+    <Content Include="Web References\WS_FDA_CITIZEN\root.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WS_FDA_CITIZEN\WS_FDA_CITIZEN.disco" />
     <Content Include="Web References\WS_FLATTEN\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
@@ -546,6 +584,8 @@
     <Content Include="Views\LCN\INPUT_YORSOR3_ALL_EDIT.vbhtml" />
     <Content Include="Views\LCN\INPUT_YORBOR_14.vbhtml" />
     <Content Include="Views\LCN\INPUT_YORSOR3_20_TAN.vbhtml" />
+    <None Include="Web References\WS_DRUG_126\WS_DRUG.wsdl" />
+    <None Include="Web References\WS_FDA_CITIZEN\WS_FDA_CITIZEN.wsdl" />
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.disco" />
     <Content Include="Web References\WS_LOG\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -1550,12 +1590,36 @@
       <LastGenOutput>Reference.vb</LastGenOutput>
     </Content>
     <None Include="Web References\WS_SIP27\WS_SIP27.wsdl" />
+    <Content Include="Web References\WS_Taxno_TaxnoAuthorize\Get_Profile.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WS_Taxno_TaxnoAuthorize\HOUSENO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WS_Taxno_TaxnoAuthorize\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </Content>
+    <Content Include="Web References\WS_Taxno_TaxnoAuthorize\root.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WS_Taxno_TaxnoAuthorize\WS_Taxno_TaxnoAuthorize.wsdl" />
+    <Content Include="Web References\WS_TRADERS\JuristicCertificateInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WS_TRADERS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </Content>
+    <None Include="Web References\WS_TRADERS\WS_TRADER.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Web References\WS_AUTHEN\AUTHENTICATION.disco" />
     <None Include="Web References\WS_GET_CPN\WS_DATA_CENTER.disco" />
+    <None Include="Web References\WS_Taxno_TaxnoAuthorize\WS_Taxno_TaxnoAuthorize.disco" />
+    <None Include="Web References\WS_TRADERS\WS_TRADER.disco" />
     <Content Include="Web.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
@@ -1654,6 +1718,50 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>FDA_DROP_BOX_SIP_WS_MAIL_FDA_MAIL</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.111.28.108/WS_CITIZEN/WS_FDA_CITIZEN.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_FDA_CITIZEN\</RelPath>
+      <UpdateFromURL>http://10.111.28.108/WS_CITIZEN/WS_FDA_CITIZEN.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FDA_DROP_BOX_M27_WS_FDA_CITIZEN_WS_FDA_CITIZEN</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.111.28.108/WS_Taxno_TaxnoAuthorize/WS_Taxno_TaxnoAuthorize.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_Taxno_TaxnoAuthorize\</RelPath>
+      <UpdateFromURL>http://10.111.28.108/WS_Taxno_TaxnoAuthorize/WS_Taxno_TaxnoAuthorize.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FDA_DROP_BOX_M27_WS_Taxno_TaxnoAuthorize_WebService1</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.111.28.108/WS_TRADER/WS_TRADER.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_TRADERS\</RelPath>
+      <UpdateFromURL>http://10.111.28.108/WS_TRADER/WS_TRADER.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FDA_DROP_BOX_M27_WS_TRADERS_WS_TRADER</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.111.28.129/WS_DRUG_UPDATE_LCN_126/WS_DRUG_LCN/WS_DRUG.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_DRUG_126\</RelPath>
+      <UpdateFromURL>http://10.111.28.129/WS_DRUG_UPDATE_LCN_126/WS_DRUG_LCN/WS_DRUG.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FDA_DROP_BOX_M27_WS_DRUG_126_WS_DRUG</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://10.111.28.137/TEST_FLATEN/WS_FLATTEN.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>

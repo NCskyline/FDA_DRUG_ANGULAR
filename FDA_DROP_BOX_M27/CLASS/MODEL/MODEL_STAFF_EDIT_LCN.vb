@@ -37,6 +37,16 @@
             _DALCN_DETAIL_LOCATION_KEEP = value
         End Set
     End Property
+    Private _DALCN_LOCATION_ADDRESS As DALCN_LOCATION_ADDRESS
+    Public Property DALCN_LOCATION_ADDRESS() As DALCN_LOCATION_ADDRESS
+        Get
+            Return _DALCN_LOCATION_ADDRESS
+        End Get
+        Set(ByVal value As DALCN_LOCATION_ADDRESS)
+            _DALCN_LOCATION_ADDRESS = value
+        End Set
+    End Property
+
     Private _FUNC_CODE As String
     Public Property FUNC_CODE() As String
         Get
@@ -90,5 +100,15 @@
     Public date_cancel As String
     Public first_appdate As String
 
+    Public KEEP_SELECT As String
+    Public OLD_BSN_THAIFULLNAME As String
+    Public OLD_BSN_fulladdr As String
 
+    Public NEW_BSN_THAIFULLNAME As String
+    Public NEW_BSN_fulladdr As String
+
+    Public OLD_LCNNM As String
+    Public NEW_LCNNM As String
+
+    Public PHR_NAME As String
 End Class

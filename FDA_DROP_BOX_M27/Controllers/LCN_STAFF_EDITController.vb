@@ -32,5 +32,11 @@ Namespace Controllers
         Function FRM_STAFF_LCN_PHR_INSERT() As ActionResult
             Return View()
         End Function
+        Function FRM_STAFF_LCN_PHR_EDIT() As ActionResult
+            Return View()
+        End Function
+        Function FRM_STAFF_LCN_BSN_EDIT_ADDR() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
