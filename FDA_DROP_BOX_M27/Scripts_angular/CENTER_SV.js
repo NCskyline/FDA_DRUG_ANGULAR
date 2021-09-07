@@ -281,8 +281,37 @@
         });
         return response;
     };
-
     
+    this.INSERT_LCN_STAFF_EDIT_LCT = function (LCT_ID, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/INSERT_LCN_STAFF_EDIT_LCT"),
+            dataType: "json",
+            data: {
+                LCT_ID: LCT_ID,
+                LCN_IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE
+            }
+        });
+        return response;
+    };
+    
+    this.INSERT_LCN_STAFF_EDIT_LCT_COPY = function (LIST_EDIT_LCN, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/INSERT_LCN_STAFF_EDIT_LCT_COPY"),
+            dataType: "json",
+            data: {
+                XML_LCT: JSON.stringify(LIST_EDIT_LCN),
+                LCN_IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE
+            }
+        });
+        return response;
+    };
+
     this.INSERT_PHR = function (LIST_EDIT_LCN,IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
         var response = $http({
             method: "post",
@@ -313,8 +342,82 @@
         });
         return response;
     };
+    
+    this.UPDATE_STAT_LCN = function (INFO_LIST, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/UPDATE_STAT_LCN"),
+            dataType: "json",
+            data: {
+                XML_LCN: JSON.stringify(INFO_LIST),
+                LCN_IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE
+            }
+        });
+        return response;
+    };
+    
+    this.UPDATE_OPENTIME_LCN = function (INFO_LIST, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/UPDATE_OPENTIME_LCN"),
+            dataType: "json",
+            data: {
+                XML_LCN: JSON.stringify(INFO_LIST),
+                LCN_IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE
+            }
+        });
+        return response;
+    };
+    
 
-
+    this.UPDATE_TEMPLATE_LCN = function (INFO_LIST, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/UPDATE_TEMPLATE_LCN"),
+            dataType: "json",
+            data: {
+                XML_LCN: JSON.stringify(INFO_LIST),
+                LCN_IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE
+            }
+        });
+        return response;
+    };
+    
+    this.UPDATE_APPDATE_LCN = function (INFO_LIST, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/UPDATE_APPDATE_LCN"),
+            dataType: "json",
+            data: {
+                XML_LCN: JSON.stringify(INFO_LIST),
+                LCN_IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE
+            }
+        });
+        return response;
+    };
+    
+    this.UPDATE_EXPYEAR_LCN = function (INFO_LIST, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/UPDATE_EXPYEAR_LCN"),
+            dataType: "json",
+            data: {
+                XML_LCN: JSON.stringify(INFO_LIST),
+                LCN_IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE
+            }
+        });
+        return response;
+    };
 
     this.UPDATE_NAME_LCNS = function (LCN_IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
         var response = $http({

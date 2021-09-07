@@ -45,7 +45,7 @@
                 <tr>
                     <td colspan="2">
                         <input type="hidden" ng-model="LIST_EDIT_LCN.KEEP_SELECT" id="txt_hidden" />
-                        <input type="button" value="เลือกข้อมูล" style="margin-left:20%" ng-click="BTN_SAVE(LIST_EDIT_LCN.KEEP_SELECT)" />
+                        <input type="button" value="เลือกข้อมูล" style="margin-left:20%" ng-click="BTN_SAVE_LCT(LIST_EDIT_LCN.KEEP_SELECT)" />
                     </td>
                 </tr>
             </table>
@@ -232,8 +232,8 @@
             </table>
 
             <div style="text-align:center;">
-                <input type="button" value="บันทึกเเละใช้สถานที่" />
-                <input type="button" value="กลับหน้าหลัก" />
+                <input type="button" value="บันทึกเเละใช้สถานที่" ng-click="BTN_SAVE_LCT_COPY()" />
+                <input type="button" value="กลับหน้าหลัก" ng-click="BTN_BACK_TO_INFORMATION()"/>
             </div>
         </div>
 

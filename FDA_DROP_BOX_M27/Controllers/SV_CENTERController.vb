@@ -2299,6 +2299,101 @@ Namespace Controllers
             End Try
             Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function
+        Function INSERT_LCN_STAFF_EDIT_LCT(ByVal LCT_ID As Integer, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String)
+            Dim Result As String = ""
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(LCN_IDA)
+            dao.fields.FK_IDA = LCT_ID
+            dao.update()
+            KEEP_LOGS_EDIT(LCN_IDA, "เลือกสถานที่ตั้งใหม่", CITIZEN_ID)
+
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
+        Function INSERT_LCN_STAFF_EDIT_LCT_COPY(ByVal XML_LCT As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String)
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_STAFF_EDIT_LCN = jss.Deserialize(XML_LCT, GetType(MODEL_STAFF_EDIT_LCN))
+
+            Dim dao_location_addr As New DAO_DRUG.TB_DALCN_LOCATION_ADDRESS
+            Dim dao_syschngwt As New DAO_CPN.clsDBsyschngwt
+            Dim dao_sysamphr As New DAO_CPN.clsDBsysamphr
+            Dim dao_systhmbl As New DAO_CPN.clsDBsysthmbl
+
+            Dim chngwtcd As Integer = bb.DALCN_LOCATION_ADDRESS.chngwtcd
+            Dim amphrcd As Integer = bb.DALCN_LOCATION_ADDRESS.amphrcd
+            Dim thmblcd As Integer = bb.DALCN_LOCATION_ADDRESS.thmblcd
+
+
+            dao_location_addr.fields.thanameplace = bb.DALCN_LOCATION_ADDRESS.thanameplace
+            dao_location_addr.fields.engnameplace = bb.DALCN_LOCATION_ADDRESS.engnameplace
+            dao_location_addr.fields.HOUSENO = bb.DALCN_LOCATION_ADDRESS.HOUSENO
+            dao_location_addr.fields.thabuilding = bb.DALCN_LOCATION_ADDRESS.thabuilding
+            dao_location_addr.fields.thafloor = bb.DALCN_LOCATION_ADDRESS.thafloor
+            dao_location_addr.fields.tharoom = bb.DALCN_LOCATION_ADDRESS.tharoom
+            dao_location_addr.fields.thaaddr = bb.DALCN_LOCATION_ADDRESS.thaaddr
+            dao_location_addr.fields.thamu = bb.DALCN_LOCATION_ADDRESS.thamu
+            dao_location_addr.fields.thasoi = bb.DALCN_LOCATION_ADDRESS.thasoi
+            dao_location_addr.fields.tharoad = bb.DALCN_LOCATION_ADDRESS.tharoad
+            dao_location_addr.fields.zipcode = bb.DALCN_LOCATION_ADDRESS.zipcode
+            dao_location_addr.fields.tel = bb.DALCN_LOCATION_ADDRESS.tel
+            dao_location_addr.fields.Mobile = bb.DALCN_LOCATION_ADDRESS.Mobile
+            dao_location_addr.fields.fax = bb.DALCN_LOCATION_ADDRESS.fax
+
+            dao_location_addr.fields.chngwtcd = chngwtcd
+            dao_location_addr.fields.amphrcd = amphrcd
+            dao_location_addr.fields.thmblcd = thmblcd
+
+            dao_location_addr.fields.STATUS_ID = 8
+            dao_syschngwt.GetData_by_chngwtcd(chngwtcd)
+            dao_sysamphr.GetData_by_chngwtcd_amphrcd(chngwtcd, amphrcd)
+            dao_systhmbl.GetData_by_chngwtcd_amphrcd_thmblcd(chngwtcd, amphrcd, thmblcd)
+
+
+            dao_location_addr.fields.thachngwtnm = dao_syschngwt.fields.thachngwtnm
+            dao_location_addr.fields.thaamphrnm = dao_sysamphr.fields.thaamphrnm
+            dao_location_addr.fields.thathmblnm = dao_systhmbl.fields.thathmblnm
+
+            dao_location_addr.fields.engchngwtnm = dao_syschngwt.fields.engchngwtnm
+            dao_location_addr.fields.engamphrnm = dao_sysamphr.fields.engamphrnm
+            dao_location_addr.fields.engthmblnm = dao_systhmbl.fields.engthmblnm
+
+            dao_location_addr.fields.LOCATION_TYPE_ID = 1
+
+            Dim dao_lcn As New DAO_DRUG.ClsDBdalcn
+            dao_lcn.GetDataby_IDA(LCN_IDA)
+            Try
+                dao_location_addr.fields.IDENTIFY = dao_lcn.fields.CITIZEN_ID_AUTHORIZE
+            Catch ex As Exception
+
+            End Try
+
+            dao_location_addr.fields.SYSTEM_NAME = "DRUG"
+            Try
+                dao_location_addr.fields.pvncd = dao_lcn.fields.pvncd
+            Catch ex As Exception
+
+            End Try
+            Try
+                dao_location_addr.fields.latitude = bb.DALCN_LOCATION_ADDRESS.latitude
+                dao_location_addr.fields.longitude = bb.DALCN_LOCATION_ADDRESS.longitude
+            Catch ex As Exception
+
+            End Try
+            dao_location_addr.fields.CREATE_DATE = Date.Now
+
+            dao_location_addr.insert()
+
+            'If Request.QueryString("ida") <> "" And Request.QueryString("t") <> "2" Then
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(LCN_IDA)
+            dao.fields.FK_IDA = dao_location_addr.fields.IDA
+            dao.update()
+            ' End If
+
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
+
+
 
 
         Function INSERT_LCN_SUBTITUTE(ByVal XML_SUB As String, ByVal _ProcessID As String) As JsonResult
@@ -2451,10 +2546,76 @@ Namespace Controllers
             Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function
 
+        Function UPDATE_STAT_LCN(ByVal XML_LCN As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String) As JsonResult
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_STAFF_EDIT_LCN = jss.Deserialize(XML_LCN, GetType(MODEL_STAFF_EDIT_LCN))
 
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(LCN_IDA)
+            dao.fields.cnccscd = bb.dalcn.cnccscd
+            Try
+                dao.fields.cncdate = bb.dalcn.cncdate
+            Catch ex As Exception
 
+            End Try
+            dao.update()
 
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
 
+        Function UPDATE_OPENTIME_LCN(ByVal XML_LCN As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String) As JsonResult
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_STAFF_EDIT_LCN = jss.Deserialize(XML_LCN, GetType(MODEL_STAFF_EDIT_LCN))
+
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(LCN_IDA)
+            dao.fields.opentime = bb.dalcn.opentime
+
+            dao.update()
+            KEEP_LOGS_EDIT(LCN_IDA, "แก้ไขเวลาทำการ", CITIZEN_ID)
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
+        Function UPDATE_TEMPLATE_LCN(ByVal XML_LCN As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String) As JsonResult
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_STAFF_EDIT_LCN = jss.Deserialize(XML_LCN, GetType(MODEL_STAFF_EDIT_LCN))
+
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(LCN_IDA)
+            dao.fields.TEMPLATE_ID = bb.dalcn.TEMPLATE_ID
+
+            dao.update()
+            KEEP_LOGS_EDIT(LCN_IDA, "แก้ไข Template เลขที่บ้านใน pdf", CITIZEN_ID)
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
+        Function UPDATE_APPDATE_LCN(ByVal XML_LCN As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String) As JsonResult
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_STAFF_EDIT_LCN = jss.Deserialize(XML_LCN, GetType(MODEL_STAFF_EDIT_LCN))
+
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(LCN_IDA)
+            dao.fields.appdate = bb.dalcn.appdate
+
+            dao.update()
+            KEEP_LOGS_EDIT(LCN_IDA, "แก้ไขวันที่ให้ไว้ ณ", CITIZEN_ID)
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
+        Function UPDATE_EXPYEAR_LCN(ByVal XML_LCN As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String) As JsonResult
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_STAFF_EDIT_LCN = jss.Deserialize(XML_LCN, GetType(MODEL_STAFF_EDIT_LCN))
+
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(LCN_IDA)
+            dao.fields.expyear = bb.dalcn.expyear
+
+            dao.update()
+            KEEP_LOGS_EDIT(LCN_IDA, "แก้ไขวันที่ให้ไว้ ณ", CITIZEN_ID)
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
         Function con_year(year) As String
             Dim int_year As Integer = Integer.Parse(year)
             If int_year <= 2500 Then

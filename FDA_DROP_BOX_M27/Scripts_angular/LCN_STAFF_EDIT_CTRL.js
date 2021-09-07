@@ -90,6 +90,29 @@
         LOAD_MODEL.then(function (datas) {
 
             $scope.INFO_LIST = datas.data;
+            //$scope.INFO_LIST.dalcn.cncdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.cncdate); 
+            //$scope.INFO_LIST.dalcn.frtappdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.frtappdate); 
+            //$scope.INFO_LIST.dalcn.appdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.appdate); 
+            //$scope.INFO_LIST.dalcn.lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.lmdfdate); 
+
+            //$scope.INFO_LIST.dalcn.rcvdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.rcvdate); 
+            //$scope.INFO_LIST.dalcn.LOCATION_ADDRESS_lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.LOCATION_ADDRESS_lmdfdate); 
+            //$scope.INFO_LIST.dalcn.LOCATION_ADDRESS_rcvdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.LOCATION_ADDRESS_rcvdate); 
+            //$scope.INFO_LIST.dalcn.CREATE_DATE = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.CREATE_DATE); 
+            //$scope.INFO_LIST.dalcn.syslcnsnm_lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslcnsnm_lmdfdate); 
+
+            //$scope.INFO_LIST.dalcn.syslcnsnm_validdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslcnsnm_validdate); 
+            //$scope.INFO_LIST.dalcn.syslcnsnm_create_date = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslcnsnm_create_date); 
+            //$scope.INFO_LIST.dalcn.syslcnsnm_update_date = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslcnsnm_update_date); 
+            //$scope.INFO_LIST.dalcn.lcnsid_birthdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.lcnsid_birthdate); 
+            //$scope.INFO_LIST.dalcn.lcnsid_cncdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.lcnsid_cncdate); 
+
+            //$scope.INFO_LIST.dalcn.lcnsid_lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.lcnsid_lmdfdate); 
+            //$scope.INFO_LIST.dalcn.syslctaddr_validdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslctaddr_validdate); 
+            //$scope.INFO_LIST.dalcn.syslctaddr_lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslctaddr_lmdfdate); 
+            //$scope.INFO_LIST.dalcn.FIRST_APP_DATE = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.FIRST_APP_DATE); 
+            //$scope.INFO_LIST.dalcn.expdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.expdate); 
+
             $scope.LIST_EDIT_LCN = datas.data;
             $scope.INFO_LIST.session = sessionStorage;
 
@@ -113,6 +136,34 @@
             $scope.fax = datas.data.FAX;
             $scope.CITIZEN_ID_AUTHORIZE = datas.data.CITIZEN_ID_AUTHORIZE;
             $scope.BSN_THAIFULLNAME = datas.data.BSN_THAIFULLNAME;
+            $scope.INFO_LIST.dalcn.cnccscd = datas.data.dalcn.cnccscd;
+
+            //$scope.INFO_LIST.dalcn.cncdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.cncdate); //filwill(CHANGE_FORMATDATE(CV_DATE($scope.INFO_LIST.dalcn.cncdate)));
+
+            //$scope.INFO_LIST.dalcn.frtappdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.frtappdate);
+            //$scope.INFO_LIST.dalcn.appdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.appdate);
+            //$scope.INFO_LIST.dalcn.lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.lmdfdate);
+
+            //$scope.INFO_LIST.dalcn.rcvdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.rcvdate);
+            //$scope.INFO_LIST.dalcn.LOCATION_ADDRESS_lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.LOCATION_ADDRESS_lmdfdate);
+            //$scope.INFO_LIST.dalcn.LOCATION_ADDRESS_rcvdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.LOCATION_ADDRESS_rcvdate);
+            //$scope.INFO_LIST.dalcn.CREATE_DATE = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.CREATE_DATE);
+            //$scope.INFO_LIST.dalcn.syslcnsnm_lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslcnsnm_lmdfdate);
+
+            //$scope.INFO_LIST.dalcn.syslcnsnm_validdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslcnsnm_validdate);
+            //$scope.INFO_LIST.dalcn.syslcnsnm_create_date = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslcnsnm_create_date);
+            //$scope.INFO_LIST.dalcn.syslcnsnm_update_date = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslcnsnm_update_date);
+            //$scope.INFO_LIST.dalcn.lcnsid_birthdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.lcnsid_birthdate);
+            //$scope.INFO_LIST.dalcn.lcnsid_cncdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.lcnsid_cncdate);
+
+            //$scope.INFO_LIST.dalcn.lcnsid_lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.lcnsid_lmdfdate);
+            //$scope.INFO_LIST.dalcn.syslctaddr_validdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslctaddr_validdate);
+            //$scope.INFO_LIST.dalcn.syslctaddr_lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslctaddr_lmdfdate);
+            //$scope.INFO_LIST.dalcn.FIRST_APP_DATE = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.FIRST_APP_DATE);
+            //$scope.INFO_LIST.dalcn.expdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.expdate); 
+
+
+
             sessionStorage.CITIZEN_ID_AUTHORIZE = datas.data.CITIZEN_ID_AUTHORIZE;
 
             //$scope.LIST_EDIT_LCN.DALCN_LOCATION_ADDRESS.LOCATION_TYPE = '2';
@@ -264,7 +315,7 @@
         var data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
        
         data_location.then(function (datas) {
-            $scope.LIST_EDIT_LCN.DALCN_LOCATION_ADDRESS = datas.data;
+            //$scope.LIST_EDIT_LCN.DALCN_LOCATION_ADDRESS = datas.data;
             $scope.LIST_EDIT_LCN.DALCN_LOCATION_ADDRESS.LOCATION_SELECT = IDA;
             $scope.LIST_EDIT_LCN.DALCN_LOCATION_ADDRESS.LOCATION_TYPE = LOCATION_TYPE;
             $scope.LIST_EDIT_LCN.DALCN_LOCATION_ADDRESS.thanameplace = datas.data[0].thanameplace;
@@ -392,8 +443,37 @@
             });
         });
     };
-
     
+    $scope.BTN_SAVE_LCT = function (LCT_ID) {
+
+        var Getdata = CENTER_SV.INSERT_LCN_STAFF_EDIT_LCT(LCT_ID, sessionStorage.LCN_IDA, CITIZEN_ID, sessionStorage.CITIZEN_ID_AUTHORIZE);
+        Getdata.then(function (datas) {
+            Swal.fire({
+                title: 'SUCCESS',
+                text: 'บันทึกข้อมูลเรียบร้อย',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+        });
+    };
+
+    $scope.BTN_SAVE_LCT_COPY = function () {
+
+        var Getdata = CENTER_SV.INSERT_LCN_STAFF_EDIT_LCT_COPY($scope.LIST_EDIT_LCN, sessionStorage.LCN_IDA, CITIZEN_ID, sessionStorage.CITIZEN_ID_AUTHORIZE);
+        Getdata.then(function (datas) {
+            Swal.fire({
+                title: 'SUCCESS',
+                text: 'บันทึกข้อมูลเรียบร้อย',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+        });
+    };
+
     $scope.BTN_UPDATE_LCNSNM = function () {
 
         var Getdata = CENTER_SV.UPDATE_NAME_LCNS(LCN_IDA, CITIZEN_ID, sessionStorage.CITIZEN_ID_AUTHORIZE);
@@ -409,6 +489,114 @@
         });
     };
 
+    
+    $scope.BTN_UPDATE_STAT_LCN = function () {
+        //$scope.INFO_LIST.dalcn.frtappdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.frtappdate);
+        $scope.INFO_LIST.dalcn.appdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.appdate);
+        //$scope.INFO_LIST.dalcn.lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.lmdfdate);
+
+        //$scope.INFO_LIST.dalcn.rcvdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.rcvdate);
+        //$scope.INFO_LIST.dalcn.LOCATION_ADDRESS_lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.LOCATION_ADDRESS_lmdfdate);
+        //$scope.INFO_LIST.dalcn.LOCATION_ADDRESS_rcvdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.LOCATION_ADDRESS_rcvdate);
+        //$scope.INFO_LIST.dalcn.CREATE_DATE = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.CREATE_DATE);
+        //$scope.INFO_LIST.dalcn.syslcnsnm_lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslcnsnm_lmdfdate);
+
+        //$scope.INFO_LIST.dalcn.syslcnsnm_validdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslcnsnm_validdate);
+        //$scope.INFO_LIST.dalcn.syslcnsnm_create_date = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslcnsnm_create_date);
+        //$scope.INFO_LIST.dalcn.syslcnsnm_update_date = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslcnsnm_update_date);
+        //$scope.INFO_LIST.dalcn.lcnsid_birthdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.lcnsid_birthdate);
+        //$scope.INFO_LIST.dalcn.lcnsid_cncdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.lcnsid_cncdate);
+
+        //$scope.INFO_LIST.dalcn.lcnsid_lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.lcnsid_lmdfdate);
+        //$scope.INFO_LIST.dalcn.syslctaddr_validdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslctaddr_validdate);
+        //$scope.INFO_LIST.dalcn.syslctaddr_lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslctaddr_lmdfdate);
+        //$scope.INFO_LIST.dalcn.FIRST_APP_DATE = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.FIRST_APP_DATE);
+        //$scope.INFO_LIST.dalcn.expdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.expdate); 
+        var Getdata = CENTER_SV.UPDATE_STAT_LCN($scope.INFO_LIST,LCN_IDA, CITIZEN_ID, sessionStorage.CITIZEN_ID_AUTHORIZE);
+        Getdata.then(function (datas) {
+            Swal.fire({
+                title: 'SUCCESS',
+                text: 'อัพเดตข้อมูลเรียบร้อย',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+        });
+    };
+    $scope.BTN_UPDATE_OPENTIME_LCN = function () {
+        $scope.INFO_LIST.dalcn.appdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.appdate);
+        //$scope.INFO_LIST.dalcn.expdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.expdate); 
+        var Getdata = CENTER_SV.UPDATE_OPENTIME_LCN($scope.INFO_LIST, LCN_IDA, CITIZEN_ID, sessionStorage.CITIZEN_ID_AUTHORIZE);
+        Getdata.then(function (datas) {
+            Swal.fire({
+                title: 'SUCCESS',
+                text: 'อัพเดตข้อมูลเรียบร้อย',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+        });
+    };
+
+    $scope.BTN_UPDATE_TEMPLATE_LCN = function () {
+        $scope.INFO_LIST.dalcn.appdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.appdate);
+        //$scope.INFO_LIST.dalcn.expdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.expdate); 
+        var Getdata = CENTER_SV.UPDATE_TEMPLATE_LCN($scope.INFO_LIST, LCN_IDA, CITIZEN_ID, sessionStorage.CITIZEN_ID_AUTHORIZE);
+        Getdata.then(function (datas) {
+            Swal.fire({
+                title: 'SUCCESS',
+                text: 'อัพเดตข้อมูลเรียบร้อย',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+        });
+    };
+    
+    $scope.BTN_UPDATE_APPDATE_LCN = function () {
+        $scope.INFO_LIST.dalcn.appdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.appdate);
+        //$scope.INFO_LIST.dalcn.expdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.expdate); 
+        var Getdata = CENTER_SV.UPDATE_APPDATE_LCN($scope.INFO_LIST, LCN_IDA, CITIZEN_ID, sessionStorage.CITIZEN_ID_AUTHORIZE);
+        Getdata.then(function (datas) {
+            Swal.fire({
+                title: 'SUCCESS',
+                text: 'อัพเดตข้อมูลเรียบร้อย',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+        });
+    };
+    $scope.BTN_UPDATE_EXPYEAR_LCN = function () {
+        $scope.INFO_LIST.dalcn.appdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.appdate);
+        //$scope.INFO_LIST.dalcn.expdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.expdate); 
+        var Getdata = CENTER_SV.UPDATE_EXPYEAR_LCN($scope.INFO_LIST, LCN_IDA, CITIZEN_ID, sessionStorage.CITIZEN_ID_AUTHORIZE);
+        Getdata.then(function (datas) {
+            Swal.fire({
+                title: 'SUCCESS',
+                text: 'อัพเดตข้อมูลเรียบร้อย',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+        });
+    };
+
+
+
+    function ConvertJsonDateToDate(date) {
+        var parsedDate = new Date(parseInt(date.substr(6)));
+        var newDate = new Date(parsedDate);
+        var month = ('0' + (newDate.getMonth() + 1)).slice(-2);
+        var day = ('0' + newDate.getDate()).slice(-2);
+        var year = newDate.getFullYear();
+        return day + "/" + month + "/" + year;
+    }
 
     $scope.BTN_EDIT_PHR = function () {
 

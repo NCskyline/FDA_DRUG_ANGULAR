@@ -95,7 +95,7 @@
                 </td>
             </tr>
         </table>
-        <input type="button" value="เปลี่ยนสถานะ" style="margin-left:20%" />
+        <input type="button" value="เปลี่ยนสถานะ" style="margin-left:20%" ng-click="BTN_UPDATE_STAT_LCN()" />
         <br />
 
         <h1>เวลาทำการ</h1>
@@ -105,23 +105,25 @@
                     เวลาทำการ :
                 </td>
                 <td>
-                    {{INFO_LIST.dalcn.opentime}}
+                    <input type="text" ng-model="INFO_LIST.dalcn.opentime" style="width:30%;" />
+                    <input type="button" value="เปลี่ยนเวลาทำการ" style="width:17%" ng-click="BTN_UPDATE_OPENTIME_LCN()"/>
                 </td>
+
             </tr>
             <tr>
                 <td>
                     รูปแบบบ้านเลขที่ในไฟล์ pdf:
                 </td>
                 <td>
-                    <select style="width:30%">
-                        <option>
+                    <select style="width:30%" ng-model="INFO_LIST.dalcn.TEMPLATE_ID">
+                        <option value="1">
                             เเบบปกติ
                         </option>
-                        <option>
+                        <option value="2">
                             เเบบบ้านเลขที่ยาว
                         </option>
                     </select>
-                    <input type="button" value="เปลี่ยนรูปแบบ pdf" style="width:17%" />
+                    <input type="button" value="เปลี่ยนรูปแบบ pdf" style="width:17%" ng-click="BTN_UPDATE_TEMPLATE_LCN()"/>
                 </td>
             </tr>
         </table>
@@ -138,7 +140,7 @@
                                    input-aria-describedby="datepicker-description"
                                    input-aria-labelledby="datepicker-header ">
                     </md-datepicker>
-                    <input type="button" value="เปลี่ยนวันที่ให้ไว้ ณ" style="margin-left:.5%;width:17%" />
+                    <input type="button" value="เปลี่ยนวันที่ให้ไว้ ณ" style="margin-left:.5%;width:17%" ng-click="BTN_UPDATE_APPDATE_LCN()" />
                 </td>
             </tr>
             <tr>
@@ -146,7 +148,7 @@
                     ปีที่หมดอายุ :
                 </td>
                 <td>
-                    <input style="width:30%" ng-model="INFO_LIST.dalcn.expyear" /><input type="button" value="เปลี่ยนปีที่หมดอายุ" style="margin-left:.5%;width:17%" />
+                    <input style="width:30%" ng-model="INFO_LIST.dalcn.expyear" /><input type="button" value="เปลี่ยนปีที่หมดอายุ" style="margin-left:.5%;width:17%" ng-click="BTN_UPDATE_EXPYEAR_LCN()" />
                 </td>
             </tr>
         </table>

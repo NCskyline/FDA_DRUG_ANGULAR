@@ -309,7 +309,11 @@
             db_cpn.syschngwts.DeleteOnSubmit(fields)
             db_cpn.SubmitChanges()
         End Sub
-
+        Public Sub GetData_by_chngwtcd(ByVal chngwtcd As Integer)
+            datas = (From p In db_cpn.syschngwts Where p.chngwtcd = chngwtcd Select p)
+            For Each Me.fields In datas
+            Next
+        End Sub
         Public Sub GetDataAll()
             datas = (From p In db_cpn.syschngwts Select p)
             For Each Me.fields In datas
@@ -331,7 +335,11 @@
             db_cpn.sysamphrs.DeleteOnSubmit(fields)
             db_cpn.SubmitChanges()
         End Sub
-
+        Public Sub GetData_by_chngwtcd_amphrcd(ByVal chngwtcd As Integer, ByVal amphrcd As Integer)
+            datas = (From p In db_cpn.sysamphrs Where p.chngwtcd = chngwtcd And p.amphrcd = amphrcd Select p)
+            For Each Me.fields In datas
+            Next
+        End Sub
         Public Sub GetDataAll()
             datas = (From p In db_cpn.sysamphrs Select p)
             For Each Me.fields In datas
@@ -353,7 +361,11 @@
             db_cpn.systhmbls.DeleteOnSubmit(fields)
             db_cpn.SubmitChanges()
         End Sub
-
+        Public Sub GetData_by_chngwtcd_amphrcd_thmblcd(ByVal chngwtcd As Integer, ByVal amphrcd As Integer, ByVal thmblcd As Integer)
+            datas = (From p In db_cpn.systhmbls Where p.chngwtcd = chngwtcd And p.amphrcd = amphrcd And p.thmblcd = thmblcd Select p)
+            For Each Me.fields In datas
+            Next
+        End Sub
         Public Sub GetDataAll()
             datas = (From p In db_cpn.systhmbls Select p)
             For Each Me.fields In datas

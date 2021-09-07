@@ -9,7 +9,7 @@
         End Set
     End Property
 
-    Private _DALCN_PHR As DALCN_PHR
+    Private _DALCN_PHR As New DALCN_PHR
     Public Property DALCN_PHR() As DALCN_PHR
         Get
             Return _DALCN_PHR
@@ -19,7 +19,7 @@
         End Set
     End Property
 
-    Private _DALCN_LOCATION_BSN As DALCN_LOCATION_BSN
+    Private _DALCN_LOCATION_BSN As New DALCN_LOCATION_BSN
     Public Property DALCN_LOCATION_BSN() As DALCN_LOCATION_BSN
         Get
             Return _DALCN_LOCATION_BSN
@@ -28,7 +28,7 @@
             _DALCN_LOCATION_BSN = value
         End Set
     End Property
-    Private _DALCN_DETAIL_LOCATION_KEEP As DALCN_DETAIL_LOCATION_KEEP
+    Private _DALCN_DETAIL_LOCATION_KEEP As New DALCN_DETAIL_LOCATION_KEEP
     Public Property DALCN_DETAIL_LOCATION_KEEP() As DALCN_DETAIL_LOCATION_KEEP
         Get
             Return _DALCN_DETAIL_LOCATION_KEEP
@@ -37,7 +37,8 @@
             _DALCN_DETAIL_LOCATION_KEEP = value
         End Set
     End Property
-    Private _DALCN_LOCATION_ADDRESS As DALCN_LOCATION_ADDRESS
+
+    Private _DALCN_LOCATION_ADDRESS As New DALCN_LOCATION_ADDRESS
     Public Property DALCN_LOCATION_ADDRESS() As DALCN_LOCATION_ADDRESS
         Get
             Return _DALCN_LOCATION_ADDRESS
