@@ -1394,6 +1394,11 @@ Namespace DAO_DRUG
                 _Details = value
             End Set
         End Property
+
+        Public Sub AddDetails()
+            Details.Add(fields)
+            fields = New FILE_ATTACH
+        End Sub
         Public Sub insert()
             db.FILE_ATTACHes.InsertOnSubmit(fields)
             db.SubmitChanges()
@@ -1447,6 +1452,7 @@ Namespace DAO_DRUG
 
             datas = (From p In db.FILE_ATTACHes Where p.TRANSACTION_ID = TR_ID And p.PROCESS_ID = process And p.NAME_REAL <> "" Select p)
             For Each Me.fields In datas
+                AddDetails()
             Next
         End Sub
         Public Sub GetDataby_TR_ID_And_Process_And_Type(ByVal TR_ID As String, ByVal process As String, ByVal _type As String)

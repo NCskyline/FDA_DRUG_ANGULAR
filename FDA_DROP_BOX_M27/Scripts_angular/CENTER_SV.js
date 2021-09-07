@@ -1106,15 +1106,15 @@
 
 
 
-    this.UPLOAD_PDF_CERT = function (model, TR_ID, PROCESS, file) { //เรียก Full model
+    this.UPLOAD_PDF_ATTACH = function (model, TR_ID, PROCESS_ID, file) { //เรียก Full model
 
         var response = Upload.upload({
             // url: host + "FOOD_CUST/UPLOAD_PDF",
-            url: SET_URL_SV("/SV_CENTER/UPLOAD_PDF_CERT"),
+            url: SET_URL_SV("/SV_CENTER/UPLOAD_PDF_ATTACH"),
             data: {
                 model: JSON.stringify(model),
                 TR_ID: TR_ID,
-                PROCESS: PROCESS,
+                PROCESS_ID: PROCESS_ID,
                 files: file
             }
         });
