@@ -2108,6 +2108,845 @@ Namespace Controllers
 
             Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function
+        Function INSERT_LCN_INPUT(ByVal XML_LCN As String, ByVal XML_KEEP As String, ByVal XML_PHR As String, ByVal LCT_IDA As String, ByVal _ProcessID As String) As JsonResult
+            Dim _pvncd As String = ""
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_LCN = jss.Deserialize(XML_LCN, GetType(MODEL_LCN))
+            Dim keep As MODEL_LCN = jss.Deserialize(XML_KEEP, GetType(MODEL_LCN))
+            Dim phr As MODEL_LCN = jss.Deserialize(XML_PHR, GetType(MODEL_LCN))
+            Dim bao_tran As New BAO
+            Dim tr_id As Integer = 0
+
+            tr_id = bao_tran.insert_transection_new(_ProcessID, bb.session.CITIZEN_ID, bb.session.CITIZEN_ID_AUTHORIZE)
+
+            Try
+                _pvncd = Personal_Province_NEW(bb.session.CITIZEN_ID, bb.session.CITIZEN_ID_AUTHORIZE, bb.session.GROUPS)
+                If _pvncd = 0 Then
+                    _pvncd = bb.session.PVCODE
+                End If
+            Catch ex As Exception
+                _pvncd = 10
+            End Try
+
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.fields = bb.dalcn
+
+            'dao.fields.IMAGE_BSN = bb.dalcns.IMAGE_BSN
+            dao.fields.lcnsid = dao.fields.lcnsid
+            dao.fields.PROCESS_ID = _ProcessID
+            dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
+            dao.fields.CITIZEN_ID_AUTHORIZE = bb.session.CITIZEN_ID_AUTHORIZE
+            dao.fields.rcvdate = Date.Now
+            dao.fields.lmdfdate = Date.Now
+            dao.fields.STATUS_ID = 1
+            dao.fields.TR_ID = tr_id
+            dao.fields.FK_IDA = LCT_IDA
+            dao.fields.CTZNO = bb.session.CITIZEN_ID
+            dao.fields.lcntpcd = set_lcntpcd(_ProcessID)
+            dao.fields.CITIZEN_ID_UPLOAD = bb.session.CITIZEN_ID
+            Try
+                dao.fields.pvncd = _pvncd
+            Catch ex As Exception
+
+            End Try
+            Try
+                dao.fields.chngwtcd = _pvncd
+            Catch ex As Exception
+
+            End Try
+            Dim chw As String = ""
+            Dim dao_cpn As New DAO_CPN.clsDBsyschngwt
+            Try
+                dao_cpn.GetData_by_chngwtcd(_pvncd)
+                chw = dao_cpn.fields.thacwabbr
+            Catch ex As Exception
+
+            End Try
+            dao.fields.pvnabbr = chw
+
+            'If Request.QueryString("staff") <> "" Then
+            '    dao.fields.OTHER = "1"
+            'End If
+            Dim dao_syslcnsnm As New DAO_CPN.clsDBsyslcnsnm
+            dao_syslcnsnm.GetDataby_identify(bb.session.CITIZEN_ID_AUTHORIZE)
+            dao.fields.thanm = dao_syslcnsnm.fields.thanm
+            dao.fields.syslcnsnm_ID = dao_syslcnsnm.fields.ID
+            dao.fields.syslcnsnm_identify = dao_syslcnsnm.fields.identify
+            dao.fields.syslcnsnm_lcnsid = dao_syslcnsnm.fields.lcnsid
+            dao.fields.syslcnsnm_lcnscd = dao_syslcnsnm.fields.lcnscd
+            dao.fields.syslcnsnm_prefixcd = dao_syslcnsnm.fields.prefixcd
+            dao.fields.syslcnsnm_prefixnm = dao_syslcnsnm.fields.prefixnm
+            dao.fields.syslcnsnm_thanm = dao_syslcnsnm.fields.thanm
+            dao.fields.syslcnsnm_engnm = dao_syslcnsnm.fields.engnm
+            dao.fields.syslcnsnm_lctcd = dao_syslcnsnm.fields.lctcd
+            dao.fields.syslcnsnm_thalnm = dao_syslcnsnm.fields.thalnm
+            dao.fields.syslcnsnm_englnm = dao_syslcnsnm.fields.englnm
+            dao.fields.syslcnsnm_suffixcd = dao_syslcnsnm.fields.suffixcd
+            dao.fields.syslcnsnm_lcnsst = dao_syslcnsnm.fields.lcnsst
+            dao.fields.syslcnsnm_grplcnscd = dao_syslcnsnm.fields.grplcnscd
+            dao.fields.syslcnsnm_bsncd = dao_syslcnsnm.fields.bsncd
+            dao.fields.syslcnsnm_lstfcd = dao_syslcnsnm.fields.lstfcd
+            dao.fields.syslcnsnm_lmdfdate = dao_syslcnsnm.fields.lmdfdate
+            dao.fields.syslcnsnm_lcnsidst = dao_syslcnsnm.fields.lcnsidst
+            dao.fields.syslcnsnm_validdate = dao_syslcnsnm.fields.validdate
+            dao.fields.syslcnsnm_oldid = dao_syslcnsnm.fields.oldid
+            dao.fields.syslcnsnm_type = dao_syslcnsnm.fields.type
+            dao.fields.syslcnsnm_update_date = dao_syslcnsnm.fields.update_date
+            dao.fields.syslcnsnm_create_date = dao_syslcnsnm.fields.create_date
+
+
+            Dim dao_location_address As New DAO_DRUG.TB_DALCN_LOCATION_ADDRESS
+            dao_location_address.GetDataby_IDA(LCT_IDA)
+            dao.fields.LOCATION_ADDRESS_thathmblnm = dao_location_address.fields.thanameplace
+            dao.fields.LOCATION_ADDRESS_thaaddr = dao_location_address.fields.thaaddr
+            dao.fields.LOCATION_ADDRESS_thasoi = dao_location_address.fields.thasoi
+            dao.fields.LOCATION_ADDRESS_tharoad = dao_location_address.fields.tharoad
+            dao.fields.LOCATION_ADDRESS_thamu = dao_location_address.fields.thamu
+            dao.fields.LOCATION_ADDRESS_thathmblnm = dao_location_address.fields.thathmblnm
+            dao.fields.LOCATION_ADDRESS_thaamphrnm = dao_location_address.fields.thaamphrnm
+            dao.fields.LOCATION_ADDRESS_thachngwtnm = dao_location_address.fields.thachngwtnm
+            dao.fields.LOCATION_ADDRESS_tel = dao_location_address.fields.tel
+            dao.fields.LOCATION_ADDRESS_fax = dao_location_address.fields.fax
+            dao.fields.LOCATION_ADDRESS_thanameplace = dao_location_address.fields.thanameplace
+            dao.fields.LOCATION_ADDRESS_thaaddr = dao_location_address.fields.thaaddr
+            dao.fields.LOCATION_ADDRESS_thasoi = dao_location_address.fields.thasoi
+            dao.fields.LOCATION_ADDRESS_tharoad = dao_location_address.fields.tharoad
+            dao.fields.LOCATION_ADDRESS_thamu = dao_location_address.fields.thamu
+            dao.fields.LOCATION_ADDRESS_thathmblnm = dao_location_address.fields.thathmblnm
+            dao.fields.LOCATION_ADDRESS_thaamphrnm = dao_location_address.fields.thaamphrnm
+            dao.fields.LOCATION_ADDRESS_thachngwtnm = dao_location_address.fields.thachngwtnm
+            dao.fields.LOCATION_ADDRESS_tel = dao_location_address.fields.tel
+            dao.fields.LOCATION_ADDRESS_fax = dao_location_address.fields.fax
+            dao.fields.LOCATION_ADDRESS_lcnsid = dao_location_address.fields.lcnsid
+            dao.fields.LOCATION_ADDRESS_engaddr = dao_location_address.fields.engaddr
+            dao.fields.LOCATION_ADDRESS_tharoom = dao_location_address.fields.tharoom
+            dao.fields.LOCATION_ADDRESS_thabuilding = dao_location_address.fields.thabuilding
+            dao.fields.LOCATION_ADDRESS_engsoi = dao_location_address.fields.engsoi
+            dao.fields.LOCATION_ADDRESS_engroad = dao_location_address.fields.engroad
+            dao.fields.LOCATION_ADDRESS_zipcode = dao_location_address.fields.zipcode
+            dao.fields.LOCATION_ADDRESS_lstfcd = dao_location_address.fields.lstfcd
+            dao.fields.LOCATION_ADDRESS_lmdfdate = dao_location_address.fields.lmdfdate
+            dao.fields.LOCATION_ADDRESS_IDA = dao_location_address.fields.IDA
+            dao.fields.LOCATION_ADDRESS_FK_IDA = dao_location_address.fields.FK_IDA
+            dao.fields.LOCATION_ADDRESS_TR_ID = dao_location_address.fields.TR_ID
+            dao.fields.LOCATION_ADDRESS_DOWN_ID = dao_location_address.fields.DOWN_ID
+            dao.fields.LOCATION_ADDRESS_CITIZEN_ID = dao_location_address.fields.CITIZEN_ID
+            dao.fields.LOCATION_ADDRESS_CITIZEN_ID_UPLOAD = dao_location_address.fields.CITIZEN_ID_UPLOAD
+            dao.fields.LOCATION_ADDRESS_XMLNAME = dao_location_address.fields.XMLNAME
+            dao.fields.LOCATION_ADDRESS_engmu = dao_location_address.fields.engmu
+            dao.fields.LOCATION_ADDRESS_engfloor = dao_location_address.fields.engfloor
+            dao.fields.LOCATION_ADDRESS_engbuilding = dao_location_address.fields.engbuilding
+            dao.fields.LOCATION_ADDRESS_rcvno = dao_location_address.fields.rcvno
+            dao.fields.LOCATION_ADDRESS_rcvdate = dao_location_address.fields.rcvdate
+            dao.fields.LOCATION_ADDRESS_lctcd = dao_location_address.fields.lctcd
+            dao.fields.LOCATION_ADDRESS_engnameplace = dao_location_address.fields.engnameplace
+            dao.fields.LOCATION_ADDRESS_STATUS_ID = dao_location_address.fields.STATUS_ID
+            dao.fields.LOCATION_ADDRESS_HOUSENO = dao_location_address.fields.HOUSENO
+            dao.fields.LOCATION_ADDRESS_Branch = dao_location_address.fields.Branch
+            dao.fields.LOCATION_ADDRESS_LOCATION_TYPE_NORMAL = dao_location_address.fields.LOCATION_TYPE_NORMAL
+            dao.fields.LOCATION_ADDRESS_LOCATION_TYPE_OTHER = dao_location_address.fields.LOCATION_TYPE_OTHER
+            dao.fields.LOCATION_ADDRESS_LOCATION_TYPE_ID = dao_location_address.fields.LOCATION_TYPE_ID
+            dao.fields.LOCATION_ADDRESS_SYSTEM_NAME = dao_location_address.fields.SYSTEM_NAME
+            dao.fields.LOCATION_ADDRESS_thmblcd = dao_location_address.fields.thmblcd
+            dao.fields.LOCATION_ADDRESS_chngwtcd = dao_location_address.fields.chngwtcd
+            dao.fields.LOCATION_ADDRESS_engthmblnm = dao_location_address.fields.engthmblnm
+            dao.fields.LOCATION_ADDRESS_engamphrnm = dao_location_address.fields.engamphrnm
+            dao.fields.LOCATION_ADDRESS_engchngwtnm = dao_location_address.fields.engchngwtnm
+            dao.fields.LOCATION_ADDRESS_IDENTIFY = dao_location_address.fields.IDENTIFY
+            dao.fields.LOCATION_ADDRESS_REMARK = dao_location_address.fields.REMARK
+
+
+            'Dim dao_location_bsn As New DAO_CPN.TB_LOCATION_BSN
+            'dao_location_bsn.Getdata_by_fk_id2(dao_location_address.fields.IDA)
+            Dim bsn_den As String = ""
+            Try
+                bsn_den = Trim(bb.BSN_IDENTIFY)
+            Catch ex As Exception
+
+            End Try
+
+            Dim dao_syslcnsnm2 As New DAO_CPN.clsDBsyslcnsnm
+            dao_syslcnsnm2.GetDataby_identify(bsn_den)
+            Try
+                dao.fields.bsncd = dao_syslcnsnm2.fields.lcnsid
+            Catch ex As Exception
+
+            End Try
+            Dim bao_show11 As New BAO
+            Dim dt_bsn As DataTable = bao_show11.SP_LOCATION_BSN_BY_IDENTIFY(bsn_den)
+            For Each dr As DataRow In dt_bsn.Rows
+                Try
+                    dao.fields.BSN_THAIFULLNAME = dr("BSN_THAIFULLNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_IDENTIFY = dr("BSN_IDENTIFY")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_ADDR = dr("BSN_ADDR")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_SOI = dr("BSN_SOI")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_ROAD = dr("BSN_ROAD")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_MOO = dr("BSN_MOO")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_THMBL_NAME = dr("BSN_THMBL_NAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_AMPHR_NAME = dr("BSN_AMPHR_NAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_CHWNGNAME = dr("BSN_CHWNGNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_TELEPHONE = dr("BSN_TELEPHONE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_FAX = dr("BSN_FAX")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_THAINAME = dr("BSN_THAINAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_THAILASTNAME = dr("BSN_THAILASTNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_PREFIXENGCD = dr("BSN_PREFIXENGCD")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_ENGNAME = dr("BSN_ENGNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_ENGLASTNAME = dr("BSN_ENGLASTNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_ENGFULLNAME = dr("BSN_ENGFULLNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.CHANGWAT_ID = dr("CHANGWAT_ID")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.AMPHR_ID = dr("AMPHR_ID")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.TUMBON_ID = dr("TUMBON_ID")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_FLOOR = dr("BSN_FLOOR")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_BUILDING = dr("BSN_BUILDING")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_ZIPCODE = dr("BSN_ZIPCODE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.CREATE_DATE = dr("CREATE_DATE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.DOWN_ID = dr("DOWN_ID")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.CITIZEN_ID = dr("CITIZEN_ID")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.XMLNAME = dr("XMLNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.NATIONALITY = dr("NATIONALITY")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_HOUSENO = dr("BSN_HOUSENO")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_ENGADDR = dr("BSN_ENGADDR")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_ENGMU = dr("BSN_ENGMU")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_ENGSOI = dr("BSN_ENGSOI")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_ENGROAD = dr("BSN_ENGROAD")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_CHWNG_ENGNAME = dr("BSN_CHWNG_ENGNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_AMPHR_ENGNAME = dr("BSN_AMPHR_ENGNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_THMBL_ENGNAME = dr("BSN_THMBL_ENGNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.BSN_NATIONALITY_CD = dr("BSN_NATIONALITY_CD")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.AGE = dr("AGE")
+                Catch ex As Exception
+
+                End Try
+            Next
+            dao.insert()
+
+
+            Dim opentime As String = ""
+            Dim dao_cn As New DAO_DRUG.ClsDBdalcn
+            Try
+                opentime = bb.dalcn.opentime
+            Catch ex As Exception
+
+            End Try
+            For Each dr As DataRow In dt_bsn.Rows
+                Dim dao_bsn As New DAO_DRUG.TB_DALCN_LOCATION_BSN
+                Try
+                    dao_bsn.fields.BSN_THAIFULLNAME = dr("BSN_THAIFULLNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_IDENTIFY = dr("BSN_IDENTIFY")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_ADDR = dr("BSN_ADDR")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_SOI = dr("BSN_SOI")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_ROAD = dr("BSN_ROAD")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_MOO = dr("BSN_MOO")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_THMBL_NAME = dr("BSN_THMBL_NAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_AMPHR_NAME = dr("BSN_AMPHR_NAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_CHWNGNAME = dr("BSN_CHWNGNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_TELEPHONE = dr("BSN_TELEPHONE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_FAX = dr("BSN_FAX")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_THAINAME = dr("BSN_THAINAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_THAILASTNAME = dr("BSN_THAILASTNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_PREFIXENGCD = dr("BSN_PREFIXENGCD")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_ENGNAME = dr("BSN_ENGNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_ENGLASTNAME = dr("BSN_ENGLASTNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_ENGFULLNAME = dr("BSN_ENGFULLNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.CHANGWAT_ID = dr("CHANGWAT_ID")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.AMPHR_ID = dr("AMPHR_ID")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.TUMBON_ID = dr("TUMBON_ID")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_FLOOR = dr("BSN_FLOOR")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_BUILDING = dr("BSN_BUILDING")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_ZIPCODE = dr("BSN_ZIPCODE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.CREATE_DATE = dr("CREATE_DATE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.DOWN_ID = dr("DOWN_ID")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.CITIZEN_ID = dr("CITIZEN_ID")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.XMLNAME = dr("XMLNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.NATIONALITY = dr("NATIONALITY")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_HOUSENO = dr("BSN_HOUSENO")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_ENGADDR = dr("BSN_ENGADDR")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_ENGMU = dr("BSN_ENGMU")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_ENGSOI = dr("BSN_ENGSOI")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_ENGROAD = dr("BSN_ENGROAD")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_CHWNG_ENGNAME = dr("BSN_CHWNG_ENGNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_AMPHR_ENGNAME = dr("BSN_AMPHR_ENGNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_THMBL_ENGNAME = dr("BSN_THMBL_ENGNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.BSN_NATIONALITY_CD = dr("BSN_NATIONALITY_CD")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao_bsn.fields.AGE = dr("AGE")
+                Catch ex As Exception
+
+                End Try
+                dao_bsn.fields.LCN_IDA = dao.fields.IDA
+                dao_bsn.fields.FK_IDA = dao.fields.FK_IDA
+                dao_bsn.insert()
+            Next
+
+            '---------------------ที่เก็บ--------------------------------
+            Dim dao_KEEP_bb As New DAO_DRUG.TB_DALCN_DETAIL_LOCATION_KEEP
+            dao_KEEP_bb.fields = keep.DALCN_DETAIL_LOCATION_KEEP
+
+            Dim dao_DALCN_DETAIL_LOCATION_KEEP As New DAO_DRUG.TB_DALCN_DETAIL_LOCATION_KEEP
+            For Each dao_DALCN_DETAIL_LOCATION_KEEP.fields In dao_KEEP_bb.datas
+                Dim LOCATION_IDA As Integer
+                If Integer.TryParse(dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_IDA, LOCATION_IDA) = True Then
+                    Dim dao_LOCATION_ADDRESS_2 As New DAO_DRUG.TB_DALCN_LOCATION_ADDRESS
+                    dao_LOCATION_ADDRESS_2.GetDataby_IDA(LOCATION_IDA)
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_Branch = dao_LOCATION_ADDRESS_2.fields.Branch
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_chngwtcd = dao_LOCATION_ADDRESS_2.fields.chngwtcd
+                    Catch ex As Exception
+
+                    End Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_CITIZEN_ID = bb.session.CITIZEN_ID
+
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.TR_ID = tr_id
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.FK_IDA = dao.fields.IDA
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LCN_IDA = dao.fields.IDA
+                    Catch ex As Exception
+
+                    End Try
+
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thathmblnm = dao_LOCATION_ADDRESS_2.fields.thanameplace
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thaaddr = dao_LOCATION_ADDRESS_2.fields.thaaddr
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thasoi = dao_LOCATION_ADDRESS_2.fields.thasoi
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_tharoad = dao_LOCATION_ADDRESS_2.fields.tharoad
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thamu = dao_LOCATION_ADDRESS_2.fields.thamu
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thathmblnm = dao_LOCATION_ADDRESS_2.fields.thathmblnm
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thaamphrnm = dao_LOCATION_ADDRESS_2.fields.thaamphrnm
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thachngwtnm = dao_LOCATION_ADDRESS_2.fields.thachngwtnm
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_tel = dao_LOCATION_ADDRESS_2.fields.tel
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_fax = dao_LOCATION_ADDRESS_2.fields.fax
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thanameplace = dao_LOCATION_ADDRESS_2.fields.thanameplace
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thaaddr = dao_LOCATION_ADDRESS_2.fields.thaaddr
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thasoi = dao_LOCATION_ADDRESS_2.fields.thasoi
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_tharoad = dao_LOCATION_ADDRESS_2.fields.tharoad
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thamu = dao_LOCATION_ADDRESS_2.fields.thamu
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thathmblnm = dao_LOCATION_ADDRESS_2.fields.thathmblnm
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thaamphrnm = dao_LOCATION_ADDRESS_2.fields.thaamphrnm
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thachngwtnm = dao_LOCATION_ADDRESS_2.fields.thachngwtnm
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_tel = dao_LOCATION_ADDRESS_2.fields.tel
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_fax = dao_LOCATION_ADDRESS_2.fields.fax
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_lcnsid = dao_LOCATION_ADDRESS_2.fields.lcnsid
+                    Catch ex As Exception
+
+                    End Try
+
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engaddr = dao_LOCATION_ADDRESS_2.fields.engaddr
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_tharoom = dao_LOCATION_ADDRESS_2.fields.tharoom
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thabuilding = dao_LOCATION_ADDRESS_2.fields.thabuilding
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engsoi = dao_LOCATION_ADDRESS_2.fields.engsoi
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engroad = dao_LOCATION_ADDRESS_2.fields.engroad
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_zipcode = dao_LOCATION_ADDRESS_2.fields.zipcode
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_lstfcd = dao_LOCATION_ADDRESS_2.fields.lstfcd
+                    Catch ex As Exception
+
+                    End Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_lmdfdate = dao_LOCATION_ADDRESS_2.fields.lmdfdate
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_IDA = dao_LOCATION_ADDRESS_2.fields.IDA
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_FK_IDA = dao_LOCATION_ADDRESS_2.fields.FK_IDA
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_TR_ID = dao_LOCATION_ADDRESS_2.fields.TR_ID
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_DOWN_ID = dao_LOCATION_ADDRESS_2.fields.DOWN_ID
+                    Catch ex As Exception
+
+                    End Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_CITIZEN_ID = dao_LOCATION_ADDRESS_2.fields.CITIZEN_ID
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_CITIZEN_ID_UPLOAD = dao_LOCATION_ADDRESS_2.fields.CITIZEN_ID_UPLOAD
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_XMLNAME = dao_LOCATION_ADDRESS_2.fields.XMLNAME
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engmu = dao_LOCATION_ADDRESS_2.fields.engmu
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engfloor = dao_LOCATION_ADDRESS_2.fields.engfloor
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engbuilding = dao_LOCATION_ADDRESS_2.fields.engbuilding
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_rcvno = dao_LOCATION_ADDRESS_2.fields.rcvno
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_rcvdate = dao_LOCATION_ADDRESS_2.fields.rcvdate
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_lctcd = dao_LOCATION_ADDRESS_2.fields.lctcd
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_STATUS_ID = dao_LOCATION_ADDRESS_2.fields.STATUS_ID
+                    Catch ex As Exception
+
+                    End Try
+
+
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engnameplace = dao_LOCATION_ADDRESS_2.fields.engnameplace
+
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_HOUSENO = dao_LOCATION_ADDRESS_2.fields.HOUSENO
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_Branch = dao_LOCATION_ADDRESS_2.fields.Branch
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_LOCATION_TYPE_NORMAL = dao_LOCATION_ADDRESS_2.fields.LOCATION_TYPE_NORMAL
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_LOCATION_TYPE_OTHER = dao_LOCATION_ADDRESS_2.fields.LOCATION_TYPE_OTHER
+                    Catch ex As Exception
+
+                    End Try
+
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_LOCATION_TYPE_ID = dao_LOCATION_ADDRESS_2.fields.LOCATION_TYPE_ID
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thmblcd = dao_LOCATION_ADDRESS_2.fields.thmblcd
+
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_chngwtcd = dao_LOCATION_ADDRESS_2.fields.chngwtcd
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_amphrcd = dao_LOCATION_ADDRESS_2.fields.amphrcd
+                    Catch ex As Exception
+
+                    End Try
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_SYSTEM_NAME = dao_LOCATION_ADDRESS_2.fields.SYSTEM_NAME
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engthmblnm = dao_LOCATION_ADDRESS_2.fields.engthmblnm
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engamphrnm = dao_LOCATION_ADDRESS_2.fields.engamphrnm
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_engchngwtnm = dao_LOCATION_ADDRESS_2.fields.engchngwtnm
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_IDENTIFY = dao_LOCATION_ADDRESS_2.fields.IDENTIFY
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_REMARK = dao_LOCATION_ADDRESS_2.fields.REMARK
+                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_Mobile = dao_LOCATION_ADDRESS_2.fields.Mobile
+                    dao_DALCN_DETAIL_LOCATION_KEEP.insert()
+                    dao_DALCN_DETAIL_LOCATION_KEEP = New DAO_DRUG.TB_DALCN_DETAIL_LOCATION_KEEP
+                End If
+            Next
+
+
+            'เภสัชกร
+            Dim dao_PHR_bb As New DAO_DRUG.ClsDBDALCN_PHR
+            dao_PHR_bb.fields = phr.DALCN_PHR
+            Dim dao_DALCN_PHR As New DAO_DRUG.ClsDBDALCN_PHR
+            For Each dao_DALCN_PHR.fields In dao_PHR_bb.datas
+                If (dao_DALCN_PHR.fields.PHR_MEDICAL_TYPE = "1") Or (String.IsNullOrWhiteSpace(dao_DALCN_PHR.fields.PHR_MEDICAL_TYPE) = True) Then
+                    'Dim PHR_NAME As String = ""
+                    'Try
+                    '    PHR_NAME = dao_DALCN_PHR.fields.PHR_NAME
+                    'Catch ex As Exception
+
+                    'End Try
+
+                    If String.IsNullOrWhiteSpace(dao_DALCN_PHR.fields.PHR_NAME) = False Then
+                        Dim dao_prefix As New DAO_CPN.TB_sysprefix
+                        Dim PHR_PREFIX_ID As String = ""
+                        Try
+                            PHR_PREFIX_ID = Trim(dao_DALCN_PHR.fields.PHR_PREFIX_ID)
+                        Catch ex As Exception
+
+                        End Try
+                        If PHR_PREFIX_ID <> "" Then
+                            dao_prefix.Getdata_byid(PHR_PREFIX_ID)
+                            dao_DALCN_PHR.fields.PHR_PREFIX_NAME = dao_prefix.fields.thanm
+                            dao_DALCN_PHR.fields.PHR_PREFIX_ID = PHR_PREFIX_ID
+                        Else
+                            dao_DALCN_PHR.fields.PHR_PREFIX_NAME = "นาย"
+                            dao_DALCN_PHR.fields.PHR_PREFIX_ID = "0"
+                        End If
+                        'If IsNothing(dao_DALCN_PHR.fields.PHR_PREFIX_ID) = False Then
+                        '    If Integer.TryParse(dao_DALCN_PHR.fields.PHR_PREFIX_ID, PHR_PREFIX_ID) = True Then
+                        '        dao_prefix.Getdata_byid(PHR_PREFIX_ID)
+                        '        dao_DALCN_PHR.fields.PHR_PREFIX_NAME = dao_prefix.fields.thanm
+                        '    End If
+
+                        'End If
+                        'dao_DALCN_PHR.fields.PHR_JOB_TYPE =dao_DALCN_PHR.fields.
+                        Try
+                            'dao_DALCN_PHR.fields.PHR_NAME = p2.DALCN_PHRs.phr
+                        Catch ex As Exception
+
+                        End Try
+                        dao_DALCN_PHR.fields.PHR_TEXT_WORK_TIME = opentime
+                        dao_DALCN_PHR.fields.TR_ID = tr_id
+                        dao_DALCN_PHR.fields.FK_IDA = dao.fields.IDA
+                        dao_DALCN_PHR.fields.PHR_STATUS_UPLOAD = 1
+                        dao_DALCN_PHR.insert()
+                        dao_DALCN_PHR = New DAO_DRUG.ClsDBDALCN_PHR
+
+
+                    End If
+                End If
+            Next
+
+            'Dim dao_DALCN_PHR_2 As New DAO_DRUG.ClsDBDALCN_PHR
+            'For Each dao_DALCN_PHR_2.fields In p2.DALCN_PHR_2s
+            '    If dao_DALCN_PHR_2.fields.PHR_MEDICAL_TYPE = "2" Then
+            '        If String.IsNullOrWhiteSpace(dao_DALCN_PHR_2.fields.PHR_NAME) = False Then
+            '            Dim dao_prefix As New DAO_CPN.TB_sysprefix
+            '            Dim PHR_PREFIX_ID As String = ""
+            '            Try
+            '                PHR_PREFIX_ID = Trim(dao_DALCN_PHR_2.fields.PHR_PREFIX_ID)
+            '            Catch ex As Exception
+
+            '            End Try
+            '            If PHR_PREFIX_ID <> "" Then
+            '                dao_prefix.Getdata_byid(PHR_PREFIX_ID)
+            '                dao_DALCN_PHR_2.fields.PHR_PREFIX_NAME = dao_prefix.fields.thanm
+            '                dao_DALCN_PHR_2.fields.PHR_PREFIX_ID = PHR_PREFIX_ID
+            '            Else
+            '                dao_DALCN_PHR_2.fields.PHR_PREFIX_NAME = "นาย"
+            '                dao_DALCN_PHR_2.fields.PHR_PREFIX_ID = "0"
+            '            End If
+            '            dao_DALCN_PHR_2.fields.PHR_TEXT_WORK_TIME = opentime
+            '            dao_DALCN_PHR_2.fields.TR_ID = tr_id
+            '            dao_DALCN_PHR_2.fields.FK_IDA = dao.fields.IDA
+            '            dao_DALCN_PHR_2.fields.PHR_STATUS_UPLOAD = 1
+            '            'dao_DALCN_PHR_2.fields.PHR_TEXT_WORK_TIME =
+            '            dao_DALCN_PHR_2.insert()
+            '            dao_DALCN_PHR_2 = New DAO_DRUG.ClsDBDALCN_PHR
+            '        End If
+            '    End If
+            'Next
+
+            'Dim dao_DALCN_PHR_3 As New DAO_DRUG.ClsDBDALCN_PHR
+            'For Each dao_DALCN_PHR_3.fields In p2.DALCN_PHR_3s
+            '    If dao_DALCN_PHR_3.fields.PHR_MEDICAL_TYPE = "2" Then
+            '        If String.IsNullOrWhiteSpace(dao_DALCN_PHR_3.fields.PHR_NAME) = False Then
+            '            Dim dao_prefix As New DAO_CPN.TB_sysprefix
+            '            Dim PHR_PREFIX_ID As String = ""
+            '            Try
+            '                PHR_PREFIX_ID = Trim(dao_DALCN_PHR_3.fields.PHR_PREFIX_ID)
+            '            Catch ex As Exception
+
+            '            End Try
+            '            If PHR_PREFIX_ID <> "" Then
+            '                dao_prefix.Getdata_byid(PHR_PREFIX_ID)
+            '                dao_DALCN_PHR_3.fields.PHR_PREFIX_NAME = dao_prefix.fields.thanm
+            '                dao_DALCN_PHR_3.fields.PHR_PREFIX_ID = PHR_PREFIX_ID
+            '            Else
+            '                dao_DALCN_PHR_3.fields.PHR_PREFIX_NAME = "นาย"
+            '                dao_DALCN_PHR_3.fields.PHR_PREFIX_ID = "0"
+            '            End If
+            '            dao_DALCN_PHR_3.fields.PHR_TEXT_WORK_TIME = opentime
+            '            dao_DALCN_PHR_3.fields.TR_ID = tr_id
+            '            dao_DALCN_PHR_3.fields.FK_IDA = dao.fields.IDA
+            '            dao_DALCN_PHR_3.fields.PHR_STATUS_UPLOAD = 1
+            '            dao_DALCN_PHR_3.fields.PHR_MEDICAL_TYPE = 3
+
+            '            'dao_DALCN_PHR_2.fields.PHR_TEXT_WORK_TIME =
+            '            dao_DALCN_PHR_3.insert()
+            '            dao_DALCN_PHR_3 = New DAO_DRUG.ClsDBDALCN_PHR
+            '        End If
+            '    End If
+            'Next
+
+
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
         Function INSERT_PHR(ByVal XML_PHR As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String) As JsonResult
             Dim Result As String = ""
             Dim jss As New JavaScriptSerializer

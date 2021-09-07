@@ -310,6 +310,24 @@
         });
         return response;
     };
+    
+
+    this.INSERT_LCN_INPUT = function (LIST_EDIT_LCN, XML_KEEP, XML_PHR, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/INSERT_LCN_INPUT"),
+            dataType: "json",
+            data: {
+                XML_LCN: JSON.stringify(LIST_EDIT_LCN),
+                XML_KEEP: XML_KEEP,
+                XML_PHR: XML_PHR,
+                LCN_IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE
+            }
+        });
+        return response;
+    };
 
     this.INSERT_PHR = function (LIST_EDIT_LCN,IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
         var response = $http({

@@ -239,5 +239,22 @@
         REDIRECT('/LCN/FRM_LCN_NEWS');
     };
 
-   
+
+    $scope.BTN_SAVE_LCN_INPUT = function () {
+
+        var Getdata = CENTER_SV.INSERT_LCN_INPUT($scope.LIST_LCN,$scope.LIST_KEEP,$scope.LIST_PHR, PROCESS);
+        Getdata.then(function (datas) {
+            Swal.fire({
+                title: 'SUCCESS',
+                text: 'บันทึกข้อมูลเรียบร้อย',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+        });
+    };
+
+
+
 });

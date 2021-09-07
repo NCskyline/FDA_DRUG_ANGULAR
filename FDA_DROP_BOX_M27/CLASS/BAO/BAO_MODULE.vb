@@ -176,4 +176,41 @@ Public Module BAO_MODULE
 
 
     End Sub
+
+    <System.Runtime.CompilerServices.Extension()>
+    Public Function set_lcntpcd(ByVal _ProcessID As String) As String
+        Dim dao As New DAO_DRUG.ClsDBPROCESS_NAME
+        dao.GetDataby_Process_ID(_ProcessID)
+        Return dao.fields.PROCESS_NAME
+    End Function
+    <System.Runtime.CompilerServices.Extension()>
+    Public Function Personal_Province_NEW(ByVal iden As String, tax_iden As String, ByVal IDgroup As String) As Integer
+        Dim province_id As Integer = 0
+        Dim ws As New WS_PVNCD.WebService1
+        Dim group As Integer = 0
+
+        Dim dt As New DataTable
+        Try
+            dt = ws.getStaffPvncd_by_citizenID_and_taxnoauthorize(iden, tax_iden, IDgroup)
+        Catch ex As Exception
+
+        End Try
+        'If dt.Rows.Count = 0 Then
+        '    province_id = 10
+
+        'End If
+
+        For Each dr As DataRow In dt.Rows
+            Try
+                province_id = dr("staff_pvncd")
+            Catch ex As Exception
+                province_id = 10
+            End Try
+
+        Next
+
+
+
+        Return province_id
+    End Function
 End Module
