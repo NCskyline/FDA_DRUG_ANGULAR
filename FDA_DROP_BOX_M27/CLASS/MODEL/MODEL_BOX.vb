@@ -72,14 +72,5 @@ Public Class FILE_LIST
     Public PROCESS_NAME As String
     Public SIZE As Integer
 
-    Private _FILES As Object
-    Public Property FILES() As Object
-        Get
-            Return _FILES
-        End Get
-        Set(ByVal value As Object)
-            _FILES = value
-        End Set
-    End Property
 
 End Class

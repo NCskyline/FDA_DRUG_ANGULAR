@@ -40,4 +40,24 @@
             _DATA_VALUE = value
         End Set
     End Property
+
+    Private _TR_ID As String
+    Public Property TR_ID() As String
+        Get
+            Return _TR_ID
+        End Get
+        Set(ByVal value As String)
+            _TR_ID = value
+        End Set
+    End Property
+
+    Private _PROCESS As String
+    Public Property PROCESS() As String
+        Get
+            Return _PROCESS
+        End Get
+        Set(ByVal value As String)
+            _PROCESS = value
+        End Set
+    End Property
 End Class

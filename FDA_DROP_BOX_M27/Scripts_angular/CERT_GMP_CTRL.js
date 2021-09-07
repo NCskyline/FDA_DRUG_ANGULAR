@@ -18,6 +18,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
     var CITIZEN = sessionStorage.IDENTIFY; 
     var STAGE = sessionStorage.STAGE;
     $scope.GMP_CHEM = [];
+    $scope.files = [];
 
     $scope.currentPage = 0;
     $scope.paging = {
@@ -266,17 +267,27 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         }
       
         if (cEmpty == 0) {           
-            var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP, $scope.GMP_CHEM, PROCESS, $scope.DOC_LIST.FILE_LISTs);
-                Getdata.then(function (datas) {
-                    Swal.fire({
-                        title: 'SUCCESS',
-                        text: 'บันทึกข้อมูลเรียบร้อย',
-                        icon: 'ดฟสหำ',
-                        confirmButtonColor: '#3085d6',
-                        confirmButtonText: 'OK'
+            var Getdata = CENTER_SV.INSERT_CERT_GMP($scope.LIST_GMP, $scope.GMP_CHEM, PROCESS);
+            Getdata.then(function (datas) {
+                var TR_ID = datas.data.TR_ID;
+                var PROCESS = datas.data.PROCESS;
+                var obj = $scope.DOC_LIST.FILE_LISTs;
+                angular.forEach(obj, function (value, key) {
+                    var FILEs = value.FILE_DATA;
+                    var upload = CENTER_SV.UPLOAD_PDF_CERT(value, TR_ID, PROCESS, FILEs);
+                    upload.then(function (datas) {
+
 
                     });
-                 });
+                });
+                Swal.fire({
+                    title: 'SUCCES',
+                    text: 'บันทึกข้อมูลเรียบร้อย',
+                    icon: 'ดฟสหำ',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+                });
+            });
         } else {
             Swal.fire({
                 title: 'ERROR',
@@ -389,6 +400,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 datas.FILENAME = '';
             }
         }
+        $scope.files.push(file);
     };
 
     $scope.deleteRow = function (datas, i) {

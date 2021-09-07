@@ -1601,6 +1601,17 @@ Namespace Controllers
                 Dim path As String = "F:\path\DRUG\upload\" ''_PATH_DEFAULT & "\upload\"
                 Directory.CreateDirectory(path) 'สร้าง PATH รอ
                 Dim i As Integer = 0
+
+                For Each s As String In Request.Files
+                    NAME_REAL = Request.Files(0).FileName
+                    Dim Type As String = IO.Path.GetExtension(Request.Files(0).FileName).ToString()
+                    filename = "DA-" & PROCESS_ID & "-" & Date.Now.Year & "-" & TR_ID & "-" & DD & Type
+                    path_file = path & filename
+                    Dim postedFile As HttpPostedFileBase = Request.Files(0)
+
+                    postedFile.SaveAs(path_file)
+                Next
+
                 For Each f As FILE_LIST In MODEL_LIST.FILE_LISTs
 
                     Dim dao As New DAO_DRUG.ClsDBFILE_ATTACH
@@ -1614,9 +1625,8 @@ Namespace Controllers
                     filename = "DA-" & PROCESS_ID & "-" & Date.Now.Year & "-" & TR_ID & "-" & DD & Type
                     path_file = path & filename
 
-                    Dim postedFile As HttpPostedFileBase = Request.Files(0)
-
-                    postedFile.SaveAs(path_file)
+                    'Dim postedFile As HttpPostedFileBase = Request.Files(0)
+                    'postedFile.SaveAs(path_file)
 
                     Dim dao_f As New DAO_DRUG.ClsDBFILE_ATTACH
                     With dao_f.fields
@@ -1962,7 +1972,7 @@ Namespace Controllers
 
             dao.fields = bb.CER
             dao.fields.PROCESS_ID = _ProcessID
-
+            dao.fields.TR_ID = tr_id
             dao.insert()
 
             Dim IDA As Integer = dao.fields.IDA
@@ -2009,7 +2019,8 @@ Namespace Controllers
                 i += 1
             Next
 
-            UPLOAD_PDF_CERT(model, tr_id, _ProcessID)
+            msg_r.TR_ID = dao.fields.TR_ID
+            msg_r.PROCESS = dao.fields.PROCESS_ID
 
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
         End Function

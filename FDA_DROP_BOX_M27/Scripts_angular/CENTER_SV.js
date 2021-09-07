@@ -204,7 +204,7 @@
 
 
 
-    this.INSERT_CERT_GMP = function (aa,bb,ProcessID,model) {
+    this.INSERT_CERT_GMP = function (aa,bb,ProcessID) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/INSERT_CERT_GMP"),
@@ -212,8 +212,7 @@
             data: {
                 XML_CERT: JSON.stringify(aa),
                 XML_CHEM: JSON.stringify(bb),
-                _ProcessID: ProcessID,
-                model: JSON.stringify(model)
+                _ProcessID: ProcessID
             }
         });
         return response;
@@ -986,13 +985,15 @@
 
 
 
-    this.UPLOAD_PDF_V2 = function (model, file) { //เรียก Full model
+    this.UPLOAD_PDF_CERT = function (model, TR_ID, PROCESS, file) { //เรียก Full model
 
         var response = Upload.upload({
             // url: host + "FOOD_CUST/UPLOAD_PDF",
-            url: SET_URL_SV("/SV_CENTER/UPLOAD_PDF_V2"),
+            url: SET_URL_SV("/SV_CENTER/UPLOAD_PDF_CERT"),
             data: {
                 model: JSON.stringify(model),
+                TR_ID: TR_ID,
+                PROCESS: PROCESS,
                 files: file
             }
         });
