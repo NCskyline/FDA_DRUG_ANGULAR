@@ -1570,7 +1570,7 @@ Namespace Controllers
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
         End Function
 
-        Public Function UPLOAD_PDF_CERT(ByVal model As String, ByVal TR_ID As String, ByVal PROCESS_ID As String) As String
+        Public Function UPLOAD_PDF_ATTACH(ByVal model As String, ByVal TR_ID As String, ByVal PROCESS_ID As String) As String
             Dim result As String = ""
             Try
                 Dim TRID As String = ""
@@ -1585,8 +1585,6 @@ Namespace Controllers
                         Dim propertyName As String = parsedProperty.Name
                         If propertyName = "FILENAME" Then
                             filelist.FILENAME = CStr(parsedProperty.Value)
-                        ElseIf propertyName = "FILE_DATA" Then
-                            filelist.FILE_DATA = CStr(parsedProperty.Value)
                         End If
                     Next
                     MODEL_LIST.FILE_LISTs.Add(filelist)
@@ -1603,30 +1601,19 @@ Namespace Controllers
                 Dim i As Integer = 0
 
                 For Each s As String In Request.Files
-                    NAME_REAL = Request.Files(0).FileName
-                    Dim Type As String = IO.Path.GetExtension(Request.Files(0).FileName).ToString()
-                    filename = "DA-" & PROCESS_ID & "-" & Date.Now.Year & "-" & TR_ID & "-" & DD & Type
-                    path_file = path & filename
-                    Dim postedFile As HttpPostedFileBase = Request.Files(0)
-
-                    postedFile.SaveAs(path_file)
-                Next
-
-                For Each f As FILE_LIST In MODEL_LIST.FILE_LISTs
 
                     Dim dao As New DAO_DRUG.ClsDBFILE_ATTACH
                     dao.GetDataby_TR_ID_And_Process(TR_ID, PROCESS_ID)
                     If dao.Details.Count <> 0 Then
                         DD = dao.Details.Count + 1
                     End If
-                    Dim filepath As String = f.PATH
-                    NAME_REAL = f.FILENAME
-                    Dim Type As String = IO.Path.GetExtension(f.FILENAME).ToString()
+                    NAME_REAL = Request.Files(i).FileName ''Request.Files(0).FileName 
+                    Dim Type As String = IO.Path.GetExtension(Request.Files(i).FileName).ToString()
                     filename = "DA-" & PROCESS_ID & "-" & Date.Now.Year & "-" & TR_ID & "-" & DD & Type
                     path_file = path & filename
+                    Dim postedFile As HttpPostedFileBase = Request.Files(i)
 
-                    'Dim postedFile As HttpPostedFileBase = Request.Files(0)
-                    'postedFile.SaveAs(path_file)
+                    postedFile.SaveAs(path_file)
 
                     Dim dao_f As New DAO_DRUG.ClsDBFILE_ATTACH
                     With dao_f.fields
@@ -1639,7 +1626,9 @@ Namespace Controllers
                     End With
                     dao_f.insert()
 
+                    i += 1
                 Next
+
                 result = "success"
             Catch ex As Exception
                 result = "ERR"

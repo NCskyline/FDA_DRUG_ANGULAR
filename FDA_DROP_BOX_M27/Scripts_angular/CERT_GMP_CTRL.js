@@ -18,7 +18,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
     var CITIZEN = sessionStorage.IDENTIFY; 
     var STAGE = sessionStorage.STAGE;
     $scope.GMP_CHEM = [];
-    $scope.files = [];
+    $scope.PDF = [];
 
     $scope.currentPage = 0;
     $scope.paging = {
@@ -274,11 +274,12 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 var obj = $scope.DOC_LIST.FILE_LISTs;
                 angular.forEach(obj, function (value, key) {
                     var FILEs = value.FILE_DATA;
-                    var upload = CENTER_SV.UPLOAD_PDF_CERT(value, TR_ID, PROCESS, FILEs);
-                    upload.then(function (datas) {
+                    $scope.PDF.push(FILEs);
+                });
+                var upload = CENTER_SV.UPLOAD_PDF_ATTACH($scope.DOC_LIST.FILE_LISTs, TR_ID, PROCESS, $scope.PDF);
+                upload.then(function (datas) {
 
 
-                    });
                 });
                 Swal.fire({
                     title: 'SUCCES',
