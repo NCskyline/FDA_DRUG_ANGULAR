@@ -1629,9 +1629,9 @@ Namespace Controllers
                     i += 1
                 Next
 
-                result = "success"
+                result = "SUCCESS"
             Catch ex As Exception
-                result = "ERR"
+                result = "ERROR"
             End Try
             Return result
         End Function

@@ -15,7 +15,7 @@ Option Explicit On
 Namespace My
     
     <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
     Partial Friend NotInheritable Class MySettings
         Inherits Global.System.Configuration.ApplicationSettingsBase
@@ -161,6 +161,16 @@ Namespace My
         Public ReadOnly Property FDA_DROP_BOX_M27_WS_TRADERS_WS_TRADER() As String
             Get
                 Return CType(Me("FDA_DROP_BOX_M27_WS_TRADERS_WS_TRADER"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://164.115.28.108/WS_get_Profile_By_Identify/WS_Taxno_TaxnoAuthorize.asmx")>  _
+        Public ReadOnly Property FDA_DROP_BOX_M27_WS_PVNCD_WebService1() As String
+            Get
+                Return CType(Me("FDA_DROP_BOX_M27_WS_PVNCD_WebService1"),String)
             End Get
         End Property
     End Class

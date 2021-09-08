@@ -21,7 +21,8 @@
     <OptionInfer>On</OptionInfer>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -265,6 +266,11 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\WS_MAIL\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_PVNCD\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -597,10 +603,19 @@
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.wsdl" />
     <None Include="Web References\WS_LOG\WS_LOG_CENTER.disco" />
     <None Include="Web References\WS_MAIL\FDA_MAIL.disco" />
+    <Content Include="Web References\WS_PVNCD\Get_Profile.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WS_PVNCD\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </Content>
+    <None Include="Web References\WS_PVNCD\WS_Taxno_TaxnoAuthorize.disco" />
     <Content Include="Web References\WS_SIP27\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
     </Content>
+    <None Include="Web References\WS_PVNCD\WS_Taxno_TaxnoAuthorize.wsdl" />
     <None Include="Web References\WS_SIP27\WS_SIP27.disco" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -1773,6 +1788,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>FDA_DROP_BOX_M27_WS_FLATTEN_WS_FLATTEN</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://164.115.28.108/WS_get_Profile_By_Identify/WS_Taxno_TaxnoAuthorize.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_PVNCD\</RelPath>
+      <UpdateFromURL>http://164.115.28.108/WS_get_Profile_By_Identify/WS_Taxno_TaxnoAuthorize.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FDA_DROP_BOX_M27_WS_PVNCD_WebService1</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://164.115.28.65/SIP27/WS_SIP27.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
