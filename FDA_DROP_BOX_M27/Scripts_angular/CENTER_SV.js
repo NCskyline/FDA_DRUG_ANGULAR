@@ -312,15 +312,13 @@
     };
     
 
-    this.INSERT_LCN_INPUT = function (LIST_EDIT_LCN, XML_KEEP, XML_PHR, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
+    this.INSERT_LCN_INPUT = function (LIST_EDIT_LCN, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/INSERT_LCN_INPUT"),
             dataType: "json",
             data: {
                 XML_LCN: JSON.stringify(LIST_EDIT_LCN),
-                XML_KEEP: XML_KEEP,
-                XML_PHR: XML_PHR,
                 LCN_IDA: IDA,
                 CITIZEN_ID: CITIZEN_ID,
                 CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE
@@ -1230,6 +1228,19 @@
             url: SET_URL_SV("/SV_CENTER/SP_GET_INV_HISTORY"),
             params: {
                 CTZNO: CTZNO
+            }
+        });
+        return response;
+    };
+
+    
+    this.SP_LCN_BY_PROCESS_AND_IDEN = function (process, iden) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_LCN_BY_PROCESS_AND_IDEN"),
+            params: {
+                process: process,
+                iden: iden
             }
         });
         return response;

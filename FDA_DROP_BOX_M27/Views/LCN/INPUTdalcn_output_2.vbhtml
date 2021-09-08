@@ -308,7 +308,7 @@
         <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
         <br />
         <br />
-        <table style="font-size:20px;width:100%" >
+        <table style="font-size:20px;width:100%">
             <tr>
                 <td style="width:20%">
                     โดยมีเภสัชกรชั้น
@@ -523,4 +523,10 @@
                 </td>
             </tr>
         </table>
+        <br />
+        <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
+            <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
+
+            <input type="button" class="btn btn-lg " ng-click="BTN_BACK()" value="ย้อนกลับ" />
+        </div>
     </div>

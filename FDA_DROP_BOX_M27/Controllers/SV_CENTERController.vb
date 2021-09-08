@@ -44,6 +44,15 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
 
         End Function
+
+        Function SP_LCN_BY_PROCESS_AND_IDEN(ByVal process As String, ByVal iden As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_LCN_BY_PROCESS_AND_IDEN(process, iden)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_GET_INV_HISTORY(ByVal CTZNO As String)
             Dim dt As New DataTable
             Dim bao As New BAO
@@ -2097,13 +2106,13 @@ Namespace Controllers
 
             Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function
-        Function INSERT_LCN_INPUT(ByVal XML_LCN As String, ByVal XML_KEEP As String, ByVal XML_PHR As String, ByVal LCT_IDA As String, ByVal _ProcessID As String) As JsonResult
+        Function INSERT_LCN_INPUT(ByVal XML_LCN As String, ByVal LCT_IDA As String, ByVal _ProcessID As String) As JsonResult
             Dim _pvncd As String = ""
             Dim Result As String = ""
             Dim jss As New JavaScriptSerializer
             Dim bb As MODEL_LCN = jss.Deserialize(XML_LCN, GetType(MODEL_LCN))
-            Dim keep As MODEL_LCN = jss.Deserialize(XML_KEEP, GetType(MODEL_LCN))
-            Dim phr As MODEL_LCN = jss.Deserialize(XML_PHR, GetType(MODEL_LCN))
+            'Dim keep As MODEL_LCN = jss.Deserialize(XML_KEEP, GetType(MODEL_LCN))
+            'Dim phr As MODEL_LCN = jss.Deserialize(XML_PHR, GetType(MODEL_LCN))
             Dim bao_tran As New BAO
             Dim tr_id As Integer = 0
 
@@ -2665,7 +2674,7 @@ Namespace Controllers
 
             '---------------------ที่เก็บ--------------------------------
             Dim dao_KEEP_bb As New DAO_DRUG.TB_DALCN_DETAIL_LOCATION_KEEP
-            dao_KEEP_bb.fields = keep.DALCN_DETAIL_LOCATION_KEEP
+            dao_KEEP_bb.fields = bb.DALCN_DETAIL_LOCATION_KEEP
 
             Dim dao_DALCN_DETAIL_LOCATION_KEEP As New DAO_DRUG.TB_DALCN_DETAIL_LOCATION_KEEP
             For Each dao_DALCN_DETAIL_LOCATION_KEEP.fields In dao_KEEP_bb.datas
@@ -2819,7 +2828,7 @@ Namespace Controllers
 
             'เภสัชกร
             Dim dao_PHR_bb As New DAO_DRUG.ClsDBDALCN_PHR
-            dao_PHR_bb.fields = phr.DALCN_PHR
+            dao_PHR_bb.fields = bb.DALCN_PHR
             Dim dao_DALCN_PHR As New DAO_DRUG.ClsDBDALCN_PHR
             For Each dao_DALCN_PHR.fields In dao_PHR_bb.datas
                 If (dao_DALCN_PHR.fields.PHR_MEDICAL_TYPE = "1") Or (String.IsNullOrWhiteSpace(dao_DALCN_PHR.fields.PHR_MEDICAL_TYPE) = True) Then

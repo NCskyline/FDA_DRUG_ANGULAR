@@ -117,7 +117,15 @@
         var url = "/LCN/FRM_LCN_STAFF_LCN_INFORMATION";
         REDIRECT(url);
     };
-    
+
+    $scope.SELECT_LCN_HEAD = function (datas) {
+        sessionStorage.CITIZEN_ID_AUTHORIZE = datas.CITIZEN_ID_AUTHORIZE;
+        var url = "/LCN/FRM_LCN_DRUG?PROCESS="+ PROCESS;
+        //FRM_LCN_NCT
+        REDIRECT(url);
+    };
+
+
     $scope.pageload = function () {
         var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, IDENTIFY, LCT_IDA, HEAD_LCN_IDA);
         MODLE_LCN.then(function (datas) {
@@ -140,6 +148,13 @@
             $scope.REF_LOCATION = datas.data;
 
         }, function () { });
+
+
+        var dataLo = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(PROCESS, sessionStorage.CITIZEN_ID_AUTHORIZE);
+        dataLo.then(function (datas) {
+            $scope.DATA_LCN_LIST = datas.data;
+        }, function () { });
+
     };
 
 
@@ -242,7 +257,7 @@
 
     $scope.BTN_SAVE_LCN_INPUT = function () {
 
-        var Getdata = CENTER_SV.INSERT_LCN_INPUT($scope.LIST_LCN,$scope.LIST_KEEP,$scope.LIST_PHR, PROCESS);
+        var Getdata = CENTER_SV.INSERT_LCN_INPUT($scope.LIST_LCN, PROCESS);
         Getdata.then(function (datas) {
             Swal.fire({
                 title: 'SUCCESS',
