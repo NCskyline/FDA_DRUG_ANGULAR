@@ -166,7 +166,7 @@
                 เลขบัญประจำตัวประชาชน
             </td>
             <td style="text-align:left;width:30%;">
-                <form >
+                <form>
                     <table>
                         <tr>
                             <td>
@@ -285,10 +285,10 @@
                     ยาปราศจากเชื้อ
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.syslcnsid_identify"/>
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.syslcnsid_identify" />
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.syslcnsid_lcnsid"/>
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.syslcnsid_lcnsid" />
                 </td>
             </tr>
             <tr>
@@ -310,7 +310,7 @@
                     <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_ntcd" />
                 </td>
                 <td>
-                    <input class="checkbox" type="checkbox"  ng-model="LIST_LCN.dalcn.lcnsid_taxno"/>
+                    <input class="checkbox" type="checkbox" ng-model="LIST_LCN.dalcn.lcnsid_taxno" />
                 </td>
             </tr>
             <tr>
@@ -448,4 +448,13 @@
     <br />
     <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
     <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
+    <br />
+    <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
+        <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
+
+        <input type="button" class="btn btn-lg " ng-click="BTN_BACK()" value="ย้อนกลับ" />
+    </div>
+
 </div>
+
+
