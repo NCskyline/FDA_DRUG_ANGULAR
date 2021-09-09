@@ -1245,6 +1245,18 @@
         });
         return response;
     };
+    
+    this.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN = function (LCT_IDA, process) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN"),
+            params: {
+                LCT_IDA: LCT_IDA,
+                process: process
+            }
+        });
+        return response;
+    };
 
     this.SP_GET_DATA_LCN = function (CITIZEN,lcnno,pvncd) {
         var response = $http({

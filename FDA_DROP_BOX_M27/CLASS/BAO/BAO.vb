@@ -723,4 +723,16 @@ Public Class BAO
         Return dts
     End Function
 
+    Function SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN(ByVal LCT_IDA As Integer, ByVal Process As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN @FK_IDA='" & LCT_IDA & "',@process='" & Process & "'"
+        Dim dts As New DataTable
+        Try
+            dts = clsds.dsQueryselect(sql, _conn).Tables(0)
+        Catch ex As Exception
+
+        End Try
+        Return dts
+    End Function
+
 End Class
