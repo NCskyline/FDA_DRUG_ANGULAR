@@ -5,7 +5,7 @@
     $scope.lcnno = "";
     var LCN_IDA = sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;  //
-    var PROCESS = sessionStorage.PROCESS //QueryString("PROCESS");
+    var PROCESS = sessionStorage.PROCESS; //QueryString("PROCESS");
     var CITIZEN = '0105527028430';//'0105527028430';0000000000000
     //var BSN_IDENTIFY = "1710500118665";
     //var IDENTIFY = "0000000000000";
@@ -63,15 +63,48 @@
                 $scope.lcnnoType = 'นยบ';
             } else if (process == '109') {
                 $scope.lcnnoType = 'ผยบ';
-            } else  $scope.lcnnoType = '';
-            
+            } else $scope.lcnnoType = '';
+
             $scope.FULL_MODEL.PROCESS = process;
-            $scope.SUB_PATH = SET_URL_SV('../LCN/FRM_LCN_DRUG');
+            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
 
             $scope.FULL_MODEL.FUNC_CODE = "FUNC-DATA-REQUEST";
             var Getdata = CENTER_SV.GET_FULLDATA_LCN($scope.FULL_MODEL);
             Getdata.then(function (datas) {
                 $scope.LIST_REQUEST = datas.data;
+            }, function () { });
+
+        } else if (process == '123' || process == '124' || process == '125' || process == '126' || process == '131' || process == '132' || process == '133' || process == '134') {
+            if (process == '123') {
+                $scope.lcnnoType = 'ขย1';
+                $scope.subtype = 'ขายวัตถุออกฤทธิ์ฯในประเภท ๓';
+            } else if (process == '124') {
+                $scope.lcnnoType = 'ขย1';
+                $scope.subtype = 'ขายวัตถุออกฤทธิ์ฯในประเภท ๔';
+            } else if (process == '125') {
+                $scope.lcnnoType = 'ขย1';
+                $scope.subtype = 'ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๓';
+            } else if (process == '126') {
+                $scope.lcnnoType = 'ขย1';
+                $scope.subtype = 'ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๔';
+            } else if (process == '131') {
+                $scope.lcnnoType = 'นย1';
+                $scope.subtype = 'นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๓';
+            } else if (process == '132') {
+                $scope.lcnnoType = 'นย1';
+                $scope.subtype = 'นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๔';
+            } else if (process == '133') {
+                $scope.lcnnoType = 'ขย1';
+                $scope.subtype = 'ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๓';
+            } else if (process == '134') {
+                $scope.lcnnoType = 'ขย1';
+                $scope.subtype = 'ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๔';
+            } else $scope.lcnnoType = '';
+
+            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_NCT_SEARCH');
+            var dataLo = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(PROCESS, sessionStorage.CITIZEN_ID_AUTHORIZE);
+            dataLo.then(function (datas) {
+                $scope.DATA_LCN_LIST = datas.data;
             }, function () { });
         }
     };
@@ -147,12 +180,6 @@
         data_lct.then(function (datas) {
             $scope.REF_LOCATION = datas.data;
 
-        }, function () { });
-
-
-        var dataLo = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(PROCESS, sessionStorage.CITIZEN_ID_AUTHORIZE);
-        dataLo.then(function (datas) {
-            $scope.DATA_LCN_LIST = datas.data;
         }, function () { });
 
     };

@@ -46,28 +46,28 @@
                             <div class="listree-submenu-heading">วัตถุออกฤทธิ์จิตและประสาทประเภท ๓ , ๔</div>
                             <ul class="listree-submenu-items" style="color:black">
                                 <li>
-                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=131">นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('131')" style="color:#06B716">นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=132">นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๔</a>
+                                    <a ng-click="BTN_MENU('132')" style="color:#06B716">นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๔</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=123">ขายวัตถุออกฤทธิ์ฯในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('123')" style="color:#06B716">ขายวัตถุออกฤทธิ์ฯในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=124">ขายวัตถุออกฤทธิ์ฯในประเภท ๔</a>
+                                    <a ng-click="BTN_MENU('124')" style="color:#06B716">ขายวัตถุออกฤทธิ์ฯในประเภท ๔</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=133">ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('133')" style="color:#06B716">ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=134">ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๔</a>
+                                    <a ng-click="BTN_MENU('134')" style="color:#06B716">ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๔</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=125">ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('125')" style="color:#06B716">ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_NCT_SEARCH?PROCESS=126">ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๔</a>
+                                    <a ng-click="BTN_MENU('126')" style="color:#06B716">ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๔</a>
                                 </li>
                             </ul>
                         </li>

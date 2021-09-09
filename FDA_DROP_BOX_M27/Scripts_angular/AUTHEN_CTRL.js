@@ -5,7 +5,7 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     $scope.loading = true;
     //var Trigger = QueryString("Trigger");
-    var Trigger = "DH";
+    var Trigger = "LCN";
     $scope.DOC_ID = 0;
     $scope.DOC_TITLE = "TEST";
     $scope.IS_USE = 0;
