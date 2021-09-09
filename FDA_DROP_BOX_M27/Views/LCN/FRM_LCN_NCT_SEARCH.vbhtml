@@ -1,8 +1,8 @@
-﻿<link rel="stylesheet" href="../dist/listree.min.css" />
+﻿@*<link rel="stylesheet" href="../dist/listree.min.css" />
 <script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/LCN_CTRL.js"></script>
-<link href="../css/bootstrap_limitless.min.css" rel="stylesheet" />
+<link href="../css/bootstrap_limitless.min.css" rel="stylesheet" />*@
 
 
 

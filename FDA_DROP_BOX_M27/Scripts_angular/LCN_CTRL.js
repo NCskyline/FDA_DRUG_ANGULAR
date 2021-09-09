@@ -120,6 +120,7 @@
 
     $scope.SELECT_LCN_HEAD = function (datas) {
         sessionStorage.CITIZEN_ID_AUTHORIZE = datas.CITIZEN_ID_AUTHORIZE;
+        sessionStorage.HEAD_LCN_IDA = datas.IDA;
         var url = "/LCN/FRM_LCN_DRUG?PROCESS="+ PROCESS;
         //FRM_LCN_NCT
         REDIRECT(url);
@@ -154,6 +155,13 @@
         dataLo.then(function (datas) {
             $scope.DATA_LCN_LIST = datas.data;
         }, function () { });
+        
+        var dataLcn = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN(LCT_IDA,process);
+        dataLcn.then(function (datas) {
+            $scope.DATA_LCN = datas.data;
+        }, function () { });
+
+
 
     };
 
