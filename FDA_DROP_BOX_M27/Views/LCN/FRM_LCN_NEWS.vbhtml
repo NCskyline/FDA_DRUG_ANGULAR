@@ -75,13 +75,13 @@
                             <div class="listree-submenu-heading">ยาเสพติดให้โทษประเภทที่ ๓ หรือ ๔</div>
                             <ul class="listree-submenu-items" style="color:black">
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">นำเข้ายาเสพติดให้โทษในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('14')" style="color:#06B716">นำเข้ายาเสพติดให้โทษในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=15">ส่งออกยาเสพติดให้โทษในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('15')" style="color:#06B716">ส่งออกยาเสพติดให้โทษในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=16">จำหน่ายยาเสพติดให้โทษในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('16')" style="color:#06B716">จำหน่ายยาเสพติดให้โทษในประเภท ๓</a>
                                 </li>
                             </ul>
                         </li>
@@ -89,10 +89,10 @@
                             <div class="listree-submenu-heading">ผลิตวัตถุออกฤทธิ์ฯประเภท ๓ หรือ ๔</div>
                             <ul class="listree-submenu-items" style="color:black">
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">ผลิตวัตถุออกฤทธิ์ฯในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('127')" style="color:#06B716">ผลิตวัตถุออกฤทธิ์ฯในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=15">ผลิตวัตถุออกฤทธิ์ฯในประเภท ๔</a>
+                                    <a ng-click="BTN_MENU('128')" style="color:#06B716">ผลิตวัตถุออกฤทธิ์ฯในประเภท ๔</a>
                                 </li>
                             </ul>
                         </li>
@@ -100,7 +100,7 @@
                             <div class="listree-submenu-heading">ผลิตยาเสพติดให้โทษประเภทที่ ๓ หรือ ๔</div>
                             <ul class="listree-submenu-items" style="color:black">
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">ผลิตยาเสพติดให้โทษในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('114')" style="color:#06B716">ผลิตยาเสพติดให้โทษในประเภท ๓</a>
                                 </li>
                             </ul>
                         </li>

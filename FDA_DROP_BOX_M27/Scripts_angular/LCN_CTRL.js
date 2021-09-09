@@ -48,21 +48,21 @@
 
         if (process == '101' || process == '103' || process == '104' || process == '105' || process == '106' || process == '107' || process == '108' || process == '109') {
             if (process == '101') {
-                $scope.lcnnoType = 'ขย1';
+                $scope.lcnnoType = '(ขย1)';
             } else if (process == '103') {
-                $scope.lcnnoType = 'ขย3';
+                $scope.lcnnoType = '(ขย3)';
             } else if (process == '104') {
-                $scope.lcnnoType = 'ขย4';
+                $scope.lcnnoType = '(ขย4)';
             } else if (process == '105') {
-                $scope.lcnnoType = 'นย1';
+                $scope.lcnnoType = '(นย1)';
             } else if (process == '106') {
-                $scope.lcnnoType = 'ผย1';
+                $scope.lcnnoType = '(ผย1)';
             } else if (process == '107') {
-                $scope.lcnnoType = 'ขยบ';
+                $scope.lcnnoType = '(ขยบ)';
             } else if (process == '108') {
-                $scope.lcnnoType = 'นยบ';
+                $scope.lcnnoType = '(นยบ)';
             } else if (process == '109') {
-                $scope.lcnnoType = 'ผยบ';
+                $scope.lcnnoType = '(ผยบ)';
             } else $scope.lcnnoType = '';
 
             $scope.FULL_MODEL.PROCESS = process;
@@ -76,34 +76,62 @@
 
         } else if (process == '123' || process == '124' || process == '125' || process == '126' || process == '131' || process == '132' || process == '133' || process == '134') {
             if (process == '123') {
-                $scope.lcnnoType = 'ขย1';
-                $scope.subtype = 'ขายวัตถุออกฤทธิ์ฯในประเภท ๓';
+                $scope.lcnnoType = '(ขย1) > (ขายวัตถุออกฤทธิ์ฯในประเภท ๓)';
             } else if (process == '124') {
-                $scope.lcnnoType = 'ขย1';
-                $scope.subtype = 'ขายวัตถุออกฤทธิ์ฯในประเภท ๔';
+                $scope.lcnnoType = '(ขย1) > (ขายวัตถุออกฤทธิ์ฯในประเภท ๔)';
             } else if (process == '125') {
-                $scope.lcnnoType = 'ขย1';
-                $scope.subtype = 'ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๓';
+                $scope.lcnnoType = '(ขย1) > (ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๓)';
             } else if (process == '126') {
-                $scope.lcnnoType = 'ขย1';
-                $scope.subtype = 'ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๔';
+                $scope.lcnnoType = '(ขย1) > (ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๔)';
             } else if (process == '131') {
-                $scope.lcnnoType = 'นย1';
-                $scope.subtype = 'นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๓';
+                $scope.lcnnoType = '(นย1) > (นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๓)';
             } else if (process == '132') {
-                $scope.lcnnoType = 'นย1';
-                $scope.subtype = 'นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๔';
+                $scope.lcnnoType = '(นย1) > (นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๔)';
             } else if (process == '133') {
-                $scope.lcnnoType = 'ขย1';
-                $scope.subtype = 'ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๓';
+                $scope.lcnnoType = '(ขย1) > (ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๓)';
             } else if (process == '134') {
-                $scope.lcnnoType = 'ขย1';
-                $scope.subtype = 'ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๔';
+                $scope.lcnnoType = '(ขย1) > (ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๔)';
             } else $scope.lcnnoType = '';
 
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_NCT_SEARCH');
-            var dataLo = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(PROCESS, sessionStorage.CITIZEN_ID_AUTHORIZE);
+            var dataLo = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
             dataLo.then(function (datas) {
+                $scope.DATA_LCN_LIST = datas.data;
+            }, function () { });
+
+        } else if (process == '14' || process == '15' || process == '16') {
+            if (process == '14') {
+                $scope.lcnnoType = '(นย1) > (นำเข้ายาเสพติดให้โทษในประเภท ๓)';
+            } else if (process == '15') {
+                $scope.lcnnoType = '(ขย1) > (ส่งออกยาเสพติดให้โทษในประเภท ๓)';
+            } else if (process == '16') {
+                $scope.lcnnoType = '(ขย1) > (จำหน่ายยาเสพติดให้โทษในประเภท ๓)';
+            } else $scope.lcnnoType = '';
+
+            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_NCT_SEARCH');
+            var data = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
+            data.then(function (datas) {
+                $scope.DATA_LCN_LIST = datas.data;
+            }, function () { });
+
+        } else if (process == '127' || process == '128') {
+            if (process == '127') {
+                $scope.lcnnoType = '(ผย1) > (ผลิตวัตถุออกฤทธิ์ฯในประเภท ๓)';
+            } else if (process == '128') {
+                $scope.lcnnoType = '(ผย1) > (ผลิตวัตถุออกฤทธิ์ฯในประเภท ๔)';
+            } else $scope.lcnnoType = '';
+
+            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_NCT_SEARCH');
+            var data1 = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
+            data1.then(function (datas) {
+                $scope.DATA_LCN_LIST = datas.data;
+            }, function () { });
+
+        } else if (process == '114') {
+            $scope.lcnnoType = '(ผย1) > (ผลิตยาเสพติดให้โทษในประเภท ๓)';
+            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_NCT_SEARCH');
+            var data2 = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
+            data2.then(function (datas) {
                 $scope.DATA_LCN_LIST = datas.data;
             }, function () { });
         }
@@ -151,11 +179,9 @@
         REDIRECT(url);
     };
 
-    $scope.SELECT_LCN_HEAD = function (datas) {
-        sessionStorage.CITIZEN_ID_AUTHORIZE = datas.CITIZEN_ID_AUTHORIZE;
-        var url = "/LCN/FRM_LCN_DRUG?PROCESS="+ PROCESS;
-        //FRM_LCN_NCT
-        REDIRECT(url);
+    $scope.SELECT_LCN_HEAD = function (datas,lcnnotype) {
+        $scope.lcnnoType = lcnnotype;
+        $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
     };
 
 

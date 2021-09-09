@@ -13,16 +13,7 @@ End Code
         <div>
             <table width="100%">
                 <tr>
-                    <td width="40%">ใบอนุญาต  ({{lcnnoType}}) > ({{subtype}})</td>
-                    <td align="center">เลขที่ใบอนุญาต</td>
-                    <td>
-                        <select class="form-control">
-                            <option>--กรุณาเลือกใบอนุญาต--</option>
-                        </select>
-                    </td>
-                    <td align="center">
-                        <button class="btn btn-lg" ng-click="BTN_SEARCH(BSN_CITIZEN)">ค้นหา</button>
-                    </td>
+                    <td width="40%">ใบอนุญาต  {{lcnnoType}}</td>                   
                 </tr>
             </table>
         </div>
@@ -68,7 +59,7 @@ End Code
                                 <td>{{cc.REMARK}}</td>
                                 <td>
                                     <span class="fa fa-eye"></span>
-                                    <a ng-click="SELECT_LCN_HEAD(cc)">
+                                    <a ng-click="SELECT_LCN_HEAD(cc,lcnnoType)">
                                         ใบย่อย
                                     </a>
                                 </td>
