@@ -153,6 +153,29 @@
         return response;
     };
 
+    this.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY = function (IDENTIFY) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_LCN_EXTEND_REQUEST_BY_IDENTIFY"),
+            params: {
+                identify: IDENTIFY
+            }
+        });
+        return response;
+    };
+
+
+    this.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR = function (IDENTIFY , _year) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR"),
+            params: {
+                identify: IDENTIFY,
+                _YEAR: _year
+            }
+        });
+        return response;
+    };
     //this.GET_LCN_INFORMATION_BSN_INPUT = function (LOCATION_TYPE_CD,iden) {
     //    var response = $http({
     //        method: "post",

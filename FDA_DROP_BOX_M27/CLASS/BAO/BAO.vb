@@ -728,11 +728,37 @@ Public Class BAO
         Dim sql As String = "exec SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN @FK_IDA='" & LCT_IDA & "',@process='" & Process & "'"
         Dim dts As New DataTable
         Try
-            dts = clsds.dsQueryselect(sql, _conn).Tables(0)
+            dts = clsds.dsQueryselect(sql, _con_d).Tables(0)
         Catch ex As Exception
 
         End Try
         Return dts
     End Function
+    Public Function SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(ByVal identify As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_LCN_EXTEND_REQUEST_BY_IDENTIFY @identify='" & identify & "'"
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
 
+        End Try
+
+
+        Return dt
+    End Function
+    '
+    Public Function SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR(ByVal identify As String, ByVal _year As Integer) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR @identify='" & identify & "' ,@extend_year=" & _year
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+
+        Return dt
+    End Function
 End Class

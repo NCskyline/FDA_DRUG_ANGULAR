@@ -45,6 +45,22 @@ Namespace Controllers
 
         End Function
 
+        Function SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(ByVal identify As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(identify)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
+        Function SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR(ByVal identify As String, ByVal _YEAR As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR(identify, _YEAR)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN(ByVal LCT_IDA As String, ByVal process As String) As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO

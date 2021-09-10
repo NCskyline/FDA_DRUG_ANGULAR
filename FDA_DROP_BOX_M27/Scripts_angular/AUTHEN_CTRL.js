@@ -33,7 +33,7 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 sessionStorage.CITIZEN_ID_AUTHORIZE = datas.data.CITIZEN_ID_AUTHORIZE;
                 sessionStorage.THANM = datas.data.THANM;
                 sessionStorage.COMPANY_NAME = datas.data.COMPANY_NAME;
-                
+                sessionStorage.TOKEN = datas.data.TOKEN;
                 if (Trigger == "LCN") {
                     window.location = "/LCN/FRM_LCN_NEWS";
                 } else if (Trigger == "DH") {

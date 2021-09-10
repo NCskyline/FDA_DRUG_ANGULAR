@@ -1,6 +1,6 @@
 ﻿app.controller('LCN_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
-    CHK_TOKEN();
+   // CHK_TOKEN();
     $scope.CITIZEN = "";
     $scope.lcnno = "";
     var LCN_IDA = sessionStorage.LCN_IDA;
@@ -8,7 +8,8 @@
     var PROCESS = sessionStorage.PROCESS; //QueryString("PROCESS");
     var CITIZEN = '0105527028430';//'0105527028430';0000000000000
     //var BSN_IDENTIFY = "1710500118665";
-    //var IDENTIFY = "0000000000000";
+    var IDENTIFY = sessionStorage.CITIZEN_ID_AUTHORIZE; //"0000000000000";
+    //var IDENTIFY = '0000000000000';
     var HEAD_LCN_IDA = sessionStorage.HEAD_LCN_IDA;
     //var LCT_IDA = 117194;
     
@@ -184,7 +185,21 @@
         $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
     };
 
-
+    $scope.BTN_EXTEND = function () {
+        if (QueryString('staff') == '') {
+            var url = 'https://medicina.fda.moph.go.th/FDA_DRUG_EXT/AUTHEN/AUTHEN_GATEWAY?Token=' + sessionStorage.TOKEN + '&identify=' + sessionStorage.IDENTIFY;
+            window.open(url, '_blank').focus();
+            //REDIRECT();
+        } else {
+            var url = 'https://medicina.fda.moph.go.th/FDA_DRUG_EXT/AUTHEN/AUTHEN_GATEWAY?Token=' + sessionStorage.TOKEN + '&identify=' + sessionStorage.IDENTIFY + '&staff=1';
+            window.open(url, '_blank').focus();
+            //REDIRECT();
+        }
+        
+    };
+    $scope.RELOAD_PAGE = function () {
+        location.reload()
+    };
     $scope.pageload = function () {
         var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, IDENTIFY, LCT_IDA, HEAD_LCN_IDA);
         MODLE_LCN.then(function (datas) {
@@ -207,6 +222,27 @@
             $scope.REF_LOCATION = datas.data;
 
         }, function () { });
+
+        if ($scope.LIST_EXTEND.YEAR_SELECT == "1") {
+            var _YEAR = new Date().getFullYear();
+            if (_YEAR < 2500) {
+                _YEAR = _YEAR + 544;
+            }
+            var data_lct = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR(IDENTIFY, _YEAR);
+            data_lct.then(function (datas) {
+                $scope.LIST_EXTEND = datas.data;
+
+            }, function () { });
+
+        } else {
+            var data_lct = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(IDENTIFY);
+            data_lct.then(function (datas) {
+                $scope.LIST_EXTEND = datas.data;
+
+            }, function () { });
+
+        }
+
 
     };
 
@@ -240,6 +276,31 @@
         }, function () { });
 
     };
+
+    $scope.getdetails_extend = function (ddl_selected) {
+        var _YEAR = new Date().getFullYear();
+        if (_YEAR < 2500) {
+            _YEAR = _YEAR + 544;
+        }
+
+        if (ddl_selected == "1") {
+
+            var data_lct = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR(IDENTIFY, _YEAR);
+            data_lct.then(function (datas) {
+                $scope.LIST_EXTEND = datas.data;
+
+            }, function () { });
+
+        } else {
+            var data_lct = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(IDENTIFY);
+            data_lct.then(function (datas) {
+                $scope.LIST_EXTEND = datas.data;
+
+            }, function () { });
+
+        }
+    };
+
 
     $scope.getdetails_lct = function (IDA) {
 
