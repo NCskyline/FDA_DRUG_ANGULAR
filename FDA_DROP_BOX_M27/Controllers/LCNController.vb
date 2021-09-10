@@ -157,6 +157,9 @@ Namespace Controllers
         Function INPUT_DRUG_YORBOR13() As ActionResult
             Return View()
         End Function
+        Function FRM_EXTEND_TIME_LOCATION_MAIN_USER() As ActionResult
+            Return View()
+        End Function
     End Class
 
     Public Class LCN_CENTERController

@@ -21,8 +21,7 @@
     <OptionInfer>On</OptionInfer>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>
-    </Use64BitIISExpress>
+    <Use64BitIISExpress>false</Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -426,6 +425,7 @@
     </Content>
     <Content Include="Views\LCN_STAFF_EDIT\FRM_STAFF_LCN_BSN_EDIT_ADDR.vbhtml" />
     <Content Include="Views\LCN_STAFF_EDIT\FRM_STAFF_LCN_PHR_EDIT.vbhtml" />
+    <Content Include="Views\LCN\FRM_EXTEND_TIME_LOCATION_MAIN_USER.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>
