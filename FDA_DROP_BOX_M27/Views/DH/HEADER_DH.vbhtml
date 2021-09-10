@@ -184,6 +184,7 @@ End Code*@
                 </tfoot>
             </table>
         </div>
+        <br />
     </div>
     <div style="text-align:center">
         <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_DH()" value="บันทึก" />

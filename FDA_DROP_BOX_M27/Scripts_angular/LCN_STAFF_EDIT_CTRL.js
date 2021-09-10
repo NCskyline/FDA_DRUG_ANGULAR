@@ -1,9 +1,9 @@
 ﻿app.controller('LCN_STAFF_EDIT_CTRL', function ($scope, CENTER_SV, $http, $location) {
-    var LCN_IDA = sessionStorage.LCN_IDA;//sessionStorage.LCN_IDA;
+    var LCN_IDA = 3114;//sessionStorage.LCN_IDA;//sessionStorage.LCN_IDA;
     var LCT_IDA = 69778;
-    var CITIZEN_ID ='1111111111111';
+    var CITIZEN_ID ='0105522020724';
     var LOCATION_ADDRESS_IDA = LCT_IDA;
-    var CITIZEN_ID_AUTHORIZE = sessionStorage.CITIZEN_ID_AUTHORIZE; //= '0105522020724';
+    var CITIZEN_ID_AUTHORIZE = '0105522020724'; //sessionStorage.CITIZEN_ID_AUTHORIZE; //=
     var LOCATION_TYPE = QueryString("LOCATION_TYPE");
     //$scope.currentPage = 0;
     //$scope.paging = {
@@ -216,13 +216,13 @@
         }, function () { });
 
         
-        var databsn = CENTER_SV.GET_LCNSNM_STAFF_EDIT(LCN_IDA);
-        databsn.then(function (datas) {
+        var databsn1 = CENTER_SV.GET_LCNSNM_STAFF_EDIT(LCN_IDA);
+        databsn1.then(function (datas) {
             $scope.DATA_LCNS = datas.data;
         }, function () { });
 
-        var databsn = CENTER_SV.SP_DALCN_PHR_BY_FK_IDA_2(LCN_IDA);
-        databsn.then(function (datas) {
+        var databsn2 = CENTER_SV.SP_DALCN_PHR_BY_FK_IDA_2(LCN_IDA);
+        databsn2.then(function (datas) {
             $scope.DATA_PHR = datas.data;
         }, function () { });
 
@@ -490,9 +490,10 @@
     };
 
     
-    $scope.BTN_UPDATE_STAT_LCN = function () {
-        //$scope.INFO_LIST.dalcn.frtappdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.frtappdate);
-        $scope.INFO_LIST.dalcn.appdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.appdate);
+    $scope.BTN_UPDATE_STAT_LCN = function (cncdate,cnccscd) {
+        //$scope.INFO_LIST.dalcn.frtappdate = CV_DATE($scope.INFO_LIST.dalcn.frtappdate);
+        //$scope.INFO_LIST.dalcn.appdate = CV_DATE($scope.INFO_LIST.dalcn.appdate);
+       
         //$scope.INFO_LIST.dalcn.lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.lmdfdate);
 
         //$scope.INFO_LIST.dalcn.rcvdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.rcvdate);
@@ -512,7 +513,7 @@
         //$scope.INFO_LIST.dalcn.syslctaddr_lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslctaddr_lmdfdate);
         //$scope.INFO_LIST.dalcn.FIRST_APP_DATE = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.FIRST_APP_DATE);
         //$scope.INFO_LIST.dalcn.expdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.expdate); 
-        var Getdata = CENTER_SV.UPDATE_STAT_LCN($scope.INFO_LIST,LCN_IDA, CITIZEN_ID, sessionStorage.CITIZEN_ID_AUTHORIZE);
+        var Getdata = CENTER_SV.UPDATE_STAT_LCN(cncdate, cnccscd, LCN_IDA, CITIZEN_ID, sessionStorage.CITIZEN_ID_AUTHORIZE);
         Getdata.then(function (datas) {
             Swal.fire({
                 title: 'SUCCESS',
@@ -524,6 +525,7 @@
             });
         });
     };
+
     $scope.BTN_UPDATE_OPENTIME_LCN = function () {
         $scope.INFO_LIST.dalcn.appdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.appdate);
         //$scope.INFO_LIST.dalcn.expdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.expdate); 
@@ -587,7 +589,9 @@
         });
     };
 
-
+    function CV_DATE(data) {
+        return new Date(parseInt(data.replace('/Date(', '').replace(')/', ''))).toLocaleDateString();
+    }
 
     function ConvertJsonDateToDate(date) {
         var parsedDate = new Date(parseInt(date.substr(6)));

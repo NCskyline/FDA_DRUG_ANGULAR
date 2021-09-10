@@ -358,13 +358,14 @@
         return response;
     };
     
-    this.UPDATE_STAT_LCN = function (INFO_LIST, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
+    this.UPDATE_STAT_LCN = function (cncdate, cnccscd, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/UPDATE_STAT_LCN"),
             dataType: "json",
             data: {
-                XML_LCN: JSON.stringify(INFO_LIST),
+                cncdate: cncdate,
+                cnccscd: cnccscd,
                 LCN_IDA: IDA,
                 CITIZEN_ID: CITIZEN_ID,
                 CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE

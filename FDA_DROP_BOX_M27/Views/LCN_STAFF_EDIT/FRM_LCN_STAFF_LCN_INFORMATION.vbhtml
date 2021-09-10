@@ -95,7 +95,7 @@
                 </td>
             </tr>
         </table>
-        <input type="button" value="เปลี่ยนสถานะ" style="margin-left:20%" ng-click="BTN_UPDATE_STAT_LCN()" />
+        <input type="button" value="เปลี่ยนสถานะ" style="margin-left:20%" ng-click="BTN_UPDATE_STAT_LCN(INFO_LIST.dalcn.cncdate,INFO_LIST.dalcn.cnccscd)" />
         <br />
 
         <h1>เวลาทำการ</h1>

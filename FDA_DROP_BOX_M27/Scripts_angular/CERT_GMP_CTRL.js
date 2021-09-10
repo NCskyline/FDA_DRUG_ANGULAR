@@ -278,8 +278,9 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 });
                 var upload = CENTER_SV.UPLOAD_PDF_ATTACH($scope.DOC_LIST.FILE_LISTs, TR_ID, PROCESS, $scope.PDF);
                 upload.then(function (datas) {
-
-
+                    if (datas.data.result == 'SUCCESS') {
+                        $scope.FLAG = 'PASS';
+                    } 
                 });
                 Swal.fire({
                     title: 'SUCCES',
