@@ -113,3 +113,15 @@
 
     Public PHR_NAME As String
 End Class
+
+Public Class MODEL_DALCN
+    Private _dalcn As New dalcn
+    Public Property dalcn() As dalcn
+        Get
+            Return _dalcn
+        End Get
+        Set(ByVal value As dalcn)
+            _dalcn = value
+        End Set
+    End Property
+End Class

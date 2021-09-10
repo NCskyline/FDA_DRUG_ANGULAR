@@ -1613,7 +1613,8 @@ Namespace Controllers
                 Dim NAME_REAL As String = ""
                 Dim DD As Integer = 1
                 Dim Count As Integer = 1
-                Dim path As String = "F:\path\DRUG\upload\" ''_PATH_DEFAULT & "\upload\"
+                Dim path As String = _PATH_DEFAULT & "\upload\"
+                ''Dim path As String = "F:\path\DRUG\upload\"
                 Directory.CreateDirectory(path) 'สร้าง PATH รอ
                 Dim i As Integer = 0
 
@@ -3402,16 +3403,17 @@ Namespace Controllers
             Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function
 
-        Function UPDATE_STAT_LCN(ByVal XML_LCN As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String) As JsonResult
+        Function UPDATE_STAT_LCN(ByVal cncdate As DateTime, ByVal cnccscd As Integer, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String) As JsonResult
             Dim Result As String = ""
-            Dim jss As New JavaScriptSerializer
-            Dim bb As MODEL_STAFF_EDIT_LCN = jss.Deserialize(XML_LCN, GetType(MODEL_STAFF_EDIT_LCN))
+            'Dim jss As New JavaScriptSerializer
+            'jss.MaxJsonLength = Int32.MaxValue
+            'Dim bb As MODEL_STAFF_EDIT_LCN = jss.Deserialize(XML_LCN, GetType(MODEL_STAFF_EDIT_LCN))
 
             Dim dao As New DAO_DRUG.ClsDBdalcn
             dao.GetDataby_IDA(LCN_IDA)
-            dao.fields.cnccscd = bb.dalcn.cnccscd
+            dao.fields.cnccscd = cnccscd
             Try
-                dao.fields.cncdate = bb.dalcn.cncdate
+                dao.fields.cncdate = cncdate
             Catch ex As Exception
 
             End Try

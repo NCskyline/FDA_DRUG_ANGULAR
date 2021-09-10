@@ -179,12 +179,12 @@ End Code
                                 <td style="width:10%;">ชื่อไฟล์</td>
                                 <td style="width:50%;">{{datas.FILENAME}}</td>
                                 <td style="width:5%">
-                                    <a ng-click="OPEN_DOC_PATH(datas.PATH)">{{datas.FLAG}}</a>
+                                    <a ng-click="OPEN_DOC_PATH(datas.PATH)">{{FLAG}}</a>
                                 </td>
-                                <td style="width:20%; text-align: right;">
+                                @*<td style="width:20%; text-align: right;">
                                     <input type="button" ng-click="UPLOAD_PDFs(datas)" value="บันทึก" />
                                     <input type="button" ng-click="deleteRow(datas,$index)" value="ลบ" />
-                                </td>
+                                </td>*@
                             </tr>
 
                         </table>
