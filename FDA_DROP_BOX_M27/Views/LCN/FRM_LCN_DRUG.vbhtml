@@ -36,7 +36,7 @@ End Code
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="data in DATA_LCN">
+                                    <tr ng-repeat="data in DATA_LCN_MAIN">
                                         <td>{{data.LCNNO_MANUAL}}</td>
                                         <td>{{data.STATUS_NAME}}</td>
                                         <td>{{data.thanameplace}}</td>

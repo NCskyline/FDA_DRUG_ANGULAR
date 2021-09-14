@@ -3,7 +3,8 @@
    // CHK_TOKEN();
     $scope.CITIZEN = "";
     $scope.lcnno = "";
-    var LCN_IDA = sessionStorage.LCN_IDA;
+    
+    var LCN_IDA = 70911;//sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;  //
     var PROCESS = sessionStorage.PROCESS; //QueryString("PROCESS");
     var CITIZEN = '0105527028430';//'0105527028430';0000000000000
@@ -41,6 +42,23 @@
             $scope.PREFIX = datas.data;
 
         }, function () { });
+
+        //$scope.PROCESS_ID = '101';//sessionStorage.DH_PROCESS_ID;
+        //var IDA = sessionStorage.IDA;
+
+        //if ($scope.PROCESS_ID == '101') {
+        //    $scope.INPUT = SET_URL_SV('/LCN/INPUTdalcn_output_1');
+        //}
+        //else if ($scope.PROCESS_ID == '102') {
+        //    $scope.INPUT = SET_URL_SV('/LCN/INPUTdalcn_output_2');
+        //}
+        //else if ($scope.PROCESS_ID == '103') {
+        //    $scope.INPUT = SET_URL_SV('/LCN/INPUTdalcn_output_3');
+        //}
+        //else if ($scope.PROCESS_ID == '104') {
+        //    $scope.INPUT = SET_URL_SV('/LCN/INPUTdalcn_output_4');
+        //}
+
 
     }
 
@@ -207,8 +225,16 @@
             $scope.LIST_LCN = datas.data;
             $scope.LIST_LCN.PROCESS = PROCESS;
             $scope.LIST_LCN.session = sessionStorage;
+            //$scope.LIST_LCN.PROCESS = "101";
+        }, function () { });
+
+        
+        var data_keep = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(LCT_IDA, PROCESS,IDENTIFY);
+        data_keep.then(function (datas) {
+            $scope.DATA_LCN_MAIN = datas.data;
 
         }, function () { });
+
 
 
         var data_keep = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP('2', IDENTIFY);
@@ -242,6 +268,18 @@
             }, function () { });
 
         }
+
+        var datakeep = CENTER_SV.SP_MASTER_DALCN_DETAIL_LOCATION_KEEP_BY_IDA(LCN_IDA);
+        datakeep.then(function (datas) {
+            $scope.DATA_KEEP_SHOW = datas.data;
+        }, function () { });
+
+        var dataPHR = CENTER_SV.SP_DALCN_PHR_BY_FK_IDA_2(LCN_IDA);
+        dataPHR.then(function (datas) {
+            $scope.DATA_PHR_SHOW = datas.data;
+        }, function () { });
+
+
 
 
     };
@@ -299,6 +337,12 @@
             }, function () { });
 
         }
+    };
+    $scope.SELECT_LCN = function (datas) {
+        sessionStorage.LCN_IDA = datas.IDA;
+        //sessionStorage.STAGE = 'SHOW';
+        //sessionStorage.PREVIEW_CERT_IDA = datas.IDA;
+        REDIRECT('/LCN/PREVIEW_INPUT_LCN');
     };
 
 

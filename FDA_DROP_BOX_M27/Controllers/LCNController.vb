@@ -160,6 +160,10 @@ Namespace Controllers
         Function FRM_EXTEND_TIME_LOCATION_MAIN_USER() As ActionResult
             Return View()
         End Function
+
+        Function PREVIEW_INPUT_LCN() As ActionResult
+            Return View()
+        End Function
     End Class
 
     Public Class LCN_CENTERController

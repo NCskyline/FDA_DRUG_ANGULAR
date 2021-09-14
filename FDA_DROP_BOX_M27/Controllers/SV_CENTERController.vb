@@ -69,6 +69,15 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
 
         End Function
+        '
+        Function SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(ByVal LCT_IDA As String, ByVal process As String, ByVal iden As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(LCT_IDA, process, iden)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_LCN_BY_PROCESS_AND_IDEN(ByVal process As String, ByVal iden As String) As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO
