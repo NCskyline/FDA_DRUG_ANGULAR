@@ -1,6 +1,6 @@
-﻿@Code
+﻿@*@Code
     ViewData("Title") = "PREVIEW_EDIT_LCN"
-End Code
+End Code*@
 
 <div ng-show="LIST_GMP.DALCN_EDIT_REQUEST.PROCESS_ID == '11104'">
         <div style="font-family:'Taviraj';font-size:24px;">

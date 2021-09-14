@@ -734,6 +734,18 @@ Public Class BAO
         End Try
         Return dts
     End Function
+
+    Function SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(ByVal LCT_IDA As Integer, ByVal Process As String, ByVal iden As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2 @FK_IDA='" & LCT_IDA & "',@process='" & Process & "' ,@iden='" & iden & "'"
+        Dim dts As New DataTable
+        Try
+            dts = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+        Return dts
+    End Function
     Public Function SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(ByVal identify As String) As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_LCN_EXTEND_REQUEST_BY_IDENTIFY @identify='" & identify & "'"
