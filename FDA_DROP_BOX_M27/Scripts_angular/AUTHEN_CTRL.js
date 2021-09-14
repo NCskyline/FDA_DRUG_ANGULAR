@@ -10,17 +10,16 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
     $scope.DOC_TITLE = "TEST";
     $scope.IS_USE = 0;
 
-    pageload();
 
-    function pageload() {
-
+    $scope.pageload = function (TYPE) {
+       
         var token = '';
         if (location.hostname == 'localhost') {
             token = "PASS";
         } else {
             token = QueryString("Token");
         }
-        
+
         //var token = "PASS";
         sessionStorage.token = token;
 
@@ -35,21 +34,35 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 sessionStorage.COMPANY_NAME = datas.data.COMPANY_NAME;
                 sessionStorage.TOKEN = datas.data.TOKEN;
 
-                
-                window.location = "/DH/FRM_MAIN_PAGE_PHESAJ";  // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
-               
-               // window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PHESAJ";
+                if (location.hostname == 'localhost') {
+
+                    if (TYPE == 'LCN') {
+                        window.location = "/LCN/FRM_LCN_NEWS";
+                    } else if (TYPE == 'DH') {
+                        window.location = "/DH/FRM_MAIN_PAGE_PHESAJ";
+                    }
+
+                } else {
+
+                    if (TYPE == 'LCN') {
+                        window.location = "/FDA_DRUG_ANGULAR_DEMO/LCN/FRM_LCN_NEWS";
+                    } else if (TYPE == 'DH') {
+                        window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PHESAJ";  // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
+                    }
+                    
+                }
+                // window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PHESAJ";
             }
             else {
 
                 window.location = "http://privus.fda.moph.go.th";
-              //  
+                //  
             }
             //LOAD_JS();
         }, function () { });
 
-      //  GET_LIST_WAIT();
-    }
+        //  GET_LIST_WAIT();
+    };
 
 
 }).controller('appController', ['$scope', function ($scope) {
