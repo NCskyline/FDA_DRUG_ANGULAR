@@ -5,15 +5,15 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     $scope.loading = true;
     //var Trigger = QueryString("Trigger");
-    var Trigger = "DH";
+    //var Trigger = "DH";
     $scope.DOC_ID = 0;
     $scope.DOC_TITLE = "TEST";
     $scope.IS_USE = 0;
 
-    pageload();
+    //pageload();
 
-    function pageload() {
-
+    function pageload(Trigger) {
+        
         var token = '';
         if (location.hostname == 'localhost') {
             token = "PASS";
@@ -39,7 +39,7 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 } else if (Trigger == "DH") {
                     sessionStorage.LCN_IDA = '0';
                     sessionStorage.DH_PROCESS_ID = '';
-                    //window.location = "/DH/FRM_MAIN_PAGE_PHESAJ"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
+                    //window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PHESAJ"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
                     window.location = "/DH/FRM_MAIN_PAGE_PHESAJ";
                 }
                
@@ -55,7 +55,13 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
       //  GET_LIST_WAIT();
     }
+    $scope.PageLoad_LCN = function () {
+        pageload('LCN');
+    };
 
+    $scope.PageLoad_DH = function () {
+        pageload('DH');
+    };
 
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });

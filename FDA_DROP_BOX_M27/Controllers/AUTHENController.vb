@@ -20,5 +20,8 @@ Namespace Controllers
         Function FRM_DATA_REQUEST() As ActionResult
             Return View()
         End Function
+        Function AUTHEN_LCN() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
