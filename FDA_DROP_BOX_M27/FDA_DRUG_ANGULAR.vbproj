@@ -428,6 +428,7 @@
     <Content Include="Views\LCN\FRM_EXTEND_TIME_LOCATION_MAIN_USER.vbhtml" />
     <Content Include="Views\LCN\PREVIEW_INPUT_LCN.vbhtml" />
     <Content Include="Views\AUTHEN\AUTHEN_LCN.vbhtml" />
+    <Content Include="Views\LCN\FRM_SELECT_LCT.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>

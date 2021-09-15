@@ -78,6 +78,15 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
 
         End Function
+
+        Function SP_CUSTOMER_DALCN_LOCATION_ADDRESS_by_LOCATION_TYPE_ID_and_LCNSID(ByVal LOCATION_TYPE_CD As String, ByVal iden As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_CUSTOMER_DALCN_LOCATION_ADDRESS_by_LOCATION_TYPE_ID_and_LCNSID(LOCATION_TYPE_CD, iden)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_LCN_BY_PROCESS_AND_IDEN(ByVal process As String, ByVal iden As String) As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO
@@ -643,6 +652,269 @@ Namespace Controllers
 #End Region
 
 #Region "GET_DATA"
+        Function GET_LCN_INFORMATION_INPUT_V2(ByVal IDENTIFY As String, ByVal LCT_IDA As String) As JsonResult
+            Dim model As New MODEL_LCN
+            Dim bao As New BAO
+
+            model.IDENTIFY = IDENTIFY
+            Dim lcnno_auto As String = ""
+            Dim lcnno_format As String = ""
+            Dim HEAD_LCN_IDA As Integer = 0
+            Try
+                If HEAD_LCN_IDA <> 0 Then
+                    Dim dao_main As New DAO_DRUG.ClsDBdalcn
+                    dao_main.GetDataby_IDA(HEAD_LCN_IDA)
+                    Try
+                        lcnno_auto = dao_main.fields.lcnno
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        If Len(lcnno_auto) > 0 Then
+
+                            If Right(Left(lcnno_auto, 3), 1) = "5" Then
+                                lcnno_format = "จ. " & CStr(CInt(Right(lcnno_auto, 4))) & "/25" & Left(lcnno_auto, 2)
+                            Else
+                                lcnno_format = dao_main.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                            End If
+                            'lcnno_format = dao.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                        End If
+                    Catch ex As Exception
+
+                    End Try
+
+                    model.HEAD_LCNNO_NCT = lcnno_format
+
+                    Dim dao_phr As New DAO_DRUG.ClsDBDALCN_PHR
+                    dao_phr.GetDataby_FK_IDA(HEAD_LCN_IDA)
+
+                    Try
+                        model.DALCN_PHR = dao_phr.fields
+                    Catch ex As Exception
+
+                    End Try
+                End If
+
+            Catch ex As Exception
+
+            End Try
+            'Dim dt_bsn As New DataTable
+            'dt_bsn = bao.SP_LOCATION_BSN_BY_IDENTIFY(BSN_IDENTIFY)
+            'For Each dr As DataRow In dt_bsn.Rows
+            '    Try
+            '        model.BSN_THAIFULLNAME = dr("BSN_THAIFULLNAME")
+            '    Catch ex As Exception
+
+            '    End Try
+            '    Try
+            '        model.BSN_IDENTIFY = dr("BSN_IDENTIFY")
+            '    Catch ex As Exception
+
+            '    End Try
+            '    Try
+            '        model.AGE = dr("AGE")
+            '    Catch ex As Exception
+
+            '    End Try
+            '    Try
+            '        model.BSN_FULL_ADDR = dr("BSN_FULL_ADDR")
+            '    Catch ex As Exception
+
+            '    End Try
+            '    Try
+            '        model.BSN_TELEPHONE = dr("BSN_TELEPHONE")
+            '    Catch ex As Exception
+
+            '    End Try
+            '    Try
+            '        model.BSN_FAX = dr("BSN_FAX")
+            '    Catch ex As Exception
+
+            '    End Try
+            'Next
+            Dim dt_name As New DataTable
+            'Dim bao As New BAO
+            dt_name = bao.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(IDENTIFY, 0)
+            ''Dim model As New MODEL_LCN
+            With model
+                .LCNNO_SHOW = lcnno_format
+
+
+                For Each dr As DataRow In dt_name.Rows
+                    .thanm = dr("thanm")
+                Next
+
+
+
+            End With
+
+            Dim dt_addr As New DataTable
+            dt_addr = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(LCT_IDA)
+            For Each dr As DataRow In dt_addr.Rows
+                Try
+                    model.THANAMEPLACE = dr("thanameplace")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.fulladdr3 = dr("fulladdr3")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.TEL = dr("tel")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.Mobile = dr("fax")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.HOUSENO = dr("HOUSENO")
+                Catch ex As Exception
+
+                End Try
+            Next
+
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function GET_LCN_INFORMATION_INPUT(ByVal BSN_IDENTIFY As String, ByVal IDENTIFY As String, ByVal LCT_IDA As String) As JsonResult
+            Dim model As New MODEL_LCN
+            Dim bao As New BAO
+
+            model.IDENTIFY = IDENTIFY
+            Dim lcnno_auto As String = ""
+            Dim lcnno_format As String = ""
+            Dim HEAD_LCN_IDA As Integer = 0
+            Try
+                If HEAD_LCN_IDA <> 0 Then
+                    Dim dao_main As New DAO_DRUG.ClsDBdalcn
+                    dao_main.GetDataby_IDA(HEAD_LCN_IDA)
+                    Try
+                        lcnno_auto = dao_main.fields.lcnno
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        If Len(lcnno_auto) > 0 Then
+
+                            If Right(Left(lcnno_auto, 3), 1) = "5" Then
+                                lcnno_format = "จ. " & CStr(CInt(Right(lcnno_auto, 4))) & "/25" & Left(lcnno_auto, 2)
+                            Else
+                                lcnno_format = dao_main.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                            End If
+                            'lcnno_format = dao.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                        End If
+                    Catch ex As Exception
+
+                    End Try
+
+                    model.HEAD_LCNNO_NCT = lcnno_format
+
+                    Dim dao_phr As New DAO_DRUG.ClsDBDALCN_PHR
+                    dao_phr.GetDataby_FK_IDA(HEAD_LCN_IDA)
+
+                    Try
+                        model.DALCN_PHR = dao_phr.fields
+                    Catch ex As Exception
+
+                    End Try
+                End If
+
+            Catch ex As Exception
+
+            End Try
+            Dim dt_bsn As New DataTable
+            dt_bsn = bao.SP_LOCATION_BSN_BY_IDENTIFY(BSN_IDENTIFY)
+            For Each dr As DataRow In dt_bsn.Rows
+                Try
+                    model.BSN_THAIFULLNAME = dr("BSN_THAIFULLNAME")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_IDENTIFY = dr("BSN_IDENTIFY")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.AGE = dr("AGE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_FULL_ADDR = dr("BSN_FULL_ADDR")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_TELEPHONE = dr("BSN_TELEPHONE")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.BSN_FAX = dr("BSN_FAX")
+                Catch ex As Exception
+
+                End Try
+            Next
+
+
+            Dim dt_name As New DataTable
+            'Dim bao As New BAO
+            dt_name = bao.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(IDENTIFY, 0)
+            ''Dim model As New MODEL_LCN
+            With model
+                .LCNNO_SHOW = lcnno_format
+
+
+                For Each dr As DataRow In dt_name.Rows
+                    .thanm = dr("thanm")
+                Next
+
+
+
+            End With
+
+            Dim dt_addr As New DataTable
+            dt_addr = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(LCT_IDA)
+            For Each dr As DataRow In dt_addr.Rows
+                Try
+                    model.THANAMEPLACE = dr("thanameplace")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.fulladdr3 = dr("fulladdr3")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.TEL = dr("tel")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.Mobile = dr("fax")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.HOUSENO = dr("HOUSENO")
+                Catch ex As Exception
+
+                End Try
+            Next
+
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+
+
         Function GET_LCN_NO(ByVal IDA As Integer) As JsonResult
             Dim model As New MODEL_LCN
             Dim dao As New DAO_DRUG.ClsDBdalcn
@@ -2140,7 +2412,7 @@ Namespace Controllers
 
             Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function
-        Function INSERT_LCN_INPUT(ByVal XML_LCN As String, ByVal LCT_IDA As String, ByVal _ProcessID As String) As JsonResult
+        Function INSERT_LCN_INPUT_NEW(ByVal XML_LCN As String, ByVal XML_KEEP As String, ByVal XML_PHR As String, ByVal PROCESS As String, ByVal LCT_IDA As String) As JsonResult
             Dim _pvncd As String = ""
             Dim Result As String = ""
             Dim jss As New JavaScriptSerializer
@@ -2150,7 +2422,7 @@ Namespace Controllers
             Dim bao_tran As New BAO
             Dim tr_id As Integer = 0
 
-            tr_id = bao_tran.insert_transection_new(_ProcessID, bb.session.CITIZEN_ID, bb.session.CITIZEN_ID_AUTHORIZE)
+            tr_id = bao_tran.insert_transection_new(PROCESS, bb.session.CITIZEN_ID, bb.session.CITIZEN_ID_AUTHORIZE)
 
             Try
                 _pvncd = Personal_Province_NEW(bb.session.CITIZEN_ID, bb.session.CITIZEN_ID_AUTHORIZE, bb.session.GROUPS)
@@ -2165,17 +2437,24 @@ Namespace Controllers
             dao.fields = bb.dalcn
 
             'dao.fields.IMAGE_BSN = bb.dalcns.IMAGE_BSN
+            Try
+                'dao.fields.WRITE_DATE = CDate(CStr(CDate(bb.dalcn.WRITE_DATE).Year) & "/" & CStr(CDate(bb.dalcn.WRITE_DATE).Month) & "/" & CStr(CDate(bb.dalcn.WRITE_DATE).Day))
+                dao.fields.WRITE_DATE = CStr(CDate(bb.dalcn.WRITE_DATE).Year) & "-" & CStr(CDate(bb.dalcn.WRITE_DATE).Month) & "-" & CStr(CDate(bb.dalcn.WRITE_DATE).Day)
+            Catch ex As Exception
+
+            End Try
             dao.fields.lcnsid = dao.fields.lcnsid
-            dao.fields.PROCESS_ID = _ProcessID
+            dao.fields.PROCESS_ID = PROCESS
             dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
             dao.fields.CITIZEN_ID_AUTHORIZE = bb.session.CITIZEN_ID_AUTHORIZE
-            dao.fields.rcvdate = Date.Now
+            dao.fields.rcvdate = Nothing
             dao.fields.lmdfdate = Date.Now
             dao.fields.STATUS_ID = 1
+            dao.fields.rcvno = 0
             dao.fields.TR_ID = tr_id
             dao.fields.FK_IDA = LCT_IDA
             dao.fields.CTZNO = bb.session.CITIZEN_ID
-            dao.fields.lcntpcd = set_lcntpcd(_ProcessID)
+            dao.fields.lcntpcd = set_lcntpcd(PROCESS)
             dao.fields.CITIZEN_ID_UPLOAD = bb.session.CITIZEN_ID
             Try
                 dao.fields.pvncd = _pvncd
@@ -2708,10 +2987,12 @@ Namespace Controllers
 
             '---------------------ที่เก็บ--------------------------------
             Dim dao_KEEP_bb As New DAO_DRUG.TB_DALCN_DETAIL_LOCATION_KEEP
-            dao_KEEP_bb.fields = bb.DALCN_DETAIL_LOCATION_KEEP
+
+            dao_KEEP_bb.Details = jss.Deserialize(XML_KEEP, GetType(List(Of DALCN_DETAIL_LOCATION_KEEP)))
+
 
             Dim dao_DALCN_DETAIL_LOCATION_KEEP As New DAO_DRUG.TB_DALCN_DETAIL_LOCATION_KEEP
-            For Each dao_DALCN_DETAIL_LOCATION_KEEP.fields In dao_KEEP_bb.datas
+            For Each dao_DALCN_DETAIL_LOCATION_KEEP.fields In dao_KEEP_bb.Details
                 Dim LOCATION_IDA As Integer
                 If Integer.TryParse(dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_IDA, LOCATION_IDA) = True Then
                     Dim dao_LOCATION_ADDRESS_2 As New DAO_DRUG.TB_DALCN_LOCATION_ADDRESS
@@ -2741,7 +3022,11 @@ Namespace Controllers
                     End Try
 
                     dao_DALCN_DETAIL_LOCATION_KEEP.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
-                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thathmblnm = dao_LOCATION_ADDRESS_2.fields.thanameplace
+                    If LOCATION_IDA = 0 Then
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thanameplace = "ไม่มีที่เก็บ"
+                    Else
+                        dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thanameplace = dao_LOCATION_ADDRESS_2.fields.thanameplace
+                    End If
                     dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thaaddr = dao_LOCATION_ADDRESS_2.fields.thaaddr
                     dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thasoi = dao_LOCATION_ADDRESS_2.fields.thasoi
                     dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_tharoad = dao_LOCATION_ADDRESS_2.fields.tharoad
@@ -2751,7 +3036,9 @@ Namespace Controllers
                     dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thachngwtnm = dao_LOCATION_ADDRESS_2.fields.thachngwtnm
                     dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_tel = dao_LOCATION_ADDRESS_2.fields.tel
                     dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_fax = dao_LOCATION_ADDRESS_2.fields.fax
-                    dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thanameplace = dao_LOCATION_ADDRESS_2.fields.thanameplace
+
+
+
                     dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thaaddr = dao_LOCATION_ADDRESS_2.fields.thaaddr
                     dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_thasoi = dao_LOCATION_ADDRESS_2.fields.thasoi
                     dao_DALCN_DETAIL_LOCATION_KEEP.fields.LOCATION_ADDRESS_tharoad = dao_LOCATION_ADDRESS_2.fields.tharoad
@@ -2862,9 +3149,10 @@ Namespace Controllers
 
             'เภสัชกร
             Dim dao_PHR_bb As New DAO_DRUG.ClsDBDALCN_PHR
-            dao_PHR_bb.fields = bb.DALCN_PHR
+            dao_PHR_bb.Details = jss.Deserialize(XML_PHR, GetType(List(Of DALCN_PHR)))
+
             Dim dao_DALCN_PHR As New DAO_DRUG.ClsDBDALCN_PHR
-            For Each dao_DALCN_PHR.fields In dao_PHR_bb.datas
+            For Each dao_DALCN_PHR.fields In dao_PHR_bb.Details
                 If (dao_DALCN_PHR.fields.PHR_MEDICAL_TYPE = "1") Or (String.IsNullOrWhiteSpace(dao_DALCN_PHR.fields.PHR_MEDICAL_TYPE) = True) Then
                     'Dim PHR_NAME As String = ""
                     'Try
@@ -2878,6 +3166,11 @@ Namespace Controllers
                         Dim PHR_PREFIX_ID As String = ""
                         Try
                             PHR_PREFIX_ID = Trim(dao_DALCN_PHR.fields.PHR_PREFIX_ID)
+                        Catch ex As Exception
+
+                        End Try
+                        Try
+                            dao_DALCN_PHR.fields.PHR_MEDICAL_TYPE = "1"
                         Catch ex As Exception
 
                         End Try
@@ -2898,7 +3191,12 @@ Namespace Controllers
                         'End If
                         'dao_DALCN_PHR.fields.PHR_JOB_TYPE =dao_DALCN_PHR.fields.
                         Try
-                            'dao_DALCN_PHR.fields.PHR_NAME = p2.DALCN_PHRs.phr
+                            dao_DALCN_PHR.fields.PHR_CHK_JOB = dao_DALCN_PHR.fields.PHR_CHK_JOB
+                        Catch ex As Exception
+
+                        End Try
+                        Try
+                            dao_DALCN_PHR.fields.PHR_JOB_TYPE = dao_DALCN_PHR.fields.PHR_JOB_TYPE
                         Catch ex As Exception
 
                         End Try
@@ -2913,68 +3211,6 @@ Namespace Controllers
                     End If
                 End If
             Next
-
-            'Dim dao_DALCN_PHR_2 As New DAO_DRUG.ClsDBDALCN_PHR
-            'For Each dao_DALCN_PHR_2.fields In p2.DALCN_PHR_2s
-            '    If dao_DALCN_PHR_2.fields.PHR_MEDICAL_TYPE = "2" Then
-            '        If String.IsNullOrWhiteSpace(dao_DALCN_PHR_2.fields.PHR_NAME) = False Then
-            '            Dim dao_prefix As New DAO_CPN.TB_sysprefix
-            '            Dim PHR_PREFIX_ID As String = ""
-            '            Try
-            '                PHR_PREFIX_ID = Trim(dao_DALCN_PHR_2.fields.PHR_PREFIX_ID)
-            '            Catch ex As Exception
-
-            '            End Try
-            '            If PHR_PREFIX_ID <> "" Then
-            '                dao_prefix.Getdata_byid(PHR_PREFIX_ID)
-            '                dao_DALCN_PHR_2.fields.PHR_PREFIX_NAME = dao_prefix.fields.thanm
-            '                dao_DALCN_PHR_2.fields.PHR_PREFIX_ID = PHR_PREFIX_ID
-            '            Else
-            '                dao_DALCN_PHR_2.fields.PHR_PREFIX_NAME = "นาย"
-            '                dao_DALCN_PHR_2.fields.PHR_PREFIX_ID = "0"
-            '            End If
-            '            dao_DALCN_PHR_2.fields.PHR_TEXT_WORK_TIME = opentime
-            '            dao_DALCN_PHR_2.fields.TR_ID = tr_id
-            '            dao_DALCN_PHR_2.fields.FK_IDA = dao.fields.IDA
-            '            dao_DALCN_PHR_2.fields.PHR_STATUS_UPLOAD = 1
-            '            'dao_DALCN_PHR_2.fields.PHR_TEXT_WORK_TIME =
-            '            dao_DALCN_PHR_2.insert()
-            '            dao_DALCN_PHR_2 = New DAO_DRUG.ClsDBDALCN_PHR
-            '        End If
-            '    End If
-            'Next
-
-            'Dim dao_DALCN_PHR_3 As New DAO_DRUG.ClsDBDALCN_PHR
-            'For Each dao_DALCN_PHR_3.fields In p2.DALCN_PHR_3s
-            '    If dao_DALCN_PHR_3.fields.PHR_MEDICAL_TYPE = "2" Then
-            '        If String.IsNullOrWhiteSpace(dao_DALCN_PHR_3.fields.PHR_NAME) = False Then
-            '            Dim dao_prefix As New DAO_CPN.TB_sysprefix
-            '            Dim PHR_PREFIX_ID As String = ""
-            '            Try
-            '                PHR_PREFIX_ID = Trim(dao_DALCN_PHR_3.fields.PHR_PREFIX_ID)
-            '            Catch ex As Exception
-
-            '            End Try
-            '            If PHR_PREFIX_ID <> "" Then
-            '                dao_prefix.Getdata_byid(PHR_PREFIX_ID)
-            '                dao_DALCN_PHR_3.fields.PHR_PREFIX_NAME = dao_prefix.fields.thanm
-            '                dao_DALCN_PHR_3.fields.PHR_PREFIX_ID = PHR_PREFIX_ID
-            '            Else
-            '                dao_DALCN_PHR_3.fields.PHR_PREFIX_NAME = "นาย"
-            '                dao_DALCN_PHR_3.fields.PHR_PREFIX_ID = "0"
-            '            End If
-            '            dao_DALCN_PHR_3.fields.PHR_TEXT_WORK_TIME = opentime
-            '            dao_DALCN_PHR_3.fields.TR_ID = tr_id
-            '            dao_DALCN_PHR_3.fields.FK_IDA = dao.fields.IDA
-            '            dao_DALCN_PHR_3.fields.PHR_STATUS_UPLOAD = 1
-            '            dao_DALCN_PHR_3.fields.PHR_MEDICAL_TYPE = 3
-
-            '            'dao_DALCN_PHR_2.fields.PHR_TEXT_WORK_TIME =
-            '            dao_DALCN_PHR_3.insert()
-            '            dao_DALCN_PHR_3 = New DAO_DRUG.ClsDBDALCN_PHR
-            '        End If
-            '    End If
-            'Next
 
 
             Return Json(Result, JsonRequestBehavior.AllowGet)

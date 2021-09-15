@@ -101,21 +101,46 @@
         });
         return response;
     };
+
     
-    this.GET_LCN_INFORMATION_INPUT = function (BSN_IDENTIFY, IDENTIFY, LCT_IDA, HEAD_LCN_IDA) {
+    this.SP_CUSTOMER_DALCN_LOCATION_ADDRESS_by_LOCATION_TYPE_ID_and_LCNSID = function (LOCATION_TYPE_CD, iden) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_CUSTOMER_DALCN_LOCATION_ADDRESS_by_LOCATION_TYPE_ID_and_LCNSID"),
+            params: {
+                LOCATION_TYPE_CD: LOCATION_TYPE_CD,
+                iden: iden
+            }
+        });
+        return response;
+    };
+
+
+    this.GET_LCN_INFORMATION_INPUT = function (BSN_IDENTIFY, IDENTIFY, LCT_IDA) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/GET_LCN_INFORMATION_INPUT"),
             params: {
                 BSN_IDENTIFY: BSN_IDENTIFY,
                 IDENTIFY: IDENTIFY,
-                LCT_IDA: LCT_IDA,
-                HEAD_LCN_IDA: HEAD_LCN_IDA
+                LCT_IDA: LCT_IDA
             }
         });
         return response;
     };
-    
+
+    this.GET_LCN_INFORMATION_INPUT_V2 = function ( IDENTIFY, LCT_IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_LCN_INFORMATION_INPUT_V2"),
+            params: {
+                IDENTIFY: IDENTIFY,
+                LCT_IDA: LCT_IDA
+            }
+        });
+        return response;
+    };
+
     this.GET_LCN_SUBTITUTE_INPUT = function (BSN_IDENTIFY, LCN_IDA) {
         var response = $http({
             method: "post",
@@ -349,6 +374,24 @@
         });
         return response;
     };
+
+    this.INSERT_LCN_INPUT_NEW = function (LIST_LCN, COLLECT_KEEP, COLLECT_PHR, PROCESS, LCT_IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/INSERT_LCN_INPUT_NEW"),
+            dataType: "json",
+            data: {
+                XML_LCN: JSON.stringify(LIST_LCN),
+                XML_KEEP: JSON.stringify(COLLECT_KEEP),
+                XML_PHR: JSON.stringify(COLLECT_PHR),
+                PROCESS: PROCESS,
+                LCT_IDA: LCT_IDA
+            }
+        });
+        return response;
+    };
+
+
 
     this.INSERT_PHR = function (LIST_EDIT_LCN,IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
         var response = $http({
@@ -1277,6 +1320,19 @@
             params: {
                 LCT_IDA: LCT_IDA,
                 process: process
+            }
+        });
+        return response;
+    };
+    
+    this.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2 = function (LCT_IDA, process,iden) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2"),
+            params: {
+                LCT_IDA: LCT_IDA,
+                process: process,
+                iden: iden
             }
         });
         return response;

@@ -2430,6 +2430,7 @@ Namespace DAO_DRUG
                 _Details = value
             End Set
         End Property
+
         Public Sub AddDetails()
             Details.Add(fields)
             fields = New DALCN_PHR
@@ -4909,7 +4910,15 @@ Namespace DAO_DRUG
         Inherits MAINCONTEXT 'เรียก Class แม่มาใช้เพื่อให้รู้จักว่าเป็น Table ไหน
 
         Public fields As New DALCN_DETAIL_LOCATION_KEEP
-
+        Private _Details As New List(Of DALCN_DETAIL_LOCATION_KEEP)
+        Public Property Details() As List(Of DALCN_DETAIL_LOCATION_KEEP)
+            Get
+                Return _Details
+            End Get
+            Set(ByVal value As List(Of DALCN_DETAIL_LOCATION_KEEP))
+                _Details = value
+            End Set
+        End Property
         Public Sub insert()
             db.DALCN_DETAIL_LOCATION_KEEPs.InsertOnSubmit(fields)
             db.SubmitChanges()

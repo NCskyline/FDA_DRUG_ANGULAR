@@ -3,11 +3,12 @@
    // CHK_TOKEN();
     $scope.CITIZEN = "";
     $scope.lcnno = "";
-    
-    var LCN_IDA = 70911;//sessionStorage.LCN_IDA;
+    $scope.COLLECT_KEEP = [];
+    $scope.COLLECT_PHR = [];
+    //var LCN_IDA = 70911;//sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;  //
     var PROCESS = sessionStorage.PROCESS; //QueryString("PROCESS");
-    var CITIZEN = '0105527028430';//'0105527028430';0000000000000
+    //var CITIZEN = '0105527028430';//'0105527028430';0000000000000
     //var BSN_IDENTIFY = "1710500118665";
     var IDENTIFY = sessionStorage.CITIZEN_ID_AUTHORIZE; //"0000000000000";
     //var IDENTIFY = '0000000000000';
@@ -43,6 +44,12 @@
 
         }, function () { });
 
+        var data_phr_job = CENTER_SV.SP_PHR_JOB();
+        data_phr_job.then(function (datas) {
+            $scope.CNT_functnm = datas.data;
+
+        }, function () { });
+
         //$scope.PROCESS_ID = '101';//sessionStorage.DH_PROCESS_ID;
         //var IDA = sessionStorage.IDA;
 
@@ -58,6 +65,41 @@
         //else if ($scope.PROCESS_ID == '104') {
         //    $scope.INPUT = SET_URL_SV('/LCN/INPUTdalcn_output_4');
         //}
+        var process = QueryString("PROCESS");
+        if (process == '101') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(ขย1)';
+        } else if (process == '103') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(ขย3)';
+        } else if (process == '104') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(ขย4)';
+        } else if (process == '105') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(นย1)';
+        } else if (process == '106') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(ผย1)';
+        } else if (process == '107') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(ขยบ)';
+        } else if (process == '108') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(นยบ)';
+        } else if (process == '109') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(ผยบ)';
+        } else $scope.lcnnoType = '';
+
+
+
+          var data_lcn = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(sessionStorage.LCT_IDA, QueryString("PROCESS"), sessionStorage.CITIZEN_ID_AUTHORIZE);
+        data_lcn.then(function (datas) {
+            $scope.DATA_LCN_MAIN = datas.data;
+            //$scope.DATA_LCN_MAIN.lcnnoType = $scope.lcnnoType;
+        }, function () { });
+
 
 
     }
@@ -85,13 +127,22 @@
             } else $scope.lcnnoType = '';
 
             $scope.FULL_MODEL.PROCESS = process;
-            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
+            //$scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
+            REDIRECT('/LCN/FRM_SELECT_LCT?PROCESS=' + process);
 
-            $scope.FULL_MODEL.FUNC_CODE = "FUNC-DATA-REQUEST";
-            var Getdata = CENTER_SV.GET_FULLDATA_LCN($scope.FULL_MODEL);
-            Getdata.then(function (datas) {
-                $scope.LIST_REQUEST = datas.data;
-            }, function () { });
+
+
+            //$scope.FULL_MODEL.FUNC_CODE = "FUNC-DATA-REQUEST";
+            ////var Getdata = CENTER_SV.GET_FULLDATA_LCN($scope.FULL_MODEL);
+            ////Getdata.then(function (datas) {
+            ////    $scope.DATA_LCN_MAIN = datas.data;
+            ////}, function () { });
+
+            //var data_lcn = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(LCT_IDA, process, sessionStorage.CITIZEN_ID_AUTHORIZE);
+            //data_lcn.then(function (datas) {
+            //    $scope.DATA_LCN_MAIN = datas.data;
+
+            //}, function () { });
 
         } else if (process == '123' || process == '124' || process == '125' || process == '126' || process == '131' || process == '132' || process == '133' || process == '134') {
             if (process == '123') {
@@ -158,18 +209,24 @@
 
     $scope.BTN_INPUT = function () {
 
-        if ($scope.FULL_MODEL.PROCESS == '101') {
+        if (QueryString("PROCESS") == '101') {
+            sessionStorage.HEAD_LCN_IDA = 0;
             REDIRECT('/LCN/INPUTdalcn_output_1');
-        } else if ($scope.FULL_MODEL.PROCESS == '103') {
+        } else if (QueryString("PROCESS") == '103') {
             REDIRECT('/LCN/INPUTdalcn_output_3');
-        } else if ($scope.FULL_MODEL.PROCESS == '104') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+        } else if (QueryString("PROCESS") == '104') {
+            sessionStorage.HEAD_LCN_IDA = 0;
             REDIRECT('/LCN/INPUTdalcn_output_4');
-        } else if ($scope.FULL_MODEL.PROCESS == '105') {
+        } else if (QueryString("PROCESS") == '105') {
+            sessionStorage.HEAD_LCN_IDA = 0;
             REDIRECT('/LCN/INPUT_NORYOR_1');
-        } else if ($scope.FULL_MODEL.PROCESS == '106') {
+        } else if (QueryString("PROCESS") == '106') {
+            sessionStorage.HEAD_LCN_IDA = 0;
             REDIRECT('/LCN/INPUT_PORYOR_1');
-        } else if ($scope.FULL_MODEL.PROCESS == '107' || $scope.FULL_MODEL.PROCESS == '108' || $scope.FULL_MODEL.PROCESS == '109') {           
-            REDIRECT('/LCN/INPUT_DA_YORBOR?PROCESS=' + $scope.FULL_MODEL.PROCESS);
+        } else if (QueryString("PROCESS") == '107' || QueryString("PROCESS") == '108' || QueryString("PROCESS") == '109') {         
+            sessionStorage.HEAD_LCN_IDA = 0;
+            REDIRECT('/LCN/INPUT_DA_YORBOR?PROCESS=' + QueryString("PROCESS"));
         }
     };
 
@@ -190,6 +247,39 @@
         }, function () { });
     };
 
+    
+    $scope.GET_LCT_LIST = function () {
+        var GetData = CENTER_SV.SP_CUSTOMER_DALCN_LOCATION_ADDRESS_by_LOCATION_TYPE_ID_and_LCNSID('1', sessionStorage.CITIZEN_ID_AUTHORIZE);
+        GetData.then(function (datas) {
+            $scope.LIST_LCTS = datas.data;
+        }, function () { });
+    };
+
+    $scope.SELECT_LCTS = function (datas) {
+        sessionStorage.LCT_IDA = datas.IDA;
+        sessionStorage.PROCESS = QueryString("PROCESS");
+        //REDIRECT('/LCN/FRM_LCN_NEWS');
+        //$scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
+
+        
+
+        REDIRECT('/LCN/FRM_LCN_DRUG?PROCESS=' + QueryString("PROCESS"));
+        //$scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
+       
+
+
+        //$scope.FULL_MODEL.FUNC_CODE = "FUNC-DATA-REQUEST";
+        //var data_lcn = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(sessionStorage.LCT_IDA, process, sessionStorage.CITIZEN_ID_AUTHORIZE);
+        //data_lcn.then(function (datas) {
+        //    $scope.DATA_LCN_MAIN = datas.data;
+        //    //$scope.DATA_LCN_MAIN.lcnnoType = $scope.lcnnoType;
+        //}, function () { });
+
+    };
+
+
+
+
     $scope.SELECT_LCN = function (datas) {
         sessionStorage.CITIZEN_ID_AUTHORIZE = datas.CITIZEN;
         sessionStorage.LCNNO = datas.lcnno;
@@ -198,10 +288,19 @@
         REDIRECT(url);
     };
 
-    $scope.SELECT_LCN_HEAD = function (datas,lcnnotype) {
+    $scope.SELECT_LCN_HEAD = function (datas, lcnnotype) {
         $scope.lcnnoType = lcnnotype;
         $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
+        $scope.FULL_MODEL.PROCESS = datas.PROCESS_LCN;
+
+        //$scope.FULL_MODEL.FUNC_CODE = "FUNC-DATA-REQUEST";
+        var data_keep = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(datas.LCT_IDA, datas.PROCESS_LCN, IDENTIFY);
+        data_keep.then(function (datas) {
+            $scope.DATA_LCN_MAIN = datas.data;
+
+        }, function () { });
     };
+
 
     $scope.BTN_EXTEND = function () {
         if (QueryString('staff') == '') {
@@ -219,11 +318,40 @@
         location.reload()
     };
     $scope.pageload = function () {
-        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, IDENTIFY, LCT_IDA, HEAD_LCN_IDA);
+
+        var process = sessionStorage.PROCESS;
+        if (process == '101') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(ขย1)';
+        } else if (process == '103') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(ขย3)';
+        } else if (process == '104') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(ขย4)';
+        } else if (process == '105') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(นย1)';
+        } else if (process == '106') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(ผย1)';
+        } else if (process == '107') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(ขยบ)';
+        } else if (process == '108') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(นยบ)';
+        } else if (process == '109') {
+            sessionStorage.HEAD_LCN_IDA = 0;
+            $scope.lcnnoType = '(ผยบ)';
+        } else $scope.lcnnoType = '';
+
+
+        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT_V2(sessionStorage.CITIZEN_ID_AUTHORIZE, sessionStorage.LCT_IDA);
         MODLE_LCN.then(function (datas) {
 
             $scope.LIST_LCN = datas.data;
-            $scope.LIST_LCN.PROCESS = PROCESS;
+            $scope.LIST_LCN.PROCESS = sessionStorage.PROCESS;
             $scope.LIST_LCN.session = sessionStorage;
             //$scope.LIST_LCN.PROCESS = "101";
         }, function () { });
@@ -386,7 +514,7 @@
 
     $scope.BTN_Search_BSN = function (BSN_IDENTIFY) {
 
-        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, IDENTIFY, LCT_IDA, HEAD_LCN_IDA);
+        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, sessionStorage.CITIZEN_ID_AUTHORIZE, sessionStorage.LCT_IDA);
         MODLE_LCN.then(function (datas) {
             $scope.LIST_LCN = datas.data;
             $scope.LIST_LCN.PROCESS = PROCESS;
@@ -412,10 +540,124 @@
         REDIRECT('/LCN/FRM_LCN_NEWS');
     };
 
+   
+
+    $scope.BTN_LCN_BACK = function () {
+        REDIRECT('/LCN/FRM_LCN_DRUG?PROCESS=' + sessionStorage.PROCESS);
+    };
 
     $scope.BTN_SAVE_LCN_INPUT = function () {
+        $scope.LIST_LCN.session = sessionStorage;
 
-        var Getdata = CENTER_SV.INSERT_LCN_INPUT($scope.LIST_LCN, PROCESS);
+        if (sessionStorage.PROCESS == '106') {
+            if ($scope.LIST_LCN.dalcn.syslcnsid_identify == true) {
+                $scope.LIST_LCN.dalcn.syslcnsid_identify = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.syslcnsid_identify = '0'
+            }
+
+            if ($scope.LIST_LCN.dalcn.syslcnsid_lcnsid == true) {
+                $scope.LIST_LCN.dalcn.syslcnsid_lcnsid = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.syslcnsid_lcnsid = '0'
+            }
+
+            if ($scope.LIST_LCN.dalcn.lcnsid_crtlct == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_crtlct = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_crtlct = '0'
+            }
+
+            if ($scope.LIST_LCN.dalcn.lcnsid_chngwtcd == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_chngwtcd = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_chngwtcd = '0'
+            }
+
+            if ($scope.LIST_LCN.dalcn.lcnsid_ntcd == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_ntcd = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_ntcd = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_taxno == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_taxno = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_taxno = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_trdregno == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_trdregno = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_trdregno = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_ctzno == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_ctzno = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_ctzno = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_remark == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_remark = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_remark = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_idst == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_idst = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_idst = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_phrno == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_phrno = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_phrno = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_stfcd == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_stfcd = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_stfcd = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_nmprnst == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_nmprnst = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_nmprnst = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_lstfcd == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_lstfcd = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_lstfcd = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_lcnsidst == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_lcnsidst = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_lcnsidst = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_scridst == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_scridst = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_scridst = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_url == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_url = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_url = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_cncremark == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_cncremark = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_cncremark = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_email == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_email = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_email = '0'
+            }
+            if ($scope.LIST_LCN.dalcn.lcnsid_otaxno == true) {
+                $scope.LIST_LCN.dalcn.lcnsid_otaxno = '1'
+            } else {
+                $scope.LIST_LCN.dalcn.lcnsid_otaxno = '0'
+            }
+
+        }
+
+        var Getdata = CENTER_SV.INSERT_LCN_INPUT_NEW($scope.LIST_LCN, $scope.COLLECT_KEEP,$scope.COLLECT_PHR, PROCESS,sessionStorage.LCT_IDA);
         Getdata.then(function (datas) {
             Swal.fire({
                 title: 'SUCCESS',
@@ -425,9 +667,72 @@
                 confirmButtonText: 'OK'
 
             });
+
+            //REDIRECT('/LCN/FRM_LCN_DRUG?PROCESS=' + sessionStorage.PROCESS);
         });
+
     };
 
+    $scope.BTN_ADD_KEEP = function (datas,IDA) {
+        if (IDA == '') {
+            Swal.fire({
+                title: 'ERROR',
+                text: 'กรุณาเลือกสถานที่เก็บ',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+            });
+
+        } else {
+            var obj = {
+
+                LOCATION_IDA: IDA,
+                thanameplace: datas[0].thanameplace,
+                fulladdr: datas[0].fulladdr
+
+            };
+            $scope.COLLECT_KEEP.push(obj);
+        }
+
+    };
+
+    $scope.deleteKEEP = function (data, i) {
+        $scope.COLLECT_KEEP.splice(i, 1);
+    };
+
+    $scope.BTN_ADD_PHR = function (datas) {
+
+        if (datas.PHR_PREFIX_ID == '0' || datas.PHR_PREFIX_ID == '' || datas.PHR_NAME == '' || datas.PHR_CTZNO == '' || datas.PHR_TEXT_NUM == '') {
+            Swal.fire({
+                title: 'ERROR',
+                text: 'กรุณากรอกข้อมูลให้ครบถ้วน',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+            });
+
+        } else {
+            var obj = {
+                    //IDA: Int32Array,
+                    PHR_PREFIX_ID: datas.PHR_PREFIX_ID,
+                    PHR_LEVEL: datas.PHR_LEVEL,
+                    PHR_NAME: datas.PHR_NAME,
+                    PHR_CTZNO: datas.PHR_CTZNO,
+                    PHR_TEXT_NUM: datas.PHR_TEXT_NUM,
+                    PHR_CHK_JOB: datas.PHR_CHK_JOB,
+                    PHR_JOB_TYPE: datas.PHR_JOB_TYPE
+                };
+                $scope.COLLECT_PHR.push(obj);
+
+        }
+        
+
+
+    };
+
+    $scope.deletePHR = function (data, i) {
+        $scope.COLLECT_PHR.splice(i, 1);
+    };
 
 
 });

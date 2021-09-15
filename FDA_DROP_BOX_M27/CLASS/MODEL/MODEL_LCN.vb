@@ -241,12 +241,15 @@
     Public KEEP_THANAMEPLACE As String
     Public KEEP_FULL_ADDR As String
     Public KEEP_TEL As String
-
+    Public EXP_NEWYEAR As String
 
     Public PHR_NAME As String
     Public PHR_TEXT_NUM As String
-
-    Public EXP_NEWYEAR As String
+    Public PHR_PREFIX_ID As String
+    Public PHR_LEVEL As String
+    Public PHR_CTZNO As String
+    Public KEEP_IDA As String
+    Public fulladdr As String
 End Class
 
 

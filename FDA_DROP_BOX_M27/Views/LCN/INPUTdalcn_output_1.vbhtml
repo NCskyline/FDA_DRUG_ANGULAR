@@ -152,8 +152,7 @@
                 </td>
             </tr>
             <tr>
-                <td>
-                </td>
+                <td></td>
                 <td style="text-align:center;">
                     (ชื่อผู้ขออนุญาต)
                 </td>
@@ -255,8 +254,7 @@
         </h3>
         <table style=" font-size:20px;width:100%" ;>
             <tr style="text-align:center">
-                <td style="width:10%">
-                </td>
+                <td style="width:10%"></td>
                 <td style="text-align:left">
                     <label>{{LIST_LCN.thanameplace}}</label>
                 </td>
@@ -322,7 +320,7 @@
                 </td>
                 <td>
                     <select class="dropdown" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                        <option value="0">--กรุณาเลือก--</option>
+                        <option value="">--กรุณาเลือก--</option>
                         <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
                     </select>
                 </td>
@@ -352,9 +350,41 @@
                 </td>
             </tr>
         </table>
+
+
         <br />
-        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
-        <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
+        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />
+        <div>
+            <table class="table" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th hidden>IDA</th>
+                        <th>ลำดับ</th>
+                        <th>ชื่อสถานที่เก็บ</th>
+                        <th>ที่อยู่</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="datas in COLLECT_KEEP">
+                        <td hidden>{{datas.LOCATION_IDA}}</td>
+                        <td>{{$index + 1}}</td>
+                        <td>{{datas.thanameplace}}</td>
+                        <td>{{datas.fulladdr}}</td>
+                        <td>
+                            <span class="fas fa-edit"></span>
+                            <a ng-click="deleteKEEP(datas,$index)">
+                                ลบที่เก็บ
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr></tr>
+                </tfoot>
+            </table>
+        </div>
+
+
         <br />
         <br />
         <table style="font-size:20px;width:100%">
@@ -363,19 +393,19 @@
                     โดยมีเภสัชกรชั้น
                 </td>
                 <td style="width:10%">
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_LEVEL" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_LEVEL" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
                 <td style="text-align:center">
                     ชื่อ
                 </td>
                 <td style="width:10%">
-                    <select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
+                    <select class="dropdown" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
                         <option value="0">--กรุณาเลือก--</option>
                         <option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
                     </select>
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
@@ -383,28 +413,57 @@
                     เลขบัตรประจำตัวประชาชน
                 </td>
                 <td colspan="4">
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CTZNO" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_CTZNO" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
                 <td>
                     ใบอนุญาตประกอบวิชาชีพ
                 </td>
-                <td colspan="4">
-                </td>
+                <td colspan="4"></td>
             </tr>
             <tr>
                 <td>
                     เภสัชกรรมเลขที่
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_NUM" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_TEXT_NUM" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
         </table>
         <br />
-        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
-        <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
+        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />
+        <div>
+            <table class="table" width="100%">
+                <thead>
+                    <tr>
+                        <th>ลำดับ</th>
+                        <th>เภสัชกรชั้น</th>
+                        <th>ชื่อ-นามสกุล</th>
+                        <th>เลขบัตรประจำตัวประชาชน</th>
+                        <th>ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="datas in COLLECT_PHR">
+                        <td>{{$index + 1}}</td>
+                        <td>{{datas.PHR_LEVEL}}</td>
+                        <td>{{datas.PHR_NAME}}</td>
+                        <td>{{datas.PHR_CTZNO}}</td>
+                        <td>{{datas.PHR_TEXT_NUM}}</td>
+                        <td>
+                            <span class="fas fa-edit"></span>
+                            <a ng-click="deletePHR(datas,$index)">
+                                ลบข้อมูล
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr></tr>
+                </tfoot>
+            </table>
+        </div>
         <hr />
 
         <table style="width:100%">
@@ -423,7 +482,7 @@
                     <strong>เวลาทำการ (เวลาปฏิบัติการ ของผู้มีหน้าที่ปฏิบัติการ)</strong>
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_WORK_TIME" style="font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.opentime" style="font-size:20px;" type="text" />
                 </td>
             </tr>
         </table>
@@ -475,6 +534,6 @@
     <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
         <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
         
-        <input type="button" class="btn btn-lg " ng-click="BTN_BACK()" value="ย้อนกลับ" />
+        <input type="button" class="btn btn-lg " ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
     </div>
 </div>
