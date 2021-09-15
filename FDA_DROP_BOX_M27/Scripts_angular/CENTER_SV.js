@@ -119,7 +119,7 @@
     this.GET_LCN_INFORMATION_INPUT = function (BSN_IDENTIFY, IDENTIFY, LCT_IDA) {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/LCN_CENTER/GET_LCN_INFORMATION_INPUT"),
+            url: SET_URL_SV("/SV_CENTER/GET_LCN_INFORMATION_INPUT"),
             params: {
                 BSN_IDENTIFY: BSN_IDENTIFY,
                 IDENTIFY: IDENTIFY,
@@ -1139,14 +1139,6 @@
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/SETMODEL_LIST")
-        });
-        return response;
-    };
-
-    this.SETMODEL_LOCATION = function () {
-        var response = $http({
-            method: "post",
-            url: SET_URL_SV("/LCN_CENTER/SETMODEL_LOCATION")
         });
         return response;
     };

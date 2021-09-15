@@ -287,10 +287,10 @@
                         ยาปราศจากเชื้อ
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.syslcnsid_identify" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.syslcnsid_identify" />
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.syslcnsid_lcnsid" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.syslcnsid_lcnsid" />
                     </td>
                 </tr>
                 <tr>
@@ -298,10 +298,10 @@
                         ยาที่ไม่ใช่ยาปราศจากเชื้อ
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_crtlct" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_crtlct" />
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_chngwtcd" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_chngwtcd" />
                     </td>
                 </tr>
                 <tr>
@@ -309,10 +309,10 @@
                         ยาชีววัตถุ
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_ntcd" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_ntcd" />
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_taxno" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_taxno" />
                     </td>
                 </tr>
                 <tr>
@@ -320,10 +320,10 @@
                         เภสัชเคมีภัณฑ์
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_trdregno" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_trdregno" />
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_ctzno" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_ctzno" />
                     </td>
                 </tr>
                 <tr>
@@ -331,10 +331,10 @@
                         เภสัชชีววัตถุ
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_remark" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_remark" />
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_idst" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_idst" />
                     </td>
                 </tr>
                 <tr>
@@ -343,10 +343,10 @@
                     </td>
 
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_phrno" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_phrno" />
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_stfcd" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_stfcd" />
                     </td>
                 </tr>
                 <tr>
@@ -354,10 +354,10 @@
                         ยาเตรียมแอโรโซลสำหรับสูดดมแบบกำหนดขนาดใช้
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_nmprnst" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_nmprnst" />
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_lstfcd" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_lstfcd" />
                     </td>
                 </tr>
                 <tr>
@@ -365,10 +365,10 @@
                         ผลิตภัณฑ์ยาสัตว์ที่ไม่ใช่ยากระตุ้นภูมิคุ้มกัน
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_lcnsidst" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_lcnsidst" />
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_scridst" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_scridst" />
                     </td>
                 </tr>
                 <tr>
@@ -376,10 +376,10 @@
                         ยาสกัด
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_url" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_url" />
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_cncremark" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_cncremark" />
                     </td>
                 </tr>
                 <tr>
@@ -387,10 +387,10 @@
                         ยาอื่นๆ
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_email" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_email" />
                     </td>
                     <td>
-                        <input class="checkbox" type="checkbox" value="1" ng-model="LIST_LCN.dalcn.lcnsid_otaxno" />
+                        <input class="checkbox" type="checkbox"ng-model="LIST_LCN.dalcn.lcnsid_otaxno" />
                     </td>
                 </tr>
             </table>

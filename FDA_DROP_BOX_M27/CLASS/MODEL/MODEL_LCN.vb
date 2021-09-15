@@ -246,8 +246,6 @@
     Public PHR_NAME As String
     Public PHR_TEXT_NUM As String
 
-    Public EXP_NEWYEAR As String
-
 
 End Class
 Public Class MODEL_LOCATION
