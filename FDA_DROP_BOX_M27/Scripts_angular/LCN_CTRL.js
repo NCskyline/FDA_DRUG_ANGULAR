@@ -8,7 +8,7 @@
     var LCT_IDA = sessionStorage.LCT_IDA;  //
     var PROCESS = sessionStorage.PROCESS; //QueryString("PROCESS");
     var CITIZEN = '0105527028430';//'0105527028430';0000000000000
-    //var BSN_IDENTIFY = "1710500118665";
+    var BSN_IDENTIFY = "1710500118665";
     var IDENTIFY = sessionStorage.CITIZEN_ID_AUTHORIZE; //"0000000000000";
     //var IDENTIFY = '0000000000000';
     var HEAD_LCN_IDA = sessionStorage.HEAD_LCN_IDA;
@@ -209,16 +209,18 @@
             window.open(url, '_blank').focus();
             //REDIRECT();
         } else {
-            var url = 'https://medicina.fda.moph.go.th/FDA_DRUG_EXT/AUTHEN/AUTHEN_GATEWAY?Token=' + sessionStorage.TOKEN + '&identify=' + sessionStorage.IDENTIFY + '&staff=1';
-            window.open(url, '_blank').focus();
+            var url1 = 'https://medicina.fda.moph.go.th/FDA_DRUG_EXT/AUTHEN/AUTHEN_GATEWAY?Token=' + sessionStorage.TOKEN + '&identify=' + sessionStorage.IDENTIFY + '&staff=1';
+            window.open(url1, '_blank').focus();
             //REDIRECT();
         }
         
     };
     $scope.RELOAD_PAGE = function () {
-        location.reload()
+        location.reload();
     };
-    $scope.pageload = function () {
+
+    $scope.pageloadLCN = function () {
+
         var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, IDENTIFY, LCT_IDA, HEAD_LCN_IDA);
         MODLE_LCN.then(function (datas) {
 
@@ -229,45 +231,43 @@
         }, function () { });
 
         
-        var data_keep = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(LCT_IDA, PROCESS,IDENTIFY);
-        data_keep.then(function (datas) {
-            $scope.DATA_LCN_MAIN = datas.data;
+        //var data_keep = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(LCT_IDA, PROCESS,IDENTIFY);
+        //data_keep.then(function (datas) {
+        //    $scope.DATA_LCN_MAIN = datas.data;
 
-        }, function () { });
+        //}, function () { });
 
-
-
-        var data_keep = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP('2', IDENTIFY);
-        data_keep.then(function (datas) {
+        var data_keep1 = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP('2', IDENTIFY);
+        data_keep1.then(function (datas) {
             $scope.REF_LOCATION_KEEP = datas.data;
 
         }, function () { });
 
-        var data_lct = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2('1', IDENTIFY);
-        data_lct.then(function (datas) {
-            $scope.REF_LOCATION = datas.data;
+        //var data_lct = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2('1', IDENTIFY);
+        //data_lct.then(function (datas) {
+        //    $scope.REF_LOCATION = datas.data;
 
-        }, function () { });
+        //}, function () { });
 
-        if ($scope.LIST_EXTEND.YEAR_SELECT == "1") {
-            var _YEAR = new Date().getFullYear();
-            if (_YEAR < 2500) {
-                _YEAR = _YEAR + 544;
-            }
-            var data_lct = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR(IDENTIFY, _YEAR);
-            data_lct.then(function (datas) {
-                $scope.LIST_EXTEND = datas.data;
+        //if ($scope.LIST_EXTEND.YEAR_SELECT == "1") {
+        //    var _YEAR = new Date().getFullYear();
+        //    if (_YEAR < 2500) {
+        //        _YEAR = _YEAR + 544;
+        //    }
+        //    var data_lct1 = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR(IDENTIFY, _YEAR);
+        //    data_lct1.then(function (datas) {
+        //        $scope.LIST_EXTEND = datas.data;
 
-            }, function () { });
+        //    }, function () { });
 
-        } else {
-            var data_lct = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(IDENTIFY);
-            data_lct.then(function (datas) {
-                $scope.LIST_EXTEND = datas.data;
+        //} else {
+        //    var data_lct2 = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(IDENTIFY);
+        //    data_lct2.then(function (datas) {
+        //        $scope.LIST_EXTEND = datas.data;
 
-            }, function () { });
+        //    }, function () { });
 
-        }
+        //}
 
         var datakeep = CENTER_SV.SP_MASTER_DALCN_DETAIL_LOCATION_KEEP_BY_IDA(LCN_IDA);
         datakeep.then(function (datas) {
@@ -279,9 +279,10 @@
             $scope.DATA_PHR_SHOW = datas.data;
         }, function () { });
 
-
-
-
+        var localist = CENTER_SV.SETMODEL_LOCATION();
+        localist.then(function (datas) {
+            $scope.DOC_LIST = datas.data;
+        }, function () { });
     };
 
 
@@ -309,8 +310,9 @@
 
         var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
         Data_location.then(function (datas) {
-            $scope.LIST_LABEL = datas.data;
+            //$scope.LIST_LABEL = datas.data;
             //$scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr;
+            
         }, function () { });
 
     };
@@ -330,14 +332,15 @@
             }, function () { });
 
         } else {
-            var data_lct = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(IDENTIFY);
-            data_lct.then(function (datas) {
+            var data_lct1 = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(IDENTIFY);
+            data_lct1.then(function (datas) {
                 $scope.LIST_EXTEND = datas.data;
 
             }, function () { });
 
         }
     };
+
     $scope.SELECT_LCN = function (datas) {
         sessionStorage.LCN_IDA = datas.IDA;
         //sessionStorage.STAGE = 'SHOW';
@@ -412,6 +415,19 @@
         REDIRECT('/LCN/FRM_LCN_NEWS');
     };
 
+    $scope.ADD_LOCATION = function () {
+        var obj = {
+            LOCATION_SELECT: '',
+            fulladdr: '',
+            tel: '',
+            Mobile: ''
+        };
+        $scope.DOC_LIST.LOCATION_LISTs.push(obj);
+    };
+
+    $scope.DELETE_LOCATION = function (i) {
+        $scope.DOC_LIST.LOCATION_LISTs.splice(i, 1);
+    };
 
     $scope.BTN_SAVE_LCN_INPUT = function () {
 

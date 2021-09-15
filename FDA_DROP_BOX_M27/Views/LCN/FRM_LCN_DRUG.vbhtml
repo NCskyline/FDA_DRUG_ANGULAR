@@ -9,7 +9,7 @@ End Code
             <div>
                 <table width="100%" style="font-family:'Taviraj'">
                     <tr>
-                        <td width="40%">ใบอนุญาต  ({{lcnnoType}})</td>
+                        <td width="40%">ใบอนุญาต  {{lcnnoType}}</td>
                         @*<td align="right">เลขบัตรผู้ดำเนิน</td>
                         <td>
                             <input style="width: 50%" class="form-control" ng-model="BSN_CITIZEN" placeholder="เลขบัตรผู้ดำเนินฯ....." />

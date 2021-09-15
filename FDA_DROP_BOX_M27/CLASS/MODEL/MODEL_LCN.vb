@@ -247,6 +247,26 @@
     Public PHR_TEXT_NUM As String
 
     Public EXP_NEWYEAR As String
+
+
+End Class
+Public Class MODEL_LOCATION
+    Private _LOCATION_LISTs As New List(Of LOCATION_LIST)
+    Public Property LOCATION_LISTs() As List(Of LOCATION_LIST)
+        Get
+            Return _LOCATION_LISTs
+        End Get
+        Set(ByVal value As List(Of LOCATION_LIST))
+            _LOCATION_LISTs = value
+        End Set
+    End Property
+End Class
+
+Public Class LOCATION_LIST
+    Public LOCATION_SELECT As String
+    Public fulladdr As String
+    Public tel As String
+    Public Mobile As String
 End Class
 
 

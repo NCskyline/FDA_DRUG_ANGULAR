@@ -183,6 +183,17 @@ Namespace Controllers
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
 
+        Public Function SETMODEL_LOCATION() As JsonResult
+            Dim MODEL As New MODEL_LOCATION
+            Dim DATA_List As New LOCATION_LIST
+            DATA_List.LOCATION_SELECT = ""
+            DATA_List.fulladdr = ""
+            DATA_List.tel = ""
+            DATA_List.Mobile = ""
+            MODEL.LOCATION_LISTs.Add(DATA_List)
+            Return Json(MODEL, JsonRequestBehavior.AllowGet)
+        End Function
+
 #Region "STORE"
         Function GET_FULL_MODEL_EDIT() As JsonResult
             Dim model As New MODEL_STAFF_EDIT_LCN

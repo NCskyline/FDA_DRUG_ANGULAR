@@ -53,7 +53,7 @@
         }
 </style>
 
-<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageloadLCN()" >
     <div style="font-family:'Taviraj';font-size:24px;width:100%">
         <h1 style="text-align:right;font-size:24px;">
             <strong>แบบ ข.ย.๑</strong>
@@ -314,47 +314,51 @@
         <div style=" font-size:20px;margin-left:5%">๑) ให้ตอบมากกว่า ๑ ข้อ ในกรณีมีลักษณะการประกอบการมากกว่าหนึ่งลักษณะโดยการตอบจะมีผลต่อการประเมินความพร้อมของสถานที่ </div>
         <div style=" font-size:20px">อุปกรณ์ และการดำเนินการตามหลักวิธีปฏิบัติทางเภสัชกรรมชุมชน เพื่อประกอบการอนุญาต</div>
         <br />
-
-        <table style="width:50%">
-            <tr>
-                <td>
-                    ชื่อสถานที่เก็บ ( 1 ) :
-                </td>
-                <td>
-                    <select class="dropdown" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                        <option value="0">--กรุณาเลือก--</option>
-                        <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    อยู่เลขที่
-                </td>
-                <td>
-                    <label>{{LIST_LABEL.fulladdr}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    โทรศัพท์
-                </td>
-                <td>
-                    <label>{{LIST_LABEL.tel}}</label>
-                </td>
-            </tr>
-            <tr style="font-size: 20px">
-                <td>
-                    โทรศัพท์มือถือ
-                </td>
-                <td>
-                    <label>{{LIST_LABEL.Mobile}}</label>
-                </td>
-            </tr>
-        </table>
+        <div>
+            <div ng-repeat="datas in DOC_LIST.LOCATION_LISTs">
+                <table style="width:50%">
+                    <tr>
+                        <td>
+                            ชื่อสถานที่เก็บ ( 1 ) :
+                        </td>
+                        <td>
+                            <select class="form-control" ng-model="datas.LOCATION_SELECT" ng-change="getdetails(datas.LOCATION_SELECT)">
+                                <option value="0">--กรุณาเลือก--</option>
+                                <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            อยู่เลขที่
+                        </td>
+                        <td>
+                            <label>{{datas.fulladdr}}</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            โทรศัพท์
+                        </td>
+                        <td>
+                            <label>{{datas.tel}}</label>
+                        </td>
+                    </tr>
+                    <tr style="font-size: 20px">
+                        <td>
+                            โทรศัพท์มือถือ
+                        </td>
+                        <td>
+                            <label>{{datas.Mobile}}</label>
+                        </td>
+                    </tr>
+                </table>
+                <hr />
+            </div>
+        </div>
         <br />
-        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
-        <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
+        <input type="button" style="font-size:20px;width:100px" ng-click="ADD_LOCATION()" value="เพิ่ม" />
+        <input type="button" style="font-size:20px;width:100px;margin-left:10px" ng-click="DELETE_LOCATIN($index)" value="ลบ" />
         <br />
         <br />
         <table style="font-size:20px;width:100%">
@@ -369,7 +373,7 @@
                     ชื่อ
                 </td>
                 <td style="width:10%">
-                    <select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
+                    <select class="form-control" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
                         <option value="0">--กรุณาเลือก--</option>
                         <option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
                     </select>
