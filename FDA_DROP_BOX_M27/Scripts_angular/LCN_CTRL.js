@@ -8,7 +8,7 @@
     //var LCN_IDA = 70911;//sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;  //
     var PROCESS = sessionStorage.PROCESS; //QueryString("PROCESS");
-    //var CITIZEN = '0105527028430';//'0105527028430';0000000000000
+    var CITIZEN = '0105527028430';//'0105527028430';0000000000000
     //var BSN_IDENTIFY = "1710500118665";
     var IDENTIFY = sessionStorage.CITIZEN_ID_AUTHORIZE; //"0000000000000";
     //var IDENTIFY = '0000000000000';
