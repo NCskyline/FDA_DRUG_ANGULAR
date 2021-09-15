@@ -53,7 +53,7 @@
         }
 </style>
 
-<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageloadLCN()" >
     <div style="font-family:'Taviraj';font-size:24px;width:100%">
         <h1 style="text-align:right;font-size:24px;">
             <strong>แบบ ข.ย.๑</strong>
