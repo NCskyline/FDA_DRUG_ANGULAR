@@ -14,13 +14,13 @@
                     <td>
                         <form name="rdl_gmp">
 
-                            <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" ng-value="109" disabled="disabled">
+                            <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" value="109" disabled="disabled">
                             ผลิตยาแผนโบราณ
 
-                            <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" ng-value="107" disabled="disabled">
+                            <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" value="107" disabled="disabled">
                             ขายยาแผนโบราณ
 
-                            <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" ng-value="108" disabled="disabled">
+                            <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" value="108" disabled="disabled">
                             นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร
 
                         </form>
@@ -140,13 +140,13 @@
                 <td>
                     <form name="rdl_gmp">
 
-                        <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" ng-value="109" disabled="disabled">
+                        <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" value="109" disabled="disabled">
                         ผลิตยาแผนโบราณ
 
-                        <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" ng-value="107" disabled="disabled">
+                        <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" value="107" disabled="disabled">
                         ขายยาแผนโบราณ
 
-                        <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" ng-value="108" disabled="disabled">
+                        <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" value="108" disabled="disabled">
                         นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร
 
                     </form>
@@ -155,7 +155,7 @@
                     หมวด
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.CATEGORY_DRUG" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
         </table>
@@ -187,45 +187,123 @@
                 <td style="text-align:left" width="500">
                     <label>{{LIST_LCN.tel}}</label>
                 </td>
-                
+
             </tr>
             <tr>
                 <td style="width:100px">
                     เวลาทำการ
                 </td>
                 <td style="text-align:left">
-                    <input type="text" ng-model="LIST_LCN.dalcn.opentime" style="width:20%;"/>
+                    <input type="text" ng-model="LIST_LCN.dalcn.opentime" />
                 </td>
             </tr>
         </table>
+        @*<table style="font-size:20px;width:100%">
+                <tr>
+                    <td style="width:13%">
+                        โดยมีผู้ประกอบโรคศิลปะแผนโบราณ สาขา
+                    </td>
+                    <td style="text-align:left;width:8%">
+                        <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_VETERINARY_FIELD" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    </td>
+                    <td>
+                        เลขบัตรประชาชน
+                    </td>
+                    <td>
+                        <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CTZNO" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    </td>
+                    <td style="text-align:center;width:5%">
+                        ชื่อ
+                    </td>
+                    <td style="text-align:left ;width:7.5%">
+                        <select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
+                            <option value="0">--กรุณาเลือก--</option>
+                            <option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
+                        </select>
+                    </td>
+                    <td style="text-align:left">
+                        <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    </td>
+                </tr>
+            </table>*@
         <table style="font-size:20px;width:100%">
             <tr>
-                <td style="width:13%">
+                <td style="width:20%">
                     โดยมีผู้ประกอบโรคศิลปะแผนโบราณ สาขา
                 </td>
-                <td style="text-align:left;width:8%">
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_VETERINARY_FIELD" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                <td style="width:10%">
+                    <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_VETERINARY_FIELD" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
-                <td>
-                    เลขบัตรประชาชน
-                </td>
-                <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_CTZNO" style="font-family:'Taviraj';font-size:20px;" type="text" />
-                </td>
-                <td style="text-align:center;width:5%">
+                <td style="text-align:center">
                     ชื่อ
                 </td>
-                <td style="text-align:left ;width:7.5%">
-                    <select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
+                <td style="width:10%">
+                    <select class="dropdown" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
                         <option value="0">--กรุณาเลือก--</option>
                         <option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
                     </select>
                 </td>
-                <td style="text-align:left">
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                <td>
+                    <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%">
+                    เลขบัตรประจำตัวประชาชน
+                </td>
+                <td colspan="4">
+                    <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_CTZNO" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่
+                </td>
+                <td>
+                    <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_TEXT_NUM" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
         </table>
+        <br />
+        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />
+        <div>
+            <table class="table" width="100%">
+                <thead>
+                    <tr>
+                        <th>ลำดับ</th>
+                        <th>ผู้ประกอบโรคศิลปะแผนโบราณ สาขา</th>
+                        <th>ชื่อ-นามสกุล</th>
+                        <th>เลขบัตรประจำตัวประชาชน</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="datas in COLLECT_PHR">
+                        <td>{{$index + 1}}</td>
+                        <td>{{datas.PHR_VETERINARY_FIELD}}</td>
+                        <td>{{datas.PHR_NAME}}</td>
+                        <td>{{datas.PHR_CTZNO}}</td>
+                        <td>
+                            <span class="fas fa-edit"></span>
+                            <a ng-click="deletePHR(datas,$index)">
+                                ลบข้อมูล
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr></tr>
+                </tfoot>
+            </table>
+        </div>
+
+
+
+
+
+
+
         <table>
             <tr>
                 <td>
@@ -233,9 +311,9 @@
                 </td>
                 <td>
                     <form name="rdl_gmp">
-                        <label><input type="radio" ng-model="LIST_LCN.DALCN_PHR.PHR_LAW_SECTION" id="rdl_law_select" value="1"> มาตรา ๖๘</label>
-                        <label><input type="radio" ng-model="LIST_LCN.DALCN_PHR.PHR_LAW_SECTION" id="rdl_law_select" value="2"> มาตรา ๖๙</label>
-                        <label><input type="radio" ng-model="LIST_LCN.DALCN_PHR.PHR_LAW_SECTION" id="rdl_law_select" value="3">  มาตรา ๗๐ แห่งพระราชบัญญัติยา พ.ศ. ๒๕๑๐ </label>
+                        <label><input type="radio" ng-model="LIST_LCN.PHR_LAW_SECTION" id="rdl_law_select" value="1"> มาตรา ๖๘</label>
+                        <label><input type="radio" ng-model="LIST_LCN.PHR_LAW_SECTION" id="rdl_law_select" value="2"> มาตรา ๖๙</label>
+                        <label><input type="radio" ng-model="LIST_LCN.PHR_LAW_SECTION" id="rdl_law_select" value="3">  มาตรา ๗๐ แห่งพระราชบัญญัติยา พ.ศ. ๒๕๑๐ </label>
 
                     </form>
                 </td>
@@ -250,7 +328,7 @@
                 </td>
                 <td>
                     <select class="dropdown" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                        <option value="0">--กรุณาเลือก--</option>
+                        <option value="">--กรุณาเลือก--</option>
                         <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
                     </select>
                 </td>
@@ -280,12 +358,47 @@
                 </td>
             </tr>
         </table>
+
+
         <br />
-        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
-        <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
+        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />
+        <div>
+            <table class="table" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th hidden>IDA</th>
+                        <th>ลำดับ</th>
+                        <th>ชื่อสถานที่เก็บ</th>
+                        <th>ที่อยู่</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="datas in COLLECT_KEEP">
+                        <td hidden>{{datas.LOCATION_IDA}}</td>
+                        <td>{{$index + 1}}</td>
+                        <td>{{datas.thanameplace}}</td>
+                        <td>{{datas.fulladdr}}</td>
+                        <td>
+                            <span class="fas fa-edit"></span>
+                            <a ng-click="deleteKEEP(datas,$index)">
+                                ลบที่เก็บ
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr></tr>
+                </tfoot>
+            </table>
+        </div>
 
 
 
     </div>
+    <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
+        <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
+
+        <input type="button" class="btn btn-lg " ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
     </div>
+</div>
 

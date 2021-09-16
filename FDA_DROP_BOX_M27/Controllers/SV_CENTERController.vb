@@ -781,7 +781,45 @@ Namespace Controllers
 
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
+        Function GET_HEAD_LCN_INFORMATION_INPUT(ByVal HEAD_LCN_IDA As String) As JsonResult
+            Dim model As New MODEL_LCN
+            Dim bao As New BAO
+            Dim lcnno_auto As String = ""
+            Dim lcnno_format As String = ""
+            Try
+                If HEAD_LCN_IDA <> 0 Then
+                    Dim dao_main As New DAO_DRUG.ClsDBdalcn
+                    dao_main.GetDataby_IDA(HEAD_LCN_IDA)
+                    Try
+                        lcnno_auto = dao_main.fields.lcnno
+                    Catch ex As Exception
 
+                    End Try
+                    Try
+                        If Len(lcnno_auto) > 0 Then
+
+                            If Right(Left(lcnno_auto, 3), 1) = "5" Then
+                                lcnno_format = "จ. " & CStr(CInt(Right(lcnno_auto, 4))) & "/25" & Left(lcnno_auto, 2)
+                            Else
+                                lcnno_format = dao_main.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                            End If
+                            'lcnno_format = dao.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                        End If
+                    Catch ex As Exception
+
+                    End Try
+
+                    model.HEAD_LCNNO_NCT = lcnno_format
+
+
+                End If
+
+            Catch ex As Exception
+
+            End Try
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
         Function GET_LCN_INFORMATION_INPUT(ByVal BSN_IDENTIFY As String, ByVal IDENTIFY As String, ByVal LCT_IDA As String) As JsonResult
             Dim model As New MODEL_LCN
             Dim bao As New BAO
@@ -2456,6 +2494,14 @@ Namespace Controllers
             dao.fields.CTZNO = bb.session.CITIZEN_ID
             dao.fields.lcntpcd = set_lcntpcd(PROCESS)
             dao.fields.CITIZEN_ID_UPLOAD = bb.session.CITIZEN_ID
+
+            Try
+                If PROCESS > 121 Then
+                    dao.fields.MAIN_LCN_IDA = bb.session.HEAD_LCN_IDA
+                End If
+            Catch ex As Exception
+
+            End Try
             Try
                 dao.fields.pvncd = _pvncd
             Catch ex As Exception
@@ -3190,6 +3236,13 @@ Namespace Controllers
 
                         'End If
                         'dao_DALCN_PHR.fields.PHR_JOB_TYPE =dao_DALCN_PHR.fields.
+                        Try
+                            If PROCESS = "107" Or PROCESS = "108" Or PROCESS = "109" Then
+                                dao_DALCN_PHR.fields.PHR_LAW_SECTION = bb.PHR_LAW_SECTION
+                            End If
+                        Catch ex As Exception
+
+                        End Try
                         Try
                             dao_DALCN_PHR.fields.PHR_CHK_JOB = dao_DALCN_PHR.fields.PHR_CHK_JOB
                         Catch ex As Exception

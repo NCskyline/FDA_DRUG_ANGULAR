@@ -128,6 +128,17 @@
         });
         return response;
     };
+    
+    this.GET_HEAD_LCN_INFORMATION_INPUT = function (HEAD_LCN_IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_HEAD_LCN_INFORMATION_INPUT"),
+            params: {
+                HEAD_LCN_IDA: HEAD_LCN_IDA
+            }
+        });
+        return response;
+    };
 
     this.GET_LCN_INFORMATION_INPUT_V2 = function ( IDENTIFY, LCT_IDA) {
         var response = $http({

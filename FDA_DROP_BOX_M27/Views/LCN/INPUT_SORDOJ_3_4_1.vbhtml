@@ -54,7 +54,7 @@
         </div>
 
         <div class="title2">
-            <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" @*border="1"*@>
+            <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px">
                 <tr>
                     <td style="text-align:left;width:20%">
                         เลขรับที่
@@ -95,20 +95,20 @@
 
         <h2 style="text-align:center;font-size:24px;">
             <strong>คำขอรับใบอนุญาต คำขอต่ออายุใบอนุญาต คำขอรับใบแทน</strong><br />
-            <strong>ใบอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
+            <strong>ใบอนุญาตส่งออกวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
         </h2>
         @*process =133,134 *@
 
-        <table style="width:70%; font-size:20px;margin:auto;text-align:center" @*border="1"*@>
+        <table style="width:70%; font-size:20px;margin:auto;text-align:center">
             <tr>
                 <td>
-                    <strong>สำหรับผลิต</strong>
+                    <strong>สำหรับส่งออก</strong>
                 </td>
                 <td>
-                    <input type="radio" name="gender" ng-model="LIST_LCN.PROCESS" ng-value="133" id="rdl_CHK_SELL_TYPE" disabled="disabled" /> <strong>วัตถุออกฤทธิ์ในประเภท ๓</strong>
+                    <input type="radio" name="gender" ng-model="LIST_LCN.PROCESS" value="133" id="rdl_CHK_SELL_TYPE" disabled="disabled" /> <strong>วัตถุออกฤทธิ์ในประเภท ๓</strong>
                 </td>
                 <td>
-                    <input type="radio" name="gender" ng-model="LIST_LCN.PROCESS" ng-value="134" id="rdl_CHK_SELL_TYPE" disabled="disabled" /> <strong>วัตถุออกฤทธิ์ในประเภท ๔</strong>
+                    <input type="radio" name="gender" ng-model="LIST_LCN.PROCESS" value="134" id="rdl_CHK_SELL_TYPE" disabled="disabled" /> <strong>วัตถุออกฤทธิ์ในประเภท ๔</strong>
                 </td>
             </tr>
             <tr>
@@ -177,7 +177,7 @@
         <h2 style="font-size:24px;">
             <strong>๑. ข้อมูลผู้ขอรับใบอนุญาต</strong>
         </h2>
-        <table style="width:90%;margin-left:5%" @*border="1"*@>
+        <table style="width:90%;margin-left:5%">
             <tr>
                 <td style="font-size:20px" width="40%">
                     ข้าพเจ้า (ชื่อบุคคล/นิติบุคคล)
@@ -254,7 +254,7 @@
         <h2 style="font-size:24px;">
             <strong>๒. ข้อมูลผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต</strong>
         </h2>
-        <table style="width:90%;margin-left:5%" @*border="1"*@>
+        <table style="width:90%;margin-left:5%">
             <tr>
                 <td style="font-size:20px" width="40%">
                     ข้าพเจ้า
@@ -344,29 +344,29 @@
         </table>
 
         @*<table>
-                <tr>
-                    <td>
-                        มีความประสงค์ขอรับอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ เนื่องจาก
-                    </td>
+            <tr>
+                <td>
+                    มีความประสงค์ขอรับอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ เนื่องจาก
+                </td>
 
-                </tr>
-                <tr>
-                    <td>
+            </tr>
+            <tr>
+                <td>
 
-                    </td>
-                </tr>
-            </table>*@
+                </td>
+            </tr>
+        </table>*@
 
         <br />
 
-        <table style="width:100%;font-size:20px" @*border="1"*@>
+        <table style="width:100%;font-size:20px">
             <tr>
                 <td colspan="4">
                     <p><strong>๓. ข้อมูลสถานที่ส่งออก</strong></p>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td style="width:15%;">
                     ณ สถานที่ชื่อ
                 </td>
                 <td>
@@ -382,7 +382,7 @@
             <tr>
                 <td>
                     ตั้งอยู่เลขที่
-                <td colspan="4">
+                <td colspan="3">
                     <label>{{LIST_LCN.fulladdr3}}</label>
                 </td>
             </tr>
@@ -390,7 +390,7 @@
                 <td>
                     โทรศัพท์/มือถือ
                 </td>
-                <td colspan="4">
+                <td colspan="3">
                     <label>{{LIST_LCN.tel}}</label>
                 </td>
             </tr>
@@ -399,99 +399,96 @@
                     โดยได้รับอนุญาตให้ผลิต/ขาย/นำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาตเลขที่
                 </td>
                 <td style="font-size:20px">
-                    <label>{{LIST_LCN.HEAD_LCNNO_NCT}}</label>
+                    <label>{{LIST_HEAD_LCN.HEAD_LCNNO_NCT}}</label>
                 </td>
             </tr>
         </table>
 
-        @*<table style="width:100%;font-size:20px">
-                <tr>
-                    <td style="font-size:20px;width:70%">
-                        โดยได้รับอนุญาตให้ผลิต/ขาย/นำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาตเลขที่
-                    </td>
-                    <td style="font-size:20px">
-                        <label>{{LIST_LCN.dalcn.Email}}</label>
-                    </td>
-                    <td>
-                        ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่
-                    </td>
-                    <td>
-
-                    </td>
-                </tr>
-
-            </table>*@
-        @*<table>
-                <tr>
-                    <td colspan="4">
-                        ๓. ข้อมูลสถานที่นำเข้า
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        ณ สถานที่ชื่อ
-                    </td>
-                    <td>
-                        <label>{{LIST_LCN.thanameplace}}</label>
-                    </td>
-                    <td>
-                        เลขรหัสประจำบ้าน
-                    </td>
-                    <td>
-                        <label>{{LIST_LCN.HOUSENO}}</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        ตั้งอยู่เลขที่
-                    </td>
-                    <td colspan="3">
-                        <label>{{LIST_LCN.HOUSENO}}</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        โทรศัพท์/มือถือ
-                    </td>
-                    <td colspan="3">
-                        <label>{{LIST_LCN.HOUSENO}}</label>
-                    </td>
-                </tr>
-            </table>*@
-        <table style="width:100%;font-size:20px" @*border="1"*@>
+        <table style="font-size:20px;width:100%">
             <tr>
-                <td>
-                    โดยมีเภสัชกรชื่อ  1.
+                <td style="width:20%">
+                    โดยมีเภสัชกรชั้น
                 </td>
-                <td>
-                    <select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
+                <td style="width:10%">
+                    <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_LEVEL" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                </td>
+                <td style="text-align:center">
+                    ชื่อ
+                </td>
+                <td style="width:10%">
+                    <select class="dropdown" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
                         <option value="0">--กรุณาเลือก--</option>
                         <option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
                     </select>
-
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
-                <td style="width:30%;text-align:center">
-                    ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่
+            </tr>
+            <tr>
+                <td style="width:20%">
+                    เลขบัตรประจำตัวประชาชน
+                </td>
+                <td colspan="4">
+                    <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_CTZNO" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ใบอนุญาตประกอบวิชาชีพ
+                </td>
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <td>
+                    เภสัชกรรมเลขที่
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_PHR.PHR_TEXT_NUM" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_TEXT_NUM" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
         </table>
-
-        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
-        <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
+        <br />
+        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />
+        <div>
+            <table class="table" width="100%">
+                <thead>
+                    <tr>
+                        <th>ลำดับ</th>
+                        <th>เภสัชกรชั้น</th>
+                        <th>ชื่อ-นามสกุล</th>
+                        <th>เลขบัตรประจำตัวประชาชน</th>
+                        <th>ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="datas in COLLECT_PHR">
+                        <td>{{$index + 1}}</td>
+                        <td>{{datas.PHR_LEVEL}}</td>
+                        <td>{{datas.PHR_NAME}}</td>
+                        <td>{{datas.PHR_CTZNO}}</td>
+                        <td>{{datas.PHR_TEXT_NUM}}</td>
+                        <td>
+                            <span class="fas fa-edit"></span>
+                            <a ng-click="deletePHR(datas,$index)">
+                                ลบข้อมูล
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr></tr>
+                </tfoot>
+            </table>
+        </div>
         <div style="font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
         <br />
 
 
 
-        <div style=";font-size:20px"><strong>๔. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
+        <div style="font-size:20px"><strong>๔. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
         <div style="margin-left:5%;font-size:20px"><strong>๔.๑ กรณีขอรับใบอนุญาต (กรณีรายใหม่)</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+        <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
                     (๑) คำรับรองของผู้รับอนุญาตและเภสัชกรผู้ควบคุมกิจการ
@@ -525,7 +522,7 @@
             </tr>
         </table>
         <div style="margin-left:5%;font-size:20px"><strong>๔.๒ กรณีขอต่ออายุใบอนุญาต</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+        <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
                     (๑) ใบอนุญาตฉบับเดิม
@@ -540,7 +537,7 @@
 
         </table>
         <div style="margin-left:5%;font-size:20px"><strong>๔.๓ กรณีขอรับใบแทนใบอนุญาต</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+        <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
                     (๑) ใบแจ้งความ กรณีใบอนุญาตสูญหาย
@@ -563,7 +560,7 @@
         <br />
         <br />
 
-        <table style="width:85%;font-size:20px ;margin-left:12.5%" @*border="1"*@>
+        <table style="width:85%;font-size:20px ;margin-left:12.5%">
             <tr>
                 <td style="text-align:right">
                     (ลายมือชื่อ)
@@ -589,7 +586,7 @@
         <br />
 
         <div style="margin-left:5%;font-size:20px"> หมายเหตุ : (๑) ให้ขีดเลือกข้อความในช่อง ☐/〇 ให้ตรงตามที่ประสงค์จะดำเนินการ</div>
-        <table style="width:90%;font-size:20px ;margin-left:12.5%" @*border="1"*@>
+        <table style="width:90%;font-size:20px ;margin-left:12.5%">
             <tr>
                 <td>
                     (๒) รับรองสำเนาถูกต้องในเอกสารที่เป็นสำเนาทุกฉบับ
@@ -602,7 +599,11 @@
             </tr>
 
         </table>
+        <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
+            <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
 
+            <input type="button" class="btn btn-lg " ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
+        </div>
     </div>
 </div>
 

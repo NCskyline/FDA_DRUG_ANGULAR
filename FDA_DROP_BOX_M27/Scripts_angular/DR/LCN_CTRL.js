@@ -65,74 +65,36 @@
         //else if ($scope.PROCESS_ID == '104') {
         //    $scope.INPUT = SET_URL_SV('/LCN/INPUTdalcn_output_4');
         //}
-        var process = sessionStorage.PROCESS; //QueryString("PROCESS");
+        var process = QueryString("PROCESS");
         if (process == '101') {
             sessionStorage.HEAD_LCN_IDA = 0;
             $scope.lcnnoType = '(ขย1)';
-            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
         } else if (process == '103') {
             sessionStorage.HEAD_LCN_IDA = 0;
             $scope.lcnnoType = '(ขย3)';
-            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
         } else if (process == '104') {
             sessionStorage.HEAD_LCN_IDA = 0;
             $scope.lcnnoType = '(ขย4)';
-            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
         } else if (process == '105') {
             sessionStorage.HEAD_LCN_IDA = 0;
             $scope.lcnnoType = '(นย1)';
-            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
         } else if (process == '106') {
             sessionStorage.HEAD_LCN_IDA = 0;
             $scope.lcnnoType = '(ผย1)';
-            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
         } else if (process == '107') {
             sessionStorage.HEAD_LCN_IDA = 0;
             $scope.lcnnoType = '(ขยบ)';
-            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
         } else if (process == '108') {
             sessionStorage.HEAD_LCN_IDA = 0;
             $scope.lcnnoType = '(นยบ)';
-            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
         } else if (process == '109') {
             sessionStorage.HEAD_LCN_IDA = 0;
             $scope.lcnnoType = '(ผยบ)';
-            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
-        } else if (process == '123' || process == '124' || process == '125' || process == '126' || process == '131' || process == '132' || process == '133' || process == '134') {
-            if (process == '123') {
-                $scope.lcnnoType = '(ขย1) > (ขายวัตถุออกฤทธิ์ฯในประเภท ๓)';
-            } else if (process == '124') {
-                $scope.lcnnoType = '(ขย1) > (ขายวัตถุออกฤทธิ์ฯในประเภท ๔)';
-            } else if (process == '125') {
-                $scope.lcnnoType = '(ขย1) > (ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๓)';
-            } else if (process == '126') {
-                $scope.lcnnoType = '(ขย1) > (ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๔)';
-            } else if (process == '131') {
-                $scope.lcnnoType = '(นย1) > (นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๓)';
-            } else if (process == '132') {
-                $scope.lcnnoType = '(นย1) > (นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๔)';
-            } else if (process == '133') {
-                $scope.lcnnoType = '(ขย1) > (ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๓)';
-            } else if (process == '134') {
-                $scope.lcnnoType = '(ขย1) > (ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๔)';
-            } else $scope.lcnnoType = '';
-
-            sessionStorage.PROCESS = process;
-            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
-            var dataLo = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
-            dataLo.then(function (datas) {
-                $scope.DATA_LCN_LIST = datas.data;
-                if (process >= 123) {
-                        sessionStorage.LCT_IDA = datas.data[0].LCT_IDA;
-                }
-
-               
-            }, function () { });
-        }
+        } else $scope.lcnnoType = '';
 
 
-        
-        var data_lcn = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(sessionStorage.LCT_IDA, sessionStorage.PROCESS, sessionStorage.CITIZEN_ID_AUTHORIZE);
+        sessionStorage.PROCESS = QueryString("PROCESS");
+          var data_lcn = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(sessionStorage.LCT_IDA, QueryString("PROCESS"), sessionStorage.CITIZEN_ID_AUTHORIZE);
         data_lcn.then(function (datas) {
             $scope.DATA_LCN_MAIN = datas.data;
             //$scope.DATA_LCN_MAIN.lcnnoType = $scope.lcnnoType;
@@ -165,10 +127,8 @@
             } else $scope.lcnnoType = '';
 
             $scope.FULL_MODEL.PROCESS = process;
-            sessionStorage.PROCESS = process;
-            //$scope.SUB_PATH = SET_URL_SV('/LCN/FRM_SELECT_LCT');
+            //$scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
             REDIRECT('/LCN/FRM_SELECT_LCT?PROCESS=' + process);
-            //REDIRECT('/LCN/FRM_SELECT_LCT?PROCESS=' + process);
 
 
 
@@ -203,7 +163,6 @@
                 $scope.lcnnoType = '(ขย1) > (ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๔)';
             } else $scope.lcnnoType = '';
 
-            sessionStorage.PROCESS = process;
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_NCT_SEARCH');
             var dataLo = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
             dataLo.then(function (datas) {
@@ -218,7 +177,7 @@
             } else if (process == '16') {
                 $scope.lcnnoType = '(ขย1) > (จำหน่ายยาเสพติดให้โทษในประเภท ๓)';
             } else $scope.lcnnoType = '';
-            sessionStorage.PROCESS = process;
+
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_NCT_SEARCH');
             var data = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
             data.then(function (datas) {
@@ -250,52 +209,24 @@
 
     $scope.BTN_INPUT = function () {
 
-        if (sessionStorage.PROCESS == '101') {
+        if (QueryString("PROCESS") == '101') {
             sessionStorage.HEAD_LCN_IDA = 0;
             REDIRECT('/LCN/INPUTdalcn_output_1');
-        } else if (sessionStorage.PROCESS == '103') {
+        } else if (QueryString("PROCESS") == '103') {
             REDIRECT('/LCN/INPUTdalcn_output_3');
             sessionStorage.HEAD_LCN_IDA = 0;
-        } else if (sessionStorage.PROCESS == '104') {
+        } else if (QueryString("PROCESS") == '104') {
             sessionStorage.HEAD_LCN_IDA = 0;
             REDIRECT('/LCN/INPUTdalcn_output_4');
-        } else if (sessionStorage.PROCESS == '105') {
+        } else if (QueryString("PROCESS") == '105') {
             sessionStorage.HEAD_LCN_IDA = 0;
             REDIRECT('/LCN/INPUT_NORYOR_1');
-        } else if (sessionStorage.PROCESS == '106') {
+        } else if (QueryString("PROCESS") == '106') {
             sessionStorage.HEAD_LCN_IDA = 0;
             REDIRECT('/LCN/INPUT_PORYOR_1');
-        } else if (sessionStorage.PROCESS == '107' || sessionStorage.PROCESS == '108' || sessionStorage.PROCESS == '109') {
+        } else if (QueryString("PROCESS") == '107' || QueryString("PROCESS") == '108' || QueryString("PROCESS") == '109') {         
             sessionStorage.HEAD_LCN_IDA = 0;
-            REDIRECT('/LCN/INPUT_DA_YORBOR?PROCESS=' + sessionStorage.PROCESS);
-        } else if (sessionStorage.PROCESS == '123' || sessionStorage.PROCESS == '124' || sessionStorage.PROCESS == '125' || sessionStorage.PROCESS == '126' || sessionStorage.PROCESS == '131' || sessionStorage.PROCESS == '132' || sessionStorage.PROCESS == '133' || sessionStorage.PROCESS == '134') {
-            if (sessionStorage.PROCESS == '123') {
-                $scope.lcnnoType = '(ขย1) > (ขายวัตถุออกฤทธิ์ฯในประเภท ๓)';
-                REDIRECT('/LCN/INPUT_BOJOD_3_4_1');
-            } else if (sessionStorage.PROCESS == '124') {
-                $scope.lcnnoType = '(ขย1) > (ขายวัตถุออกฤทธิ์ฯในประเภท ๔)';
-                REDIRECT('/LCN/INPUT_BOJOD_3_4_1');
-            } else if (sessionStorage.PROCESS == '125') {
-                $scope.lcnnoType = '(ขย1) > (ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๓)';
-                REDIRECT('/LCN/INPUT_BOJOD_3_4_2');
-            } else if (sessionStorage.PROCESS == '126') {
-                $scope.lcnnoType = '(ขย1) > (ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๔)';
-                REDIRECT('/LCN/INPUT_BOJOD_3_4_2');
-            } else if (sessionStorage.PROCESS == '131') {
-                $scope.lcnnoType = '(นย1) > (นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๓)';
-                
-                REDIRECT('/LCN/INPUT_NORDOJ_3_4_1');
-            } else if (sessionStorage.PROCESS == '132') {
-                $scope.lcnnoType = '(นย1) > (นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๔)';
-                REDIRECT('/LCN/INPUT_NORDOJ_3_4_1');
-            } else if (sessionStorage.PROCESS == '133') {
-                $scope.lcnnoType = '(ขย1) > (ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๓)';
-                REDIRECT('/LCN/INPUT_SORDOJ_3_4_1');
-                
-            } else if (sessionStorage.PROCESS == '134') {
-                $scope.lcnnoType = '(ขย1) > (ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๔)';
-                REDIRECT('/LCN/INPUT_SORDOJ_3_4_1');
-            }
+            REDIRECT('/LCN/INPUT_DA_YORBOR?PROCESS=' + QueryString("PROCESS"));
         }
     };
 
@@ -327,12 +258,12 @@
     $scope.SELECT_LCTS = function (datas) {
         sessionStorage.LCT_IDA = datas.IDA;
         sessionStorage.PROCESS = QueryString("PROCESS");
-        REDIRECT('/LCN/FRM_LCN_NEWS');
+        //REDIRECT('/LCN/FRM_LCN_NEWS');
         //$scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
 
         
 
-        //REDIRECT('/LCN/FRM_LCN_DRUG?PROCESS=' + QueryString("PROCESS"));
+        REDIRECT('/LCN/FRM_LCN_DRUG?PROCESS=' + QueryString("PROCESS"));
         //$scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
        
 
@@ -359,18 +290,15 @@
 
     $scope.SELECT_LCN_HEAD = function (datas, lcnnotype) {
         $scope.lcnnoType = lcnnotype;
-        //$scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
-        sessionStorage.HEAD_LCN_IDA = datas.IDA;
+        $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
         $scope.FULL_MODEL.PROCESS = datas.PROCESS_LCN;
-        REDIRECT("/LCN/FRM_LCN_NEWS");
-
 
         //$scope.FULL_MODEL.FUNC_CODE = "FUNC-DATA-REQUEST";
-        //var data_keep = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(datas.LCT_IDA, datas.PROCESS_LCN, IDENTIFY);
-        //data_keep.then(function (datas) {
-        //    $scope.DATA_LCN_MAIN = datas.data;
+        var data_keep = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(datas.LCT_IDA, datas.PROCESS_LCN, IDENTIFY);
+        data_keep.then(function (datas) {
+            $scope.DATA_LCN_MAIN = datas.data;
 
-        //}, function () { });
+        }, function () { });
     };
 
 
@@ -429,13 +357,7 @@
         }, function () { });
 
         
-        var MODEL_HEAD = CENTER_SV.GET_HEAD_LCN_INFORMATION_INPUT(sessionStorage.HEAD_LCN_IDA);
-        MODEL_HEAD.then(function (datas) {
-
-            $scope.LIST_HEAD_LCN = datas.data;
-        }, function () { });
-        
-        var data_keep = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(sessionStorage.LCT_IDA, sessionStorage.PROCESS, sessionStorage.CITIZEN_ID_AUTHORIZE);
+        var data_keep = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(LCT_IDA, PROCESS,IDENTIFY);
         data_keep.then(function (datas) {
             $scope.DATA_LCN_MAIN = datas.data;
 
@@ -443,13 +365,13 @@
 
 
 
-        var data_keep = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP('2', sessionStorage.CITIZEN_ID_AUTHORIZE);
+        var data_keep = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP('2', IDENTIFY);
         data_keep.then(function (datas) {
             $scope.REF_LOCATION_KEEP = datas.data;
 
         }, function () { });
 
-        var data_lct = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2('1', sessionStorage.CITIZEN_ID_AUTHORIZE);
+        var data_lct = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2('1', IDENTIFY);
         data_lct.then(function (datas) {
             $scope.REF_LOCATION = datas.data;
 
@@ -621,8 +543,7 @@
    
 
     $scope.BTN_LCN_BACK = function () {
-        //REDIRECT('/LCN/FRM_LCN_DRUG?PROCESS=' + sessionStorage.PROCESS);
-        REDIRECT('/LCN/FRM_LCN_NEWS');
+        REDIRECT('/LCN/FRM_LCN_DRUG?PROCESS=' + sessionStorage.PROCESS);
     };
 
     $scope.BTN_SAVE_LCN_INPUT = function () {
@@ -799,8 +720,7 @@
                     PHR_CTZNO: datas.PHR_CTZNO,
                     PHR_TEXT_NUM: datas.PHR_TEXT_NUM,
                     PHR_CHK_JOB: datas.PHR_CHK_JOB,
-                    PHR_JOB_TYPE: datas.PHR_JOB_TYPE,
-                    PHR_VETERINARY_FIELD: datas.PHR_VETERINARY_FIELD
+                    PHR_JOB_TYPE: datas.PHR_JOB_TYPE
                 };
                 $scope.COLLECT_PHR.push(obj);
 

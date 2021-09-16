@@ -230,4 +230,14 @@
             _IDA = value
         End Set
     End Property
+
+    Private _HEAD_LCN_IDA As String
+    Public Property HEAD_LCN_IDA() As String
+        Get
+            Return _HEAD_LCN_IDA
+        End Get
+        Set(ByVal value As String)
+            _HEAD_LCN_IDA = value
+        End Set
+    End Property
 End Class

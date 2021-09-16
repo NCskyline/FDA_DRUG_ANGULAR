@@ -19,7 +19,7 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
         } else {
             token = QueryString("Token");
         }
-
+        
         //var token = "PASS";
         sessionStorage.token = token;
 
@@ -28,6 +28,8 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
         getData.then(function (datas) {
             $scope.AUTHEN = datas.data;
             if (datas.data.CODE == '900') {
+
+                
                 sessionStorage.CITIZEN_ID = datas.data.CITIZEN_ID;
                 sessionStorage.CITIZEN_ID_AUTHORIZE = datas.data.CITIZEN_ID_AUTHORIZE;
                 sessionStorage.THANM = datas.data.THANM;
@@ -38,6 +40,7 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 if (location.hostname == 'localhost') {
 
                     if (TYPE == 'LCN') {
+                        sessionStorage.PROCESS = '';
                         window.location = "/LCN/FRM_LCN_NEWS";
                     } else if (TYPE == 'DH') {
                         window.location = "/DH/FRM_MAIN_PAGE_PHESAJ";
