@@ -95,6 +95,24 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
 
         End Function
+
+        Function SP_LCN_BY_PROCESS_AND_IDEN_ALIVE(ByVal process As String, ByVal iden As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_LCN_BY_PROCESS_AND_IDEN_ALIVE(process, iden)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
+        '
+        Function SP_DALCN_EDIT_REQUEST_BY_FK_IDA(ByVal fk_ida As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_DALCN_EDIT_REQUEST_BY_FK_IDA(fk_ida)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_GET_INV_HISTORY(ByVal CTZNO As String)
             Dim dt As New DataTable
             Dim bao As New BAO

@@ -41,7 +41,7 @@
         </div>
 
         <div class="title2">
-            <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" @*border="1"*@>
+            <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" >
                 <tr>
                     <td style="text-align:left;width:20%">
                         เลขรับที่
@@ -119,7 +119,7 @@
             </tr>
         </table>
         <br />
-        <table style=" font-size:20px;width:100%" @*border="1"*@ ;>
+        <table style=" font-size:20px;width:100%"  ;>
             <tr>
                 <td>
                     ซึ่งมีผู้ดำเนินกิจการ ชื่อ
@@ -171,7 +171,7 @@
             </tr>
         </table>
 
-        <table style="font-size:20px;width:100%" @*border="1"*@>
+        <table style="font-size:20px;width:100%" >
             <tr>
                 <td style="width:200px">
                     อยู่เลขที่
@@ -195,7 +195,7 @@
         </div>
 
         @*process =105 *@
-        <table style="font-size:20px;width:100%" @*border="1"*@>
+        <table style="font-size:20px;width:100%" >
             <tr>
                 <td style="width:500px">
                     โดยมีสถานที่นำหรือสั่งยาชื่อ
@@ -315,7 +315,7 @@
         <div style="font-size:16px;text-align:center">(ถ้ามีมากกว่าหนึ่งคนให้แจ้งเพิ่มเติมไว้ท้ายคำขอนี้จนครบ)</div>
         <br />
         <center>
-            <table style="font-size:20px" @*border="1"*@>
+            <table style="font-size:20px" >
                 <tr>
                     <td style="text-align:left;">
                         เป็นผู้มีหน้าที่ปฏิบัติการตามมาตรา 44 แห่งพระราชบัญญัติยา พ.ศ. 2510

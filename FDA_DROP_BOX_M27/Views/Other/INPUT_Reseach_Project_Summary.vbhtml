@@ -61,7 +61,7 @@
 </table>
 <br />
 
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr>
         <td colspan="3">
             ขอรับรองว่าข้อมูลเกี่ยวกับโครงการวิจัยหรือสรุปย่อโครงการวิจัย (ภาษาไทย) ดังตารางด้านล่างนี้ เป็นความจริงโดยเอกสารฉบับนี้
@@ -94,7 +94,7 @@
     </tr>
 </table>
 <br />
-<table style="font-size:20px;width:50%;margin-left:50%" @*border="1"*@>
+<table style="font-size:20px;width:50%;margin-left:50%" >
     <tr>
         <td style="text-align:right;width:10%">
             ลงชื่อ
@@ -120,7 +120,7 @@
     </tr>
 </table>
 
-<table style="font-size:20px;width:50%;margin-left:50%" @*border="1"*@>
+<table style="font-size:20px;width:50%;margin-left:50%" >
     <tr>
         <td style="text-align:left;width:20%">
             วันที่ให้คำรับรอง
@@ -131,7 +131,7 @@
     </tr>
 </table>
 <br />
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr>
         <td style="width:40%">
             1. ชื่อโครงการวิจัยภาษาไทย
@@ -158,7 +158,7 @@
     
 </table>
 
-<table style="font-size:20px;width:80%" @*border="1"*@>
+<table style="font-size:20px;width:80%" >
     <tr>
         <td style="width:36.5%">
             4.ชื่อย่อของโครงการ หรือ ชื่อเรียกอื่น
@@ -191,7 +191,7 @@
 
 </table>
 
-<table style="width:100%" @*border="1"*@>
+<table style="width:100%" >
     <tr>
         <td style="width:40% ;font-size:20px">
             6.การลงทะเบียนงานวิจัย (Clinical Trials Registry) (อาจลงทะเบียนกับ Registry ของไทยหรือต่างประเทศก็ได้ มากกว่าหนึ่งแห่งก็ได้)
@@ -207,7 +207,7 @@
 </table>
 
 <div style="font-size:20px">7.ประเภทของโครงการวิจัย (1-4 นิยามตาม ICH-E8 ‘General Consideration for Clinical Trials’)</div>
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr>
         <td style="text-align:right;width:10%">
             ระยะที่:
@@ -233,7 +233,7 @@
     </tr>
 </table>
 
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr>
         <td style="width:40%">
             8.ประเภทของการสนับสนุนการวิจัย
@@ -347,7 +347,7 @@
 
 </table>
 <br />
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr>
         <td style="width:60%">
             14. ผู้ให้ทุนวิจัยในประเทศไทย (Thai Sponsor)(ชื่อหน่วยงาน ที่อยู่ เบอร์โทร อีเมล์)

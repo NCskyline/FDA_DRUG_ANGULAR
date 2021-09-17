@@ -13,7 +13,7 @@ End Code
         <div>
             <table width="100%">
                 <tr>
-                    <td width="40%">ใบอนุญาต  {{lcnnoType}}</td>                   
+                    <td width="40%">ใบอนุญาต  {{lcnnoType}}</td>
                 </tr>
             </table>
         </div>
@@ -21,20 +21,7 @@ End Code
         <div class="row">
             <div class="col-sm-12">
                 <div class="card" style=" border-top: 10px solid #277210;">
-                    @*<table style="margin-top:10px;width:100%;" class="table table-condensed">
-                            <tr>
-                                <td>เลขที่ใบอนุญาต</td>
-                                <td>ชื่อสถานที่</td>
-                                <td>ที่อยู่</td>
-                                <td>เลขสถานที่</td>
-                                <td>สถานะ</td>
-                                <td>เลขดำเนินการ</td>
-                                <td>เหตุผลการคืนคำขอ</td>
-                                <td></td>
-                            </tr>
-                            <tr></tr>
-                        </table>*@
-
+      
                     <table style="margin-top:10px;width:100%;" class="table table-condensed">
                         <thead>
                             <tr>
@@ -49,7 +36,7 @@ End Code
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="cc in DATA_LCN_LIST">
+                            <tr ng-repeat="cc in DATA_LCN_F_EDIT">
                                 <td>{{cc.LCNNO_DISPLAY}}</td>
                                 <td>{{cc.thanameplace}}</td>
                                 <td>{{cc.fulladdr}}</td>
@@ -59,8 +46,8 @@ End Code
                                 <td>{{cc.REMARK}}</td>
                                 <td>
                                     <span class="fa fa-eye"></span>
-                                    <a ng-click="SELECT_LCN_HEAD(cc,lcnnoType)">
-                                        ใบย่อย
+                                    <a ng-click="SELECT_LCN_EDIT(cc)">
+                                        เลือก
                                     </a>
                                 </td>
                             </tr>

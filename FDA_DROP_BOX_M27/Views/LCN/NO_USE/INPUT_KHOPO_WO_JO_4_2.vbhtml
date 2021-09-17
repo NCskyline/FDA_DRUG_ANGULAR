@@ -94,7 +94,7 @@
 </h2>
 <center><hr class="hr" /></center>
 
-<table style="font-size:20px;width:40%" @*border="1"*@>
+<table style="font-size:20px;width:40%" >
     <tr>
         <td style="width:30%">
             <strong>ใบอนุญาตเลข</strong>
@@ -105,7 +105,7 @@
     </tr>
 </table>
 
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr style="text-align:center">
         <td colspan="3">
             ใบอนุญาตฉบับนี้ให้ไว้แก่
@@ -132,7 +132,7 @@
 <div style="font-size:20px">เพื่อแสดงว่าเป็นผู้ได้รับอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๔ ในบริเวณสถานที่ที่มีการประชุมของผู้ประกอบวิชาชีพเวชกรรม</div>
 <div style="font-size:20px">ผู้ประกอบวิชาชีพทันตกรรม ผู้ประกอบวิชาชีพเภสัชกรรมหรือผู้ประกอบวิชาชีพการสัตวแพทย์ชั้นหนึ่ง</div>
 
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr>
         <td style="width:15%">
             ณ สถานที่ชื่อ
@@ -169,7 +169,7 @@
 
 <br />
 
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr>
         <td style="width:15%">
             ตั้งแต่วันที่
@@ -187,7 +187,7 @@
 </table>
 <br />
 
-<table style="font-size:20px;width:70%;margin-left:30%" @*border="1"*@>
+<table style="font-size:20px;width:70%;margin-left:30%" >
     <tr>
         <td style="width:15%">
             ให้ไว้ ณ วันที่
@@ -211,7 +211,7 @@
 </table>
 <br />
 <br />
-<table style="font-size:20px;width:60%;margin-left:40%;text-align:center" @*border="1"*@>
+<table style="font-size:20px;width:60%;margin-left:40%;text-align:center" >
     <tr>
         <td>
         </td>

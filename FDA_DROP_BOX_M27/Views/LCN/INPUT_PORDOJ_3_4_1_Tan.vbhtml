@@ -51,7 +51,7 @@
 </div>
 
 <div class="title2">
-    <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" @*border="1"*@>
+    <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" >
         <tr>
             <td style="text-align:left;width:20%">
                 เลขรับที่
@@ -95,7 +95,7 @@
     <strong>ใบอนุญาตผลิตวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
 </h2>
 @*process =1107,1108 *@
-<table style="width:70%; font-size:20px;margin:auto;text-align:center" @*border="1"*@>
+<table style="width:70%; font-size:20px;margin:auto;text-align:center" >
     <tr>
         <td>
             <strong>สำหรับผลิต</strong>
@@ -181,7 +181,7 @@
 <h2 style="font-size:24px;">
     <strong>๑. ข้อมูลผู้ขอรับใบอนุญาต</strong>
 </h2>
-<table style="width:90%" @*border="1"*@>
+<table style="width:90%" >
     <tr>
         <td style="font-size:20px" width="40%">
             ข้าพเจ้า (ชื่อบุคคล/นิติบุคคล)
@@ -258,7 +258,7 @@
 <h2 style="font-size:24px;">
     <strong>๒. ข้อมูลผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต</strong>
 </h2>
-<table style="width:90%" @*border="1"*@>
+<table style="width:90%" >
     <tr>
         <td style="font-size:20px" width="40%">
             ข้าพเจ้า
@@ -347,7 +347,7 @@
 </table>
 
 <div style="font-size:20px"><strong>๓. ข้อมูลสถานที่ผลิต</strong></div>
-<table style="width:100%;font-size:20px" @*border="1"*@>
+<table style="width:100%;font-size:20px" >
     <tr>
         <td>
             ณ สถานที่ชื่อ
@@ -380,7 +380,7 @@
     </tr>
 </table>
 
-<table style="width:100%;font-size:20px" @*border="1"*@>
+<table style="width:100%;font-size:20px" >
     <tr>
         <td style="width:25%">
             มีความประสงค์ขอรับอนุญาตผลิตวัตถุออกฤทธิ์ในหมวด
@@ -428,7 +428,7 @@
 <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
 <div style="font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
 <br />
-<table style="width:100%;font-size:20px" @*border="1"*@>
+<table style="width:100%;font-size:20px" >
     <tr>
         <td colspan="7">
             <strong>
@@ -474,7 +474,7 @@
 
 <div style=";font-size:20px"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
 <div style="margin-left:5%;font-size:20px"><strong>๕.๑ <u>กรณีขอรับใบอนุญาต (กรณีรายใหม่)</u></strong></div>
-<table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+<table style="width:90%;font-size:20px ;margin-left:10%" >
     <tr>
         <td>
             (๑) สำเนาใบอนุญาตขายยาแผนปัจจุบันตามกฎหมายว่าด้วยยา
@@ -518,7 +518,7 @@
 </table>
 
 <div style="margin-left:5%;font-size:20px"><strong>๕.๒ <u>กรณีขอต่ออายุใบอนุญาต</u></strong></div>
-<table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+<table style="width:90%;font-size:20px ;margin-left:10%" >
     <tr>
         <td>
             (๑) ใบอนุญาตฉบับเดิม
@@ -533,7 +533,7 @@
 
 </table>
 <div style="margin-left:5%;font-size:20px"><strong>๕.๓ <u>กรณีขอรับใบแทนใบอนุญาต</u></strong></div>
-<table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+<table style="width:90%;font-size:20px ;margin-left:10%" >
     <tr>
         <td>
             (๑) ใบแจ้งความ กรณีใบอนุญาตสูญหาย
@@ -556,7 +556,7 @@
 <br />
 <br />
 
-<table style="width:85%;font-size:20px ;margin-left:12.5%" @*border="1"*@>
+<table style="width:85%;font-size:20px ;margin-left:12.5%" >
     <tr>
         <td style="text-align:right">
             (ลายมือชื่อ)
@@ -582,7 +582,7 @@
 <br />
 
 <div style="margin-left:5%;font-size:20px"> หมายเหตุ : (๑) ให้ขีดเลือกข้อความในช่อง ☐/〇 ให้ตรงตามที่ประสงค์จะดำเนินการ</div>
-<table style="width:90%;font-size:20px ;margin-left:12.5%" @*border="1"*@>
+<table style="width:90%;font-size:20px ;margin-left:12.5%" >
     <tr>
         <td>
             (๒) รับรองสำเนาถูกต้องในเอกสารที่เป็นสำเนาทุกฉบับ

@@ -168,6 +168,13 @@ Namespace Controllers
         Function FRM_SELECT_LCT() As ActionResult
             Return View()
         End Function
+        Function FRM_LCN_SELECT() As ActionResult
+            Return View()
+        End Function
+
+        Function FRM_LCN_EDIT_REQUEST() As ActionResult
+            Return View()
+        End Function
     End Class
 
     Public Class LCN_CENTERController

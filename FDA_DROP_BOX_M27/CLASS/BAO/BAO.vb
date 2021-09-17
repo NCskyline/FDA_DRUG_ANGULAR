@@ -450,6 +450,32 @@ Public Class BAO
         Return dta
     End Function
 
+    Public Function SP_DALCN_EDIT_REQUEST_BY_FK_IDA(ByVal fk_ida As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_DALCN_EDIT_REQUEST_BY_FK_IDA @FK_IDA=" & fk_ida
+        Dim dta As New DataTable
+        Try
+            dta = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+        dta.TableName = "SP_DALCN_EDIT_REQUEST_BY_FK_IDA"
+        Return dta
+    End Function
+    Public Function SP_LCN_BY_PROCESS_AND_IDEN_ALIVE(ByVal process As String, ByVal iden As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_LCN_BY_PROCESS_AND_IDEN_ALIVE @PROCESS_ID='" & process & "' ,@iden ='" & iden & "'"
+        Dim dta As New DataTable
+        Try
+            dta = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+        dta.TableName = "SP_LCN_BY_PROCESS_AND_IDEN_ALIVE"
+        Return dta
+    End Function
     Public Function SP_PHR_NOT_ROW_1_BY_FK_IDA(ByVal FK_IDA As Integer) As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_PHR_NOT_ROW_1_BY_FK_IDA @FK_IDA =  " & FK_IDA

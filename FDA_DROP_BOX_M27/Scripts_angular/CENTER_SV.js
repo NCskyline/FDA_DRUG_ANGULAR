@@ -1312,6 +1312,17 @@
     };
 
     
+    this.SP_DALCN_EDIT_REQUEST_BY_FK_IDA = function (fk_ida) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_DALCN_EDIT_REQUEST_BY_FK_IDA"),
+            params: {
+                fk_ida: fk_ida
+            }
+        });
+        return response;
+    };
+
     this.SP_LCN_BY_PROCESS_AND_IDEN = function (process, iden) {
         var response = $http({
             method: "post",
@@ -1324,6 +1335,18 @@
         return response;
     };
     
+    this.SP_LCN_BY_PROCESS_AND_IDEN_ALIVE = function (process, iden) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_LCN_BY_PROCESS_AND_IDEN_ALIVE"),
+            params: {
+                process: process,
+                iden: iden
+            }
+        });
+        return response;
+    };
+
     this.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN = function (LCT_IDA, process) {
         var response = $http({
             method: "post",

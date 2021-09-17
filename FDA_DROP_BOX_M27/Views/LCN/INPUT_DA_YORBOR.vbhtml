@@ -64,7 +64,7 @@
             </tr>
         </table>
         <br />
-        <table style=" font-size:20px;width:100%" @*border="1"*@ ;>
+        <table style=" font-size:20px;width:100%"  ;>
             <tr>
                 <td style="width:30%">
                     ซึ่งมีผู้ดำเนินกิจการ ชื่อ
@@ -113,7 +113,7 @@
 
             </tr>
         </table>
-        <table style="font-size:20px;width:100%" @*border="1"*@>
+        <table style="font-size:20px;width:100%" >
             <tr>
                 <td style="width:200px">
                     อยู่เลขที่
@@ -132,7 +132,7 @@
                 </td>
             </tr>
         </table>
-        <table style="font-size:20px;width:100%" @*border="1"*@>
+        <table style="font-size:20px;width:100%" >
             <tr>
                 <td>
                     ขอรับใบอนุญาต
@@ -159,7 +159,7 @@
                 </td>
             </tr>
         </table>
-        <table style="font-size:20px;width:100%" @*border="1"*@>
+        <table style="font-size:20px;width:100%" >
             <tr>
                 <td style="width:500px">
                     โดยมีสถานที่ประกอบธุรกิจ

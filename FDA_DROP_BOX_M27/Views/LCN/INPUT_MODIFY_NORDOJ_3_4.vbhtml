@@ -1,9 +1,4 @@
-﻿
-<script type="text/javascript">
-
-</script>
-
-<style>
+﻿<style>
     .title1 {
         width: 500px;
         height: 170px;
@@ -48,10 +43,10 @@
 <br />
 <div class="title1">
     @*process =11104 *@
-    <table style="font-size:20px;margin:auto;margin-top:6%" >
+    <table style="font-size:20px;margin:auto;margin-top:6%">
         <tr>
             <td>
-                <strong>ใบอนุญาตผลิตวัตถุออกฤทธิ์</strong>
+                <strong>ใบอนุญาตนำเข้าวัตถุออกฤทธิ์</strong>
             </td>
             <td>
                 <input type="radio" name="gender" checked /> <strong>ในประเภท ๓</strong>
@@ -79,7 +74,7 @@
     </table>
 </div>
 <div class="title2">
-    <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" >
+    <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px">
         <tr>
             <td style="text-align:left;width:20%">
                 เลขรับที่
@@ -132,9 +127,9 @@
 </table>
 <br />
 
-<table style="width:100%; font-size:20px" >
+<table style="width:100%; font-size:20px">
     <tr>
-        
+
         <td style="width:20%">
             <input type="radio" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.CHK_TYPE1" id="rdl_CHK_TYPE" /> <strong>ย้ายสถานที่</strong>
         </td>
@@ -155,7 +150,7 @@
 <h2 style="font-size:24px;">
     <strong>๑. ข้อมูลผู้ขอรับใบอนุญาต</strong>
 </h2>
-<table style="width:90%;margin-left:5%" >
+<table style="width:90%;margin-left:5%">
     <tr>
         <td style="font-size:20px" width="40%">
             ข้าพเจ้า (ชื่อบุคคล/นิติบุคคล)
@@ -233,7 +228,7 @@
 <h2 style="font-size:24px;">
     <strong>๒. ข้อมูลผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต</strong>
 </h2>
-<table style="width:90%;margin-left:5%" >
+<table style="width:90%;margin-left:5%">
     <tr>
         <td style="font-size:20px" width="40%">
             ข้าพเจ้า
@@ -314,7 +309,7 @@
 <h2 style="font-size:24px;">
     <strong>๓. ขอแก้ไขเปลี่ยนแปลงรายการในใบอนุญาตดังต่อไปนี้</strong>
 </h2>
-<table style="width:90%;font-size:20px;margin-left:5%" >
+<table style="width:90%;font-size:20px;margin-left:5%">
     <tr>
         <td colspan="2">
             <strong>(๓.๑) <u>กรณีย้ายสถานที่ขายวัตถุออกฤกธิ์ คือ</u></strong>
@@ -359,21 +354,17 @@
         <td>
             ตั้งอยู่เลขที่
         </td>
-        <td>
-            
-        </td>
+        <td></td>
     </tr>
     <tr>
         <td>
             โทรศัพท์/มือถือ
         </td>
-        <td>
-            
-        </td>
+        <td></td>
     </tr>
 </table>
 
-<table style="width:90%;font-size:20px;margin-left:5%" >
+<table style="width:90%;font-size:20px;margin-left:5%">
     <tr>
         <td colspan="2">
             <strong>(๓.๒) <u>กรณีย้ายสถานที่เก็บวัตถุออกฤกธิ์ คือ</u></strong>
@@ -432,12 +423,12 @@
     </tr>
 </table>
 
-<table style="width:90%;font-size:20px;margin-left:5%" >
+<table style="width:90%;font-size:20px;margin-left:5%">
     <tr>
         <td colspan="2">
             <strong>(๓.๓) <u>กรณีเปลี่ยนแปลงหรือเพิ่มสถานที่ผลิตหรือสถานที่เก็บวัตถุออกฤทธิ์ </u></strong> (ให้ระบุเหตุผลความจำเป็น และลักษณะของการเปลี่ยน และ
         </td>
-        
+
     </tr>
     <tr>
         <td>
@@ -451,7 +442,7 @@
     </tr>
 </table>
 
-<table style="width:90%;font-size:20px;margin-left:5%" >
+<table style="width:90%;font-size:20px;margin-left:5%">
     <tr>
         <td style="width:17%">
             <strong>โดยมีเภสัชกรชื่อ</strong> 1
@@ -480,7 +471,7 @@
 </table>
 <br />
 <div style="font-size:20px"><strong>๔. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
-<table style="width:90%;font-size:20px;margin-left:5%" >
+<table style="width:90%;font-size:20px;margin-left:5%">
     <tr>
         <td colspan="2">
             (๔.๑) ใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี
@@ -507,7 +498,7 @@
 </table>
 <br />
 
-<table style="width:85%;font-size:20px" >
+<table style="width:85%;font-size:20px">
     <tr>
         <td style="text-align:right">
             (ลายมือชื่อ)
@@ -549,17 +540,6 @@
 <div style="font-size:20px">หรือโฉนดที่ดินติดกัน แต่ทั้งนี้ ไม่รวมถึงกรณีการเพิ่มสาขาหรือขยายสาขา</div>
 <div style="font-size:20px;margin-left:6.3%">(๖) กรณีการยื่นคำขอโดยวิธีการทางอิเล็กทรอนิกส์ เอกสารหรือหลักฐานประกอบคำขอให้เป็นไปตามระบบ</div>
 <div style="font-size:20px">การยื่นทางอิเล็กทรอนิกส์ที่สำนักงานคณะกรรมการอาหารและยากำหนด</div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

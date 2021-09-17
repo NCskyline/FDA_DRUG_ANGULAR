@@ -93,7 +93,7 @@
 </h2>
 <center><hr class="hr" /></center>
 
-<table style="font-size:20px;width:40%" @*border="1"*@>
+<table style="font-size:20px;width:40%" >
     <tr>
         <td style="width:30%">
             <strong>ใบอนุญาตเลข</strong>
@@ -104,7 +104,7 @@
     </tr>
 </table>
 
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr style="text-align:center">
         <td colspan="3">
             ใบอนุญาตฉบับนี้ให้ไว้แก่
@@ -128,7 +128,7 @@
     </tr>
 </table>
 
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr>
         <td style="text-align:right">
             โดยมีเภสัชกรชื่อ (๑)
@@ -173,7 +173,7 @@
     </tr>
 </table>
 
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr>
         <td colspan="2">
             เป็นผู้ควบคุมตามมาตรา ๕๑ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙
@@ -214,7 +214,7 @@
 
 </table>
 
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr>
         <td style="width:16.5%">
             สถานที่เก็บ ชื่อ
@@ -250,7 +250,7 @@
 
 </table>
 
-<table style="font-size:20px;width:100%;text-align:right;margin-right:auto" @*border="1"*@>
+<table style="font-size:20px;width:100%;text-align:right;margin-right:auto" >
     <tr>
         <td>
             ใบอนุญาตฉบับนี้ให้ใช้ได้จนถึงวันที่
@@ -264,7 +264,7 @@
     </tr>
 </table>
 
-<table style="font-size:20px;width:70%;margin-left:30%" @*border="1"*@>
+<table style="font-size:20px;width:70%;margin-left:30%" >
     <tr>
         <td style="width:15%;text-align:center">
             ให้ไว้ ณ วันที่
@@ -287,7 +287,7 @@
     </tr>
 </table>
 
-<table style="font-size:20px;width:70%;margin-left:30%" @*border="1"*@>
+<table style="font-size:20px;width:70%;margin-left:30%" >
     <tr>
         <td style="text-align:center">
             text
@@ -295,7 +295,7 @@
     </tr>
 </table>
 
-<table style="font-size:20px;width:70%;margin-left:30%" @*border="1"*@>
+<table style="font-size:20px;width:70%;margin-left:30%" >
     <tr>
         <td style="width:10%;text-align:center">
             ตำแหน่ง
@@ -305,7 +305,7 @@
         </td>
     </tr>
 </table>
-<table style="font-size:20px;width:70%;margin-left:30%" @*border="1"*@>
+<table style="font-size:20px;width:70%;margin-left:30%" >
     <tr>
         <td style="text-align:center">
             ผู้อนุญาต
@@ -393,7 +393,7 @@
 <br />
 
 <div class="groubleft">
-    <table style="font-size:20px;width:100%" @*border="1"*@>
+    <table style="font-size:20px;width:100%" >
         <tr>
             <td colspan="5">
                 <strong><u>การต่ออายุใบอนุญาต ครั้งที่ ๑</u></strong>
@@ -435,7 +435,7 @@
         </tr>
 
     </table>
-    <table style="font-size:20px;width:100%" @*border="1"*@>
+    <table style="font-size:20px;width:100%" >
         <tr>
             <td style="text-align:center;width:30%">
                 text
@@ -458,7 +458,7 @@
 </div>
 
 <div class="groubcenter">
-    <table style="font-size:20px;width:100%" @*border="1"*@>
+    <table style="font-size:20px;width:100%" >
         <tr>
             <td colspan="5">
                 <strong><u>การต่ออายุใบอนุญาต ครั้งที่ ๒</u></strong>
@@ -500,7 +500,7 @@
         </tr>
 
     </table>
-    <table style="font-size:20px;width:100%" @*border="1"*@>
+    <table style="font-size:20px;width:100%" >
         <tr>
             <td style="text-align:center;width:30%">
                 text
@@ -523,7 +523,7 @@
 </div>
 
 <div class="groubright">
-    <table style="font-size:20px;width:100%" @*border="1"*@>
+    <table style="font-size:20px;width:100%" >
         <tr>
             <td colspan="5">
                 <strong><u>การต่ออายุใบอนุญาต ครั้งที่ ๓</u></strong>
@@ -565,7 +565,7 @@
         </tr>
 
     </table>
-    <table style="font-size:20px;width:100%" @*border="1"*@>
+    <table style="font-size:20px;width:100%" >
         <tr>
             <td style="text-align:center;width:30%">
                 text
@@ -590,7 +590,7 @@
 <br />
 <br />
 <div class="groubleft">
-    <table style="font-size:20px;width:100%" @*border="1"*@>
+    <table style="font-size:20px;width:100%" >
         <tr>
             <td colspan="5">
                 <strong><u>การต่ออายุใบอนุญาต ครั้งที่ ๔</u></strong>
@@ -632,7 +632,7 @@
         </tr>
 
     </table>
-    <table style="font-size:20px;width:100%" @*border="1"*@>
+    <table style="font-size:20px;width:100%" >
         <tr>
             <td style="text-align:center;width:30%">
                 text
@@ -655,7 +655,7 @@
 </div>
 
 <div class="groubcenter">
-    <table style="font-size:20px;width:100%" @*border="1"*@>
+    <table style="font-size:20px;width:100%" >
         <tr>
             <td colspan="5">
                 <strong><u>การต่ออายุใบอนุญาต ครั้งที่ ๕</u></strong>
@@ -697,7 +697,7 @@
         </tr>
 
     </table>
-    <table style="font-size:20px;width:100%" @*border="1"*@>
+    <table style="font-size:20px;width:100%" >
         <tr>
             <td style="text-align:center;width:30%">
                 text
@@ -720,7 +720,7 @@
 </div>
 
 <div class="groubright">
-    <table style="font-size:20px;width:100%" @*border="1"*@>
+    <table style="font-size:20px;width:100%" >
         <tr>
             <td colspan="5">
                 <strong><u>การต่ออายุใบอนุญาต ครั้งที่ ๖</u></strong>
@@ -762,7 +762,7 @@
         </tr>
 
     </table>
-    <table style="font-size:20px;width:100%" @*border="1"*@>
+    <table style="font-size:20px;width:100%" >
         <tr>
             <td style="text-align:center;width:30%">
                 text

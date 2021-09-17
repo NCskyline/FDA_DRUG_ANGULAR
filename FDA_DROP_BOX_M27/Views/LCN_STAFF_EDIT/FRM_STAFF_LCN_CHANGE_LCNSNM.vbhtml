@@ -3,7 +3,7 @@
 <script src="../Scripts_angular/LCN_STAFF_EDIT_CTRL.js"></script>
 <div ng-controller="LCN_STAFF_EDIT_CTRL" ng-app="ANGULAR_APP" class="ic" ng-init="pageload()">
     <div style="font-family:'Taviraj';font-size:20px;">
-        <table style="width:100%" @*border="1"*@>
+        <table style="width:100%" >
             <tr>
                 <td style="width:45%;padding-left:20%">
                     ชื่อผู้รับอนุญาต (เดิม)

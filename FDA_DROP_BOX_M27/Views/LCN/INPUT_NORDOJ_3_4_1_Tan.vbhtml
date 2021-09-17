@@ -183,7 +183,7 @@
         <h2 style="font-size:24px;">
             <strong>๑. ข้อมูลผู้ขอรับใบอนุญาต</strong>
         </h2>
-        <table style="width:90%;margin-left:5%" @*border="1"*@>
+        <table style="width:90%;margin-left:5%" >
             <tr>
                 <td style="font-size:20px" width="40%">
                     ข้าพเจ้า (ชื่อบุคคล/นิติบุคคล)
@@ -259,7 +259,7 @@
         <h2 style="font-size:24px;">
             <strong>๒. ข้อมูลผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต</strong>
         </h2>
-        <table style="width:90%;margin-left:5%" @*border="1"*@>
+        <table style="width:90%;margin-left:5%" >
             <tr>
                 <td style="font-size:20px" width="40%">
                     ข้าพเจ้า
@@ -358,7 +358,7 @@
             </tr>
         </table>
 
-        <table style="width:90%;font-size:20px" @*border="1"*@>
+        <table style="width:90%;font-size:20px" >
             <tr>
                 <td colspan="2">
                     <p style="margin-left:5%">มีความประสงค์ขอรับอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ เนื่องจาก</p>
@@ -407,7 +407,7 @@
         </table>
         <br />
 
-        <table style="width:100%;font-size:20px" @*border="1"*@>
+        <table style="width:100%;font-size:20px" >
             <tr>
                 <td colspan="4">
                     ๓. ข้อมูลสถานที่นำเข้า
@@ -469,7 +469,7 @@
         <div style="margin-left:5%;font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
         <br />
 
-        <table style="width:100%;font-size:20px" @*border="1"*@>
+        <table style="width:100%;font-size:20px" >
             <tr>
                 <td colspan="7">
                     <p>
@@ -511,7 +511,7 @@
             </tr>
 
         </table>
-        <table style="width:100%;font-size:20px" @*border="1"*@>
+        <table style="width:100%;font-size:20px" >
             <tr>
                 <td style="width:50%">
                     โดยได้รับอนุญาตนำสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร เลขที่
@@ -533,7 +533,7 @@
 
         <div style=";font-size:20px"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
         <div style="margin-left:5%;font-size:20px"><strong>๕.๑ กรณีขอรับใบอนุญาต (กรณีรายใหม่)</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+        <table style="width:90%;font-size:20px ;margin-left:10%" >
             <tr>
                 <td>
                     (๑) คำรับรองของผู้รับอนุญาตและเภสัชกรผู้ควบคุมกิจการ
@@ -567,7 +567,7 @@
             </tr>
         </table>
         <div style="margin-left:5%;font-size:20px"><strong>๕.๒ กรณีขอต่ออายุใบอนุญาต</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+        <table style="width:90%;font-size:20px ;margin-left:10%" >
             <tr>
                 <td>
                     (๑) ใบอนุญาตฉบับเดิม
@@ -582,7 +582,7 @@
 
         </table>
         <div style="margin-left:5%;font-size:20px"><strong>๕.๓ กรณีขอรับใบแทนใบอนุญาต</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+        <table style="width:90%;font-size:20px ;margin-left:10%" >
             <tr>
                 <td>
                     (๑) ใบแจ้งความ กรณีใบอนุญาตสูญหาย
@@ -605,7 +605,7 @@
         <br />
         <br />
 
-        <table style="width:85%;font-size:20px ;margin-left:12.5%" @*border="1"*@>
+        <table style="width:85%;font-size:20px ;margin-left:12.5%" >
             <tr>
                 <td style="text-align:right">
                     (ลายมือชื่อ)
@@ -631,7 +631,7 @@
         <br />
 
         <div style="margin-left:5%;font-size:20px"> หมายเหตุ : (๑) ให้ขีดเลือกข้อความในช่อง ☐/〇 ให้ตรงตามที่ประสงค์จะดำเนินการ</div>
-        <table style="width:90%;font-size:20px ;margin-left:12.5%" @*border="1"*@>
+        <table style="width:90%;font-size:20px ;margin-left:12.5%" >
             <tr>
                 <td>
                     (๒) รับรองสำเนาถูกต้องในเอกสารที่เป็นสำเนาทุกฉบับ

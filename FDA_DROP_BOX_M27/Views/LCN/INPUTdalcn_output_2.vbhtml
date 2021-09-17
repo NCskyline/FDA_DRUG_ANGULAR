@@ -49,7 +49,7 @@
 </div>
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
     <div class="title2" style="font-family:'Taviraj';font-size:24px;">
-        <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" @*border="1"*@>
+        <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" >
             <tr>
                 <td style="text-align:left;width:20%">
                     เลขรับที่
@@ -121,7 +121,7 @@
 
         </table>
         <br />
-        <table style="width:100%;" @*border="1"*@>
+        <table style="width:100%;" >
             <tr>
                 <td style="font-size:20px" width="5%">
                     ข้าพเจ้า
@@ -140,7 +140,7 @@
 
         <br />
 
-        <table style=" font-size:20px;width:100%" @*border="1"*@ ;>
+        <table style=" font-size:20px;width:100%"  ;>
             <tr>
                 <td>
                     ซึ่งมีผู้ดำเนินกิจการ ชื่อ
@@ -191,7 +191,7 @@
 
             </tr>
         </table>
-        <table style="font-size:20px;width:100%" @*border="1"*@>
+        <table style="font-size:20px;width:100%" >
             <tr>
                 <td style="width:200px">
                     อยู่เลขที่
@@ -352,7 +352,7 @@
             </tr>
         </table>
         <hr />
-        <table style="font-size:20px;width:100%" @*border="1"*@>
+        <table style="font-size:20px;width:100%" >
             <tr>
                 <td style="width:10%">
                     <input class="checkbox" type="radio" id="rdl_type" value="1" />
@@ -386,7 +386,7 @@
 
             </tr>
         </table>
-        <table style="font-size:20px;width:100%" @*border="1"*@>
+        <table style="font-size:20px;width:100%" >
             <tr>
                 <td style="width:30%">
                     ใบอนุญาตประกอบวิชาชีพ เลขที่
@@ -404,7 +404,7 @@
             </tr>
         </table>
 
-        <table style="font-size:20px;width:100%" @*border="1"*@>
+        <table style="font-size:20px;width:100%" >
             <tr>
                 <td style="width:10%">
                     <input class="checkbox" type="radio" id="rdl_type" value="2" />
@@ -448,7 +448,7 @@
         </table>
         <br />
 
-        <table style="font-size:16px;width:100%" @*border="1"*@>
+        <table style="font-size:16px;width:100%" >
             <tr>
                 <td style="text-align:center" colspan="2">
                     <strong>(ถ้ามีมากกว่าหนึ่งคนให้แจ้งเพิ่มเติมท้ายคำขอนี้จน)</strong>

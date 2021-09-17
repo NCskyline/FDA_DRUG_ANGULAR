@@ -129,7 +129,7 @@
             </tr>
         </table>
         <br />
-        <table style="width:100%;" @*border="1"*@>
+        <table style="width:100%;" >
             <tr>
                 <td width="5%">
                     ข้าพเจ้า
@@ -151,7 +151,7 @@
         </div>
         <br />
 
-        <table style=" font-size:20px;width:100%" @*border="1"*@ ;>
+        <table style=" font-size:20px;width:100%"  ;>
             <tr>
                 <td>
                     ซึ่งมีผู้ดำเนินกิจการ ชื่อ
@@ -202,7 +202,7 @@
             </tr>
         </table>
 
-        <table style="font-size:20px;width:100%" @*border="1"*@>
+        <table style="font-size:20px;width:100%" >
             <tr>
                 <td style="width:200px">
                     อยู่เลขที่
@@ -228,7 +228,7 @@
             ขอรับใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร
         </div>
 
-        <table style="font-size:20px;width:100%" @*border="1"*@>
+        <table style="font-size:20px;width:100%" >
             <tr>
                 <td style="text-align:left;width:700px">
                     ผลิตยาแผนปัจจุบันโดยมีสถานที่ผลิตยาชื่อ
@@ -270,7 +270,7 @@
         <div style="font-size:20px;margin-left:5%">สำหรับผลิตยาแผนปัจจุบันในหมวดยาต่อไปนี้</div>
 
         <div>
-            <table style=" width:60% ;font-size:20px;margin:auto" @*border="1"*@>
+            <table style=" width:60% ;font-size:20px;margin:auto" >
                 <tr style="text-align:center">
                     <th style="width:60%">
                         หมวดยา

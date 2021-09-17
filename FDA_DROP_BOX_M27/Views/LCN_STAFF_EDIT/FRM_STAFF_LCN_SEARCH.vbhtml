@@ -5,7 +5,7 @@
 <script src="~/Scripts_angular/LCN_STAFF_EDIT_CTRL.js"></script>
 <div ng-controller="LCN_STAFF_EDIT_CTRL" ng-app="ANGULAR_APP">
     <h1>ค้นหาใบอนุญาตสถานที่ด้านยา</h1><br />
-    <table style="width:100%" @*border="1"*@>
+    <table style="width:100%" >
         <tr>
             <td style="width:30%">
                 สถานะใบอนุญาต

@@ -42,7 +42,7 @@
         <br />
 
         <h1>สถานะใบอนุญาต</h1>
-        <table style="width:100%" @*border="1"*@>
+        <table style="width:100%" >
             <tr>
                 <td style="width:20%">
                     สถานะปัจจุบัน :
@@ -71,7 +71,7 @@
         <br />
 
         <h1>การขอเปลี่ยนแปลงสถานะ </h1>
-        <table style="width:100%" @*border="1"*@>
+        <table style="width:100%" >
             <tr>
                 <td style="width:20%">
                     เลือกสถานะใหม่ :
@@ -99,7 +99,7 @@
         <br />
 
         <h1>เวลาทำการ</h1>
-        <table style="width:100%" @*border="1"*@>
+        <table style="width:100%" >
             <tr>
                 <td style="width:20%">
                     เวลาทำการ :
@@ -130,7 +130,7 @@
         <br />
 
         <h1>แก้ไขวันที่ให้ไว้ ณ และปีที่หมดอายุ</h1>
-        <table style="width:100%" @*border="1"*@>
+        <table style="width:100%" >
             <tr>
                 <td style="width:20%">
                     วันที่ให้ไว้ ณ :

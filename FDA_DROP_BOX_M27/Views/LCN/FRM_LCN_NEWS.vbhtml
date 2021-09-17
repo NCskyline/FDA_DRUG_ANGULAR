@@ -14,7 +14,7 @@
                     <div class="listree-submenu-heading">ขออนุญาตสถานที่ด้านยาแห่งใหม่</div>
                     <ul class="listree-submenu-items" style="color:black">
                         <li>
-                            <a ng-click="BTN_MENU('101')" style="color:#06B716">ขย1</a>  @*ng-click="DATA_GMP('31')"*@
+                            <a ng-click="BTN_MENU('101')" style="color:#06B716">ขย1</a>
                         </li>
                         <li>
                             <a ng-click="BTN_MENU('103')" style="color:#06B716">ขย3</a>
@@ -72,16 +72,16 @@
                             </ul>
                         </li>
                         <li>
-                            <div class="listree-submenu-heading">ยาเสพติดให้โทษประเภทที่ ๓ หรือ ๔</div>
+                            <div class="listree-submenu-heading">ยาเสพติดให้โทษประเภทที่ ๓</div>
                             <ul class="listree-submenu-items" style="color:black">
                                 <li>
-                                    <a ng-click="BTN_MENU('14')" style="color:#06B716">นำเข้ายาเสพติดให้โทษในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('116')" style="color:#06B716">นำเข้ายาเสพติดให้โทษในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a ng-click="BTN_MENU('15')" style="color:#06B716">ส่งออกยาเสพติดให้โทษในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('117')" style="color:#06B716">ส่งออกยาเสพติดให้โทษในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a ng-click="BTN_MENU('16')" style="color:#06B716">จำหน่ายยาเสพติดให้โทษในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('115')" style="color:#06B716">จำหน่ายยาเสพติดให้โทษในประเภท ๓</a>
                                 </li>
                             </ul>
                         </li>
@@ -97,7 +97,7 @@
                             </ul>
                         </li>
                         <li>
-                            <div class="listree-submenu-heading">ผลิตยาเสพติดให้โทษประเภทที่ ๓ หรือ ๔</div>
+                            <div class="listree-submenu-heading">ผลิตยาเสพติดให้โทษประเภทที่ ๓</div>
                             <ul class="listree-submenu-items" style="color:black">
                                 <li>
                                     <a ng-click="BTN_MENU('114')" style="color:#06B716">ผลิตยาเสพติดให้โทษในประเภท ๓</a>
@@ -110,47 +110,104 @@
                     <div class="listree-submenu-heading">คำขอแก้ไข/คำขอใบแทน/คำขอต่ออายุ</div>
                     <ul class="listree-submenu-items">
                         <li>
-                            <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอแก้ไขใบอนุญาตวัตถุออกฤทธิ์และยาเสพติด</a>
-                        </li>
-                        <li>
-                            <div class="listree-submenu-heading">คำขอใบแทนใบอนุญาตวัตถุออกฤทธิ์และยาเสพติด</div>
+                            <div>คำขอแก้ไขใบอนุญาต</div>
                             <ul class="listree-submenu-items">
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=101">คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                    <a ng-click="BTN_MENU('11105')" style="color:#06B716">แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ขายยาแผนปัจจุบัน</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                    <a ng-click="BTN_MENU('11106')" style="color:#06B716">แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ผลิตยาแผนปัจจุบัน</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                    <a ng-click="BTN_MENU('11107')" style="color:#06B716">แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา นำหรือสั่งยาแผนปัจจุบัน</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                    <a ng-click="BTN_MENU('11108')" style="color:#06B716">แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ยาแผนโบราณสำหรับสัตว์</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                    <a ng-click="BTN_MENU('11109')" style="color:#06B716">แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ยาเสพติดให้โทษประเภทที่ 3</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                    <a ng-click="BTN_MENU('11103')" style="color:#06B716">แก้ไขเปลี่ยนแปลงใบอนุญาตขายวัตถุออกฤทธิ์</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                    <a ng-click="BTN_MENU('11104')" style="color:#06B716">แก้ไขเปลี่ยนแปลงใบอนุญาตผลิตวัตถุออกฤทธิ์</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                    <a ng-click="BTN_MENU('11110')" style="color:#06B716">แก้ไขเปลี่ยนแปลงใบอนุญาตนำเข้าวัตถุออกฤทธิ์</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="listree-submenu-heading">คำขอใบแทน/ย้ายสถานที่</div>
+                            <ul class="listree-submenu-items">
+                                <li>
+                                    <a ng-click="BTN_MENU('100701')" style="color:#06B716">คำขอใบแทนใบอนุญาตสถานที่ขายยาแผนปัจจุบัน</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                    <a ng-click="BTN_MENU('100702')" style="color:#06B716">คำขอใบแทนใบอนุญาตสถานที่นำเข้ายาแผนปัจจุบัน</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                    <a ng-click="BTN_MENU('100703')" style="color:#06B716">คำขอใบแทนใบอนุญาตสถานที่ผลิตยาแผนปัจจุบัน</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 3 ประชุม</a>
+                                    <a ng-click="BTN_MENU('100704')" style="color:#06B716">คำขอใบแทนใบอนุญาต ยาแผนโบราณ สำหรับสัตว์</a>
                                 </li>
                                 <li>
-                                    <a href="../LCN/FRM_LCN_DRUG?PROCESS=14">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 4 ประชุม</a>
+                                    <a ng-click="BTN_MENU('100705')" style="color:#06B716">คำขอใบแทนใบอนุญาต ยาเสพติดให้โทษประเภทที่ 3</a>
                                 </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100766')" style="color:#06B716">คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100767')" style="color:#06B716">คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100768')" style="color:#06B716">คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100769')" style="color:#06B716">คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100770')" style="color:#06B716">คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100771')" style="color:#06B716">คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100772')" style="color:#06B716">คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100773')" style="color:#06B716">คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100774')" style="color:#06B716">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 3</a>
+                                </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100775')" style="color:#06B716">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 4</a>
+                                </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100776')" style="color:#06B716">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 3 ประชุม</a>
+                                </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100776')" style="color:#06B716">คำขอใบแทนใบอนุญาตขายส่งตรงวัตถุออกฤทธิ์ ฯ ประเภท 4 ประชุม</a>
+                                </li>
+
+                                <li>
+                                    <a ng-click="BTN_MENU('100791')" style="color:#06B716">คำขอย้ายสถานที่ ขายยาแผนปัจจุบัน</a>
+                                </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100792')" style="color:#06B716">คำขอย้ายสถานที่ นำเข้ายาแผนปัจจุบัน</a>
+                                </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100793')" style="color:#06B716">คำขอย้ายสถานที่ ผลิตยาแผนปัจจุบัน</a>
+                                </li>
+                                <li>
+                                    <a ng-click="BTN_MENU('100794')" style="color:#06B716">คำขอคำขอย้ายสถานที่ ยาแผนโบราณ สำหรับสัตว์</a>
+                                </li>
+                                @*<li>
+                                    <a ng-click="BTN_MENU('100795')" style="color:#06B716">คำขอย้ายสถานที่ ยาเสพติดให้โทษประเภทที่ 3</a>
+                                </li>*@
                             </ul>
                         </li>
                     </ul>

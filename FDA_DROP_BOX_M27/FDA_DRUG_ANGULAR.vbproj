@@ -429,6 +429,9 @@
     <Content Include="Views\LCN\PREVIEW_INPUT_LCN.vbhtml" />
     <Content Include="Views\AUTHEN\AUTHEN_LCN.vbhtml" />
     <Content Include="Views\LCN\FRM_SELECT_LCT.vbhtml" />
+    <Content Include="Views\LCN\INPUT_MODIFY_NORDOJ_3_4.vbhtml" />
+    <Content Include="Views\LCN\FRM_LCN_SELECT.vbhtml" />
+    <Content Include="Views\LCN\FRM_LCN_EDIT_REQUEST.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>

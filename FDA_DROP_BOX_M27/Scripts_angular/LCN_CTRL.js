@@ -98,7 +98,8 @@
             sessionStorage.HEAD_LCN_IDA = 0;
             $scope.lcnnoType = '(ผยบ)';
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
-        } else if (process == '123' || process == '124' || process == '125' || process == '126' || process == '131' || process == '132' || process == '133' || process == '134') {
+        } else if (process == '123' || process == '124' || process == '125' || process == '126' || process == '131' || process == '132' || process == '133' || process == '134' || process == '127' || process == '128') {
+
             if (process == '123') {
                 $scope.lcnnoType = '(ขย1) > (ขายวัตถุออกฤทธิ์ฯในประเภท ๓)';
             } else if (process == '124') {
@@ -115,10 +116,20 @@
                 $scope.lcnnoType = '(ขย1) > (ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๓)';
             } else if (process == '134') {
                 $scope.lcnnoType = '(ขย1) > (ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๔)';
-            } else $scope.lcnnoType = '';
+            } else if (process == '127' || process == '128') {
+                if (process == '127') {
+                    $scope.lcnnoType = '(ผย1) > (ผลิตวัตถุออกฤทธิ์ฯในประเภท ๓)';
+                } else if (process == '128') {
+                    $scope.lcnnoType = '(ผย1) > (ผลิตวัตถุออกฤทธิ์ฯในประเภท ๔)';
+                } 
+
+            }
 
             sessionStorage.PROCESS = process;
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
+            
+        }
+
             var dataLo = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
             dataLo.then(function (datas) {
                 $scope.DATA_LCN_LIST = datas.data;
@@ -128,9 +139,6 @@
 
                
             }, function () { });
-        }
-
-
         
         var data_lcn = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(sessionStorage.LCT_IDA, sessionStorage.PROCESS, sessionStorage.CITIZEN_ID_AUTHORIZE);
         data_lcn.then(function (datas) {
@@ -139,6 +147,13 @@
         }, function () { });
 
 
+
+        //get data edit rqt
+        var dataLo = CENTER_SV.SP_DALCN_EDIT_REQUEST_BY_FK_IDA(sessionStorage.LCN_IDA);
+        dataLo.then(function (datas) {
+            $scope.DATA_LCN_LIST = datas.data;
+           
+        }, function () { });
 
     }
 
@@ -245,7 +260,38 @@
             data2.then(function (datas) {
                 $scope.DATA_LCN_LIST = datas.data;
             }, function () { });
+        } else if (process == '11103' || process == '11104' || process == '11105' || process == '11106' || process == '11107' || process == '11108' || process == '11109' || process == '11110') {
+            if (process == '11105') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ขายยาแผนปัจจุบัน';
+            } else if (process == '11106') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ผลิตยาแผนปัจจุบัน';
+            } else if (process == '11107') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา นำหรือสั่งยาแผนปัจจุบัน';
+            } else if (process == '11108') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ยาแผนโบราณสำหรับสัตว์';
+            } else if (process == '11109') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ยาเสพติดให้โทษประเภทที่ 3';
+            } else if (process == '11103') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตขายวัตถุออกฤทธิ์';
+            } else if (process == '11104') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตผลิตวัตถุออกฤทธิ์';
+            } else if (process == '11110') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตนำเข้าวัตถุออกฤทธิ์';
+            } 
+
+            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_SELECT');
+            var data2 = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN_ALIVE(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
+            data2.then(function (datas) {
+                $scope.DATA_LCN_F_EDIT = datas.data;
+            }, function () { });
+
+
         }
+            
+
+
+
+
     };
 
     $scope.BTN_INPUT = function () {
@@ -372,7 +418,12 @@
 
         //}, function () { });
     };
+    $scope.SELECT_LCN_EDIT = function (datas) {
+        sessionStorage.LCN_IDA = datas.IDA;
 
+        var url = "/LCN/FRM_LCN_NEWS";
+        REDIRECT(url);
+    };
 
     $scope.BTN_EXTEND = function () {
         if (QueryString('staff') == '') {

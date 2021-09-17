@@ -51,7 +51,7 @@
 </div>
 
 <div class="title2">
-    <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" @*border="1"*@>
+    <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" >
         <tr>
             <td style="text-align:left;width:20%">
                 เลขรับที่
@@ -92,14 +92,14 @@
 
 <h2 style="text-align:center;font-size:24px;">
     <strong>คำขอรับใบอนุญาต คำขอต่ออายุใบอนุญาต คำขอรับใบแทน</strong><br />
-    <strong>ใบอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
+    <strong>ใบอนุญาตส่งออกวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
 </h2>
 @*process =1111,1112 *@
 
-<table style="width:70%; font-size:20px;margin:auto;text-align:center" @*border="1"*@>
+<table style="width:70%; font-size:20px;margin:auto;text-align:center" >
     <tr>
         <td>
-            <strong>สำหรับผลิต</strong>
+            <strong>สำหรับส่งออก</strong>
         </td>
         <td>
             <input type="radio" name="gender" ng-model="LIST_LCN.PROCESS" ng-value="100772" id="rdl_CHK_SELL_TYPE" disabled="disabled" /> <strong>วัตถุออกฤทธิ์ในประเภท ๓</strong>
@@ -182,7 +182,7 @@
 <h2 style="font-size:24px;">
     <strong>๑. ข้อมูลผู้ขอรับใบอนุญาต</strong>
 </h2>
-<table style="width:90%;margin-left:5%" @*border="1"*@>
+<table style="width:90%;margin-left:5%" >
     <tr>
         <td style="font-size:20px" width="40%">
             ข้าพเจ้า (ชื่อบุคคล/นิติบุคคล)
@@ -259,7 +259,7 @@
 <h2 style="font-size:24px;">
     <strong>๒. ข้อมูลผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำำเนินกิจการเกี่ยวกับใบอนุญาต</strong>
 </h2>
-<table style="width:90%;margin-left:5%" @*border="1"*@>
+<table style="width:90%;margin-left:5%" >
     <tr>
         <td style="font-size:20px" width="40%">
             ข้าพเจ้า
@@ -350,7 +350,7 @@
 
 <br />
 
-<table style="width:100%;font-size:20px" @*border="1"*@>
+<table style="width:100%;font-size:20px" >
     <tr>
         <td colspan="4">
             <p><strong>๓. ข้อมูลสถานที่ส่งออก</strong></p>
@@ -396,7 +396,7 @@
     </tr>
 </table>
 
-<table style="width:100%;font-size:20px" @*border="1"*@>
+<table style="width:100%;font-size:20px" >
     <tr>
         <td style="width:15%;">
             โดยมีเภสัชกรชื่อ  1.
@@ -419,7 +419,7 @@
 
 <div style=";font-size:20px"><strong>๔. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
 <div style="margin-left:5%;font-size:20px"><strong>๔.๑ กรณีขอรับใบอนุญาต (กรณีรายใหม่)</strong></div>
-<table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+<table style="width:90%;font-size:20px ;margin-left:10%" >
     <tr>
         <td>
             (๑) คำรับรองของผู้รับอนุญาตและเภสัชกรผู้ควบคุมกิจการ
@@ -453,7 +453,7 @@
     </tr>
 </table>
 <div style="margin-left:5%;font-size:20px"><strong>๔.๒ กรณีขอต่ออายุใบอนุญาต</strong></div>
-<table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+<table style="width:90%;font-size:20px ;margin-left:10%" >
     <tr>
         <td>
             (๑) ใบอนุญาตฉบับเดิม
@@ -468,7 +468,7 @@
 
 </table>
 <div style="margin-left:5%;font-size:20px"><strong>๔.๓ กรณีขอรับใบแทนใบอนุญาต</strong></div>
-<table style="width:90%;font-size:20px ;margin-left:10%" @*border="1"*@>
+<table style="width:90%;font-size:20px ;margin-left:10%" >
     <tr>
         <td>
             (๑) ใบแจ้งความ กรณีใบอนุญาตสูญหาย
@@ -491,7 +491,7 @@
 <br />
 <br />
 
-<table style="width:85%;font-size:20px ;margin-left:12.5%" @*border="1"*@>
+<table style="width:85%;font-size:20px ;margin-left:12.5%" >
     <tr>
         <td style="text-align:right">
             (ลายมือชื่อ)
@@ -517,7 +517,7 @@
 <br />
 
 <div style="margin-left:5%;font-size:20px"> หมายเหตุ : (๑) ให้ขีดเลือกข้อความในช่อง ☐/〇 ให้ตรงตามที่ประสงค์จะดำเนินการ</div>
-<table style="width:90%;font-size:20px ;margin-left:12.5%" @*border="1"*@>
+<table style="width:90%;font-size:20px ;margin-left:12.5%" >
     <tr>
         <td>
             (๒) รับรองสำเนาถูกต้องในเอกสารที่เป็นสำเนาทุกฉบับ

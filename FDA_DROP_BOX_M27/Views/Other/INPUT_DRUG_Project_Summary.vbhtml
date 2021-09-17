@@ -76,7 +76,7 @@
     </tr>
 </table>
 
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr>
         <td style="width:55%">
             1. ชื่อโครงการวิจัยภาษาไทย
@@ -124,7 +124,7 @@
     </tr>
 </table>
 
-<table style="font-size:20px;width:60%" @*border="1"*@>
+<table style="font-size:20px;width:60%" >
     <tr>
         <td style="width:50%">
             5. ประเทศที่ทำการวิจัย
@@ -138,7 +138,7 @@
     </tr>
 </table>
 
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr>
         <td style="width:30%">
             6. จำนวนสถาบันที่ร่วมวิจัยทั้งหมดทั่วโลก
@@ -225,7 +225,7 @@
 
 </table>
 <br />
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr>
         <td style="width:55%">
             9. ผู้ให้ทุนวิจัยในประเทศไทย (Thai Sponsor)(ชื่อหน่วยงาน ที่อยู่ เบอร์โทร อีเมล์)
@@ -273,7 +273,7 @@
     </tr>
 </table>
 
-<table style="font-size:20px;width:100%" @*border="1"*@>
+<table style="font-size:20px;width:100%" >
     <tr>
         <td style="width:30%">
             ชื่อสามัญ
