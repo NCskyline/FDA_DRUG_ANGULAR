@@ -2331,8 +2331,14 @@ Namespace Controllers
             Dim dao As New DAO_DRUG.TB_CER
 
             dao.fields = bb.CER
+            dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
             dao.fields.PROCESS_ID = _ProcessID
+            dao.fields.CER_TYPE = _ProcessID
             dao.fields.TR_ID = tr_id
+            dao.fields.FK_IDA = bb.session.LCN_IDA
+            dao.fields.STATUS_ID = 1
+            dao.fields.CREATE_DATE = Date.Now
+            dao.fields.REQUEST_DATE = Date.Now
             dao.insert()
 
             Dim IDA As Integer = dao.fields.IDA
@@ -2462,6 +2468,8 @@ Namespace Controllers
 
             dao.fields = bb.DALCN_EDIT_REQUEST
             dao.fields.TR_ID = tr_id
+            dao.fields.FK_IDA = bb.session.LCN_IDA
+            dao.fields.rcvno = 0
             dao.fields.CITIZEN_ID_AUTHORIZE = bb.session.CITIZEN_ID_AUTHORIZE
             dao.fields.PROCESS_ID = _ProcessID
             dao.insert()

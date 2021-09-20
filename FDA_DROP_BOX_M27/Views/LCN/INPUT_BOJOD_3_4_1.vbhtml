@@ -54,7 +54,7 @@
         </div>
 
         <div class="title2">
-            <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" >
+            <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px">
                 <tr>
                     <td style="text-align:left;width:20%">
                         เลขรับที่
@@ -98,7 +98,7 @@
             <strong>ใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
         </h2>
         @*process =123,124 *@
-        <table style="width:70%; font-size:20px;margin:auto;text-align:center" >
+        <table style="width:70%; font-size:20px;margin:auto;text-align:center">
             <tr>
                 <td>
                     <strong>สำหรับขาย</strong>
@@ -176,7 +176,7 @@
         <h2 style="font-size:24px;">
             <strong>๑. ข้อมูลผู้ขอรับใบอนุญาต</strong>
         </h2>
-        <table style="width:90%" >
+        <table style="width:90%">
             <tr>
                 <td style="font-size:20px" width="40%">
                     ข้าพเจ้า (ชื่อบุคคล/นิติบุคคล)
@@ -252,7 +252,7 @@
         <h2 style="font-size:24px;">
             <strong>๒. ข้อมูลผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต</strong>
         </h2>
-        <table style="width:90%" >
+        <table style="width:90%">
             <tr>
                 <td style="font-size:20px" width="40%">
                     ข้าพเจ้า
@@ -335,7 +335,7 @@
 
         <div style="font-size:20px"><strong>๓. ข้อมูลการขออนุญาต</strong></div>
         <div style="font-size:20px;margin-left:5%">(๓.๑) <strong><u>กรณีขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔</u></strong></div>
-        <table style="width:100%;font-size:20px" >
+        <table style="width:100%;font-size:20px">
             <tr>
                 <td>
                     ณ สถานที่ชื่อ
@@ -447,7 +447,7 @@
             </table>
         </div>
         <br />
-        <table style="width:100%;font-size:20px" >
+        <table style="width:100%;font-size:20px">
             <tr>
                 <td>
                     เป็นผู้รับอนุญาตขายยาแผนใบอนุญาตเลขที่
@@ -463,7 +463,7 @@
         <div style="font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
 
         <div style="font-size:20px;margin-left:5%"><strong>(๓.๒) <u>กรณีขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ โดยการขายส่งตรง</u></strong></div>
-        <table style="width:100%;font-size:20px" >
+        <table style="width:100%;font-size:20px">
             <tr>
                 <td colspan="2">
                     ผู้ขอรับใบอนุญาตได้รับอนุญาตให้ผลิต/ขาย/หรือนำเข้าซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาต
@@ -485,7 +485,7 @@
         </table>
         <div style="font-size:20px;margin-left:5%"><strong>(๓.๓) <u> กรณีขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ ในบริเวณสถานที่ที่มีการประชุม</u></strong></div>
 
-        <table style="width:100%;font-size:20px" >
+        <table style="width:100%;font-size:20px">
             <tr>
                 <td colspan="4">
                     ผู้ขอรับใบอนุญาตได้รับอนุญาตให้ผลิต/ขาย/หรือนำเข้าซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาต
@@ -634,7 +634,7 @@
         <div style=";font-size:20px"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
         <div style="margin-left:5%;font-size:20px"><strong>๕.๑ <u>กรณีขอรับใบอนุญาต (กรณีรายใหม่)</u></strong></div>
         <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๑ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" >
+        <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
                     (๑) สำเนาใบอนุญาตขายยาแผนปัจจุบันตามกฎหมายว่าด้วยยา
@@ -667,7 +667,7 @@
             </tr>
         </table>
         <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๒ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ โดยการขายส่งตรง</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" >
+        <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
                     (๑) สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี
@@ -685,7 +685,7 @@
             </tr>
         </table>
         <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๓ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ ในบริเวณสถานที่ที่มีการประชุม</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" >
+        <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
                     (๑) สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี
@@ -694,7 +694,7 @@
         </table>
 
         <div style="margin-left:5%;font-size:20px"><strong>๕.๒ กรณีขอต่ออายุใบอนุญาต</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" >
+        <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
                     (๑) ใบอนุญาตฉบับเดิม
@@ -709,7 +709,7 @@
 
         </table>
         <div style="margin-left:5%;font-size:20px"><strong>๕.๓ กรณีขอรับใบแทนใบอนุญาต</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" >
+        <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
                     (๑) ใบแจ้งความ กรณีใบอนุญาตสูญหาย
@@ -731,35 +731,25 @@
         <div style="margin-left:5%;font-size:20px;text-align:center"><strong>ข้าพเจ้าขอรับรองว่า ข้อความและเอกสารหรือหลักฐานทั้งหมดที่ยื่นเพื่อประกอบคำขอรับใบอนุญาตเป็นความจริงทุกประการ</strong></div>
         <br />
         <br />
-
-        <table style="width:85%;font-size:20px ;margin-left:12.5%" >
+        
+        <table style="width:100%">
             <tr>
-                <td style="text-align:right">
-                    (ลายมือชื่อ)
-                </td>
-                <td style="text-align:center;width:40%"></td>
-                <td>
-                    ผู้ขอรับใบอนุญาต/ผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการ
-                </td>
+                <td style="width:25%"></td>
+                <td style="width:30%">(ลายมือชื่อ)</td>
+                <td style="width:45%">ผู้ขอรับใบอนุญาต/ผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการ</td>
             </tr>
+        </table>
+        <table style="width:100%">
             <tr>
-                <td style="text-align:right">
-                    (
-                </td>
-                <td style="text-align:center">
-                    <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
-                </td>
-                <td style="text-align:left">
-                    )
-                </td>
+                <td style="width:30%"></td>
+                <td style="width:30%">({{LIST_LCN.BSN_THAIFULLNAME}})</td>
             </tr>
-
         </table>
         <br />
         <br />
 
         <div style="margin-left:5%;font-size:20px"> หมายเหตุ : (๑) ให้ขีดเลือกข้อความในช่อง ☐/〇 ให้ตรงตามที่ประสงค์จะดำเนินการ</div>
-        <table style="width:90%;font-size:20px ;margin-left:12.5%" >
+        <table style="width:90%;font-size:20px ;margin-left:12.5%">
             <tr>
                 <td>
                     (๒) รับรองสำเนาถูกต้องในเอกสารที่เป็นสำเนาทุกฉบับ

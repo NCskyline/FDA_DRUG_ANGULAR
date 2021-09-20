@@ -744,9 +744,7 @@
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/SP_MASTER_sysisocnt")
-            //params: {
-            //    PRODUCT_GROUP: PRODUCT_GROUP
-            //}
+     
         });
         return response;
     };

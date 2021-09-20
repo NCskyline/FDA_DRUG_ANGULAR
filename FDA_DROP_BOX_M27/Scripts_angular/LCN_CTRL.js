@@ -123,11 +123,55 @@
                     $scope.lcnnoType = '(ผย1) > (ผลิตวัตถุออกฤทธิ์ฯในประเภท ๔)';
                 } 
 
-            }
+            } 
 
             sessionStorage.PROCESS = process;
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
             
+        } else if (sessionStorage.PROCESS == '114' || sessionStorage.PROCESS == '115' || sessionStorage.PROCESS == '116' || sessionStorage.PROCESS == '117') {
+            if (sessionStorage.PROCESS == '114') {
+                $scope.lcnnoType = '(ผย1) > (ผลิตซึ่งยาเสพติดให้โทษในประเภท ๓)';
+            } else if (sessionStorage.PROCESS == '115') {
+                $scope.lcnnoType = '(ขย1) > (จำหน่ายหรือมีไว้ในครอบครองเพื่อจำหน่ายซึ่งยาเสพติดให้โทษในประเภท ๓)';
+            } else if (sessionStorage.PROCESS == '116') {
+                $scope.lcnnoType = '(นย1) > (นำเข้าซึ่งยาเสพติดให้โทษในประเภท ๓)';
+            } else if (sessionStorage.PROCESS == '117') {
+                $scope.lcnnoType = '(ขย1) > (ส่งออกซึ่งยาเสพติดให้โทษในประเภท ๓)';
+            }
+
+            sessionStorage.PROCESS = process;
+            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
+
+        } else if (process == '11103' || process == '11104' || process == '11105' || process == '11106' || process == '11107' || process == '11108' || process == '11109' || process == '11110') {
+            if (process == '11105') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ขายยาแผนปัจจุบัน';
+            } else if (process == '11106') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ผลิตยาแผนปัจจุบัน';
+            } else if (process == '11107') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา นำหรือสั่งยาแผนปัจจุบัน';
+            } else if (process == '11108') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ยาแผนโบราณสำหรับสัตว์';
+            } else if (process == '11109') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ยาเสพติดให้โทษประเภทที่ 3';
+            } else if (process == '11103') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตขายวัตถุออกฤทธิ์';
+            } else if (process == '11104') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตผลิตวัตถุออกฤทธิ์';
+            } else if (process == '11110') {
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตนำเข้าวัตถุออกฤทธิ์';
+            }
+
+            sessionStorage.PROCESS = process;
+            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_EDIT_REQUEST');
+            
+
+            var dataLo = CENTER_SV.SP_DALCN_EDIT_REQUEST_BY_FK_IDA(sessionStorage.LCN_IDA);
+            dataLo.then(function (datas) {
+                $scope.DATA_EDIT_LCN_RQT = datas.data;
+ 
+
+            }, function () { });
+
         }
 
             var dataLo = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
@@ -225,12 +269,12 @@
                 $scope.DATA_LCN_LIST = datas.data;
             }, function () { });
 
-        } else if (process == '14' || process == '15' || process == '16') {
-            if (process == '14') {
+        } else if (process == '116' || process == '117' || process == '115') {
+            if (process == '116') {
                 $scope.lcnnoType = '(นย1) > (นำเข้ายาเสพติดให้โทษในประเภท ๓)';
-            } else if (process == '15') {
+            } else if (process == '117') {
                 $scope.lcnnoType = '(ขย1) > (ส่งออกยาเสพติดให้โทษในประเภท ๓)';
-            } else if (process == '16') {
+            } else if (process == '115') {
                 $scope.lcnnoType = '(ขย1) > (จำหน่ายยาเสพติดให้โทษในประเภท ๓)';
             } else $scope.lcnnoType = '';
             sessionStorage.PROCESS = process;
@@ -279,6 +323,7 @@
                 $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตนำเข้าวัตถุออกฤทธิ์';
             } 
 
+            sessionStorage.PROCESS = process;
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_SELECT');
             var data2 = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN_ALIVE(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
             data2.then(function (datas) {
@@ -329,7 +374,7 @@
                 REDIRECT('/LCN/INPUT_BOJOD_3_4_2');
             } else if (sessionStorage.PROCESS == '131') {
                 $scope.lcnnoType = '(นย1) > (นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๓)';
-                
+
                 REDIRECT('/LCN/INPUT_NORDOJ_3_4_1');
             } else if (sessionStorage.PROCESS == '132') {
                 $scope.lcnnoType = '(นย1) > (นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๔)';
@@ -337,13 +382,62 @@
             } else if (sessionStorage.PROCESS == '133') {
                 $scope.lcnnoType = '(ขย1) > (ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๓)';
                 REDIRECT('/LCN/INPUT_SORDOJ_3_4_1');
-                
+
             } else if (sessionStorage.PROCESS == '134') {
                 $scope.lcnnoType = '(ขย1) > (ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๔)';
                 REDIRECT('/LCN/INPUT_SORDOJ_3_4_1');
+            } 
+        } else if (sessionStorage.PROCESS == '114' || sessionStorage.PROCESS == '115' || sessionStorage.PROCESS == '116' || sessionStorage.PROCESS == '117') {
+            if (sessionStorage.PROCESS == '114') {
+                $scope.lcnnoType = '(ผย1) > (ผลิตซึ่งยาเสพติดให้โทษในประเภท ๓)';
+                REDIRECT('/LCN/INPUT_PDF_YOR_SOR_3_1');
+            } else if (sessionStorage.PROCESS == '115') {
+                $scope.lcnnoType = '(ขย1) > (จำหน่ายหรือมีไว้ในครอบครองเพื่อจำหน่ายซึ่งยาเสพติดให้โทษในประเภท ๓)';
+                REDIRECT('/LCN/INPUT_PDF_YOR_SOR_3_1');
+            } else if (sessionStorage.PROCESS == '116') {
+                $scope.lcnnoType = '(นย1) > (นำเข้าซึ่งยาเสพติดให้โทษในประเภท ๓)';
+                REDIRECT('/LCN/INPUT_PDF_YOR_SOR_3_1');
+            } else if (sessionStorage.PROCESS == '117') {
+                $scope.lcnnoType = '(ขย1) > (ส่งออกซึ่งยาเสพติดให้โทษในประเภท ๓)';
+                REDIRECT('/LCN/INPUT_PDF_YOR_SOR_3_1');
             }
+
         }
+
+
+
     };
+    
+    $scope.BTN_EDIT_INPUT = function () {
+        if (sessionStorage.PROCESS == '11105') {
+            $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ขายยาแผนปัจจุบัน';
+            REDIRECT('/LCN/INPUT_KORYOR17');
+        } else if (sessionStorage.PROCESS == '11106') {
+            $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ผลิตยาแผนปัจจุบัน';
+            REDIRECT('/LCN/INPUT_PORYOR12');
+        } else if (sessionStorage.PROCESS == '11107') {
+            $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา นำหรือสั่งยาแผนปัจจุบัน';
+            REDIRECT('/LCN/INPUT_NORYOR11');
+        } else if (sessionStorage.PROCESS == '11108') {
+            $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ยาแผนโบราณสำหรับสัตว์';
+            REDIRECT('/LCN/INPUT_YORBOR16');
+        } else if (sessionStorage.PROCESS == '11109') {
+            $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ยาเสพติดให้โทษประเภทที่ 3';
+            REDIRECT('/LCN/INPUT_YORSOR3_ALL_EDIT');
+        } else if (sessionStorage.PROCESS == '11103') {
+            $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตขายวัตถุออกฤทธิ์';
+            REDIRECT('/LCN/INPUT_MODIFY_BOJOD3_4');
+        } else if (sessionStorage.PROCESS == '11104') {
+            $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตผลิตวัตถุออกฤทธิ์';
+            REDIRECT('/LCN/INPUT_MODIFY_PORDOJ_3_2');
+        } else if (sessionStorage.PROCESS == '11110') {
+            $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตนำเข้าวัตถุออกฤทธิ์';
+            REDIRECT('/LCN/INPUT_MODIFY_NORDOJ_3_4');
+        } 
+
+
+    }
+
 
     $scope.YORBOR = function () {
         if ($scope.PROCESS == '107') {

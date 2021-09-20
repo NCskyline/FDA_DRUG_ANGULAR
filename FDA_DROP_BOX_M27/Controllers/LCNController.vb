@@ -175,6 +175,9 @@ Namespace Controllers
         Function FRM_LCN_EDIT_REQUEST() As ActionResult
             Return View()
         End Function
+        Function INPUT_PDF_YOR_SOR_3_1() As ActionResult
+            Return View()
+        End Function
     End Class
 
     Public Class LCN_CENTERController

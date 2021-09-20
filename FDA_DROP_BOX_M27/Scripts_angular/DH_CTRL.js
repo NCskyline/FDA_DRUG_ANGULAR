@@ -76,7 +76,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
             }
 
-            var dataGMP = CENTER_SV.SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden(LCN_IDA, PROCESS_ID, CITIZEN);
+            var dataGMP = CENTER_SV.SP_CUSTOMER_CER_BY_FK_IDA_and_CER_TYPE_and_iden(sessionStorage.LCN_IDA, PROCESS_ID, CITIZEN);
             dataGMP.then(function (datas) {
                 $scope.DATA_GMP = datas.data;
                 $scope.currentPage = 1;

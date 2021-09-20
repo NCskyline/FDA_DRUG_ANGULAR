@@ -15,7 +15,7 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
        
         var token = '';
         if (location.hostname == 'localhost') {
-            token = 'HHARyXWjn0k4WeKCQxrVBAUU'; //"PASS";
+            token = 'lCAvldaJtG2oK2wXzFgAHwUU'; //"PASS";
         } else {
             token = QueryString("Token");
         }
