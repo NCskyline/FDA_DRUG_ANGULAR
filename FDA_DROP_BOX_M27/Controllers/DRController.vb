@@ -53,5 +53,14 @@ Namespace Controllers
         Function INPUT_NAME_DRUG_EXPORT() As ActionResult
             Return View()
         End Function
+        Function FRM_DL_CONFIRM() As ActionResult
+            Return View()
+        End Function
+        Function TABEAN_YA_MAIN() As ActionResult
+            Return View()
+        End Function
+        Function FRM_REGISTRATION_OTHER_DETAIL() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace

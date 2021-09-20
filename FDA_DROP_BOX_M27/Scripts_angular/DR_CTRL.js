@@ -2,7 +2,7 @@
 
     //CHK_TOKEN();
     pageload();
-
+    
     function pageload() {
 
 
@@ -90,6 +90,7 @@
         }, function () { });
     }
 
+    
 
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });

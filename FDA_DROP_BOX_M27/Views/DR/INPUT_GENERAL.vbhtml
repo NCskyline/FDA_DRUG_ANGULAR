@@ -4,10 +4,8 @@ End Code
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/DR_CTRL.js"></script>
 <div class="ic" ng-controller="DR_CTRL" ng-app="ANGULAR_APP">
+    
     <table>
-
-
-
         <tr>
             <td bgcolor="Lavender" width="197px" height="28px" align="right">ชื่อการค้า (ภาษาไทย):</td>
             <td>
