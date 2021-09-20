@@ -2,7 +2,7 @@
     ViewData("Title") = "INPUT_PACKAGE_DETAIL2"
 End Code
 
-<div class="box">
+<div class="box ic">
     <div>
         <h1>
             <asp:Label ID="lbl_head" runat="server" Text="-" Font-Size="X-Large"></asp:Label>
