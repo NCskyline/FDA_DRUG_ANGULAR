@@ -247,6 +247,7 @@
     Public PHR_TEXT_NUM As String
     Public PHR_LAW_SECTION As String
     Public HEAD_LCN_IDA As String
+    Public LCN_TYPE_NCT As String
 End Class
 Public Class MODEL_LOCATION
     Private _LOCATION_LISTs As New List(Of LOCATION_LIST)

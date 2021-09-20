@@ -151,6 +151,18 @@
         });
         return response;
     };
+    this.GET_LCN_INFORMATION_INPUT_MODIFY = function (IDENTIFY, LCT_IDA , LCN_IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_LCN_INFORMATION_INPUT_MODIFY"),
+            params: {
+                IDENTIFY: IDENTIFY,
+                LCT_IDA: LCT_IDA,
+                LCN_IDA: LCN_IDA
+            }
+        });
+        return response;
+    };
 
     this.GET_LCN_SUBTITUTE_INPUT = function (BSN_IDENTIFY, LCN_IDA) {
         var response = $http({

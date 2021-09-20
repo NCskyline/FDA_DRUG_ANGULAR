@@ -799,6 +799,187 @@ Namespace Controllers
 
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
+        Function GET_LCN_INFORMATION_INPUT_MODIFY(ByVal IDENTIFY As String, ByVal LCT_IDA As String, ByVal LCN_IDA As String) As JsonResult
+            Dim model As New MODEL_LCN
+            Dim bao As New BAO
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(LCN_IDA)
+            Try
+                If dao.fields.lcntpcd.Contains("จ3") Then
+                    model.LCN_TYPE_NCT = "1"
+                ElseIf dao.fields.lcntpcd.Contains("จ4") Then
+                    model.LCN_TYPE_NCT = "2"
+                End If
+            Catch ex As Exception
+
+            End Try
+
+            model.IDENTIFY = IDENTIFY
+            Dim lcnno_auto As String = ""
+            Dim lcnno_format As String = ""
+            Dim HEAD_LCN_IDA As Integer = 0
+            Try
+                If HEAD_LCN_IDA <> 0 Then
+                    Dim dao_main As New DAO_DRUG.ClsDBdalcn
+                    dao_main.GetDataby_IDA(HEAD_LCN_IDA)
+                    Try
+                        lcnno_auto = dao_main.fields.lcnno
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        If Len(lcnno_auto) > 0 Then
+
+                            If Right(Left(lcnno_auto, 3), 1) = "5" Then
+                                lcnno_format = "จ. " & CStr(CInt(Right(lcnno_auto, 4))) & "/25" & Left(lcnno_auto, 2)
+                            Else
+                                lcnno_format = dao_main.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                            End If
+                            'lcnno_format = dao.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                        End If
+                    Catch ex As Exception
+
+                    End Try
+
+                    model.HEAD_LCNNO_NCT = lcnno_format
+
+                    Dim dao_phr As New DAO_DRUG.ClsDBDALCN_PHR
+                    dao_phr.GetDataby_FK_IDA(HEAD_LCN_IDA)
+
+                    Try
+                        model.DALCN_PHR = dao_phr.fields
+                    Catch ex As Exception
+
+                    End Try
+                End If
+
+            Catch ex As Exception
+
+            End Try
+            Try
+                Dim dao_bsn As New DAO_DRUG.TB_DALCN_LOCATION_BSN
+                dao_bsn.GetDataby_LCN_IDA(LCN_IDA)
+                Dim dt_bsn As New DataTable
+                dt_bsn = bao.SP_LOCATION_BSN_BY_IDENTIFY(dao_bsn.fields.BSN_IDENTIFY)
+                For Each dr As DataRow In dt_bsn.Rows
+                    Try
+                        model.BSN_THAIFULLNAME = dr("BSN_THAIFULLNAME")
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        model.BSN_IDENTIFY = dr("BSN_IDENTIFY")
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        model.AGE = dr("AGE")
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        model.BSN_FULL_ADDR = dr("BSN_FULL_ADDR")
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        model.BSN_TELEPHONE = dr("BSN_TELEPHONE")
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        model.BSN_FAX = dr("BSN_FAX")
+                    Catch ex As Exception
+
+                    End Try
+                Next
+            Catch ex As Exception
+
+            End Try
+            Dim lcnno_auto2 As String = ""
+            Dim lcnno_format2 As String = ""
+            Try
+                Try
+                    lcnno_auto2 = dao.fields.lcnno
+                Catch ex As Exception
+
+                End Try
+                Try
+                    If Len(lcnno_auto2) > 0 Then
+
+                        If Right(Left(lcnno_auto2, 3), 1) = "5" Then
+                            lcnno_format2 = "จ. " & CStr(CInt(Right(lcnno_auto2, 4))) & "/25" & Left(lcnno_auto2, 2)
+                        Else
+                            lcnno_format2 = dao.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto2, 5))) & "/25" & Left(lcnno_auto2, 2)
+                        End If
+                        'lcnno_format = dao.fields.pvnabbr & " " & CStr(CInt(Right(lcnno_auto, 5))) & "/25" & Left(lcnno_auto, 2)
+                    End If
+                Catch ex As Exception
+
+                End Try
+
+                model.LCNNO_SHOW = lcnno_format2
+
+                Dim dao_phr As New DAO_DRUG.ClsDBDALCN_PHR
+                dao_phr.GetDataby_FK_IDA(HEAD_LCN_IDA)
+
+                Try
+                    model.DALCN_PHR = dao_phr.fields
+                Catch ex As Exception
+
+                End Try
+            Catch ex As Exception
+
+            End Try
+            Dim dt_name As New DataTable
+            'Dim bao As New BAO
+            dt_name = bao.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(IDENTIFY, 0)
+            ''Dim model As New MODEL_LCN
+            With model
+                .LCNNO_SHOW = lcnno_format
+
+
+                For Each dr As DataRow In dt_name.Rows
+                    .thanm = dr("thanm")
+                Next
+
+
+
+            End With
+
+            Dim dt_addr As New DataTable
+            dt_addr = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(LCT_IDA)
+            For Each dr As DataRow In dt_addr.Rows
+                Try
+                    model.THANAMEPLACE = dr("thanameplace")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.fulladdr3 = dr("fulladdr3")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.TEL = dr("tel")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.Mobile = dr("fax")
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.HOUSENO = dr("HOUSENO")
+                Catch ex As Exception
+
+                End Try
+            Next
+
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
         Function GET_HEAD_LCN_INFORMATION_INPUT(ByVal HEAD_LCN_IDA As String) As JsonResult
             Dim model As New MODEL_LCN
             Dim bao As New BAO
