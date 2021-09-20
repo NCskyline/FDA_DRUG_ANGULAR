@@ -42,7 +42,7 @@ End Code
 <h2>FRM_REGISTRATION_OTHER_DETAIL</h2>
 
 <div>
-    <div>
+    <div class="ic">
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'GENERAL')">1.ข้อมูลทั่วไป</button>
             <button class="tablinks" onclick="openTab(event, 'CONTAIN')">2.ขนาดบรรจุ</button>
