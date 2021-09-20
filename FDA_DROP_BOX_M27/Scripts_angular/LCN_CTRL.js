@@ -280,8 +280,8 @@
             } 
 
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_SELECT');
-            var data2 = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN_ALIVE(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
-            data2.then(function (datas) {
+            var data3 = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN_ALIVE(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
+            data3.then(function (datas) {
                 $scope.DATA_LCN_F_EDIT = datas.data;
             }, function () { });
 
@@ -853,7 +853,7 @@
                     PHR_JOB_TYPE: datas.PHR_JOB_TYPE,
                     PHR_VETERINARY_FIELD: datas.PHR_VETERINARY_FIELD
                 };
-                $scope.COLLECT_PHR.push(obj);
+            $scope.COLLECT_PHR.push(obj);
 
         }
         
