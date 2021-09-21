@@ -44,7 +44,7 @@ End Code
 <div>
     <div class="ic">
         <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'GENERAL')">1.ข้อมูลทั่วไป</button>
+            <button class="tablinks" onclick="openTab(event, 'GENERAL')" id="defaultOpen">1.ข้อมูลทั่วไป</button>
             <button class="tablinks" onclick="openTab(event, 'CONTAIN')">2.ขนาดบรรจุ</button>
             <button class="tablinks" onclick="openTab(event, 'IOW')">3.สูตรสาร</button>
             <button class="tablinks" onclick="openTab(event, 'PRODUCCER')">4.1 ผู้ผลิตต่างประเทศ</button>
@@ -101,4 +101,5 @@ End Code
         document.getElementById(Type).style.display = "block";
         evt.currentTarget.className += " active";
     }
+    document.getElementById("defaultOpen").click();
 </script>

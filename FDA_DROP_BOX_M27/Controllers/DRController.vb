@@ -62,5 +62,8 @@ Namespace Controllers
         Function FRM_REGISTRATION_OTHER_DETAIL() As ActionResult
             Return View()
         End Function
+        Function FRM_RQT_REGIST_INFORMATION() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace

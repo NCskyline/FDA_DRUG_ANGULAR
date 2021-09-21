@@ -4,7 +4,7 @@ End Code
 
 <div>
     <div class="ic">
-        <table style="width:100%;" class="table">
+        <table class="table">
             <tr>
                 <td>
                     ชื่อผู้ผลิตต่างประเทศ :
