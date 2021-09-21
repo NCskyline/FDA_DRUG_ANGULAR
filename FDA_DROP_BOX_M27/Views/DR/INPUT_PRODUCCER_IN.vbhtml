@@ -1,5 +1,5 @@
 ﻿@Code
-    ViewData("Title") = "INPUT_PRODUCCER_IN"
+    Layout = ""
 End Code
 
 <div>
