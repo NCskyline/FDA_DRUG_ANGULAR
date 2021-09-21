@@ -60,7 +60,7 @@
                         เลขรับที่
                     </td>
 
-                    <td colspan="3">
+                    <td colspan="3" style="border-bottom:dotted;border-bottom-width:thin;">
                         <label>{{LCN_LIST.RCVNO_DISPLAY}}</label>
                     </td>
                 </tr>
@@ -69,7 +69,7 @@
                         วันที่
                     </td>
 
-                    <td colspan="3">
+                    <td colspan="3" style="border-bottom:dotted;border-bottom-width:thin;">
                         <label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label>
                     </td>
                 </tr>
@@ -79,7 +79,7 @@
 
                     </td>
 
-                    <td></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;"></td>
                     <td style="text-align:right;width:25%">
                         ผู้รับคำขอ
                     </td>
@@ -117,7 +117,7 @@
             </tr>
         </table>
 
-        <table style="width:100%; font-size:20px">
+        <table style="width:100%; font-size:20px;">
             <tr>
                 <td style="width:20%">
                     <input type="checkbox" name="gender" disabled="disabled" ng-checked="true" /> <strong>ขอรับใบอนุญาต</strong>
@@ -150,7 +150,7 @@
         </table>
         <br />
 
-        <table style="width:100%; font-size:20px">
+        <table style="width:100%; font-size:20px;">
             <tr>
                 <td style="text-align:right;width:90%">
                     เขียนที่
@@ -178,24 +178,24 @@
         </h2>
         <table style="width:90%">
             <tr>
-                <td style="font-size:20px" width="40%">
+                <td style="font-size:20px;" width="40%">
                     ข้าพเจ้า (ชื่อบุคคล/นิติบุคคล)
                 </td>
-                <td style="font-size:20px" colspan="6">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="6">
                     <label>{{LIST_LCN.thanm}}</label>
                 </td>
             </tr>
             <tr>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     เลขประจำตัวประชาชน
                 </td>
 
-                <td style="font-size:20px" colspan="6">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="6">
                     <label>{{LIST_LCN.CITIZEN_AUTHORIZE}}</label>
                 </td>
             </tr>
             <tr>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     หรือบัตรประจำตัวอื่นที่ทางราชการออกให้ คือ
                 </td>
                 <td style="font-size:20px;width:20%"></td>
@@ -203,47 +203,47 @@
                     เลขที่
                 </td>
                 <td style="font-size:20px ;width:15%;text-align:center"></td>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     (กรณีไม่ใช่ผู้มีสัญชาติไทย)
                 </td>
             </tr>
             <tr>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     หรือทะเบียนนิติบุคคล/บัตรประจำตัวผู้เสียภาษี เลขที่
                 </td>
-                <td style="font-size:20px" colspan="6">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="6">
                     <label>{{LIST_LCN.IDENTIFY}}</label>
                 </td>
             </tr>
             <tr>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     เลขรหัสประจำบ้าน
                 </td>
-                <td style="font-size:20px" colspan="6">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="6">
                     <label>{{LIST_LCN.HOUSENO}}</label>
                 </td>
             </tr>
             <tr>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     อยู่เลขที่
                 </td>
-                <td style="font-size:20px" colspan="6">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="6">
                     <label>{{LIST_LCN.fulladdr3}}</label>
                 </td>
             </tr>
             <tr>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     โทรศัพท์/มือถือ
                 </td>
-                <td style="font-size:20px" colspan="6">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="6">
                     <label>{{LIST_LCN.tel}}</label>
                 </td>
             </tr>
             <tr>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     E-mail
                 </td>
-                <td style="font-size:20px" colspan="6">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="6">
                     <label>{{LIST_LCN.Email}}</label>
                 </td>
             </tr>
@@ -254,15 +254,15 @@
         </h2>
         <table style="width:90%">
             <tr>
-                <td style="font-size:20px" width="40%">
+                <td style="font-size:20px;" width="40%">
                     ข้าพเจ้า
                 </td>
-                <td style="font-size:20px" colspan="6">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="6">
                     <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
                 </td>
             </tr>
             <tr>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     เลขประจำตัวประชาชน
                 </td>
                 <td style="text-align:left;width:30%;">
@@ -283,80 +283,80 @@
                 </td>
             </tr>
             <tr>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     หรือบัตรประจำตัวอื่นที่ทางราชการออกให้ คือ
                 </td>
-                <td style="font-size:20px;width:20%">
+                <td style="font-size:20px;width:20%;border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
                 </td>
                 <td style="font-size:20px;width:5%">
                     เลขที่
                 </td>
-                <td style="font-size:20px ;width:15%;text-align:center">
-                    @*<label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>*@
+                <td style="font-size:20px ;width:15%;text-align:center;border-bottom:dotted;border-bottom-width:thin;">
+                     
                 </td>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     (กรณีไม่ใช่ผู้มีสัญชาติไทย)
                 </td>
             </tr>
             <tr>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     หรือทะเบียนนิติบุคคล/บัตรประจำตัวผู้เสียภาษี เลขที่
                 </td>
-                <td style="font-size:20px" colspan="6">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="6">
                     <label>{{LIST_LCN.BSN_IDENTIFY}}</label>
                 </td>
             </tr>
             <tr>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     เลขรหัสประจำบ้าน
                 </td>
-                <td style="font-size:20px" colspan="6">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="6">
                     <label>{{LIST_LCN.BSN_HOUSENO}}</label>
                 </td>
             </tr>
             <tr>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     อยู่เลขที่
                 </td>
-                <td style="font-size:20px" colspan="6">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="6">
                     <label>{{LIST_LCN.BSN_FULL_ADDR}}</label>
                 </td>
             </tr>
             <tr>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     โทรศัพท์/มือถือ
                 </td>
-                <td style="font-size:20px" colspan="6">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="6">
                     <label>{{LIST_LCN.BSN_TELEPHONE}}</label>
                 </td>
             </tr>
             <tr>
-                <td style="font-size:20px" colspan="2">
+                <td style="font-size:20px;" colspan="2">
                     โดยได้รับอนุญาตนำสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร เลขที่
                 </td>
-                <td style="font-size:20px" colspan="2">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="2">
                     <label>{{LIST_HEAD_LCN.HEAD_LCNNO_NCT}}</label>
                 </td>
-                <td style="font-size:20px">
+                <td style="font-size:20px;">
                     ตามกฎหมายว่าด้วยยา
                 </td>
             </tr>
         </table>
 
-        <div style="font-size:20px"><strong>๓. ข้อมูลสถานที่ผลิต</strong></div>
-        <table style="width:100%;font-size:20px">
+        <div style="font-size:20px;"><strong>๓. ข้อมูลสถานที่ผลิต</strong></div>
+        <table style="width:100%;font-size:20px;">
             <tr>
                 <td>
                     ณ สถานที่ชื่อ
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.thanameplace}}</label>
                 </td>
                 <td>
                     เลขรหัสประจำบ้าน
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.HOUSENO}}</label>
                 </td>
             </tr>
@@ -364,7 +364,7 @@
                 <td>
                     ตั้งอยู่เลขที่
                 </td>
-                <td colspan="3">
+                <td colspan="3" style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.fulladdr3}}</label>
                 </td>
             </tr>
@@ -372,13 +372,13 @@
                 <td>
                     โทรศัพท์/มือถือ
                 </td>
-                <td colspan="3">
+                <td colspan="3" style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.tel}}</label>
                 </td>
             </tr>
         </table>
 
-        <table style="width:100%;font-size:20px">
+        <table style="width:100%;font-size:20px;">
             <tr>
                 <td style="width:25%">
                     มีความประสงค์ขอรับอนุญาตผลิตวัตถุออกฤทธิ์ในหมวด
@@ -391,7 +391,7 @@
                 <td>
                     โดยได้รับอนุญาตให้ผลิตยาแผนปัจจุบันเลขที่
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_HEAD_LCN.HEAD_LCNNO_NCT}}</label>
                 </td>
                 <td style="width:25%">
@@ -483,7 +483,7 @@
                 </tfoot>
             </table>
         </div>
-        <div style="font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
+        <div style="font-size:20px;">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
         <br />
         <h2>๔. ข้อมูลสถานที่เก็บ (กรณีเป็นสถานที่คนละแห่งกับสถานที่ตาม ๓)</h2>
         <table style="width:50%">
@@ -503,7 +503,7 @@
                 <td style="width:15%">
                     เลขรหัสประจำบ้าน
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LABEL.HOUSENO}}</label>
                 </td>
             </tr>
@@ -511,7 +511,7 @@
                 <td>
                     อยู่เลขที่
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LABEL.fulladdr}}</label>
                 </td>
             </tr>
@@ -519,15 +519,15 @@
                 <td>
                     โทรศัพท์
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LABEL.tel}}</label>
                 </td>
             </tr>
-            <tr style="font-size: 20px">
+            <tr style="font-size: 20px;">
                 <td>
                     โทรศัพท์มือถือ
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LABEL.Mobile}}</label>
                 </td>
             </tr>
@@ -568,8 +568,8 @@
         <br />
         <br />
 
-        <div style="font-size:20px"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
-        <div style="margin-left:5%;font-size:20px"><strong>๕.๑ <u>กรณีขอรับใบอนุญาต (กรณีรายใหม่)</u></strong></div>
+        <div style="font-size:20px;"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
+        <div style="margin-left:5%;font-size:20px;"><strong>๕.๑ <u>กรณีขอรับใบอนุญาต (กรณีรายใหม่)</u></strong></div>
         <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
@@ -613,7 +613,7 @@
             </tr>
         </table>
 
-        <div style="margin-left:5%;font-size:20px"><strong>๕.๒ <u>กรณีขอต่ออายุใบอนุญาต</u></strong></div>
+        <div style="margin-left:5%;font-size:20px;"><strong>๕.๒ <u>กรณีขอต่ออายุใบอนุญาต</u></strong></div>
         <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
@@ -628,7 +628,7 @@
             </tr>
 
         </table>
-        <div style="margin-left:5%;font-size:20px"><strong>๕.๓ <u>กรณีขอรับใบแทนใบอนุญาต</u></strong></div>
+        <div style="margin-left:5%;font-size:20px;"><strong>๕.๓ <u>กรณีขอรับใบแทนใบอนุญาต</u></strong></div>
         <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
@@ -666,7 +666,7 @@
                 <td style="text-align:right">
                     (
                 </td>
-                <td style="text-align:center">
+                <td style="text-align:center;border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
                 </td>
                 <td style="text-align:left">
@@ -678,7 +678,7 @@
         <br />
         <br />
 
-        <div style="margin-left:5%;font-size:20px"> หมายเหตุ : (๑) ให้ขีดเลือกข้อความในช่อง ☐/〇 ให้ตรงตามที่ประสงค์จะดำเนินการ</div>
+        <div style="margin-left:5%;font-size:20px;"> หมายเหตุ : (๑) ให้ขีดเลือกข้อความในช่อง ☐/〇 ให้ตรงตามที่ประสงค์จะดำเนินการ</div>
         <table style="width:90%;font-size:20px ;margin-left:12.5%">
             <tr>
                 <td>

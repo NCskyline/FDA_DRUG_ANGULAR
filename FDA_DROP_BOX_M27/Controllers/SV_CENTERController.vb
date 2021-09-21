@@ -814,6 +814,19 @@ Namespace Controllers
 
             End Try
 
+            Try
+                If dao.fields.lcntpcd.Contains("ขย1") Or dao.fields.lcntpcd.Contains("ผยบ") Then
+                    model.CHK_TYPE = "1"
+                ElseIf dao.fields.lcntpcd.Contains("ขย2") Or dao.fields.lcntpcd.Contains("ขยบ") Then
+                    model.CHK_TYPE = "2"
+                ElseIf dao.fields.lcntpcd.Contains("ขย3") Or dao.fields.lcntpcd.Contains("นยบ") Then
+                    model.CHK_TYPE = "3"
+                ElseIf dao.fields.lcntpcd.Contains("ขย4") Then
+                    model.CHK_TYPE = "4"
+                End If
+            Catch ex As Exception
+
+            End Try
             model.IDENTIFY = IDENTIFY
             Dim lcnno_auto As String = ""
             Dim lcnno_format As String = ""
@@ -896,7 +909,7 @@ Namespace Controllers
             Catch ex As Exception
 
             End Try
-            Dim lcnno_auto2 As String = ""
+            Dim lcnno_auto2 As Integer = 0
             Dim lcnno_format2 As String = ""
             Try
                 Try
@@ -936,8 +949,6 @@ Namespace Controllers
             dt_name = bao.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(IDENTIFY, 0)
             ''Dim model As New MODEL_LCN
             With model
-                .LCNNO_SHOW = lcnno_format
-
 
                 For Each dr As DataRow In dt_name.Rows
                     .thanm = dr("thanm")
@@ -948,34 +959,39 @@ Namespace Controllers
             End With
 
             Dim dt_addr As New DataTable
-            dt_addr = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(LCT_IDA)
-            For Each dr As DataRow In dt_addr.Rows
-                Try
-                    model.THANAMEPLACE = dr("thanameplace")
-                Catch ex As Exception
+            Try
+                dt_addr = bao.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(dao.fields.FK_IDA)
+                For Each dr As DataRow In dt_addr.Rows
+                    Try
+                        model.THANAMEPLACE = dr("thanameplace")
+                    Catch ex As Exception
 
-                End Try
-                Try
-                    model.fulladdr3 = dr("fulladdr3")
-                Catch ex As Exception
+                    End Try
+                    Try
+                        model.fulladdr3 = dr("fulladdr3")
+                    Catch ex As Exception
 
-                End Try
-                Try
-                    model.TEL = dr("tel")
-                Catch ex As Exception
+                    End Try
+                    Try
+                        model.TEL = dr("tel")
+                    Catch ex As Exception
 
-                End Try
-                Try
-                    model.Mobile = dr("fax")
-                Catch ex As Exception
+                    End Try
+                    Try
+                        model.Mobile = dr("fax")
+                    Catch ex As Exception
 
-                End Try
-                Try
-                    model.HOUSENO = dr("HOUSENO")
-                Catch ex As Exception
+                    End Try
+                    Try
+                        model.HOUSENO = dr("HOUSENO")
+                    Catch ex As Exception
 
-                End Try
-            Next
+                    End Try
+                Next
+            Catch ex As Exception
+
+            End Try
+
 
 
             Return Json(model, JsonRequestBehavior.AllowGet)
@@ -3471,7 +3487,7 @@ Namespace Controllers
                     End If
                 End If
             Next
-
+            Result = "เลขดำเนินการคือ " & tr_id
 
             Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function

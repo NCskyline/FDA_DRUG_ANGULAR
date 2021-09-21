@@ -257,13 +257,13 @@
                 หรือบัตรประจำตัวอื่นที่ทางราชการออกให้ คือ
             </td>
             <td style="font-size:20px;width:20%">
-                <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
+                @*<label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>*@
             </td>
             <td style="font-size:20px;width:5%">
                 เลขที่
             </td>
             <td style="font-size:20px ;width:15%;text-align:center">
-                <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
+                @*<label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>*@
             </td>
             <td style="font-size:20px">
                 (กรณีไม่ใช่ผู้มีสัญชาติไทย)
@@ -363,7 +363,7 @@
                 ตั้งอยู่เลขที่
             </td>
             <td>
-                <label>{{LIST_LABEL_LCT.fulladdr}}</label>
+               {{LIST_LABEL_LCT.fulladdr3}}
             </td>
         </tr>
         <tr>
@@ -371,7 +371,7 @@
                 โทรศัพท์/มือถือ
             </td>
             <td>
-                <label>{{LIST_LABEL_LCT.tel}}</label>
+                {{LIST_LABEL_LCT.tel}}
             </td>
         </tr>
     </table>

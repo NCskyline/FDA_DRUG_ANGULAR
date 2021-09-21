@@ -1,6 +1,6 @@
 ﻿<script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
-<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:24px;">
         <div>
             <p style="text-align: right;">แบบ ผ.ย.๑๒</p>
@@ -78,7 +78,7 @@
                 <td style="width:15%;">แผนปัจจุบันตามใบอนุญาตที่</td>
                 <td style="width:35%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"><label>{{LIST_LCN.LCNNO_SHOW}}</label></td>
                 <td style="width:15%;">ณ สถานที่ผลิตยาชื่อ</td>
-                <td style="width:35%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"><label>{{LIST_LCN.thanameplace}}</label></td>
+                <td style="width:35%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"><label>{{LIST_LCN.THANAMEPLACE}}</label></td>
             </tr>
         </table>
         <table style="width:100%">

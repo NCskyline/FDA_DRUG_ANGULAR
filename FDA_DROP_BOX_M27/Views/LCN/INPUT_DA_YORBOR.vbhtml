@@ -53,7 +53,7 @@
         <br />
         <table style="width:100%;">
             <tr>
-                <td style="text-align:center;font-size:20px">
+                <td style="text-align:center;font-size:20px;border-bottom:dotted;border-bottom-width:thin;">
                     ข้าพเจ้า <label>{{LIST_LCN.thanm}}</label>
                 </td>
             </tr>
@@ -69,7 +69,7 @@
                 <td style="width:30%">
                     ซึ่งมีผู้ดำเนินกิจการ ชื่อ
                 </td>
-                <td style="text-align:left;width:2000px">
+                <td style="text-align:left;width:2000px;border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
                 </td>
                 <td colspan="5"></td>
@@ -98,7 +98,7 @@
                 <td>
                     อายุ
                 </td>
-                <td style="text-align: left; width: 20%;" align="center">
+                <td style="text-align: left; width: 20%;border-bottom:dotted;border-bottom-width:thin;" align="center">
                     <label>{{LIST_LCN.AGE}}</label>
                 </td>
                 <td>
@@ -118,7 +118,7 @@
                 <td style="width:200px">
                     อยู่เลขที่
                 </td>
-                <td style="text-align:left" colspan="3">
+                <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;" colspan="3">
                     <label>{{LIST_LCN.BSN_FULL_ADDR}}</label>
                 </td>
 
@@ -127,7 +127,7 @@
                 <td>
                     โทรศัพท์
                 </td>
-                <td style="text-align:left">
+                <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.BSN_TELEPHONE}}</label>
                 </td>
             </tr>
@@ -164,7 +164,7 @@
                 <td style="width:500px">
                     โดยมีสถานที่ประกอบธุรกิจ
                 </td>
-                <td style="text-align:left;width:2000px">
+                <td style="text-align:left;width:2000px;border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.thanameplace}}</label>
                 </td>
 
@@ -176,7 +176,7 @@
                 <td style="width:10%">
                     อยู่เลขที่
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.fulladdr3}}</label>
                 </td>
             </tr>
@@ -184,7 +184,7 @@
                 <td style="width:155px">
                     โทรศัพท์
                 </td>
-                <td style="text-align:left" width="500">
+                <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;" width="500">
                     <label>{{LIST_LCN.tel}}</label>
                 </td>
 

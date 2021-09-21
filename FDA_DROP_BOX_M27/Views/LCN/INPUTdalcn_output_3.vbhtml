@@ -59,7 +59,7 @@
                         เลขรับที่
                     </td>
 
-                    <td colspan="3">
+                    <td colspan="3" style="border-bottom:dotted;border-bottom-width:thin;">
                         <label>{{LCN_LIST.RCVNO_DISPLAY}}</label>
                     </td>
                 </tr>
@@ -68,7 +68,7 @@
                         วันที่
                     </td>
 
-                    <td colspan="3">
+                    <td colspan="3" style="border-bottom:dotted;border-bottom-width:thin;">
                         <label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label>
                     </td>
                 </tr>
@@ -78,7 +78,7 @@
 
                     </td>
 
-                    <td></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;"></td>
                     <td style="text-align:right;width:25%">
                         ผู้รับคำขอ
                     </td>
@@ -130,13 +130,13 @@
                 <td style="font-size:20px" width="5%">
                     ข้าพเจ้า
                 </td>
-                <td style="text-align:center; font-size:20px">
+                <td style="text-align:center; font-size:20px;border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.thanm}}</label>
                 </td>
             </tr>
             <tr>
                 <td></td>
-                <td style="text-align:center;font-size:16px">
+                <td style="text-align:center;font-size:16px;">
                     (ชื่อผู้ขออนุญาต)
                 </td>
             </tr>
@@ -148,7 +148,7 @@
                 <td>
                     ซึ่งมีผู้ดำเนินกิจการ ชื่อ
                 </td>
-                <td style="text-align:left;width:2000px">
+                <td style="text-align:left;width:2000px;border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
                 </td>
                 <td colspan="4">
@@ -179,7 +179,7 @@
                 <td>
                     อายุ
                 </td>
-                <td style="text-align:left;width:20%;" align="center">
+                <td style="text-align:left;width:20%;border-bottom:dotted;border-bottom-width:thin;" align="center">
                     <label>{{LIST_LCN.AGE}}</label>
                 </td>
                 <td>
@@ -201,7 +201,7 @@
                 <td style="width:200px">
                     อยู่เลขที่
                 </td>
-                <td style="text-align:left" colspan="3">
+                <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;" colspan="3">
                     <label>{{LIST_LCN.BSN_FULL_ADDR}}</label>
                 </td>
 
@@ -210,7 +210,7 @@
                 <td>
                     โทรศัพท์
                 </td>
-                <td style="text-align:left">
+                <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.BSN_TELEPHONE}}</label>
                 </td>
             </tr>
@@ -218,7 +218,7 @@
                 <td>
                     โทรศัพท์มือถือ
                 </td>
-                <td style="text-align:left">
+                <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.BSN_FAX}}</label>
                 </td>
             </tr>
@@ -239,7 +239,7 @@
                 <td style="text-align:left;width:10%">
                     ชื่อ
                 </td>
-                <td style="text-align:left">
+                <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.thanameplace}}</label>
                 </td>
             </tr>
@@ -247,7 +247,7 @@
                 <td>
                     อยู่เลขที่
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.fulladdr3}}</label>
                 </td>
             </tr>
@@ -255,7 +255,7 @@
                 <td>
                     โทรศัพท์
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.tel}}</label>
                 </td>
             </tr>
@@ -263,7 +263,7 @@
                 <td>
                     โทรศัพท์มือถือ
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.fax}}</label>
                 </td>
             </tr>
@@ -287,7 +287,7 @@
                 <td>
                     อยู่เลขที่
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LABEL.fulladdr}}</label>
                 </td>
             </tr>
@@ -295,7 +295,7 @@
                 <td>
                     โทรศัพท์
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LABEL.tel}}</label>
                 </td>
             </tr>
@@ -303,7 +303,7 @@
                 <td>
                     โทรศัพท์มือถือ
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LABEL.Mobile}}</label>
                 </td>
             </tr>

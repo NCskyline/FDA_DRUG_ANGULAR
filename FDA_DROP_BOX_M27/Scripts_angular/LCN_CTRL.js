@@ -1,6 +1,6 @@
 ﻿app.controller('LCN_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
-   // CHK_TOKEN();
+    CHK_TOKEN();
     $scope.CITIZEN = "";
     $scope.lcnno = "";
     $scope.COLLECT_KEEP = [];
@@ -14,7 +14,21 @@
     //var IDENTIFY = '0000000000000';
     var HEAD_LCN_IDA = sessionStorage.HEAD_LCN_IDA;
     //var LCT_IDA = 117194;
-    
+    //$scope.currentPage = 0;
+    //$scope.paging = {
+    //    total: 10,
+    //    current: 1,
+    //    onPageChanged: loadPages
+    //};
+    //function loadPages() {
+    //    console.log('Current page is : ' + $scope.paging.current);
+
+    //    // TODO : Load current page Data here
+
+    //    $scope.currentPage = $scope.paging.current;
+    //}
+
+
 
     Pageload();
     LOAD_MODEL();
@@ -144,7 +158,7 @@
 
         } else if (process == '11103' || process == '11104' || process == '11105' || process == '11106' || process == '11107' || process == '11108' || process == '11109' || process == '11110') {
             if (process == '11105') {
-                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ขายยาแผนปัจจุบัน';
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญGET_LCN_INFORMATION_INPUT_MODIFYาตสถานที่ด้านยา ขายยาแผนปัจจุบัน';
             } else if (process == '11106') {
                 $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ผลิตยาแผนปัจจุบัน';
             } else if (process == '11107') {
@@ -188,6 +202,13 @@
         data_lcn.then(function (datas) {
             $scope.DATA_LCN_MAIN = datas.data;
             //$scope.DATA_LCN_MAIN.lcnnoType = $scope.lcnnoType;
+            //$scope.currentPage = 1;
+            //$scope.entryLimit = 20;
+            //$scope.noOfPages = Math.ceil($scope.DATA_LCN_MAIN.length / $scope.entryLimit);
+            //$scope.loading_profile = false;
+            //$scope.product_show = true;
+            //$scope.filteredItems = $scope.DATA_LCN_MAIN.length; //Initially for no filter
+            //$scope.totalItems = $scope.DATA_LCN_MAIN.length;
         }, function () { });
 
 
@@ -583,7 +604,7 @@
         var data_keep = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(sessionStorage.LCT_IDA, sessionStorage.PROCESS, sessionStorage.CITIZEN_ID_AUTHORIZE);
         data_keep.then(function (datas) {
             $scope.DATA_LCN_MAIN = datas.data;
-
+           
         }, function () { });
 
 
@@ -652,7 +673,7 @@
 
         }, function () { });
 
-        var data_lct = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2('1', sessionStorage.CITIZEN_ID_AUTHORIZE);
+        var data_lct = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_1('1', sessionStorage.CITIZEN_ID_AUTHORIZE);
         data_lct.then(function (datas) {
             $scope.REF_LOCATION = datas.data;
 
@@ -720,9 +741,9 @@
     };
 
 
-    $scope.getdetails_lct = function (IDA) {
+    $scope.getdetails_lct = function (LOCATION_ADDRESS_IDA) {
 
-        var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
+        var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(LOCATION_ADDRESS_IDA);
         Data_location.then(function (datas) {
             $scope.LIST_LABEL_LCT = datas.data;
             //$scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr;
@@ -762,8 +783,13 @@
 
         var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT(BSN_IDENTIFY, sessionStorage.CITIZEN_ID_AUTHORIZE, sessionStorage.LCT_IDA);
         MODLE_LCN.then(function (datas) {
+            $scope.TEMP_LCN = $scope.LIST_LCN;
             $scope.LIST_LCN = datas.data;
             $scope.LIST_LCN.PROCESS = PROCESS;
+            $scope.LIST_LCN.dalcn.WRITE_AT = $scope.TEMP_LCN.dalcn.WRITE_AT;
+            $scope.LIST_LCN.dalcn.WRITE_DATE = $scope.TEMP_LCN.dalcn.WRITE_DATE;
+            $scope.LIST_LCN.dalcn.NATION = $scope.TEMP_LCN.dalcn.NATION;
+            $scope.LIST_LCN.dalcn.opentime = $scope.TEMP_LCN.dalcn.opentime;
         }, function () { });
     };
 
@@ -908,7 +934,7 @@
         Getdata.then(function (datas) {
             Swal.fire({
                 title: 'SUCCESS',
-                text: 'บันทึกข้อมูลเรียบร้อย',
+                text: 'บันทึกข้อมูลเรียบร้อย \n' + datas.data ,
                 icon: 'ดฟสหำ',
                 confirmButtonColor: '#3085d6',
                 confirmButtonText: 'OK'

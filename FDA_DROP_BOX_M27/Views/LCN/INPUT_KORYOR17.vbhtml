@@ -1,6 +1,6 @@
 ﻿<script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
-<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:24px;">
         <div>
             <p style="text-align: right;">แบบ ข.ย.๑๗</p>
@@ -10,7 +10,7 @@
                 <td style="width:35%"></td>
                 <td style="width:35%"></td>
                 <td style="width:5%;text-align:right">เลขที่:</td>
-                <td style=" width:25%;text-align:center"><label>{{LCN_LIST.RCVNO_DISPLAY}}</label></td>
+                <td style=" width:25%;text-align:center;border-bottom:dotted;border-bottom-width:thin;""><label>{{LCN_LIST.RCVNO_DISPLAY}}</label></td>
             </tr>
         </table>
         <table style="width:100%">
@@ -18,7 +18,7 @@
                 <td style="width:35%"></td>
                 <td style="width:35%"></td>
                 <td style="width:5%;text-align:right">วันที่:</td>
-                <td style=" width:25%;text-align:center"><label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label></td>
+                <td style=" width:25%;text-align:center;border-bottom:dotted;border-bottom-width:thin;""><label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label></td>
             </tr>
         </table>
         <table style="width:100%">
@@ -84,22 +84,22 @@
                 <tr>
                     <td>ได้รับอนุญาตให้ :</td>
                     <td>
-                        <input type="checkbox" name="type_a" ng-model="LIST_LCN.CHK_TYPE" ng-value="1" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายยาแผนปัจจุบัน
+                        <input type="radio" name="type_a" ng-model="LIST_LCN.CHK_TYPE" value="1" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายยาแผนปัจจุบัน
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <input type="checkbox" name="type_a" ng-model="LIST_LCN.CHK_TYPE" ng-value="2" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายยาแผนปัจจุบันเฉพาะยาบรรจุเสร็จที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ
+                        <input type="radio" name="type_a" ng-model="LIST_LCN.CHK_TYPE" value="2" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายยาแผนปัจจุบันเฉพาะยาบรรจุเสร็จที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ
                     </td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td> <input type="checkbox" name="type_a" ng-model="LIST_LCN.CHK_TYPE" ng-value="3" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายยาแผนปัจจุบันเฉพาะยาบรรจุเสร็จสำหรับสัตว์</td>
+                    <td> <input type="radio" name="type_a" ng-model="LIST_LCN.CHK_TYPE" value="3" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายยาแผนปัจจุบันเฉพาะยาบรรจุเสร็จสำหรับสัตว์</td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td> <input type="checkbox" name="type_a" ng-model="LIST_LCN.CHK_TYPE" ng-value="4" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายส่งยาแผนปัจจุบัน</td>
+                    <td> <input type="radio" name="type_a" ng-model="LIST_LCN.CHK_TYPE" value="4" id="rdl_CHK_SELL_TYPE" disabled="disabled" />ขายส่งยาแผนปัจจุบัน</td>
                 </tr>
             </table>
         </div>

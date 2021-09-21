@@ -1,6 +1,6 @@
 ﻿<script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
-<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:24px;">
         <div>
             <p style="text-align: right;">แบบ น.ย.๑๑</p>
@@ -83,7 +83,7 @@
         </table>
         <table style="width:100%">
             <tr>
-                <td style="width:100%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"><label>{{LIST_LCN.thanameplace}}</label></td>
+                <td style="width:100%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"><label>{{LIST_LCN.THANAMEPLACE}}</label></td>
             </tr>
         </table>
         <table style="width:100%">

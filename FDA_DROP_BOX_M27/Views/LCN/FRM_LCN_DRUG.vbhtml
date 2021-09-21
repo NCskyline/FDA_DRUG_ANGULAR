@@ -178,13 +178,11 @@ End Code
                     <div class="row">
                         <div class="col-sm-12" style="width:100%;" >
                             <div class="card" style=" border-top: 10px solid #277210;">
-                                <table width="100%" style="font-family:'Taviraj'" class="table">
+                                <table width="100%" style="font-family:'Taviraj'" class="table" id="myTable" datatable="ng">
                                     <thead style="font-weight:300;">
                                         <tr>
                                             <td>เลขที่ใบอนุญาต</td>
                                             <td>สถานะ</td>
-                                            @*<td>ชื่อสถานที่</td>
-                                                <td>ที่อยู่</td>*@
                                             <td>เลขดำเนินการ</td>
                                             <td>เหตุผลการคืนคำขอ</td>
                                             <td></td>
@@ -194,8 +192,6 @@ End Code
                                         <tr ng-repeat="data in DATA_LCN_MAIN">
                                             <td>{{data.LCNNO_MANUAL}}</td>
                                             <td>{{data.STATUS_NAME}}</td>
-                                            @*<td>{{data.thanameplace}}</td>
-                                                <td>{{data.fulladdr}}</td>*@
                                             <td>{{data.TRANSECTION_ID_UPLOAD}}</td>
                                             <td>{{data.REMARK}}</td>
                                             <td>
@@ -206,7 +202,22 @@ End Code
                                             </td>
                                         </tr>
                                     </tbody>
+                                    <tfoot>
+                                        <tr></tr>
+                                    </tfoot>
                                 </table>
+
+                                @*<hr />
+                                <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
+                                                ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
+                                                boundary-link-numbers="true" rotate="false" max-size="maxSize">
+                                </uib-pagination>
+                                <div align="center">
+                                    <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
+                                    <button type="button" class="btn btn-sm" ng-disabled="currentPage >= DATA_LCN_MAIN.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
+                                </div>*@
+                            </div>
+
                             </div>
                         </div>
                     </div>
