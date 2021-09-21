@@ -57,7 +57,7 @@ End Code
     </div>
     <div >
         <div class="content-part">
-            <div class="part part-1-3 ic">
+            <div class="part part-1-3">
                 <div class="tab">
                     <button class="tablinks" onclick="openTab(event, 'GENERAL')" id="defaultOpen">ข้อมูลทั่วไป</button>
                     <button class="tablinks" onclick="openTab(event, 'CONTAIN')">ขนาดบรรจุ</button>
