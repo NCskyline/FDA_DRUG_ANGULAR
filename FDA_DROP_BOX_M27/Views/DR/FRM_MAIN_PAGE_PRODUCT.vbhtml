@@ -16,7 +16,7 @@ End Code
                                 <a ng-click="BTN_MENU('1300002')" style="color:#06B716">ยาแผนปัจจุบัน สำหรับสัตว์</a>
                             </li>
                             <li>
-                                <a ng-click="BTN_MENU('1300003')" style="color:#06B716">ยาแผนโบราณ สำหรับสัตว์</a>
+                                <a ng-click="BTN_MENU('1300004')" style="color:#06B716">ยาแผนโบราณ สำหรับสัตว์</a>
                             </li>
                         </ul>
                     </li>
@@ -41,7 +41,7 @@ End Code
                                 <a ng-click="BTN_MENU('1029')" style="color:#06B716">เพื่อบริจาคเพื่อการกุศล (น.ย.ม.4) ภาครัฐ</a>
                             </li>
                             <li>
-                                <a ng-click="BTN_MENU('1030')" style="color:#06B716">เพื่อบริจาคเพื่อการกุศล (น.ย.ม.4) ภาคเอกชน</a>
+                                <a ng-click="BTN_MENU('1031')" style="color:#06B716">เพื่อบริจาคเพื่อการกุศล (น.ย.ม.4) ภาคเอกชน</a>
                             </li>
                         </ul>
                     </li>
