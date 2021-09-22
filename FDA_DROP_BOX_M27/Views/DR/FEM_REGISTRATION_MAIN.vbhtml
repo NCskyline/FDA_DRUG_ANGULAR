@@ -3,7 +3,7 @@
 End Code
 
 <div>
-    <div class="col-sm-12">
+    <div class="col-sm-12 in"> 
         <div style="float:left">
             <table>
                 <tr>
@@ -30,7 +30,7 @@ End Code
             </table>
         </div>      
     </div>
-    <div>
+    <div class="in">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card" style=" border-top: 10px solid #277210;">

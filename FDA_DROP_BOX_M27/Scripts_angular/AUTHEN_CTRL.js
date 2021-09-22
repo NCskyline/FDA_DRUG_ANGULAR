@@ -15,7 +15,7 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
        
         var token = '';
         if (location.hostname == 'localhost') {
-            token = 'lCAvldaJtG2oK2wXzFgAHwUU'; //"PASS";
+            token = "PASS"; //"PASS";
         } else {
             token = QueryString("Token");
         }
@@ -44,6 +44,8 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
                         window.location = "/LCN/FRM_LCN_NEWS";
                     } else if (TYPE == 'DH') {
                         window.location = "/DH/FRM_MAIN_PAGE_PHESAJ";
+                    } else if (TYPE == 'DR') {
+                        window.location = "/DH/FRM_MAIN_PAGE_PRODUCT";
                     }
 
                 } else {
@@ -54,6 +56,8 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
                     } else if (TYPE == 'DH') {
                         window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PHESAJ";  // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
+                    } else if (TYPE == 'DR') {
+                        window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PRODUCT";
                     }
                     
                 }

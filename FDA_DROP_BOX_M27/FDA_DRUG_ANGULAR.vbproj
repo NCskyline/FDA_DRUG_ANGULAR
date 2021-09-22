@@ -441,6 +441,7 @@
     <Content Include="Views\LCN\INPUT_PDF_YOR_SOR_3_1.vbhtml" />
     <Content Include="Views\DR\FRM_RQT_REGIST_INFORMATION.vbhtml" />
     <Content Include="Views\LCN\FRM_LCN_SUBSTITUTE_MAIN.vbhtml" />
+    <Content Include="Views\AUTHEN\AUTHEN_DR.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>

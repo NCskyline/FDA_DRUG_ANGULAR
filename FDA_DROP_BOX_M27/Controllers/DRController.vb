@@ -65,5 +65,9 @@ Namespace Controllers
         Function FRM_RQT_REGIST_INFORMATION() As ActionResult
             Return View()
         End Function
+        Function FRM_MAIN_PAGE_PRODUCT() As ActionResult
+            Return View()
+        End Function
+
     End Class
 End Namespace

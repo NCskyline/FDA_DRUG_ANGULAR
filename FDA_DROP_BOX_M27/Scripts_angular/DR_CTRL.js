@@ -1,10 +1,16 @@
 ﻿app.controller('DR_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
-    //CHK_TOKEN();
+    CHK_TOKEN();
+    var LCN_IDA = sessionStorage.LCN_IDA;
+    var LCT_IDA = sessionStorage.LCT_IDA;
+
     pageload();
     
     function pageload() {
 
+        if (process == '1300001' || process == '1300002' || process == '130004') {
+            $scope.SUB_PATH = SET_URL_SV('/DR/FRM_REGISTRATION_MAIN');
+        }
 
         var data_CNT = CENTER_SV.SP_MASTER_sysisocnt();
         data_CNT.then(function (datas) {
@@ -90,7 +96,20 @@
         }, function () { });
     }
 
-    
+    $scope.BTN_MENU = function (process) {
+
+        if (process == '1300001' || process == '1300002' || process == '130004') {
+            REDIRECT('/DR/FRM_SEARCH_LCN?PROCESS=' + process);
+        }
+    };
+
+    $scope.SELECT_LCN = function (datas) {
+
+        sessionStorage.LCN_IDA = datas.IDA;
+        sessionStorage.LCT_IDA = datas.LCT_IDA;
+        REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
+
+    };
 
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });
