@@ -55,9 +55,9 @@ End Code
     <div class="in">
         <h2>ข้อมูลทั่วไปผลิตภัณฑ์ยา</h2>
         <br />
-        <table class="table" border="1">
+        <table class="table" width="100%" border="1">
             <tr>
-                <td>เลขทะเบียนตำรับยา</td>
+                <td width="30%">เลขทะเบียนตำรับยา</td>
                 <td></td>
             </tr>
             <tr>

@@ -354,21 +354,21 @@
                     </select>
                 </td>
             </tr>
-            <tr>
+            <tr ng-repeat="data in LIST_LABEL_LCT">
                 <td>
 
                     ตั้งอยู่เลขที่
                 </td>
                 <td>
-                    {{LIST_LABEL_LCT.fulladdr3}}
+                    {{data.fulladdr3}}
                 </td>
             </tr>
-            <tr>
+            <tr ng-repeat="datas in LIST_LABEL_LCT">
                 <td>
                     โทรศัพท์/มือถือ
                 </td>
                 <td>
-                    {{LIST_LABEL_LCT.tel}}
+                    {{datas.tel}}
                 </td>
             </tr>
         </table>
@@ -458,13 +458,13 @@
                     <strong>โดยมีเภสัชกรชื่อ</strong> 1
                 </td>
                 <td>
-                    {{LSIT_LCN.PHR_NAME}}
+                    {{LIST_LCN.PHR_NAME}}
                 </td>
                 <td style="text-align:center">
                     ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่
                 </td>
                 <td>
-                    {{LSIT_LCN.PHR_TEXT_NUM}}
+                    {{LIST_LCN.PHR_TEXT_NUM}}
                 </td>
             </tr>
             @*<tr>

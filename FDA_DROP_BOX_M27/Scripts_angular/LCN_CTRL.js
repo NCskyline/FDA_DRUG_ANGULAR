@@ -679,7 +679,7 @@
 
         }, function () { });
 
-    }
+    };
 
 
 
@@ -868,22 +868,22 @@
                 $scope.LIST_LCN.dalcn.lcnsid_ctzno = '0'
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_remark == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_remark = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_remark = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_remark = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_remark = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_idst == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_idst = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_idst = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_idst = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_idst = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_phrno == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_phrno = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_phrno = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_phrno = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_phrno = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_stfcd == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_stfcd = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_stfcd = '1';
             } else {
                 $scope.LIST_LCN.dalcn.lcnsid_stfcd = '0'
             }
