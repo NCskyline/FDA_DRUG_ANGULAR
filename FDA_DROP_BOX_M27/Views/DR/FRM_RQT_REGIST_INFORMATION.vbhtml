@@ -50,14 +50,49 @@ End Code
 </style>
 
 
-<h2>FRM_RQT_REGIST_INFORMATION</h2>
-<div>
-    <div class="in">
 
+<div style="font-family:'Taviraj';width:100%">
+    <div class="in">
+        <h2>ข้อมูลทั่วไปผลิตภัณฑ์ยา</h2>
+        <br />
+        <table class="table" border="1">
+            <tr>
+                <td>เลขทะเบียนตำรับยา</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ชื่อการค้า (ภาษาไทย):</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ชื่อการค้า (ภาษาอังกฤษ):</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ชื่อผู้รับอนุญาต :</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ชื่อสถานที่ :</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ที่ตั้ง :</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ประเภทใบอนุญาต :</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>เลขที่ใบอนุญาต :</td>
+                <td></td>
+            </tr>
+        </table>
     </div>
     <div >
         <div class="content-part">
-            <div class="part part-1-3">
+            <div class="part part-1-3 ic">
                 <div class="tab">
                     <button class="tablinks" onclick="openTab(event, 'GENERAL')" id="defaultOpen">ข้อมูลทั่วไป</button>
                     <button class="tablinks" onclick="openTab(event, 'CONTAIN')">ขนาดบรรจุ</button>
