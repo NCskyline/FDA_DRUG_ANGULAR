@@ -137,17 +137,15 @@
         <tr>
 
             <td style="width:20%">
-                <input type="radio" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.CHK_TYPE1" id="rdl_CHK_TYPE" value="1" /> <strong>ย้ายสถานที่</strong>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="radio" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.CHK_TYPE1" id="rdl_CHK_TYPE" value="2" /> <strong>เปลี่ยนแปลงสถานที่</strong>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="radio" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.CHK_TYPE1" id="rdl_CHK_TYPE" value="3" /> <strong>เพิ่มสถานที่</strong>
+                <form name="rdl_gmp">
+
+
+                    <label><input type="radio" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.CHK_TYPE1" id="rdl_CHK_TYPE" value="1" /> <strong>ย้ายสถานที่</strong></label><br />
+                    <label><input type="radio" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.CHK_TYPE1" id="rdl_CHK_TYPE" value="2" /> <strong>เปลี่ยนแปลงสถานที่</strong></label><br />
+                    <label><input type="radio" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.CHK_TYPE1" id="rdl_CHK_TYPE" value="3" /> <strong>เพิ่มสถานที่</strong></label>
+
+                </form>
+
             </td>
         </tr>
     </table>
