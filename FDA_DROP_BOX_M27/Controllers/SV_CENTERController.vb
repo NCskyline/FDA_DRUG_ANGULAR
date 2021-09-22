@@ -934,10 +934,16 @@ Namespace Controllers
                 model.LCNNO_SHOW = lcnno_format2
 
                 Dim dao_phr As New DAO_DRUG.ClsDBDALCN_PHR
-                dao_phr.GetDataby_FK_IDA(HEAD_LCN_IDA)
+                dao_phr.GetDataby_FK_IDA_ORDER_ASC(LCN_IDA)
 
                 Try
                     model.DALCN_PHR = dao_phr.fields
+                Catch ex As Exception
+
+                End Try
+                Try
+                    model.PHR_NAME = dao_phr.fields.PHR_NAME
+                    model.PHR_TEXT_NUM = dao_phr.fields.PHR_TEXT_NUM
                 Catch ex As Exception
 
                 End Try
@@ -992,6 +998,18 @@ Namespace Controllers
 
             End Try
 
+            Dim dt_keep As New DataTable
+            Try
+                dt_keep = bao.SP_MASTER_DALCN_DETAIL_LOCATION_KEEP_BY_IDA(LCN_IDA)
+                For Each dr As DataRow In dt_keep.Rows
+                    model.KEEP_FULL_ADDR = dr("fulladdr")
+                    model.KEEP_THANAMEPLACE = dr("thanameplace")
+                    model.KEEP_TEL = dr("tel")
+                    model.KEEP_HOUSENO = dr("HOUSENO")
+                Next
+            Catch ex As Exception
+
+            End Try
 
 
             Return Json(model, JsonRequestBehavior.AllowGet)

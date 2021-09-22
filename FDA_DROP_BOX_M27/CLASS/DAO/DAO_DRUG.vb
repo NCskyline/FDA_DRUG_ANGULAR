@@ -2473,6 +2473,13 @@ Namespace DAO_DRUG
             For Each Me.fields In datas
             Next
         End Sub
+
+        Public Sub GetDataby_FK_IDA_ORDER_ASC(ByVal FK_IDA As Integer)
+
+            datas = (From p In db.DALCN_PHRs Where p.FK_IDA = FK_IDA Select p Order By p.PHR_IDA Ascending)
+            For Each Me.fields In datas
+            Next
+        End Sub
         Public Sub GetDataby_CTZNO(ByVal CTZNO As String)
             datas = (From p In db.DALCN_PHRs Where p.PHR_CTZNO = CTZNO Select p)
             For Each Me.fields In datas
