@@ -467,12 +467,7 @@
                     {{LSIT_LCN.PHR_TEXT_NUM}}
                 </td>
             </tr>
-            @*<tr>
-                    <td colspan="2">
-                        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
-                        <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
-                    </td>
-                </tr>*@
+
             <tr>
                 <td colspan="4">
                     เป็นผู้ควบคุมตามมาตรา ๕๑ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙
