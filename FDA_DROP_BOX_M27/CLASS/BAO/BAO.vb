@@ -28,7 +28,18 @@ Public Class BAO
         dta.TableName = "SP_BSN_LOCATION_ADDRESS_BY_IDEN"
         Return dta
     End Function
+    Public Function SP_DALCN_NCT_SUBSTITUTE_BY_FK_IDA(ByVal LCN_IDA As Integer) As DataTable
+        Dim sql As String = "exec SP_DALCN_NCT_SUBSTITUTE_BY_FK_IDA @FK_IDA=" & LCN_IDA
+        Dim dta As New DataTable
+        Dim clsds As New ClassDataset
+        Try
+            dta = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
 
+        End Try
+        dta.TableName = "SP_DALCN_NCT_SUBSTITUTE_BY_FK_IDA"
+        Return dta
+    End Function
     Public Function SP_SYSCHNGWT() As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_SYSCHNGWT"

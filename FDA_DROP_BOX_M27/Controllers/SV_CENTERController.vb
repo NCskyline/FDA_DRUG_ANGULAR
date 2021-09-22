@@ -79,6 +79,15 @@ Namespace Controllers
 
         End Function
 
+        Function SP_DALCN_NCT_SUBSTITUTE_BY_FK_IDA(ByVal LCN_IDA As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_DALCN_NCT_SUBSTITUTE_BY_FK_IDA(LCN_IDA)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
+
         Function SP_CUSTOMER_DALCN_LOCATION_ADDRESS_by_LOCATION_TYPE_ID_and_LCNSID(ByVal LOCATION_TYPE_CD As String, ByVal iden As String) As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO

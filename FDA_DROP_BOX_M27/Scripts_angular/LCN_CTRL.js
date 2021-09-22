@@ -135,13 +135,13 @@
                     $scope.lcnnoType = '(ผย1) > (ผลิตวัตถุออกฤทธิ์ฯในประเภท ๓)';
                 } else if (process == '128') {
                     $scope.lcnnoType = '(ผย1) > (ผลิตวัตถุออกฤทธิ์ฯในประเภท ๔)';
-                } 
+                }
 
-            } 
+            }
 
             sessionStorage.PROCESS = process;
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
-            
+
         } else if (sessionStorage.PROCESS == '114' || sessionStorage.PROCESS == '115' || sessionStorage.PROCESS == '116' || sessionStorage.PROCESS == '117') {
             if (sessionStorage.PROCESS == '114') {
                 $scope.lcnnoType = '(ผย1) > (ผลิตซึ่งยาเสพติดให้โทษในประเภท ๓)';
@@ -177,26 +177,66 @@
 
             sessionStorage.PROCESS = process;
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_EDIT_REQUEST');
-            
+
 
             var dataLo = CENTER_SV.SP_DALCN_EDIT_REQUEST_BY_FK_IDA(sessionStorage.LCN_IDA);
             dataLo.then(function (datas) {
                 $scope.DATA_EDIT_LCN_RQT = datas.data;
- 
+
 
             }, function () { });
 
-        }
+        } else if (process == '100701' || process == '100702' || process == '100703' || process == '100704' || process == '100705' || process == '100766' || process == '100767' || process == '100768' || process == '100769' || process == '100770' || process == '100771' || process == '100772' || process == '100773') {
+            if (process == '100701') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตสถานที่ขายยาแผนปัจจุบัน';
+            } else if (process == '100702') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตสถานที่นำเข้ายาแผนปัจจุบัน';
+            } else if (process == '100703') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตสถานที่ผลิตยาแผนปัจจุบัน';
+            } else if (process == '100704') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตใบอนุญาตยาแผนโบราณ';
+            } else if (process == '100705') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาต ยาเสพติดให้โทษประเภทที่ 3';
+            } else if (process == '100766') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 3';
+            } else if (process == '100767') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 4';
+            } else if (process == '100768') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 3';
+            } else if (process == '100769') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 4';
+            } else if (process == '100770') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 3';
+            } else if (process == '100771') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 4';
+            } else if (process == '100772') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 3';
+            } else if (process == '100773') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 4';
+            }
 
-            var dataLo = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
-            dataLo.then(function (datas) {
+            sessionStorage.PROCESS = process;
+            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_SUBSTITUTE_MAIN');
+
+
+            var DATA_STT = CENTER_SV.SP_DALCN_NCT_SUBSTITUTE_BY_FK_IDA(sessionStorage.LCN_IDA);
+            DATA_STT.then(function (datas) {
+
+                $scope.DATA_SUBTITUTE = datas.data;
+            }, function () { });
+
+
+        } 
+
+        var dataLo = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
+        dataLo.then(function (datas) {
                 $scope.DATA_LCN_LIST = datas.data;
                 if (process >= 123) {
                         sessionStorage.LCT_IDA = datas.data[0].LCT_IDA;
                 }
 
                
-            }, function () { });
+        }, function () { });
         
         var data_lcn = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(sessionStorage.LCT_IDA, sessionStorage.PROCESS, sessionStorage.CITIZEN_ID_AUTHORIZE);
         data_lcn.then(function (datas) {
@@ -342,7 +382,7 @@
                 $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตผลิตวัตถุออกฤทธิ์';
             } else if (process == '11110') {
                 $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตนำเข้าวัตถุออกฤทธิ์';
-            } 
+            }
 
             sessionStorage.PROCESS = process;
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_SELECT');
@@ -352,6 +392,41 @@
             }, function () { });
 
 
+        } else if (process == '100701' || process == '100702' || process == '100703' || process == '100704' || process == '100705' || process == '100766' || process == '100767' || process == '100768' || process == '100769' || process == '100770' || process == '100771' || process == '100772' || process == '100773') {
+            if (process == '100701') {
+                $scope.lcnnoType = 'ใบแทน สถานที่ขายยาแผนปัจจุบัน';
+            } else if (process == '100702') {
+                $scope.lcnnoType = 'ใบแทน สถานที่นำเข้ายาแผนปัจจุบัน';
+            } else if (process == '100703') {
+                $scope.lcnnoType = 'ใบแทน สถานที่ผลิตยาแผนปัจจุบัน';
+            } else if (process == '100704') {
+                $scope.lcnnoType = 'ใบแทน ใบอนุญาตยาแผนโบราณ';
+            } else if (process == '100705') {
+                $scope.lcnnoType = 'ใบแทน ยาเสพติดให้โทษประเภทที่ 3';
+            } else if (process == '100766') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 3';
+            } else if (process == '100767') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 4';
+            } else if (process == '100768') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 3';
+            } else if (process == '100769') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 4';
+            } else if (process == '100770') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 3';
+            } else if (process == '100771') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 4';
+            } else if (process == '100772') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 3';
+            } else if (process == '100773') {
+                $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 4';
+            }
+
+            sessionStorage.PROCESS = process;
+            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_SELECT');
+            var data3 = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN_ALIVE(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
+            data3.then(function (datas) {
+                $scope.DATA_LCN_F_EDIT = datas.data;
+            }, function () { });
         }
             
 
@@ -651,7 +726,7 @@
             $scope.DATA_PHR_SHOW = datas.data;
         }, function () { });
 
-
+        
 
 
     };
@@ -681,8 +756,13 @@
 
     };
 
+    
+    $scope.pageload_subtitute = function () {
+
+        
 
 
+    };
     //var myApp = angular.module("ANGULAR_APP", []);
     //myApp.controller("LCN_CTRL", function ($scope) {
     //    $scope.BSN_IDEN = '';

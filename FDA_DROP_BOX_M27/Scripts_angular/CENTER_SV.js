@@ -600,7 +600,17 @@
         });
         return response;
     };
-
+    
+    this.SP_DALCN_NCT_SUBSTITUTE_BY_FK_IDA = function (LCN_IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_DALCN_NCT_SUBSTITUTE_BY_FK_IDA"),
+            params: {
+                LCN_IDA: LCN_IDA
+            }
+        });
+        return response;
+    };
     this.GET_LCNNO_SHOW = function (IDA) {
         var response = $http({
             method: "post",

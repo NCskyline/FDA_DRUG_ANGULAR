@@ -545,7 +545,10 @@
         <div style="font-size:20px;margin-left:6.3%">(๖) กรณีการยื่นคำขอโดยวิธีการทางอิเล็กทรอนิกส์ เอกสารหรือหลักฐานประกอบคำขอให้เป็นไปตามระบบ</div>
         <div style="font-size:20px">การยื่นทางอิเล็กทรอนิกส์ที่สำนักงานคณะกรรมการอาหารและยากำหนด</div>
 
-
+        <div style="text-align:center">
+            <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+            <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_EDIT()" value="บันทึก" />
+        </div>
     </div>
 </div>
 
