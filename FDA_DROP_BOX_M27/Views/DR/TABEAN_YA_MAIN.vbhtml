@@ -1,5 +1,5 @@
 ﻿@Code
-    Layout = ""
+'Layout = ""
 End Code
 
 @*<h2>TABEAN_YA_MAIN</h2>*@
@@ -139,72 +139,76 @@ End Code
             </table>
             <hr />
             <br />
-            <h3 style="color:red">คำขอขึ้นทะเบียน</h3>
-            <div class="row">
-                <div class="col-sm-12" style="width:100%;">
-                    <div class="card" style=" border-top: 10px solid #277210;">
-                        <table width="100%" style="font-family:'Taviraj'" class="table">
-                            <thead style="font-weight:300;">
-                                <tr>
-                                    <td>สถานะ</td>
-                                    <td>ชื่อภาษาไทย</td>
-                                    <td>ชื่อภาษาอังกฤษ</td>
-                                    <td>รหัสการดำเนินการ</td>
-                                    <td></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
-                                    <td>{{data.RCVNO_MANUAL}}</td>
-                                    <td>{{data.LCNNO_MANUAL}}</td>
-                                    <td>{{data.STATUS_NAME}}</td>
-                                    <td>{{data.TRANSACTION_UPLOAD}}</td>
-                                    <td>
-                                        <span class="fa fa-eye"></span>
-                                        <a ng-click="">
-                                            ดูข้อมูล
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+            <div class="in">
+                <h3 style="color:red">คำขอขึ้นทะเบียน</h3>
+                <div class="row">
+                    <div class="col-sm-12" style="width:100%;">
+                        <div class="card" style=" border-top: 10px solid #277210;">
+                            <table width="100%" style="font-family:'Taviraj'" class="table">
+                                <thead style="font-weight:300;">
+                                    <tr>
+                                        <td>สถานะ</td>
+                                        <td>ชื่อภาษาไทย</td>
+                                        <td>ชื่อภาษาอังกฤษ</td>
+                                        <td>รหัสการดำเนินการ</td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
+                                        <td>{{data.RCVNO_MANUAL}}</td>
+                                        <td>{{data.LCNNO_MANUAL}}</td>
+                                        <td>{{data.STATUS_NAME}}</td>
+                                        <td>{{data.TRANSACTION_UPLOAD}}</td>
+                                        <td>
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="">
+                                                ดูข้อมูล
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
             <br />
-            <br />
-            <h3 style="color:red">ทะเบียนตำรับ</h3>
-            <div class="row">
-                <div class="col-sm-12" style="width:100%;">
-                    <div class="card" style=" border-top: 10px solid #277210;">
-                        <table width="100%" style="font-family:'Taviraj'" class="table">
-                            <thead style="font-weight:300;">
-                                <tr>
-                                    <td>สถานะ</td>
-                                    <td>ชื่อภาษาไทย</td>
-                                    <td>ชื่อภาษาอังกฤษ</td>
-                                    <td>รหัสการดำเนินการ</td>
-                                    <td></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
-                                    <td>{{data.RCVNO_MANUAL}}</td>
-                                    <td>{{data.LCNNO_MANUAL}}</td>
-                                    <td>{{data.STATUS_NAME}}</td>
-                                    <td>{{data.TRANSACTION_UPLOAD}}</td>
-                                    <td>
-                                        <span class="fa fa-eye"></span>
-                                        <a ng-click="">
-                                            ดูข้อมูล
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+            <div class="in">
+                <h3 style="color:red">ทะเบียนตำรับ</h3>
+                <div class="row">
+                    <div class="col-sm-12" style="width:100%;">
+                        <div class="card" style=" border-top: 10px solid #277210;">
+                            <table width="100%" style="font-family:'Taviraj'" class="table">
+                                <thead style="font-weight:300;">
+                                    <tr>
+                                        <td>สถานะ</td>
+                                        <td>ชื่อภาษาไทย</td>
+                                        <td>ชื่อภาษาอังกฤษ</td>
+                                        <td>รหัสการดำเนินการ</td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
+                                        <td>{{data.RCVNO_MANUAL}}</td>
+                                        <td>{{data.LCNNO_MANUAL}}</td>
+                                        <td>{{data.STATUS_NAME}}</td>
+                                        <td>{{data.TRANSACTION_UPLOAD}}</td>
+                                        <td>
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="">
+                                                ดูข้อมูล
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
         </div>
     </div>

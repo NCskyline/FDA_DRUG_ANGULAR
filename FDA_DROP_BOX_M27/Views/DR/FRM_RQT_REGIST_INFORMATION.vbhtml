@@ -11,10 +11,11 @@ End Code
         /*border: 1px solid #ccc;*/
         background-color: #f1f1f1;
         width: 100%;
+        font-family: 'Taviraj';
         /*height: 300px;*/
     }
 
-    /* Style the buttons that are used to open the tab content */
+        /* Style the buttons that are used to open the tab content */
     .tab button {
         display: block;
         background-color: inherit;
@@ -57,35 +58,35 @@ End Code
         <br />
         <table class="table" width="100%" border="1">
             <tr>
-                <td width="30%">เลขทะเบียนตำรับยา</td>
+                <td width="20%" style="font-size:20px">เลขทะเบียนตำรับยา</td>
                 <td></td>
             </tr>
             <tr>
-                <td>ชื่อการค้า (ภาษาไทย):</td>
+                <td style="font-size:20px">ชื่อการค้า (ภาษาไทย):</td>
                 <td></td>
             </tr>
             <tr>
-                <td>ชื่อการค้า (ภาษาอังกฤษ):</td>
+                <td style="font-size:20px">ชื่อการค้า (ภาษาอังกฤษ):</td>
                 <td></td>
             </tr>
             <tr>
-                <td>ชื่อผู้รับอนุญาต :</td>
+                <td style="font-size:20px">ชื่อผู้รับอนุญาต :</td>
                 <td></td>
             </tr>
             <tr>
-                <td>ชื่อสถานที่ :</td>
+                <td style="font-size:20px">ชื่อสถานที่ :</td>
                 <td></td>
             </tr>
             <tr>
-                <td>ที่ตั้ง :</td>
+                <td style="font-size:20px">ที่ตั้ง :</td>
                 <td></td>
             </tr>
             <tr>
-                <td>ประเภทใบอนุญาต :</td>
+                <td style="font-size:20px">ประเภทใบอนุญาต :</td>
                 <td></td>
             </tr>
             <tr>
-                <td>เลขที่ใบอนุญาต :</td>
+                <td style="font-size:20px">เลขที่ใบอนุญาต :</td>
                 <td></td>
             </tr>
         </table>
@@ -99,15 +100,15 @@ End Code
                     <button class="tablinks" onclick="openTab(event, 'PRODUCCER')">ผู้ผลิตต่างประเทศ</button>
                     <button class="tablinks" onclick="openTab(event, 'PRODUCCER_IN')">ผู้ผลิตในประเทศ</button>
                     <button class="tablinks" onclick="openTab(event, 'IOW')">สูตรสาร</button>
-                    <button class="tablinks" onclick="openTab(event, 'Tokyo')">การเก็บรักษา</button>
-                    <button class="tablinks" onclick="openTab(event, 'Tokyo')">กลุ่มตำรับ</button>
-                    <button class="tablinks" onclick="openTab(event, 'Tokyo')">ข้อบ่งใช่</button>
-                    <button class="tablinks" onclick="openTab(event, 'Tokyo')">ลักษณะและสีของยา</button>
-                    <button class="tablinks" onclick="openTab(event, 'Tokyo')">ข้อมูลยาสัตว์</button>
-                    <button class="tablinks" onclick="openTab(event, 'Tokyo')">เงื่อนไข</button>
+                    <button class="tablinks" onclick="openTab(event, 'DRUG_KEEP')">การเก็บรักษา</button>
+                    <button class="tablinks" onclick="openTab(event, 'ATC')">กลุ่มตำรับ</button>
+                    <button class="tablinks" onclick="openTab(event, 'INDICATION')">ข้อบ่งใช่</button>
+                    <button class="tablinks" onclick="openTab(event, 'COLOR')">ลักษณะและสีของยา</button>
+                    <button class="tablinks" onclick="openTab(event, 'ANIMAL')">ข้อมูลยาสัตว์</button>
+                    <button class="tablinks" onclick="openTab(event, 'CONDITION')">เงื่อนไข</button>
                     <button class="tablinks" onclick="openTab(event, 'Tokyo')">อ้างอิง</button>
                     <button class="tablinks" onclick="openTab(event, 'Tokyo')">ผู้แทนจำหน่าย</button>
-                    <button class="tablinks" onclick="openTab(event, 'Tokyo')">ชื่อยาส่งออก</button>
+                    <button class="tablinks" onclick="openTab(event, 'DRUG_EXPORT')">ชื่อยาส่งออก</button>
                     <button class="tablinks" onclick="openTab(event, 'Tokyo')">เอกสารกำกับยา</button>
                 </div>
             </div>
@@ -138,6 +139,15 @@ End Code
                 </div>
                 <div id="COLOR" class="tabcontent">
                     @Html.Partial("../DR/INPUT_GENERAL", Nothing)
+                </div>
+                <div id="ANIMAL" class="tabcontent">
+                    @Html.Partial("../DR/INPUT_DRUG_ANIMAL", Nothing)
+                </div>
+                <div id="CONDITION" class="tabcontent">
+                    @Html.Partial("../DR/INPUT_CONDITION", Nothing)
+                </div>
+                <div id="DRUG_EXPORT" class="tabcontent">
+                    @Html.Partial("../DR/INPUT_NAME_DRUG_EXPORT", Nothing)
                 </div>
             </div>
         </div>
