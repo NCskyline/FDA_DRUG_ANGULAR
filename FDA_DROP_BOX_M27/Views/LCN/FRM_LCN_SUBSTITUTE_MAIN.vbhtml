@@ -1,4 +1,6 @@
-﻿
+﻿@Code
+    Layout = ""
+End Code
 <div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP">
     <div class="content-part " style="width:100%;font-family:'Taviraj'">
         <div class="part part-2-3 ic" style="width:100%;">
@@ -20,7 +22,8 @@
                             <div class="card" style=" border-top: 10px solid #277210;">
                                 <table width="100%" style="font-family:'Taviraj'" class="table" id="myTable" datatable="ng">
                                     <thead style="font-weight:300;">
-                                        <tr><td>เลขรับที่</td>
+                                        <tr>
+                                            <td>เลขรับที่</td>
                                             <td>เลขที่ใบอนุญาต</td>
                                             <td>สถานะ</td>
                                             <td>เลขดำเนินการ</td>
@@ -56,5 +59,5 @@
 
             </div>
         </div>
-</div>
+    </div>
 </div>

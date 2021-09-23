@@ -1,7 +1,6 @@
-﻿@Code
-    ViewData("Title") = "INPUT_KORYOR16"
-End Code
-<div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" class="ic">
+﻿<script src="../Scripts_angular/CENTER_SV.js"></script>
+<script src="../Scripts_angular/LCN_CTRL.js"></script>
+<div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" class="ic" ng-init="pageload_subtitute()">
     <div class="content-part " style="width:100%;font-family:'Taviraj'">
         <div style="font-family:'Taviraj';font-size:20px;">
             <div>
@@ -52,14 +51,14 @@ End Code
                                     <tr>
                                         <td>
                                             <label>
-                                                <input type="radio" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" value="1" disabled />ใบแทนใบอนุญาต
+                                                <input type="radio" ng-model="LIST_LCN.REQUEST_TYPE" value="1" disabled />ใบแทนใบอนุญาต
                                             </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <label>
-                                                <input type="radio" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" value="2" disabled />ย้ายสถานที่
+                                                <input type="radio" ng-model="LIST_LCN.REQUEST_TYPE" value="2" disabled />ย้ายสถานที่
                                             </label>
                                         </td>
                                     </tr>
@@ -208,8 +207,8 @@ End Code
             <br />
             <table style="width:100%" border="1">
                 <tr>
-                    <td style="width:50%"><input type="radio" value="1" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอใบแทนใบอนุญาต</td>
-                    <td style="width:50%"><input type="radio" value="2" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอย้ายสถานที่</td>
+                    <td style="width:50%"><input type="radio" value="1" ng-model="LIST_LCN.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอใบแทนใบอนุญาต</td>
+                    <td style="width:50%"><input type="radio" value="2" ng-model="LIST_LCN.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอย้ายสถานที่</td>
                 </tr>
             </table>
             <table style="width:100%" border="1">
