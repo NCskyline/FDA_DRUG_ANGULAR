@@ -1,6 +1,6 @@
 ﻿<script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
-<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_subtitute()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:20px;" class="ic">
         <br />
 
@@ -42,14 +42,14 @@
                             <tr>
                                 <td>
                                     <label>
-                                        <input type="radio" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" value="1" disabled />ใบแทนใบอนุญาต
+                                        <input type="radio" ng-model="LIST_LCN.REQUEST_TYPE" value="1" disabled />ใบแทนใบอนุญาต
                                     </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label>
-                                        <input type="radio" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" value="2" disabled />ย้ายสถานที่
+                                        <input type="radio" ng-model="LIST_LCN.REQUEST_TYPE" value="2" disabled />ย้ายสถานที่
                                     </label>
                                 </td>
                             </tr>
@@ -179,13 +179,13 @@
             <tr>
                 <td>ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ</td>
             <tr>
-                <td>&nbsp;&nbsp;<input type="radio" value="1" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอใบแทนใบอนุญาต</td>
+                <td>&nbsp;&nbsp;<input type="radio" value="1" ng-model="LIST_LCN.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอใบแทนใบอนุญาต</td>
             <tr>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp; (๑) รูปถ่ายของผู้ดำเนินกิจการ ขนาด ๓ x ๔ เซนติเมตร จำนวน ๒ รูป</td>
             <tr>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp; (๒) ใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร ถ้ามี</td>
             <tr>
-                <td>&nbsp;&nbsp;<input type="radio" value="1" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอย้ายสถานที่</td>
+                <td>&nbsp;&nbsp;<input type="radio" value="1" ng-model="LIST_LCN.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอย้ายสถานที่</td>
             <tr>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp; (๑) ใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรหรือใบแทน</td>
             <tr>

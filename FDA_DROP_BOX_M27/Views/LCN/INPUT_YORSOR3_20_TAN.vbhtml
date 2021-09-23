@@ -3,7 +3,7 @@
 End Code
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
-<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_subtitute()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:24px;">
         <div>
             <p style="text-align: left;">แบบ ย.ส. 20</p>
