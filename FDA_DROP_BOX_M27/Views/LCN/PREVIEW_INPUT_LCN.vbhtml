@@ -5,7 +5,7 @@ End Code
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak=">
-    @*----------ขย1---------*@
+   @*----------ขย1---------*@
     <div ng-show="LIST_LCN.PROCESS == '101'">
         <div style="font-family:'Taviraj';font-size:24px;width:100%">
             <h1 style="text-align:right;font-size:24px;">
@@ -75,7 +75,7 @@ End Code
                         เขียนที่
                     </td>
                     <td style="width:40%">
-                        @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'Taviraj';" type="text" />*@
+      
                         {{LIST_LCN.dalcn.WRITE_AT}}
                     </td>
                 </tr>
@@ -85,10 +85,6 @@ End Code
                     </td>
                     <td>
 
-                        @*<md-datepicker ng-model="LIST_LCN.dalcn.WRITE_DATE" md-placeholder="Enter date"
-                                           input-aria-describedby="datepicker-description"
-                                           input-aria-labelledby="datepicker-header ">
-                            </md-datepicker>*@
                         {{LIST_LCN.dalcn.WRITE_DATE}}
                     </td>
                 </tr>
