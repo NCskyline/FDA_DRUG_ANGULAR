@@ -21,7 +21,8 @@
     <OptionInfer>On</OptionInfer>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -432,16 +433,15 @@
     <Content Include="Views\LCN\INPUT_MODIFY_NORDOJ_3_4.vbhtml" />
     <Content Include="Views\LCN\FRM_LCN_SELECT.vbhtml" />
     <Content Include="Views\LCN\FRM_LCN_EDIT_REQUEST.vbhtml" />
-    <Content Include="Views\DR\FEM_REGISTRATION_MAIN.vbhtml" />
-    <Content Include="Views\DR\FRM_DL_CONFIRM.vbhtml" />
     <Content Include="Views\DR\FRM_MAIN_PAGE_PRODUCT.vbhtml" />
-    <Content Include="Views\DR\FRM_REGISTRATION_OTHER_DETAIL.vbhtml" />
     <Content Include="Views\DR\FRM_SEARCH_LCN.vbhtml" />
     <Content Include="Views\DR\TABEAN_YA_MAIN.vbhtml" />
     <Content Include="Views\LCN\INPUT_PDF_YOR_SOR_3_1.vbhtml" />
     <Content Include="Views\DR\FRM_RQT_REGIST_INFORMATION.vbhtml" />
     <Content Include="Views\LCN\FRM_LCN_SUBSTITUTE_MAIN.vbhtml" />
     <Content Include="Views\AUTHEN\AUTHEN_DR.vbhtml" />
+    <Content Include="Views\DL\FRM_DL_CONFIRM.vbhtml" />
+    <Content Include="Views\DL\FRM_REGISTRATION_OTHER_DETAIL.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>

@@ -42,8 +42,8 @@ End Code
 <h2>FRM_REGISTRATION_OTHER_DETAIL</h2>
 
 <div>
-    <div class="ic">
-        <div class="tab">
+    <div style="font-family:'Taviraj';width:100%">
+        <div class="tab in">
             <button class="tablinks" onclick="openTab(event, 'GENERAL')" id="defaultOpen">1.ข้อมูลทั่วไป</button>
             <button class="tablinks" onclick="openTab(event, 'CONTAIN')">2.ขนาดบรรจุ</button>
             <button class="tablinks" onclick="openTab(event, 'IOW')">3.สูตรสาร</button>
@@ -55,33 +55,39 @@ End Code
             <button class="tablinks" onclick="openTab(event, 'COLOR')">8.สีของยา</button>
         </div>
         <div id="GENERAL" class="tabcontent">
-            @Html.Partial("../DR/INPUT_GENERAL", Nothing)
+            @Html.Partial("../DL/INPUT_REGIST_DETAIL", Nothing)
         </div>
         <div id="CONTAIN" class="tabcontent">
-            @Html.Partial("../DR/INPUT_PACKAGE_DETAIL2", Nothing)
+            <div class="in">
+                @Html.Partial("../DL/INPUT_PACKAGE_DETAIL", Nothing)
+            </div>
+            <div class="in">
+                @Html.Partial("../DL/INPUT_PACKAGE_DETAIL2", Nothing)
+            </div> 
         </div>
         <div id="IOW" class="tabcontent">
-            @Html.Partial("../DR/INPUT_CHEM", Nothing)
+            @Html.Partial("../DL/INPUT_CHEM", Nothing)
         </div>
         <div id="PRODUCCER" class="tabcontent">
-            @Html.Partial("../DR/INPUT_PRODUCCER", Nothing)
+            @Html.Partial("../DL/INPUT_PRODUCCER", Nothing)
         </div>
         <div id="PRODUCCER_IN" class="tabcontent">
-            @Html.Partial("../DR/INPUT_PRODUCCER_IN", Nothing)
+            @Html.Partial("../DL/INPUT_PRODUCCER_IN", Nothing)
         </div>
         <div id="DRUGKEEP" class="tabcontent">
-            @Html.Partial("../DR/INPUT_DRUG_KEEP", Nothing)
+            @Html.Partial("../DL/INPUT_KEEP", Nothing)
         </div>
         <div id="ATC" class="tabcontent">
-            @Html.Partial("../DR/INPUT_ATC", Nothing)
+            @Html.Partial("../DL/INPUT_ATC", Nothing)
         </div>
         <div id="INDICATION" class="tabcontent">
-            @Html.Partial("../DR/INPUT_DETAIL_USE", Nothing)
+            @Html.Partial("../DL/INPUT_DRUG_USE", Nothing)
         </div>
         <div id="COLOR" class="tabcontent">
-            @Html.Partial("../DR/INPUT_GENERAL", Nothing)
+            
         </div>
     </div>
+
 </div>
 
 <script>
