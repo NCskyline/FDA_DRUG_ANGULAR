@@ -534,6 +534,51 @@
 
     }
 
+    $scope.BTN_INPUT_STT = function () {
+        if (process == '100701') {
+            $scope.lcnnoType = 'ใบแทน สถานที่ขายยาแผนปัจจุบัน';
+            REDIRECT('/LCN/INPUT_KORYOR16');
+        } else if (process == '100702') {
+            $scope.lcnnoType = 'ใบแทน สถานที่นำเข้ายาแผนปัจจุบัน';
+            REDIRECT('/LCN/INPUT_NORYOR10');
+        } else if (process == '100703') {
+            $scope.lcnnoType = 'ใบแทน สถานที่ผลิตยาแผนปัจจุบัน';
+            REDIRECT('/LCN/INPUT_PORYOR10');
+        } else if (process == '100704') {
+            $scope.lcnnoType = 'ใบแทน ใบอนุญาตยาแผนโบราณ';
+            REDIRECT('/LCN/INPUT_YORBOR_14');
+        } else if (process == '100705') {
+            $scope.lcnnoType = 'ใบแทน ยาเสพติดให้โทษประเภทที่ 3';
+            REDIRECT('/LCN/INPUT_KORYOR17');
+        } else if (process == '100766') {
+            $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 3';
+            REDIRECT('/LCN/INPUT_BOJOD_3_4_1_Tan');
+        } else if (process == '100767') {
+            $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 4';
+            REDIRECT('/LCN/INPUT_BOJOD_3_4_1_Tan');
+        } else if (process == '100768') {
+            $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 3';
+            REDIRECT('/LCN/INPUT_PORDOJ_3_4_1_Tan');
+        } else if (process == '100769') {
+            $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 4';
+            REDIRECT('/LCN/INPUT_PORDOJ_3_4_1_Tan');
+        } else if (process == '100770') {
+            $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 3';
+            REDIRECT('/LCN/INPUT_NORDOJ_3_4_1_Tan');
+        } else if (process == '100771') {
+            $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 4';
+            REDIRECT('/LCN/INPUT_NORDOJ_3_4_1_Tan');
+        } else if (process == '100772') {
+            $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 3';
+            REDIRECT('/LCN/INPUT_SORDOJ_3_4_1_Tan');
+        } else if (process == '100773') {
+            $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 4';
+            REDIRECT('/LCN/INPUT_SORDOJ_3_4_1_Tan');
+        }
+
+    }
+
+
 
     $scope.YORBOR = function () {
         if ($scope.PROCESS == '107') {
@@ -876,6 +921,22 @@
     $scope.BTN_SAVE_EDIT = function () {
 
         var Getdata = CENTER_SV.INSERT_LCN_EDIT_RQT($scope.LIST_LCN,PROCESS);
+        Getdata.then(function (datas) {
+            Swal.fire({
+                title: 'SUCCESS',
+                text: 'บันทึกข้อมูลเรียบร้อย',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+        });
+    };
+
+    
+    $scope.BTN_SAVE_STT = function () {
+
+        var Getdata = CENTER_SV.INSERT_LCN_SUBTITUTE($scope.LIST_LCN , sessionStorage.LCN_IDA, PROCESS);
         Getdata.then(function (datas) {
             Swal.fire({
                 title: 'SUCCESS',

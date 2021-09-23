@@ -826,16 +826,21 @@ Namespace Controllers
             Try
                 If dao.fields.lcntpcd.Contains("ขย1") Or dao.fields.lcntpcd.Contains("ผยบ") Then
                     model.CHK_TYPE = "1"
+                    model.LCN_TYPE = "1"
                 ElseIf dao.fields.lcntpcd.Contains("ขย2") Or dao.fields.lcntpcd.Contains("ขยบ") Then
                     model.CHK_TYPE = "2"
+                    model.LCN_TYPE = "2"
                 ElseIf dao.fields.lcntpcd.Contains("ขย3") Or dao.fields.lcntpcd.Contains("นยบ") Then
                     model.CHK_TYPE = "3"
+                    model.LCN_TYPE = "3"
                 ElseIf dao.fields.lcntpcd.Contains("ขย4") Then
                     model.CHK_TYPE = "4"
+                    model.LCN_TYPE = "4"
                 End If
             Catch ex As Exception
 
             End Try
+
             model.IDENTIFY = IDENTIFY
             Dim lcnno_auto As String = ""
             Dim lcnno_format As String = ""
@@ -3817,7 +3822,7 @@ Namespace Controllers
 
 
 
-        Function INSERT_LCN_SUBTITUTE(ByVal XML_SUB As String, ByVal _ProcessID As String) As JsonResult
+        Function INSERT_LCN_SUBTITUTE(ByVal XML_SUB As String, ByVal FK_IDA As String, ByVal _ProcessID As String) As JsonResult
 
             Dim Result As String = ""
             Dim jss As New JavaScriptSerializer
@@ -3832,6 +3837,7 @@ Namespace Controllers
             dao.fields.TR_ID = tr_id
             dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
             dao.fields.PROCESS_ID = _ProcessID
+            dao.fields.FK_IDA = FK_IDA
 
             dao.insert()
 

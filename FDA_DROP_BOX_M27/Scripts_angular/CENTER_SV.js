@@ -305,13 +305,14 @@
     };
 
     
-    this.INSERT_LCN_SUBTITUTE = function (aa, ProcessID) {
+    this.INSERT_LCN_SUBTITUTE = function (aa,LCN_IDA, ProcessID) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/INSERT_LCN_SUBTITUTE"),
             dataType: "json",
             data: {
                 XML_SUB: JSON.stringify(aa),
+                FK_IDA: LCN_IDA,
                 _ProcessID: ProcessID
 
             }
