@@ -23,7 +23,7 @@ End Code
 
                         <td>สูตรที่</td>
                         <td>
-                            <select ID="ddl_each_no">
+                            <select ID="ddl_each_no" class="form-control">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -42,10 +42,10 @@ End Code
                         </td>
                         <td>
 
-                            <input type="text" ID="txt_each" />
+                            <input type="text" class="form-control" ID="txt_each" />
                         </td>
                         <td>
-                            <select class="dropdown" id="ddl_unit">
+                            <select class="form-control" id="ddl_unit">
                                 <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                             </select>
                         </td>
@@ -56,7 +56,7 @@ End Code
                             &nbsp;
                         </td>
                         <td>
-                            <input type="text" ID="txt_each_txt" />
+                            <input type="text" class="form-control" ID="txt_each_txt" />
                         </td>
                         <td>
                             (หมายเหตุประกอบสูตร)
@@ -93,7 +93,7 @@ End Code
 
         <tr>
             <td>
-                <input type="text" ID="txt_search" />&nbsp;&nbsp;&nbsp;<input type="button" ID="btn_search" value="ค้นหาสาร" /> &nbsp;
+                <input type="text" class="form-control" ID="txt_search" />&nbsp;&nbsp;&nbsp;<input type="button" ID="btn_search" value="ค้นหาสาร" /> &nbsp;
                 <input type="button" ID="btn_rqt" value="การขอเพิ่มสาร" onclick="alert('ส่งเมลไปที่ drug-smarthelp@fda.moph.go.th หรือ แนบ cpp');" />
             </td>
         </tr>
@@ -103,7 +103,7 @@ End Code
         </tr>
         <tr>
             //ตารางสาร
-            </td>
+            
         </tr>
 
         <tr>
@@ -118,7 +118,7 @@ End Code
                     <tr>
                         <td>ปริมาณยา/ปริมาณชีววัตถุ</td>
                         <td>
-                            <select ID="ddl_CAS_TYPE">
+                            <select ID="ddl_CAS_TYPE" class="form-control">
                                 <option value="1">ปริมาณยา</option>
                                 <option value="2">ปริมาณชีววัตถุ</option>
                             </select>
@@ -134,7 +134,7 @@ End Code
                         <td>เงื่อนไข</td>
                         <td colspan="3" align="left">
 
-                            <select ID="ddl_remark1">
+                            <select ID="ddl_remark1" class="form-control">
                                 <option>กรุณาเเลือก</option>
                                 <option value="1">&lt;=</option>
                                 <option value="2">&lt;</option>
@@ -147,13 +147,13 @@ End Code
                     <tr>
                         <td>ปริมาณสาร (ตั้งต้น) : </td>
                         <td>
-                            <input type="text" ID="txt_QTY" style="width:100px;" />
+                            <input type="text" class="form-control" ID="txt_QTY" style="width:100px;" />
                         </td>
                         <td>หน่วย :</td>
                         <td>
                             @*<telerik:RadComboBox ID="rcb_unit" Runat="server" Filter="Contains">
         </telerik:RadComboBox>*@
-                            <select class="dropdown" id="rcb_unit2">
+                            <select class="form-control" id="rcb_unit2">
                                 <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                             </select>
                         </td>
@@ -163,11 +163,11 @@ End Code
                     <tr>
                         <td>ปริมาณสาร (สุดท้าย) : </td>
                         <td>
-                            <input type="text" ID="txt_QTY2" style="width:100px;" />
+                            <input type="text" class="form-control" ID="txt_QTY2" style="width:100px;" />
                         </td>
                         <td>หน่วย :</td>
                         <td>
-                            <select class="dropdown" id="rcb_unit2">
+                            <select class="form-control" id="rcb_unit2">
                                 <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                             </select>
                             @*<telerik:RadComboBox ID="rcb_unit2" Runat="server" Filter="Contains">
@@ -199,13 +199,13 @@ End Code
                     <tr>
                         <td>ปริมาณตั้งต้น</td>
                         <td>
-                            <input type="text" ID="txt_sbioqty" />
+                            <input type="text" class="form-control" ID="txt_sbioqty" />
                         </td>
                         <td>
                             หน่วยตั้งต้น :
                         </td>
                         <td>
-                            <select class="dropdown" id="ddl_unit2">
+                            <select class="form-control" id="ddl_unit2">
                                 <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                             </select>
                         </td>
@@ -213,7 +213,7 @@ End Code
                     <tr>
                         <td>เลขยกกำลัง(ตั้งต้น)</td>
                         <td>
-                            <input type="text" ID="txt_sbiosqno" style="width:100px;" />
+                            <input type="text" class="form-control" ID="txt_sbiosqno" style="width:100px;" />
                         </td>
                         <td>
                             &nbsp;
@@ -223,13 +223,13 @@ End Code
                     <tr>
                         <td>ปริมาณสุดท้าย</td>
                         <td>
-                            <input type="text" ID="txt_ebioqty" style="width:100px;" />
+                            <input type="text" class="form-control" ID="txt_ebioqty" style="width:100px;" />
                         </td>
                         <td>
                             หน่วยสุดท้าย :
                         </td>
                         <td>
-                            <select class="dropdown" id="ddl_unit3">
+                            <select class="form-control" id="ddl_unit3">
                                 <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                             </select>
                         </td>
@@ -237,7 +237,7 @@ End Code
                     <tr>
                         <td>เลขยกกำลัง(สุดท้าย)</td>
                         <td>
-                            <input type="text" ID="txt_ebiosqno" style="width:100px" />
+                            <input type="text" class="form-control" ID="txt_ebiosqno" style="width:100px" />
                         </td>
                         <td>
                             &nbsp;
@@ -257,19 +257,19 @@ End Code
                     <tr>
                         <td>เอกสารอ้างอิง</td>
                         <td align="left" colspan="3">
-                            <input type="text" ID="txt_ref" style="width:100%" />
+                            <input type="text" class="form-control" ID="txt_ref" style="width:100%" />
                         </td>
                     </tr>
                     <tr>
                         <td>หมายเหตุ</td>
                         <td align="left" colspan="3">
-                            <input type="text" ID="txt_remark" style="width:100%" />
+                            <input type="text" class="form-control" ID="txt_remark" style="width:100%" />
                         </td>
                     </tr>
                     <tr>
                         <td>สูตรที่</td>
                         <td>
-                            <select ID="ddl_set" style="width:90px;">
+                            <select ID="ddl_set" style="width:90px;" class="form-control">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -306,7 +306,7 @@ End Code
                         </td>
                         <td>
 
-                            <select ID="ddl_aori">
+                            <select ID="ddl_aori" class="form-control">
                                 <option>A</option>
                                 <option>I</option>
                             </select>
@@ -316,7 +316,7 @@ End Code
                     <tr>
                         <td>ลำดับสาร</td>
                         <td>
-                            <input type="number" ID="txt_ROWS" />
+                            <input type="number" class="form-control" ID="txt_ROWS" />
                         </td>
                         <td>
 

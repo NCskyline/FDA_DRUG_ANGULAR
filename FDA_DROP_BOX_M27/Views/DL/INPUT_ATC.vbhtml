@@ -17,7 +17,7 @@ End Code
                         ชื่อกลุ่มตำรับ
                     </td>
                     <td>
-                        <input type="text" id="txt_atc_name" />
+                        <input type="text" class="form-control" id="txt_atc_name" />
                     </td>
                     <td>
                         <input type="button" id="btn_search" value="ค้นหากลุ่มตำรับ" />

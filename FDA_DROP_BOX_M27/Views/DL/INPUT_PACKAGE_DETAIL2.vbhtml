@@ -19,7 +19,7 @@ End Code
                                     ชื่อขนาดบรรจุ
                                 </td>
                                 <td>
-                                    <input type="text" id="txt_packagename" />
+                                    <input type="text" class="form-control" id="txt_packagename" />
                                 </td>
                                 <td></td>
                                 <td style="color:red">ตัวอย่าง 10 เม็ด x 4 แผง x กล่อง</td>
@@ -27,7 +27,7 @@ End Code
                             <tr>
                                 <td>Primary package จำนวน</td>
                                 <td>
-                                    <input type="text" id="txt_sunit" style="height:22px;" />
+                                    <input type="text" class="form-control" id="txt_sunit" style="height:22px;" />
                                 </td>
                                 <td>
                                     <label ID="lbl_sunit"></label>
@@ -45,7 +45,7 @@ End Code
                                                         กรุณาเลือก
                                                     </option>
                                                 </select>*@
-                                                <select class="dropdown" id="ddl_munit">
+                                                <select class="form-control" id="ddl_munit">
                                                     <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                                                 </select>
                                             </td>
@@ -58,7 +58,7 @@ End Code
                             <tr>
                                 <td>Secondary package จำนวน</td>
                                 <td>
-                                    <input type="text" id="txt_mamount" />
+                                    <input type="text" class="form-control" id="txt_mamount" />
                                 </td>
                                 <td>
                                     <label ID="lbl_munit"></label>
@@ -71,7 +71,7 @@ End Code
                                         </option>
                                     </select>*@
 
-                                    <select class="dropdown" id="ddl_bunit">
+                                    <select class="form-control" id="ddl_bunit">
                                         <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                                     </select>
                                 </td>
@@ -79,7 +79,7 @@ End Code
                             <tr>
                                 <td>GTIN (กรณีไม่มีให้ใส่0)</td>
                                 <td>
-                                    <input type="text" id="txt_barcode" />
+                                    <input type="text" class="form-control" id="txt_barcode" />
                                 </td>
                                 <td>
                                     &nbsp;
