@@ -54,7 +54,7 @@
         </div>
 
         <div class="title2">
-            <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px" >
+            <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px">
                 <tr>
                     <td style="text-align:left;width:20%">
                         เลขรับที่
@@ -98,7 +98,7 @@
             <strong>ใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
         </h2>
         @*process =123,124 *@
-        <table style="width:70%; font-size:20px;margin:auto;text-align:center" >
+        <table style="width:70%; font-size:20px;margin:auto;text-align:center">
             <tr>
                 <td>
                     <strong>สำหรับขาย</strong>
@@ -141,11 +141,11 @@
                     เนื่องจากใบอนุญาต
                 </td>
                 <td colspan="2">
-                  
+
                     <form name="frm_lost_type">
 
 
-                        <label><input type="radio" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE_ID" id="rdl_lost_type" value="1"> สูญหาย</label> 
+                        <label><input type="radio" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE_ID" id="rdl_lost_type" value="1"> สูญหาย</label>
                         <label><input type="radio" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE_ID" id="rdl_lost_type" value="2"> ถูกทำลายหรือลบเลือนในสาระสำคัญ</label><br />
 
                     </form>
@@ -153,7 +153,7 @@
 
 
                 </td>
-         
+
             </tr>
         </table>
         <br />
@@ -184,12 +184,12 @@
         <h2 style="font-size:24px;">
             <strong>๑. ข้อมูลผู้ขอรับใบอนุญาต</strong>
         </h2>
-        <table style="width:90%" >
+        <table style="width:90%">
             <tr>
                 <td style="font-size:20px" width="40%">
                     ข้าพเจ้า (ชื่อบุคคล/นิติบุคคล)
                 </td>
-                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="6" >
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="6">
                     <label>{{LIST_LCN.thanm}}</label>
                 </td>
             </tr>
@@ -260,7 +260,7 @@
         <h2 style="font-size:24px;">
             <strong>๒. ข้อมูลผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต</strong>
         </h2>
-        <table style="width:90%" >
+        <table style="width:90%">
             <tr>
                 <td style="font-size:20px" width="40%">
                     ข้าพเจ้า
@@ -301,9 +301,7 @@
                 <td style="font-size:20px;width:5%">
                     เลขที่
                 </td>
-                <td style="font-size:20px ;width:15%;text-align:center">
-                
-                </td>
+                <td style="font-size:20px ;width:15%;text-align:center"></td>
                 <td style="font-size:20px">
                     (กรณีไม่ใช่ผู้มีสัญชาติไทย)
                 </td>
@@ -344,7 +342,7 @@
 
         <div style="font-size:20px"><strong>๓. ข้อมูลการขออนุญาต</strong></div>
         <div style="font-size:20px;margin-left:5%">(๓.๑) <strong><u>กรณีขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔</u></strong></div>
-        <table style="width:100%;font-size:20px" >
+        <table style="width:100%;font-size:20px">
             <tr>
                 <td>
                     ณ สถานที่ชื่อ
@@ -375,7 +373,7 @@
                     <label>{{LIST_LCN.tel}}</label>
                 </td>
             </tr>
-           
+
         </table>
         <table style="width:100%;font-size:20px" ng-init="getdetails_phr()">
             <tr>
@@ -397,12 +395,12 @@
         <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
         <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
         <br />
-        <table style="width:100%;font-size:20px" >
+        <table style="width:100%;font-size:20px">
             <tr>
                 <td>
                     เป็นผู้รับอนุญาตขายยาแผนใบอนุญาตเลขที่
                 </td>
-                <td style="width:50%; border-bottom:dotted;border-bottom-width:thin;"">
+                <td style="width:50%; border-bottom:dotted;border-bottom-width:thin;" ">
                     <label>{{LIST_LCN.HEAD_LCNNO_NCT}}</label>
                 </td>
                 <td>
@@ -413,7 +411,7 @@
         <div style="font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
 
         <div style="font-size:20px;margin-left:5%"><strong>(๓.๒) <u>กรณีขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ โดยการขายส่งตรง</u></strong></div>
-        <table style="width:100%;font-size:20px" >
+        <table style="width:100%;font-size:20px">
             <tr>
                 <td colspan="2">
                     ผู้ขอรับใบอนุญาตได้รับอนุญาตให้ผลิต/ขาย/หรือนำเข้าซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาต
@@ -435,7 +433,7 @@
         </table>
         <div style="font-size:20px;margin-left:5%"><strong>(๓.๓) <u> กรณีขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ ในบริเวณสถานที่ที่มีการประชุม</u></strong></div>
 
-        <table style="width:100%;font-size:20px" >
+        <table style="width:100%;font-size:20px">
             <tr>
                 <td colspan="4">
                     ผู้ขอรับใบอนุญาตได้รับอนุญาตให้ผลิต/ขาย/หรือนำเข้าซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาต
@@ -548,7 +546,7 @@
         <div style=";font-size:20px"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
         <div style="margin-left:5%;font-size:20px"><strong>๕.๑ <u>กรณีขอรับใบอนุญาต (กรณีรายใหม่)</u></strong></div>
         <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๑ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" >
+        <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
                     (๑) สำเนาใบอนุญาตขายยาแผนปัจจุบันตามกฎหมายว่าด้วยยา
@@ -581,7 +579,7 @@
             </tr>
         </table>
         <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๒ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ โดยการขายส่งตรง</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" >
+        <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
                     (๑) สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี
@@ -599,7 +597,7 @@
             </tr>
         </table>
         <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๓ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ ในบริเวณสถานที่ที่มีการประชุม</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" >
+        <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
                     (๑) สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี
@@ -608,7 +606,7 @@
         </table>
 
         <div style="margin-left:5%;font-size:20px"><strong>๕.๒ กรณีขอต่ออายุใบอนุญาต</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" >
+        <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
                     (๑) ใบอนุญาตฉบับเดิม
@@ -623,7 +621,7 @@
 
         </table>
         <div style="margin-left:5%;font-size:20px"><strong>๕.๓ กรณีขอรับใบแทนใบอนุญาต</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%" >
+        <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
                     (๑) ใบแจ้งความ กรณีใบอนุญาตสูญหาย
@@ -646,7 +644,7 @@
         <br />
         <br />
 
-        <table style="width:85%;font-size:20px ;margin-left:12.5%" >
+        <table style="width:85%;font-size:20px ;margin-left:12.5%">
             <tr>
                 <td style="text-align:right">
                     (ลายมือชื่อ)
@@ -673,7 +671,7 @@
         <br />
 
         <div style="margin-left:5%;font-size:20px"> หมายเหตุ : (๑) ให้ขีดเลือกข้อความในช่อง ☐/〇 ให้ตรงตามที่ประสงค์จะดำเนินการ</div>
-        <table style="width:90%;font-size:20px ;margin-left:12.5%" >
+        <table style="width:90%;font-size:20px ;margin-left:12.5%">
             <tr>
                 <td>
                     (๒) รับรองสำเนาถูกต้องในเอกสารที่เป็นสำเนาทุกฉบับ
@@ -686,6 +684,10 @@
             </tr>
 
         </table>
+        <div style="text-align:center">
+            <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+            <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_STT()" value="บันทึก" />
+        </div>
     </div>
 </div>
 

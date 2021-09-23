@@ -3822,7 +3822,7 @@ Namespace Controllers
 
 
 
-        Function INSERT_LCN_SUBTITUTE(ByVal XML_SUB As String, ByVal _ProcessID As String) As JsonResult
+        Function INSERT_LCN_SUBTITUTE(ByVal XML_SUB As String, ByVal FK_IDA As String, ByVal _ProcessID As String) As JsonResult
 
             Dim Result As String = ""
             Dim jss As New JavaScriptSerializer
@@ -3837,6 +3837,7 @@ Namespace Controllers
             dao.fields.TR_ID = tr_id
             dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
             dao.fields.PROCESS_ID = _ProcessID
+            dao.fields.FK_IDA = FK_IDA
 
             dao.insert()
 

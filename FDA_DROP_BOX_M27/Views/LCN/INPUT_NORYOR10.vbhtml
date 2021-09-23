@@ -1,6 +1,6 @@
 ﻿<script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
-<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()" ng-cloak="">
+<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:20px;" class="ic">
         <br />
 
@@ -32,7 +32,7 @@
                 <td style="width:10%">ผู้รับคำขอ</td>
             </tr>
         </table>
-        <div> <h3 style="text-align:center">คำขอแก้ไขเปลี่ยนแปลงรายการในใบอนุญาตขายยาแผนปัจจุบัน</h3></div>
+        <div> <h3 style="text-align:center">คำขอแก้ไขเปลี่ยนแปลงรายการในใบอนุญาตนำหรือสั่งยาแผนปัจจุบัน</h3></div>
         <div>
             <table width="100%">
                 <tr>
@@ -207,7 +207,7 @@
         <div>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(๒) ในกรณีที่ใบอนุญาตถูกทำลายในสาระสำคัญ ให้นบใบอนุญาตนั้น มาด้วย</div>
         <div>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(๓) ใส่เครื่องหมาย &#10004 ในช่อง[  ] หน้าข้อความที่ต้องการ</div>
         <div style="text-align:center">
-            <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+            <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_STT()" value="ย้อนกลับ" />
             <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_EDIT()" value="บันทึก" />
         </div>
     </div>

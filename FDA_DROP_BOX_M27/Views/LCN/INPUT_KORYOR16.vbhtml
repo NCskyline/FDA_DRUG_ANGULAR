@@ -5,7 +5,7 @@ End Code
     <div class="content-part " style="width:100%;font-family:'Taviraj'">
         <div style="font-family:'Taviraj';font-size:20px;">
             <div>
-       
+
                 <h1>
                     <center>
                         แบบ ข.ย.๑๖
@@ -255,6 +255,11 @@ End Code
             </table>
             <hr />
             <div>หมายเหตุ : &nbsp;(๑) ใส่เครื่องหมาย &#10004; ในช่อง [  ] หน้าข้อความที่ต้องการ</div>
+        </div>
+        <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
+            <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_STT()" value="บันทึก" />
+
+            <input type="button" class="btn btn-lg " ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
         </div>
     </div>
 </div>
