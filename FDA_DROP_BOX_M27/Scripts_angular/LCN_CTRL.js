@@ -534,7 +534,7 @@
 
     }
 
-    $scope.BTN_EDIT_INPUT = function () {
+    $scope.BTN_INPUT_STT = function () {
         if (process == '100701') {
             $scope.lcnnoType = 'ใบแทน สถานที่ขายยาแผนปัจจุบัน';
             REDIRECT('/LCN/INPUT_KORYOR16');
@@ -552,28 +552,28 @@
             REDIRECT('/LCN/INPUT_KORYOR17');
         } else if (process == '100766') {
             $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 3';
-            REDIRECT('/LCN/INPUT_KORYOR17');
+            REDIRECT('/LCN/INPUT_BOJOD_3_4_1_Tan');
         } else if (process == '100767') {
             $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตขายวัตถุออกฤทธิ์ ฯ ประเภท 4';
-            REDIRECT('/LCN/INPUT_KORYOR17');
+            REDIRECT('/LCN/INPUT_BOJOD_3_4_1_Tan');
         } else if (process == '100768') {
             $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 3';
-            REDIRECT('/LCN/INPUT_KORYOR17');
+            REDIRECT('/LCN/INPUT_PORDOJ_3_4_1_Tan');
         } else if (process == '100769') {
             $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตผลิตวัตถุออกฤทธิ์ ฯ ประเภท 4';
-            REDIRECT('/LCN/INPUT_KORYOR17');
+            REDIRECT('/LCN/INPUT_PORDOJ_3_4_1_Tan');
         } else if (process == '100770') {
             $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 3';
-            REDIRECT('/LCN/INPUT_KORYOR17');
+            REDIRECT('/LCN/INPUT_NORDOJ_3_4_1_Tan');
         } else if (process == '100771') {
             $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตนำเข้าวัตถุออกฤทธิ์ ฯ ประเภท 4';
-            REDIRECT('/LCN/INPUT_KORYOR17');
+            REDIRECT('/LCN/INPUT_NORDOJ_3_4_1_Tan');
         } else if (process == '100772') {
             $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 3';
-            REDIRECT('/LCN/INPUT_KORYOR17');
+            REDIRECT('/LCN/INPUT_SORDOJ_3_4_1_Tan');
         } else if (process == '100773') {
             $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตส่งออกวัตถุออกฤทธิ์ ฯ ประเภท 4';
-            REDIRECT('/LCN/INPUT_KORYOR17');
+            REDIRECT('/LCN/INPUT_SORDOJ_3_4_1_Tan');
         }
 
     }
