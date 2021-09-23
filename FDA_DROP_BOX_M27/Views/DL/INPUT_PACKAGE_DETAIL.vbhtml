@@ -6,9 +6,7 @@ End Code
 <table width="100%">
     <tr>
         <td>
-<textarea id="txt_package" style="width:100%;height:100px;">
-</textarea>
-
+            <textarea id="txt_package" class="form-control" style="width:100%;height:100px;"></textarea>
         </td>
     </tr>
 </table>

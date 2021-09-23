@@ -9,7 +9,7 @@ End Code
             <td></td>
             <td>เลขใบอนุญาต</td>
             <td>
-                <input type="text" id="txt_NUM" />
+                <input type="text" class="form-control" id="txt_NUM" />
             </td>
             <td style="width:25%;color:red">
                 ตัวอย่าง กท 1/2563 และสามารถตรวจสอบเลขที่ใบอนุญาตจากหน้าเว็บ อย. ได้เลย (สำหรับ ผย8 ,ยบ8 และสำหรับทะเบียน 1A ,2A ,1B ,2B ,1D ,2D ,L และ M )

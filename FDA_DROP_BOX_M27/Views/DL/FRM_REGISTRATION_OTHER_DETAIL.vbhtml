@@ -34,7 +34,7 @@ End Code
         .tabcontent {
             display: none;
             padding: 6px 12px;
-            border: 1px solid #ccc;
+            
             border-top: none;
         }
     </style>
@@ -43,49 +43,54 @@ End Code
 
 <div>
     <div style="font-family:'Taviraj';width:100%">
-        <div class="tab in">
-            <button class="tablinks" onclick="openTab(event, 'GENERAL')" id="defaultOpen">1.ข้อมูลทั่วไป</button>
-            <button class="tablinks" onclick="openTab(event, 'CONTAIN')">2.ขนาดบรรจุ</button>
-            <button class="tablinks" onclick="openTab(event, 'IOW')">3.สูตรสาร</button>
-            <button class="tablinks" onclick="openTab(event, 'PRODUCCER')">4.1 ผู้ผลิตต่างประเทศ</button>
-            <button class="tablinks" onclick="openTab(event, 'PRODUCCER_IN')">4.2 ผู้ผลิตในประเทศ</button>
-            <button class="tablinks" onclick="openTab(event, 'DRUGKEEP')">5.การเก็บรักษา</button>
-            <button class="tablinks" onclick="openTab(event, 'ATC')">6.กลุ่มตำรับ</button>
-            <button class="tablinks" onclick="openTab(event, 'INDICATION')">7.ข้อบ่งใช้</button>
-            <button class="tablinks" onclick="openTab(event, 'COLOR')">8.สีของยา</button>
-        </div>
-        <div id="GENERAL" class="tabcontent">
-            @Html.Partial("../DL/INPUT_REGIST_DETAIL", Nothing)
-        </div>
-        <div id="CONTAIN" class="tabcontent">
-            <div class="in">
-                @Html.Partial("../DL/INPUT_PACKAGE_DETAIL", Nothing)
+        <div class="in">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'GENERAL')" id="defaultOpen">1.ข้อมูลทั่วไป</button>
+                <button class="tablinks" onclick="openTab(event, 'CONTAIN')">2.ขนาดบรรจุ</button>
+                <button class="tablinks" onclick="openTab(event, 'IOW')">3.สูตรสาร</button>
+                <button class="tablinks" onclick="openTab(event, 'PRODUCCER')">4.1 ผู้ผลิตต่างประเทศ</button>
+                <button class="tablinks" onclick="openTab(event, 'PRODUCCER_IN')">4.2 ผู้ผลิตในประเทศ</button>
+                <button class="tablinks" onclick="openTab(event, 'DRUGKEEP')">5.การเก็บรักษา</button>
+                <button class="tablinks" onclick="openTab(event, 'ATC')">6.กลุ่มตำรับ</button>
+                <button class="tablinks" onclick="openTab(event, 'INDICATION')">7.ข้อบ่งใช้</button>
+                <button class="tablinks" onclick="openTab(event, 'COLOR')">8.สีของยา</button>
             </div>
-            <div class="in">
-                @Html.Partial("../DL/INPUT_PACKAGE_DETAIL2", Nothing)
-            </div> 
         </div>
-        <div id="IOW" class="tabcontent">
-            @Html.Partial("../DL/INPUT_CHEM", Nothing)
+        <div class="in">
+            <div id="GENERAL" class="tabcontent">
+                @Html.Partial("../DL/INPUT_REGIST_DETAIL", Nothing)
+            </div>
+            <div id="CONTAIN" class="tabcontent">
+                <div class="in">
+                    @Html.Partial("../DL/INPUT_PACKAGE_DETAIL", Nothing)
+                </div>
+                <div class="in">
+                    @Html.Partial("../DL/INPUT_PACKAGE_DETAIL2", Nothing)
+                </div>
+            </div>
+            <div id="IOW" class="tabcontent">
+                @Html.Partial("../DL/INPUT_CHEM", Nothing)
+            </div>
+            <div id="PRODUCCER" class="tabcontent">
+                @Html.Partial("../DL/INPUT_PRODUCCER", Nothing)
+            </div>
+            <div id="PRODUCCER_IN" class="tabcontent">
+                @Html.Partial("../DL/INPUT_PRODUCCER_IN", Nothing)
+            </div>
+            <div id="DRUGKEEP" class="tabcontent">
+                @Html.Partial("../DL/INPUT_KEEP", Nothing)
+            </div>
+            <div id="ATC" class="tabcontent">
+                @Html.Partial("../DL/INPUT_ATC", Nothing)
+            </div>
+            <div id="INDICATION" class="tabcontent">
+                @Html.Partial("../DL/INPUT_DRUG_USE", Nothing)
+            </div>
+            <div id="COLOR" class="tabcontent">
+
+            </div>
         </div>
-        <div id="PRODUCCER" class="tabcontent">
-            @Html.Partial("../DL/INPUT_PRODUCCER", Nothing)
-        </div>
-        <div id="PRODUCCER_IN" class="tabcontent">
-            @Html.Partial("../DL/INPUT_PRODUCCER_IN", Nothing)
-        </div>
-        <div id="DRUGKEEP" class="tabcontent">
-            @Html.Partial("../DL/INPUT_KEEP", Nothing)
-        </div>
-        <div id="ATC" class="tabcontent">
-            @Html.Partial("../DL/INPUT_ATC", Nothing)
-        </div>
-        <div id="INDICATION" class="tabcontent">
-            @Html.Partial("../DL/INPUT_DRUG_USE", Nothing)
-        </div>
-        <div id="COLOR" class="tabcontent">
-            
-        </div>
+        
     </div>
 
 </div>

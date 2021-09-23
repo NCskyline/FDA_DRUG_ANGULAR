@@ -8,13 +8,13 @@ End Code
         <tr>
             <td>
                 ชื่อผู้ผลิตต่างประเทศ :
-                <input type="text" id="txt_search" style="width:300px;" />
+                <input type="text" class="form-control" id="txt_search" style="width:300px;" />
                 &nbsp;
                 ประเทศ
                 @*<select id="ddl_national">
                         <option>กรุณาเลือก</option>
                     </select>*@
-                <select id="ddl_national" style="width:100px;">
+                <select id="ddl_national" style="width:100px;" class="form-control">
                     <option ng-repeat="x in CNT_LIST" value="{{x.alpha3}}">{{x.engcntnm}}</option>
                 </select>
                 &nbsp;
