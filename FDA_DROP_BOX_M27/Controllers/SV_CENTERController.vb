@@ -4065,6 +4065,13 @@ Namespace Controllers
             dao.fields.TR_ID = tr_id
             dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
             dao.fields.PROCESS_ID = _ProcessID
+            dao.fields.STATUS_ID = 1
+            Try
+                dao.fields.REQUEST_TYPE = bb.REQUEST_TYPE
+            Catch ex As Exception
+
+            End Try
+
             dao.fields.FK_IDA = FK_IDA
             Try
                 dao.fields.REQUEST_TYPE = bb.REQUEST_TYPE

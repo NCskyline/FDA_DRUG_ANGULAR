@@ -135,7 +135,7 @@
                     <table width="100%">
 
                         <tr>
-                            <td><input type="checkbox" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled />ใบแทนใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรเนื่องจาก</td>
+                            <td><input type="checkbox" ng-model="LIST_LCN.REQUEST_TYPE" disabled />ใบแทนใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรเนื่องจาก</td>
                         <tr>
                             <td>
                                 <input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />
@@ -145,7 +145,7 @@
                             <td style="width:100%;text-align:center">(เหตุที่ขอรับใบแทน)</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled />ย้ายสถานที่นำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรในนามของ</td>
+                            <td><input type="checkbox" ng-model="LIST_LCN.REQUEST_TYPE" disabled />ย้ายสถานที่นำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรในนามของ</td>
                         <tr>
                             <td>
                                 <select class="dropdown" style="font-family:'Taviraj'" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails_lct(LIST_LCN.LOCATION_SELECT)">

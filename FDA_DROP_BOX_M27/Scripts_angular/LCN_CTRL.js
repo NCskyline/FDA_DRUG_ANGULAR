@@ -158,7 +158,7 @@
 
         } else if (process == '11103' || process == '11104' || process == '11105' || process == '11106' || process == '11107' || process == '11108' || process == '11109' || process == '11110') {
             if (process == '11105') {
-                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญGET_LCN_INFORMATION_INPUT_MODIFYาตสถานที่ด้านยา ขายยาแผนปัจจุบัน';
+                $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ขายยาแผนปัจจุบัน';
             } else if (process == '11106') {
                 $scope.lcnnoType = 'แก้ไขเปลี่ยนแปลงใบอนุญาตสถานที่ด้านยา ผลิตยาแผนปัจจุบัน';
             } else if (process == '11107') {

@@ -171,7 +171,7 @@
             <div>มีความประสงค์ขอ</div>
             <table style="width:100%;">
                 <tr>
-                    <td width="17%"><input type="checkbox" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled />ใบแทนใบอนุญาตขายยา  เนื่องจาก</td>
+                    <td width="17%"><input type="checkbox" ng-model="LIST_LCN.REQUEST_TYPE" disabled />ใบแทนใบอนุญาตขายยา  เนื่องจาก</td>
                     <td width="68%">
                         <input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />
                     </td>
@@ -182,7 +182,7 @@
             </table>
             <table>
                 <tr>
-                    <td><input type="checkbox" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled />ย้ายสถานที่ขายยาชื่อ</td>
+                    <td><input type="checkbox" ng-model="LIST_LCN.REQUEST_TYPE" disabled />ย้ายสถานที่ขายยาชื่อ</td>
                     <td>
                         <select class="dropdown" style="font-family:'Taviraj'" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails_lct(LIST_LCN.LOCATION_SELECT)">
                             <option value="0">--กรุณาเลือก--</option>
