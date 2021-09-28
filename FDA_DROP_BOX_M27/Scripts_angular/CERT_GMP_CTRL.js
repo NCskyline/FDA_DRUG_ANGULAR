@@ -419,7 +419,8 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
     $scope.deleteCHEM = function (data,i) {
         $scope.GMP_CHEM.splice(i, 1);
     };
-   
+
+  
 
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });

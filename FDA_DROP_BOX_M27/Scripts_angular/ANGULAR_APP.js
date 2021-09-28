@@ -17,3 +17,10 @@ app.directive('loading', ['$http', function ($http) {
         }
     };
 }]);
+app.config(function ($mdDateLocaleProvider) {
+    $mdDateLocaleProvider.formatDate = function (date) {
+        
+        return date ? moment(date).add(543, 'year').format('DD/MM/YYYY') : '';
+    };
+    
+});

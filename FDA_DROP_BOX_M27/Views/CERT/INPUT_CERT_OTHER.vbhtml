@@ -56,10 +56,10 @@ End Code
                 5. ประเทศ (Country)<font color="red">*</font> :
             </td>
             <td>
-                <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID">
-                    <option value="0">--กรุณาเลือก--</option>
+                <input list="countrys" id="txt_cnt" type="text" class="form-control" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID"/>
+                <datalist id="countrys" class="form-control">
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
-                </select>
+                </datalist>
             </td>
         </tr>
         <tr>
