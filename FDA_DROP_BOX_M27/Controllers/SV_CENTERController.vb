@@ -202,6 +202,22 @@ Namespace Controllers
 
         End Function
 
+        Function SP_STAFF_DALCN()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_STAFF_DALCN()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+        Function SP_STAFF_DALCN_BY_PVNCD(ByVal pvncd As String) As JsonResult
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_STAFF_DALCN_BY_PVNCD(pvncd)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_MASTER_CER_PK_BY_FK_IDA(ByVal IDA As String) As JsonResult
             Dim dt As New DataTable
             Dim bao As New BAO
