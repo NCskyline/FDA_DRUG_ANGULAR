@@ -146,6 +146,7 @@ Public Class MODEL_CER_GMP
     Public BUYER_COUNTRY_NAME As String
     Public STR_DOCUMENT_DATE As String
     Public STR_EXP_DOCUMENT_DATE As String
+    Public CLOSE_BTN As String
     'Public NAME_ADDRESS As String
     'Public ADDRESS_NUMBER As String
     'Public ADDRESS_CITY As String

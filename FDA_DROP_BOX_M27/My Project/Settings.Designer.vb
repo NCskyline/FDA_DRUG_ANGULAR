@@ -173,6 +173,16 @@ Namespace My
                 Return CType(Me("FDA_DROP_BOX_M27_WS_PVNCD_WebService1"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://164.115.28.108/WS_DATE/Service1.svc")>  _
+        Public ReadOnly Property FDA_DROP_BOX_M27_WS_GETDATE_WORKING_Service1() As String
+            Get
+                Return CType(Me("FDA_DROP_BOX_M27_WS_GETDATE_WORKING_Service1"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

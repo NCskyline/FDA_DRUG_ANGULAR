@@ -745,6 +745,7 @@ End Code
 
     <div style="text-align:center">
         <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+        <input type="button" class="btn btn-lg" ng-click="BTN_SEND()" value="ยื่นคำขอ" ng-disabled="LIST_GMP.CLOSE_BTN" />
         <input type="button" class="btn btn-lg" ng-click="PDF_PREVIEW()" value="PDF PREVIEW" />
     </div>
 

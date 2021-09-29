@@ -190,6 +190,7 @@
     <Compile Include="Controllers\DR_EDIT_REQUESTController.vb" />
     <Compile Include="Controllers\LCNController.vb" />
     <Compile Include="Controllers\LCN_STAFF_EDITController.vb" />
+    <Compile Include="Controllers\MAIN_STAFFController.vb" />
     <Compile Include="Controllers\OtherController.vb" />
     <Compile Include="Controllers\SV_CENTERController.vb" />
     <Compile Include="Global.asax.vb">
@@ -250,6 +251,11 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\WS_FLATTEN\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_GETDATE_WORKING\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -419,6 +425,7 @@
     <Content Include="Scripts_angular\LCN_CTRL.js" />
     <Content Include="Scripts_angular\LCN_EDIT_CTRL.js" />
     <Content Include="Scripts_angular\LCN_STAFF_EDIT_CTRL.js" />
+    <Content Include="Scripts_angular\MAIN_STAFF_CTRL.js" />
     <Content Include="Web References\WS_DRUG_126\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
@@ -441,7 +448,9 @@
     <Content Include="Views\AUTHEN\AUTHEN_DR.vbhtml" />
     <Content Include="Views\DL\FRM_DL_CONFIRM.vbhtml" />
     <Content Include="Views\DL\FRM_REGISTRATION_OTHER_DETAIL.vbhtml" />
-    <Content Include="Views\LCN_STAFF\FRM_MAIN_STAFF.vbhtml" />
+    <Content Include="Views\MAIN_STAFF\FRM_MAIN_STAFF.vbhtml" />
+    <Content Include="Views\LCN_STAFF\FRM_EDIT_LCN_STAFF_MAIN.vbhtml" />
+    <Content Include="Views\LCN_STAFF\FRM_SUBSTITUTE_NCT_MAIN_STAFF.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -617,6 +626,17 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Content>
     <None Include="Web References\WS_FLATTEN\WS_FLATTEN.wsdl" />
+    <Content Include="Web References\WS_GETDATE_WORKING\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </Content>
+    <None Include="Web References\WS_GETDATE_WORKING\Service1.wsdl" />
+    <None Include="Web References\WS_GETDATE_WORKING\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WS_GETDATE_WORKING\Service10.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\WS_LOG\WS_LOG_CENTER.disco" />
     <None Include="Web References\WS_MAIL\FDA_MAIL.disco" />
     <Content Include="Web References\WS_PVNCD\Get_Profile.datasource">
@@ -1815,6 +1835,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>FDA_DROP_BOX_M27_WS_FLATTEN_WS_FLATTEN</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://164.115.28.108/WS_DATE/Service1.svc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_GETDATE_WORKING\</RelPath>
+      <UpdateFromURL>http://164.115.28.108/WS_DATE/Service1.svc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FDA_DROP_BOX_M27_WS_GETDATE_WORKING_Service1</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://164.115.28.108/WS_get_Profile_By_Identify/WS_Taxno_TaxnoAuthorize.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>

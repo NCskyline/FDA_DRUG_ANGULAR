@@ -1288,7 +1288,19 @@
         return response;
     };
 
-
+    
+    this.UPDATE_STATUS_CERT = function (STATUS_ID , IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/UPDATE_STATUS_CERT"), //ไปดูที่ไฟล์ DATA_CENTERController.vb
+            dataType: "json",
+            data: {
+                STATUS_ID: STATUS_ID,
+                IDA: IDA
+            }
+        });
+        return response;
+    };
     
 
 

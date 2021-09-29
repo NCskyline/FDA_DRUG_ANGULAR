@@ -304,6 +304,34 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
     $scope.BTN_BACK = function () {
         REDIRECT('/DH/FRM_MAIN_PAGE_PHESAJ');
     };
+    
+    $scope.BTN_SEND = function () {
+
+        var Getdata = CENTER_SV.UPDATE_STATUS_CERT(2, sessionStorage.IDA);
+        Getdata.then(function (datas) {
+            Swal.fire({
+                title: 'SUCCESS',
+                text: datas.data,
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+            });
+
+            var Set_PREVIEW = CENTER_SV.GET_PREVIEW_CERT(IDA);
+            Set_PREVIEW.then(function (datas) {
+
+                $scope.LIST_GMP = datas.data;
+                $scope.LIST_GMP.session = sessionStorage;
+
+                $scope.LIST_GMP.CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_GMP.CER.DOCUMENT_DATE)));
+                $scope.LIST_GMP.CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_GMP.CER.EXP_DOCUMENT_DATE)));
+                //$scope.INPUT_CHEM = SET_URL_SV('/CERT/PREVIEW_CHEMICAL');
+
+            }, function () { });
+        });
+        
+
+    };
 
     $scope.PDF_PREVIEW = function (PATH, FILENAME) {
         var urls = SET_URL_SV('/HOME/OPEN_DOC_PATH?PATH=' + PATH + '&FILENAME=' + FILENAME);

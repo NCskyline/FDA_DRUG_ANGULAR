@@ -1845,8 +1845,10 @@ Namespace Controllers
                 Try
                     If dao.fields.lcntpcd.Contains("ผย") Then
                         .LCN_TYPE = 1
+                        .CHK_TYPE_LCN = 1
                     ElseIf dao.fields.lcntpcd.Contains("นย") Then
                         .LCN_TYPE = 2
+                        .CHK_TYPE_LCN = 2
                     End If
                 Catch ex As Exception
 
@@ -1958,6 +1960,11 @@ Namespace Controllers
             Catch ex As Exception
 
             End Try
+            If dao_cer.fields.STATUS_ID > 1 Then
+                model.CLOSE_BTN = "TRUE"
+            Else
+                model.CLOSE_BTN = ""
+            End If
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
         Function GET_PREVIEW_DH(ByVal IDA As Integer) As JsonResult
@@ -2770,6 +2777,61 @@ Namespace Controllers
 
 
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
+        End Function
+        Function UPDATE_STATUS_CERT(ByVal STATUS_ID As String, ByVal IDA As Integer) As JsonResult
+            Dim result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim dao As New DAO_DRUG.TB_CER
+            'Dim bao As New BAO.GenNumber
+            dao.GetDataby_IDA2(Integer.Parse(IDA))
+            Dim date_now As Date = Date.Now
+            Dim date_exp As Date
+            Try
+                date_exp = CDate(dao.fields.EXP_DOCUMENT_DATE) 'CDate(dao.fields.EXP_DOCUMENT_DATE).AddDays(180)
+            Catch ex As Exception
+
+            End Try
+            'Dim ws As New AUTHEN_LOG.Authentication
+            'ws.AUTHEN_LOG_DATA(_CLS.TOKEN, _CLS.CITIZEN_ID, _CLS.SYSTEM_ID, _CLS.GROUPS, _CLS.ID_MENU, "DRUG", _TR_ID, HttpContext.Current.Request.Url.AbsoluteUri, "ยื่นคำขอ Cert", _ProcessID)
+
+            If date_now <= date_exp And dao.fields.PROCESS_ID <> 34 Then
+
+                dao.fields.STATUS_ID = 2
+                dao.fields.REQUEST_DATE = Date.Now
+                Try
+                    dao.fields.lmdfdate = Bind_Date(CDate(Date.Now))
+                Catch ex As Exception
+
+                End Try
+                dao.update()
+                'AddLogStatus(2, Request.QueryString("ProcessID"), _CLS.CITIZEN_ID, _IDA)
+
+                result = "ยื่นคำขอเรียบร้อยแล้ว"
+            Else
+                If dao.fields.PROCESS_ID = 34 Then
+                    dao.fields.STATUS_ID = 2
+                    dao.fields.REQUEST_DATE = Date.Now
+                    Try
+                        dao.fields.lmdfdate = Bind_Date(CDate(Date.Now))
+                    Catch ex As Exception
+
+                    End Try
+                    dao.update()
+                    ' AddLogStatus(2, Request.QueryString("ProcessID"), _CLS.CITIZEN_ID, _IDA)
+
+                    result = "ยื่นคำขอเรียบร้อยแล้ว"
+                Else
+                    result = "ไม่สารมารถยื่นคำขอได้ เนื่องจาก Cert หมดอายุ"
+                End If
+
+            End If
+            Return Json(result, JsonRequestBehavior.AllowGet)
+        End Function
+        Private Function Bind_Date(ByVal _date As Date) As Date
+            Dim ws As New WS_GETDATE_WORKING.BasicHttpBinding_IService1
+            Dim date_result As Date
+            ws.GETDATE_WORKING(_date, True, 5, True, date_result, True)
+            Return date_result
         End Function
 
         'Function INSERT_LCN_EDIT(ByVal XML_EDIT As String, ByVal _ProcessID As String) As JsonResult
