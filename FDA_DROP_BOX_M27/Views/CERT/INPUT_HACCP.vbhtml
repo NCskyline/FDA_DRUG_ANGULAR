@@ -3,6 +3,12 @@
 End Code
 @*<script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>*@
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('select').selectpicker('refresh');
+        })
+    </script>
 <div class="ic" >
     <h2 style="font-family:'Taviraj';font-size:24px;">
         แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ

@@ -2,16 +2,22 @@
     Layout = ""
 
 End Code
-@*<script src="~/Scripts_angular/CENTER_SV.js"></script>
-<script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>*@
-<script type="text/javascript">
 
-</script>
+@*<script src="../Scripts/bootstrap-select.js"></script>
+<script src="../Scripts/bootstrap-select.min.js"></script>*@
+@*<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>*@
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('select').selectpicker('refresh');
+        })
+    </script>
 
 <style type="text/css">
     .auto-style1 {
         height: 23px;
     }
+    
 </style>
 
 <div class="ic">
@@ -56,10 +62,10 @@ End Code
                 5. ประเทศ (Country)<font color="red">*</font> :
             </td>
             <td>
-                <input list="countrys" id="txt_cnt" type="text" class="form-control" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID"/>
-                <datalist id="countrys" class="form-control">
+                @*<input list="countrys"  class="form-control" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID" />*@
+                <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
-                </datalist>
+                </select>
             </td>
         </tr>
         <tr>
@@ -75,7 +81,7 @@ End Code
                 6. Manufactur&#39;s License Number<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER.MANUFACTURER_LICENCE_NUMBER"  style="font-family:'Taviraj';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER.MANUFACTURER_LICENCE_NUMBER" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -83,7 +89,7 @@ End Code
                 Global Location Number (GLN) :
             </td>
             <td>
-                <input class="form-control inline"  ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -91,7 +97,7 @@ End Code
                 7. หน่วยงานที่ออกเอกสาร<font color="red">*</font> :
             </td>
             <td>
-                <input class="form-control inline"  ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
         <tr>
@@ -99,8 +105,8 @@ End Code
                 ประเทศ (Country)<font color="red">*</font> :
             </td>
             <td>
-                <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID">
-                    <option value="0">--กรุณาเลือก--</option>
+                <select class="form-control selectpicker" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID" data-live-search="true" title="-- Please select --">
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
             </td>
@@ -140,8 +146,8 @@ End Code
                 ประเทศของหน่วยงานที่ออกใบรับรอง :
             </td>
             <td>
-                <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_OF_DEPARTMENT_IDA">
-                    <option value="0">--กรุณาเลือก--</option>
+                <select class="form-control selectpicker" data-live-search="true" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_OF_DEPARTMENT_IDA" title="-- Please select --">
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
             </td>
@@ -161,5 +167,5 @@ End Code
             </td>
         </tr>
     </table>
-    </div>
+</div>
 
