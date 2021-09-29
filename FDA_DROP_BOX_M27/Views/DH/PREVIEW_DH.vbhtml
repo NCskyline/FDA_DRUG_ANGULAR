@@ -574,6 +574,7 @@ End Code
         </div>
         @*-------------IN------------------*@
         <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
+            <input type="button" class="btn btn-lg" ng-click="BTN_SEND_DH()" value="ยื่นคำขอ" ng-disabled="LIST_DH.CLOSE_BTN" />
             <input type="button" class="btn btn-lg btn-success" ng-click="BTN_BACK()" value="ย้อนกลับ" />
         </div>
     </div>

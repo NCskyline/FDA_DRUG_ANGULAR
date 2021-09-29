@@ -52,7 +52,52 @@ Public Class BAO
 
         Return dta
     End Function
-    '
+    Public Function SP_STAFF_DH15RQT() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_STAFF_DH15RQT "
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+
+        Return dt
+    End Function
+    Public Function SP_DALCN_EDIT_REQUEST_STAFF() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_DALCN_EDIT_REQUEST_STAFF "
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+
+        Return dt
+    End Function
+    Public Function SP_STAFF_CER() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_STAFF_CER "
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+
+        Return dt
+    End Function
+    Public Function SP_DALCN_NCT_SUBSTITUTE_STAFF() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_DALCN_NCT_SUBSTITUTE_STAFF "
+        Dim dta As New DataTable
+        Try
+            dta = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+        dta.TableName = "SP_DALCN_NCT_SUBSTITUTE_STAFF"
+        Return dta
+    End Function
     Public Function SP_STAFF_DALCN() As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_STAFF_DALCN "

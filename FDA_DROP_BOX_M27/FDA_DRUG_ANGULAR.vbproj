@@ -164,6 +164,7 @@
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="CLASS\BAO\BAO.vb" />
     <Compile Include="CLASS\BAO\BAO_DROPBOX.vb" />
+    <Compile Include="CLASS\BAO\BAO_GENNO.vb" />
     <Compile Include="CLASS\BAO\BAO_MODULE.vb" />
     <Compile Include="CLASS\COMMON\BAO_COMMON.vb" />
     <Compile Include="CLASS\COMMON\ClassDataset.vb" />
@@ -451,6 +452,7 @@
     <Content Include="Views\MAIN_STAFF\FRM_MAIN_STAFF.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_EDIT_LCN_STAFF_MAIN.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_SUBSTITUTE_NCT_MAIN_STAFF.vbhtml" />
+    <Content Include="Views\DR_STAFF\TABEAN_YA_MAIN_STAFF.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -582,7 +584,7 @@
     <Content Include="Views\DH_STAFF\FRM_DH_SEARCH.vbhtml" />
     <Content Include="Views\DH_STAFF\FRM_CHEMICAL_STAFF_SEARCH.vbhtml" />
     <Content Include="Views\DH_STAFF\FRM_CER_STAFF_SEARCH.vbhtml" />
-    <Content Include="Views\LCN_STAFF\FRM_LCN_DRUG.vbhtml" />
+    <Content Include="Views\LCN_STAFF\FRM_LCN_DRUG_STAFF.vbhtml" />
     <Content Include="Views\LCN\INPUT_SORJOR_1.vbhtml" />
     <Content Include="Views\LCN\FRM_LCN_NEWS.vbhtml" />
     <Content Include="Views\AUTHEN\LOT_RELEASE.vbhtml" />

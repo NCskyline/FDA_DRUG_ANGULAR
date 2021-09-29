@@ -36,6 +36,39 @@ Namespace Controllers
 
 #Region "STORE"
 
+        Function SP_STAFF_DH15RQT() As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_STAFF_DH15RQT()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
+        Function SP_STAFF_CER() As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_STAFF_CER()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
+        Function SP_DALCN_EDIT_REQUEST_STAFF() As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_DALCN_EDIT_REQUEST_STAFF()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
+
+        Function SP_DALCN_NCT_SUBSTITUTE_STAFF() As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_DALCN_NCT_SUBSTITUTE_STAFF()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_GET_LCN(ByVal CITIZEN As String) As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO
@@ -2003,6 +2036,15 @@ Namespace Controllers
 
             End Try
             Try
+                If dao.fields.STATUS_ID > 1 Then
+                    model.CLOSE_BTN = "TRUE"
+                Else
+                    model.CLOSE_BTN = ""
+                End If
+            Catch ex As Exception
+
+            End Try
+            Try
                 model.DH15_DETAIL_CER = dao_dcer.fields
             Catch ex As Exception
 
@@ -2827,6 +2869,171 @@ Namespace Controllers
             End If
             Return Json(result, JsonRequestBehavior.AllowGet)
         End Function
+
+        Function UPDATE_STATUS_DH(ByVal IDA As Integer, ByVal CITIZEN_ID As String) As JsonResult
+            Dim result As String = ""
+            Dim lcn_ida As Integer = 0
+            Dim type_rqt As Integer = 0
+            Dim country As Integer = 0
+            Dim _process As String = ""
+            Dim dao As New DAO_DRUG.ClsDBdh15rqt
+            dao.GetDataby_IDA(IDA)
+            Try
+                _process = dao.fields.PROCESS_ID
+            Catch ex As Exception
+
+            End Try
+            Try
+                lcn_ida = dao.fields.FK_IDA
+            Catch ex As Exception
+
+            End Try
+            Try
+                If dao.fields.lcntpcd = "ผย1" Then
+                    type_rqt = 1
+                End If
+            Catch ex As Exception
+
+            End Try
+            Try
+                country = Trim(dao.fields.FOREIGN_COUNTRY_CD)
+            Catch ex As Exception
+
+            End Try
+            'If _process <> 15 Then
+            If type_rqt = 1 And country <> 233 Then
+                result = "ไม่สามารถจดแจ้งสถานที่ผลิตต่างประเทศภายใต้ใบอนุญาตผลิตยาได้"
+            Else
+                If _process = 16 Or _process = 17 Or _process = 18 Then
+                    dao.fields.STATUS_ID = 8
+
+                    Dim RCVNO As String = ""
+                    Dim run_number As String = ""
+                    Dim dao2 As New DAO_DRUG.TB_DH15_DETAIL_CASCHEMICAL
+                    dao2.GetDataby_FK_IDA(IDA)
+                    Dim bao2 As New BAO_GENNO.GenNumber
+                    RCVNO = bao2.GEN_NO_04(con_year(Date.Now.Year()), 10, _process, "", "", 0, IDA, "")
+                    dao.fields.rcvno = RCVNO
+                    dao.fields.RCVNO_DISPLAY = bao2.FORMAT_NUMBER_MINI(con_year(Date.Now.Year()), RCVNO)
+                    dao.fields.rcvdate = Date.Now
+                    dao.fields.RCVDATE_DISPLAY = Date.Now.ToShortDateString()
+                    dao.fields.REQUEST_DATE = Date.Now
+
+                    Dim dao_lcn As New DAO_DRUG.ClsDBdalcn
+                    dao_lcn.GetDataby_IDA(lcn_ida)
+                    Try
+                        dao.fields.lcntpcd = dao_lcn.fields.lcntpcd
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        dao.fields.pvnabbr = dao_lcn.fields.pvnabbr
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        dao.fields.lcnsid = dao_lcn.fields.lcnsid
+                    Catch ex As Exception
+
+                    End Try
+                    'For Each dao2.fields In dao2.datas
+                    Dim CAS_ID As Integer = 0
+                    Dim dao_cas As New DAO_DRUG.TB_MAS_CHEMICAL
+                    Try
+                        CAS_ID = RTrim(LTrim(dao2.fields.CAS_ID))
+                    Catch ex As Exception
+
+                    End Try
+                    dao_cas.GetDataby_IDA(CAS_ID)
+                    Dim _YEARS As Integer = con_year(Date.Now.Year)
+
+                    Dim bao As New BAO_GENNO.GenNumber 'test
+
+                    run_number = bao.GEN_DH15TDGT_NO(_YEARS, dao_cas.fields.aori, _process, IDA, dao2.fields.IDA, dao.fields.QUOTA_TYPE)
+
+                    Dim dao3 As New DAO_DRUG.TB_DH15_DETAIL_CASCHEMICAL
+                    dao3.GetDataby_IDA(dao2.fields.IDA)
+                    If Len(dao3.fields.phm15dgt) = 0 Then
+                        dao3.fields.phm15dgt = run_number
+                        dao3.update()
+                    End If
+                    dao.update()
+
+                    '-------------เปิดตอนอัพจริง
+                    'Dim ws_update As New WS_DRUG_126.WS_DRUG
+                    'ws_update.DRUG_INSERT_DH15_126(IDA, dao.fields.CITIZEN_ID_AUTHORIZE)
+
+                    AddLogStatus(8, _process, CITIZEN_ID, IDA)
+                    result = "ยื่นคำขอเรียบร้อยแล้ว เลขจดแจ้ง 15 หลักคือ คือ " & run_number
+                Else
+
+                    If chk_exp(IDA) > 0 Then
+                        If _process = 14 Then
+                            dao.fields.STATUS_ID = 10
+
+                            Dim RCVNO As String = ""
+                            Dim run_number As String = ""
+                            Dim bao2 As New BAO_GENNO.GenNumber
+                            RCVNO = bao2.GEN_NO_04(con_year(Date.Now.Year()), 10, _process, "", "", 0, IDA, "")
+                            dao.fields.rcvno = RCVNO
+                            dao.fields.RCVNO_DISPLAY = bao2.FORMAT_NUMBER_MINI(con_year(Date.Now.Year()), RCVNO)
+                            dao.fields.rcvdate = Date.Now
+                            dao.fields.RCVDATE_DISPLAY = Date.Now.ToShortDateString()
+                            dao.fields.REQUEST_DATE = Date.Now
+
+                            Dim dao_lcn As New DAO_DRUG.ClsDBdalcn
+                            dao_lcn.GetDataby_IDA(lcn_ida)
+                            Try
+                                dao.fields.lcntpcd = dao_lcn.fields.lcntpcd
+                            Catch ex As Exception
+
+                            End Try
+                            Try
+                                dao.fields.pvnabbr = dao_lcn.fields.pvnabbr
+                            Catch ex As Exception
+
+                            End Try
+                            Try
+                                dao.fields.lcnsid = dao_lcn.fields.lcnsid
+                            Catch ex As Exception
+
+                            End Try
+                            dao.update()
+                        ElseIf _process = 15 Then
+                            AddLogStatus(2, _process, CITIZEN_ID, IDA)
+                            dao.fields.STATUS_ID = 2
+                            dao.fields.REQUEST_DATE = Date.Now
+                            dao.update()
+                            result = "ยื่นคำขอเรียบร้อยแล้ว"
+                        End If
+                    Else
+                        result = "ไม่สามารถยื่นได้เนื่องจาก Cert ของท่านหมดอายุ"
+                    End If
+
+
+
+                End If
+
+
+
+
+            End If
+
+            Return Json(result, JsonRequestBehavior.AllowGet)
+        End Function
+        Private Function chk_exp(ByVal IDA As Integer) As Integer
+            Dim i As Integer = 0
+            Dim dao_cer As New DAO_DRUG.TB_DH15_DETAIL_CER
+            dao_cer.GetDataby_FK_IDA(IDA)
+            Try
+                If dao_cer.fields.EXP_DOCUMENT_DATE >= CDate(Date.Now) Then
+                    i = 1
+                End If
+            Catch ex As Exception
+
+            End Try
+            Return i
+        End Function
         Private Function Bind_Date(ByVal _date As Date) As Date
             Dim ws As New WS_GETDATE_WORKING.BasicHttpBinding_IService1
             Dim date_result As Date
@@ -2874,6 +3081,7 @@ Namespace Controllers
             dao.fields.STATUS_ID = 1
             dao.fields.CREATE_DATE = Date.Now
             dao.fields.REQUEST_DATE = Date.Now
+
             dao.insert()
 
             Dim IDA As Integer = dao.fields.IDA

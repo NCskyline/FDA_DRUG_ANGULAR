@@ -479,6 +479,21 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     };
 
+    $scope.BTN_SEND_DH = function () {
+        var Getdata = CENTER_SV.UPDATE_STATUS_DH(sessionStorage.IDA, sessionStorage.CITIZEN);
+        Getdata.then(function (datas) {
+            Swal.fire({
+                title: 'SUCCESS',
+                text: datas.data,
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+        });
+
+    };
+
     $scope.Getdetails_REF_CER = function (IDA) {
         var data_location = CENTER_SV.GET_REF_CERT_DH(IDA);
         data_location.then(function (datas) {

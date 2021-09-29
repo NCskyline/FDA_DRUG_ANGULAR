@@ -817,7 +817,48 @@
         });
         return response;
     };
-
+    
+    this.SP_STAFF_DH15RQT = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STAFF_DH15RQT")
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+    this.SP_DALCN_EDIT_REQUEST_STAFF = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_DALCN_EDIT_REQUEST_STAFF")
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+    
+    this.SP_STAFF_CER = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STAFF_CER")
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
+    this.SP_DALCN_NCT_SUBSTITUTE_STAFF = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_DALCN_NCT_SUBSTITUTE_STAFF")
+            //params: {
+            //    PRODUCT_GROUP: PRODUCT_GROUP
+            //}
+        });
+        return response;
+    };
 
     this.SP_dactg = function () {
         var response = $http({
@@ -1302,7 +1343,18 @@
         return response;
     };
     
-
+    this.UPDATE_STATUS_DH = function (IDA, CITIZEN_ID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/UPDATE_STATUS_DH"), //ไปดูที่ไฟล์ DATA_CENTERController.vb
+            dataType: "json",
+            data: {
+                IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID
+            }
+        });
+        return response;
+    };
 
     this.UPDATE_ITEM_INVOICE_STATUS = function (IDA) {
         var response = $http({

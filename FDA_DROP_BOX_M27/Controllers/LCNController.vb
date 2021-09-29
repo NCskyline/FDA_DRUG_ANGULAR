@@ -181,6 +181,17 @@ Namespace Controllers
         Function FRM_LCN_SUBSTITUTE_MAIN() As ActionResult
             Return View()
         End Function
+
+        Function FRM_EDIT_LCN_STAFF_MAIN() As ActionResult
+            Return View()
+        End Function
+        Function FRM_LCN_DRUG_STAFF() As ActionResult
+            Return View()
+        End Function
+        Function FRM_SUBSTITUTE_NCT_MAIN_STAFF() As ActionResult
+            Return View()
+        End Function
+
     End Class
 
     Public Class LCN_CENTERController

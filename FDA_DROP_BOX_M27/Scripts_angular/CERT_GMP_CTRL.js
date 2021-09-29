@@ -284,7 +284,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 });
                 Swal.fire({
                     title: 'SUCCES',
-                    text: 'บันทึกข้อมูลเรียบร้อย',
+                    text: datas.data,
                     icon: 'ดฟสหำ',
                     confirmButtonColor: '#3085d6',
                     confirmButtonText: 'OK'

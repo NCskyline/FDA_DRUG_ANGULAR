@@ -32,9 +32,9 @@ End Code
                 <li>
                     <div class="listree-submenu-heading">ระบบผลิตภัณฑ์ยา</div>
                     <ul class="listree-submenu-items" style="color:black">
-                        <li>
+                        @*<li>
                             <a ng-click="BTN_MENU_STAFF('2001')" style="color:#06B716">บัญชีรายการขอขึ้นทะเบียนยา</a>
-                        </li>
+                        </li>*@
                         <li>
                             <a ng-click="BTN_MENU_STAFF('2002')" style="color:#06B716">คำขอขึ้นทะเบียนตำรับยา</a>
                         </li>

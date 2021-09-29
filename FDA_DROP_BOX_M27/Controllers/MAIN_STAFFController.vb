@@ -8,7 +8,7 @@ Namespace Controllers
         Function Index() As ActionResult
             Return View()
         End Function
-        Function MAIN_STAFF_CTRL() As ActionResult
+        Function FRM_MAIN_STAFF() As ActionResult
             Return View()
         End Function
 

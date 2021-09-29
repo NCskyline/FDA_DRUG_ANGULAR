@@ -78,10 +78,30 @@ Public Module BAO_MODULE
     '    dao.GETDATA_BY_PROCESS_ID(PROCESS_ID, PROCESS_TYPE)
     '    Return dao.fields.PROCESS_REPORT
     'End Function
+    Function con_year(year) As String
+        Dim int_year As Integer = Integer.Parse(year)
+        If int_year <= 2500 Then
+            int_year += 543
+        End If
+        Return int_year.ToString()
+    End Function
 
 
+    <System.Runtime.CompilerServices.Extension>
+    Public Sub AddLogStatus(ByVal status_id As Integer, ByVal process_id As String, ByVal iden As String, Optional FK_IDA As Integer = 0)
+        Try
+            Dim dao As New DAO_DRUG.TB_LOG_STATUS
+            dao.fields.IDENTIFY = iden
+            dao.fields.PROCESS_ID = process_id
+            dao.fields.STATUS_DATE = Date.Now
+            dao.fields.STATUS_ID = status_id
+            dao.fields.FK_IDA = FK_IDA
+            dao.insert()
+        Catch ex As Exception
 
+        End Try
 
+    End Sub
     Public Function GET_LPI(ByVal IDA As Integer) As String
         Dim year As Integer = Date.Now.Year
         If year > 2500 Then 'เป็นพุทธ

@@ -1,6 +1,6 @@
 ﻿
 @Code
-    ViewData("Title") = "FRM_LCN_DRUG"
+    ViewData("Title") = "MAIN_STAFF_CTRL"
     Layout = ""
 End Code
 

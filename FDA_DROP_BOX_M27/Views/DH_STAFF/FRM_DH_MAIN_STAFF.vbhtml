@@ -39,13 +39,13 @@ End Code
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="data in LIST_GMP.CER_DETAIL_CASCHEMICAL">
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
+            <tr ng-repeat="data in LIST_DH_STAFF">
+                <td>{{data.rcvno}}</td>
+                <td>{{data.rcvdate}}</td>
+                <td>{{data.REQUEST_DATE}}</td>
+                <td>{{data.STATUS_NAME}}</td>
+                <td>{{data.TRADING_NAME}}</td>
+                <td>{{data.TR_ID}}</td>
                 <td>ดูข้อมูล</td>
             </tr>
         </tbody>

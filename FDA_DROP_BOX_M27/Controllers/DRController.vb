@@ -64,6 +64,8 @@ Namespace Controllers
         Function FRM_MAIN_PAGE_PRODUCT() As ActionResult
             Return View()
         End Function
-
+        Function TABEAN_YA_MAIN_STAFF() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace

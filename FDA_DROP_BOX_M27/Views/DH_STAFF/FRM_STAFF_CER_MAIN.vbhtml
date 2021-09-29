@@ -23,12 +23,12 @@ End Code
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="data in LIST_GMP.CER_DETAIL_CASCHEMICAL">
-                        <td>{{NULL}}</td>
-                        <td>{{NULL}}</td>
-                        <td>{{NULL}}</td>
-                        <td>{{NULL}}</td>
-                        <td>{{NULL}}</td>
+                    <tr ng-repeat="data in LIST_GMP_STAFF">
+                        <td>{{data.rcvno}}</td>
+                        <td>{{data.rcvdate}}</td>
+                        <td>{{data.REQ_DATE}}</td>
+                        <td>{{data.STATUS_NAME}}</td>
+                        <td>{{data.transcode}}</td>
                         <td>ดูข้อมูล</td>
                     </tr>
                 </tbody>
