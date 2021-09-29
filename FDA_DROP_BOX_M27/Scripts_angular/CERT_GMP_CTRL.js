@@ -453,5 +453,8 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });
     $scope.$on('UNLOAD', function () { $scope.loading = false; alert('2'); });
+
+    
 }]);
+
 
