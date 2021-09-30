@@ -1,8 +1,16 @@
 ﻿@Code
     ViewData("Title") = "INPUT_PACKAGE_DETAIL2"
 End Code
+<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/DL_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div class="ic" ng-controller="DL_CTRL" ng-app="ANGULAR_APP">
     <h2>INPUT_PACKAGE_DETAIL2</h2>
     <div class="box">
@@ -41,11 +49,11 @@ End Code
                                             </td>
                                             <td>
                                                 @*<select id="ddl_munit">
-                                                    <option>
-                                                        กรุณาเลือก
-                                                    </option>
-                                                </select>*@
-                                                <select class="form-control" id="ddl_munit">
+                                                        <option>
+                                                            กรุณาเลือก
+                                                        </option>
+                                                    </select>*@
+                                                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" id="ddl_munit">
                                                     <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                                                 </select>
                                             </td>
@@ -66,12 +74,12 @@ End Code
                                 </td>
                                 <td>
                                     @*<select id="ddl_bunit">
-                                        <option>
-                                            กรุณาเลือก
-                                        </option>
-                                    </select>*@
+                                            <option>
+                                                กรุณาเลือก
+                                            </option>
+                                        </select>*@
 
-                                    <select class="form-control" id="ddl_bunit">
+                                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" id="ddl_bunit">
                                         <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                                     </select>
                                 </td>

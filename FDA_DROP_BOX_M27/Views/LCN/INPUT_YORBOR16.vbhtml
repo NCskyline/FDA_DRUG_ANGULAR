@@ -1,5 +1,13 @@
-﻿<script src="../Scripts_angular/CENTER_SV.js"></script>
+﻿<script src="../Scripts_angular/ANGULAR_APP.js"></script>
+<script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:24px;">
 
@@ -93,9 +101,9 @@
         <table>
             <tr>
                 <td style="width:20%;">ได้รับอนุญาตให้</td>
-                <td> <input type="radio" ng-model="LIST_LCN.CHK_TYPE" value="1" disabled/> ผลิตยาแผนโบราณ</td>
-                <td> <input type="radio" ng-model="LIST_LCN.CHK_TYPE" value="2" disabled/> ขายยาแผนโบราณ</td>
-                <td> <input type="radio" ng-model="LIST_LCN.CHK_TYPE" value="3" disabled/> นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร</td>
+                <td> <input type="radio" ng-model="LIST_LCN.CHK_TYPE" value="1" disabled /> ผลิตยาแผนโบราณ</td>
+                <td> <input type="radio" ng-model="LIST_LCN.CHK_TYPE" value="2" disabled /> ขายยาแผนโบราณ</td>
+                <td> <input type="radio" ng-model="LIST_LCN.CHK_TYPE" value="3" disabled /> นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร</td>
             </tr>
         </table>
         <table style="width:100%">

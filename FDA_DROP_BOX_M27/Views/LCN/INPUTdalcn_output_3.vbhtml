@@ -2,6 +2,7 @@
 <script type="text/javascript">
 
 </script>
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
 <style>
@@ -31,7 +32,11 @@
     }
 </style>
 
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
     <div class="ic" style="width:100%;font-family:'Taviraj';font-size:24px">
@@ -277,8 +282,8 @@
                     ชื่อสถานที่เก็บ ( 1 ) :
                 </td>
                 <td>
-                    <select class="dropdown" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                        <option value="0">--กรุณาเลือก--</option>
+                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
+                        @*<option value="0">--กรุณาเลือก--</option>*@
                         <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
                     </select>
                 </td>
@@ -348,7 +353,7 @@
                     เลือกประเภทผู้ประกอบวิชาชีพเภสัชกรรมหรือสัตวแพทย์
                 </td>
                 <td>
-                    <select ng-model="LIST_PHR_ADD.PHR_CHK_JOB" >
+                    <select ng-model="LIST_PHR_ADD.PHR_CHK_JOB">
                         <option value="1">ผู้ประกอบวิชาชีพเภสัชกรรม</option>
                         <option value="2">ผู้ประกอบวิชาชีพการสัตวแพทย์</option>
                     </select>
@@ -368,8 +373,8 @@
                         ชื่อ
                     </td>
                     <td style="width:10%">
-                        <select class="dropdown" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            <option value="0">--กรุณาเลือก--</option>
+                        <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                             <option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
                         </select>
                     </td>
@@ -427,8 +432,8 @@
                         ชื่อ
                     </td>
                     <td style="width:10%">
-                        <select class="dropdown" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            <option value="0">--กรุณาเลือก--</option>
+                        <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                             <option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
                         </select>
                     </td>
@@ -560,10 +565,10 @@
         </table>
     </div>
 
-        <br />
-        <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
-            <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
+    <br />
+    <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
+        <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
 
-            <input type="button" class="btn btn-lg " ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
-        </div>
+        <input type="button" class="btn btn-lg " ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
     </div>
+</div>

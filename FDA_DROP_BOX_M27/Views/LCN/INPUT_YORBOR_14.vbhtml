@@ -1,6 +1,13 @@
-﻿
+﻿<script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:20px;" class="ic">
         <div>
@@ -35,26 +42,26 @@
             </table>
             <br />
             @*<table style="width:100%">
-                <tr>
-                    <td style="width:20%"></td>
-                    <td style="width:25%"><input type="checkbox" />&nbsp; ใบแทนใบอนุญาต</td>
-                    <td style="width:20%"><input type="checkbox" />&nbsp; ผลิตยาแผนโบราณ</td>
-                    <td style="width:35%; text-align:center"></td>
-                </tr>
-                <tr>
-                    <td style="width:20%">คำขอ</td>
-                    <td style="width:25%"></td>
-                    <td style="width:20%"><input type="checkbox" />&nbsp; ขายยาแผนโบราณ</td>
-                    <td style="width:35%; text-align:center"></td>
-                </tr>
-            </table>
-            <table style="width:100%">
-                <tr>
-                    <td style="width:20%"></td>
-                    <td style="width:25%"><input type="checkbox" />&nbsp; ย้ายสถานที่</td>
-                    <td style="width:55%"><input type="checkbox" />&nbsp; นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร ในนามของ</td>
-                </tr>
-            </table>*@
+                    <tr>
+                        <td style="width:20%"></td>
+                        <td style="width:25%"><input type="checkbox" />&nbsp; ใบแทนใบอนุญาต</td>
+                        <td style="width:20%"><input type="checkbox" />&nbsp; ผลิตยาแผนโบราณ</td>
+                        <td style="width:35%; text-align:center"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:20%">คำขอ</td>
+                        <td style="width:25%"></td>
+                        <td style="width:20%"><input type="checkbox" />&nbsp; ขายยาแผนโบราณ</td>
+                        <td style="width:35%; text-align:center"></td>
+                    </tr>
+                </table>
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:20%"></td>
+                        <td style="width:25%"><input type="checkbox" />&nbsp; ย้ายสถานที่</td>
+                        <td style="width:55%"><input type="checkbox" />&nbsp; นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร ในนามของ</td>
+                    </tr>
+                </table>*@
             <table style="width:100%">
                 <tr>
                     <td style="text-align:right;width:45%;"> <h2>คำขอ</h2></td>
@@ -236,8 +243,8 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <select class="dropdown" style="font-family:'Taviraj'" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails_lct(LIST_LCN.LOCATION_SELECT)">
-                                        <option value="0">--กรุณาเลือก--</option>
+                                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj'" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails_lct(LIST_LCN.LOCATION_SELECT)">
+                                        @*<option value="0">--กรุณาเลือก--</option>*@
                                         <option ng-repeat="x in REF_LOCATION" value="{{x.IDA}}">{{x.thanameplace}}</option>
                                     </select>
                                 </td>

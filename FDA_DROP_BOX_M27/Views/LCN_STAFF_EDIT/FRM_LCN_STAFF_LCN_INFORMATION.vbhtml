@@ -6,6 +6,13 @@
 <script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_STAFF_EDIT_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div ng-controller="LCN_STAFF_EDIT_CTRL" ng-app="ANGULAR_APP" class="ic" ng-init="pageload()">
     <div style="font-family:'Taviraj';font-size:20px;">
         <h1>รายละเอียดใบอนุญาต</h1>
@@ -42,7 +49,7 @@
         <br />
 
         <h1>สถานะใบอนุญาต</h1>
-        <table style="width:100%" >
+        <table style="width:100%">
             <tr>
                 <td style="width:20%">
                     สถานะปัจจุบัน :
@@ -71,14 +78,14 @@
         <br />
 
         <h1>การขอเปลี่ยนแปลงสถานะ </h1>
-        <table style="width:100%" >
+        <table style="width:100%">
             <tr>
                 <td style="width:20%">
                     เลือกสถานะใหม่ :
                 </td>
                 <td>
-                    <select style="font-family:'Taviraj';font-size:18px;" class="form-control inline" ng-model="INFO_LIST.dalcn.cnccscd">
-                        <option value="0">--กรุณาเลือก--</option>
+                    <select style="font-family:'Taviraj';font-size:18px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="INFO_LIST.dalcn.cnccscd">
+                        @*<option value="0">--กรุณาเลือก--</option>*@
                         <option ng-repeat="x in CNC_LIST" value="{{x.cscd}}">{{x.csnm}}</option>
                     </select>
                 </td>
@@ -99,14 +106,14 @@
         <br />
 
         <h1>เวลาทำการ</h1>
-        <table style="width:100%" >
+        <table style="width:100%">
             <tr>
                 <td style="width:20%">
                     เวลาทำการ :
                 </td>
                 <td>
                     <input type="text" ng-model="INFO_LIST.dalcn.opentime" style="width:30%;" />
-                    <input type="button" value="เปลี่ยนเวลาทำการ" style="width:17%" ng-click="BTN_UPDATE_OPENTIME_LCN()"/>
+                    <input type="button" value="เปลี่ยนเวลาทำการ" style="width:17%" ng-click="BTN_UPDATE_OPENTIME_LCN()" />
                 </td>
 
             </tr>
@@ -123,14 +130,14 @@
                             เเบบบ้านเลขที่ยาว
                         </option>
                     </select>
-                    <input type="button" value="เปลี่ยนรูปแบบ pdf" style="width:17%" ng-click="BTN_UPDATE_TEMPLATE_LCN()"/>
+                    <input type="button" value="เปลี่ยนรูปแบบ pdf" style="width:17%" ng-click="BTN_UPDATE_TEMPLATE_LCN()" />
                 </td>
             </tr>
         </table>
         <br />
 
         <h1>แก้ไขวันที่ให้ไว้ ณ และปีที่หมดอายุ</h1>
-        <table style="width:100%" >
+        <table style="width:100%">
             <tr>
                 <td style="width:20%">
                     วันที่ให้ไว้ ณ :
@@ -157,7 +164,7 @@
         <h1>รูปถ่ายที่แนบในใบอนุญาต</h1>
         <div>
 
-            <img data-ng-src="data:image/png;base64,{{INFO_LIST.dalcn.IMAGE_BSN}}" width="20%" height="20%" />
+            <img data-ng-src="data:image/png;base64,{{INFO_LIST.dalcn.IMAGE_BSN}}" stye="width:20%;height:20% " />
 
         </div>
         <table>
@@ -189,7 +196,7 @@
                 </tr>
             </table>
 
-    
+
             <div class="row">
                 <div class="col-sm-12">
                     <div class="card" style=" border-top: 10px solid #277210;">
@@ -198,7 +205,7 @@
                                 <tr>
                                     <th>ชื่อสถานที่</th>
                                     <th>ที่อยู่ตามทะเบียนราษฎร์</th>
-                                   
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -206,11 +213,11 @@
                                     <td>{{cc.thanameplace}}</td>
                                     <td>{{cc.fulladdr}}</td>
                                     @*<td>
-                                        <span class="fa fa-eye"></span>
-                                        <a ng-click="SELECT_DH(cc)">
-                                            เลือก
-                                        </a>
-                                    </td>*@
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="SELECT_DH(cc)">
+                                                เลือก
+                                            </a>
+                                        </td>*@
                                 </tr>
                             </tbody>
                         </table>
@@ -263,7 +270,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <hr />                 
+                    <hr />
                 </div>
             </div>
         </div>

@@ -1,8 +1,16 @@
 ﻿@Code
     ViewData("Title") = "INPUT_YORSOR3_20_TAN"
 End Code
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_subtitute()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:24px;">
         <div>
@@ -27,12 +35,12 @@ End Code
                     </table>
                 </div>
                 @*<div class="col-md-6 offset-md-4">
-                    <table style="width:17%" align="right" border="1">
-                        <tr>
-                            <td style="width:100%"><img src="..." class="rounded float-end" alt="...">ที่ปิดรูปถ่ายผู้ขอใบแทนใบอนุญาตหรือผู้ดำเนินกิจการ ขนาด 3x4 เซนติเมตร</td>
-                        </tr>
-                    </table>
-                </div>*@
+                        <table style="width:17%" align="right" border="1">
+                            <tr>
+                                <td style="width:100%"><img src="..." class="rounded float-end" alt="...">ที่ปิดรูปถ่ายผู้ขอใบแทนใบอนุญาตหรือผู้ดำเนินกิจการ ขนาด 3x4 เซนติเมตร</td>
+                            </tr>
+                        </table>
+                    </div>*@
             </div>
         </div>
         <br />
@@ -178,5 +186,5 @@ End Code
         </div>
     </div>
 
-    </div>
+</div>
 

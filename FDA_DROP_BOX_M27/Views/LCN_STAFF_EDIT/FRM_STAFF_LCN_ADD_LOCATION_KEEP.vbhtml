@@ -1,10 +1,14 @@
-﻿<script>
+﻿
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
+<script src="../Scripts_angular/CENTER_SV.js"></script>
+<script src="../Scripts_angular/LCN_STAFF_EDIT_CTRL.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
 </script>
-<style>
-</style>
-<script src="~/Scripts_angular/CENTER_SV.js"></script>
-<script src="~/Scripts_angular/LCN_STAFF_EDIT_CTRL.js"></script>
+
 <div ng-controller="LCN_STAFF_EDIT_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()">
     <h1>เลือกสถานที่เก็บ </h1>
     <table style="width:100%">
@@ -13,8 +17,8 @@
                 ชื่อสถานที่เก็บ
             </td>
             <td>
- 
-                <select class="dropdown" ng-model="LIST_EDIT_LCN.LOCATION_SELECT" ng-change="getdetails_1(LIST_EDIT_LCN.LOCATION_SELECT)">
+
+                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_EDIT_LCN.LOCATION_SELECT" ng-change="getdetails_1(LIST_EDIT_LCN.LOCATION_SELECT)">
                     <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
                 </select>
             </td>
@@ -23,7 +27,7 @@
             <td style="padding-left:5%">
                 ที่เก็บ (ใหม่)
             </td>
-            <td >
+            <td>
                 <label>{{LIST_LABEL.fulladdr}}</label>
             </td>
         </tr>

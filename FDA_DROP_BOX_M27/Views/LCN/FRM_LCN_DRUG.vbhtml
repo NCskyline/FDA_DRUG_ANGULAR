@@ -9,7 +9,7 @@ End Code
 @*<link href="../css/bootstrap_limitless.min.css" rel="stylesheet" />*@
 
 <div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP">
-    <div class="content-part " style="width:100%;font-family:'Taviraj'">
+    <div style="width:100%;font-family:'Taviraj'">
         @*<div class="part part-1-3 ic">
                 <ul class="listree">
                     <li>
@@ -161,14 +161,12 @@ End Code
             </div>*@
 
 
-        <div class="part part-2-3 ic" style="width:100%;">
-
-
+        <div >
             <div style="width:100%;">
                 <div>
                     <table width="100%" style="font-family:'Taviraj'">
                         <tr>
-                            <td width="40%">ใบอนุญาต  ({{lcnnoType}})</td>
+                            <td width="40%">ใบอนุญาต  {{lcnnoType}}</td>
 
                             <td align="right">
                                 <button class="btn btn-lg" ng-click="BTN_INPUT()">สร้างคำขอ</button>
@@ -218,18 +216,18 @@ End Code
                                 </div>*@
                             </div>
 
-                            </div>
                         </div>
                     </div>
-
-
                 </div>
+
+
             </div>
-
-
-
-
         </div>
+
+
+
+
     </div>
+</div>
 
 

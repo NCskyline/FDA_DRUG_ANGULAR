@@ -1,10 +1,15 @@
 ﻿@Code
     ViewData("Title") = "FRM_STAFF_LCN_BSN_EDIT_ADDR"
 End Code
-
+<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
-@*<script src="~/Scripts_angular/LCN_EDIT_CTRL.js"></script>*@
 <script src="~/Scripts_angular/LCN_STAFF_EDIT_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
 
 <div ng-controller="LCN_STAFF_EDIT_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" class="ic">
 
@@ -16,15 +21,15 @@ End Code
             <tr>
                 <td align="right" style="width:15%;">เลขบัตรประชาชน</td>
                 <td style="padding-left:1%;">
-                    
+
                     <input class="form-control inline" ng-model="DATA_BSN.DALCN_LOCATION_BSN.BSN_IDENTIFY" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
             <tr>
                 <td align="right">คำนำหน้าชื่อ</td>
                 <td style="padding-left:1%;">
-                    
-                    <select class="dropdown" ng-model="DATA_BSN.DALCN_LOCATION_BSN.BSN_PREFIXTHAICD" >
+
+                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="DATA_BSN.DALCN_LOCATION_BSN.BSN_PREFIXTHAICD">
                         <option ng-repeat="x in PREFIX_LIST" value="{{x.prefixcd}}">{{x.thanm}}</option>
                     </select>
                 </td>
@@ -83,7 +88,7 @@ End Code
                     จังหวัด
                 </td>
                 <td style="padding-left:1%;">
-                    <select class="dropdown" ng-model="DATA_BSN.DALCN_LOCATION_BSN.CHANGWAT_ID" ng-change="Bind_dll_amp(DATA_BSN.DALCN_LOCATION_BSN.CHANGWAT_ID)">
+                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="DATA_BSN.DALCN_LOCATION_BSN.CHANGWAT_ID" ng-change="Bind_dll_amp(DATA_BSN.DALCN_LOCATION_BSN.CHANGWAT_ID)">
                         <option ng-repeat="x in REF_CHNGWT" value="{{x.chngwtcd}}">{{x.thachngwtnm}}</option>
                     </select>
                 </td>
@@ -93,7 +98,7 @@ End Code
                     เขต/อำเภอ
                 </td>
                 <td style="padding-left:1%;">
-                    <select class="dropdown" ng-model="DATA_BSN.DALCN_LOCATION_BSN.AMPHR_ID" ng-change="Bind_dll_tmb(DATA_BSN.DALCN_LOCATION_BSN.CHANGWAT_ID , DATA_BSN.DALCN_LOCATION_BSN.AMPHR_ID)">
+                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="DATA_BSN.DALCN_LOCATION_BSN.AMPHR_ID" ng-change="Bind_dll_tmb(DATA_BSN.DALCN_LOCATION_BSN.CHANGWAT_ID , DATA_BSN.DALCN_LOCATION_BSN.AMPHR_ID)">
                         <option ng-repeat="x in REF_AMP" value="{{x.amphrcd}}">{{x.thaamphrnm}}</option>
                     </select>
                 </td>
@@ -104,7 +109,7 @@ End Code
                 </td>
                 <td style="padding-left:1%;">
 
-                    <select class="dropdown" ng-model="DATA_BSN.DALCN_LOCATION_BSN.TUMBON_ID">
+                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="DATA_BSN.DALCN_LOCATION_BSN.TUMBON_ID">
                         <option ng-repeat="x in REF_TMB" value="{{x.thmblcd}}">{{x.thathmblnm}}</option>
                     </select>
                 </td>
@@ -143,7 +148,7 @@ End Code
             </tr>
             <tr>
                 <td align="center" colspan="2">
-                    
+
                     <div style="text-align:center;">
                         <input type="button" value="แก้ไข" />
                         <input type="button" value="กลับหน้าหลัก" />
