@@ -30,7 +30,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 sessionStorage.CITIZEN_ID = datas.data.CITIZEN_ID;
                 sessionStorage.CITIZEN_ID_AUTHORIZE = datas.data.CITIZEN_ID_AUTHORIZE;
                 sessionStorage.THANM = datas.data.THANM;
-
+                sessionStorage.PVCODE = datas.data.PVCODE;
                 $scope.SET_MAIN_PAGE1 = datas.data.SET_MAIN_PAGE1;
                 $scope.SET_MAIN_PAGE2 = datas.data.SET_MAIN_PAGE2;
                 $scope.SET_MAIN_PAGE3 = datas.data.SET_MAIN_PAGE3;
@@ -66,15 +66,62 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         if (BTN_GROUP == '0') {
             gg;
         } else if (BTN_GROUP == '1') {
-            gg;
+            if (SEQ == '4') {
+
+            } else if (SEQ == '5') {
+
+            } else if (SEQ == '6') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_LCN_DRUG_STAFF');
+                if (sessionStorage.PVCODE == '10') {
+                    var dataLcn = CENTER_SV.SP_STAFF_DALCN();
+                    dataLcn.then(function (datas) {
+                        $scope.DATA_LCN_STAFF = datas.data;
+                    }, function () { });
+                } else {
+                    var dataLcn = CENTER_SV.SP_STAFF_DALCN_BY_PVNCD(sessionStorage.PVCODE);
+                    dataLcn.then(function (datas) {
+                        $scope.DATA_LCN_STAFF = datas.data;
+                    }, function () { });
+
+                }
+            } else if (SEQ == '7') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_EDIT_LCN_STAFF_MAIN');
+
+                var dataedit = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
+                dataedit.then(function (datas) {
+                    $scope.DATA_LCN_EDIT_STAFF = datas.data;
+                }, function () { });
+            } else if (SEQ == '8') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_EDIT_LCN_STAFF_MAIN');
+
+                var dataedit = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
+                dataedit.then(function (datas) {
+                    $scope.DATA_LCN_EDIT_STAFF = datas.data;
+                }, function () { });
+            } else if (SEQ == '9') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_EDIT_LCN_STAFF_MAIN');
+
+                var dataedit = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
+                dataedit.then(function (datas) {
+                    $scope.DATA_LCN_EDIT_STAFF = datas.data;
+                }, function () { });
+            }
         } else if (BTN_GROUP == '2') {
             gg;
         } else if (BTN_GROUP == '3') {
 
             if (SEQ == '1') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('../DH_STAFF/FRM_STAFF_CER_MAIN');
+                var dataLo = CENTER_SV.SP_STAFF_CER();
+                dataLo.then(function (datas) {
+                    $scope.LIST_GMP_STAFF = datas.data;
+                }, function () { });
             } else if (SEQ == '2') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('../DH_STAFF/FRM_DH_MAIN_STAFF');
+                var dataLo = CENTER_SV.SP_STAFF_DH15RQT();
+                dataLo.then(function (datas) {
+                    $scope.LIST_DH_STAFF = datas.data;
+                }, function () { });
             } else if (SEQ == '3') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('../DH_STAFF/FRM_CHEMICAL_STAFF_MAIN');
             }
