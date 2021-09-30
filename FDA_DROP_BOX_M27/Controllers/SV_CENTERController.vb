@@ -44,6 +44,24 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
 
         End Function
+        Function SP_DRRGT_TABEAN_STAFF() As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_DRRGT_TABEAN_STAFF()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
+
+        Function SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS(ByVal process_id As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS(process_id)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
+
         Function SP_STAFF_CER() As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO
