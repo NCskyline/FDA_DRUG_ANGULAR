@@ -60,6 +60,22 @@ Public Class BAO
 
         Return dt
     End Function
+    Public Function SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS(ByVal process_id As String) As DataTable
+        Dim sql As String = "exec SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS @process_id='" & process_id & "'"
+        Dim clsds As New ClassDataset
+        Dim dta As New DataTable
+        dta = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dta.TableName = "SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS"
+        Return dta
+    End Function
+    Public Function SP_DRRGT_TABEAN_STAFF() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_DRRGT_TABEAN_STAFF "
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+
+        Return dt
+    End Function
     Public Function SP_DALCN_EDIT_REQUEST_STAFF() As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_DALCN_EDIT_REQUEST_STAFF "

@@ -3,7 +3,8 @@
     Layout = ""
 End Code
 <br />
-<h4>คำขอขึ้นทะเบียนยา</h4><br />
+<h4> คำขอแก้ไขเปลี่ยนแปลงทะเบียน</h4>
+<br />
 <div class="row">
     <div class="col-sm-12" style="width:100%;">
         <div class="card" style=" border-top: 10px solid #277210;">
@@ -12,30 +13,28 @@ End Code
                     <tr>
                         <td>เลขดำเนินการ</td>
                         <td>เลขรับ</td>
-                        <td>สถานะ</td>
+                        <td width="10%">เลขทะเบียน</td>
+                        
                         <td>ชื่อภาษาไทย</td>
                         <td>ชื่อภาษาอังกฤษ</td>
-                        <td>รหัสการดำเนินการ</td>
-                        <td>เหตุผลการคืนคำขอ</td>
+                        <td>รายละเอียดการแก้ไข</td>
+                        <td>สถานะ</td>
                         <td>ผู้รับผิดชอบคำขอ</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="data in DATA_TABEAN_STAFF">
+                    <tr ng-repeat="data in DATA_EDIT_TABEAN_STAFF">
                         <td>{{data.TR_ID}}</td>
                         <td>{{data.RCVNO_MANUAL}}</td>
-                        <td>{{data.STATUS_NAME_STAFF}}</td>
+                        <td>{{data.rgtno_display}}</td>
+                        
                         <td>{{data.thadrgnm}}</td>
-
                         <td>{{data.engdrgnm}}</td>
-                        <td>{{data.trans_code}}</td>
-                        <td>{{data.REMARK}}</td>
+                        <td>{{data.EDIT_DESCRIPTION}}</td>
+                        <td>{{data.STATUS_NAME}}</td>
                         <td>{{data.STAFF_NAME}}</td>
                         <td>
                             <span class="fa fa-eye"></span>
@@ -46,25 +45,7 @@ End Code
                         <td>
                             <span class="fa fa-eye"></span>
                             <a ng-click="">
-                                เพิ่มข้อมูลส่วนที่ 2
-                            </a>
-                        </td>
-                        <td>
-                            <span class="fa fa-eye"></span>
-                            <a ng-click="">
-                                แบบฟอร์มทะเบียน
-                            </a>
-                        </td>
-                        <td>
-                            <span class="fa fa-eye"></span>
-                            <a ng-click="">
                                 ใบนัด
-                            </a>
-                        </td>
-                        <td>
-                            <span class="fa fa-eye"></span>
-                            <a ng-click="">
-                                เพิ่มการหยุดและขยายเวลา
                             </a>
                         </td>
                         <td>

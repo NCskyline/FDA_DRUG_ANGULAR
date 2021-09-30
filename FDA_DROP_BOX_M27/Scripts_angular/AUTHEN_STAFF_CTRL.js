@@ -107,7 +107,28 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 }, function () { });
             }
         } else if (BTN_GROUP == '2') {
-            gg;
+            if (SEQ == '2') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/TABEAN_YA_MAIN_STAFF');
+
+                var dataedit = CENTER_SV.SP_DRRGT_TABEAN_STAFF();
+                dataedit.then(function (datas) {
+                    $scope.DATA_TABEAN_STAFF = datas.data;
+                }, function () { });
+            } else if (SEQ == '3') {
+
+
+            } else if (SEQ == '4') {
+                
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_RGT_EDIT_MAIN_STAFF');
+
+                var dataedit = CENTER_SV.SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS('130099');
+                dataedit.then(function (datas) {
+                    $scope.DATA_EDIT_TABEAN_STAFF = datas.data;
+                }, function () { });
+            }
+
+
+            
         } else if (BTN_GROUP == '3') {
 
             if (SEQ == '1') {

@@ -52,7 +52,26 @@
         });
         return response;
     };
+    
+    this.SP_DRRGT_TABEAN_STAFF = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_DRRGT_TABEAN_STAFF"),
 
+        });
+        return response;
+    };
+    
+    this.SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS = function (process_id) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS"),
+            params: {
+                process_id: process_id
+            }
+        });
+        return response;
+    };
     this.SP_MASTER_CER_PK_BY_FK_IDA = function (IDA) {
         var response = $http({
             method: "post",
