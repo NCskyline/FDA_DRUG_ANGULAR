@@ -4,6 +4,13 @@ End Code
 
 @*<h2>INPUT_PICS</h2>*@
 
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('select').selectpicker('refresh');
+        })
+</script>
+
+
 <div class="ic">
     <h2 style="font-family:'Taviraj';font-size:40px;">
         แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
@@ -38,8 +45,8 @@ End Code
                 4. ประเทศ (Country)<font color="red">*</font> :
             </td>
             <td>
-                <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID">
-                    <option value="0">--กรุณาเลือก--</option>
+                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID">
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
             </td>
@@ -57,8 +64,8 @@ End Code
                 5. สถานที่ผลิตได้มาตรฐาน GMP ตาม (โปรดระบุ) :
             </td>
             <td>
-                <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD">
-                    <option value="0">--กรุณาเลือก--</option>
+                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD">
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                     <option value="1">PIC/S</option>
                     <option value="2">National GMP</option>
                     <option value="3">WHO GMP</option>
@@ -98,8 +105,8 @@ End Code
                 8. ประเทศผู้ซื้อ (Purchaser's Country*)<font color="red">*</font>
             </td>
             <td>
-                <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.BUYER_COUNTRY">
-                    <option value="0">--กรุณาเลือก--</option>
+                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.BUYER_COUNTRY">
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
 
@@ -111,8 +118,8 @@ End Code
                 9. มาตราฐานสถานที่ผลิตยาสำเร็จรูปของประเทศผู้ซื้อได้ GMP ตาม (โปรดระบุ)<font color="red">*</font> :
             </td>
             <td>
-                <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.BUYER_STANDARD">
-                    <option value="0">--กรุณาเลือก--</option>
+                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.BUYER_STANDARD">
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                     <option value="1">ประเทศตามชื่อสมาชิก PIC/S</option>
                 </select>
             </td>

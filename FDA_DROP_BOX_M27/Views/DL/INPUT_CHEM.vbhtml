@@ -4,6 +4,13 @@ End Code
 
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/DL_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div class="ic" ng-controller="DL_CTRL" ng-app="ANGULAR_APP">
 
     <table width="70%">
@@ -23,7 +30,7 @@ End Code
 
                         <td>สูตรที่</td>
                         <td>
-                            <select ID="ddl_each_no" class="form-control">
+                            <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ID="ddl_each_no">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -45,7 +52,7 @@ End Code
                             <input type="text" class="form-control" ID="txt_each" />
                         </td>
                         <td>
-                            <select class="form-control" id="ddl_unit">
+                            <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" id="ddl_unit">
                                 <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                             </select>
                         </td>
@@ -103,7 +110,7 @@ End Code
         </tr>
         <tr>
             //ตารางสาร
-            
+
         </tr>
 
         <tr>
@@ -118,7 +125,7 @@ End Code
                     <tr>
                         <td>ปริมาณยา/ปริมาณชีววัตถุ</td>
                         <td>
-                            <select ID="ddl_CAS_TYPE" class="form-control">
+                            <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ID="ddl_CAS_TYPE">
                                 <option value="1">ปริมาณยา</option>
                                 <option value="2">ปริมาณชีววัตถุ</option>
                             </select>
@@ -134,8 +141,8 @@ End Code
                         <td>เงื่อนไข</td>
                         <td colspan="3" align="left">
 
-                            <select ID="ddl_remark1" class="form-control">
-                                <option>กรุณาเเลือก</option>
+                            <select ID="ddl_remark1" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
+                                @*<option>กรุณาเเลือก</option>*@
                                 <option value="1">&lt;=</option>
                                 <option value="2">&lt;</option>
                                 <option value="3">=</option>
@@ -152,8 +159,8 @@ End Code
                         <td>หน่วย :</td>
                         <td>
                             @*<telerik:RadComboBox ID="rcb_unit" Runat="server" Filter="Contains">
-        </telerik:RadComboBox>*@
-                            <select class="form-control" id="rcb_unit2">
+                                </telerik:RadComboBox>*@
+                            <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" id="rcb_unit2">
                                 <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                             </select>
                         </td>
@@ -167,11 +174,11 @@ End Code
                         </td>
                         <td>หน่วย :</td>
                         <td>
-                            <select class="form-control" id="rcb_unit2">
+                            <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" id="rcb_unit2">
                                 <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                             </select>
                             @*<telerik:RadComboBox ID="rcb_unit2" Runat="server" Filter="Contains">
-        </telerik:RadComboBox>*@
+                                </telerik:RadComboBox>*@
                         </td>
 
 
@@ -205,7 +212,7 @@ End Code
                             หน่วยตั้งต้น :
                         </td>
                         <td>
-                            <select class="form-control" id="ddl_unit2">
+                            <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" id="ddl_unit2">
                                 <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                             </select>
                         </td>
@@ -229,7 +236,7 @@ End Code
                             หน่วยสุดท้าย :
                         </td>
                         <td>
-                            <select class="form-control" id="ddl_unit3">
+                            <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" id="ddl_unit3">
                                 <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                             </select>
                         </td>
@@ -269,7 +276,7 @@ End Code
                     <tr>
                         <td>สูตรที่</td>
                         <td>
-                            <select ID="ddl_set" style="width:90px;" class="form-control">
+                            <select ID="ddl_set" style="width:90px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -306,7 +313,7 @@ End Code
                         </td>
                         <td>
 
-                            <select ID="ddl_aori" class="form-control">
+                            <select ID="ddl_aori" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                                 <option>A</option>
                                 <option>I</option>
                             </select>
@@ -358,7 +365,7 @@ End Code
             </td>
         </tr>
         <tr>
-            <td align="center" >
+            <td align="center">
                 <table width="100%">
                     <tr>
                         <td><asp:Button ID="btn_save_cas" runat="server" Text="บันทึกสารที่เลือก" Style="display:none;" /></td>

@@ -34,9 +34,16 @@
         background-color: black;
     }
 </style>
-
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:24px;">
         <h1 style="text-align:left;font-size:24px;">
@@ -467,8 +474,8 @@
                     ชื่อ
                 </td>
                 <td style="width:10%">
-                    <select class="dropdown" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                        <option value="0">--กรุณาเลือก--</option>
+                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
+                        @*<option value="0">--กรุณาเลือก--</option>*@
                         <option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
                     </select>
                 </td>
@@ -591,8 +598,8 @@
                 </td>
                 <td>
                    
-                    <select class="dropdown" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                        <option value="">--กรุณาเลือก--</option>
+                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
+                        @*<option value="">--กรุณาเลือก--</option>*@
                         <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
                     </select>
                 </td>
@@ -685,7 +692,7 @@
         <div style="margin-left:5%;font-size:20px;">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
         <br />
 
-        <div style=";font-size:20px;"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
+        <div style="font-size:20px;"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
         <div style="margin-left:5%;font-size:20px;"><strong>๕.๑ กรณีขอรับใบอนุญาต (กรณีรายใหม่)</strong></div>
         <table style="width:90%;font-size:20px ;margin-left:10%" >
             <tr>

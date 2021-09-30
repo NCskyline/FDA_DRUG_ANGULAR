@@ -9,6 +9,7 @@ End Code
             $('select').selectpicker('refresh');
         })
     </script>
+
 <div class="ic" >
     <h2 style="font-family:'Taviraj';font-size:24px;">
         แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ
@@ -51,8 +52,8 @@ End Code
                 5. ประเทศ (Country)<font color="red">*</font> :
             </td>
             <td>
-                <select style="font-family:'Taviraj';font-size:20px;" id="ddl_country1" ng-model="LIST_GMP.CER.COUNTRY_ID">
-                    <option value="0">--กรุณาเลือก--</option>
+                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" id="ddl_country1" ng-model="LIST_GMP.CER.COUNTRY_ID">
+                   
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
             </td>
@@ -115,8 +116,8 @@ End Code
                 ประเทศของหน่วยงานที่ออกใบรับรอง :
             </td>
             <td>
-                <select style="font-family:'Taviraj';font-size:20px;" id="ddl_country2" ng-model="LIST_GMP.CER.COUNTRY_OF_DEPARTMENT_IDA">
-                    <option value="0">--กรุณาเลือก--</option>
+                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" id="ddl_country2" ng-model="LIST_GMP.CER.COUNTRY_OF_DEPARTMENT_IDA">
+                    
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
             </td>

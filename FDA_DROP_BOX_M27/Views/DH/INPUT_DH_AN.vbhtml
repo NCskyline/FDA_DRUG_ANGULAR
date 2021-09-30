@@ -1,8 +1,17 @@
 ﻿@Code
     Layout = ""
 End Code
+
+@*<script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
-<script src="../Scripts_angular/DH_CTRL.js"></script>
+<script src="../Scripts_angular/DH_CTRL.js"></script>*@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div class="ic" style="font-family:'Taviraj';font-size:20px;">
 
     <center>
@@ -26,8 +35,8 @@ End Code
                 Ref Cer
             </td>
             <td>
-                <select class="form-control" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA" ng-change="Getdetails_REF_CER(LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA)">
-                    <option value="0">--กรุณาเลือก--</option>
+                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA" ng-change="Getdetails_REF_CER(LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA)">
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                     <option ng-repeat="x in REF_CERT" value="{{x.IDA}}">{{x.CER_NUMBER}}</option>
                 </select>
             </td>
@@ -38,7 +47,7 @@ End Code
             <td>
                 ชื่อผู้ผลิต
             </td>
-            <td width="30%"  style="border-bottom:dotted;border-bottom-width:thin;">
+            <td width="30%" style="border-bottom:dotted;border-bottom-width:thin;">
                 <label>
                     {{LIST_REF_CERT.CER.FOREIGN_LOCATION_NAME}}
                 </label>
@@ -46,7 +55,7 @@ End Code
             <td>
                 ประเทศ
             </td>
-            <td width="20%"  style="border-bottom:dotted;border-bottom-width:thin;">
+            <td width="20%" style="border-bottom:dotted;border-bottom-width:thin;">
                 <label>
                     {{LIST_REF_CERT.COUNTRY_NAME}}
                 </label>
@@ -63,8 +72,8 @@ End Code
                 ประเทศ
             </td>
             <td>
-                <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
-                    <option value="0">--กรุณาเลือก--</option>
+                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
             </td>

@@ -34,7 +34,12 @@
         background-color: black;
     }
 </style>
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
@@ -275,19 +280,19 @@
                 </td>
                 <td style="text-align:left;width:30%;border-bottom:dotted;border-bottom-width:thin;">
                     @*<form action="javascript:void(0)">
-                        <table>
-                            <tr>
-                                <td>
-                                    <input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'Taviraj';" type="text" />
-                                </td>
-                                <td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>
-                            </tr>
-                        </table>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'Taviraj';" type="text" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                    </td>
+                                </tr>
+                            </table>
 
 
-                    </form>*@
+                        </form>*@
                     <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
                 </td>
             </tr>

@@ -1,16 +1,19 @@
-﻿<script src="../Scripts_angular/CENTER_SV.js"></script>
+﻿
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
+<script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" class="ic" ng-init="pageload_subtitute()">
     <div class="content-part " style="width:100%;font-family:'Taviraj'">
         <div style="font-family:'Taviraj';font-size:20px;">
             <div>
-
-                <h1>
-                    <center>
-                        แบบ ข.ย.๑๖
-                    </center>
-
-                </h1>
+                <h1><center>แบบ ข.ย.๑๖</center></h1>
             </div>
             <table style="width:100%">
                 <tr>
@@ -184,8 +187,8 @@
                 <tr>
                     <td><input type="checkbox" ng-model="LIST_LCN.REQUEST_TYPE" disabled />ย้ายสถานที่ขายยาชื่อ</td>
                     <td>
-                        <select class="dropdown" style="font-family:'Taviraj'" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails_lct(LIST_LCN.LOCATION_SELECT)">
-                            <option value="0">--กรุณาเลือก--</option>
+                        <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj'" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails_lct(LIST_LCN.LOCATION_SELECT)">
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                             <option ng-repeat="x in REF_LOCATION" value="{{x.IDA}}">{{x.thanameplace}}</option>
                         </select>
                     </td>

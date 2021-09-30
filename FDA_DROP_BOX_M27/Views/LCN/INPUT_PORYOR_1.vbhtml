@@ -11,6 +11,9 @@
         return checked;
     };
 
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
 </script>
 
 <style>
@@ -39,8 +42,10 @@
         margin-top: 5%;
     }
 </style>
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
+
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
     <div style="font-family:'Taviraj'">
 
@@ -407,8 +412,8 @@
                     ชื่อสถานที่เก็บ ( 1 ) :
                 </td>
                 <td>
-                    <select class="dropdown" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                        <option value="0">--กรุณาเลือก--</option>
+                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
+                        @*<option value="0">--กรุณาเลือก--</option>*@
                         <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
                     </select>
                 </td>
@@ -483,8 +488,8 @@
                     ชื่อ
                 </td>
                 <td style="width:10%">
-                    <select class="dropdown" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                        <option value="0">--กรุณาเลือก--</option>
+                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
+                        @*<option value="0">--กรุณาเลือก--</option>*@
                         <option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
                     </select>
                 </td>
@@ -519,8 +524,8 @@
                     หน้าที่ (ถ้ามี)
                 </td>
                 <td>
-                    <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_PHR_ADD.PHR_JOB_TYPE">
-                        <option value="0">--กรุณาเลือก--</option>
+                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_PHR_ADD.PHR_JOB_TYPE">
+                        @*<option value="0">--กรุณาเลือก--</option>*@
                         <option ng-repeat="x in CNT_functnm" value="{{x.functcd}}">{{x.functnm}}</option>
                     </select>
                     @*<div hidden>

@@ -1,5 +1,15 @@
-﻿<script src="../Scripts_angular/CENTER_SV.js"></script>
+﻿
+
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
+<script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_subtitute()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:20px;" class="ic">
         <br />
@@ -148,8 +158,8 @@
                             <td><input type="checkbox" ng-model="LIST_LCN.REQUEST_TYPE" disabled />ย้ายสถานที่นำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรในนามของ</td>
                         <tr>
                             <td>
-                                <select class="dropdown" style="font-family:'Taviraj'" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails_lct(LIST_LCN.LOCATION_SELECT)">
-                                    <option value="0">--กรุณาเลือก--</option>
+                                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj'" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails_lct(LIST_LCN.LOCATION_SELECT)">
+                                    @*<option value="0">--กรุณาเลือก--</option>*@
                                     <option ng-repeat="x in REF_LOCATION" value="{{x.IDA}}">{{x.thanameplace}}</option>
                                 </select>
                             </td>
@@ -189,7 +199,7 @@
             <tr>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp; (๑) ใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรหรือใบแทน</td>
             <tr>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; (๒) แบบแปลนแผนผังสิ่งปลูกส้รางของสถานที่นำหรือสั่งยาแห่งใหม่ จำนวน ๒ ชุด</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; (๒) แบบแปลนแผนผังสิ่งปลูกสร้างของสถานที่นำหรือสั่งยาแห่งใหม่ จำนวน ๒ ชุด</td>
             <tr>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp; (๓) เอกสารแสดงว่าเป็นผู้ได้รับอนุญาต</td>
             </tr>
@@ -204,7 +214,7 @@
         </table>
         <hr />
         <div>หมายเหตุ : &nbsp;(๑) ในกรณีที่ใบอนุญาตสูญหาย ให้นำใบรับแจ้งความของสถานีตำรวจแห่งท้องที่ที่ใบอนุญาตอนุญาตนั้นสูญหายมาด้วย</div>
-        <div>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(๒) ในกรณีที่ใบอนุญาตถูกทำลายในสาระสำคัญ ให้นบใบอนุญาตนั้น มาด้วย</div>
+        <div>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(๒) ในกรณีที่ใบอนุญาตถูกทำลายในสาระสำคัญ ให้แนบใบอนุญาตนั้น มาด้วย</div>
         <div>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(๓) ใส่เครื่องหมาย &#10004 ในช่อง[  ] หน้าข้อความที่ต้องการ</div>
         <div style="text-align:center">
             <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_STT()" value="ย้อนกลับ" />

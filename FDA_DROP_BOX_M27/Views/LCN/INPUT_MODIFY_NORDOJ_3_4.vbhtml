@@ -30,9 +30,16 @@
         background-color: black;
     }
 </style>
-
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:24px;width:100%">
         <h1 style="text-align:left;font-size:24px;">
@@ -344,8 +351,8 @@
                     <strong>สถานที่ใหม่</strong>
                 </td>
                 <td>
-                    <select class="dropdown" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails_lct(LIST_LCN.LOCATION_SELECT)">
-                        <option value="0">--กรุณาเลือก--</option>
+                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails_lct(LIST_LCN.LOCATION_SELECT)">
+                        @*<option value="0">--กรุณาเลือก--</option>*@
                         <option ng-repeat="x in REF_LOCATION" value="{{x.IDA}}">{{x.thanameplace}}</option>
                     </select>
                 </td>
@@ -405,8 +412,8 @@
                     <strong>สถานที่ใหม่</strong>
                 </td>
                 <td>
-                    <select class="dropdown" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                        <option value="0">--กรุณาเลือก--</option>
+                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
+                        @*<option value="0">--กรุณาเลือก--</option>*@
                         <option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
                     </select>
                 </td>

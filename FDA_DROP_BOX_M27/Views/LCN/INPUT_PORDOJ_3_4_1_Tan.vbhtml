@@ -34,8 +34,11 @@
         background-color: black;
     }
 </style>
+
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
+
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:24px;">
 
@@ -276,19 +279,19 @@
                 </td>
                 <td style="text-align:left;width:30%;border-bottom:dotted;border-bottom-width:thin;">
                     @*<form action="javascript:void(0)">
-                        <table>
-                            <tr>
-                                <td>
-                                    <input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'TH SarabunPSK';" type="text" />
-                                </td>
-                                <td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>
-                            </tr>
-                        </table>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'TH SarabunPSK';" type="text" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                    </td>
+                                </tr>
+                            </table>
 
 
-                    </form>*@
+                        </form>*@
                     <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
                 </td>
             </tr>
@@ -475,7 +478,7 @@
         <br />
         <br />
 
-        <div style=";font-size:20px"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
+        <div style="font-size:20px"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
         <div style="margin-left:5%;font-size:20px"><strong>๕.๑ <u>กรณีขอรับใบอนุญาต (กรณีรายใหม่)</u></strong></div>
         <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>

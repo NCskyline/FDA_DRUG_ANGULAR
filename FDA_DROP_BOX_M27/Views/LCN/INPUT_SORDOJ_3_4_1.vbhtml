@@ -34,9 +34,16 @@
         background-color: black;
     }
 </style>
-
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:24px;">
         <h1 style="text-align:left;font-size:24px;">
@@ -295,7 +302,6 @@
                     เลขที่
                 </td>
                 <td style="font-size:20px ;width:15%;text-align:center;border-bottom:dotted;border-bottom-width:thin;">
-                  
                 </td>
                 <td style="font-size:20px;">
                     (กรณีไม่ใช่ผู้มีสัญชาติไทย)
@@ -344,18 +350,18 @@
         </table>
 
         @*<table>
-            <tr>
-                <td>
-                    มีความประสงค์ขอรับอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ เนื่องจาก
-                </td>
+                <tr>
+                    <td>
+                        มีความประสงค์ขอรับอนุญาตนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ เนื่องจาก
+                    </td>
 
-            </tr>
-            <tr>
-                <td>
+                </tr>
+                <tr>
+                    <td>
 
-                </td>
-            </tr>
-        </table>*@
+                    </td>
+                </tr>
+            </table>*@
 
         <br />
 
@@ -369,7 +375,7 @@
                 <td style="width:15%;">
                     ณ สถานที่ชื่อ
                 </td>
-                <td style="border-bottom:dotted;border-bottom-width:thin;"> 
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.thanameplace}}</label>
                 </td>
                 <td>
@@ -416,8 +422,8 @@
                     ชื่อ
                 </td>
                 <td style="width:10%">
-                    <select class="dropdown" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                        <option value="0">--กรุณาเลือก--</option>
+                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
+                        @*<option value="0">--กรุณาเลือก--</option>*@
                         <option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
                     </select>
                 </td>

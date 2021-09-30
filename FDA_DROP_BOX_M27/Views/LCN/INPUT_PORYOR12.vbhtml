@@ -1,5 +1,13 @@
-﻿<script src="../Scripts_angular/CENTER_SV.js"></script>
+﻿<script src="../Scripts_angular/ANGULAR_APP.js"></script>
+<script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:24px;">
         <div>
