@@ -1,17 +1,10 @@
 ﻿
 @Code
-    ViewData("Title") = "MAIN_STAFF_CTRL"
     Layout = ""
 End Code
 
-<div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP">
-    <div class="content-part " style="width:100%;font-family:'Taviraj'">
+@*<div ng-controller="AUTHEN_STAFF_CTRL" ng-app="ANGULAR_APP">*@
 
-        <div class="part part-2-3 ic" style="width:100%;">
-
-
-            <div style="width:100%;">
-                <div>
                     <div class="row">
                         <div class="col-sm-12" style="width:100%;">
                             <div class="card" style=" border-top: 10px solid #277210;">
@@ -64,14 +57,9 @@ End Code
 
                         </div>
                     </div>
-                </div>
-
-
-            </div>
-        </div>
-
+       
 
 
 
     </div>
-</div>
+@*</div>*@

@@ -21,8 +21,7 @@
     <OptionInfer>On</OptionInfer>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>
-    </Use64BitIISExpress>
+    <Use64BitIISExpress>false</Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -190,7 +189,9 @@
     <Compile Include="Controllers\DLController.vb" />
     <Compile Include="Controllers\DRController.vb" />
     <Compile Include="Controllers\DR_EDIT_REQUESTController.vb" />
+    <Compile Include="Controllers\DR_STAFFController.vb" />
     <Compile Include="Controllers\LCNController.vb" />
+    <Compile Include="Controllers\LCN_STAFFController.vb" />
     <Compile Include="Controllers\LCN_STAFF_EDITController.vb" />
     <Compile Include="Controllers\MAIN_STAFFController.vb" />
     <Compile Include="Controllers\OtherController.vb" />

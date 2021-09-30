@@ -2293,6 +2293,7 @@ Namespace Controllers
                 _CLS.THANM = "นายทดสอบ ระบบ"
                 _CLS.TOKEN = TOKEN
                 _CLS.CODE = "900"
+                _CLS.PVCODE = 10
                 _CLS.SET_MAIN_PAGE1 = GET_BTN_DATA(0, 21020)
                 _CLS.SET_MAIN_PAGE2 = GET_BTN_DATA(1, 21020)
                 _CLS.SET_MAIN_PAGE3 = GET_BTN_DATA(2, 21020)

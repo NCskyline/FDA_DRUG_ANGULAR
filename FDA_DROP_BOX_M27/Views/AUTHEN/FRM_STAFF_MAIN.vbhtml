@@ -2,7 +2,7 @@
 <script src="../Scripts_angular/AUTHEN_STAFF_CTRL.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 
-<div ng-controller="AUTHEN_STAFF_CTRL" ng-app="ANGULAR_APP">
+<div ng-controller="AUTHEN_STAFF_CTRL" ng-app="ANGULAR_APP" style="font-family:'Taviraj'">
 
     <div class="content-part no-pm">
         <div class="part part-1-3">

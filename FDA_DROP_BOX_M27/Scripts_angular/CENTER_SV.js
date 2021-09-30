@@ -43,6 +43,15 @@
         });
         return response;
     };
+    
+    this.SP_STAFF_DALCN = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STAFF_DALCN"),
+            
+        });
+        return response;
+    };
 
     this.SP_MASTER_CER_PK_BY_FK_IDA = function (IDA) {
         var response = $http({
