@@ -184,18 +184,16 @@ End Code
             <h2 style="font-family:'Taviraj';font-size:20px;">
                 ไฟล์แนบ
             </h2>
-            <table width="100%" style="font-family:'Taviraj';font-size:20px;">
+            <table class="table" style="width:100%">
                 <tr>
-                    <td>
-                        ใบ CER GMP
-                    </td>
+                    <td>ชื่อไฟล์</td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                    <td>{{datas.FILENAME}}</td>
                     <td>
-                        อื่นๆ
+                        <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
                     </td>
-                    <td></td>
                 </tr>
             </table>
         </div>
