@@ -130,7 +130,13 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
 
 
             } else if (SEQ == '6') {
-
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_DS_STAFF_DRUG');
+                
+                var dataedit = CENTER_SV.SP_STAFF_DS();
+                dataedit.then(function (datas) {
+                    $scope.DATA_DS_STAFF = datas.data;
+                }, function () { });
+                
             } else if (SEQ == '996') {
 
             } else if (SEQ == '997') {

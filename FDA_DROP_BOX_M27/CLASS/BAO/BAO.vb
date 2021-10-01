@@ -60,6 +60,19 @@ Public Class BAO
 
         Return dt
     End Function
+    Public Function SP_STAFF_DS() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_STAFF_DS"
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+
+        Return dt
+    End Function
     Public Function SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS(ByVal process_id As String) As DataTable
         Dim sql As String = "exec SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS @process_id='" & process_id & "'"
         Dim clsds As New ClassDataset
@@ -79,7 +92,7 @@ Public Class BAO
     End Function
     '
     Public Function SP_STAFF_NYM_ALL(ByVal PROCESS_ID As String) As DataTable
-        Dim sql As String = "exec SP_STAFF_NYM_ALL @PROCESS_ID='" & txt & "'"
+        Dim sql As String = "exec SP_STAFF_NYM_ALL @PROCESS_ID='" & PROCESS_ID & "'"
         Dim clsds As New ClassDataset
         Dim dta As New DataTable
         dta = clsds.dsQueryselect(sql, _con_d).Tables(0)
