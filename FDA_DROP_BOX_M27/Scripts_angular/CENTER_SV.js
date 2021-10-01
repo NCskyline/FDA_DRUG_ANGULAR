@@ -62,6 +62,15 @@
         return response;
     };
     
+    this.SP_STAFF_DS = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STAFF_DS"),
+
+        });
+        return response;
+    };
+    
     this.SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS = function (process_id) {
         var response = $http({
             method: "post",
