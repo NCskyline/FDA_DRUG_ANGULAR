@@ -1,8 +1,16 @@
 ﻿@Code
     ViewData("Title") = "INPUT_PRODUCCER"
 End Code
+<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/DL_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div class="ic" ng-controller="DL_CTRL" ng-app="ANGULAR_APP">
     <table style="width:100%;" class="table">
         <tr>
@@ -14,7 +22,7 @@ End Code
                 @*<select id="ddl_national">
                         <option>กรุณาเลือก</option>
                     </select>*@
-                <select id="ddl_national" style="width:100px;" class="form-control">
+                <select id="ddl_national" style="width:100px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                     <option ng-repeat="x in CNT_LIST" value="{{x.alpha3}}">{{x.engcntnm}}</option>
                 </select>
                 &nbsp;
@@ -125,4 +133,4 @@ End Code
             </td>
         </tr>
     </table>
-    </div>
+</div>

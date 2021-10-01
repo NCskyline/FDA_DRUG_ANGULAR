@@ -1,8 +1,16 @@
 ﻿@Code
     ViewData("Title") = "INPUT_REGIST_DETAIL"
 End Code
+<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/DL_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div class="ic" ng-controller="DL_CTRL" ng-app="ANGULAR_APP">
     <h2>ข้อมูลทั่วไป</h2>
     <table width="100%">
@@ -17,7 +25,7 @@ End Code
                 แก้ไขเป็น
             </td>
             <td>
-                <select id="ddl_dactg" style="width:100px;" class="form-control">
+                <select id="ddl_dactg" style="width:100px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                     <option ng-repeat="x in dactg" value="{{x.ctgcd}}">{{x.ctgthanm}}</option>
                 </select>
             </td>
@@ -36,7 +44,7 @@ End Code
                 แก้ไขเป็น
             </td>
             <td>
-                <select id="ddl_drclass" style="width:100px;" class="form-control">
+                <select id="ddl_drclass" style="width:100px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                     <option ng-repeat="x in drclass" value="{{x.classcd}}">{{x.thaclassnm}}</option>
                 </select>
             </td>
@@ -48,14 +56,14 @@ End Code
             <td>
                 รูปแบบของยา
             </td>
-            <td >
+            <td>
                 <label id="lbl_drdosage"></label>
             </td>
             <td>
                 แก้ไขเป็น
             </td>
             <td>
-                <select id="ddl_drdosage" style="width:100px;" class="form-control">
+                <select id="ddl_drdosage" style="width:100px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                     <option ng-repeat="x in drdosage" value="{{x.dsgcd}}">{{x.thadsgnm}}</option>
                 </select>
             </td>
@@ -70,12 +78,12 @@ End Code
             <td>
                 <label id="lbl_small_unit"></label>
             </td>
-            <td >
+            <td>
                 แก้ไขเป็น
             </td>
             <td>
 
-                <select id="ddl_small_unit" style="width:100px;" class="form-control">
+                <select id="ddl_small_unit" style="width:100px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                     <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                 </select>
             </td>
@@ -94,7 +102,7 @@ End Code
                 แก้ไขเป็น
             </td>
             <td>
-                <select id="ddl_bio_pack" style="width:100px;" class="form-control">
+                <select id="ddl_bio_pack" style="width:100px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                     <option ng-repeat="x in BIO_UNIT" value="{{x.IDA}}">{{x.BIO_UNIT}}</option>
                 </select>
             </td>
@@ -111,7 +119,7 @@ End Code
                 แก้ไขเป็น
             </td>
             <td>
-                <select id="ddl_packaging" style="width:100px;" class="form-control">
+                <select id="ddl_packaging" style="width:100px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                     <option ng-repeat="x in DRUG_PACKAGING" value="{{x.UOP_CODE}}">{{x.PACKAGING_NAME}}</option>
                 </select>
             </td>
@@ -127,7 +135,7 @@ End Code
                 แก้ไขเป็น
             </td>
             <td>
-                <select id="ddl_shape" style="width:100px;" class="form-control">
+                <select id="ddl_shape" style="width:100px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                     <option ng-repeat="x in DRUG_SHAPE" value="{{x.SHAPE_IDA}}">{{x.SHAPE_NAME}}</option>
                 </select>
             </td>
@@ -143,7 +151,7 @@ End Code
                 แก้ไขเป็น
             </td>
             <td>
-                <select id="drug_type" style="width:100px;" class="form-control">
+                <select id="drug_type" style="width:100px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                     <option ng-repeat="x in drkdofdrg" value="{{x.kindcd}}">{{x.thakindnm}}</option>
                 </select>
             </td>
@@ -168,7 +176,7 @@ End Code
             <td>
                 &nbsp;
             </td>
-            <td >
+            <td>
 
                 &nbsp;
             </td>
@@ -181,4 +189,4 @@ End Code
             </td>
         </tr>
     </table>
-    </div>
+</div>

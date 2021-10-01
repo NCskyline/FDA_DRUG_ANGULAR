@@ -79,7 +79,7 @@ Public Class BAO
     End Function
     '
     Public Function SP_STAFF_NYM_ALL(ByVal PROCESS_ID As String) As DataTable
-        Dim sql As String = "exec SP_STAFF_NYM_ALL @PROCESS_ID='" & txt & "'"
+        Dim sql As String = "exec SP_STAFF_NYM_ALL @PROCESS_ID='" & PROCESS_ID & "'"
         Dim clsds As New ClassDataset
         Dim dta As New DataTable
         dta = clsds.dsQueryselect(sql, _con_d).Tables(0)

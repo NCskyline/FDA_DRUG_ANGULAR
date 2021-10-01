@@ -2,6 +2,11 @@
     ViewData("Title") = "INPUT_NAME_DRUG_EXPORT"
 End Code
 
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('select').selectpicker('refresh');
+        })
+</script>
 
 <div>
     <div class="ic">
@@ -20,7 +25,7 @@ End Code
                             </td>
                             <td align="right" width="20%">ประเทศ</td>
                             <td width="20%">
-                                <select ID="DropDownList1">
+                                <select ID="DropDownList1" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                                     <option>กรุณาเเลือก</option>
                                 </select>
                             </td>
@@ -35,24 +40,24 @@ End Code
                             <td align="center" colspan="5">
                                 //ตาราง
                                 @*<telerik:RadGrid ID="RadGrid2" runat="server" AllowPaging="true" PageSize="15" AllowFilteringByColumn="True">
-                                    <MasterTableView AutoGenerateColumns="False">
-                                        <Columns>
-                                            <telerik:GridBoundColumn DataField="IDA" DataType="System.Int32" FilterControlAltText="Filter IDA column" HeaderText="IDA"
-                                                                     SortExpression="IDA" UniqueName="IDA" Display="false" AllowFiltering="true">
-                                            </telerik:GridBoundColumn>
-                                            <telerik:GridBoundColumn DataField="DRUG_NAME" FilterControlAltText="Filter DRUG_NAME column"
-                                                                     HeaderText="ชื่อยาเพื่อการส่งออก" SortExpression="DRUG_NAME" UniqueName="DRUG_NAME">
-                                            </telerik:GridBoundColumn>
-                                            <telerik:GridBoundColumn DataField="engcntnm" FilterControlAltText="Filter engcntnm column"
-                                                                     HeaderText="ประเทศ" SortExpression="engcntnm" UniqueName="engcntnm">
-                                            </telerik:GridBoundColumn>
-                                            <telerik:GridButtonColumn ButtonType="LinkButton" UniqueName="_del" HeaderText="ลบรายการ" ConfirmText="ต้องการลบหรือไม่?"
-                                                                      CommandName="_del" Text="ลบ">
-                                                <HeaderStyle Width="70px" />
-                                            </telerik:GridButtonColumn>
-                                        </Columns>
-                                    </MasterTableView>
-                                </telerik:RadGrid>*@
+                                        <MasterTableView AutoGenerateColumns="False">
+                                            <Columns>
+                                                <telerik:GridBoundColumn DataField="IDA" DataType="System.Int32" FilterControlAltText="Filter IDA column" HeaderText="IDA"
+                                                                         SortExpression="IDA" UniqueName="IDA" Display="false" AllowFiltering="true">
+                                                </telerik:GridBoundColumn>
+                                                <telerik:GridBoundColumn DataField="DRUG_NAME" FilterControlAltText="Filter DRUG_NAME column"
+                                                                         HeaderText="ชื่อยาเพื่อการส่งออก" SortExpression="DRUG_NAME" UniqueName="DRUG_NAME">
+                                                </telerik:GridBoundColumn>
+                                                <telerik:GridBoundColumn DataField="engcntnm" FilterControlAltText="Filter engcntnm column"
+                                                                         HeaderText="ประเทศ" SortExpression="engcntnm" UniqueName="engcntnm">
+                                                </telerik:GridBoundColumn>
+                                                <telerik:GridButtonColumn ButtonType="LinkButton" UniqueName="_del" HeaderText="ลบรายการ" ConfirmText="ต้องการลบหรือไม่?"
+                                                                          CommandName="_del" Text="ลบ">
+                                                    <HeaderStyle Width="70px" />
+                                                </telerik:GridButtonColumn>
+                                            </Columns>
+                                        </MasterTableView>
+                                    </telerik:RadGrid>*@
                             </td>
                         </tr>
                     </table>

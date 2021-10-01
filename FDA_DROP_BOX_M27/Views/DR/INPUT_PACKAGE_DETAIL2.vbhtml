@@ -37,9 +37,9 @@ End Code
                                             <label ID="lbl_small_unit" style="display:none;"></label>
                                         </td>
                                         <td>
-                                            <select id="ddl_munit">
+                                            <select id="ddl_munit" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                                                 <option>
-                                                    กรุณาเลือก
+                                                   
                                                 </option>
                                             </select>
                                         </td>
@@ -59,9 +59,9 @@ End Code
                                 &nbsp;ต่อ
                             </td>
                             <td>
-                                <select id="ddl_bunit">
+                                <select id="ddl_bunit" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                                     <option>
-                                        กรุณาเลือก
+                                        
                                     </option>
                                 </select>
                             </td>

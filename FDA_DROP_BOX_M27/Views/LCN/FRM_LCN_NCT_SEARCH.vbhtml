@@ -8,7 +8,7 @@ End Code
 <script src="~/Scripts_angular/LCN_CTRL.js"></script>
 
 
-<div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP">
+<div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" >
     <div style="font-family:'Taviraj'">
         <div>
             <table width="100%">
