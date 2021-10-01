@@ -1,6 +1,7 @@
 ﻿@Code
     ViewData("Title") = "INPUT_PRODUCCER_IN"
 End Code
+<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/DL_CTRL.js"></script>
 <div class="ic" ng-controller="DL_CTRL" ng-app="ANGULAR_APP">
@@ -127,4 +128,4 @@ End Code
                     </tr>
                 </table>
     </table>
-    </div>
+</div>

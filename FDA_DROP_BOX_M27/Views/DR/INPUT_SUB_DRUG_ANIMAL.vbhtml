@@ -1,12 +1,16 @@
 ﻿@Code
     ViewData("Title") = "INPUT_SUB_DRUG_ANIMAL"
 End Code
-
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('select').selectpicker('refresh');
+        })
+</script>
 <table>
     <tr>
         <td>ส่วนบริโภค :&nbsp;</td>
         <td colspan="4">
-            <select ID="ddl_dramlpart">
+            <select ID="ddl_dramlpart" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                 <option>กรุณาเเลือก</option>
             </select>
         </td>
@@ -19,22 +23,20 @@ End Code
         </td>
 
         <td>
-            <select ID="ddl_STOP_UNIT1">
+            <select ID="ddl_STOP_UNIT1" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                 <option value="1">ชั่วโมง</option>
                 <option value="2">วัน</option>
             </select>
         </td>
 
         <td>
-           
         </td>
 
         <td>
-           
         </td>
 
     </tr>
-    
+
     <tr>
         <td>ขนาดและวิธีการใช้ :</td>
         <td colspan="4">
@@ -57,28 +59,28 @@ End Code
         <td>
             //ตารางสัตว์
             @*<telerik:RadGrid ID="rgAnimals" runat="server" Width="100%">
-                <MasterTableView AutoGenerateColumns="False" DataKeyNames="IDA" NoMasterRecordsText="ไม่พบข้อมูล">
-                    <Columns>
-                        <telerik:GridBoundColumn DataField="IDA" DataType="System.Int32" FilterControlAltText="Filter IDA column" HeaderText="IDA"
-                                                 SortExpression="IDA" UniqueName="IDA" Display="false">
-                        </telerik:GridBoundColumn>
-                        <telerik:GridBoundColumn DataField="ampartnm" FilterControlAltText="Filter ampartnm column" HeaderText="ส่วนบริโภค"
-                                                 SortExpression="ampartnm" UniqueName="ampartnm">
-                        </telerik:GridBoundColumn>
-                        <telerik:GridBoundColumn DataField="stpdrg" FilterControlAltText="Filter stpdrg column"
-                                                 HeaderText="ระยะหยุดยา" SortExpression="stpdrg" UniqueName="stpdrg">
-                        </telerik:GridBoundColumn>
-                        <telerik:GridBoundColumn DataField="packuse" FilterControlAltText="Filter packuse column" HeaderText="ขนาดและวิธีการใช้" SortExpression="packuse" UniqueName="packuse">
-                        </telerik:GridBoundColumn>
-                        <telerik:GridButtonColumn UniqueName="edt" ButtonType="LinkButton" Text="แก้ไขข้อมูล" CommandName="edt">
-                        </telerik:GridButtonColumn>
-                        <telerik:GridButtonColumn ButtonType="LinkButton" UniqueName="_del" HeaderText="ลบรายการ" ConfirmText="ต้องการลบหรือไม่?"
-                                                  CommandName="_del" Text="ลบ">
-                            <HeaderStyle Width="70px" />
-                        </telerik:GridButtonColumn>
-                    </Columns>
-                </MasterTableView>
-            </telerik:RadGrid>*@
+                    <MasterTableView AutoGenerateColumns="False" DataKeyNames="IDA" NoMasterRecordsText="ไม่พบข้อมูล">
+                        <Columns>
+                            <telerik:GridBoundColumn DataField="IDA" DataType="System.Int32" FilterControlAltText="Filter IDA column" HeaderText="IDA"
+                                                     SortExpression="IDA" UniqueName="IDA" Display="false">
+                            </telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="ampartnm" FilterControlAltText="Filter ampartnm column" HeaderText="ส่วนบริโภค"
+                                                     SortExpression="ampartnm" UniqueName="ampartnm">
+                            </telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="stpdrg" FilterControlAltText="Filter stpdrg column"
+                                                     HeaderText="ระยะหยุดยา" SortExpression="stpdrg" UniqueName="stpdrg">
+                            </telerik:GridBoundColumn>
+                            <telerik:GridBoundColumn DataField="packuse" FilterControlAltText="Filter packuse column" HeaderText="ขนาดและวิธีการใช้" SortExpression="packuse" UniqueName="packuse">
+                            </telerik:GridBoundColumn>
+                            <telerik:GridButtonColumn UniqueName="edt" ButtonType="LinkButton" Text="แก้ไขข้อมูล" CommandName="edt">
+                            </telerik:GridButtonColumn>
+                            <telerik:GridButtonColumn ButtonType="LinkButton" UniqueName="_del" HeaderText="ลบรายการ" ConfirmText="ต้องการลบหรือไม่?"
+                                                      CommandName="_del" Text="ลบ">
+                                <HeaderStyle Width="70px" />
+                            </telerik:GridButtonColumn>
+                        </Columns>
+                    </MasterTableView>
+                </telerik:RadGrid>*@
         </td>
     </tr>
     <tr>

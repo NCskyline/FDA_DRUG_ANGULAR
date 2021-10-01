@@ -1,8 +1,15 @@
 ﻿@Code
     ViewData("Title") = "INPUT_CHEM"
 End Code
+<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/DR_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
 
 <div class="ic" ng-controller="DR_CTRL" ng-app="ANGULAR_APP">
     <div>
@@ -23,7 +30,7 @@ End Code
 
                             <td>สูตรที่</td>
                             <td>
-                                <select ID="ddl_each_no">
+                                <select ID="ddl_each_no" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -45,7 +52,7 @@ End Code
                                 <input type="text" ID="txt_each" />
                             </td>
                             <td>
-                                <select class="dropdown" id="ddl_unit">
+                                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" id="ddl_unit">
                                     <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                                 </select>
                             </td>
@@ -118,7 +125,7 @@ End Code
                         <tr>
                             <td>ปริมาณยา/ปริมาณชีววัตถุ</td>
                             <td>
-                                <select ID="ddl_CAS_TYPE">
+                                <select ID="ddl_CAS_TYPE" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                                     <option value="1">ปริมาณยา</option>
                                     <option value="2">ปริมาณชีววัตถุ</option>
                                 </select>
@@ -134,7 +141,7 @@ End Code
                             <td>เงื่อนไข</td>
                             <td colspan="3" align="left">
 
-                                <select ID="ddl_remark1">
+                                <select ID="ddl_remark1" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                                     <option>กรุณาเเลือก</option>
                                     <option value="1">&lt;=</option>
                                     <option value="2">&lt;</option>
@@ -152,8 +159,8 @@ End Code
                             <td>หน่วย :</td>
                             <td>
                                 @*<telerik:RadComboBox ID="rcb_unit" Runat="server" Filter="Contains">
-                                </telerik:RadComboBox>*@
-                                <select class="dropdown" id="rcb_unit2">
+                                    </telerik:RadComboBox>*@
+                                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" id="rcb_unit2">
                                     <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                                 </select>
                             </td>
@@ -167,11 +174,11 @@ End Code
                             </td>
                             <td>หน่วย :</td>
                             <td>
-                                <select class="dropdown" id="rcb_unit2">
+                                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" id="rcb_unit2">
                                     <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                                 </select>
                                 @*<telerik:RadComboBox ID="rcb_unit2" Runat="server" Filter="Contains">
-                                </telerik:RadComboBox>*@
+                                    </telerik:RadComboBox>*@
                             </td>
 
 
@@ -205,7 +212,7 @@ End Code
                                 หน่วยตั้งต้น :
                             </td>
                             <td>
-                                <select class="dropdown" id="ddl_unit2">
+                                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" id="ddl_unit2">
                                     <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                                 </select>
                             </td>
@@ -229,7 +236,7 @@ End Code
                                 หน่วยสุดท้าย :
                             </td>
                             <td>
-                                <select class="dropdown" id="ddl_unit3">
+                                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" id="ddl_unit3">
                                     <option ng-repeat="x in UNIT_PHYSIC" value="{{x.sunitcd}}">{{x.unit_name}}</option>
                                 </select>
                             </td>
@@ -269,7 +276,7 @@ End Code
                         <tr>
                             <td>สูตรที่</td>
                             <td>
-                                <select ID="ddl_set" style="width:90px;">
+                                <select ID="ddl_set" style="width:90px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -283,17 +290,17 @@ End Code
                                 </select>
 
                                 @*<asp:DropDownList ID="ddl_set" runat="server" AutoPostBack="True" Width="90px">
-                                    <asp:ListItem>1</asp:ListItem>
-                                    <asp:ListItem>2</asp:ListItem>
-                                    <asp:ListItem>3</asp:ListItem>
-                                    <asp:ListItem>4</asp:ListItem>
-                                    <asp:ListItem>5</asp:ListItem>
-                                    <asp:ListItem>6</asp:ListItem>
-                                    <asp:ListItem>7</asp:ListItem>
-                                    <asp:ListItem>8</asp:ListItem>
-                                    <asp:ListItem>9</asp:ListItem>
-                                    <asp:ListItem>10</asp:ListItem>
-                                </asp:DropDownList>*@
+                                        <asp:ListItem>1</asp:ListItem>
+                                        <asp:ListItem>2</asp:ListItem>
+                                        <asp:ListItem>3</asp:ListItem>
+                                        <asp:ListItem>4</asp:ListItem>
+                                        <asp:ListItem>5</asp:ListItem>
+                                        <asp:ListItem>6</asp:ListItem>
+                                        <asp:ListItem>7</asp:ListItem>
+                                        <asp:ListItem>8</asp:ListItem>
+                                        <asp:ListItem>9</asp:ListItem>
+                                        <asp:ListItem>10</asp:ListItem>
+                                    </asp:DropDownList>*@
                             </td>
                             <td>
                                 &nbsp;
@@ -306,7 +313,7 @@ End Code
                             </td>
                             <td>
 
-                                <select ID="ddl_aori">
+                                <select ID="ddl_aori" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                                     <option>A</option>
                                     <option>I</option>
                                 </select>

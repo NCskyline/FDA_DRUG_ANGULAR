@@ -2,16 +2,23 @@
     ViewData("Title") = "INPUT_DRUG_ANIMAL"
 End Code
 
-
+<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/DR_CTRL.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
+
 <div class="ic" ng-controller="DR_CTRL" ng-app="ANGULAR_APP">
     <table>
         <tr>
             <td>ประเภทสัตว์ :</td>
             <td>
-                <select class="dropdown" id="ddl_dramltype">
-                    <option value="0">กรุณาเลือก</option>
+                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" id="ddl_dramltype">
+                    @*<option value="0">กรุณาเลือก</option>*@
                     <option ng-repeat="x in dramltype" value="{{x.amltpcd}}">{{x.amltpnm}}</option>
                 </select>
             </td>
@@ -19,15 +26,15 @@ End Code
                 ชนิดสัตว์ :
             </td>
             <td>
-                <select id="ddl_dramlsubtp">
-                    <option value="0">กรุณาเลือก</option>
+                <select id="ddl_dramlsubtp" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
+                    @*<option value="0">กรุณาเลือก</option>*@
                     <option ng-repeat="x in dramlsubtp" value="{{x.amlsubcd}}">{{x.amlsubnm}}</option>
                 </select>
 
             </td>
             <td>การใช้ :</td>
             <td>
-                <select id="ddl_dramlusetp">
+                <select id="ddl_dramlusetp" class="form-control selectpicker" data-live-search="true" title="-- Please select --">
                     <option>กรุณาเลือก</option>
                 </select>
             </td>
@@ -89,4 +96,4 @@ End Code
             </td>
         </tr>
     </table>
-    </div>
+</div>
