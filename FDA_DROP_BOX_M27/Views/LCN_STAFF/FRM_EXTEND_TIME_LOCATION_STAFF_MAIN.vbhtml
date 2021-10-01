@@ -1,0 +1,6 @@
+﻿@Code
+    ViewData("Title") = "FRM_EXTEND_TIME_LOCATION_STAFF_MAIN"
+End Code
+
+<h2>FRM_EXTEND_TIME_LOCATION_STAFF_MAIN</h2>
+

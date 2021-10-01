@@ -4621,6 +4621,124 @@ Namespace Controllers
             End If
             Return int_year.ToString()
         End Function
+
+        Function SEND_STATUS_PAY_TABEAN(ByVal _type_select As String, ByVal val1 As String, ByVal val2 As String, ByVal val3 As String, ByVal val4 As String, ByVal val5 As String, ByVal CITIZEN_ID As String) As JsonResult
+            Dim Result As String = ""
+            Dim i As Integer = 0
+            If _type_select = "1" Then
+                Dim dao_q As New DAO_DRUG.ClsDBdrrqt
+
+                If Trim(val1) <> "" Then
+                    dao_q.GetDataby_TR_ID_PROCESS_ID(Trim(val1), "1400001")
+                    If dao_q.fields.STATUS_ID = "2" Then
+                        dao_q.fields.STATUS_ID = 3
+                        dao_q.update()
+                        i += 1
+                        INSERT_LOG_SEND_STATUS(dao_q.fields.IDA, "1400001", 3, CITIZEN_ID)
+                    End If
+                    'ข้ามสถานะ
+                End If
+                If Trim(val2) <> "" Then
+                    dao_q.GetDataby_TR_ID_PROCESS_ID(Trim(val2), "1400001")
+                    If dao_q.fields.STATUS_ID = "2" Then
+                        dao_q.fields.STATUS_ID = 3
+                        dao_q.update()
+                        i += 1
+                        INSERT_LOG_SEND_STATUS(dao_q.fields.IDA, "1400001", 3, CITIZEN_ID)
+                    End If
+                End If
+                If Trim(val3) <> "" Then
+                    dao_q.GetDataby_TR_ID_PROCESS_ID(Trim(val3), "1400001")
+                    If dao_q.fields.STATUS_ID = "2" Then
+                        dao_q.fields.STATUS_ID = 3
+                        dao_q.update()
+                        i += 1
+                        INSERT_LOG_SEND_STATUS(dao_q.fields.IDA, "1400001", 3, CITIZEN_ID)
+                    End If
+                End If
+                If Trim(val4) <> "" Then
+                    dao_q.GetDataby_TR_ID_PROCESS_ID(Trim(val4), "1400001")
+                    If dao_q.fields.STATUS_ID = "2" Then
+                        dao_q.fields.STATUS_ID = 3
+                        dao_q.update()
+                        i += 1
+                        INSERT_LOG_SEND_STATUS(dao_q.fields.IDA, "1400001", 3, CITIZEN_ID)
+                    End If
+                End If
+                If Trim(val5) <> "" Then
+                    dao_q.GetDataby_TR_ID_PROCESS_ID(Trim(val5), "1400001")
+                    If dao_q.fields.STATUS_ID = "2" Then
+                        dao_q.fields.STATUS_ID = 3
+                        dao_q.update()
+                        i += 1
+                        INSERT_LOG_SEND_STATUS(dao_q.fields.IDA, "1400001", 3, CITIZEN_ID)
+                    End If
+                End If
+            ElseIf _type_select = "2" Then
+                '130099
+                Dim dao_q As New DAO_DRUG.TB_DRRGT_EDIT_REQUEST
+
+                If Trim(val1) <> "" Then
+                    dao_q.GetDatabyTRID_PROCESS(Trim(val1), "130099")
+                    If dao_q.fields.STATUS_ID = "2" Then
+                        dao_q.fields.STATUS_ID = 3
+                        dao_q.update()
+                        i += 1
+                        INSERT_LOG_SEND_STATUS(dao_q.fields.IDA, "130099", 3, CITIZEN_ID)
+                    End If
+                End If
+                If Trim(val2) <> "" Then
+                    dao_q.GetDatabyTRID_PROCESS(Trim(val2), "130099")
+                    If dao_q.fields.STATUS_ID = "2" Then
+                        dao_q.fields.STATUS_ID = 3
+                        dao_q.update()
+                        i += 1
+                        INSERT_LOG_SEND_STATUS(dao_q.fields.IDA, "130099", 3, CITIZEN_ID)
+                    End If
+                End If
+                If Trim(val3) <> "" Then
+                    dao_q.GetDatabyTRID_PROCESS(Trim(val3), "130099")
+                    If dao_q.fields.STATUS_ID = "2" Then
+                        dao_q.fields.STATUS_ID = 3
+                        dao_q.update()
+                        i += 1
+                        INSERT_LOG_SEND_STATUS(dao_q.fields.IDA, "130099", 3, CITIZEN_ID)
+                    End If
+                End If
+                If Trim(val4) <> "" Then
+                    dao_q.GetDatabyTRID_PROCESS(Trim(val4), "130099")
+                    If dao_q.fields.STATUS_ID = "2" Then
+                        dao_q.fields.STATUS_ID = 3
+                        dao_q.update()
+                        i += 1
+                        INSERT_LOG_SEND_STATUS(dao_q.fields.IDA, "130099", 3, CITIZEN_ID)
+                    End If
+                End If
+                If Trim(val5) <> "" Then
+                    dao_q.GetDatabyTRID_PROCESS(Trim(val5), "130099")
+                    If dao_q.fields.STATUS_ID = "2" Then
+                        dao_q.fields.STATUS_ID = 3
+                        dao_q.update()
+                        i += 1
+                        INSERT_LOG_SEND_STATUS(dao_q.fields.IDA, "130099", 3, CITIZEN_ID)
+                    End If
+                End If
+
+            End If
+            If i > 0 Then
+                Result = "ข้ามสถานะเรียบร้อยแล้ว"
+            End If
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
+        Sub INSERT_LOG_SEND_STATUS(ByVal IDA As Integer, ByVal process_id As String, ByVal STATUS_ID As Integer, ByVal CITIZEN_ID As String)
+            Dim dao As New DAO_DRUG.TB_LOG_CHANGE_STATUS_MN
+            dao.fields.FK_IDA = IDA
+            dao.fields.IDENTIFY = CITIZEN_ID
+            dao.fields.PROCESS_ID = process_id
+            dao.fields.STATUS_DATE = Date.Now
+            dao.fields.STATUS_ID = STATUS_ID
+            dao.insert()
+        End Sub
 #End Region
     End Class
 End Namespace

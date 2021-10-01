@@ -715,6 +715,9 @@
     <Content Include="Views\DR_STAFF\FRM_FRGN_ADD_MAIN.vbhtml" />
     <Content Include="Views\DR_STAFF\FRM_STAFF_MAIN_NYM.vbhtml" />
     <Content Include="Views\DR_STAFF\FRM_SUBSTITUTE_TABEAN_STAFF_MAIN.vbhtml" />
+    <Content Include="Views\DR_STAFF\FRM_TABEAN_YA_CHANGE_STATUS.vbhtml" />
+    <Content Include="Views\LCN_STAFF\FRM_EXTEND_TIME_LOCATION_STAFF_MAIN.vbhtml" />
+    <Content Include="Views\LCN_STAFF\FRM_STAFF_OFFER.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>

@@ -81,7 +81,25 @@
         });
         return response;
     };
+
     
+    this.SEND_STATUS_PAY_TABEAN = function (_type_select, val1, val2, val3, val4, val5, CITIZEN_ID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SEND_STATUS_PAY_TABEAN"),
+            params: {
+                _type_select: _type_select,
+                val1: val1,
+                val2: val2,
+                val3: val3,
+                val4: val4,
+                val5: val5,
+                CITIZEN_ID: CITIZEN_ID
+            }
+        });
+        return response;
+    };
+
     this.SP_DRRGT_FOR_SEARCH_FROM_SAI = function (txt) {
         var response = $http({
             method: "post",

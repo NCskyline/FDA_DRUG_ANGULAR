@@ -92,20 +92,38 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                     $scope.DATA_LCN_EDIT_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '8') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_EDIT_LCN_STAFF_MAIN');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_EXTEND_TIME_LOCATION_STAFF_MAIN');
 
                 var dataedit = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
                 dataedit.then(function (datas) {
                     $scope.DATA_LCN_EDIT_STAFF = datas.data;
                 }, function () { });
-            } else if (SEQ == '9') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_EDIT_LCN_STAFF_MAIN');
+            } else if (SEQ == '10') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_STAFF_OFFER');
 
                 var dataedit = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
                 dataedit.then(function (datas) {
                     $scope.DATA_LCN_EDIT_STAFF = datas.data;
                 }, function () { });
-            }
+            } else if (SEQ == '98') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF_EDIT/FRM_STAFF_LCN_SEARCH');
+
+
+            } else if (SEQ == '99') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN/FRM_LCN_DRUG_SEARCH');
+
+
+            } else if (SEQ == '998') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_SUBSTITUTE_NCT_MAIN_STAFF');
+
+
+            } else if (SEQ == '999') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_EDIT_LCN_STAFF_MAIN');
+
+
+            } 
+
+
         } else if (BTN_GROUP == '2') {
             if (SEQ == '2') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/TABEAN_YA_MAIN_STAFF');
@@ -138,12 +156,17 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 }, function () { });
                 
             } else if (SEQ == '996') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_SUBSTITUTE_TABEAN_STAFF_MAIN');
 
+                
             } else if (SEQ == '997') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_FRGN_ADD_MAIN');
 
             } else if (SEQ == '998') {
+                REDIRECT('https://medicina.fda.moph.go.th/FDA_DRUG_AN/AUTHEN/AUTHEN_GATEWAY?Token=' & sessionStorage.TOKEN);
 
             } else if (SEQ == '999') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_TABEAN_YA_CHANGE_STATUS');
 
             }
 
@@ -187,6 +210,14 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         var getdata = CENTER_SV.SP_STAFF_NYM_ALL(process_id);
         getdata.then(function (datas) {
             $scope.DATA_NYM_STAFF = datas.data;
+        });
+    };
+
+    
+    $scope.BTN_SEND_STATUS = function (_type_select, val1, val2, val3, val4, val5) {
+        var setdata = CENTER_SV.SEND_STATUS_PAY_TABEAN(_type_select, val1, val2, val3, val4, val5,sessionStorage.CITIZEN_ID);
+        setdata.then(function (datas) {
+            success_data(datas.data);
         });
     };
 

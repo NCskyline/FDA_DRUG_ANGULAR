@@ -20,5 +20,9 @@ Namespace Controllers
         Function FRM_CHEMICAL_STAFF_COMFIRM_TEXT() As ActionResult
             Return View()
         End Function
+
+        Function FRM_TABEAN_YA_CHANGE_STATUS() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
