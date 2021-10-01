@@ -115,16 +115,30 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                     $scope.DATA_TABEAN_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '3') {
-
-
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_TABEAN_SEARCH');
+                //FRM_TABEAN_SEARCH
             } else if (SEQ == '4') {
-                
+
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_RGT_EDIT_MAIN_STAFF');
 
                 var dataedit = CENTER_SV.SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS('130099');
                 dataedit.then(function (datas) {
                     $scope.DATA_EDIT_TABEAN_STAFF = datas.data;
                 }, function () { });
+            } else if (SEQ == '5') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_STAFF_MAIN_NYM');
+
+
+            } else if (SEQ == '6') {
+
+            } else if (SEQ == '996') {
+
+            } else if (SEQ == '997') {
+
+            } else if (SEQ == '998') {
+
+            } else if (SEQ == '999') {
+
             }
 
 
@@ -153,6 +167,20 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         var getdata = CENTER_SV.GET_LOT_RELEASE(Month, Year);
         getdata.then(function (datas) {
             $scope.data = datas.data;
+        });
+    };
+
+    $scope.BTN_SEARCH_TABEAN = function (txt) {
+        var getdata = CENTER_SV.SP_DRRGT_FOR_SEARCH_FROM_SAI(txt);
+        getdata.then(function (datas) {
+            $scope.DATA_TABEAN_SEARCH = datas.data;
+        });
+    };
+
+    $scope.BTN_SEARCH_NYM = function (process_id) {
+        var getdata = CENTER_SV.SP_STAFF_NYM_ALL(process_id);
+        getdata.then(function (datas) {
+            $scope.DATA_NYM_STAFF = datas.data;
         });
     };
 

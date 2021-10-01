@@ -1,0 +1,6 @@
+﻿@Code
+    ViewData("Title") = "FRM_SUBSTITUTE_TABEAN_STAFF_MAIN"
+End Code
+
+<h2>FRM_SUBSTITUTE_TABEAN_STAFF_MAIN</h2>
+

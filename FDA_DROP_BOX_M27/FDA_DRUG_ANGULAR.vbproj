@@ -710,6 +710,11 @@
     <Content Include="Scripts\bootstrap-select.js.map" />
     <Content Include="Content\bootstrap-select.css.map" />
     <Content Include="Views\DR_STAFF\FRM_RGT_EDIT_MAIN_STAFF.vbhtml" />
+    <Content Include="Views\DR_STAFF\FRM_TABEAN_SEARCH.vbhtml" />
+    <Content Include="Views\DR_STAFF\FRM_DS_STAFF_DRUG.vbhtml" />
+    <Content Include="Views\DR_STAFF\FRM_FRGN_ADD_MAIN.vbhtml" />
+    <Content Include="Views\DR_STAFF\FRM_STAFF_MAIN_NYM.vbhtml" />
+    <Content Include="Views\DR_STAFF\FRM_SUBSTITUTE_TABEAN_STAFF_MAIN.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>

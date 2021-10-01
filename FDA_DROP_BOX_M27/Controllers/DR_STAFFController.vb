@@ -15,5 +15,21 @@ Namespace Controllers
         Function FRM_RGT_EDIT_MAIN_STAFF() As ActionResult
             Return View()
         End Function
+        Function FRM_TABEAN_SEARCH() As ActionResult
+            Return View()
+        End Function
+        Function FRM_DS_STAFF_DRUG() As ActionResult
+            Return View()
+        End Function
+        Function FRM_FRGN_ADD_MAIN() As ActionResult
+            Return View()
+        End Function
+        Function FRM_STAFF_MAIN_NYM() As ActionResult
+            Return View()
+        End Function
+        Function FRM_SUBSTITUTE_TABEAN_STAFF_MAIN() As ActionResult
+            Return View()
+        End Function
+
     End Class
 End Namespace

@@ -72,6 +72,29 @@
         });
         return response;
     };
+    
+    this.SP_DRRGT_FOR_SEARCH_FROM_SAI = function (txt) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_DRRGT_FOR_SEARCH_FROM_SAI"),
+            params: {
+                txt: txt
+            }
+        });
+        return response;
+    };
+    
+    this.SP_STAFF_NYM_ALL = function (PROCESS_ID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STAFF_NYM_ALL"),
+            params: {
+                PROCESS_ID: PROCESS_ID
+            }
+        });
+        return response;
+    };
+
     this.SP_MASTER_CER_PK_BY_FK_IDA = function (IDA) {
         var response = $http({
             method: "post",

@@ -62,6 +62,23 @@ Namespace Controllers
 
         End Function
 
+        Function SP_DRRGT_FOR_SEARCH_FROM_SAI(ByVal txt As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_DRRGT_FOR_SEARCH_FROM_SAI(txt)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
+        '
+        Function SP_STAFF_NYM_ALL(ByVal PROCESS_ID As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_STAFF_NYM_ALL(PROCESS_ID)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_STAFF_CER() As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO
