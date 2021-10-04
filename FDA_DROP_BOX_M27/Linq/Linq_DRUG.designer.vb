@@ -2119,6 +2119,12 @@ Partial Public Class Linq_DRUGDataContext
     End Sub
   Partial Private Sub DeleteDALCN_NCT_SUBSTITUTE(instance As DALCN_NCT_SUBSTITUTE)
     End Sub
+  Partial Private Sub InsertMAS_ATTACH_TEMPLATE(instance As MAS_ATTACH_TEMPLATE)
+    End Sub
+  Partial Private Sub UpdateMAS_ATTACH_TEMPLATE(instance As MAS_ATTACH_TEMPLATE)
+    End Sub
+  Partial Private Sub DeleteMAS_ATTACH_TEMPLATE(instance As MAS_ATTACH_TEMPLATE)
+    End Sub
   #End Region
 	
 	Public Sub New()
@@ -4273,6 +4279,12 @@ Partial Public Class Linq_DRUGDataContext
 	Public ReadOnly Property DALCN_NCT_SUBSTITUTEs() As System.Data.Linq.Table(Of DALCN_NCT_SUBSTITUTE)
 		Get
 			Return Me.GetTable(Of DALCN_NCT_SUBSTITUTE)
+		End Get
+	End Property
+	
+	Public ReadOnly Property MAS_ATTACH_TEMPLATEs() As System.Data.Linq.Table(Of MAS_ATTACH_TEMPLATE)
+		Get
+			Return Me.GetTable(Of MAS_ATTACH_TEMPLATE)
 		End Get
 	End Property
 End Class
@@ -138674,6 +138686,134 @@ Partial Public Class DALCN_NCT_SUBSTITUTE
 				Me._REQUEST_TYPE = value
 				Me.SendPropertyChanged("REQUEST_TYPE")
 				Me.OnREQUEST_TYPEChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.MAS_ATTACH_TEMPLATE")>  _
+Partial Public Class MAS_ATTACH_TEMPLATE
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _IDA As Integer
+	
+	Private _DESCRIPTION As String
+	
+	Private _PROCESS_ID As System.Nullable(Of Integer)
+	
+	Private _SUB_TYPE As System.Nullable(Of Integer)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnIDAChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnIDAChanged()
+    End Sub
+    Partial Private Sub OnDESCRIPTIONChanging(value As String)
+    End Sub
+    Partial Private Sub OnDESCRIPTIONChanged()
+    End Sub
+    Partial Private Sub OnPROCESS_IDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnPROCESS_IDChanged()
+    End Sub
+    Partial Private Sub OnSUB_TYPEChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnSUB_TYPEChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDA", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property IDA() As Integer
+		Get
+			Return Me._IDA
+		End Get
+		Set
+			If ((Me._IDA = value)  _
+						= false) Then
+				Me.OnIDAChanging(value)
+				Me.SendPropertyChanging
+				Me._IDA = value
+				Me.SendPropertyChanged("IDA")
+				Me.OnIDAChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DESCRIPTION", DbType:="NVarChar(MAX)")>  _
+	Public Property DESCRIPTION() As String
+		Get
+			Return Me._DESCRIPTION
+		End Get
+		Set
+			If (String.Equals(Me._DESCRIPTION, value) = false) Then
+				Me.OnDESCRIPTIONChanging(value)
+				Me.SendPropertyChanging
+				Me._DESCRIPTION = value
+				Me.SendPropertyChanged("DESCRIPTION")
+				Me.OnDESCRIPTIONChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PROCESS_ID", DbType:="Int")>  _
+	Public Property PROCESS_ID() As System.Nullable(Of Integer)
+		Get
+			Return Me._PROCESS_ID
+		End Get
+		Set
+			If (Me._PROCESS_ID.Equals(value) = false) Then
+				Me.OnPROCESS_IDChanging(value)
+				Me.SendPropertyChanging
+				Me._PROCESS_ID = value
+				Me.SendPropertyChanged("PROCESS_ID")
+				Me.OnPROCESS_IDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUB_TYPE", DbType:="Int")>  _
+	Public Property SUB_TYPE() As System.Nullable(Of Integer)
+		Get
+			Return Me._SUB_TYPE
+		End Get
+		Set
+			If (Me._SUB_TYPE.Equals(value) = false) Then
+				Me.OnSUB_TYPEChanging(value)
+				Me.SendPropertyChanging
+				Me._SUB_TYPE = value
+				Me.SendPropertyChanged("SUB_TYPE")
+				Me.OnSUB_TYPEChanged
 			End If
 		End Set
 	End Property

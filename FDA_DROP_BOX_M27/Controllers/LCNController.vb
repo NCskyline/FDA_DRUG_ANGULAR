@@ -222,6 +222,27 @@ Namespace Controllers
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
 
+        Public Function SETMODEL_LIST(ByVal PROCESS_ID As String) As JsonResult
+            Dim MODEL As New MODEL_FILELIST
+            Dim filelist As New FILE_LIST
+            Dim dao As New DAO_DRUG.TB_MAS_ATTACH_TEMPLATE
+            dao.GetDataby_PROCESS(PROCESS_ID)
+
+            For Each dao.fields In dao.datas
+                filelist.FILENAME = ""
+                filelist.DES = dao.fields.DESCRIPTION
+                filelist.FILE_DATA = ""
+                filelist.PIORITY = ""
+                filelist.PATH = ""
+                filelist.FLAG = ""
+                filelist.TYPE = ""
+                filelist.SIZE = 0
+                MODEL.FILE_LISTs.Add(filelist)
+            Next
+
+
+            Return Json(MODEL, JsonRequestBehavior.AllowGet)
+        End Function
 #Region "STORE"
         Function GET_FULL_MODEL_EDIT() As JsonResult
             Dim model As New MODEL_STAFF_EDIT_LCN

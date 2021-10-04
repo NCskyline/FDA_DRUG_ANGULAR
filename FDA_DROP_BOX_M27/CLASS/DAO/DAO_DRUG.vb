@@ -14242,6 +14242,31 @@ Namespace DAO_DRUG
             Next
         End Sub
     End Class
+
+    Public Class TB_MAS_ATTACH_TEMPLATE
+        Inherits MAINCONTEXT
+        Public fields As New MAS_ATTACH_TEMPLATE
+        Public Sub insert()
+            db.MAS_ATTACH_TEMPLATEs.InsertOnSubmit(fields)
+            db.SubmitChanges()
+        End Sub
+
+        Public Sub update()
+            db.SubmitChanges()
+        End Sub
+
+        Public Sub delete()
+            db.MAS_ATTACH_TEMPLATEs.DeleteOnSubmit(fields)
+            db.SubmitChanges()
+        End Sub
+
+        Public Sub GetDataby_PROCESS(ByVal PROCESS_ID As String)
+
+            datas = (From p In db.MAS_ATTACH_TEMPLATEs Where p.PROCESS_ID = PROCESS_ID Order By p.IDA Select p)
+            For Each Me.fields In datas
+            Next
+        End Sub
+    End Class
 End Namespace
 
 
