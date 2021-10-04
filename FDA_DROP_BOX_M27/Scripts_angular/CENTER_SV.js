@@ -1306,6 +1306,17 @@
         });
         return response;
     };
+
+    this.SETMODEL_LIST_LCN = function (PROCESS_ID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/LCN_CENTER/SETMODEL_LIST"),
+            params: {
+                PROCESS_ID: PROCESS_ID
+            }
+        });
+        return response;
+    };
     
     this.GETDATA_INV_ITEM = function (TR_ID) {
         var response = $http({

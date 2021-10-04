@@ -98,7 +98,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align:left" >
+                    <td style="text-align:left">
                         ลงชื่่อ
 
                     </td>
@@ -398,7 +398,7 @@
                 <td style="width:20%">
                     โดยมีเภสัชกรชั้น
                 </td>
-                <td >
+                <td>
                     <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_LEVEL" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
                 <td style="text-align:center">
@@ -410,7 +410,7 @@
                         <option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
                     </select>
                 </td>
-                <td >
+                <td>
                     <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
@@ -418,7 +418,7 @@
                 <td style="width:20%">
                     เลขบัตรประจำตัวประชาชน
                 </td>
-                <td colspan="4" >
+                <td colspan="4">
                     <input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_CTZNO" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
@@ -501,13 +501,49 @@
             ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ
         </div>
         <br />
-        <div style="margin-left:10%;font-size:20px">(๑) รูปถ่ายของผู้ขออนุญาต ขนาด ๓ x ๔ เซนติเมตร จำนวน ๓ รูป</div>
+        @*<div style="margin-left:10%;font-size:20px">(๑) รูปถ่ายของผู้ขออนุญาต ขนาด ๓ x ๔ เซนติเมตร จำนวน ๓ รูป</div>
         <div style="margin-left:10%;font-size:20px">(๒) เอกสารแสดงการเป็นเจ้าของกิจการและหลักทรัพย์</div>
         <div style="margin-left:10%;font-size:20px">(๓) สำเนาทะเบียนบ้านของผู้ขออนุญาต (กรณีบุคคลธรรมดาเป็นผู้ขออนุญาต) หรือ ผู้ดำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
         <div style="margin-left:10%;font-size:20px">(๔) ใบรับรองของผู้ประกอบวิชาชีพเวชกรรมซึ่งรับรองว่าผู้ขออนุญาตไม่เป็นโรคตามมาตรา ๑๔ (๖) แห่งพระราชบัญญัติยา พ.ศ. ๒๕๑๐</div>
         <div style="margin-left:10%;font-size:20px">(๕) สัญญาระหว่างผู้ขออนุญาตและเภสัชกร ซึ่งรับจะเป็นผู้มีหน้าที่ปฏิบัติการของผู้ขออนุญาต</div>
         <div style="margin-left:10%;font-size:20px">(๖) สำเนาหรือรูปถ่ายใบอนุญาตประกอบวิชาชีพเภสัชกรรมของเภสัชกรทุกคน ซึ่งรับจะเป็นผู้มีหน้าที่ปฏิบัติการของผู้ขออนุญาต</div>
-        <div style="margin-left:10%;font-size:20px">(๗) เอกสารแสดงว่าเป็นผู้ดำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
+        <div style="margin-left:10%;font-size:20px">(๗) เอกสารแสดงว่าเป็นผู้ดำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>*@
+        <div class="row" >
+            <div class="col-sm-10" style="width:100%">
+                <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
+                    <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
+                        หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
+                    </div>
+                    <div class="card-header" ng-show="datas.PIORITY=='LOW'">
+                        หัวข้อเอกสาร (ไม่บังคับแนบ)
+                    </div>
+                    <div class="card-body">
+
+                        <table class="table" style="width:100%">
+                            <tr>
+                                <td colspan="5">
+                                    {{datas.DES}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:15%;"><input id="file-input" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                                <td style="width:10%;">ชื่อไฟล์</td>
+                                <td style="width:50%;">{{datas.FILENAME}}</td>
+                                <td style="width:5%">
+                                    <a ng-click="OPEN_DOC_PATH(datas.PATH)">{{FLAG}}</a>
+                                </td>
+                                <td style="width:20%; text-align: right;">
+                                    @*<input type="button" ng-click="UPLOAD_PDFs(datas)" value="บันทึก" />*@
+                                    <input type="button" ng-click="deleteRow(datas,$index)" value="ลบ" />
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         <br />
         <br />
         <br />

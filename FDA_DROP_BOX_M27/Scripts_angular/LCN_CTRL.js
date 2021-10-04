@@ -747,6 +747,10 @@
             $scope.lcnnoType = '(ผยบ)';
         } else $scope.lcnnoType = '';
 
+        var getData_LIST = CENTER_SV.SETMODEL_LIST_LCN(process);
+        getData_LIST.then(function (datas) {
+            $scope.DOC_LIST = datas.data;
+        }, function () { });
 
         var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT_V2(sessionStorage.CITIZEN_ID_AUTHORIZE, sessionStorage.LCT_IDA);
         MODLE_LCN.then(function (datas) {
@@ -814,9 +818,7 @@
             $scope.DATA_PHR_SHOW = datas.data;
         }, function () { });
 
-        
-
-
+       
     };
 
     $scope.pageload_modify = function () {

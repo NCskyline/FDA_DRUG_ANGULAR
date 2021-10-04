@@ -223,12 +223,15 @@ Namespace Controllers
         End Function
 
         Public Function SETMODEL_LIST(ByVal PROCESS_ID As String) As JsonResult
+
             Dim MODEL As New MODEL_FILELIST
-            Dim filelist As New FILE_LIST
+            Dim N As Integer = 1
             Dim dao As New DAO_DRUG.TB_MAS_ATTACH_TEMPLATE
             dao.GetDataby_PROCESS(PROCESS_ID)
 
             For Each dao.fields In dao.datas
+                Dim filelist As New FILE_LIST
+                filelist.IDA = N
                 filelist.FILENAME = ""
                 filelist.DES = dao.fields.DESCRIPTION
                 filelist.FILE_DATA = ""
@@ -238,8 +241,8 @@ Namespace Controllers
                 filelist.TYPE = ""
                 filelist.SIZE = 0
                 MODEL.FILE_LISTs.Add(filelist)
+                N += 1
             Next
-
 
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
