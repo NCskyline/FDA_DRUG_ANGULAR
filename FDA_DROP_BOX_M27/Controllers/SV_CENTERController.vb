@@ -45,6 +45,15 @@ Namespace Controllers
 
         End Function
 
+        Function SP_DRRGT_SUBSTITUTE_STAFF() As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_DRRGT_SUBSTITUTE_STAFF()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
+
         Function SP_STAFF_DS() As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO

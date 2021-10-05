@@ -106,21 +106,28 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                     $scope.DATA_LCN_EDIT_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '98') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF_EDIT/FRM_STAFF_LCN_SEARCH');
-
+                //$scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF_EDIT/FRM_STAFF_LCN_SEARCH');
+                REDIRECT('../LCN_STAFF_EDIT/FRM_STAFF_LCN_SEARCH');
 
             } else if (SEQ == '99') {
+                //ค่นหา
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN/FRM_LCN_DRUG_SEARCH');
 
 
             } else if (SEQ == '998') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_SUBSTITUTE_NCT_MAIN_STAFF');
-
-
+                var dataedit = CENTER_SV.SP_DALCN_NCT_SUBSTITUTE_STAFF();
+                dataedit.then(function (datas) {
+                    $scope.DATA_LCN_STT_STAFF = datas.data;
+                }, function () { });
+                
             } else if (SEQ == '999') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_EDIT_LCN_STAFF_MAIN');
-
-
+                var dataedit = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
+                dataedit.then(function (datas) {
+                    $scope.DATA_LCN_EDIT_STAFF = datas.data;
+                }, function () { });
+                
             } 
 
 
@@ -157,7 +164,10 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 
             } else if (SEQ == '996') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_SUBSTITUTE_TABEAN_STAFF_MAIN');
-
+                var dataedit = CENTER_SV.SP_DRRGT_SUBSTITUTE_STAFF();
+                dataedit.then(function (datas) {
+                    $scope.DATA_STT_TABEAN_STAFF = datas.data;
+                }, function () { });
                 
             } else if (SEQ == '997') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_FRGN_ADD_MAIN');
