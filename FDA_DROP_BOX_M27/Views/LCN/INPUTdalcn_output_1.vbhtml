@@ -534,7 +534,7 @@
                                 </td>
                                 <td style="width:20%; text-align: right;">
                                     @*<input type="button" ng-click="UPLOAD_PDFs(datas)" value="บันทึก" />*@
-                                    <input type="button" ng-click="deleteRow(datas,$index)" value="ลบ" />
+                                    @*<input type="button" ng-click="deleteRow(datas,$index)" value="ลบ" />*@
                                 </td>
                             </tr>
 

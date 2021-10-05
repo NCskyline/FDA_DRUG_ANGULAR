@@ -1,4 +1,7 @@
 ﻿Imports System.Web.Mvc
+Imports System.IO
+Imports Newtonsoft.Json
+Imports Newtonsoft.Json.Linq
 
 Namespace Controllers
     Public Class LCNController
@@ -196,6 +199,23 @@ Namespace Controllers
 
     Public Class LCN_CENTERController
         Inherits Controller
+
+        Public _APP As String = System.Configuration.ConfigurationManager.AppSettings("APP")
+        Public _SYSTEM_ID As String = System.Configuration.ConfigurationManager.AppSettings("SYSTEM_ID")
+        Public _PATH_BOX As String = System.Configuration.ConfigurationManager.AppSettings("PATH_BOX")
+        Public _PATH_BOX_TEMPLATE As String = System.Configuration.ConfigurationManager.AppSettings("PATH_BOX_TEMPLATE")
+        Public _PATH_PDF_TEMPLATE As String = System.Configuration.ConfigurationManager.AppSettings("PATH_PDF_TEMPLATE")    'ที่อยู่ Path
+        Public _PATH_XML_CLASS As String = System.Configuration.ConfigurationManager.AppSettings("PATH_XML_CLASS")          'ที่อยู่ Path
+        Public _PATH_PDF_XML_CLASS As String = System.Configuration.ConfigurationManager.AppSettings("PATH_PDF_XML_CLASS")  'ที่อยู่ Path
+        Public _PATH_PDF_TRADER As String = System.Configuration.ConfigurationManager.AppSettings("PATH_PDF_TRADER")        'ที่อยู่ Path
+        Public _PATH_XML_TRADER As String = System.Configuration.ConfigurationManager.AppSettings("PATH_XML_TRADER")        'ที่อยู่ Path
+        Public _PATH_DEFAULT As String = System.Configuration.ConfigurationManager.AppSettings("PATH_DEFALUT")              'ที่อยู่ Path
+        Public _PATH_EDIT As String = System.Configuration.ConfigurationManager.AppSettings("PATH_EDIT")              'ที่อยู่ Path
+        Public _PATH_SUBS As String = System.Configuration.ConfigurationManager.AppSettings("PATH_EDIT")
+        Public _RDLC As String = System.Configuration.ConfigurationManager.AppSettings("RDLC")
+        Public _PATH_XML_IMPORT As String = System.Configuration.ConfigurationManager.AppSettings("PATH_XML_IMPORT")        'มินทำต้องทำต่อ 5555555555555555555
+        Public _PATH_PDF_IMPORT As String = System.Configuration.ConfigurationManager.AppSettings("PATH_PDF_IMPORT")
+        Dim msg_r As New MODEL_RESULT
 
         Function GET_FULL_MODEL() As JsonResult
             Dim model As New MODEL_LCN
@@ -538,6 +558,75 @@ Namespace Controllers
                 End Try
             Next
             Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
+#End Region
+
+#Region "FILE_ATTACH"
+        Public Function UPLOAD_PDF_ATTACH(ByVal model As String, ByVal TR_ID As String, ByVal PROCESS_ID As String) As String
+            Dim result As String = ""
+            Try
+                Dim TRID As String = ""
+                Dim MODEL_LIST As New MODEL_FILELIST
+
+
+                Dim jsonArray As JArray = JArray.Parse(model)
+                For Each parsedObject As JObject In jsonArray.Children(Of JObject)()
+                    Dim filelist As New FILE_LIST
+                    ''Dim kkk As String = parsedObject("TR_ID")
+                    For Each parsedProperty As JProperty In parsedObject.Properties()
+                        Dim propertyName As String = parsedProperty.Name
+                        If propertyName = "FILENAME" Then
+                            filelist.FILENAME = CStr(parsedProperty.Value)
+                        End If
+                    Next
+                    MODEL_LIST.FILE_LISTs.Add(filelist)
+                Next
+
+                Dim filename As String = ""
+                Dim PATHs As String = ""
+                Dim path_file As String = ""
+                Dim NAME_REAL As String = ""
+                Dim DD As Integer = 1
+                Dim Count As Integer = 1
+                Dim path As String = _PATH_DEFAULT & "\upload\"
+                ''Dim path As String = "F:\path\DRUG\upload\"
+                Directory.CreateDirectory(path) 'สร้าง PATH รอ
+                Dim i As Integer = 0
+
+                For Each s As String In Request.Files
+
+                    Dim dao As New DAO_DRUG.ClsDBFILE_ATTACH
+                    dao.GetDataby_TR_ID_And_Process(TR_ID, PROCESS_ID)
+                    If dao.Details.Count <> 0 Then
+                        DD = dao.Details.Count + 1
+                    End If
+                    NAME_REAL = Request.Files(i).FileName ''Request.Files(0).FileName 
+                    Dim Type As String = IO.Path.GetExtension(Request.Files(i).FileName).ToString()
+                    filename = "DA-" & PROCESS_ID & "-" & Date.Now.Year & "-" & TR_ID & "-" & DD & Type
+                    path_file = path & filename
+                    Dim postedFile As HttpPostedFileBase = Request.Files(i)
+
+                    postedFile.SaveAs(path_file)
+
+                    Dim dao_f As New DAO_DRUG.ClsDBFILE_ATTACH
+                    With dao_f.fields
+                        .NAME_FAKE = filename
+                        .NAME_REAL = NAME_REAL
+                        .TYPE = DD
+                        .TRANSACTION_ID = TR_ID
+                        .DESCRIPTION = ""
+                        .PROCESS_ID = PROCESS_ID
+                    End With
+                    dao_f.insert()
+
+                    i += 1
+                Next
+
+                result = "SUCCESS"
+            Catch ex As Exception
+                result = "ERROR"
+            End Try
+            Return result
         End Function
 #End Region
 
