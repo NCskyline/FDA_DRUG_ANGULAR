@@ -73,6 +73,14 @@ Public Class BAO
 
         Return dt
     End Function
+    Public Function SP_DRRGT_SUBSTITUTE_STAFF() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_DRRGT_SUBSTITUTE_STAFF "
+        Dim dta As New DataTable
+        dta = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dta.TableName = "SP_DRRGT_SUBSTITUTE_STAFF"
+        Return dta
+    End Function
     Public Function SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS(ByVal process_id As String) As DataTable
         Dim sql As String = "exec SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS @process_id='" & process_id & "'"
         Dim clsds As New ClassDataset

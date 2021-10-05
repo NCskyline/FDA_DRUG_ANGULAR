@@ -303,6 +303,17 @@
         return response;
     };
 
+    
+    this.SP_DRRGT_SUBSTITUTE_STAFF = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_DRRGT_SUBSTITUTE_STAFF"),
+            //params: {
+            //    identify: IDENTIFY
+            //}
+        });
+        return response;
+    };
 
     this.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR = function (IDENTIFY , _year) {
         var response = $http({
