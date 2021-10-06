@@ -577,6 +577,8 @@ Namespace Controllers
                         Dim propertyName As String = parsedProperty.Name
                         If propertyName = "FILENAME" Then
                             filelist.FILENAME = CStr(parsedProperty.Value)
+                        ElseIf propertyName = "DES" Then
+                            filelist.DES = CStr(parsedProperty.Value)
                         End If
                     Next
                     MODEL_LIST.FILE_LISTs.Add(filelist)

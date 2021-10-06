@@ -138721,7 +138721,11 @@ Partial Public Class MAS_ATTACH_TEMPLATE
 	
 	Private _PROCESS_ID As System.Nullable(Of Integer)
 	
-	Private _SUB_TYPE As System.Nullable(Of Integer)
+	Private _SUB_TYPE As String
+	
+	Private _ACTIVE As System.Nullable(Of Integer)
+	
+	Private _PIORITY As System.Nullable(Of Integer)
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -138742,9 +138746,17 @@ Partial Public Class MAS_ATTACH_TEMPLATE
     End Sub
     Partial Private Sub OnPROCESS_IDChanged()
     End Sub
-    Partial Private Sub OnSUB_TYPEChanging(value As System.Nullable(Of Integer))
+    Partial Private Sub OnSUB_TYPEChanging(value As String)
     End Sub
     Partial Private Sub OnSUB_TYPEChanged()
+    End Sub
+    Partial Private Sub OnACTIVEChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnACTIVEChanged()
+    End Sub
+    Partial Private Sub OnPIORITYChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnPIORITYChanged()
     End Sub
     #End Region
 	
@@ -138802,18 +138814,50 @@ Partial Public Class MAS_ATTACH_TEMPLATE
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUB_TYPE", DbType:="Int")>  _
-	Public Property SUB_TYPE() As System.Nullable(Of Integer)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUB_TYPE", DbType:="NVarChar(50)")>  _
+	Public Property SUB_TYPE() As String
 		Get
 			Return Me._SUB_TYPE
 		End Get
 		Set
-			If (Me._SUB_TYPE.Equals(value) = false) Then
+			If (String.Equals(Me._SUB_TYPE, value) = false) Then
 				Me.OnSUB_TYPEChanging(value)
 				Me.SendPropertyChanging
 				Me._SUB_TYPE = value
 				Me.SendPropertyChanged("SUB_TYPE")
 				Me.OnSUB_TYPEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ACTIVE", DbType:="Int")>  _
+	Public Property ACTIVE() As System.Nullable(Of Integer)
+		Get
+			Return Me._ACTIVE
+		End Get
+		Set
+			If (Me._ACTIVE.Equals(value) = false) Then
+				Me.OnACTIVEChanging(value)
+				Me.SendPropertyChanging
+				Me._ACTIVE = value
+				Me.SendPropertyChanged("ACTIVE")
+				Me.OnACTIVEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PIORITY", DbType:="Int")>  _
+	Public Property PIORITY() As System.Nullable(Of Integer)
+		Get
+			Return Me._PIORITY
+		End Get
+		Set
+			If (Me._PIORITY.Equals(value) = false) Then
+				Me.OnPIORITYChanging(value)
+				Me.SendPropertyChanging
+				Me._PIORITY = value
+				Me.SendPropertyChanged("PIORITY")
+				Me.OnPIORITYChanged
 			End If
 		End Set
 	End Property

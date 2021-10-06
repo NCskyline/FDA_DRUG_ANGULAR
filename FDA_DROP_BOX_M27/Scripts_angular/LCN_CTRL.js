@@ -3,6 +3,7 @@
     CHK_TOKEN();
     $scope.CITIZEN = "";
     $scope.lcnno = "";
+    $scope.SUB_PATH = "";
     $scope.COLLECT_KEEP = [];
     $scope.COLLECT_PHR = [];
     //var LCN_IDA = 70911;//sessionStorage.LCN_IDA;
@@ -262,8 +263,6 @@
             //$scope.totalItems = $scope.DATA_LCN_MAIN.length;
         }, function () { });
 
-
-
         //get data edit rqt
         var dataLo2 = CENTER_SV.SP_DALCN_EDIT_REQUEST_BY_FK_IDA(sessionStorage.LCN_IDA);
         dataLo2.then(function (datas) {
@@ -273,9 +272,16 @@
 
     }
     
+    function CLEAR_VALUE() {
+        $scope.SUB_PATH = null;
+        $scope.SUB_PATH = false;
+        $scope.lcnnoType = '';
+        $scope.DATA_LCN_LIST = '';
+    }
 
     $scope.BTN_MENU = function (process) {
-        $scope.SUB_PATH = '';
+
+        CLEAR_VALUE();
         if (process == '101' || process == '103' || process == '104' || process == '105' || process == '106' || process == '107' || process == '108' || process == '109') {
             if (process == '101') {
                 $scope.lcnnoType = '(ขย1)';
@@ -1030,21 +1036,21 @@
 
         if (sessionStorage.PROCESS == '106') {
             if ($scope.LIST_LCN.dalcn.syslcnsid_identify == true) {
-                $scope.LIST_LCN.dalcn.syslcnsid_identify = '1'
+                $scope.LIST_LCN.dalcn.syslcnsid_identify = '1';
             } else {
-                $scope.LIST_LCN.dalcn.syslcnsid_identify = '0'
+                $scope.LIST_LCN.dalcn.syslcnsid_identify = '0';
             }
 
             if ($scope.LIST_LCN.dalcn.syslcnsid_lcnsid == true) {
-                $scope.LIST_LCN.dalcn.syslcnsid_lcnsid = '1'
+                $scope.LIST_LCN.dalcn.syslcnsid_lcnsid = '1';
             } else {
-                $scope.LIST_LCN.dalcn.syslcnsid_lcnsid = '0'
+                $scope.LIST_LCN.dalcn.syslcnsid_lcnsid = '0';
             }
 
             if ($scope.LIST_LCN.dalcn.lcnsid_crtlct == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_crtlct = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_crtlct = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_crtlct = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_crtlct = '0';
             }
 
             if ($scope.LIST_LCN.dalcn.lcnsid_chngwtcd == true) {
@@ -1059,19 +1065,19 @@
                 $scope.LIST_LCN.dalcn.lcnsid_ntcd = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_taxno == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_taxno = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_taxno = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_taxno = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_taxno = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_trdregno == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_trdregno = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_trdregno = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_trdregno = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_trdregno = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_ctzno == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_ctzno = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_ctzno = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_ctzno = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_ctzno = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_remark == true) {
                 $scope.LIST_LCN.dalcn.lcnsid_remark = '1';
@@ -1091,47 +1097,47 @@
             if ($scope.LIST_LCN.dalcn.lcnsid_stfcd == true) {
                 $scope.LIST_LCN.dalcn.lcnsid_stfcd = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_stfcd = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_stfcd = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_nmprnst == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_nmprnst = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_nmprnst = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_nmprnst = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_nmprnst = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_lstfcd == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_lstfcd = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_lstfcd = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_lstfcd = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_lstfcd = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_lcnsidst == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_lcnsidst = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_lcnsidst = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_lcnsidst = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_lcnsidst = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_scridst == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_scridst = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_scridst = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_scridst = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_scridst = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_url == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_url = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_url = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_url = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_url = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_cncremark == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_cncremark = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_cncremark = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_cncremark = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_cncremark = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_email == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_email = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_email = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_email = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_email = '0';
             }
             if ($scope.LIST_LCN.dalcn.lcnsid_otaxno == true) {
-                $scope.LIST_LCN.dalcn.lcnsid_otaxno = '1'
+                $scope.LIST_LCN.dalcn.lcnsid_otaxno = '1';
             } else {
-                $scope.LIST_LCN.dalcn.lcnsid_otaxno = '0'
+                $scope.LIST_LCN.dalcn.lcnsid_otaxno = '0';
             }
 
         }
@@ -1214,5 +1220,29 @@
         $scope.COLLECT_PHR.splice(i, 1);
     };
 
+    $scope.selectFileforUpload = function (datas, file) {
 
+        if (file.length == 0) {
+            datas.FILE_DATA = '';
+            datas.FILENAME = '';
+        }
+        else {
+            if (file[0].type == 'application/pdf') {
+                var b = file[0];
+                datas.FILENAME = b.name;
+                datas.SIZE = b.size;
+                datas.TYPE = b.type;
+            }
+            else {
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'กรุณา UPLOAD FILE',
+                    icon: 'error'
+                });
+                datas.FILE_DATA = '';
+                datas.FILENAME = '';
+            }
+        }
+        $scope.files.push(file);
+    };
 });
