@@ -271,17 +271,10 @@
         }, function () { });
 
     }
-    
-    function CLEAR_VALUE() {
-        $scope.SUB_PATH = null;
-        $scope.SUB_PATH = false;
-        $scope.lcnnoType = '';
-        $scope.DATA_LCN_LIST = '';
-    }
+
 
     $scope.BTN_MENU = function (process) {
 
-        CLEAR_VALUE();
         if (process == '101' || process == '103' || process == '104' || process == '105' || process == '106' || process == '107' || process == '108' || process == '109') {
             if (process == '101') {
                 $scope.lcnnoType = '(ขย1)';
@@ -460,8 +453,8 @@
 
             sessionStorage.PROCESS = process;
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_SELECT');
-            var data3 = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN_ALIVE(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
-            data3.then(function (datas) {
+            var data4 = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN_ALIVE(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
+            data4.then(function (datas) {
                 $scope.DATA_LCN_F_EDIT = datas.data;
             }, function () { });
         }
@@ -714,8 +707,8 @@
             window.open(url, '_blank').focus();
             //REDIRECT();
         } else {
-            var url = 'https://medicina.fda.moph.go.th/FDA_DRUG_EXT/AUTHEN/AUTHEN_GATEWAY?Token=' + sessionStorage.TOKEN + '&identify=' + sessionStorage.IDENTIFY + '&staff=1';
-            window.open(url, '_blank').focus();
+            var url1 = 'https://medicina.fda.moph.go.th/FDA_DRUG_EXT/AUTHEN/AUTHEN_GATEWAY?Token=' + sessionStorage.TOKEN + '&identify=' + sessionStorage.IDENTIFY + '&staff=1';
+            window.open(url1, '_blank').focus();
             //REDIRECT();
         }
     };
@@ -823,8 +816,6 @@
         dataPHR.then(function (datas) {
             $scope.DATA_PHR_SHOW = datas.data;
         }, function () { });
-
-       
     };
 
     $scope.pageload_modify = function () {
@@ -921,8 +912,8 @@
             }, function () { });
 
         } else {
-            var data_lct = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(IDENTIFY);
-            data_lct.then(function (datas) {
+            var data_lct1 = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(IDENTIFY);
+            data_lct1.then(function (datas) {
                 $scope.LIST_EXTEND = datas.data;
 
             }, function () { });
@@ -1211,9 +1202,6 @@
             $scope.COLLECT_PHR.push(obj);
 
         }
-        
-
-
     };
 
     $scope.deletePHR = function (data, i) {
