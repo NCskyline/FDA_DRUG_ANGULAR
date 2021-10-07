@@ -718,6 +718,11 @@
     <Content Include="Views\DR_STAFF\FRM_TABEAN_YA_CHANGE_STATUS.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_EXTEND_TIME_LOCATION_STAFF_MAIN.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_STAFF_OFFER.vbhtml" />
+    <Content Include="Views\LCN_STAFF\FRM_STAFF_LCN_APPROVE.vbhtml" />
+    <Content Include="Views\LCN_STAFF\FRM_STAFF_LCN_CONSIDER.vbhtml" />
+    <Content Include="Views\LCN_STAFF\FRM_STAFF_LCN_PAY_NOTE.vbhtml" />
+    <Content Include="Views\LCN_STAFF\FRM_STAFF_LCN_RCV_MANUAL.vbhtml" />
+    <Content Include="Views\LCN_STAFF\FRM_STAFF_LCN_REMARK.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>
