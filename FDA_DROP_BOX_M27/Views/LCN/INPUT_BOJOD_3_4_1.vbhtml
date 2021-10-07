@@ -43,7 +43,7 @@
 <script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
-<div class="ic"> @*ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">*@
+<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
     <div style="font-family:'Taviraj';font-size:24px;">
         <h1 style="text-align:left;font-size:24px;">
             <strong>แบบ ข.ว.จ. ๓/๔-๑</strong>
