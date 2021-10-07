@@ -1371,7 +1371,20 @@
         });
         return response;
     };
+    this.UPLOAD_PDF_ATTACH_LCN = function (model, TR_ID, PROCESS_ID, file) { //เรียก Full model
 
+        var response = Upload.upload({
+            // url: host + "FOOD_CUST/UPLOAD_PDF",
+            url: SET_URL_SV("/LCN_CENTER/UPLOAD_PDF_ATTACH"),
+            data: {
+                model: JSON.stringify(model),
+                TR_ID: TR_ID,
+                PROCESS_ID: PROCESS_ID,
+                files: file
+            }
+        });
+        return response;
+    };
 
     this.UPLOAD_PDF_V3 = function (model, file) { //เรียก Full model
 

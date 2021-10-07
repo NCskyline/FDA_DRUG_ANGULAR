@@ -590,8 +590,8 @@ Namespace Controllers
                 Dim NAME_REAL As String = ""
                 Dim DD As Integer = 1
                 Dim Count As Integer = 1
-                Dim path As String = _PATH_DEFAULT & "\upload\"
-                ''Dim path As String = "F:\path\DRUG\upload\"
+                ''Dim path As String = _PATH_DEFAULT & "\upload\"
+                Dim path As String = "F:\path\DRUG\upload\"
                 Directory.CreateDirectory(path) 'สร้าง PATH รอ
                 Dim i As Integer = 0
 
@@ -604,7 +604,7 @@ Namespace Controllers
                     End If
                     NAME_REAL = Request.Files(i).FileName ''Request.Files(0).FileName 
                     Dim Type As String = IO.Path.GetExtension(Request.Files(i).FileName).ToString()
-                    filename = "DA-" & PROCESS_ID & "-" & Date.Now.Year & "-" & TR_ID & "-" & DD & Type
+                    filename = "DA-" & PROCESS_ID & "-" & Date.Now.Year + 543 & "-" & TR_ID & "-" & DD & Type
                     path_file = path & filename
                     Dim postedFile As HttpPostedFileBase = Request.Files(i)
 
@@ -616,8 +616,13 @@ Namespace Controllers
                         .NAME_REAL = NAME_REAL
                         .TYPE = DD
                         .TRANSACTION_ID = TR_ID
-                        .DESCRIPTION = ""
+                        For Each f As FILE_LIST In MODEL_LIST.FILE_LISTs
+                            If NAME_REAL = f.FILENAME Then
+                                .DESCRIPTION = f.DES
+                            End If
+                        Next
                         .PROCESS_ID = PROCESS_ID
+                        .FILE_PATH = path_file
                     End With
                     dao_f.insert()
 

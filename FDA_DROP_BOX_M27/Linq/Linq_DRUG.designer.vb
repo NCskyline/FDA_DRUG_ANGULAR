@@ -841,12 +841,6 @@ Partial Public Class Linq_DRUGDataContext
     End Sub
   Partial Private Sub DeleteDH15_DETAIL_CASCHEMICAL(instance As DH15_DETAIL_CASCHEMICAL)
     End Sub
-  Partial Private Sub InsertFILE_ATTACH(instance As FILE_ATTACH)
-    End Sub
-  Partial Private Sub UpdateFILE_ATTACH(instance As FILE_ATTACH)
-    End Sub
-  Partial Private Sub DeleteFILE_ATTACH(instance As FILE_ATTACH)
-    End Sub
   Partial Private Sub InsertMAS_MENU_CHEMI_LABEL(instance As MAS_MENU_CHEMI_LABEL)
     End Sub
   Partial Private Sub UpdateMAS_MENU_CHEMI_LABEL(instance As MAS_MENU_CHEMI_LABEL)
@@ -2125,6 +2119,12 @@ Partial Public Class Linq_DRUGDataContext
     End Sub
   Partial Private Sub DeleteMAS_ATTACH_TEMPLATE(instance As MAS_ATTACH_TEMPLATE)
     End Sub
+  Partial Private Sub InsertFILE_ATTACH(instance As FILE_ATTACH)
+    End Sub
+  Partial Private Sub UpdateFILE_ATTACH(instance As FILE_ATTACH)
+    End Sub
+  Partial Private Sub DeleteFILE_ATTACH(instance As FILE_ATTACH)
+    End Sub
   #End Region
 	
 	Public Sub New()
@@ -2977,12 +2977,6 @@ Partial Public Class Linq_DRUGDataContext
 	Public ReadOnly Property DH15_DETAIL_CASCHEMICALs() As System.Data.Linq.Table(Of DH15_DETAIL_CASCHEMICAL)
 		Get
 			Return Me.GetTable(Of DH15_DETAIL_CASCHEMICAL)
-		End Get
-	End Property
-	
-	Public ReadOnly Property FILE_ATTACHes() As System.Data.Linq.Table(Of FILE_ATTACH)
-		Get
-			Return Me.GetTable(Of FILE_ATTACH)
 		End Get
 	End Property
 	
@@ -4285,6 +4279,12 @@ Partial Public Class Linq_DRUGDataContext
 	Public ReadOnly Property MAS_ATTACH_TEMPLATEs() As System.Data.Linq.Table(Of MAS_ATTACH_TEMPLATE)
 		Get
 			Return Me.GetTable(Of MAS_ATTACH_TEMPLATE)
+		End Get
+	End Property
+	
+	Public ReadOnly Property FILE_ATTACHes() As System.Data.Linq.Table(Of FILE_ATTACH)
+		Get
+			Return Me.GetTable(Of FILE_ATTACH)
 		End Get
 	End Property
 End Class
@@ -40833,200 +40833,6 @@ Partial Public Class DH15_DETAIL_CASCHEMICAL
 				Me._phm15dgt_pure = value
 				Me.SendPropertyChanged("phm15dgt_pure")
 				Me.Onphm15dgt_pureChanged
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.FILE_ATTACH")>  _
-Partial Public Class FILE_ATTACH
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _IDA As Integer
-	
-	Private _NAME_FAKE As String
-	
-	Private _NAME_REAL As String
-	
-	Private _TYPE As String
-	
-	Private _TRANSACTION_ID As System.Nullable(Of Integer)
-	
-	Private _DESCRIPTION As String
-	
-	Private _PROCESS_ID As String
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnIDAChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnIDAChanged()
-    End Sub
-    Partial Private Sub OnNAME_FAKEChanging(value As String)
-    End Sub
-    Partial Private Sub OnNAME_FAKEChanged()
-    End Sub
-    Partial Private Sub OnNAME_REALChanging(value As String)
-    End Sub
-    Partial Private Sub OnNAME_REALChanged()
-    End Sub
-    Partial Private Sub OnTYPEChanging(value As String)
-    End Sub
-    Partial Private Sub OnTYPEChanged()
-    End Sub
-    Partial Private Sub OnTRANSACTION_IDChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub OnTRANSACTION_IDChanged()
-    End Sub
-    Partial Private Sub OnDESCRIPTIONChanging(value As String)
-    End Sub
-    Partial Private Sub OnDESCRIPTIONChanged()
-    End Sub
-    Partial Private Sub OnPROCESS_IDChanging(value As String)
-    End Sub
-    Partial Private Sub OnPROCESS_IDChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDA", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property IDA() As Integer
-		Get
-			Return Me._IDA
-		End Get
-		Set
-			If ((Me._IDA = value)  _
-						= false) Then
-				Me.OnIDAChanging(value)
-				Me.SendPropertyChanging
-				Me._IDA = value
-				Me.SendPropertyChanged("IDA")
-				Me.OnIDAChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NAME_FAKE", DbType:="VarChar(MAX)")>  _
-	Public Property NAME_FAKE() As String
-		Get
-			Return Me._NAME_FAKE
-		End Get
-		Set
-			If (String.Equals(Me._NAME_FAKE, value) = false) Then
-				Me.OnNAME_FAKEChanging(value)
-				Me.SendPropertyChanging
-				Me._NAME_FAKE = value
-				Me.SendPropertyChanged("NAME_FAKE")
-				Me.OnNAME_FAKEChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NAME_REAL", DbType:="VarChar(MAX)")>  _
-	Public Property NAME_REAL() As String
-		Get
-			Return Me._NAME_REAL
-		End Get
-		Set
-			If (String.Equals(Me._NAME_REAL, value) = false) Then
-				Me.OnNAME_REALChanging(value)
-				Me.SendPropertyChanging
-				Me._NAME_REAL = value
-				Me.SendPropertyChanged("NAME_REAL")
-				Me.OnNAME_REALChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TYPE", DbType:="VarChar(MAX)")>  _
-	Public Property TYPE() As String
-		Get
-			Return Me._TYPE
-		End Get
-		Set
-			If (String.Equals(Me._TYPE, value) = false) Then
-				Me.OnTYPEChanging(value)
-				Me.SendPropertyChanging
-				Me._TYPE = value
-				Me.SendPropertyChanged("TYPE")
-				Me.OnTYPEChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TRANSACTION_ID", DbType:="Int")>  _
-	Public Property TRANSACTION_ID() As System.Nullable(Of Integer)
-		Get
-			Return Me._TRANSACTION_ID
-		End Get
-		Set
-			If (Me._TRANSACTION_ID.Equals(value) = false) Then
-				Me.OnTRANSACTION_IDChanging(value)
-				Me.SendPropertyChanging
-				Me._TRANSACTION_ID = value
-				Me.SendPropertyChanged("TRANSACTION_ID")
-				Me.OnTRANSACTION_IDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DESCRIPTION", DbType:="VarChar(MAX)")>  _
-	Public Property DESCRIPTION() As String
-		Get
-			Return Me._DESCRIPTION
-		End Get
-		Set
-			If (String.Equals(Me._DESCRIPTION, value) = false) Then
-				Me.OnDESCRIPTIONChanging(value)
-				Me.SendPropertyChanging
-				Me._DESCRIPTION = value
-				Me.SendPropertyChanged("DESCRIPTION")
-				Me.OnDESCRIPTIONChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PROCESS_ID", DbType:="NVarChar(MAX)")>  _
-	Public Property PROCESS_ID() As String
-		Get
-			Return Me._PROCESS_ID
-		End Get
-		Set
-			If (String.Equals(Me._PROCESS_ID, value) = false) Then
-				Me.OnPROCESS_IDChanging(value)
-				Me.SendPropertyChanging
-				Me._PROCESS_ID = value
-				Me.SendPropertyChanged("PROCESS_ID")
-				Me.OnPROCESS_IDChanged
 			End If
 		End Set
 	End Property
@@ -138858,6 +138664,222 @@ Partial Public Class MAS_ATTACH_TEMPLATE
 				Me._PIORITY = value
 				Me.SendPropertyChanged("PIORITY")
 				Me.OnPIORITYChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.FILE_ATTACH")>  _
+Partial Public Class FILE_ATTACH
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _IDA As Integer
+	
+	Private _NAME_FAKE As String
+	
+	Private _NAME_REAL As String
+	
+	Private _TYPE As String
+	
+	Private _TRANSACTION_ID As System.Nullable(Of Integer)
+	
+	Private _DESCRIPTION As String
+	
+	Private _PROCESS_ID As String
+	
+	Private _FILE_PATH As String
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnIDAChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnIDAChanged()
+    End Sub
+    Partial Private Sub OnNAME_FAKEChanging(value As String)
+    End Sub
+    Partial Private Sub OnNAME_FAKEChanged()
+    End Sub
+    Partial Private Sub OnNAME_REALChanging(value As String)
+    End Sub
+    Partial Private Sub OnNAME_REALChanged()
+    End Sub
+    Partial Private Sub OnTYPEChanging(value As String)
+    End Sub
+    Partial Private Sub OnTYPEChanged()
+    End Sub
+    Partial Private Sub OnTRANSACTION_IDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnTRANSACTION_IDChanged()
+    End Sub
+    Partial Private Sub OnDESCRIPTIONChanging(value As String)
+    End Sub
+    Partial Private Sub OnDESCRIPTIONChanged()
+    End Sub
+    Partial Private Sub OnPROCESS_IDChanging(value As String)
+    End Sub
+    Partial Private Sub OnPROCESS_IDChanged()
+    End Sub
+    Partial Private Sub OnFILE_PATHChanging(value As String)
+    End Sub
+    Partial Private Sub OnFILE_PATHChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDA", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property IDA() As Integer
+		Get
+			Return Me._IDA
+		End Get
+		Set
+			If ((Me._IDA = value)  _
+						= false) Then
+				Me.OnIDAChanging(value)
+				Me.SendPropertyChanging
+				Me._IDA = value
+				Me.SendPropertyChanged("IDA")
+				Me.OnIDAChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NAME_FAKE", DbType:="VarChar(MAX)")>  _
+	Public Property NAME_FAKE() As String
+		Get
+			Return Me._NAME_FAKE
+		End Get
+		Set
+			If (String.Equals(Me._NAME_FAKE, value) = false) Then
+				Me.OnNAME_FAKEChanging(value)
+				Me.SendPropertyChanging
+				Me._NAME_FAKE = value
+				Me.SendPropertyChanged("NAME_FAKE")
+				Me.OnNAME_FAKEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NAME_REAL", DbType:="VarChar(MAX)")>  _
+	Public Property NAME_REAL() As String
+		Get
+			Return Me._NAME_REAL
+		End Get
+		Set
+			If (String.Equals(Me._NAME_REAL, value) = false) Then
+				Me.OnNAME_REALChanging(value)
+				Me.SendPropertyChanging
+				Me._NAME_REAL = value
+				Me.SendPropertyChanged("NAME_REAL")
+				Me.OnNAME_REALChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TYPE", DbType:="VarChar(MAX)")>  _
+	Public Property TYPE() As String
+		Get
+			Return Me._TYPE
+		End Get
+		Set
+			If (String.Equals(Me._TYPE, value) = false) Then
+				Me.OnTYPEChanging(value)
+				Me.SendPropertyChanging
+				Me._TYPE = value
+				Me.SendPropertyChanged("TYPE")
+				Me.OnTYPEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TRANSACTION_ID", DbType:="Int")>  _
+	Public Property TRANSACTION_ID() As System.Nullable(Of Integer)
+		Get
+			Return Me._TRANSACTION_ID
+		End Get
+		Set
+			If (Me._TRANSACTION_ID.Equals(value) = false) Then
+				Me.OnTRANSACTION_IDChanging(value)
+				Me.SendPropertyChanging
+				Me._TRANSACTION_ID = value
+				Me.SendPropertyChanged("TRANSACTION_ID")
+				Me.OnTRANSACTION_IDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DESCRIPTION", DbType:="VarChar(MAX)")>  _
+	Public Property DESCRIPTION() As String
+		Get
+			Return Me._DESCRIPTION
+		End Get
+		Set
+			If (String.Equals(Me._DESCRIPTION, value) = false) Then
+				Me.OnDESCRIPTIONChanging(value)
+				Me.SendPropertyChanging
+				Me._DESCRIPTION = value
+				Me.SendPropertyChanged("DESCRIPTION")
+				Me.OnDESCRIPTIONChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PROCESS_ID", DbType:="NVarChar(MAX)")>  _
+	Public Property PROCESS_ID() As String
+		Get
+			Return Me._PROCESS_ID
+		End Get
+		Set
+			If (String.Equals(Me._PROCESS_ID, value) = false) Then
+				Me.OnPROCESS_IDChanging(value)
+				Me.SendPropertyChanging
+				Me._PROCESS_ID = value
+				Me.SendPropertyChanged("PROCESS_ID")
+				Me.OnPROCESS_IDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FILE_PATH", DbType:="NVarChar(MAX)")>  _
+	Public Property FILE_PATH() As String
+		Get
+			Return Me._FILE_PATH
+		End Get
+		Set
+			If (String.Equals(Me._FILE_PATH, value) = false) Then
+				Me.OnFILE_PATHChanging(value)
+				Me.SendPropertyChanging
+				Me._FILE_PATH = value
+				Me.SendPropertyChanged("FILE_PATH")
+				Me.OnFILE_PATHChanged
 			End If
 		End Set
 	End Property

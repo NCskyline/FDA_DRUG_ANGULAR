@@ -6,6 +6,7 @@
     $scope.SUB_PATH = "";
     $scope.COLLECT_KEEP = [];
     $scope.COLLECT_PHR = [];
+    $scope.PDF = [];
     //var LCN_IDA = 70911;//sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;  //
     var PROCESS = sessionStorage.PROCESS; //QueryString("PROCESS");
@@ -775,17 +776,17 @@
 
 
 
-        var data_keep = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP('2', sessionStorage.CITIZEN_ID_AUTHORIZE);
-        data_keep.then(function (datas) {
+        var data_keep1 = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP('2', sessionStorage.CITIZEN_ID_AUTHORIZE);
+        data_keep1.then(function (datas) {
             $scope.REF_LOCATION_KEEP = datas.data;
 
         }, function () { });
 
-        var data_lct = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2('1', sessionStorage.CITIZEN_ID_AUTHORIZE);
-        data_lct.then(function (datas) {
-            $scope.REF_LOCATION = datas.data;
+        //var data_lct = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2('1', sessionStorage.CITIZEN_ID_AUTHORIZE);
+        //data_lct.then(function (datas) {
+        //    $scope.REF_LOCATION = datas.data;
 
-        }, function () { });
+        //}, function () { });
 
         if ($scope.LIST_EXTEND.YEAR_SELECT == "1") {
             var _YEAR = new Date().getFullYear();
@@ -1135,9 +1136,23 @@
 
         var Getdata = CENTER_SV.INSERT_LCN_INPUT_NEW($scope.LIST_LCN, $scope.COLLECT_KEEP, $scope.COLLECT_PHR, PROCESS, sessionStorage.LCT_IDA);
         Getdata.then(function (datas) {
+            var DES = datas.data.MSG_DES;
+            var TR_ID = datas.data.TR_ID;
+            var PROCESS = datas.data.PROCESS;
+            var obj = $scope.DOC_LIST.FILE_LISTs;
+            angular.forEach(obj, function (value, key) {
+                var FILEs = value.FILE_DATA;
+                $scope.PDF.push(FILEs);
+            });
+            var upload = CENTER_SV.UPLOAD_PDF_ATTACH_LCN($scope.DOC_LIST.FILE_LISTs, TR_ID, PROCESS, $scope.PDF);
+            upload.then(function (datas) {
+                if (datas.data.result == 'SUCCESS') {
+                    $scope.FLAG = 'PASS';
+                }
+            });
             Swal.fire({
                 title: 'SUCCESS',
-                text: 'บันทึกข้อมูลเรียบร้อย \n' + datas.data ,
+                text: 'บันทึกข้อมูลเรียบร้อย \n' + DES ,
                 icon: 'ดฟสหำ',
                 confirmButtonColor: '#3085d6',
                 confirmButtonText: 'OK'
@@ -1231,6 +1246,5 @@
                 datas.FILENAME = '';
             }
         }
-        $scope.files.push(file);
     };
 });

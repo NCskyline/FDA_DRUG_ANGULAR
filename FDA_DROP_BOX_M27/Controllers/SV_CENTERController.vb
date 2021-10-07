@@ -2556,7 +2556,7 @@ Namespace Controllers
                     End If
                     NAME_REAL = Request.Files(i).FileName ''Request.Files(0).FileName 
                     Dim Type As String = IO.Path.GetExtension(Request.Files(i).FileName).ToString()
-                    filename = "DA-" & PROCESS_ID & "-" & Date.Now.Year & "-" & TR_ID & "-" & DD & Type
+                    filename = "DA-" & PROCESS_ID & "-" & Date.Now.Year + 543 & "-" & TR_ID & "-" & DD & Type
                     path_file = path & filename
                     Dim postedFile As HttpPostedFileBase = Request.Files(i)
 
@@ -2570,6 +2570,7 @@ Namespace Controllers
                         .TRANSACTION_ID = TR_ID
                         .DESCRIPTION = ""
                         .PROCESS_ID = PROCESS_ID
+                        .FILE_PATH = path_file
                     End With
                     dao_f.insert()
 
@@ -4087,9 +4088,11 @@ Namespace Controllers
                     End If
                 End If
             Next
-            Result = "เลขดำเนินการคือ " & tr_id
+            msg_r.MSG_DES = "เลขดำเนินการคือ " & tr_id
+            msg_r.PROCESS = PROCESS
+            msg_r.TR_ID = tr_id
 
-            Return Json(Result, JsonRequestBehavior.AllowGet)
+            Return Json(msg_r, JsonRequestBehavior.AllowGet)
         End Function
         Function INSERT_PHR(ByVal XML_PHR As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String) As JsonResult
             Dim Result As String = ""

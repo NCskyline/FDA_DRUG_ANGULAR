@@ -1988,17 +1988,6 @@
       <Column Name="phm15dgt_pure" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.FILE_ATTACH" Member="FILE_ATTACHes">
-    <Type Name="FILE_ATTACH">
-      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="NAME_FAKE" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="NAME_REAL" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="TYPE" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="TRANSACTION_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DESCRIPTION" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="PROCESS_ID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.MAS_MENU_CHEMI_LABEL" Member="MAS_MENU_CHEMI_LABELs">
     <Type Name="MAS_MENU_CHEMI_LABEL">
       <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -6934,6 +6923,18 @@
       <Column Name="SUB_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ACTIVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="PIORITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FILE_ATTACH" Member="FILE_ATTACHes">
+    <Type Name="FILE_ATTACH">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NAME_FAKE" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="NAME_REAL" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="TYPE" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="TRANSACTION_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PROCESS_ID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FILE_PATH" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
