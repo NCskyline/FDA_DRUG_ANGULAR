@@ -15,6 +15,14 @@ Public Class BAO
         Return dt
     End Function
     '
+    Public Function SP_STAFF_OFFER_DDL_BY_PVNCD(ByVal PVCODE As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_STAFF_OFFER_DDL_BY_PVNCD @pvncd =" & PVCODE
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_STAFF_OFFER_DDL_BY_PVNCD"
+        Return dt
+    End Function
     Public Function SP_BSN_LOCATION_ADDRESS_BY_IDEN_V2(ByVal iden As String) As DataTable
         Dim sql As String = "exec SP_BSN_LOCATION_ADDRESS_BY_IDEN_V2 @iden='" & iden & "'"
         Dim dta As New DataTable

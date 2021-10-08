@@ -121,7 +121,18 @@
         });
         return response;
     };
+    
 
+    this.SP_STAFF_OFFER_DDL_BY_PVNCD = function (PVCODE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STAFF_OFFER_DDL_BY_PVNCD"),
+            params: {
+                PVCODE: PVCODE
+            }
+        });
+        return response;
+    };
     this.SP_MASTER_CER_PK_BY_FK_IDA = function (IDA) {
         var response = $http({
             method: "post",
@@ -581,7 +592,34 @@
         return response;
     };
     
-
+    this.UPDATE_APPROVE_NAME = function (XML_APP, LCN_IDA, CITIZEN_ID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/UPDATE_APPROVE_NAME"),
+            dataType: "json",
+            data: {
+                XML_APP: JSON.stringify(XML_APP),
+                LCN_IDA: LCN_IDA,
+                CITIZEN_ID: CITIZEN_ID
+            }
+        });
+        return response;
+    };
+    
+    this.SAVE_LCN_CONSIDER = function (XML_CSD, LCN_IDA, CITIZEN_ID, PVCODE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SAVE_LCN_CONSIDER"),
+            dataType: "json",
+            data: {
+                XML_CSD: JSON.stringify(XML_CSD),
+                LCN_IDA: LCN_IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                PVCODE: PVCODE
+            }
+        });
+        return response;
+    };
     this.UPDATE_TEMPLATE_LCN = function (INFO_LIST, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
         var response = $http({
             method: "post",
@@ -688,6 +726,19 @@
             data: {
 
                 identify: iden
+            }
+        });
+        return response;
+    };
+    
+    this.GET_LCN_APPROVE_INFORMATION_INPUT = function (LCN_IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_LCN_APPROVE_INFORMATION_INPUT"),
+            dataType: "json",
+            data: {
+
+                LCN_IDA: LCN_IDA
             }
         });
         return response;
