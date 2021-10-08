@@ -537,7 +537,7 @@
                         <td>
                             (ลายมือชื่อ)
                         </td>
-                        <td style="width:50%;text-align:center"></td>
+                        <td style="width:50%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
                         <td style="text-align:left">
                             ผู้ขออนุญาต
                         </td>

@@ -11,7 +11,7 @@ End Code
         <td style="width:35%"></td>
         <td style="width:35%"></td>
         <td style="width:5%;text-align:left">เลขที่:</td>
-        <td style=" width:25%;text-align:center"></td>
+        <td style=" width:25%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
     </tr>
 </table>
 <table style="width:100%">
@@ -19,7 +19,7 @@ End Code
         <td style="width:35%"></td>
         <td style="width:35%"></td>
         <td style="width:5%;text-align:left">วันที่:</td>
-        <td style=" width:25%;text-align:center"></td>
+        <td style=" width:25%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
     </tr>
 </table>
 <table style="width:100%">
@@ -27,7 +27,7 @@ End Code
         <td style="width:35%"></td>
         <td style="width:35%"></td>
         <td style="width:5%;text-align:left"> ลงชื่อ:</td>
-        <td style=" width:15%;text-align:center"></td>
+        <td style=" width:15%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
         <td style="width:10%">ผู้รับคำขอ</td>
     </tr>
 </table>
@@ -38,7 +38,7 @@ End Code
     <tr>
         <td style="width:70%"></td>
         <td style="width:5%;text-align:right">เขียนที่</td>
-        <td style="width:25%"></td>
+        <td style="width:25%;border-bottom:dotted;border-bottom-width:thin;"></td>
     </tr>
 </table>
 
@@ -50,7 +50,7 @@ End Code
     <tr>
         <td style="width:10%"></td>
         <td style="width:5%;">ข้าพเจ้า</td>
-        <td style="width:60%;text-align:center"></td>
+        <td style="width:60%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
         <td style="width:20%;text-align:right">ซึ่งมีผู้ดำเนินกิจการ</td>
     </tr>
 </table>
@@ -66,33 +66,33 @@ End Code
 <table style="width:100%" border="1">
     <tr>
         <td style="width:5%;">คือ</td>
-        <td style="width:60%;text-align:center"></td>
+        <td style="width:60%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
         <td style="width:5%;">อายุ</td>
-        <td style="width:10%;text-align:center"></td>
+        <td style="width:10%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
         <td style="width:5%;">สัญชาติ</td>
-        <td style="width:10%;text-align:center"></td>
+        <td style="width:10%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
     </tr>
 </table>
 <table style="width:100%">
     <tr>
         <td style="width:10%;">อยู่เลขที่</td>
-        <td style="width:90%;text-align:center"></td>
+        <td style="width:90%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
     </tr>
 </table>
 <table style="width:100%">
     <tr>
         <td style="width:20%;">โทรศัพท์/โทรศัพท์มือถือ</td>
-        <td style="width:70%;text-align:center"></td>
+        <td style="width:70%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
         <td style="width:10%;">ซึ่งได้รับอนุญาตให้</td>
     </tr>
 </table>
 <table style="width:100%">
     <tr>
         <td style="width:45%;">ผลิต/ขาย/หรือนำเข้าซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ตามใบอนุญาตที่</td>
-        <td style="width:55%;text-align:center"></td>
+        <td style="width:55%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
     </tr>
 </table>
-<table style="width:100%" border="1">
+<table style="width:100%" border="1">   
     <tr>
         <td style="width:10%"></td>
         <td style="width:90%;">ขอรับใบอนุญาตส่งออกวัตถุออกฤทธิ์ ณ สถานที่ชื่อ</td>
@@ -106,13 +106,13 @@ End Code
 <table style="width:100%">
     <tr>
         <td style="width:10%;">อยู่เลขที่</td>
-        <td style="width:90%;text-align:center"></td>
+        <td style="width:90%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
     </tr>
 </table>
 <table style="width:100%">
     <tr>
         <td style="width:20%;">โทรศัพท์/โทรศัพท์มือถือ</td>
-        <td style="width:80%;text-align:center"></td>
+        <td style="width:80%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
     </tr>
 </table>
 <br />
@@ -157,15 +157,15 @@ End Code
 </table>
 <br />
 <div>&nbsp;&nbsp;&nbsp;&nbsp;พร้อมกับคำขอนี้ ข้าพเจ้าได้ส่งมอบหลักฐานต่างๆมาด้วย คือ</div>
-<div>&nbsp;&nbsp;&nbsp;&nbsp;(๑) รูปถ่ายขนาด ๓ x ๔ เซนติเมตร จำนวน ๔ รูป</div>
+@*<div>&nbsp;&nbsp;&nbsp;&nbsp;(๑) รูปถ่ายขนาด ๓ x ๔ เซนติเมตร จำนวน ๔ รูป</div>
 <div>&nbsp;&nbsp;&nbsp;&nbsp;(๒) สำเนาใบผลิต ขาย หรือนำเข้าซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</div>
-<div>&nbsp;&nbsp;&nbsp;&nbsp;(๓) เอกสารอื่นๆ (ถ้ามี)</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;(๓) เอกสารอื่นๆ (ถ้ามี)</div>*@
 <br />
 <table style="width:100%">
     <tr>
         <td style="width:25%;text-align:center"></td>
         <td style="width:10%;text-align:right">(ลงชื่อผู้ยื่นคำขอ)</td>
-        <td style="width:20%;text-align:center"></td>
+        <td style="width:20%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
         <td style="width:25%;text-align:start">ลงชื่อผู้ยื่นคำขอ</td>
     </tr>
 </table>

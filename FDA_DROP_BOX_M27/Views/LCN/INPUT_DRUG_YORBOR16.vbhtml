@@ -13,7 +13,7 @@ End Code
                 <td style="width:35%"></td>
                 <td style="width:35%"></td>
                 <td style="width:5%;text-align:right">เลขที่:</td>
-                <td style=" width:25%;text-align:center"></td>
+                <td style=" width:25%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
             </tr>
         </table>
         <table style="width:100%">
@@ -21,7 +21,7 @@ End Code
                 <td style="width:35%"></td>
                 <td style="width:35%"></td>
                 <td style="width:5%;text-align:right">วันที่:</td>
-                <td style=" width:25%;text-align:center"></td>
+                <td style=" width:25%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
             </tr>
         </table>
         <table style="width:100%">
@@ -29,7 +29,7 @@ End Code
                 <td style="width:35%"></td>
                 <td style="width:35%"></td>
                 <td style="width:5%;text-align:right"> ลงชื่อ:</td>
-                <td style=" width:15%;text-align:center"></td>
+                <td style=" width:15%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
                 <td style="width:10%">ผู้รับคำขอ</td>
             </tr>
         </table>
@@ -69,10 +69,10 @@ End Code
         <br />
         <table style="width:100%">
             <tr>
-                <td style="width:10%;text-align:right">ข้าพเข้า :</td>
-                <td style="width:30%;text-align:center"></td>
+                <td style="width:10%;text-align:right">ข้าพเจ้า :</td>
+                <td style="width:30%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
                 <td style="width:15%;text-align:right">ซึ่งมีผู้ดำเนินกิจการ ชื่อ :</td>
-                <td style="width:35%;text-align:center"></td>
+                <td style="width:35%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
             </tr>
         </table>
         <table style="width:100%">
@@ -87,25 +87,25 @@ End Code
             <tr>
                 <td style="width:40%"> <input type="checkbox" /> นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร</td>
                 <td style="width:15%;text-align:right">ตามใบอนุญาตที่ ชื่อ</td>
-                <td style="width:85%;text-align:center"></td>
+                <td style="width:85%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
             </tr>
         </table>
         <table style="width:100%">
             <tr>
                 <td style="width:15%;">ณ สถานที่ประกอบธุรกิจ ชื่อ</td>
-                <td style="width:85%;text-align:center"></td>
+                <td style="width:85%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
             </tr>
         </table>
         <table style="width:100%">
             <tr>
                 <td style="width:5%;">อยู่เลขที่</td>
-                <td style="width:95%;text-align:center"></td>
+                <td style="width:95%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
             </tr>
         </table>
         <table style="width:100%">
             <tr>
                 <td style="width:18%;">โทรศัพท์</td>
-                <td style="width:82%;text-align:center"></td>
+                <td style="width:82%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
             </tr>
         </table>
         <td>ขอเปลี่ยนแปลงรายการในใบอนุญาต ดังต่อไปนี้</td>
@@ -115,7 +115,7 @@ End Code
             </tr>
         </table>
         <br />
-        <table>
+        @*<table>
             <tr>
                 <td>ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ</td>
             <tr>
@@ -123,7 +123,43 @@ End Code
             <tr>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp; (๒) เอกสารที่เป็นหลักฐานเกี่ยวข้องกับรายการที่ขอเปลี่ยนแปลง</td>
             </tr>
-        </table>
+        </table>*@
+        <div class="row">
+            <div class="col-sm-10" style="width:100%">
+                <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
+                    <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
+                        หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
+                    </div>
+                    <div class="card-header" ng-show="datas.PIORITY=='LOW'">
+                        หัวข้อเอกสาร (ไม่บังคับแนบ)
+                    </div>
+                    <div class="card-body">
+
+                        <table class="table" style="width:100%">
+                            <tr>
+                                <td colspan="5">
+                                    {{datas.DES}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:15%;"><input id="file-input" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                                <td style="width:10%;">ชื่อไฟล์</td>
+                                <td style="width:50%;">{{datas.FILENAME}}</td>
+                                <td style="width:5%">
+                                    <a ng-click="OPEN_DOC_PATH(datas.PATH)">{{FLAG}}</a>
+                                </td>
+                                <td style="width:20%; text-align: right;">
+                                    @*<input type="button" ng-click="UPLOAD_PDFs(datas)" value="บันทึก" />*@
+                                    @*<input type="button" ng-click="deleteRow(datas,$index)" value="ลบ" />*@
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         <br />
         <table style="width:100%">
             <tr>

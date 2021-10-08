@@ -12,7 +12,7 @@ End Code
             <td style="width:35%"></td>
             <td style="width:35%"></td>
             <td style="width:5%;text-align:right">เลขที่:</td>
-            <td style=" width:25%;text-align:center"><label>{{LCN_LIST.RCVNO_DISPLAY}}</label></td>
+            <td style=" width:25%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"><label>{{LCN_LIST.RCVNO_DISPLAY}}</label></td>
         </tr>
     </table>
     <table style="width:100%">
@@ -20,7 +20,7 @@ End Code
             <td style="width:35%"></td>
             <td style="width:35%"></td>
             <td style="width:5%;text-align:right">วันที่:</td>
-            <td style=" width:25%;text-align:center"><label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label></td>
+            <td style=" width:25%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"><label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label></td>
         </tr>
     </table>
     <table style="width:100%">
@@ -28,7 +28,7 @@ End Code
             <td style="width:35%"></td>
             <td style="width:35%"></td>
             <td style="width:5%;text-align:right"> ลงชื่อ:</td>
-            <td style=" width:15%;text-align:center"></td>
+            <td style=" width:15%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
             <td style="width:10%">ผู้รับคำขอ</td>
         </tr>
     </table>
@@ -80,7 +80,7 @@ End Code
     <br />
     <table style="width:100%">
         <tr>
-            <td style="width:10%;text-align:right">ข้าพเข้า :</td>
+            <td style="width:10%;text-align:right">ข้าพเจ้า :</td>
             <td style="width:90%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"> <label>{{LIST_LCN.thanm}}</label></td>
         </tr>
     </table>
@@ -140,7 +140,7 @@ End Code
             <td style="width:95%">ข้าพเจ้าเป็นผู้มีคุณสมบัติครบถ้วนตามมาตรา ๑๔ ของพระราชบัญญัติยา พ.ศ. ๒๕๑๐ ซึ่งไม่เป็นบุคคลล้มละลายและข้าพเจ้าได้แนบหลักฐานมาด้วย คือ </td>
         </tr>
     </table>
-    <table style="width:100%">
+    @*<table style="width:100%">
         <tr>
             <td style="width:5%"></td>
             <td style="width:95%">(๑) ใบรับรองของผู้ประกอบวิชาชีพเวชกรรมผู้ประกอบวิชาชีพเวชกรรมซึ่งรับรองว่าผู้รับอนุญาตหรือผู้ดำเนินกิจการสุขภาพแข็งแรงและ ไม่เป็นโรคตามมาตรา ๑๔ (๖) แห่งพระราชบัญญัติยา พ.ศ. ๒๕๑๐</td>
@@ -187,13 +187,13 @@ End Code
             <td style="width:5%"></td>
             <td style="width:95%">(๘) เอกสารอื่น ๆ (ถ้าจำเป็น)</td>
         </tr>
-    </table>
+    </table>*@
     <br />
     <table style="width:100%">
         <tr>
             <td style="width:50%;text-align:center"></td>
             <td style="width:10%;text-align:right">(ลายมือชื่อ)</td>
-            <td style="width:20%;text-align:center"></td>
+            <td style="width:20%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
             <td style="width:20%;text-align:start">ผู้คำขอ</td>
         </tr>
     </table>
@@ -201,7 +201,7 @@ End Code
         <tr>
             <td style="width:50%;text-align:center"></td>
             <td style="width:10%;text-align:right">(</td>
-            <td style="width:20%;text-align:center"></td>
+            <td style="width:20%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
             <td style="width:20%;text-align:start">) (ตัวบรรจง)</td>
         </tr>
     </table>
