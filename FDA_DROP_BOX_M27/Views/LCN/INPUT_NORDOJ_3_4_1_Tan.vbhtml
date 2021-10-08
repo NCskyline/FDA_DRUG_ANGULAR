@@ -67,7 +67,7 @@
                         เลขรับที่
                     </td>
 
-                    <td colspan="3">
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="3">
                         <label>{{LCN_LIST.RCVNO_DISPLAY}}</label>
                     </td>
                 </tr>
@@ -76,7 +76,7 @@
                         วันที่
                     </td>
 
-                    <td colspan="3">
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="3">
                         <label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label>
                     </td>
                 </tr>
@@ -86,7 +86,7 @@
 
                     </td>
 
-                    <td></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;"></td>
                     <td style="text-align:right;width:25%">
                         ผู้รับคำขอ
                     </td>
@@ -133,11 +133,11 @@
                 <td>
                     <input type="checkbox" name="gender" disabled="disabled" /> <strong>ขอต่ออายุใบอนุญาตเลขที่</strong>
                 </td>
-                <td></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;"></td>
                 <td style="width:10%">
                     <strong>ประจำปี พ.ศ.</strong>
                 </td>
-                <td></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;"></td>
             </tr>
             <tr>
                 <td>
@@ -164,26 +164,26 @@
         </table>
         <br />
 
-        <table style="width:100%; font-size:20px">
+        <table style="width:100%">
             <tr>
                 <td style="text-align:right;width:90%">
                     เขียนที่
                 </td>
-                <td style="width:40%">
-                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.WRITE_AT" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                <td style="width:40%;border-bottom:dotted;border-bottom-width:thin;">
+
+                    {{LIST_LCN.DALCN_NCT_SUBTITUTE.WRITE_AT}}
                 </td>
             </tr>
             <tr>
                 <td style="text-align:right;width:100px">
                     วันที่
                 </td>
-                <td>
-                    <md-datepicker ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.WRITE_DATE" md-placeholder="Enter date"
-                                   input-aria-describedby="datepicker-description"
-                                   input-aria-labelledby="datepicker-header ">
-                    </md-datepicker>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
+
+                    {{LIST_LCN.DALCN_NCT_SUBTITUTE.WRITE_DATE}}
                 </td>
             </tr>
+
         </table>
         <br />
 
@@ -212,11 +212,11 @@
                 <td style="font-size:20px">
                     หรือบัตรประจำตัวอื่นที่ทางราชการออกให้ คือ
                 </td>
-                <td style="font-size:20px;width:20%"></td>
+                <td style="font-size:20px;width:20%;border-bottom:dotted;border-bottom-width:thin;"></td>
                 <td style="font-size:20px;width:5%">
                     เลขที่
                 </td>
-                <td style="font-size:20px ;width:15%;text-align:center"></td>
+                <td style="font-size:20px ;width:15%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
                 <td style="font-size:20px">
                     (กรณีไม่ใช่ผู้มีสัญชาติไทย)
                 </td>
@@ -348,7 +348,7 @@
                 <td style="font-size:20px">
                     E-mail
                 </td>
-                <td style="font-size:20px">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.dalcn.Email}}</label>
                 </td>
             </tr>
@@ -356,7 +356,7 @@
                 <td style="font-size:20px" colspan="2">
                     โดยได้รับอนุญาตนำสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร เลขที่
                 </td>
-                <td style="font-size:20px" colspan="2">
+                <td style="font-size:20px;border-bottom:dotted;border-bottom-width:thin;" colspan="2">
                     <label>{{LIST_LCN.HEAD_LCNNO_NCT}}</label>
                 </td>
                 <td style="font-size:20px">
@@ -470,8 +470,8 @@
             </tr>
         </table>
         <br />
-        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
-        <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
+        @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />*@
+        @*<input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />*@
         <br />
         <div style="margin-left:5%;font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
         <br />
@@ -523,7 +523,7 @@
                 <td style="width:50%">
                     โดยได้รับอนุญาตนำสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร เลขที่
                 </td>
-                <td style="width:30%">
+                <td style="width:30%;border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.HEAD_LCNNO_NCT}}</label>
                 </td>
                 <td>
@@ -532,14 +532,50 @@
             </tr>
         </table>
         <br />
-        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
-        <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
+        @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />*@
+        @*<input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />*@
         <br />
         <div style="margin-left:5%;font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
         <br />
 
         <div style="font-size:20px"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
-        <div style="margin-left:5%;font-size:20px"><strong>๕.๑ กรณีขอรับใบอนุญาต (กรณีรายใหม่)</strong></div>
+        <div class="row">
+            <div class="col-sm-10" style="width:100%">
+                <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
+                    <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
+                        หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
+                    </div>
+                    <div class="card-header" ng-show="datas.PIORITY=='LOW'">
+                        หัวข้อเอกสาร (ไม่บังคับแนบ)
+                    </div>
+                    <div class="card-body">
+
+                        <table class="table" style="width:100%">
+                            <tr>
+                                <td colspan="5">
+                                    {{datas.DES}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:15%;"><input id="file-input" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                                <td style="width:10%;">ชื่อไฟล์</td>
+                                <td style="width:50%;">{{datas.FILENAME}}</td>
+                                <td style="width:5%">
+                                    <a ng-click="OPEN_DOC_PATH(datas.PATH)">{{FLAG}}</a>
+                                </td>
+                                <td style="width:20%; text-align: right;">
+                                    @*<input type="button" ng-click="UPLOAD_PDFs(datas)" value="บันทึก" />*@
+                                    @*<input type="button" ng-click="deleteRow(datas,$index)" value="ลบ" />*@
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        @*<div style="margin-left:5%;font-size:20px"><strong>๕.๑ กรณีขอรับใบอนุญาต (กรณีรายใหม่)</strong></div>
         <table style="width:90%;font-size:20px ;margin-left:10%">
             <tr>
                 <td>
@@ -607,7 +643,7 @@
                 </td>
             </tr>
 
-        </table>
+        </table>*@
         <div style="margin-left:5%;font-size:20px;text-align:center"><strong>ข้าพเจ้าขอรับรองว่า ข้อความและเอกสารหรือหลักฐานทั้งหมดที่ยื่นเพื่อประกอบคำขอรับใบอนุญาตเป็นความจริงทุกประการ</strong></div>
         <br />
         <br />
@@ -617,7 +653,7 @@
                 <td style="text-align:right">
                     (ลายมือชื่อ)
                 </td>
-                <td style="text-align:center;width:40%"></td>
+                <td style="text-align:center;width:40%;border-bottom:dotted;border-bottom-width:thin;"></td>
                 <td>
                     ผู้ขอรับใบอนุญาต/ผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการ
                 </td>
@@ -626,7 +662,7 @@
                 <td style="text-align:right">
                     (
                 </td>
-                <td style="text-align:center">
+                <td style="text-align:center;border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
                 </td>
                 <td style="text-align:left">
@@ -651,6 +687,31 @@
             </tr>
 
         </table>
+        <br />
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-3" style="text-align:center">
+                    รายละเอืยด :
+                </div>
+                <div class="col-sm-9">
+                    {{REMARK}}
+                </div>
+            </div>
+            <br />
+            <table class="table" style="width:100%">
+                <tr>
+                    <td>ชื่อไฟล์</td>
+                    <td></td>
+                </tr>
+                <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
+                    <td>{{datas.FILENAME}}</td>
+                    <td>
+                        <a ng-show="PROCESS == '100770'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />
         <div style="text-align:center">
             <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
             <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_STT()" value="บันทึก" />

@@ -32,7 +32,8 @@
 </script>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
-    <div style="font-family:'Taviraj';font-size:24px;">
+    <div ng-show="LIST_LCN.PROCESS == '105'">
+        <div style="font-family:'Taviraj';font-size:24px;">
         <h1 style="text-align:right;font-size:24px;">
             <strong>เเบบ</strong>
         </h1>
@@ -465,7 +466,6 @@
                     </td>
                 </tr>
             </table>
-            <br />
         </div>
         <br />
         <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
@@ -475,3 +475,5 @@
 
 
     </div>
+        </div>
+</div>
