@@ -263,6 +263,16 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 ERR_DATA('ตรวจสอบการใส่วันที่');
         });
     };
+    
+    $scope.BTN_SAVE_REMARK = function () {
+        var APP_DATA = CENTER_SV.SAVE_LCN_REMARK(LIST_APP_LCN, sessionStorage.LCN_IDA, sessionStorage.CITIZEN_ID, sessionStorage.PVCODE);
+        APP_DATA.then(function (datas) {
+            var result = datas.data;
+            success_data(result);
+          
+            });
+    };
+
     $scope.BTN_SEND_STATUS = function (_type_select, val1, val2, val3, val4, val5) {
         var setdata = CENTER_SV.SEND_STATUS_PAY_TABEAN(_type_select, val1, val2, val3, val4, val5,sessionStorage.CITIZEN_ID);
         setdata.then(function (datas) {

@@ -3080,6 +3080,23 @@ Namespace Controllers
             End Try
             Return Json(result, JsonRequestBehavior.AllowGet)
         End Function
+        Function SAVE_LCN_REMARK(ByVal XML_RMK As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal PVCODE As String) As JsonResult
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_LCN = jss.Deserialize(XML_RMK, GetType(MODEL_LCN))
+            Dim result As String = ""
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(LCN_IDA)
+            dao.fields.STATUS_ID = 7
+            dao.fields.remark = bb.dalcn.remark
+            dao.update()
+
+            'Dim cls_sop As New CLS_SOP
+            'cls_sop.BLOCK_STAFF(_CLS.CITIZEN_ID, "STAFF", dao.fields.PROCESS_ID, _CLS.PVCODE, 8, "คืนคำขอ", "SOP-DRUG-10-" & dao.fields.PROCESS_ID & "-3", "คืนคำขอ", "เจ้าหน้าที่คืนคำขอ", "STAFF", _TR_ID, SOP_STATUS:="คืนคำขอ")
+            AddLogStatus(7, dao.fields.PROCESS_ID, CITIZEN_ID, LCN_IDA)
+            result = "ดำเนินการคืนคำขอเรียบร้อยแล้ว"
+
+            Return Json(result, JsonRequestBehavior.AllowGet)
+        End Function
         Function UPDATE_STATUS_CERT(ByVal STATUS_ID As String, ByVal IDA As Integer) As JsonResult
             Dim result As String = ""
             Dim jss As New JavaScriptSerializer
