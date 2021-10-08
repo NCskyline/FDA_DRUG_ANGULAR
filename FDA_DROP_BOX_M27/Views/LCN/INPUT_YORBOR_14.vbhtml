@@ -20,7 +20,7 @@
                     <td style="width:35%"></td>
                     <td style="width:35%"></td>
                     <td style="width:5%;text-align:right">เลขที่:</td>
-                    <td style=" width:25%;text-align:center"><label>{{LCN_LIST.RCVNO_DISPLAY}}</label></td>
+                    <td style=" width:25%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"><label>{{LCN_LIST.RCVNO_DISPLAY}}</label></td>
                 </tr>
             </table>
             <table style="width:100%">
@@ -28,7 +28,7 @@
                     <td style="width:35%"></td>
                     <td style="width:35%"></td>
                     <td style="width:5%;text-align:right">วันที่:</td>
-                    <td style=" width:25%;text-align:center"><label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label></td>
+                    <td style=" width:25%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"><label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label></td>
                 </tr>
             </table>
             <table style="width:100%">
@@ -36,32 +36,32 @@
                     <td style="width:35%"></td>
                     <td style="width:35%"></td>
                     <td style="width:5%;text-align:right"> ลงชื่อ:</td>
-                    <td style=" width:15%;text-align:center"></td>
+                    <td style=" width:15%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
                     <td style="width:10%">ผู้รับคำขอ</td>
                 </tr>
             </table>
             <br />
             @*<table style="width:100%">
-                    <tr>
-                        <td style="width:20%"></td>
-                        <td style="width:25%"><input type="checkbox" />&nbsp; ใบแทนใบอนุญาต</td>
-                        <td style="width:20%"><input type="checkbox" />&nbsp; ผลิตยาแผนโบราณ</td>
-                        <td style="width:35%; text-align:center"></td>
-                    </tr>
-                    <tr>
-                        <td style="width:20%">คำขอ</td>
-                        <td style="width:25%"></td>
-                        <td style="width:20%"><input type="checkbox" />&nbsp; ขายยาแผนโบราณ</td>
-                        <td style="width:35%; text-align:center"></td>
-                    </tr>
-                </table>
-                <table style="width:100%">
-                    <tr>
-                        <td style="width:20%"></td>
-                        <td style="width:25%"><input type="checkbox" />&nbsp; ย้ายสถานที่</td>
-                        <td style="width:55%"><input type="checkbox" />&nbsp; นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร ในนามของ</td>
-                    </tr>
-                </table>*@
+            <tr>
+                <td style="width:20%"></td>
+                <td style="width:25%"><input type="checkbox" />&nbsp; ใบแทนใบอนุญาต</td>
+                <td style="width:20%"><input type="checkbox" />&nbsp; ผลิตยาแผนโบราณ</td>
+                <td style="width:35%; text-align:center"></td>
+            </tr>
+            <tr>
+                <td style="width:20%">คำขอ</td>
+                <td style="width:25%"></td>
+                <td style="width:20%"><input type="checkbox" />&nbsp; ขายยาแผนโบราณ</td>
+                <td style="width:35%; text-align:center"></td>
+            </tr>
+        </table>
+        <table style="width:100%">
+            <tr>
+                <td style="width:20%"></td>
+                <td style="width:25%"><input type="checkbox" />&nbsp; ย้ายสถานที่</td>
+                <td style="width:55%"><input type="checkbox" />&nbsp; นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร ในนามของ</td>
+            </tr>
+        </table>*@
             <table style="width:100%">
                 <tr>
                     <td style="text-align:right;width:45%;"> <h2>คำขอ</h2></td>
@@ -109,20 +109,18 @@
                     <td style="text-align:right;width:90%">
                         เขียนที่
                     </td>
-                    <td style="width:40%">
-                        <input class="form-control inline" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.WRITE_AT" style="font-family:'Taviraj';" type="text" />
+                    <td style="width:40%;border-bottom:dotted;border-bottom-width:thin;">
+
+                        {{LIST_LCN.DALCN_NCT_SUBTITUTE.WRITE_AT}}
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align:right;width:100px">
                         วันที่
                     </td>
-                    <td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
 
-                        <md-datepicker ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.WRITE_DATE" md-placeholder="Enter date"
-                                       input-aria-describedby="datepicker-description"
-                                       input-aria-labelledby="datepicker-header ">
-                        </md-datepicker>
+                        {{LIST_LCN.DALCN_NCT_SUBTITUTE.WRITE_DATE}}
                     </td>
                 </tr>
 
@@ -279,74 +277,111 @@
                     <td style="width:35%; text-align:center"></td>
                 </tr>
             </table>
-            <table style="width:100%">
-                <tr>
-                    <td style="width:10%"></td>
-                    <td style="width:65%"><input type="checkbox" value="1" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled />&nbsp; หลักฐานประกอบคำขอใบแทนใบอนุญาต</td>
-                    <td style="width:35%; text-align:center"></td>
-                </tr>
-            </table>
-            <table style="width:100%">
-                <tr>
-                    <td style="width:15%"></td>
-                    <td style="width:80%">(๑) รูปถ่ายของผู้ดำเนินกิจการ ขนาด ๓ x ๔ เซนติเมตร จำนวน 2 รูป</td>
-                    <td style="width:5%; text-align:center"></td>
-                </tr>
-                <tr>
-                    <td style="width:15%"></td>
-                    <td style="width:80%">(๒) ใบอนุญาตประกอบธุรกิจเกี่ยวกับยาแผนโบราณ (ถ้ามี)</td>
-                    <td style="width:5%; text-align:center"></td>
-                </tr>
-            </table>
-            <table style="width:100%">
-                <tr>
-                    <td style="width:10%"></td>
-                    <td style="width:65%"><input type="checkbox" value="2" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled />&nbsp; หลักฐานประกอบคำขอย้ายสถานที่</td>
-                    <td style="width:35%; text-align:center"></td>
-                </tr>
-            </table>
-            <table style="width:100%">
-                <tr>
-                    <td style="width:15%"></td>
-                    <td style="width:80%">(๑) ใบอนุญาตประกอบธุรกิจเกี่ยวกับยาแผนโบราณ หรือใบแทน</td>
-                    <td style="width:5%; text-align:center"></td>
-                </tr>
-                <tr>
-                    <td style="width:15%;"></td>
-                    <td style="width:80%;">(๒) แผนที่แสดงที่ตั้งสถานที่ผลิตยาและสถานที่เก็บยา รวมทั้งสิ่งปลูกสร้างที่อยู่ในบริเวณใกล้เคียงโดยรอบของสถานที่นั้น จำนวน ๒ ชุด</td>
-                    <td style="width:5%; text-align:center"></td>
-                </tr>
-                <tr>
-                    <td style="width:15%"></td>
-                    <td style="width:80%">
-                        (๓) แบบแปลนแผนผังสิ่งปลูกสร้างภายในบริเวณสถานที่ผลิตยาและสถานที่เก็บยาที่ถูกต้อง ตามมาตราส่วน โดยแสดงรายการ ดังต่อไปนี้<br />
-                        &nbsp; &nbsp; &nbsp; (ก) รูปด้านหน้า ด้านข้าง แปลนพื้น และรูปตัดของอาคารที่ใช้ในการผลิตและเก็บยา<br />
-                        &nbsp; &nbsp; &nbsp; (ข) การแบ่งกั้นห้อง เนื้อที่บริเวณที่ใช้ในการผลิตและควบคุมคุณภาพยา รวมทั้งสถานที่เก็บยาและวัสดุอื่นๆ
-                    </td>
-                    <td style="width:5%; text-align:center"></td>
-                </tr>
-                <tr>
-                    <td style="width:15%"></td>
-                    <td style="width:80%">(๔) รายการวัสดุที่ใช้ในการก่อสร้างส่วนต่างๆ ของอาคาร เช่น พื้น ผนัง และเพดาน</td>
-                    <td style="width:5%; text-align:center"></td>
-                </tr>
-                <tr>
-                    <td style="width:15%"></td>
-                    <td style="width:80%">(๕) รายการเกี่ยวกับระบบการจัดการน้ำเสีย การกำจัดสิ่งปฏิกูลและมูลฝอย ระบบควบคุมอากาศ ระบบน้ำที่ใช้ในการผลิตยา และระบบรักษความปลอดภัย</td>
-                    <td style="width:5%; text-align:center"></td>
-                </tr>
-                <tr>
-                    <td style="width:15%"></td>
-                    <td style="width:80%">(๖) เอกสารแสดงว่าเป็นผู้ได้รับอนุญาต</td>
-                    <td style="width:5%; text-align:center"></td>
-                </tr>
-            </table>
+            <br />
+            <div class="row">
+                <div class="col-sm-10" style="width:100%">
+                    <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
+                        <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
+                            หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
+                        </div>
+                        <div class="card-header" ng-show="datas.PIORITY=='LOW'">
+                            หัวข้อเอกสาร (ไม่บังคับแนบ)
+                        </div>
+                        <div class="card-body">
+
+                            <table class="table" style="width:100%">
+                                <tr>
+                                    <td colspan="5">
+                                        {{datas.DES}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:15%;"><input id="file-input" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                                    <td style="width:10%;">ชื่อไฟล์</td>
+                                    <td style="width:50%;">{{datas.FILENAME}}</td>
+                                    <td style="width:5%">
+                                        <a ng-click="OPEN_DOC_PATH(datas.PATH)">{{FLAG}}</a>
+                                    </td>
+                                    <td style="width:20%; text-align: right;">
+                                        @*<input type="button" ng-click="UPLOAD_PDFs(datas)" value="บันทึก" />*@
+                                        @*<input type="button" ng-click="deleteRow(datas,$index)" value="ลบ" />*@
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            @*<table style="width:100%">
+            <tr>
+                <td style="width:10%"></td>
+                <td style="width:65%"><input type="checkbox" value="1" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled />&nbsp; หลักฐานประกอบคำขอใบแทนใบอนุญาต</td>
+                <td style="width:35%; text-align:center"></td>
+            </tr>
+        </table>
+        <table style="width:100%">
+            <tr>
+                <td style="width:15%"></td>
+                <td style="width:80%">(๑) รูปถ่ายของผู้ดำเนินกิจการ ขนาด ๓ x ๔ เซนติเมตร จำนวน 2 รูป</td>
+                <td style="width:5%; text-align:center"></td>
+            </tr>
+            <tr>
+                <td style="width:15%"></td>
+                <td style="width:80%">(๒) ใบอนุญาตประกอบธุรกิจเกี่ยวกับยาแผนโบราณ (ถ้ามี)</td>
+                <td style="width:5%; text-align:center"></td>
+            </tr>
+        </table>
+        <table style="width:100%">
+            <tr>
+                <td style="width:10%"></td>
+                <td style="width:65%"><input type="checkbox" value="2" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled />&nbsp; หลักฐานประกอบคำขอย้ายสถานที่</td>
+                <td style="width:35%; text-align:center"></td>
+            </tr>
+        </table>
+        <table style="width:100%">
+            <tr>
+                <td style="width:15%"></td>
+                <td style="width:80%">(๑) ใบอนุญาตประกอบธุรกิจเกี่ยวกับยาแผนโบราณ หรือใบแทน</td>
+                <td style="width:5%; text-align:center"></td>
+            </tr>
+            <tr>
+                <td style="width:15%;"></td>
+                <td style="width:80%;">(๒) แผนที่แสดงที่ตั้งสถานที่ผลิตยาและสถานที่เก็บยา รวมทั้งสิ่งปลูกสร้างที่อยู่ในบริเวณใกล้เคียงโดยรอบของสถานที่นั้น จำนวน ๒ ชุด</td>
+                <td style="width:5%; text-align:center"></td>
+            </tr>
+            <tr>
+                <td style="width:15%"></td>
+                <td style="width:80%">
+                    (๓) แบบแปลนแผนผังสิ่งปลูกสร้างภายในบริเวณสถานที่ผลิตยาและสถานที่เก็บยาที่ถูกต้อง ตามมาตราส่วน โดยแสดงรายการ ดังต่อไปนี้<br />
+                    &nbsp; &nbsp; &nbsp; (ก) รูปด้านหน้า ด้านข้าง แปลนพื้น และรูปตัดของอาคารที่ใช้ในการผลิตและเก็บยา<br />
+                    &nbsp; &nbsp; &nbsp; (ข) การแบ่งกั้นห้อง เนื้อที่บริเวณที่ใช้ในการผลิตและควบคุมคุณภาพยา รวมทั้งสถานที่เก็บยาและวัสดุอื่นๆ
+                </td>
+                <td style="width:5%; text-align:center"></td>
+            </tr>
+            <tr>
+                <td style="width:15%"></td>
+                <td style="width:80%">(๔) รายการวัสดุที่ใช้ในการก่อสร้างส่วนต่างๆ ของอาคาร เช่น พื้น ผนัง และเพดาน</td>
+                <td style="width:5%; text-align:center"></td>
+            </tr>
+            <tr>
+                <td style="width:15%"></td>
+                <td style="width:80%">(๕) รายการเกี่ยวกับระบบการจัดการน้ำเสีย การกำจัดสิ่งปฏิกูลและมูลฝอย ระบบควบคุมอากาศ ระบบน้ำที่ใช้ในการผลิตยา และระบบรักษความปลอดภัย</td>
+                <td style="width:5%; text-align:center"></td>
+            </tr>
+            <tr>
+                <td style="width:15%"></td>
+                <td style="width:80%">(๖) เอกสารแสดงว่าเป็นผู้ได้รับอนุญาต</td>
+                <td style="width:5%; text-align:center"></td>
+            </tr>
+        </table>*@
             <br />
             <table style="width:100%">
                 <tr>
                     <td style="width:50%; text-align:center"></td>
                     <td style="width:10%; text-align:right">(ลายมือชื่อ)</td>
-                    <td style="width:20%; text-align:center"></td>
+                    <td style="width:20%; text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
                     <td style="width:20%; text-align:start">ผู้ยื่นขอ</td>
                 </tr>
             </table>
@@ -371,7 +406,32 @@
                     <td style="width:5%"></td>
                 </tr>
             </table>
+            <br />
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-3" style="text-align:center">
+                        รายละเอืยด :
+                    </div>
+                    <div class="col-sm-9">
+                        {{REMARK}}
+                    </div>
+                </div>
+                <br />
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="PROCESS == '100704'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
+        <br />
         <div style="text-align:center">
             <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
             <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_STT()" value="บันทึก" />
