@@ -45,6 +45,15 @@ Namespace Controllers
 
         End Function
 
+        Function SP_STAFF_OFFER_DDL_BY_PVNCD(ByVal PVCODE As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_STAFF_OFFER_DDL_BY_PVNCD(PVCODE)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
+
         Function SP_DRRGT_SUBSTITUTE_STAFF() As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO
@@ -1130,7 +1139,43 @@ Namespace Controllers
 
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
+        Function GET_LCN_APPROVE_INFORMATION_INPUT(ByVal LCN_IDA As String) As JsonResult
+            Dim model As New MODEL_LCN
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            dao.GetDataby_IDA(LCN_IDA)
 
+            Try
+                If dao.fields.TABLET_CAPSULE = "ยังไม่ระบุผู้ลงนาม" Then
+                    model.TABLET_CAPSULE = ""
+                    Try
+                        model.APPDATE_STR = CDate(dao.fields.appdate).ToShortDateString()
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        model.PHARMACEUTICAL_CHEMICALS = dao.fields.PHARMACEUTICAL_CHEMICALS
+                    Catch ex As Exception
+
+                    End Try
+                Else
+                    model.TABLET_CAPSULE = dao.fields.TABLET_CAPSULE
+                    Try
+                        model.APPDATE_STR = CDate(dao.fields.appdate).ToShortDateString()
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        model.PHARMACEUTICAL_CHEMICALS = dao.fields.PHARMACEUTICAL_CHEMICALS
+                    Catch ex As Exception
+
+                    End Try
+                End If
+            Catch ex As Exception
+
+            End Try
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
         Function GET_LCN_INFORMATION_INPUT_SUBTITUTE_AND_MOVE(ByVal IDENTIFY As String, ByVal PROCESS_ID As String, ByVal LCN_IDA As String) As JsonResult
             Dim model As New MODEL_LCN
             Dim bao As New BAO
@@ -2874,6 +2919,166 @@ Namespace Controllers
 
 
             Return Json(msg_r, JsonRequestBehavior.AllowGet)
+        End Function
+        Function UPDATE_APPROVE_NAME(ByVal XML_APP As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String) As JsonResult
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_LCN = jss.Deserialize(XML_APP, GetType(MODEL_LCN))
+            Dim result As String = ""
+            Dim jss2 As New JavaScriptSerializer
+            If Len(bb.TABLET_CAPSULE) = 0 Or Len(bb.PHARMACEUTICAL_CHEMICALS) = 0 Then
+                result = "กรุณากรอกข้อมูลให้ครบถ้วน"
+            Else
+                Dim dao As New DAO_DRUG.ClsDBdalcn
+                dao.GetDataby_IDA(LCN_IDA)
+                dao.fields.STATUS_ID = 8
+                dao.fields.PHARMACEUTICAL_CHEMICALS = bb.PHARMACEUTICAL_CHEMICALS
+
+                dao.fields.TABLET_CAPSULE = bb.TABLET_CAPSULE
+                dao.update()
+
+                'Try
+                '    Dim ws_update126 As New WS_DRUG_126.WS_DRUG
+                '    ws_update126.DRUG_INSERT_LICEN_126(LCN_IDA, CITIZEN_ID)
+                'Catch ex As Exception
+
+                'End Try
+
+                AddLogStatus(8, dao.fields.PROCESS_ID, CITIZEN_ID, LCN_IDA)
+                result = "ดำเนินการอนุมัติเรียบร้อยแล้ว"
+            End If
+
+
+            Return Json(result, JsonRequestBehavior.AllowGet)
+        End Function
+        Function SAVE_LCN_CONSIDER(ByVal XML_CSD As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal PVCODE As String) As JsonResult
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_LCN = jss.Deserialize(XML_CSD, GetType(MODEL_LCN))
+            Dim result As String = ""
+            Try
+                If Len(bb.PHARMACEUTICAL_CHEMICALS) >= 5 Then
+                    Dim dao As New DAO_DRUG.ClsDBdalcn
+                    Dim dao_up As New DAO_DRUG.ClsDBTRANSACTION_UPLOAD
+                    Dim bao As New BAO_GENNO.GenNumber
+
+                    dao.GetDataby_IDA(LCN_IDA)
+                    Dim _TR_ID As Integer = 0
+                    Try
+                        _TR_ID = dao.fields.TR_ID
+                    Catch ex As Exception
+
+                    End Try
+                    If Len(_TR_ID) >= 9 Then
+                        dao_up.GetDataby_TR_ID_Process(_TR_ID, dao.fields.PROCESS_ID)
+                    Else
+                        dao_up.GetDataby_IDA(_TR_ID)
+                    End If
+
+                    AddLogStatus(6, dao.fields.PROCESS_ID, CITIZEN_ID, LCN_IDA)
+
+                    Dim PROCESS_ID As String = dao.fields.PROCESS_ID
+
+                    'Dim dao_p As New DAO_DRUG.ClsDBPROCESS_NAME
+                    'dao_p.GetDataby_PROCESS_ID(PROCESS_ID)
+                    Dim GROUP_NUMBER As String = dao.fields.PROCESS_ID
+
+                    Dim CONSIDER_DATE As Date = CDate(bb.dalcn.CONSIDER_DATE)
+
+                    '--------------------------------
+                    Dim chw As String = ""
+                    Dim dao_cpn As New DAO_CPN.clsDBsyschngwt
+                    Try
+                        dao_cpn.GetData_by_chngwtcd(dao.fields.pvncd)
+                        chw = dao_cpn.fields.thacwabbr
+                    Catch ex As Exception
+
+                    End Try
+                    Dim bao2 As New BAO_GENNO.GenNumber
+                    Dim LCNNO As Integer
+                    LCNNO = bao2.GEN_NO_01(con_year(Date.Now.Year), PVCODE, GROUP_NUMBER, PROCESS_ID, 0, 0, LCN_IDA, "")
+                    dao.fields.lcnno = LCNNO 'bao.FORMAT_NUMBER_FULL(con_year(Date.Now.Year), LCNNO)
+
+                    If chw <> "" Then
+                        dao.fields.LCNNO_DISPLAY = chw & " " & bao.FORMAT_NUMBER_YEAR_FULL(con_year(Date.Now.Year), LCNNO) ' & " (ขย." & GROUP_NUMBER & ")"
+
+                    Else
+                        dao.fields.LCNNO_DISPLAY = bao.FORMAT_NUMBER_YEAR_FULL(con_year(Date.Now.Year), LCNNO) ' & " (ขย." & GROUP_NUMBER & ")"
+                    End If
+                    '---------------------------------------
+
+                    dao.fields.remark = bb.dalcn.remark
+                    dao.fields.STATUS_ID = 6
+                    dao.fields.CONSIDER_DATE = CONSIDER_DATE
+
+                    dao.fields.FK_STAFF_OFFER_IDA = bb.dalcn.FK_STAFF_OFFER_IDA
+                    Try
+                        Try
+                            Dim dao_sn As New DAO_DRUG.TB_MAS_STAFF_OFFER
+                            dao_sn.GetDataby_IDA(bb.dalcn.FK_STAFF_OFFER_IDA)
+                            dao.fields.TABLET_CAPSULE = dao_sn.fields.STAFF_OFFER_NAME
+                        Catch ex As Exception
+
+                        End Try
+
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        dao.fields.PHARMACEUTICAL_CHEMICALS = bb.dalcn.PHARMACEUTICAL_CHEMICALS
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        dao.fields.appdate = CDate(bb.dalcn.appdate)
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        dao.fields.frtappdate = CDate(bb.dalcn.appdate)
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        dao.fields.FIRST_APP_DATE = CDate(bb.dalcn.appdate)
+                    Catch ex As Exception
+
+                    End Try
+
+                    If IsNothing(dao.fields.appdate) = False Then
+                        Dim appdate As Date = CDate(dao.fields.appdate)
+                        Dim expyear As Integer = 0
+                        Try
+                            expyear = Year(appdate)
+                            If expyear <> 0 Then
+                                If expyear < 2500 Then
+                                    expyear += 543
+                                End If
+                                dao.fields.expyear = expyear
+                            End If
+                        Catch ex As Exception
+
+                        End Try
+                    End If
+
+                    'Try
+                    '    send_mail_mini(dao.fields.CITIZEN_ID, "FDATH", "คำขอ เลขดำเนินการที่ " & dao.fields.TR_ID & " อยู่ระหว่างดำเนินการพิจารณา")
+                    'Catch ex As Exception
+
+                    'End Try
+
+                    dao.update()
+
+                    'Dim cls_sop As New CLS_SOP
+                    'cls_sop.BLOCK_STAFF(_CLS.CITIZEN_ID, "STAFF", PROCESS_ID, _CLS.PVCODE, 6, "เสนอลงนาม", "SOP-DRUG-10-" & PROCESS_ID & "-3", "อนุมัติ", "รอเจ้าหน้าที่อนุมัติคำขอ", "STAFF", _TR_ID, SOP_STATUS:="เสนอลงนาม")
+                    result = "SUCCESS"
+                Else
+                    result = "POSITION"
+                End If
+
+            Catch ex As Exception
+                result = "DATE"
+
+            End Try
+            Return Json(result, JsonRequestBehavior.AllowGet)
         End Function
         Function UPDATE_STATUS_CERT(ByVal STATUS_ID As String, ByVal IDA As Integer) As JsonResult
             Dim result As String = ""

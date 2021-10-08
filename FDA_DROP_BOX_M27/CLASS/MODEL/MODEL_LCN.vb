@@ -253,6 +253,10 @@
     Public LCN_TYPE_NCT As String
     Public CHK_TYPE As String
     Public REQUEST_TYPE As String
+
+    Public TABLET_CAPSULE As String
+    Public PHARMACEUTICAL_CHEMICALS As String
+    Public APPDATE_STR As String
 End Class
 Public Class MODEL_LOCATION
     Private _LOCATION_LISTs As New List(Of LOCATION_LIST)

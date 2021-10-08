@@ -59,7 +59,22 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         getData_LIST.then(function (datas) {
             $scope.DOC_LIST = datas.data;
         }, function () { });
+
+        
+        var GET_LIST_STAFF = CENTER_SV.SP_STAFF_OFFER_DDL_BY_PVNCD(sessionStorage.PVCODE);
+        GET_LIST_STAFF.then(function (datas) {
+            $scope.LIST_STAFF_OFFER = datas.data;
+        }, function () { });
     }
+
+    function pageload_lcn_approve() {
+        
+        var getData_app = CENTER_SV.GET_LCN_APPROVE_INFORMATION_INPUT();
+        getData_app.then(function (datas) {
+            $scope.LIST_APP_LCN = datas.data;
+        }, function () { });
+    }
+
 
     $scope.BTN_SUB_MENU_CLICK = function (BTN_GROUP, IDgroup, SEQ) {
 
@@ -223,7 +238,31 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         });
     };
 
+    $scope.BTN_SAVE_APP = function () {
+        var APP_DATA = CENTER_SV.UPDATE_APPROVE_NAME(LIST_APP_LCN, sessionStorage.LCN_IDA,sessionStorage.CITIZEN_ID);
+        APP_DATA.then(function (datas) {
+            var result = datas.data;
+            if (result == 'กรุณากรอกข้อมูลให้ครบถ้วน') {
+                ERR_DATA(result);
+            } else {
+                success_data(datas.data);
+            }
+        });
+    };
     
+
+    $scope.BTN_SAVE_CSD = function () {
+        var APP_DATA = CENTER_SV.SAVE_LCN_CONSIDER(LIST_APP_LCN, sessionStorage.LCN_IDA, sessionStorage.CITIZEN_ID , sessionStorage.PVCODE);
+        APP_DATA.then(function (datas) {
+            var result = datas.data;
+            if (result == 'SUCCESS') {
+                success_data('บันทึกเรียบร้อย');
+            } else if (result =='POSITION') {
+                ERR_DATA('กรุณากรอกตำแหน่ง');
+            } else if (result == 'DATE') {
+                ERR_DATA('ตรวจสอบการใส่วันที่');
+        });
+    };
     $scope.BTN_SEND_STATUS = function (_type_select, val1, val2, val3, val4, val5) {
         var setdata = CENTER_SV.SEND_STATUS_PAY_TABEAN(_type_select, val1, val2, val3, val4, val5,sessionStorage.CITIZEN_ID);
         setdata.then(function (datas) {
