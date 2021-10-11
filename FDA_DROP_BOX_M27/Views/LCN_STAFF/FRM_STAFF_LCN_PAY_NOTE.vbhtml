@@ -1,5 +1,6 @@
 ﻿@Code
     ViewData("Title") = "FRM_STAFF_LCN_PAY_NOTE"
+    Layout = ""
 End Code
 
 <div class="panel" style="width:100%">
@@ -7,8 +8,7 @@ End Code
         <h1>รายละเอียดใบเสร็จรับเงิน</h1>
     </div>
     <div class="panel-body">
-        <asp:TextBox ID="TextBox1" runat="server" Width="100%" TextMode="MultiLine" Height="311px"></asp:TextBox>
-        <input type="text" ng-model="" />
+        <input type="text" ng-model="LIST_LCN.dalcn.comment" />
 
     </div>
     <div class="panel-footer " style="text-align:center;">

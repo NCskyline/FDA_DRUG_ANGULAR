@@ -273,6 +273,14 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
             });
     };
     
+    $scope.BTN_SAVE_PAYNOTE = function () {
+        var APP_DATA = CENTER_SV.SAVE_LCN_PAYNOTE(LIST_APP_LCN, sessionStorage.LCN_IDA, sessionStorage.CITIZEN_ID, sessionStorage.PVCODE);
+        APP_DATA.then(function (datas) {
+            var result = datas.data;
+            success_data(result);
+
+        });
+    };
     $scope.BTN_SAVE_STAFF_OFFER = function () {
         var APP_DATA = CENTER_SV.SAVE_LCN_REMARK(LIST_APP_LCN, sessionStorage.LCN_IDA, sessionStorage.CITIZEN_ID, sessionStorage.PVCODE);
         APP_DATA.then(function (datas) {

@@ -646,6 +646,22 @@
         });
         return response;
     };
+    
+    this.SAVE_LCN_PAYNOTE = function (XML_PAY, LCN_IDA, CITIZEN_ID, PVCODE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SAVE_LCN_PAYNOTE"),
+            dataType: "json",
+            data: {
+                XML_PAY: JSON.stringify(XML_PAY),
+                LCN_IDA: LCN_IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                PVCODE: PVCODE
+            }
+        });
+        return response;
+    };
+
     this.UPDATE_TEMPLATE_LCN = function (INFO_LIST, IDA, CITIZEN_ID, CITIZEN_ID_AUTHORIZE) {
         var response = $http({
             method: "post",

@@ -3106,6 +3106,28 @@ Namespace Controllers
 
             Return Json(result, JsonRequestBehavior.AllowGet)
         End Function
+        Function SAVE_LCN_PAYNOTE(ByVal XML_PAY As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal PVCODE As String) As JsonResult
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_LCN = jss.Deserialize(XML_PAY, GetType(MODEL_LCN))
+            Dim result As String = ""
+            If Len(bb.dalcn.comment) >= 10 Then
+                Dim dao As New DAO_DRUG.ClsDBdalcn
+                dao.GetDataby_IDA(LCN_IDA)
+                dao.fields.STATUS_ID = 11
+                dao.fields.comment = bb.dalcn.comment
+                dao.update()
+
+                'Dim cls_sop As New CLS_SOP
+                'cls_sop.BLOCK_STAFF(_CLS.CITIZEN_ID, "STAFF", dao.fields.PROCESS_ID, _CLS.PVCODE, 8, "บันทึกการชำระเงินค่าคำขอ", "SOP-DRUG-10-" & dao.fields.PROCESS_ID & "-11", "บันทึกการชำระเงินค่าคำขอ", "เจ้าหน้าที่บันทึกการชำระเงินค่าคำขอ", "STAFF", _TR_ID, SOP_STATUS:="บันทึกการชำระเงินค่าคำขอ")
+                AddLogStatus(11, dao.fields.PROCESS_ID, CITIZEN_ID, LCN_IDA)
+                result = "SUCCESS"  '"บันทึกข้อมูบเรียบร้อยแล้ว")
+            Else
+                result = "FAIL"
+            End If
+
+
+            Return Json(result, JsonRequestBehavior.AllowGet)
+        End Function
         Function UPDATE_STATUS_CERT(ByVal STATUS_ID As String, ByVal IDA As Integer) As JsonResult
             Dim result As String = ""
             Dim jss As New JavaScriptSerializer
