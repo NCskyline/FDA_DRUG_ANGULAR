@@ -56,6 +56,7 @@
             </label>
         </div>
         <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+            @*<div ng-show="LIST_LCN.PROCESS == '102'">*@
             <div class="title2" style="font-family:'Taviraj';font-size:24px;">
                 <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px">
                     <tr>
@@ -106,24 +107,23 @@
                     <hr style=" border-top:2px dotted ;width:17%" />
                 </div>
 
-                <table style="width:100%; font-size:20px">
+                <table style="width:100%">
                     <tr>
                         <td style="text-align:right;width:90%">
                             เขียนที่
                         </td>
-                        <td style="width:40%">
-                            <input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                        <td style="width:40%;border-bottom:dotted;border-bottom-width:thin;">
+
+                            {{LIST_LCN.dalcn.WRITE_AT}}
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align:right;width:100px">
                             วันที่
                         </td>
-                        <td>
-                            <md-datepicker ng-model="LIST_LCN.dalcn.WRITE_DATE" md-placeholder="Enter date"
-                                           input-aria-describedby="datepicker-description"
-                                           input-aria-labelledby="datepicker-header ">
-                            </md-datepicker>
+                        <td style="border-bottom:dotted;border-bottom-width:thin;">
+
+                            {{LIST_LCN.dalcn.WRITE_DATE}}
                         </td>
                     </tr>
 
@@ -554,6 +554,30 @@
                         </td>
                     </tr>
                 </table>
+                <br />
+                @*<div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-3" style="text-align:center">
+                            รายละเอืยด :
+                        </div>
+                        <div class="col-sm-9">
+                            {{REMARK}}
+                        </div>
+                    </div>
+                    <br />
+                    <table class="table" style="width:100%">
+                        <tr>
+                            <td>ชื่อไฟล์</td>
+                            <td></td>
+                        </tr>
+                        <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
+                            <td>{{datas.FILENAME}}</td>
+                            <td>
+                                <a ng-show="PROCESS == '101'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>*@
                 <br />
                 <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
                     <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />

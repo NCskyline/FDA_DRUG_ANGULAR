@@ -9,6 +9,7 @@
 </script>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+    @*<div ng-show="LIST_LCN.PROCESS == '100704'">*@
     <div style="font-family:'Taviraj';font-size:20px;" class="ic">
         <div>
             <p style="text-align: right;">แบบ ย.บ.๑๔</p>
@@ -42,26 +43,26 @@
             </table>
             <br />
             @*<table style="width:100%">
-            <tr>
-                <td style="width:20%"></td>
-                <td style="width:25%"><input type="checkbox" />&nbsp; ใบแทนใบอนุญาต</td>
-                <td style="width:20%"><input type="checkbox" />&nbsp; ผลิตยาแผนโบราณ</td>
-                <td style="width:35%; text-align:center"></td>
-            </tr>
-            <tr>
-                <td style="width:20%">คำขอ</td>
-                <td style="width:25%"></td>
-                <td style="width:20%"><input type="checkbox" />&nbsp; ขายยาแผนโบราณ</td>
-                <td style="width:35%; text-align:center"></td>
-            </tr>
-        </table>
-        <table style="width:100%">
-            <tr>
-                <td style="width:20%"></td>
-                <td style="width:25%"><input type="checkbox" />&nbsp; ย้ายสถานที่</td>
-                <td style="width:55%"><input type="checkbox" />&nbsp; นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร ในนามของ</td>
-            </tr>
-        </table>*@
+                    <tr>
+                        <td style="width:20%"></td>
+                        <td style="width:25%"><input type="checkbox" />&nbsp; ใบแทนใบอนุญาต</td>
+                        <td style="width:20%"><input type="checkbox" />&nbsp; ผลิตยาแผนโบราณ</td>
+                        <td style="width:35%; text-align:center"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:20%">คำขอ</td>
+                        <td style="width:25%"></td>
+                        <td style="width:20%"><input type="checkbox" />&nbsp; ขายยาแผนโบราณ</td>
+                        <td style="width:35%; text-align:center"></td>
+                    </tr>
+                </table>
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:20%"></td>
+                        <td style="width:25%"><input type="checkbox" />&nbsp; ย้ายสถานที่</td>
+                        <td style="width:55%"><input type="checkbox" />&nbsp; นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร ในนามของ</td>
+                    </tr>
+                </table>*@
             <table style="width:100%">
                 <tr>
                     <td style="text-align:right;width:45%;"> <h2>คำขอ</h2></td>
@@ -315,67 +316,67 @@
                 </div>
             </div>
             @*<table style="width:100%">
-            <tr>
-                <td style="width:10%"></td>
-                <td style="width:65%"><input type="checkbox" value="1" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled />&nbsp; หลักฐานประกอบคำขอใบแทนใบอนุญาต</td>
-                <td style="width:35%; text-align:center"></td>
-            </tr>
-        </table>
-        <table style="width:100%">
-            <tr>
-                <td style="width:15%"></td>
-                <td style="width:80%">(๑) รูปถ่ายของผู้ดำเนินกิจการ ขนาด ๓ x ๔ เซนติเมตร จำนวน 2 รูป</td>
-                <td style="width:5%; text-align:center"></td>
-            </tr>
-            <tr>
-                <td style="width:15%"></td>
-                <td style="width:80%">(๒) ใบอนุญาตประกอบธุรกิจเกี่ยวกับยาแผนโบราณ (ถ้ามี)</td>
-                <td style="width:5%; text-align:center"></td>
-            </tr>
-        </table>
-        <table style="width:100%">
-            <tr>
-                <td style="width:10%"></td>
-                <td style="width:65%"><input type="checkbox" value="2" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled />&nbsp; หลักฐานประกอบคำขอย้ายสถานที่</td>
-                <td style="width:35%; text-align:center"></td>
-            </tr>
-        </table>
-        <table style="width:100%">
-            <tr>
-                <td style="width:15%"></td>
-                <td style="width:80%">(๑) ใบอนุญาตประกอบธุรกิจเกี่ยวกับยาแผนโบราณ หรือใบแทน</td>
-                <td style="width:5%; text-align:center"></td>
-            </tr>
-            <tr>
-                <td style="width:15%;"></td>
-                <td style="width:80%;">(๒) แผนที่แสดงที่ตั้งสถานที่ผลิตยาและสถานที่เก็บยา รวมทั้งสิ่งปลูกสร้างที่อยู่ในบริเวณใกล้เคียงโดยรอบของสถานที่นั้น จำนวน ๒ ชุด</td>
-                <td style="width:5%; text-align:center"></td>
-            </tr>
-            <tr>
-                <td style="width:15%"></td>
-                <td style="width:80%">
-                    (๓) แบบแปลนแผนผังสิ่งปลูกสร้างภายในบริเวณสถานที่ผลิตยาและสถานที่เก็บยาที่ถูกต้อง ตามมาตราส่วน โดยแสดงรายการ ดังต่อไปนี้<br />
-                    &nbsp; &nbsp; &nbsp; (ก) รูปด้านหน้า ด้านข้าง แปลนพื้น และรูปตัดของอาคารที่ใช้ในการผลิตและเก็บยา<br />
-                    &nbsp; &nbsp; &nbsp; (ข) การแบ่งกั้นห้อง เนื้อที่บริเวณที่ใช้ในการผลิตและควบคุมคุณภาพยา รวมทั้งสถานที่เก็บยาและวัสดุอื่นๆ
-                </td>
-                <td style="width:5%; text-align:center"></td>
-            </tr>
-            <tr>
-                <td style="width:15%"></td>
-                <td style="width:80%">(๔) รายการวัสดุที่ใช้ในการก่อสร้างส่วนต่างๆ ของอาคาร เช่น พื้น ผนัง และเพดาน</td>
-                <td style="width:5%; text-align:center"></td>
-            </tr>
-            <tr>
-                <td style="width:15%"></td>
-                <td style="width:80%">(๕) รายการเกี่ยวกับระบบการจัดการน้ำเสีย การกำจัดสิ่งปฏิกูลและมูลฝอย ระบบควบคุมอากาศ ระบบน้ำที่ใช้ในการผลิตยา และระบบรักษความปลอดภัย</td>
-                <td style="width:5%; text-align:center"></td>
-            </tr>
-            <tr>
-                <td style="width:15%"></td>
-                <td style="width:80%">(๖) เอกสารแสดงว่าเป็นผู้ได้รับอนุญาต</td>
-                <td style="width:5%; text-align:center"></td>
-            </tr>
-        </table>*@
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td style="width:65%"><input type="checkbox" value="1" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled />&nbsp; หลักฐานประกอบคำขอใบแทนใบอนุญาต</td>
+                        <td style="width:35%; text-align:center"></td>
+                    </tr>
+                </table>
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:15%"></td>
+                        <td style="width:80%">(๑) รูปถ่ายของผู้ดำเนินกิจการ ขนาด ๓ x ๔ เซนติเมตร จำนวน 2 รูป</td>
+                        <td style="width:5%; text-align:center"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%"></td>
+                        <td style="width:80%">(๒) ใบอนุญาตประกอบธุรกิจเกี่ยวกับยาแผนโบราณ (ถ้ามี)</td>
+                        <td style="width:5%; text-align:center"></td>
+                    </tr>
+                </table>
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td style="width:65%"><input type="checkbox" value="2" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.REQUEST_TYPE" disabled />&nbsp; หลักฐานประกอบคำขอย้ายสถานที่</td>
+                        <td style="width:35%; text-align:center"></td>
+                    </tr>
+                </table>
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:15%"></td>
+                        <td style="width:80%">(๑) ใบอนุญาตประกอบธุรกิจเกี่ยวกับยาแผนโบราณ หรือใบแทน</td>
+                        <td style="width:5%; text-align:center"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%;"></td>
+                        <td style="width:80%;">(๒) แผนที่แสดงที่ตั้งสถานที่ผลิตยาและสถานที่เก็บยา รวมทั้งสิ่งปลูกสร้างที่อยู่ในบริเวณใกล้เคียงโดยรอบของสถานที่นั้น จำนวน ๒ ชุด</td>
+                        <td style="width:5%; text-align:center"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%"></td>
+                        <td style="width:80%">
+                            (๓) แบบแปลนแผนผังสิ่งปลูกสร้างภายในบริเวณสถานที่ผลิตยาและสถานที่เก็บยาที่ถูกต้อง ตามมาตราส่วน โดยแสดงรายการ ดังต่อไปนี้<br />
+                            &nbsp; &nbsp; &nbsp; (ก) รูปด้านหน้า ด้านข้าง แปลนพื้น และรูปตัดของอาคารที่ใช้ในการผลิตและเก็บยา<br />
+                            &nbsp; &nbsp; &nbsp; (ข) การแบ่งกั้นห้อง เนื้อที่บริเวณที่ใช้ในการผลิตและควบคุมคุณภาพยา รวมทั้งสถานที่เก็บยาและวัสดุอื่นๆ
+                        </td>
+                        <td style="width:5%; text-align:center"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%"></td>
+                        <td style="width:80%">(๔) รายการวัสดุที่ใช้ในการก่อสร้างส่วนต่างๆ ของอาคาร เช่น พื้น ผนัง และเพดาน</td>
+                        <td style="width:5%; text-align:center"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%"></td>
+                        <td style="width:80%">(๕) รายการเกี่ยวกับระบบการจัดการน้ำเสีย การกำจัดสิ่งปฏิกูลและมูลฝอย ระบบควบคุมอากาศ ระบบน้ำที่ใช้ในการผลิตยา และระบบรักษความปลอดภัย</td>
+                        <td style="width:5%; text-align:center"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:15%"></td>
+                        <td style="width:80%">(๖) เอกสารแสดงว่าเป็นผู้ได้รับอนุญาต</td>
+                        <td style="width:5%; text-align:center"></td>
+                    </tr>
+                </table>*@
             <br />
             <table style="width:100%">
                 <tr>
@@ -407,7 +408,7 @@
                 </tr>
             </table>
             <br />
-            <div class="col-sm-12">
+            @*<div class="col-sm-12">
                 <div class="row">
                     <div class="col-sm-3" style="text-align:center">
                         รายละเอืยด :
@@ -430,7 +431,7 @@
                     </tr>
                 </table>
             </div>
-        </div>
+        </div>*@
         <br />
         <div style="text-align:center">
             <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />

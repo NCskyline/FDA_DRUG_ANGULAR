@@ -40,6 +40,7 @@
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+    <div ng-show="LIST_LCN.PROCESS == '127'">
     <div style="font-family:'Taviraj';font-size:24px;">
 
         <h1 style="text-align:left;font-size:24px;">
@@ -656,7 +657,7 @@
                 <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
                     <td>{{datas.FILENAME}}</td>
                     <td>
-                        <a ng-show="PROCESS == '100768'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        <a ng-show="PROCESS == '127'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
                     </td>
                 </tr>
             </table>
@@ -666,6 +667,7 @@
             <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
             <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_STT()" value="บันทึก" />
         </div>
+    </div>
     </div>
 </div>
 

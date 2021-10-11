@@ -9,6 +9,7 @@
 </script>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()" ng-cloak="">
+    <div ng-show="LIST_GMP.DALCN_EDIT_REQUEST.PROCESS_ID == '11107'">
     <div style="font-family:'Taviraj';font-size:24px;">
         <div>
             <p style="text-align: right;">แบบ น.ย.๑๑</p>
@@ -189,14 +190,15 @@
                     <td>ชื่อไฟล์</td>
                     <td></td>
                 </tr>
-                <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
+                <tr ng-repeat="datas in LIST_GMP.DALCN_EDIT_REQUEST" style="background-color:#FDFCE3">
                     <td>{{datas.FILENAME}}</td>
                     <td>
-                        <a ng-show="PROCESS == '11107'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        <a ng-show="PROCESS_ID == '11107'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
                     </td>
                 </tr>
             </table>
         </div>
+    </div>
     </div>
     <br />
     <div style="text-align:center">

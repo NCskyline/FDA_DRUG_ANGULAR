@@ -41,6 +41,7 @@
 </script>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()" ng-cloak="">
+    <div ng-show="LIST_LCN.PROCESS == '11110'">
     <div style="font-family:'Taviraj';font-size:24px;width:100%">
         <h1 style="text-align:left;font-size:24px;">
             <strong>แบบ ข.ว.จ. ๓/๔-๓</strong>
@@ -612,6 +613,7 @@
             <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
             <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_EDIT()" value="บันทึก" />
         </div>
+    </div>
     </div>
 </div>
 

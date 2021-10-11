@@ -152,7 +152,7 @@
                 </tr>
                 <tr>
                     <td style="width:20%;">
-                        เลขบัญประจำตัวประชาชน
+                        เลขบัตรประจำตัวประชาชน
                     </td>
                     <td style="text-align:left;width:30%;">
                         @*<label>{{LIST_LCN.BSN_IDENTIFY}}</label>*@
@@ -184,7 +184,7 @@
                         สัญชาติ
                     </td>
                     <td style="text-align:left;width:10%;">
-                        <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                        @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
                     </td>
 
                 </tr>

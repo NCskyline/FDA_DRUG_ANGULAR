@@ -29,7 +29,7 @@ End Code
                             เลขรับที่
                         </td>
 
-                        <td colspan="3">
+                        <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="3">
                             {{LCN_LIST.RCVNO_DISPLAY}}
                         </td>
                     </tr>
@@ -38,7 +38,7 @@ End Code
                             วันที่
                         </td>
 
-                        <td colspan="3">
+                        <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="3">
                             {{LCN_LIST.RCV_DATE_DISPLAY}}
                         </td>
                     </tr>
@@ -48,7 +48,7 @@ End Code
 
                         </td>
 
-                        <td></td>
+                        <td style="border-bottom:dotted;border-bottom-width:thin;"></td>
                         <td style="text-align:right;width:25%">
                             ผู้รับคำขอ
                         </td>
@@ -74,7 +74,7 @@ End Code
                     <td style="text-align:right;width:90%">
                         เขียนที่
                     </td>
-                    <td style="width:40%">
+                    <td style="width:40%;border-bottom:dotted;border-bottom-width:thin;">
       
                         {{LIST_LCN.dalcn.WRITE_AT}}
                     </td>
@@ -83,7 +83,7 @@ End Code
                     <td style="text-align:right;width:100px">
                         วันที่
                     </td>
-                    <td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         {{LIST_LCN.dalcn.WRITE_DATE}}
                     </td>
@@ -96,7 +96,7 @@ End Code
                     <td width="5%">
                         ข้าพเจ้า
                     </td>
-                    <td style="text-align:center;">
+                    <td style="text-align:center;border-bottom:dotted;border-bottom-width:thin;">
                         {{LIST_LCN.thanm}}
                     </td>
                 </tr>
@@ -115,7 +115,7 @@ End Code
                     <td>
                         ซึ่งมีผู้ดำเนินกิจการ ชื่อ
                     </td>
-                    <td style="text-align:left;width:2000px">
+                    <td style="text-align:left;width:2000px;border-bottom:dotted;border-bottom-width:thin;">
                         {{LIST_LCN.BSN_THAIFULLNAME}}
                     </td>
                     <td colspan="4">
@@ -146,7 +146,7 @@ End Code
                     <td>
                         อายุ
                     </td>
-                    <td style="text-align: left; width: 20%;" align="center">
+                    <td style="text-align: left; width: 20%;border-bottom:dotted;border-bottom-width:thin;" align="center">
                         {{LIST_LCN.AGE}}
                     </td>
                     <td>
@@ -155,7 +155,7 @@ End Code
                     <td>
                         สัญชาติ
                     </td>
-                    <td style="text-align:left;width:10%;">
+                    <td style="text-align:left;width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />*@
                         {{LIST_LCN.dalcn.NATION}}
                     </td>
@@ -168,7 +168,7 @@ End Code
                     <td style="width:200px">
                         อยู่เลขที่
                     </td>
-                    <td style="text-align:left" colspan="3">
+                    <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;" colspan="3">
                         {{LIST_LCN.BSN_FULL_ADDR}}
                     </td>
 
@@ -177,7 +177,7 @@ End Code
                     <td>
                         โทรศัพท์
                     </td>
-                    <td style="text-align:left">
+                    <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
                         {{LIST_LCN.BSN_TELEPHONE}}
                     </td>
                 </tr>
@@ -185,7 +185,7 @@ End Code
                     <td>
                         โทรศัพท์มือถือ
                     </td>
-                    <td style="text-align:left">
+                    <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
                         {{LIST_LCN.BSN_FAX}}
                     </td>
                 </tr>
@@ -193,7 +193,7 @@ End Code
                     <td>
                         E-mail
                     </td>
-                    <td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.Email" style="font-family:'Taviraj';" type="text" />*@
                         {{LIST_LCN.dalcn.Email}}
                     </td>
@@ -207,7 +207,7 @@ End Code
             <table style=" font-size:20px;width:100%" ;>
                 <tr style="text-align:center">
                     <td style="width:10%"></td>
-                    <td style="text-align:left">
+                    <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
                         {{LIST_LCN.thanameplace}}
                     </td>
                 </tr>
@@ -215,7 +215,7 @@ End Code
                     <td>
                         อยู่เลขที่
                     </td>
-                    <td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
                         {{LIST_LCN.fulladdr3}}
                     </td>
                 </tr>
@@ -223,7 +223,7 @@ End Code
                     <td>
                         โทรศัพท์
                     </td>
-                    <td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
                         {{LIST_LCN.tel}}
                     </td>
                 </tr>
@@ -231,7 +231,7 @@ End Code
                     <td>
                         โทรศัพท์มือถือ
                     </td>
-                    <td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
                         {{LIST_LCN.fax}}
                     </td>
                 </tr>
@@ -364,7 +364,7 @@ End Code
                     <td>
                         (ลายมือชื่อ)
                     </td>
-                    <td style="width:50%;text-align:center"></td>
+                    <td style="width:50%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
                     <td style="text-align:left">
                         ผู้ขออนุญาต
                     </td>
@@ -373,7 +373,7 @@ End Code
                     <td>
                         (
                     </td>
-                    <td style="width:50%;text-align:center">
+                    <td style="width:50%;text-align:center;border-bottom:dotted;border-bottom-width:thin;">
                         {{LIST_LCN.BSN_THAIFULLNAME}}
                     </td>
                     <td style="text-align:left">
