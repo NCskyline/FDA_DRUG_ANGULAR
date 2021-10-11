@@ -11,6 +11,7 @@
 </script>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_subtitute()" ng-cloak="">
+    @*<div ng-show="LIST_LCN.PROCESS == '100702'">*@
     <div style="font-family:'Taviraj';font-size:20px;" class="ic">
         <br />
 
@@ -221,24 +222,24 @@
             </div>
         </div>
         @*<table>
-            <tr>
-                <td>ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ</td>
-            <tr>
-                <td>&nbsp;&nbsp;<input type="radio" value="1" ng-model="LIST_LCN.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอใบแทนใบอนุญาต</td>
-            <tr>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; (๑) รูปถ่ายของผู้ดำเนินกิจการ ขนาด ๓ x ๔ เซนติเมตร จำนวน ๒ รูป</td>
-            <tr>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; (๒) ใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร ถ้ามี</td>
-            <tr>
-                <td>&nbsp;&nbsp;<input type="radio" value="1" ng-model="LIST_LCN.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอย้ายสถานที่</td>
-            <tr>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; (๑) ใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรหรือใบแทน</td>
-            <tr>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; (๒) แบบแปลนแผนผังสิ่งปลูกสร้างของสถานที่นำหรือสั่งยาแห่งใหม่ จำนวน ๒ ชุด</td>
-            <tr>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; (๓) เอกสารแสดงว่าเป็นผู้ได้รับอนุญาต</td>
-            </tr>
-        </table>*@
+                <tr>
+                    <td>ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ</td>
+                <tr>
+                    <td>&nbsp;&nbsp;<input type="radio" value="1" ng-model="LIST_LCN.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอใบแทนใบอนุญาต</td>
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp; (๑) รูปถ่ายของผู้ดำเนินกิจการ ขนาด ๓ x ๔ เซนติเมตร จำนวน ๒ รูป</td>
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp; (๒) ใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร ถ้ามี</td>
+                <tr>
+                    <td>&nbsp;&nbsp;<input type="radio" value="1" ng-model="LIST_LCN.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอย้ายสถานที่</td>
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp; (๑) ใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรหรือใบแทน</td>
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp; (๒) แบบแปลนแผนผังสิ่งปลูกสร้างของสถานที่นำหรือสั่งยาแห่งใหม่ จำนวน ๒ ชุด</td>
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp; (๓) เอกสารแสดงว่าเป็นผู้ได้รับอนุญาต</td>
+                </tr>
+            </table>*@
         <table style="width:100%">
             <tr>
                 <td style="width:50%;text-align:center"></td>
@@ -252,7 +253,7 @@
         <div>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(๒) ในกรณีที่ใบอนุญาตถูกทำลายในสาระสำคัญ ให้แนบใบอนุญาตนั้น มาด้วย</div>
         <div>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(๓) ใส่เครื่องหมาย &#10004 ในช่อง[  ] หน้าข้อความที่ต้องการ</div>
         <br />
-        <div class="col-sm-12">
+        @*<div class="col-sm-12">
             <div class="row">
                 <div class="col-sm-3" style="text-align:center">
                     รายละเอืยด :
@@ -274,7 +275,7 @@
                     </td>
                 </tr>
             </table>
-        </div>
+        </div>*@
         <br />
         <div style="text-align:center">
             <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_STT()" value="ย้อนกลับ" />

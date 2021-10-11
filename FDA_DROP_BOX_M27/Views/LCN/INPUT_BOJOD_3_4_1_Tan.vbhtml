@@ -43,6 +43,7 @@
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+    <div ng-show="LIST_LCN.PROCESS == '123'">
     <div style="font-family:'Taviraj';font-size:24px;">
         <h1 style="text-align:left;font-size:24px;">
             <strong>แบบ ข.ว.จ. ๓/๔-๑</strong>
@@ -744,11 +745,12 @@
                 <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
                     <td>{{datas.FILENAME}}</td>
                     <td>
-                        <a ng-show="PROCESS == '100766'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        <a ng-show="PROCESS == '123'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
                     </td>
                 </tr>
             </table>
         </div>
+    </div>
     </div>
         <br />
         <div style="text-align:center">

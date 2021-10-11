@@ -10,6 +10,7 @@
 </script>
 
 <div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" class="ic" ng-init="pageload_subtitute()">
+    @*<div ng-show="LIST_LCN.PROCESS == '100701'">*@
     <div class="content-part " style="width:100%;font-family:'Taviraj'">
         <div style="font-family:'Taviraj';font-size:20px;">
             <div>
@@ -291,7 +292,7 @@
             </table>
             <hr />
             <div>หมายเหตุ : &nbsp;(๑) ใส่เครื่องหมาย &#10004; ในช่อง [  ] หน้าข้อความที่ต้องการ</div>
-            <div class="col-sm-12">
+            @*<div class="col-sm-12">
                 <div class="row">
                     <div class="col-sm-3" style="text-align:center">
                         รายละเอืยด :
@@ -313,7 +314,7 @@
                         </td>
                     </tr>
                 </table>
-            </div>
+            </div>*@
         </div>
         <br />
         <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
