@@ -108,18 +108,18 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 }, function () { });
             } else if (SEQ == '8') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_EXTEND_TIME_LOCATION_STAFF_MAIN');
-
-                var dataedit = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
+     
+                var dataedit = CENTER_SV.SP_STAFF_EXTEND(sessionStorage.GROUPS, sessionStorage.PVCODE);
                 dataedit.then(function (datas) {
-                    $scope.DATA_LCN_EDIT_STAFF = datas.data;
+                    $scope.DATA_LCN_EXTEND_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '10') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_STAFF_OFFER');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('../MASTER_DATA/FRM_STAFF_OFFER');
 
-                var dataedit = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
-                dataedit.then(function (datas) {
-                    $scope.DATA_LCN_EDIT_STAFF = datas.data;
-                }, function () { });
+                //var dataedit = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
+                //dataedit.then(function (datas) {
+                //    $scope.DATA_LCN_EDIT_STAFF = datas.data;
+                //}, function () { });
             } else if (SEQ == '98') {
                 //$scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF_EDIT/FRM_STAFF_LCN_SEARCH');
                 REDIRECT('../LCN_STAFF_EDIT/FRM_STAFF_LCN_SEARCH');
@@ -271,6 +271,15 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
             success_data(result);
           
             });
+    };
+    
+    $scope.BTN_SAVE_STAFF_OFFER = function () {
+        var APP_DATA = CENTER_SV.SAVE_LCN_REMARK(LIST_APP_LCN, sessionStorage.LCN_IDA, sessionStorage.CITIZEN_ID, sessionStorage.PVCODE);
+        APP_DATA.then(function (datas) {
+            var result = datas.data;
+            success_data(result);
+
+        });
     };
 
     $scope.BTN_SEND_STATUS = function (_type_select, val1, val2, val3, val4, val5) {

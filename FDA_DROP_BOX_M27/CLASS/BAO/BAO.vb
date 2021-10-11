@@ -23,6 +23,24 @@ Public Class BAO
         dt.TableName = "SP_STAFF_OFFER_DDL_BY_PVNCD"
         Return dt
     End Function
+
+    Public Function SP_STAFF_EXTEND(ByVal _GROUP As String, ByVal PVCODE As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = ""
+
+        If _GROUP = 21020 Then
+            sql = "select * from dbo.Vw_Extend where STATUS_ID >=4 and STATUS_ID <>7 order by TRANSACTION_UPLOAD desc"
+        Else
+            sql = "select * from dbo.Vw_Extend where STATUS_ID >=4 and STATUS_ID <>7 and pvncd=" & PVCODE & " order by TRANSACTION_UPLOAD desc"
+        End If
+
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_STAFF_EXTEND"
+
+        Return dt
+    End Function
+
     Public Function SP_BSN_LOCATION_ADDRESS_BY_IDEN_V2(ByVal iden As String) As DataTable
         Dim sql As String = "exec SP_BSN_LOCATION_ADDRESS_BY_IDEN_V2 @iden='" & iden & "'"
         Dim dta As New DataTable

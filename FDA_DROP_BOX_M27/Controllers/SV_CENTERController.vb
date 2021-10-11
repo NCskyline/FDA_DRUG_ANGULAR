@@ -54,6 +54,15 @@ Namespace Controllers
 
         End Function
 
+        Function SP_STAFF_EXTEND(ByVal _GROUPS As String, ByVal PVCODE As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_STAFF_EXTEND(_GROUPS, PVCODE)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
+
         Function SP_DRRGT_SUBSTITUTE_STAFF() As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO

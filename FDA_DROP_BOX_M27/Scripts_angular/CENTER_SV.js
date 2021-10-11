@@ -133,6 +133,17 @@
         });
         return response;
     };
+    this.SP_STAFF_EXTEND = function (_GROUP,PVCODE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STAFF_EXTEND"),
+            params: {
+                _GROUP: _GROUP,
+                PVCODE: PVCODE
+            }
+        });
+        return response;
+    };
     this.SP_MASTER_CER_PK_BY_FK_IDA = function (IDA) {
         var response = $http({
             method: "post",
