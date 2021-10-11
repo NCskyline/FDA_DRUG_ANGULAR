@@ -194,6 +194,7 @@
     <Compile Include="Controllers\LCN_STAFFController.vb" />
     <Compile Include="Controllers\LCN_STAFF_EDITController.vb" />
     <Compile Include="Controllers\MAIN_STAFFController.vb" />
+    <Compile Include="Controllers\MASTER_DATAController.vb" />
     <Compile Include="Controllers\OtherController.vb" />
     <Compile Include="Controllers\SV_CENTERController.vb" />
     <Compile Include="Global.asax.vb">
@@ -597,6 +598,7 @@
     <Content Include="Scripts_angular\LCN_EDIT_CTRL.js" />
     <Content Include="Scripts_angular\LCN_STAFF_EDIT_CTRL.js" />
     <Content Include="Scripts_angular\MAIN_STAFF_CTRL.js" />
+    <Content Include="Scripts_angular\MASTER_DATA_CTRL.js" />
     <Content Include="Web References\WS_DRUG_126\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
@@ -717,12 +719,13 @@
     <Content Include="Views\DR_STAFF\FRM_SUBSTITUTE_TABEAN_STAFF_MAIN.vbhtml" />
     <Content Include="Views\DR_STAFF\FRM_TABEAN_YA_CHANGE_STATUS.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_EXTEND_TIME_LOCATION_STAFF_MAIN.vbhtml" />
-    <Content Include="Views\LCN_STAFF\FRM_STAFF_OFFER.vbhtml" />
+    <Content Include="Views\MASTER_DATA\FRM_STAFF_OFFER.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_STAFF_LCN_APPROVE.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_STAFF_LCN_CONSIDER.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_STAFF_LCN_PAY_NOTE.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_STAFF_LCN_RCV_MANUAL.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_STAFF_LCN_REMARK.vbhtml" />
+    <Content Include="Views\MASTER_DATA\FRM_STAFF_OFFER_INSERT_AND_UPDATE.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>
