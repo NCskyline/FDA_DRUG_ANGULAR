@@ -813,12 +813,18 @@ Namespace Controllers
                 filelist.TR_ID = TR_ID
                 filelist.IDA = dao_f.fields.IDA
                 filelist.PIORITY = ""
-                filelist.PATH_FILE = dao_f.fields.FILE_PATH
-                filelist.PATH = dao_f.fields.FILE_PATH
-                filelist.PROCESS_NAME = ""
-                If dao_f.fields.FILE_PATH <> "" Then
-                    filelist.FLAG = "PASS"
+                If dao_f.fields.FILE_PATH Is Nothing Then
+                    filelist.PATH_FILE = "E:\path\DRUG\upload\" & dao_f.fields.NAME_FAKE
+                    filelist.PATH = "E:\path\DRUG\upload\" & dao_f.fields.NAME_FAKE
+                Else
+                    filelist.PATH_FILE = dao_f.fields.FILE_PATH
+                    filelist.PATH = dao_f.fields.FILE_PATH
                 End If
+                filelist.PROCESS_NAME = ""
+                filelist.FLAG = "PASS"
+                'If dao_f.fields.FILE_PATH <> "" Then
+                '    filelist.FLAG = "PASS"
+                'End If
                 MODEL.FILE_LISTs.Add(filelist)
             Next
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
