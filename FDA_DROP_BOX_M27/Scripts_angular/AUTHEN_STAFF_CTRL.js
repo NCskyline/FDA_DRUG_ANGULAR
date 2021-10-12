@@ -21,8 +21,8 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         }
         sessionStorage.token = token;
 
+        //var getData = CENTER_SV.GET_AUTHEN_DATA(token);
         var getData = CENTER_SV.GET_AUTHEN_DATA(token);
-    
 
         getData.then(function (datas) {
             $scope.AUTHEN = datas.data;
