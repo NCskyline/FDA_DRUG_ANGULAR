@@ -36,6 +36,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 $scope.SET_MAIN_PAGE3 = datas.data.SET_MAIN_PAGE3;
                 $scope.SET_MAIN_PAGE4 = datas.data.SET_MAIN_PAGE4;
 
+                window.location = "/AUTHEN/FRM_STAFF_MAIN";
 
                 if (datas.data.menuid == '') {
                     //window.location = "/AUTHEN/FRM_DATA_REQUEST"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
