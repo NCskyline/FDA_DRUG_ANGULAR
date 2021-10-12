@@ -885,7 +885,17 @@
         return response;
     };
 
-
+    this.GETDATA_FILE_TR_ID_TYPE = function (TR_ID , PROCESS) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GETDATA_FILE_TR_ID_TYPE"),
+            params: {
+                TR_ID: TR_ID,
+                PROCESS: PROCESS
+            }
+        });
+        return response;
+    };
 
     this.UPDATE_BOX_INV = function (model, model2) {
         var response = $http({

@@ -799,6 +799,36 @@ Namespace Controllers
 #End Region
 
 #Region "GET_DATA"
+
+        Function GETDATA_FILE_TR_ID_TYPE(ByVal TR_ID As Integer, ByVal PROCESS As String) As JsonResult
+
+            Dim MODEL As New MODEL_FILELIST
+            Dim dao_f As New DAO_DRUG.ClsDBFILE_ATTACH
+            dao_f.GetDataby_TR_ID_And_Process(TR_ID, PROCESS)
+
+            For Each dao_f.fields In dao_f.Details
+                Dim filelist As New FILE_LIST
+                filelist.FILENAME = dao_f.fields.NAME_REAL
+                filelist.DES = dao_f.fields.DESCRIPTION
+                filelist.TR_ID = TR_ID
+                filelist.IDA = dao_f.fields.IDA
+                filelist.PIORITY = ""
+                If dao_f.fields.FILE_PATH Is Nothing Then
+                    filelist.PATH_FILE = "E:\path\DRUG\upload\" & dao_f.fields.NAME_FAKE
+                    filelist.PATH = "E:\path\DRUG\upload\" & dao_f.fields.NAME_FAKE
+                Else
+                    filelist.PATH_FILE = dao_f.fields.FILE_PATH
+                    filelist.PATH = dao_f.fields.FILE_PATH
+                End If
+                filelist.PROCESS_NAME = ""
+                filelist.FLAG = "PASS"
+                'If dao_f.fields.FILE_PATH <> "" Then
+                '    filelist.FLAG = "PASS"
+                'End If
+                MODEL.FILE_LISTs.Add(filelist)
+            Next
+            Return Json(MODEL, JsonRequestBehavior.AllowGet)
+        End Function
         Function GET_LCN_INFORMATION_INPUT_V2(ByVal IDENTIFY As String, ByVal LCT_IDA As String) As JsonResult
             Dim model As New MODEL_LCN
             Dim bao As New BAO
@@ -2539,7 +2569,7 @@ Namespace Controllers
 #Region "UPLOAD PDF"
         Public Function UPLOAD_PDF(ByVal PROCESS_ID As String, ByVal TR_ID As String) As JsonResult
             Dim filename As String = ""
-            Dim path As String = _PATH_DEFAULT & "\upload\"
+            Dim path As String = _PATH_DEFAULT & "upload\"
             Directory.CreateDirectory(path)
             Dim PATHs As String = ""
             Dim path_file As String = ""

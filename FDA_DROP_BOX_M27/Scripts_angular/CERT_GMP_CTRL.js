@@ -100,10 +100,18 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
             
             $scope.LIST_GMP = datas.data;
             $scope.LIST_GMP.session = sessionStorage;
+
+            var TR_ID = $scope.LIST_GMP.CER.TR_ID;
+            var PROCESS = $scope.LIST_GMP.CER.CER_TYPE;
            
             $scope.LIST_GMP.CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_GMP.CER.DOCUMENT_DATE)));
             $scope.LIST_GMP.CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_GMP.CER.EXP_DOCUMENT_DATE)));
             $scope.INPUT_CHEM = SET_URL_SV('/CERT/PREVIEW_CHEMICAL');
+
+            var File = CENTER_SV.GETDATA_FILE_TR_ID_TYPE(TR_ID, PROCESS);
+            File.then(function (datas) {
+                $scope.LIST_File = datas.data;
+            }, function () { });
 
         }, function () { });
 
@@ -331,6 +339,12 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         });
         
 
+    };
+
+    $scope.OPEN_DOC_PATH = function (PATH, FILENAME) {
+        var urls = SET_URL_SV('/HOME/OPEN_DOC_PATH?PATH=' + PATH + '&FILENAME=' + FILENAME);
+        window.open(urls);
+        //OPEN_DOC
     };
 
     $scope.PDF_PREVIEW = function (PATH, FILENAME) {

@@ -3,6 +3,8 @@
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+   @*----------ขย1---------*@
+<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
     @*----------ขย1---------*@
     <div ng-show="LIST_LCN.PROCESS == '101'">
         <div style="font-family:'Taviraj';font-size:24px;width:100%">
