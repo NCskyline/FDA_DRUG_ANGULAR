@@ -36,7 +36,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 $scope.SET_MAIN_PAGE3 = datas.data.SET_MAIN_PAGE3;
                 $scope.SET_MAIN_PAGE4 = datas.data.SET_MAIN_PAGE4;
 
-                window.location = "/AUTHEN/FRM_STAFF_MAIN";
+                //window.location = "/FDA_DRUG_ANGULAR_DEMO/AUTHEN/FRM_STAFF_MAIN";
 
                 if (datas.data.menuid == '') {
                     //window.location = "/AUTHEN/FRM_DATA_REQUEST"; // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
@@ -91,7 +91,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
             } else if (SEQ == '5') {
 
             } else if (SEQ == '6') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_LCN_DRUG_STAFF');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN_STAFF/FRM_LCN_DRUG_STAFF');
                 if (sessionStorage.PVCODE == '10') {
                     var dataLcn = CENTER_SV.SP_STAFF_DALCN();
                     dataLcn.then(function (datas) {
@@ -105,21 +105,21 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
 
                 }
             } else if (SEQ == '7') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_EDIT_LCN_STAFF_MAIN');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN_STAFF/FRM_EDIT_LCN_STAFF_MAIN');
 
                 var dataedit = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
                 dataedit.then(function (datas) {
                     $scope.DATA_LCN_EDIT_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '8') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_EXTEND_TIME_LOCATION_STAFF_MAIN');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN_STAFF/FRM_EXTEND_TIME_LOCATION_STAFF_MAIN');
      
                 var dataedit = CENTER_SV.SP_STAFF_EXTEND(sessionStorage.GROUPS, sessionStorage.PVCODE);
                 dataedit.then(function (datas) {
                     $scope.DATA_LCN_EXTEND_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '10') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../MASTER_DATA/FRM_STAFF_OFFER');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/MASTER_DATA/FRM_STAFF_OFFER');
 
                 //var dataedit = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
                 //dataedit.then(function (datas) {
@@ -127,22 +127,22 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 //}, function () { });
             } else if (SEQ == '98') {
                 //$scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF_EDIT/FRM_STAFF_LCN_SEARCH');
-                REDIRECT('../LCN_STAFF_EDIT/FRM_STAFF_LCN_SEARCH');
+                REDIRECT('/LCN_STAFF_EDIT/FRM_STAFF_LCN_SEARCH');
 
             } else if (SEQ == '99') {
                 //ค่นหา
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN/FRM_LCN_DRUG_SEARCH');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN/FRM_LCN_DRUG_SEARCH');
 
 
             } else if (SEQ == '998') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_SUBSTITUTE_NCT_MAIN_STAFF');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN_STAFF/FRM_SUBSTITUTE_NCT_MAIN_STAFF');
                 var dataedit = CENTER_SV.SP_DALCN_NCT_SUBSTITUTE_STAFF();
                 dataedit.then(function (datas) {
                     $scope.DATA_LCN_STT_STAFF = datas.data;
                 }, function () { });
                 
             } else if (SEQ == '999') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../LCN_STAFF/FRM_EDIT_LCN_STAFF_MAIN');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN_STAFF/FRM_EDIT_LCN_STAFF_MAIN');
                 var dataedit = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
                 dataedit.then(function (datas) {
                     $scope.DATA_LCN_EDIT_STAFF = datas.data;
@@ -153,29 +153,29 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
 
         } else if (BTN_GROUP == '2') {
             if (SEQ == '2') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/TABEAN_YA_MAIN_STAFF');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/TABEAN_YA_MAIN_STAFF');
 
                 var dataedit = CENTER_SV.SP_DRRGT_TABEAN_STAFF();
                 dataedit.then(function (datas) {
                     $scope.DATA_TABEAN_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '3') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_TABEAN_SEARCH');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_TABEAN_SEARCH');
                 //FRM_TABEAN_SEARCH
             } else if (SEQ == '4') {
 
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_RGT_EDIT_MAIN_STAFF');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_RGT_EDIT_MAIN_STAFF');
 
                 var dataedit = CENTER_SV.SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS('130099');
                 dataedit.then(function (datas) {
                     $scope.DATA_EDIT_TABEAN_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '5') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_STAFF_MAIN_NYM');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_STAFF_MAIN_NYM');
 
 
             } else if (SEQ == '6') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_DS_STAFF_DRUG');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_DS_STAFF_DRUG');
                 
                 var dataedit = CENTER_SV.SP_STAFF_DS();
                 dataedit.then(function (datas) {
@@ -183,20 +183,20 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 }, function () { });
                 
             } else if (SEQ == '996') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_SUBSTITUTE_TABEAN_STAFF_MAIN');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_SUBSTITUTE_TABEAN_STAFF_MAIN');
                 var dataedit = CENTER_SV.SP_DRRGT_SUBSTITUTE_STAFF();
                 dataedit.then(function (datas) {
                     $scope.DATA_STT_TABEAN_STAFF = datas.data;
                 }, function () { });
                 
             } else if (SEQ == '997') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_FRGN_ADD_MAIN');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_FRGN_ADD_MAIN');
 
             } else if (SEQ == '998') {
                 REDIRECT('https://medicina.fda.moph.go.th/FDA_DRUG_AN/AUTHEN/AUTHEN_GATEWAY?Token=' & sessionStorage.TOKEN);
 
             } else if (SEQ == '999') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DR_STAFF/FRM_TABEAN_YA_CHANGE_STATUS');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_TABEAN_YA_CHANGE_STATUS');
 
             }
 
@@ -205,19 +205,19 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         } else if (BTN_GROUP == '3') {
 
             if (SEQ == '1') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DH_STAFF/FRM_STAFF_CER_MAIN');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_STAFF_CER_MAIN');
                 var dataLo = CENTER_SV.SP_STAFF_CER();
                 dataLo.then(function (datas) {
                     $scope.LIST_GMP_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '2') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DH_STAFF/FRM_DH_MAIN_STAFF');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_DH_MAIN_STAFF');
                 var dataLo = CENTER_SV.SP_STAFF_DH15RQT();
                 dataLo.then(function (datas) {
                     $scope.LIST_DH_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '3') {
-                $scope.SUB_MAIN_PAGE = SET_URL_SV('../DH_STAFF/FRM_CHEMICAL_STAFF_MAIN');
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_CHEMICAL_STAFF_MAIN');
             }
         }
     };

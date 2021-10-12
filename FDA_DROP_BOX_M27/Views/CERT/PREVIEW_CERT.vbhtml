@@ -92,7 +92,7 @@ End Code
                     วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
                 </td>
                 <td>
-                   
+
                     {{LIST_GMP.STR_EXP_DOCUMENT_DATE}}
                 </td>
             </tr>
@@ -740,7 +740,32 @@ End Code
         <br />
     </div>
     @*-------------OTHER------------------*@
-
+    <br />
+    @*<div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-3" style="text-align:center">
+                รายละเอืยด :
+            </div>
+            <div class="col-sm-9">
+                {{REMARK}}
+            </div>
+        </div>
+        <br />
+        <table class="table" style="width:100%">
+            <tr>
+                <td>ชื่อไฟล์</td>
+                <td></td>
+            </tr>
+            <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                <td>{{datas.FILENAME}}</td>
+                <td>
+                    <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                </td>
+            </tr>
+        </table>
+        <br />
+    </div>*@
+    <br />
     <div style="text-align:center">
         <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
         <input type="button" class="btn btn-lg" ng-click="BTN_SEND()" value="ยื่นคำขอ" ng-disabled="LIST_GMP.CLOSE_BTN" />
