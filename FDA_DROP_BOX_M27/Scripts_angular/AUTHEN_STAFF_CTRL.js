@@ -61,11 +61,15 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         }, function () { });
 
         
-        var GET_LIST_STAFF = CENTER_SV.SP_STAFF_OFFER_DDL_BY_PVNCD(sessionStorage.PVCODE);
-        GET_LIST_STAFF.then(function (datas) {
-            $scope.LIST_STAFF_OFFER = datas.data;
-        }, function () { });
+        //var GET_LIST_STAFF = CENTER_SV.SP_STAFF_OFFER_DDL_BY_PVNCD(sessionStorage.PVCODE);
+        //GET_LIST_STAFF.then(function (datas) {
+        //    $scope.LIST_STAFF_OFFER = datas.data;
+        //}, function () { });
+
+
     }
+
+
 
     function pageload_lcn_approve() {
         
@@ -257,10 +261,11 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
             var result = datas.data;
             if (result == 'SUCCESS') {
                 success_data('บันทึกเรียบร้อย');
-            } else if (result =='POSITION') {
+            } else if (result == 'POSITION') {
                 ERR_DATA('กรุณากรอกตำแหน่ง');
             } else if (result == 'DATE') {
                 ERR_DATA('ตรวจสอบการใส่วันที่');
+            }
         });
     };
     
