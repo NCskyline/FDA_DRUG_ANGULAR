@@ -172,7 +172,7 @@
                 <td>
                     สัญชาติ
                 </td>
-                <td style="text-align:left;width:10%;">
+                <td>
                     @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />*@
                 </td>
 
