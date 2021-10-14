@@ -2,6 +2,7 @@
 Imports System.IO
 Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
+Imports System.Web.Script.Serialization
 
 Namespace Controllers
     Public Class LCNController
@@ -560,6 +561,34 @@ Namespace Controllers
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
 #End Region
+#Region "UPDATE_DATA"
+        Function UPDATE_LCN_EDIT_CONSIDER(ByVal XML_DATA As String, ByVal IDA As Integer, ByVal CITIZEN_ID As String) As JsonResult
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_LCN = jss.Deserialize(XML_DATA, GetType(MODEL_LCN))
+
+            Dim dao As New DAO_DRUG.TB_DALCN_EDIT_REQUEST
+            dao.GetDataby_IDA(IDA)
+            Dim CONSIDER_DATE As Date = CDate(bb.DALCN_EDIT_REQUEST.CONSIDER_DATE)
+
+
+            dao.fields.REMARK = bb.DALCN_EDIT_REQUEST.REMARK
+            dao.fields.STATUS_ID = 6
+            dao.fields.CONSIDER_DATE = CONSIDER_DATE
+
+            dao.fields.FK_STAFF_OFFER_IDA = bb.DALCN_EDIT_REQUEST.FK_STAFF_OFFER_IDA
+            Try
+                dao.fields.appdate = CDate(bb.DALCN_EDIT_REQUEST.appdate)
+            Catch ex As Exception
+
+            End Try
+            dao.update()
+            Result = "บันทึกข้อมูลเรียบร้อย"
+            AddLogStatus(6, dao.fields.PROCESS_ID, CITIZEN_ID, IDA)
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
+#End Region
+
 
 #Region "FILE_ATTACH"
         Public Function UPLOAD_PDF_ATTACH(ByVal model As String, ByVal TR_ID As String, ByVal PROCESS_ID As String) As String

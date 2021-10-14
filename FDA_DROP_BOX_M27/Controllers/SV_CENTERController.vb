@@ -1894,12 +1894,12 @@ Namespace Controllers
 
                         End Try
                         Try
-                            .TEL = dr("tel1")
+                            .tel = dr("tel1")
                         Catch ex As Exception
 
                         End Try
                         Try
-                            .FAX = dr("fax")
+                            .fax = dr("fax")
                         Catch ex As Exception
 
                         End Try
