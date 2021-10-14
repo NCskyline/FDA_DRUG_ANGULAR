@@ -222,6 +222,13 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         }
     };
 
+    $scope.SELECT_CER = function (data) {
+        sessionStorage.IDA = data.IDA;
+        //sessionStorage.STAGE = 'SHOW';
+        //sessionStorage.PREVIEW_CERT_IDA = datas.IDA;
+        REDIRECT('/DH_STAFF/FRM_PREVIEW_CERT_STAFF');
+    };
+
     $scope.BTN_LOT_RELEASE = function (Month, Year) {
         var getdata = CENTER_SV.GET_LOT_RELEASE(Month, Year);
         getdata.then(function (datas) {
@@ -289,6 +296,15 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
     };
     $scope.BTN_SAVE_STAFF_OFFER = function () {
         var APP_DATA = CENTER_SV.SAVE_LCN_REMARK(LIST_APP_LCN, sessionStorage.LCN_IDA, sessionStorage.CITIZEN_ID, sessionStorage.PVCODE);
+        APP_DATA.then(function (datas) {
+            var result = datas.data;
+            success_data(result);
+
+        });
+    };
+    
+    $scope.BTN_UPDATE_LCN_EDIT_CONS = function () {
+        var APP_DATA = CENTER_SV.UPDATE_LCN_EDIT_CONSIDER(LIST_LCN, sessionStorage.IDA, sessionStorage.CITIZEN_ID);
         APP_DATA.then(function (datas) {
             var result = datas.data;
             success_data(result);

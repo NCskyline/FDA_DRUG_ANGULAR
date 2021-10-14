@@ -24,5 +24,8 @@ Namespace Controllers
         Function FRM_TABEAN_YA_CHANGE_STATUS() As ActionResult
             Return View()
         End Function
+        Function FRM_PREVIEW_CERT_STAFF() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace

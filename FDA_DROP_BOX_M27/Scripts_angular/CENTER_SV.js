@@ -15,8 +15,22 @@
         });
         return response;
     };
-
     
+    this.UPDATE_LCN_EDIT_CONSIDER = function (XML_DATA, IDA, CITIZEN_ID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/LCN_CENTER/UPDATE_LCN_EDIT_CONSIDER"),
+            dataType: "json",
+            data: {
+                XML_DATA: JSON.stringify(XML_DATA),
+                IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID
+
+            }
+        });
+        return response;
+    };
+
     this.GET_FULLDATA_LCN_EDIT = function (MODEL) {
         var response = $http({
             method: "post",

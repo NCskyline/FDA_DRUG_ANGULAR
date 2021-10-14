@@ -341,6 +341,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     };
 
+
     $scope.OPEN_DOC_PATH = function (PATH, FILENAME) {
         var urls = SET_URL_SV('/HOME/OPEN_DOC_PATH?PATH=' + PATH + '&FILENAME=' + FILENAME);
         window.open(urls);
