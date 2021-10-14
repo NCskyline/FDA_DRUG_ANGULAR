@@ -11,66 +11,72 @@
         <div class="part part-1-3 ic">
             <ul class="listree">
                 <li>
-                    <div class="listree-submenu-heading">ก. ลงทะเบียนสถานที่ผลิต</div>
+                    <div class="listree-submenu-heading">ก. ลงทะเบียนสถานที่ผลิต (Registration of Manufacturer)</div>
                     <ul class="listree-submenu-items" style="color:black">
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=31">1.Certificate of GMP</a>  @*ng-click="DATA_GMP('31')"*@
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=31">1.มาตรฐาน GMP (GMP Standard) </a>  @*ng-click="DATA_GMP('31')"*@
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=32">2.ISO</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=32">2.มาตรฐาน ISO (ISO Standard) </a>
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=33">3.HACCP</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=33">3.มาตรฐาน HACCP (HACCP Standard) </a>
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=34">4.Purchase Order</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=34">4.เอกสารหลักฐานการขาย (Purchase Order) </a>
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=36">5.Other</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=36">5.เอกสารอื่นที่ อย. เห็นชอบ (FDA Approved Documents) </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <div class="listree-submenu-heading">ข. เภสัชเคมีภัณฑ์</div>
+                    <div class="listree-submenu-heading">ข. จดแจ้งเภสัชเคมีภัณฑ์ (Notification of Drug Substance)</div>
                     <ul class="listree-submenu-items" style="color:black">
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=14">1. เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา (ผลิต)</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=14">1. สารออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ <br />
+                            (Active Substance in Locally Manufactured Drug Products) </a>
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=15">2. เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา (ผลิต)</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=15">2. สารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ <br />
+                            (Active Substance not in Locally Manufactured Drug Products) </a>
                         </li>
                         <li>
-                            <a href="../DH/FRM_SELECT_LCN?PROCESS=16">3. ไม่เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา (ผลิต)</a>
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=16">3. สารไม่ออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ <br />
+                            (Excipient in Locally Manufactured Drug Products) </a>
                         </li>
-                        <li>
+                        @*<li>
                             <a href="../DH/FRM_SELECT_LCN?PROCESS=17">4. ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา (ผลิต)</a>
-                        </li>
+                        </li>*@
                     </ul>
                 </li>
                 <li>
-                    <div class="listree-submenu-heading">ค. เพิ่มสาร</div>
+                    <div class="listree-submenu-heading">ค. เพิ่มสาร (Add Substance)</div>
                     <ul class="listree-submenu-items">
                         <li>
-                            <div class="listree-submenu-heading">สารเคมีที่มีส่วนผสมของสารออกฤทธิ์</div>
+                            <div class="listree-submenu-heading">1. สารออกฤทธิ์ (Active Substance)</div>
                             <ul class="listree-submenu-items">
                                 <li>
-                                    <a ng-click="DATA_CHE1('37')" style="color:cornflowerblue">สารเคมีชนิดสารเดี่ยว</a>
+                                    <a ng-click="DATA_CHE1('37')" style="color:cornflowerblue">สารเดี่ยว (Substance)</a>
                                 </li>
                                 <li>
-                                    <a ng-click="DATA_CHE2('38')" style="color:cornflowerblue">สารเคมีชนิดสารผสม</a>
+                                    <a ng-click="DATA_CHE2('38')" style="color:cornflowerblue">สารผสม (Mixture)</a>
                                 </li>
                             </ul>
-                            <div class="listree-submenu-heading">สารเคมีที่ไม่มีส่วนผสมของสารออกฤทธิ์</div>
+                            <div class="listree-submenu-heading">2. สารไม่ออกฤทธิ์ (Excipient)</div>
                             <ul class="listree-submenu-items">
                                 <li>
-                                    <a ng-click="DATA_CHE3('66')" style="color:cornflowerblue">สารเคมีชนิดสารเดี่ยว</a>
+                                    <a ng-click="DATA_CHE3('66')" style="color:cornflowerblue">สารเดี่ยว (Substance)</a>
                                 </li>
                                 <li>
-                                    <a ng-click="DATA_CHE4('67')" style="color:cornflowerblue">สารเคมีชนิดสารผสม</a>
+                                    <a ng-click="DATA_CHE4('67')" style="color:cornflowerblue">สารผสม (Mixture)</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
+                </li>
+                <li>
+                    <div class="listree-submenu-heading">ง. ค้นหาการจดแจ้งเภสัชเคมีภัณฑ์ (Search for Drug Substances with DRM Numbers)</div>
                 </li>
             </ul>
         </div>

@@ -10,12 +10,15 @@ End Code
 
 <div class="ic" > @*ng-repeat="datas in LIST_GMP"*@
     <h2 style="font-family:'Taviraj';font-size:24px;">
-        <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ</b>
+        <b> รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
     </h2>
-    <table width="100%" style="font-family:'Taviraj';font-size:20px;" >
+    <h2 style="font-family:'Taviraj';font-size:24px;">
+        <b> (Information of Certificate of Drug Substance Manufacturer)</b>
+    </h2>
+    <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
             <td style="height:25px;width:35%;">
-                1. เลขที่ใบรับรอง (Certificate Number)<font color="red">*</font>  :
+                1. เลขที่ใบรับรอง (Certificate Number)<font color="red">*</font>
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER.CERTIFICATION_NUMBER_ALL" style="font-family:'Taviraj';font-size:20px;font:lighter" type="text" />
@@ -23,7 +26,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
+                2. ชื่อผู้ผลิต (Manufacturer)<font color="red">*</font>
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.NAME_ADDRESS" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -31,7 +34,23 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                3. ที่อยู่ (Address)<font color="red">*</font> :
+                3. เลขที่ใบอนุญาตผลิต (Manufacturing Licence Number)
+            </td>
+            <td>
+                <input class="form-control inline" ng-model="LIST_GMP.CER.MANUFACTURER_LICENCE_NUMBER" style="font-family:'Taviraj';font-size:20px;" type="text" />
+            </td>
+        </tr>
+        @*<tr>
+            <td style="height:25px">
+                Global Location Number (GLN) :
+            </td>
+            <td>
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
+            </td>
+        </tr>*@
+        <tr>
+            <td style="height:25px">
+                4. ที่ตั้ง (Site Address)<font color="red">*</font>
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -39,7 +58,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                4. เมือง (City / Province/ State)<font color="red">*</font> :
+                5. เมือง (City / Province/ State)<font color="red">*</font>
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -47,7 +66,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                5. ประเทศ (Country<font color="red">*</font> :
+                6. ประเทศ (Country<font color="red">*</font>
             </td>
             <td>
                 <select style="font-family:'Taviraj';font-size:20px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_GMP.CER.COUNTRY_ID">
@@ -58,31 +77,16 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                รหัสไปรษณีย์ (Post code/Zip code) :
+                รหัสไปรษณีย์ (Postal Code / Zip Code)
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
+
         <tr>
             <td style="height:25px">
-                6. Manufacturer&quot;s License Number :
-            </td>
-            <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER.MANUFACTURER_LICENCE_NUMBER" style="font-family:'Taviraj';font-size:20px;" type="text" />
-            </td>
-        </tr>
-        <tr>
-            <td style="height:25px">
-                Global Location Number (GLN) :
-            </td>
-            <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
-            </td>
-        </tr>
-        <tr>
-            <td style="height:25px">
-                7. วันเดือนปีที่ออกหนังสือ GMP (Issue Date)<font color="red">*</font> :
+                7. วันที่ออกใบรับรอง GMP (Issue Date)<font color="red">*</font>
             </td>
             <td>
                 <md-datepicker ng-model="LIST_GMP.CER.DOCUMENT_DATE" md-placeholder="Enter date"
@@ -92,7 +96,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
+                วันที่หมดอายุใบรับรอง GMP (Expiry Date / Valid Until)<font color="red">*</font>
             </td>
             <td>
                 <md-datepicker ng-model="LIST_GMP.CER.EXP_DOCUMENT_DATE" md-placeholder="Enter date"
@@ -102,16 +106,16 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                8. หน่วยงานที่ออกใบรับรอง<font color="red">*</font>
+                8. หน่วยงานที่ออกใบรับรอง (Certification Agency)<font color="red">*</font>
             </td>
             <td>
                 &nbsp;
             </td>
         </tr>
         <tr>
-            <td >
+            <td>
                 <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="1" />
-              ชื่อหน่วยงานรัฐของประเทศผู้ผลิต
+                หน่วยงานรัฐที่ออกใบรับรอง (Government Certification Agency)
             </td>
             <td rowspan="2" ;">
                 <input class="form-control inline" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME" style="font-family:'Taviraj';font-size:20px;height:100px;" type="text" />
@@ -120,15 +124,14 @@ End Code
         <tr>
             <td style="height:25px">
                 <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="2" />
-                ชื่อหน่วยงานอื่นที่ได้รับการรับรองจากหน่วยงานรัฐของประเทศผู้ผลิต
+                ชื่อหน่วยงานอื่นที่ได้รับการรับรองจากหน่วยงานรัฐของประเทศที่ออกใบรับรอง (Certification Agency Accredited by Government Agency)
             </td>
             <td>
-                
             </td>
         </tr>
         <tr>
             <td style="height:25px">
-                9. สถานที่ผลิตได้มาตรฐาน GMP ตาม<font color="red">*</font> :
+                9. มาตรฐาน GMP ของสถานที่ผลิต (GMP Standard of Manufacturer)<font color="red">*</font>
 
             </td>
             <td>
@@ -138,7 +141,7 @@ End Code
                             <form name="rdl_gmp">
                                 <label>
                                     <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" value="1">
-                                    PIC / S GMP
+                                    PIC/S GMP
                                 </label>
                                 <label>
                                     <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="2">
@@ -151,7 +154,7 @@ End Code
                             </form>
                         </td>
                         <td>
-                            &nbsp; ประเทศ<font color="red">*</font>
+                            &nbsp; ประเทศ (Country)<font color="red">*</font>
                         </td>
                         <td>
                             <select style="font-family:'Taviraj';font-size:20px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_GMP">
@@ -169,12 +172,12 @@ End Code
     </table>
     <br />
     <h2 style="font-family:'Taviraj';font-size:24px;">
-        <b> รายละเอียดผลิตภัณฑ์ที่ได้รับการรับรอง </b>
+        <b> รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification) </b>
     </h2>
     <table width="100%">
         <tr>
             <td style="height:25px;width:35%;">
-                10. ขอบเขตของประเภทยาที่รับรอง
+                10. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER.CER_SCOPE" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -182,49 +185,9 @@ End Code
         </tr>
     </table>
     <br />
-
     <div>
         <h2 style="font-family:'Taviraj';font-size:24px;">
-            ไฟล์แนบ
+            แนบไฟล์ใบรับรอง และเอกสารอื่น (Attach Files of Certificate and Other Documents)
         </h2>
-        <table width="100%" style="font-family:'Taviraj';font-size:20px;">
-            <tr>
-                <td>
-                    ใบ CER GMP
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-                    อื่นๆ
-                </td>
-                <td></td>
-            </tr>
-        </table>
-        <br />
-        @*<div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-3" style="text-align:center">
-                    รายละเอืยด :
-                </div>
-                <div class="col-sm-9">
-                    {{REMARK}}
-                </div>
-            </div>
-            <br />
-            <table class="table" style="width:100%">
-                <tr>
-                    <td>ชื่อไฟล์</td>
-                    <td></td>
-                </tr>
-                <tr ng-repeat="datas in LIST_GMP" style="background-color:#FDFCE3">
-                    <td>{{datas.FILENAME}}</td>
-                    <td>
-                        <a ng-show="datas.PROCESS == '31'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                    </td>
-                </tr>
-            </table>
-            <br />
-        </div>*@
     </div>
 </div>

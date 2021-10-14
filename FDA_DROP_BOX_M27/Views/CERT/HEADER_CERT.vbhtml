@@ -15,7 +15,8 @@ End Code
         <table width="100%" style="font-size:22px;">
             <tr>
                 <td width="20%" style="height:25px">
-                    เลขที่ใบอนุญาต :
+                    เลขที่ใบอนุญาต <br />
+                    (License Number)
                 </td>
                 <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{LCNNO_SHOW}}</label>
@@ -23,7 +24,8 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px">
-                    ประเภท :
+                    ประเภท <br />
+                    (Type)
                 </td>
                 <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{TYPE_IMPORT}}</label>
@@ -31,7 +33,8 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px">
-                    ชื่อผู้รับอนุญาต :
+                    ชื่อผู้รับอนุญาต <br />
+                    (License Name)
                 </td>
                 <td style="border-bottom:dotted;border-bottom-width:thin;padding-top:10px;">
                     <label>{{thanm}}</label>
@@ -39,7 +42,8 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px">
-                    สถานที่ ชื่อ :
+                    ชื่อสถานที่ <br />
+                    (Establishment Name)
                 </td>
 
                 <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -48,7 +52,8 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px">
-                    อยู่เลขที่ :
+                    ที่ตั้ง <br />
+                    (Address)
                 </td>
                 <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{fulladdr2}}</label>
@@ -56,7 +61,8 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px">
-                    โทรศัพท์ :
+                    โทรศัพท์ <br />
+                    (Telephone Number)
                 </td>
                 <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{tel}}</label>
@@ -64,7 +70,8 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px">
-                    โทรสาร :
+                    โทรสาร <br />
+                    (Fax Number)
                 </td>
                 <td style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>{{fax}}</label>
@@ -92,7 +99,7 @@ End Code
                     <thead>
                         <tr>
                             <th>ชื่อสาร</th>
-                            <th>A or I</th>
+                            <th>A</th>
                             <th></th>
                         </tr>
                     </thead>

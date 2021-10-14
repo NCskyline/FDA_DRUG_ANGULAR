@@ -7,16 +7,16 @@ End Code
     <div>
         <table>
             <tr>
-                <td>License number :</td>
+                <td>เลขที่ใบอนุญาต :</td>
                 <td>{{LCNNO_NO}}</td>
+            </tr>
+            <tr>
+                <td>ชื่อผู้รับอนุญาต :</td>
+                <td>{{nameOperator}}</td>
             </tr>
             <tr>
                 <td>ชื่อสถานที่ :</td>
                 <td>{{thanameplace}}</td>
-            </tr>
-            <tr>
-                <td>ชื่อผู้ดำเนินการ :</td>
-                <td>{{nameOperator}}</td>
             </tr>
         </table>
         <hr />
@@ -33,13 +33,13 @@ End Code
                     <table style="margin-top:10px;width:100%;" class="table table-condensed">
                         <thead>
                             <tr>
-                                <th>ประเทศ</th>
-                                <th>เลขที่ CER</th>
+                                <th>เลขอ้างอิงสถานที่ผลิต</th>
                                 <th>วันที่ยื่นคำขอ</th>
-                                <th>สถานะ</th>
                                 <th>รหัสดำเนินการ</th>
-                                <th>ใช้ได้ถึง</th>
-                                <th>ชื่อผู้ผลิตต่างประเทศ</th>
+                                <th>ชื่อผู้ผลิต</th>
+                                <th>ประเทศ</th>
+                                <th>วันหมดอายุใบรับรอง</th>
+                                <th>สถานะ</th>
                                 <th>เหตุผลการคืนคำขอ</th>
                                 <th></th>
                             </tr>
@@ -47,13 +47,13 @@ End Code
                         <tbody>
                             <tr ng-repeat="datas in DATA_GMP | filter : filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
 
-                                <td>{{datas.thacntnm}}</td>
                                 <td>{{datas.CER_NUMBER}}</td>
                                 <td>{{datas.REQUEST_DATE}}</td>
-                                <td>{{datas.STATUS_NAME}}</td>
                                 <td>{{datas.TR_ID}}</td>
-                                <td>{{datas.EXP_DATE_EXTEND}}</td>
                                 <td>{{datas.FOREIGN_LOCATION_NAME}}</td>
+                                <td>{{datas.thacntnm}}</td>
+                                <td>{{datas.EXP_DATE_EXTEND}}</td>
+                                <td>{{datas.STATUS_NAME}}</td>
                                 <td>{{datas.REMARK}}</td>
                                 <td>
                                     <span class="fa fa-eye"></span>

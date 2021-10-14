@@ -55,24 +55,24 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         if (PROCESS_ID == '31' || PROCESS_ID == '32' || PROCESS_ID == '33' || PROCESS_ID == '34' || PROCESS_ID == '36') {
 
             if (PROCESS_ID == '31') {
-                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิต  (Certificate of GMP)';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยมาตรฐาน GMP  (Registration of Manufacture with GMP Standard)';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
 
             }
             else if (PROCESS_ID == '32') {
-                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิต  (ISO)';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยมาตรฐาน ISO';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
             }
             else if (PROCESS_ID == '33') {
-                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิต  (HACCP)';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยมาตรฐาน HACCP';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
             }
             else if (PROCESS_ID == '34') {
-                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิต  (หลักฐานการขายไปยังประเทศที่มีระบบควบคุมคุณภาพการผลิตที่ อย ยอมรับ)';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยเอกสารหลักฐานการขายไปยังประเทศที่มีระบบคุณภาพที่ อย. ยอมรับ';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
             }
             else if (PROCESS_ID == '36') {
-                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิต  (เอกสารอื่นๆ ที่ อย เห็นชอบ)';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยเอกสารอื่นๆ ที่ อย.เห็นชอบ (Registration of Manfacturer with FDA Approved Document)';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
             }
 
