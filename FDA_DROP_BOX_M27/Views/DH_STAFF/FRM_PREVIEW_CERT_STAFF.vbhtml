@@ -2,11 +2,11 @@
 
 End Code
 
-<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
-<script src="~/Scripts_angular/CENTER_SV.js"></script>
-<script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
+<script src="../Scripts_angular/CENTER_SV.js"></script>
+<script src="../Scripts_angular/DH_STAFF_CTRL.js"></script>
 
-<div ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP">
+<div ng-controller="DH_STAFF_CTRL" ng-app="ANGULAR_APP" ng-init="PREVIEW_CER()">
     <div>
         <div class="content-part">
             <div class="part part-2-3 ic">
@@ -796,7 +796,7 @@ End Code
                     </div>
                     <br />
                     <div align="center">
-                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_CERT_BACK()" value="ย้อนกลับ" />
+                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_BACK()" value="ย้อนกลับ" />
                     </div>
                     <br />
                     <div>

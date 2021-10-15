@@ -6,7 +6,7 @@ End Code
 <script src="~/Scripts_angular/DH_STAFF_CTRL.js"></script>
 
 
-<div ng-controller="DH_STAFF_CTRL" ng-app="ANGULAR_APP" ng-init="PREVIEW()">
+<div ng-controller="DH_STAFF_CTRL" ng-app="ANGULAR_APP" ng-init="PREVIEW_DH()">
     <div>
         <div class="content-part">
             <div class="part part-2-3 ic">
@@ -581,7 +581,36 @@ End Code
                 </div>
             </div>
             <div class="part part-1-3 ic">
+                <div class="card">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                สถานะ
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select class="form-control">
+                                    <option>อนุมัติ</option>
+                                    <option>ไม่อนุมัติ</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
 
+                    <br />
+                    <div align="center">
+                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_DH_CONFIRM()" value="บันทึก" />
+                    </div>
+                    <br />
+                    <div align="center">
+                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_BACK()" value="ย้อนกลับ" />
+                    </div>
+                    <br />
+                    <div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
