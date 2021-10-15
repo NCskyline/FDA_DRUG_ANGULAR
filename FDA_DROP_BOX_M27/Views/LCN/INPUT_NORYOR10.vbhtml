@@ -78,18 +78,20 @@
                 <td style="text-align:right;width:90%">
                     เขียนที่
                 </td>
-                <td style="width:40%;border-bottom:dotted;border-bottom-width:thin;">
-
-                    {{LIST_LCN.DALCN_NCT_SUBTITUTE.WRITE_AT}}
+                <td style="width:40%">
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.WRITE_AT" style="font-family:'Taviraj';" type="text" />
                 </td>
             </tr>
             <tr>
                 <td style="text-align:right;width:100px">
                     วันที่
                 </td>
-                <td style="border-bottom:dotted;border-bottom-width:thin;">
+                <td>
 
-                    {{LIST_LCN.DALCN_NCT_SUBTITUTE.WRITE_DATE}}
+                    <md-datepicker ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.WRITE_DATE" md-placeholder="Enter date"
+                                   input-aria-describedby="datepicker-description"
+                                   input-aria-labelledby="datepicker-header ">
+                    </md-datepicker>
                 </td>
             </tr>
 
@@ -186,7 +188,7 @@
         </table>
         <br />
         <div class="row">
-            <div class="col-sm-10" style="width:100%">
+            <div class="col-sm-12" style="width:100%">
                 <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
                     <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
                         หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
@@ -222,24 +224,24 @@
             </div>
         </div>
         @*<table>
-                <tr>
-                    <td>ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ</td>
-                <tr>
-                    <td>&nbsp;&nbsp;<input type="radio" value="1" ng-model="LIST_LCN.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอใบแทนใบอนุญาต</td>
-                <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp; (๑) รูปถ่ายของผู้ดำเนินกิจการ ขนาด ๓ x ๔ เซนติเมตร จำนวน ๒ รูป</td>
-                <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp; (๒) ใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร ถ้ามี</td>
-                <tr>
-                    <td>&nbsp;&nbsp;<input type="radio" value="1" ng-model="LIST_LCN.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอย้ายสถานที่</td>
-                <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp; (๑) ใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรหรือใบแทน</td>
-                <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp; (๒) แบบแปลนแผนผังสิ่งปลูกสร้างของสถานที่นำหรือสั่งยาแห่งใหม่ จำนวน ๒ ชุด</td>
-                <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp; (๓) เอกสารแสดงว่าเป็นผู้ได้รับอนุญาต</td>
-                </tr>
-            </table>*@
+            <tr>
+                <td>ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ</td>
+            <tr>
+                <td>&nbsp;&nbsp;<input type="radio" value="1" ng-model="LIST_LCN.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอใบแทนใบอนุญาต</td>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; (๑) รูปถ่ายของผู้ดำเนินกิจการ ขนาด ๓ x ๔ เซนติเมตร จำนวน ๒ รูป</td>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; (๒) ใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร ถ้ามี</td>
+            <tr>
+                <td>&nbsp;&nbsp;<input type="radio" value="1" ng-model="LIST_LCN.REQUEST_TYPE" disabled /> หลักฐานประกอบคำขอย้ายสถานที่</td>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; (๑) ใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรหรือใบแทน</td>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; (๒) แบบแปลนแผนผังสิ่งปลูกสร้างของสถานที่นำหรือสั่งยาแห่งใหม่ จำนวน ๒ ชุด</td>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; (๓) เอกสารแสดงว่าเป็นผู้ได้รับอนุญาต</td>
+            </tr>
+        </table>*@
         <table style="width:100%">
             <tr>
                 <td style="width:50%;text-align:center"></td>

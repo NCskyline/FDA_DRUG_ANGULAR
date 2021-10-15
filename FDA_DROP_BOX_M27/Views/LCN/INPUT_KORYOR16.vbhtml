@@ -103,18 +103,20 @@
                     <td style="text-align:right;width:90%">
                         เขียนที่
                     </td>
-                    <td style="width:40%;border-bottom:dotted;border-bottom-width:thin;">
-
-                        {{LIST_LCN.DALCN_NCT_SUBTITUTE.WRITE_AT}}
+                    <td style="width:40%">
+                        <input class="form-control inline" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.WRITE_AT" style="font-family:'Taviraj';" type="text" />
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align:right;width:100px">
                         วันที่
                     </td>
-                    <td style="border-bottom:dotted;border-bottom-width:thin;">
+                    <td>
 
-                        {{LIST_LCN.DALCN_NCT_SUBTITUTE.WRITE_DATE}}
+                        <md-datepicker ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.WRITE_DATE" md-placeholder="Enter date"
+                                       input-aria-describedby="datepicker-description"
+                                       input-aria-labelledby="datepicker-header ">
+                        </md-datepicker>
                     </td>
                 </tr>
 
@@ -208,7 +210,7 @@
             <br />
             <div>ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ</div>
             <div class="row">
-                <div class="col-sm-10" style="width:100%">
+                <div class="col-sm-12" style="width:100%">
                     <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
                         <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
                             หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
@@ -293,28 +295,28 @@
             <hr />
             <div>หมายเหตุ : &nbsp;(๑) ใส่เครื่องหมาย &#10004; ในช่อง [  ] หน้าข้อความที่ต้องการ</div>
             @*<div class="col-sm-12">
-                <div class="row">
-                    <div class="col-sm-3" style="text-align:center">
-                        รายละเอืยด :
-                    </div>
-                    <div class="col-sm-9">
-                        {{REMARK}}
-                    </div>
+            <div class="row">
+                <div class="col-sm-3" style="text-align:center">
+                    รายละเอืยด :
                 </div>
-                <br />
-                <table class="table" style="width:100%">
-                    <tr>
-                        <td>ชื่อไฟล์</td>
-                        <td></td>
-                    </tr>
-                    <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
-                        <td>{{datas.FILENAME}}</td>
-                        <td>
-                            <a ng-show="PROCESS == '100701'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                        </td>
-                    </tr>
-                </table>
-            </div>*@
+                <div class="col-sm-9">
+                    {{REMARK}}
+                </div>
+            </div>
+            <br />
+            <table class="table" style="width:100%">
+                <tr>
+                    <td>ชื่อไฟล์</td>
+                    <td></td>
+                </tr>
+                <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
+                    <td>{{datas.FILENAME}}</td>
+                    <td>
+                        <a ng-show="PROCESS == '100701'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                    </td>
+                </tr>
+            </table>
+        </div>*@
         </div>
         <br />
         <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">

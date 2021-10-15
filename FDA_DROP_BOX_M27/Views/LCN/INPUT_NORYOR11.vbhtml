@@ -9,7 +9,7 @@
 </script>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()" ng-cloak="">
-    <div ng-show="LIST_GMP.DALCN_EDIT_REQUEST.PROCESS_ID == '11107'">
+    @*<div ng-show="LIST_GMP.DALCN_EDIT_REQUEST.PROCESS_ID == '11107'">*@
     <div style="font-family:'Taviraj';font-size:24px;">
         <div>
             <p style="text-align: right;">แบบ น.ย.๑๑</p>
@@ -114,7 +114,7 @@
             </tr>
         </table>
         <div class="row">
-            <div class="col-sm-10" style="width:100%">
+            <div class="col-sm-12" style="width:100%">
                 <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
                     <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
                         หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
@@ -174,7 +174,7 @@
                 <td style="width:20%;text-align:start">ผู้มีหน้าที่ปฏิบัติการ</td>
             </tr>
         </table>
-        <br />
+        @*<br />
         <div class="col-sm-12">
             <div class="row">
                 <div class="col-sm-3" style="text-align:center">
@@ -197,8 +197,7 @@
                     </td>
                 </tr>
             </table>
-        </div>
-    </div>
+        </div>*@
     </div>
     <br />
     <div style="text-align:center">

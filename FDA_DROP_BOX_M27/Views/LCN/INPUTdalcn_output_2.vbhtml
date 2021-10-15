@@ -112,21 +112,22 @@
                         <td style="text-align:right;width:90%">
                             เขียนที่
                         </td>
-                        <td style="width:40%;border-bottom:dotted;border-bottom-width:thin;">
-
-                            {{LIST_LCN.dalcn.WRITE_AT}}
+                        <td style="width:40%">
+                            <input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'Taviraj';" type="text" />
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align:right;width:100px">
                             วันที่
                         </td>
-                        <td style="border-bottom:dotted;border-bottom-width:thin;">
+                        <td>
 
-                            {{LIST_LCN.dalcn.WRITE_DATE}}
+                            <md-datepicker ng-model="LIST_LCN.dalcn.WRITE_DATE" md-placeholder="Enter date"
+                                           input-aria-describedby="datepicker-description"
+                                           input-aria-labelledby="datepicker-header ">
+                            </md-datepicker>
                         </td>
                     </tr>
-
                 </table>
                 <br />
                 <table style="width:100%;">
@@ -494,7 +495,7 @@
         <div style="margin-left:10%;font-size:20px">(๗) เอกสารแสดงว่าเป็นผู้ดำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
         <div style="margin-left:10%;font-size:20px">(๘) เอกสารอื่นๆ ถ้าจำเป็น</div>*@
                 <div class="row">
-                    <div class="col-sm-10" style="width:100%">
+                    <div class="col-sm-12" style="width:100%">
                         <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
                             <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
                                 หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>

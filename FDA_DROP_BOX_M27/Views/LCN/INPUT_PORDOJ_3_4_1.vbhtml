@@ -163,21 +163,22 @@
                     <td style="text-align:right;width:90%">
                         เขียนที่
                     </td>
-                    <td style="width:40%;border-bottom:dotted;border-bottom-width:thin;">
-
-                        {{LIST_LCN.dalcn.WRITE_AT}}
+                    <td style="width:40%">
+                        <input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'Taviraj';" type="text" />
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align:right;width:100px">
                         วันที่
                     </td>
-                    <td style="border-bottom:dotted;border-bottom-width:thin;">
+                    <td>
 
-                        {{LIST_LCN.dalcn.WRITE_DATE}}
+                        <md-datepicker ng-model="LIST_LCN.dalcn.WRITE_DATE" md-placeholder="Enter date"
+                                       input-aria-describedby="datepicker-description"
+                                       input-aria-labelledby="datepicker-header ">
+                        </md-datepicker>
                     </td>
                 </tr>
-
             </table>
             <br />
 
@@ -459,30 +460,62 @@
             </table>
             <br />
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
-                        <table width="100%" style="font-family:'Taviraj'">
-                            <thead>
-                                <tr>
-                                    <td>เภสัชกรชั้น</td>
-                                    <td>ชื่อ-นามสกุล</td>
-                                    <td>เลขบัตรประจำตัวประชาชน</td>
-                                    <td>ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่</td>
+            @*<div class="row">
+            <div class="col-sm-12">
+                <div class="card" style=" border-top: 10px solid #277210;">
+                    <table width="100%" style="font-family:'Taviraj'">
+                        <thead>
+                            <tr>
+                                <td>เภสัชกรชั้น</td>
+                                <td>ชื่อ-นามสกุล</td>
+                                <td>เลขบัตรประจำตัวประชาชน</td>
+                                <td>ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่</td>
 
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="data in DATA_PHR_SHOW">
-                                    <td>{{data.PHR_LEVEL}}</td>
-                                    <td>{{data.PHR_NAME}}</td>
-                                    <td>{{data.PHR_CTZNO}}</td>
-                                    <td>{{data.PHR_TEXT_NUM}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in DATA_PHR_SHOW">
+                                <td>{{data.PHR_LEVEL}}</td>
+                                <td>{{data.PHR_NAME}}</td>
+                                <td>{{data.PHR_CTZNO}}</td>
+                                <td>{{data.PHR_TEXT_NUM}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
+        </div>*@
+            <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />
+            <div>
+                <table class="table" width="100%">
+                    <thead>
+                        <tr>
+                            <th>ลำดับ</th>
+                            <th>เภสัชกรชั้น</th>
+                            <th>ชื่อ-นามสกุล</th>
+                            <th>เลขบัตรประจำตัวประชาชน</th>
+                            <th>ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="datas in COLLECT_PHR">
+                            <td>{{$index + 1}}</td>
+                            <td>{{datas.PHR_LEVEL}}</td>
+                            <td>{{datas.PHR_NAME}}</td>
+                            <td>{{datas.PHR_CTZNO}}</td>
+                            <td>{{datas.PHR_TEXT_NUM}}</td>
+                            <td>
+                                <span class="fas fa-edit"></span>
+                                <a ng-click="deletePHR(datas,$index)">
+                                    ลบข้อมูล
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr></tr>
+                    </tfoot>
+                </table>
             </div>
             <div style="font-size:20px;">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
             <br />
@@ -537,30 +570,60 @@
 
             <br />
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
-            <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
-                    <table width="100%" style="font-family:'Taviraj'">
-                        <thead>
-                            <tr>
-                                <td>ชื่อสถานที่เก็บ</td>
-                                <td>อยู่เลขที่</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="data in DATA_KEEP_SHOW">
-                                <td>{{datas.thanameplace}}</td>
-                                <td>{{datas.fulladdr}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            @*<div class="col-sm-12">
+            <div class="card" style=" border-top: 10px solid #277210;">
+                <table width="100%" style="font-family:'Taviraj'">
+                    <thead>
+                        <tr>
+                            <td>ชื่อสถานที่เก็บ</td>
+                            <td>อยู่เลขที่</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="data in DATA_KEEP_SHOW">
+                            <td>{{datas.thanameplace}}</td>
+                            <td>{{datas.fulladdr}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>*@
+            <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />
+            <div>
+                <table class="table" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th hidden>IDA</th>
+                            <th>ลำดับ</th>
+                            <th>ชื่อสถานที่เก็บ</th>
+                            <th>ที่อยู่</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="datas in COLLECT_KEEP">
+                            <td hidden>{{datas.LOCATION_IDA}}</td>
+                            <td>{{$index + 1}}</td>
+                            <td>{{datas.thanameplace}}</td>
+                            <td>{{datas.fulladdr}}</td>
+                            <td>
+                                <span class="fas fa-edit"></span>
+                                <a ng-click="deleteKEEP(datas,$index)">
+                                    ลบที่เก็บ
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr></tr>
+                    </tfoot>
+                </table>
             </div>
             <br />
             <br />
 
             <div style="font-size:20px;"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
             <div class="row">
-                <div class="col-sm-10" style="width:100%">
+                <div class="col-sm-12" style="width:100%">
                     <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
                         <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
                             หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
@@ -718,30 +781,30 @@
                 </tr>
 
             </table>
-            <br />
-            <div class="col-sm-12">
-                <div class="row">
-                    <div class="col-sm-3" style="text-align:center">
-                        รายละเอืยด :
-                    </div>
-                    <div class="col-sm-9">
-                        {{REMARK}}
-                    </div>
+            @*<br />
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-3" style="text-align:center">
+                    รายละเอืยด :
                 </div>
-                <br />
-                <table class="table" style="width:100%">
-                    <tr>
-                        <td>ชื่อไฟล์</td>
-                        <td></td>
-                    </tr>
-                    <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
-                        <td>{{datas.FILENAME}}</td>
-                        <td>
-                            <a ng-show="PROCESS == '127'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                        </td>
-                    </tr>
-                </table>
+                <div class="col-sm-9">
+                    {{REMARK}}
+                </div>
             </div>
+            <br />
+            <table class="table" style="width:100%">
+                <tr>
+                    <td>ชื่อไฟล์</td>
+                    <td></td>
+                </tr>
+                <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
+                    <td>{{datas.FILENAME}}</td>
+                    <td>
+                        <a ng-show="PROCESS == '127'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                    </td>
+                </tr>
+            </table>
+        </div>*@
             <br />
             <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
                 <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
@@ -751,19 +814,3 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
