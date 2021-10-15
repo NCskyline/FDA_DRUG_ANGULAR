@@ -2,11 +2,11 @@
 
 End Code
 
-<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
-<script src="~/Scripts_angular/CENTER_SV.js"></script>
-<script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
+<script src="../Scripts_angular/CENTER_SV.js"></script>
+<script src="../Scripts_angular/DH_STAFF_CTRL.js"></script>
 
-<div ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP">
+<div ng-controller="DH_STAFF_CTRL" ng-app="ANGULAR_APP" ng-init="PREVIEW_CER()">
     <div>
         <div class="content-part">
             <div class="part part-2-3 ic">
@@ -773,20 +773,30 @@ End Code
 
             </div>
             <div class="part part-1-3 ic">
-                <div>
+                <div class="card"  >
+                    <table class="table">
+                        <tr>
+                            <td>
+                                สถานะ
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select class="form-control" >
+                                    <option>อนุมัติ</option>
+                                    <option>ไม่อนุมัติ</option>
+                                </select>
+                            </td>  
+                        </tr>
+                    </table>
+
+                    <br />
                     <div align="center">
-                        <select class="form-control" style="width:50%">
-                            <option>อนุมัติ</option>
-                            <option>ไม่อนุมัติ</option>
-                        </select>
+                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_CERT_CONFIRM()" value="บันทึก" />
                     </div>
                     <br />
                     <div align="center">
-                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
-                    </div>
-                    <br />
-                    <div align="center">
-                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
+                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_BACK()" value="ย้อนกลับ" />
                     </div>
                     <br />
                     <div>
