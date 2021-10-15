@@ -8,6 +8,10 @@ End Code
         $(document).ready(function () {
             $('select').selectpicker('refresh');
         })
+
+        $(document).ready(function () {
+            $('select').selectref('refresh');
+        })
     </script>
 
 <div class="ic" style="font-family:'Taviraj';font-size:20px;">
@@ -17,24 +21,15 @@ End Code
             เป็นสารออกฤทธิ์ตามทะเบียนตำรับยาผลิตในประเทศ
         </h2>
     </center>
-    <table>
-        <tr>
-            <td>
 
-                <div ng-include src="'Views/DH/HEADER_DH'"></div>
-            </td>
-        </tr>
-    </table>
-
-    <table>
+    <table width="30%">
         <tr>
             <td>
                 Ref Cer
             </td>
             <td>
-                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --"ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA" ng-change="Getdetails_REF_CER(LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA)">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
-                    <option ng-repeat="x in REF_CERT" value="{{x.IDA}}">{{x.CER_NUMBER}}</option>
+                <select class="form-control selectref" data-live-search="true" title="-- Please select --" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA" ng-change="Getdetails_REF_CER(LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA)">
+                    <option ng-repeat="ref in REF_CERT" value="{{ref.IDA}}">{{ref.CER_NUMBER}}</option>
                 </select>
             </td>
         </tr>

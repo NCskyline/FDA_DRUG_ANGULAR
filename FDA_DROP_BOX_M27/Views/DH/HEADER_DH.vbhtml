@@ -109,9 +109,11 @@ End Code*@
     </table>
     <div style="font-family:'Taviraj';font-size:20px;">มีรายละเอียดดังนี้</div>
     <br />
+
     <div class="row">
         <div ng-include="INPUT" style="width:100%;"></div>
     </div>
+
     <div ng-show="PROCESS_ID == '16'">
         <div>
             <table width="100%">
