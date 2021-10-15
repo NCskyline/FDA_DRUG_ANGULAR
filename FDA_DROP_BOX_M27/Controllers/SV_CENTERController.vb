@@ -4896,6 +4896,7 @@ Namespace Controllers
             KEEP_LOGS_EDIT(LCN_IDA, "แก้ไขวันที่ให้ไว้ ณ", CITIZEN_ID)
             Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function
+
         Function UPDATE_EXPYEAR_LCN(ByVal XML_LCN As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal CITIZEN_ID_AUTHORIZE As String) As JsonResult
             Dim Result As String = ""
             Dim jss As New JavaScriptSerializer
