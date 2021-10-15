@@ -9,7 +9,7 @@
 </script>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()" ng-cloak="">
-    <div ng-show="LIST_GMP.DALCN_EDIT_REQUEST.PROCESS_ID == '11108'">
+    @*<div ng-show="LIST_GMP.DALCN_EDIT_REQUEST.PROCESS_ID == '11108'">*@
     <div style="font-family:'Taviraj';font-size:24px;">
 
         <div>
@@ -61,24 +61,24 @@
         <hr />
         <table style="width:100%">
             <tr>
-                <td style="text-align:right;width:90%">
-                    เขียนที่
-                </td>
-                <td style="width:40%;border-bottom:dotted;border-bottom-width:thin;">
-
-                    {{LIST_LCN.DALCN_EDIT_RREQUEST.WRITE_AT}}
+                <td style="width:70%"></td>
+                <td style="width:5%;text-align:right">เขียนที่</td>
+                <td style="width:25%">
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.WRITE_AT" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
+        </table>
+        <table style="width:100%">
             <tr>
-                <td style="text-align:right;width:100px">
-                    วันที่
-                </td>
-                <td style="border-bottom:dotted;border-bottom-width:thin;">
-
-                    {{LIST_LCN.DALCN_EDIT_RREQUEST.WRITE_DATE}}
+                <td style="width:70%"></td>
+                <td style="width:5%;text-align:right">วันที่</td>
+                <td style="width:25%">
+                    <md-datepicker ng-model="LIST_LCN.DALCN_EDIT_REQUEST.WRITE_DATE" md-placeholder="Enter date"
+                                   input-aria-describedby="datepicker-description"
+                                   input-aria-labelledby="datepicker-header ">
+                    </md-datepicker>
                 </td>
             </tr>
-
         </table>
         <br />
         <table style="width:100%">
@@ -141,7 +141,7 @@
         </table>
         <br />
         <div class="row">
-            <div class="col-sm-10" style="width:100%">
+            <div class="col-sm-12" style="width:100%">
                 <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
                     <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
                         หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
@@ -205,7 +205,7 @@
         <hr />
         <div>หมายเหตุ : &nbsp;ใส่เครื่องหมาย &#10004; ในช่อง [  ] หน้าข้อความที่ต้องการ</div>
         <br />
-        <div class="col-sm-12">
+        @*<div class="col-sm-12">
             <div class="row">
                 <div class="col-sm-3" style="text-align:center">
                     รายละเอืยด :
@@ -227,8 +227,7 @@
                     </td>
                 </tr>
             </table>
-        </div>
-    </div>
+        </div>*@
     </div>
     <br />
     <div style="text-align:center">

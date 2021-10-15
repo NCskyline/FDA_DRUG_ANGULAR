@@ -47,21 +47,22 @@
                     <td style="text-align:right;width:90%">
                         เขียนที่
                     </td>
-                    <td style="width:40%;border-bottom:dotted;border-bottom-width:thin;">
-
-                        {{LIST_LCN.dalcn.WRITE_AT}}
+                    <td style="width:40%">
+                        <input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'Taviraj';" type="text" />
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align:right;width:100px">
                         วันที่
                     </td>
-                    <td style="border-bottom:dotted;border-bottom-width:thin;">
+                    <td>
 
-                        {{LIST_LCN.dalcn.WRITE_DATE}}
+                        <md-datepicker ng-model="LIST_LCN.dalcn.WRITE_DATE" md-placeholder="Enter date"
+                                       input-aria-describedby="datepicker-description"
+                                       input-aria-labelledby="datepicker-header ">
+                        </md-datepicker>
                     </td>
                 </tr>
-
             </table>
             <br />
             <table style="width: 100%">
@@ -293,7 +294,7 @@
             <hr style="width: 100%; border-color: black" />
             <p>เป็นผู้มีหน้าที่ควบคุมตามมาตรา ๒๑ แห่งพระราชบัญญัติยาเสพติดให้โทษ พ.ศ.๒๕๒๒</p>
             <div class="row">
-                <div class="col-sm-10" style="width:100%">
+                <div class="col-sm-12" style="width:100%">
                     <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
                         <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
                             หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
@@ -329,43 +330,43 @@
                 </div>
             </div>
             @*<table style="width: 100%">
-                <tr>
-                    <td style="width: 2%"></td>
-                    <td style="width: 98%"><b>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</b></td>
-                </tr>
-                <tr>
-                    <td style="width: 2%"></td>
-                    <td style="width: 98%">(๑) สำเนาทะเบียนบ้านของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายให้ดำเนินกิจการ</td>
-                </tr>
-                <tr>
-                    <td style="width: 2%"></td>
-                    <td style="width: 98%">(๒) สำเนาบัตรประชาชนของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายให้ ดำเนินกิจการ</td>
-                </tr>
-                <tr>
-                    <td style="width: 2%"></td>
-                    <td style="width: 98%">(๓) รูปถ่ายของผู้ขอรับใบอนุญาตหรือผูู้ได้รับมอบหมายให้ดำเนินกิจการขนาด ๓ x ๔ เซนติเมตร จำนวน ๒ รูปซึ่งถ่ายไว้ไม่เกิน ๖ เดือน</td>
-                </tr>
-                <tr>
-                    <td style="width: 2%"></td>
-                    <td style="width: 98%">(๔) สำเนาหนังสือรับรองแสดงการจดทะเบียนเป็นนิติบุคคลซึ่งนายทะเบียนออกไว้ไม่เกิน ๖ เดือน</td>
-                </tr>
-                <tr>
-                    <td style="width: 2%"></td>
-                    <td style="width: 98%">(๕) หนังสือแสดงว่าผู้ได้รับมอบหมายให้ดำเนินกิจการของนิติบุคคลผู้ขอรับใบอนุญาตกรณีผู้ขอรับใบอนุญาตเป็นนิติบุคคล</td>
-                </tr>
-                <tr>
-                    <td style="width: 2%"></td>
-                    <td style="width: 98%">(๖) สำเนาใบอนุญาตประกอบวิชาชีพ</td>
-                </tr>
-                <tr>
-                    <td style="width: 2%"></td>
-                    <td style="width: 98%">(๗) สำเนาใบอนุญาตผลิตหรือขายยาแผนปัจจุบัน หรือใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรตามกฏหมายว่าด้วยยา แล้วแต่กรณี</td>
-                </tr>
-                <tr>
-                    <td style="width: 2%"></td>
-                    <td style="width: 98%">(๘) เอกสารหรือหลักฐานอื่นๆ(ถ้ามี)</td>
-                </tr>
-            </table>*@
+            <tr>
+                <td style="width: 2%"></td>
+                <td style="width: 98%"><b>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</b></td>
+            </tr>
+            <tr>
+                <td style="width: 2%"></td>
+                <td style="width: 98%">(๑) สำเนาทะเบียนบ้านของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายให้ดำเนินกิจการ</td>
+            </tr>
+            <tr>
+                <td style="width: 2%"></td>
+                <td style="width: 98%">(๒) สำเนาบัตรประชาชนของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายให้ ดำเนินกิจการ</td>
+            </tr>
+            <tr>
+                <td style="width: 2%"></td>
+                <td style="width: 98%">(๓) รูปถ่ายของผู้ขอรับใบอนุญาตหรือผูู้ได้รับมอบหมายให้ดำเนินกิจการขนาด ๓ x ๔ เซนติเมตร จำนวน ๒ รูปซึ่งถ่ายไว้ไม่เกิน ๖ เดือน</td>
+            </tr>
+            <tr>
+                <td style="width: 2%"></td>
+                <td style="width: 98%">(๔) สำเนาหนังสือรับรองแสดงการจดทะเบียนเป็นนิติบุคคลซึ่งนายทะเบียนออกไว้ไม่เกิน ๖ เดือน</td>
+            </tr>
+            <tr>
+                <td style="width: 2%"></td>
+                <td style="width: 98%">(๕) หนังสือแสดงว่าผู้ได้รับมอบหมายให้ดำเนินกิจการของนิติบุคคลผู้ขอรับใบอนุญาตกรณีผู้ขอรับใบอนุญาตเป็นนิติบุคคล</td>
+            </tr>
+            <tr>
+                <td style="width: 2%"></td>
+                <td style="width: 98%">(๖) สำเนาใบอนุญาตประกอบวิชาชีพ</td>
+            </tr>
+            <tr>
+                <td style="width: 2%"></td>
+                <td style="width: 98%">(๗) สำเนาใบอนุญาตผลิตหรือขายยาแผนปัจจุบัน หรือใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรตามกฏหมายว่าด้วยยา แล้วแต่กรณี</td>
+            </tr>
+            <tr>
+                <td style="width: 2%"></td>
+                <td style="width: 98%">(๘) เอกสารหรือหลักฐานอื่นๆ(ถ้ามี)</td>
+            </tr>
+        </table>*@
             <br /><br />
 
 
@@ -393,7 +394,7 @@
             </table>
 
         </div>
-        <br />
+       @*<br />
         <div class="col-sm-12">
             <div class="row">
                 <div class="col-sm-3" style="text-align:center">
@@ -416,7 +417,7 @@
                     </td>
                 </tr>
             </table>
-        </div>
+        </div>*@
         <br />
         <br />
         <div class="col-sm-12" style="text-align:center;margin-bottom:40px;width:100%;">

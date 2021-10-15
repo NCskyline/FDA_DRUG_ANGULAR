@@ -495,7 +495,7 @@
         <div style="margin-left:10%;font-size:20px">(๗) เอกสารแสดงว่าเป็นผู้ดำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
         <div style="margin-left:10%;font-size:20px">(๘) เอกสารอื่นๆ ถ้าจำเป็น</div>*@
                 <div class="row">
-                    <div class="col-sm-10" style="width:100%">
+                    <div class="col-sm-12" style="width:100%">
                         <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
                             <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
                                 หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>

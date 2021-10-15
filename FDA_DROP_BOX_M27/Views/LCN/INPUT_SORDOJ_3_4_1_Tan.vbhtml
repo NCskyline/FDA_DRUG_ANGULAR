@@ -38,7 +38,7 @@
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
-    <div ng-show="LIST_LCN.PROCESS == '133'">
+    @*<div ng-show="LIST_LCN.PROCESS == '133'">*@
     <div style="font-family:'Taviraj';font-size:24px;">
         <h1 style="text-align:left;font-size:24px;">
             <strong>แบบ ส.ว.จ. ๓/๔-๑</strong>
@@ -165,18 +165,20 @@
                 <td style="text-align:right;width:90%">
                     เขียนที่
                 </td>
-                <td style="width:40%;border-bottom:dotted;border-bottom-width:thin;">
-
-                    {{LIST_LCN.DALCN_NCT_SUBTITUTE.WRITE_AT}}
+                <td style="width:40%">
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.WRITE_AT" style="font-family:'Taviraj';" type="text" />
                 </td>
             </tr>
             <tr>
                 <td style="text-align:right;width:100px">
                     วันที่
                 </td>
-                <td style="border-bottom:dotted;border-bottom-width:thin;">
+                <td>
 
-                    {{LIST_LCN.DALCN_NCT_SUBTITUTE.WRITE_DATE}}
+                    <md-datepicker ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.WRITE_DATE" md-placeholder="Enter date"
+                                   input-aria-describedby="datepicker-description"
+                                   input-aria-labelledby="datepicker-header ">
+                    </md-datepicker>
                 </td>
             </tr>
 
@@ -423,7 +425,7 @@
 
         <div style=";font-size:20px"><strong>๔. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
         <div class="row">
-            <div class="col-sm-10" style="width:100%">
+            <div class="col-sm-12" style="width:100%">
                 <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
                     <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
                         หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
@@ -570,7 +572,7 @@
             </tr>
 
         </table>
-        <br />
+        @*<br />
         <div class="col-sm-12">
             <div class="row">
                 <div class="col-sm-3" style="text-align:center">
@@ -593,13 +595,12 @@
                     </td>
                 </tr>
             </table>
-        </div>
+        </div>*@
         <br />
         <div style="text-align:center">
             <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
             <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_STT()" value="บันทึก" />
         </div>
-    </div>
     </div>
 </div>
 

@@ -644,7 +644,7 @@
 
         </table>*@
         <div class="row">
-            <div class="col-sm-10" style="width:100%">
+            <div class="col-sm-12" style="width:100%">
                 <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
                     <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
                         หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
