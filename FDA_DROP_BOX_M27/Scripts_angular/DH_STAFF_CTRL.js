@@ -188,9 +188,18 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
     };
 
     $scope.BTN_BACK = function () {
-        REDIRECT('/DH_STAFF/FRM_STAFF_MAIN');
+        REDIRECT('/AUTHEN/FRM_STAFF_MAIN');
     };
 
+    $scope.BTN_CERT_CONFIRM = function () {
+        Swal.fire({
+            title: 'SUCCESS',
+            text: '',
+            icon: 'ดฟสหำ',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'OK'
+        });
+    };
 
 
 

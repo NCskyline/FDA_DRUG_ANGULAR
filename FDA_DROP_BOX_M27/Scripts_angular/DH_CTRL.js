@@ -1,12 +1,4 @@
-﻿app.filter('startFrom', function () {
-    return function (input, start) {
-        if (input) {
-            start = +start;
-            return input.slice(start);
-        }
-        return [];
-    };
-});
+﻿
 app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     CHK_TOKEN();
@@ -437,6 +429,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         }
 
     };
+
     $scope.BTN_EDIT_CHEM = function () {
         var cEmpty = 0;
         if (LIST_CHEM.CHEMICAL_REQUEST.iowanm.trim().length < 2) {
@@ -510,7 +503,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
 
     $scope.BTN_SAVE_DH = function () {
-        var Getdata = CENTER_SV.INSERT_DH($scope.LIST_DH, PROCESS);
+        var Getdata = CENTER_SV.INSERT_DH($scope.LIST_DH, $scope.PROCESS_ID);
         Getdata.then(function (datas) {
             if (datas.data.Result == "success") {
                 Swal.fire({
@@ -596,4 +589,13 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 //$state.transitionTo($state.current, $stateParams, {
 //    reload: true, inherit: false, notify: true
 //});
+app.filter('startFrom', function () {
+    return function (input, start) {
+        if (input) {
+            start = +start;
+            return input.slice(start);
+        }
+        return [];
+    };
+});
 
