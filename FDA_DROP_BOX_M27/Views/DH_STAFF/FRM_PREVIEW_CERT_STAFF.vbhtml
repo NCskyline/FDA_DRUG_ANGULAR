@@ -773,20 +773,30 @@ End Code
 
             </div>
             <div class="part part-1-3 ic">
-                <div>
+                <div class="card"  >
+                    <table class="table">
+                        <tr>
+                            <td>
+                                สถานะ
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select class="form-control" >
+                                    <option>อนุมัติ</option>
+                                    <option>ไม่อนุมัติ</option>
+                                </select>
+                            </td>  
+                        </tr>
+                    </table>
+
+                    <br />
                     <div align="center">
-                        <select class="form-control" style="width:50%">
-                            <option>อนุมัติ</option>
-                            <option>ไม่อนุมัติ</option>
-                        </select>
+                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_CERT_CONFIRM()" value="บันทึก" />
                     </div>
                     <br />
                     <div align="center">
-                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
-                    </div>
-                    <br />
-                    <div align="center">
-                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
+                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_CERT_BACK()" value="ย้อนกลับ" />
                     </div>
                     <br />
                     <div>

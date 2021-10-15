@@ -27,5 +27,8 @@ Namespace Controllers
         Function FRM_PREVIEW_CERT_STAFF() As ActionResult
             Return View()
         End Function
+        Function FRM_PREVIEW_DH_STAFF() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
