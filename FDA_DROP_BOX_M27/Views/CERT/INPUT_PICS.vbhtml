@@ -37,7 +37,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                3. เมือง (City / Province / State)<font color="red">*</font> 
+                3. เมือง (City / Province / State)<font color="red">*</font>
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -64,7 +64,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                5. สถานที่ผลิตได้มาตรฐาน GMP ตาม (โปรดระบุ) :
+                5. สถานที่ผลิตได้มาตรฐาน GMP ตาม (โปรดระบุ)
             </td>
             <td>
                 <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD">
@@ -76,13 +76,13 @@ End Code
             </td>
         </tr>
         @*<tr>
-            <td style="height:25px">
-                Global Location Number (GLN) :
-            </td>
-            <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
-            </td>
-        </tr>*@
+                <td style="height:25px">
+                    Global Location Number (GLN) :
+                </td>
+                <td>
+                    <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                </td>
+            </tr>*@
         <tr>
             <td style="height:25px">
                 6. วันที่ขายที่ระบุในหลักฐานการขาย<font color="red">*</font>
@@ -105,7 +105,7 @@ End Code
 
         <tr>
             <td style="height:25px">
-                8. ประเทศผู้ซื้อ (Purchaser's Country*)<font color="red">*</font>
+                8. ประเทศผู้ซื้อ (Purchaser's Country)<font color="red">*</font>
             </td>
             <td>
                 <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.BUYER_COUNTRY">
@@ -118,7 +118,7 @@ End Code
 
         <tr>
             <td style="height:25px">
-                9. มาตราฐานสถานที่ผลิตยาสำเร็จรูปของประเทศผู้ซื้อได้ GMP ตาม (โปรดระบุ)<font color="red">*</font> :
+                9. มาตราฐานสถานที่ผลิตยาสำเร็จรูปของประเทศผู้ซื้อได้ GMP ตาม (โปรดระบุ)<font color="red">*</font>
             </td>
             <td>
                 <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.BUYER_STANDARD">
@@ -129,17 +129,23 @@ End Code
         </tr>
     </table>
     <br />
-    <h2>
-        รายละเอียดผลิตภัณฑ์ที่ได้รับการรับรอง
+    <h2 style="font-family:'Taviraj';font-size:24px;">
+        <b> รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification) </b>
     </h2>
     <table width="100%">
         <tr>
             <td style="height:25px;width:35%;">
-                10. ขอบเขตของประเภทยาที่รับรอง
+                10. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER.CER_SCOPE" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
     </table>
+    <br />
+    <div>
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            แนบไฟล์ใบรับรอง และเอกสารอื่น (Attach Files of Certificate and Other Documents)
+        </h2>
+    </div>
 </div>

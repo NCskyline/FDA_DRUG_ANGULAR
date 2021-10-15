@@ -72,21 +72,20 @@ End Code
             </td>
         </tr>
         @*<tr>
-                <td style="height:25px">
-                    6. Organization Code (รหัสองค์กร) :
-                </td>
-                <td>
-                    <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ORGANIZATION_CODE" style="font-family:'Taviraj';font-size:20px;" type="text" />
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px">
-                    Global Location Number (GLN) :
-                </td>
-                <td>
-                    <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
-                </td>
-            </tr>*@
+            <td style="height:25px">
+                6. Organization Code (รหัสองค์กร) :
+            </td>
+            <td>
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ORGANIZATION_CODE" style="font-family:'Taviraj';font-size:20px;" type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td style="height:25px">
+                Global Location Number (GLN) :
+            </td>
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
+            </td>
+        </tr>*@
         <tr>
             <td style="height:25px">
                 6. วันที่ออกใบรับรอง ISO (Issue Date)<font color="red">*</font>
