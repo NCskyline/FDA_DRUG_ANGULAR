@@ -30,7 +30,7 @@ End Code
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
             <td style="height:25px;width:35%;">
-                1. Reference Number<font color="red">*</font> :
+                1. Reference Number<font color="red">*</font>
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER.CERTIFICATION_NUMBER_ALL" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -87,14 +87,14 @@ End Code
                 <input class="form-control inline" ng-model="LIST_GMP.CER.MANUFACTURER_LICENCE_NUMBER" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
-        <tr>
+        @*<tr>
             <td style="height:25px">
                 Global Location Number (GLN)
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
-        </tr>
+        </tr>*@
         <tr>
             <td style="height:25px">
                 7. หน่วยงานที่ออกเอกสาร<font color="red">*</font>
@@ -124,7 +124,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                9. วันเดือนปีที่ออกหนังสือ (Issue Date)<font color="red">*</font>
+                9. วันที่ออกใบรับรอง (Issue Date)<font color="red">*</font>
             </td>
             <td>
 
@@ -136,7 +136,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font>
+                วันที่หมดอายุใบรับรอง (Expiry Date / Valid Until)<font color="red">*</font>
             </td>
             <td>
                 <md-datepicker ng-model="LIST_GMP.CER.EXP_DOCUMENT_DATE" md-placeholder="Enter date"
@@ -177,4 +177,3 @@ End Code
         </h2>
     </div>
 </div>
-

@@ -603,6 +603,63 @@ Namespace Controllers
             Result = "ดำเนินการคืนคำขอเรียบร้อยแล้ว"
             Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function
+
+        Function UPDATE_LCN_RCVNO_TEMP(ByVal XML_LCN As String, ByVal IDA As Integer, ByVal CITIZEN_ID As String) As JsonResult
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_LCN = jss.Deserialize(XML_LCN, GetType(MODEL_LCN))
+
+            Dim dao As New DAO_DRUG.ClsDBdalcn
+            Dim bao As New BAO_GENNO.GenNumber
+
+            dao.GetDataby_IDA(IDA)
+
+            AddLogStatus(3, dao.fields.PROCESS_ID, CITIZEN_ID, IDA)
+
+            Dim PROCESS_ID As Integer = dao.fields.PROCESS_ID
+
+            Dim dao_p As New DAO_DRUG.ClsDBPROCESS_NAME
+            dao_p.GetDataby_Process_ID(PROCESS_ID)
+            Dim GROUP_NUMBER As Integer = dao_p.fields.PROCESS_ID
+
+            dao.fields.RCVNO_MANUAL = bb.dalcn.TEMPORARY_RCVNO
+            Try
+                dao.fields.rcvdate = CDate(txt_rcvdate.Text)
+            Catch ex As Exception
+
+            End Try
+
+            dao.fields.TEMPORARY_RCVNO = Txt_rcvno_temp.Text
+            Try
+
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                dao.fields.TEMPLATE_ID = ddl_template.SelectedValue
+            Catch ex As Exception
+
+            End Try
+
+
+            Try
+                dao.fields.rcvr_id = 0 'ddl_receiver.SelectedValue
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                'send_mail_mini(dao.fields.CITIZEN_ID, "FDATH", "เจ้าหน้าที่ดำเนินการรับคำขอ เลขดำเนินการที่ " & dao.fields.TR_ID & " แล้ว")
+            Catch ex As Exception
+
+            End Try
+            dao.update()
+            AddLogStatus(3, dao_up.fields.PROCESS_ID, _CLS.CITIZEN_ID, _IDA)
+            'KEEP_LOGS_EDIT(IDA, "แก้ไขวันที่ให้ไว้ ณ", CITIZEN_ID)
+            Result = "ดำเนินการคืนคำขอเรียบร้อยแล้ว"
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
 #End Region
 
 
