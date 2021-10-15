@@ -7,15 +7,15 @@ End Code
     <div>
         <table>
             <tr>
-                <td>เลขที่ใบอนุญาต :</td>
+                <td>เลขที่ใบอนุญาต</td>
                 <td>{{LCNNO_NO}}</td>
             </tr>
             <tr>
-                <td>ชื่อผู้รับอนุญาต :</td>
+                <td>ชื่อผู้รับอนุญาต</td>
                 <td>{{nameOperator}}</td>
             </tr>
             <tr>
-                <td>ชื่อสถานที่ :</td>
+                <td>ชื่อสถานที่</td>
                 <td>{{thanameplace}}</td>
             </tr>
         </table>

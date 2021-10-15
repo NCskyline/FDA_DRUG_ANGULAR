@@ -587,6 +587,22 @@ Namespace Controllers
             AddLogStatus(6, dao.fields.PROCESS_ID, CITIZEN_ID, IDA)
             Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function
+        Function UPDATE_REMARK_LCN_EDIT(ByVal XML_LCN As String, ByVal IDA As Integer, ByVal CITIZEN_ID As String) As JsonResult
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_LCN = jss.Deserialize(XML_LCN, GetType(MODEL_LCN))
+
+            Dim dao As New DAO_DRUG.TB_DALCN_EDIT_REQUEST
+            dao.GetDataby_IDA(IDA)
+            dao.fields.STATUS_ID = 7
+            dao.fields.REMARK = bb.DALCN_EDIT_REQUEST.REMARK
+
+            dao.update()
+            AddLogStatus(7, dao.fields.PROCESS_ID, CITIZEN_ID, IDA)
+            'KEEP_LOGS_EDIT(IDA, "แก้ไขวันที่ให้ไว้ ณ", CITIZEN_ID)
+            Result = "ดำเนินการคืนคำขอเรียบร้อยแล้ว"
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
 #End Region
 
 

@@ -30,6 +30,21 @@
         });
         return response;
     };
+    
+    this.UPDATE_REMARK_LCN_EDIT = function (XML_LCN, IDA, CITIZEN_ID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/LCN_CENTER/UPDATE_REMARK_LCN_EDIT"),
+            dataType: "json",
+            data: {
+                XML_LCN: JSON.stringify(XML_LCN),
+                IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID
+
+            }
+        });
+        return response;
+    };
 
     this.GET_FULLDATA_LCN_EDIT = function (MODEL) {
         var response = $http({
