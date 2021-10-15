@@ -311,6 +311,15 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
 
         });
     };
+    
+    $scope.BTN_UPDATE_LCN_EDIT_REMARK = function () {
+        var APP_DATA = CENTER_SV.UPDATE_REMARK_LCN_EDIT(LIST_LCN, sessionStorage.IDA, sessionStorage.CITIZEN_ID);
+        APP_DATA.then(function (datas) {
+            var result = datas.data;
+            success_data(result);
+
+        });
+    };
 
     $scope.BTN_SEND_STATUS = function (_type_select, val1, val2, val3, val4, val5) {
         var setdata = CENTER_SV.SEND_STATUS_PAY_TABEAN(_type_select, val1, val2, val3, val4, val5,sessionStorage.CITIZEN_ID);
