@@ -624,23 +624,23 @@ Namespace Controllers
 
             dao.fields.RCVNO_MANUAL = bb.dalcn.TEMPORARY_RCVNO
             Try
-                dao.fields.rcvdate = CDate(txt_rcvdate.Text)
+                dao.fields.rcvdate = CDate(bb.dalcn.rcvdate)
             Catch ex As Exception
 
             End Try
 
-            dao.fields.TEMPORARY_RCVNO = Txt_rcvno_temp.Text
+            dao.fields.TEMPORARY_RCVNO = bb.dalcn.TEMPORARY_RCVNO
             Try
 
             Catch ex As Exception
 
             End Try
 
-            Try
-                dao.fields.TEMPLATE_ID = ddl_template.SelectedValue
-            Catch ex As Exception
+            'Try
+            '    dao.fields.TEMPLATE_ID = ddl_template.SelectedValue
+            'Catch ex As Exception
 
-            End Try
+            'End Try
 
 
             Try
@@ -655,7 +655,7 @@ Namespace Controllers
 
             End Try
             dao.update()
-            AddLogStatus(3, dao_up.fields.PROCESS_ID, _CLS.CITIZEN_ID, _IDA)
+            AddLogStatus(3, dao.fields.PROCESS_ID, CITIZEN_ID, IDA)
             'KEEP_LOGS_EDIT(IDA, "แก้ไขวันที่ให้ไว้ ณ", CITIZEN_ID)
             Result = "ดำเนินการคืนคำขอเรียบร้อยแล้ว"
             Return Json(Result, JsonRequestBehavior.AllowGet)
