@@ -8,10 +8,6 @@ End Code
         $(document).ready(function () {
             $('select').selectpicker('refresh');
         })
-
-        $(document).ready(function () {
-            $('select').selectref('refresh');
-        })
     </script>
 
 <div class="ic" style="font-family:'Taviraj';font-size:20px;">
@@ -28,7 +24,7 @@ End Code
                 Ref Cer
             </td>
             <td>
-                <select class="form-control selectref" data-live-search="true" title="-- Please select --" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA" ng-change="Getdetails_REF_CER(LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA)">
+                <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA" ng-change="Getdetails_REF_CER(LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA)">
                     <option ng-repeat="ref in REF_CERT" value="{{ref.IDA}}">{{ref.CER_NUMBER}}</option>
                 </select>
             </td>

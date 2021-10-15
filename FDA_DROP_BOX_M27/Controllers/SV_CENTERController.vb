@@ -2424,8 +2424,8 @@ Namespace Controllers
 
 
             If TOKEN = "PASS" Then
-                _CLS.CITIZEN_ID = "0105522020724" ''"1100400181875" 0105522020724
-                _CLS.CITIZEN_ID_AUTHORIZE = "0105522020724" '"0105540078852"
+                _CLS.CITIZEN_ID = "0000000000000" ''"1100400181875" 0105522020724
+                _CLS.CITIZEN_ID_AUTHORIZE = "0000000000000" '"0105540078852"
                 _CLS.COMPANY_NAME = "บริษัท เทสออนลี่ จำกัด มหาขน"
                 _CLS.THANM = "นายทดสอบ ระบบ"
                 _CLS.TOKEN = TOKEN
