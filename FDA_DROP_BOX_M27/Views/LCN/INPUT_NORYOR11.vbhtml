@@ -44,24 +44,24 @@
         <hr />
         <table style="width:100%">
             <tr>
-                <td style="text-align:right;width:90%">
-                    เขียนที่
-                </td>
-                <td style="width:40%;border-bottom:dotted;border-bottom-width:thin;">
-
-                    {{LIST_LCN.DALCN_EDIT_RREQUEST.WRITE_AT}}
+                <td style="width:70%"></td>
+                <td style="width:5%;text-align:right">เขียนที่</td>
+                <td style="width:25%">
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.WRITE_AT" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
             </tr>
+        </table>
+        <table style="width:100%">
             <tr>
-                <td style="text-align:right;width:100px">
-                    วันที่
-                </td>
-                <td style="border-bottom:dotted;border-bottom-width:thin;">
-
-                    {{LIST_LCN.DALCN_EDIT_RREQUEST.WRITE_DATE}}
+                <td style="width:70%"></td>
+                <td style="width:5%;text-align:right">วันที่</td>
+                <td style="width:25%">
+                    <md-datepicker ng-model="LIST_LCN.DALCN_EDIT_REQUEST.WRITE_DATE" md-placeholder="Enter date"
+                                   input-aria-describedby="datepicker-description"
+                                   input-aria-labelledby="datepicker-header ">
+                    </md-datepicker>
                 </td>
             </tr>
-
         </table>
         <br />
         <table style="width:100%">

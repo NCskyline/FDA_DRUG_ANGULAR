@@ -41,89 +41,88 @@
 </script>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()" ng-cloak="">
-    <div ng-show="LIST_LCN.PROCESS == '11104'">
-        <div style="font-family:'Taviraj';font-size:24px;width:100%">
-            <h1 style="text-align:left;font-size:24px;">
-                <strong>แบบ ข.ว.จ. ๓/๔-๓</strong>
-            </h1>
-            <br />
-            <h2 style="text-align:center;font-size:24px;">
-                <strong>คำขอย้าย เปลี่ยนแปลง หรือเพิ่มสถานที่ผลิตหรือสถานที่เก็บ</strong><br />
-                <strong>วัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
-            </h2>
-            <br />
-            <div class="title1">
-                @*process =11104 *@
-                <table style="font-size:20px;margin:auto;margin-top:6%">
-                    <tr>
-                        <td>
-                            <strong>ใบอนุญาตนำเข้าวัตถุออกฤทธิ์</strong>
-                        </td>
-                        <td>
-                            <input type="radio" name="gender" ng-model="LIST_LCN.LCN_TYPE_NCT" value="1" /> <strong>ในประเภท ๓</strong>
-                        </td>
-                        <td>
-                            <input type="radio" name="gender" ng-model="LIST_LCN.LCN_TYPE_NCT" value="2" /> <strong>ในประเภท ๔</strong>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:left">
-                            <strong>เลขที่</strong>
-                        </td>
-                        <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="3">
-                            <label>{{LCN_LIST.RCVNO_DISPLAY}}</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:left">
-                            <strong>ณ สถานที่ ชื่อ</strong>
-                        </td>
-                        <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="2">
-                            <label>{{LIST_LCN.thanameplace}}</label>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="title2">
-                <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px">
-                    <tr>
-                        <td style="text-align:left;width:20%">
-                            เลขรับที่
-                        </td>
-
-                        <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="3">
-                            <label>{{LCN_LIST.RCVNO_DISPLAY}}</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:left">
-                            วันที่
-                        </td>
-
-                        <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="3">
-                            <label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center" colspan="2">
-                            (สำหรับเจ้าหน้าที่เป็นผู้กรอก)
-
-                        </td>
-                </table>
-
-            </div>
-            <div style="clear:both"></div>
-            <br />
-            <br />
-            <table style="width:100%">
+    <div style="font-family:'Taviraj';font-size:24px;width:100%">
+        <h1 style="text-align:left;font-size:24px;">
+            <strong>แบบ ข.ว.จ. ๓/๔-๓</strong>
+        </h1>
+        <br />
+        <h2 style="text-align:center;font-size:24px;">
+            <strong>คำขอย้าย เปลี่ยนแปลง หรือเพิ่มสถานที่ผลิตหรือสถานที่เก็บ</strong><br />
+            <strong>วัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong>
+        </h2>
+        <br />
+        <div class="title1">
+            @*process =11110 *@
+            <table style="font-size:20px;margin:auto;margin-top:6%">
                 <tr>
-                    <td style="width:70%"></td>
-                    <td style="width:5%;text-align:right">เขียนที่</td>
-                    <td style="width:25%">
-                        <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.WRITE_AT" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <td>
+                        <strong>ใบอนุญาตนำเข้าวัตถุออกฤทธิ์</strong>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" ng-model="LIST_LCN.LCN_TYPE_NCT" value="1" /> <strong>ในประเภท ๓</strong>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" ng-model="LIST_LCN.LCN_TYPE_NCT" value="2" /> <strong>ในประเภท ๔</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">
+                        <strong>เลขที่</strong>
+                    </td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="3">
+                        <label>{{LCN_LIST.RCVNO_DISPLAY}}</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">
+                        <strong>ณ สถานที่ ชื่อ</strong>
+                    </td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="2">
+                        <label>{{LIST_LCN.thanameplace}}</label>
                     </td>
                 </tr>
             </table>
+        </div>
+        <div class="title2">
+            <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px">
+                <tr>
+                    <td style="text-align:left;width:20%">
+                        เลขรับที่
+                    </td>
+
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="3">
+                        <label>{{LCN_LIST.RCVNO_DISPLAY}}</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">
+                        วันที่
+                    </td>
+
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="3">
+                        <label>{{LCN_LIST.RCV_DATE_DISPLAY}}</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:center" colspan="2">
+                        (สำหรับเจ้าหน้าที่เป็นผู้กรอก)
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="clear:both"></div>
+        <br />
+        <br />
+        <table style="width:100%">
+            <tr>
+                <td style="width:70%"></td>
+                <td style="width:5%;text-align:right">เขียนที่</td>
+                <td style="width:25%">
+                    <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.WRITE_AT" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                </td>
+            </tr>
+        </table>
             <table style="width:100%">
                 <tr>
                     <td style="width:70%"></td>
@@ -541,33 +540,32 @@
                 </td>
             </tr>
         </table>*@
-            <br />
-
-            <table style="width:85%;font-size:20px">
-                <tr>
-                    <td style="text-align:right">
-                        (ลายมือชื่อ)
-                    </td>
-                    <td style="text-align:center;width:40%;border-bottom:dotted;border-bottom-width:thin;"></td>
-                    <td>
-                        ผู้ขอรับใบอนุญาต/ผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการ
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align:right">
-                        (
-                    </td>
-                    <td style="text-align:center;border-bottom:dotted;border-bottom-width:thin;">
-                        {{LIST_LCN.BSN_THAIFULLNAME}}
-                    </td>
-                    <td style="text-align:left">
-                        )
-                    </td>
-                </tr>
+        <br />
+        <table style="width:85%;font-size:20px">
+            <tr>
+                <td style="text-align:right">
+                    (ลายมือชื่อ)
+                </td>
+                <td style="text-align:center;width:40%;border-bottom:dotted;border-bottom-width:thin;"></td>
+                <td>
+                    ผู้ขอรับใบอนุญาต/ผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการ
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right">
+                    (
+                </td>
+                <td style="text-align:center;border-bottom:dotted;border-bottom-width:thin;">
+                    {{LIST_LCN.BSN_THAIFULLNAME}}
+                </td>
+                <td style="text-align:left">
+                    )
+                </td>
+            </tr>
 
             </table>
-            <br />
-            <br />
+        <br />
+        <br />
 
             <div style="font-size:20px"><strong>หมายเหตุ :</strong> (๑) ให้ยื่นคำขอ ๑ ฉบับต่อ ๑ ใบอนุญาตเท่านั้น</div>
             <div style="font-size:20px;margin-left:6.3%">(๒) ให้ขีดเลือกข้อความในช่อง ☐ ให้ตรงตามที่ประสงค์จะดำเนินการ</div>
@@ -607,12 +605,10 @@
                     </tr>
                 </table>
             </div>*@
-            <br />
-
-            <div style="text-align:center">
-                <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
-                <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_EDIT()" value="บันทึก" />
-            </div>
+        <br />
+        <div style="text-align:center">
+            <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+            <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_EDIT()" value="บันทึก" />
         </div>
     </div>
 </div>

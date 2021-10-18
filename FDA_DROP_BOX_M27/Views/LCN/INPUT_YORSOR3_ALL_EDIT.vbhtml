@@ -17,18 +17,20 @@
                     <td style="text-align:right;width:90%">
                         เขียนที่
                     </td>
-                    <td style="width:40%;border-bottom:dotted;border-bottom-width:thin;">
-
-                        {{LIST_LCN.DALCN_EDIT_RREQUEST.WRITE_AT}}
+                    <td style="width:40%">
+                        <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.WRITE_AT" style="font-family:'Taviraj';" type="text" />
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align:right;width:100px">
                         วันที่
                     </td>
-                    <td style="border-bottom:dotted;border-bottom-width:thin;">
+                    <td>
 
-                        {{LIST_LCN.DALCN_EDIT_RREQUEST.WRITE_DATE}}
+                        <md-datepicker ng-model="LIST_LCN.DALCN_EDIT_REQUEST.WRITE_DATE" md-placeholder="Enter date"
+                                       input-aria-describedby="datepicker-description"
+                                       input-aria-labelledby="datepicker-header ">
+                        </md-datepicker>
                     </td>
                 </tr>
 
@@ -151,29 +153,29 @@
                 </tr>
             </table>
             @*<br />
-            <div class="col-sm-12">
-                <div class="row">
-                    <div class="col-sm-3" style="text-align:center">
-                        รายละเอืยด :
-                    </div>
-                    <div class="col-sm-9">
-                        {{REMARK}}
-                    </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-3" style="text-align:center">
+                    รายละเอืยด :
                 </div>
-                <br />
-                <table class="table" style="width:100%">
-                    <tr>
-                        <td>ชื่อไฟล์</td>
-                        <td></td>
-                    </tr>
-                    <tr ng-repeat="datas in LIST_GMP.DALCN_EDIT_REQUEST" style="background-color:#FDFCE3">
-                        <td>{{datas.FILENAME}}</td>
-                        <td>
-                            <a ng-show="PROCESS.ID == '11109'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                        </td>
-                    </tr>
-                </table>
-            </div>*@
+                <div class="col-sm-9">
+                    {{REMARK}}
+                </div>
+            </div>
+            <br />
+            <table class="table" style="width:100%">
+                <tr>
+                    <td>ชื่อไฟล์</td>
+                    <td></td>
+                </tr>
+                <tr ng-repeat="datas in LIST_GMP.DALCN_EDIT_REQUEST" style="background-color:#FDFCE3">
+                    <td>{{datas.FILENAME}}</td>
+                    <td>
+                        <a ng-show="PROCESS.ID == '11109'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                    </td>
+                </tr>
+            </table>
+        </div>*@
         </div>
     </div>
 </div>

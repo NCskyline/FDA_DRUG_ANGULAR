@@ -9,7 +9,6 @@
 </script>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
-    <div ng-show="LIST_LCN.PROCESS == '116'">
     <div style="font-family:'Taviraj';font-size:24px;width:100%">
         <div>
             <p style="text-align: left;"><b>แบบ ย.ส. ๓-๑</b></p>
@@ -432,6 +431,5 @@
             </table>
 
         </div>
-    </div>
     </div>
 </div>
