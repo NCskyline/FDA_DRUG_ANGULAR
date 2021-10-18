@@ -33,5 +33,9 @@ Namespace Controllers
         Function FRM_STAFF_CER_REMARK() As ActionResult
             Return View()
         End Function
+
+        Function FRM_DH_STAFF_REMARK() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace

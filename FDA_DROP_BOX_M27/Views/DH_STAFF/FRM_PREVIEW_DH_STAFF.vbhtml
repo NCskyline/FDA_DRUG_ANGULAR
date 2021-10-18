@@ -590,7 +590,7 @@ End Code
                         </tr>
                         <tr>
                             <td>
-                                <select class="form-control">
+                                <select class="form-control" ng-model="STATUS_ID">
                                     <option>อนุมัติ</option>
                                     <option>ไม่อนุมัติ</option>
                                 </select>
@@ -600,7 +600,7 @@ End Code
 
                     <br />
                     <div align="center">
-                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_DH_CONFIRM()" value="บันทึก" />
+                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_DH_CONFIRM(STATUS_ID)" value="บันทึก" />
                     </div>
                     <br />
                     <div align="center">

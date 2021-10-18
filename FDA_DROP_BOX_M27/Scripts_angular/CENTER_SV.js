@@ -1616,7 +1616,24 @@
         });
         return response;
     };
-    
+
+    this.UPDATE_STATUS_DH_STAFF = function (STATUS_ID, IDA, CITIZEN_ID, PVCODE) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/UPDATE_STATUS_DH_STAFF"), //ไปดูที่ไฟล์ DATA_CENTERController.vb
+            dataType: "json",
+            data: {
+                STATUS_ID: STATUS_ID,
+                IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID,
+                PVCODE: PVCODE
+            }
+        });
+        return response;
+    };
+
+
+
     this.UPDATE_STATUS_DH = function (IDA, CITIZEN_ID) {
         var response = $http({
             method: "post",

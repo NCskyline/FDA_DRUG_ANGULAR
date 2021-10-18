@@ -196,12 +196,27 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
     };
 
     $scope.BTN_SAVE_REMARK_CERT = function () {
-        var APP_DATA = CENTER_SV.SAVE_REMARK_CERT(LIST_GMP, sessionStorage.IDA, sessionStorage.CITIZEN_ID);
-        APP_DATA.then(function (datas) {
-            var result = datas.data;
-            success_data(result);
+        Swal.fire({
+            title: 'คุณต้องการส่งใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนยกเลิกคำขอ!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการยกเลิกคำขอ',
+            cancelButtonText: 'ไม่ใช่'
+        }).then((result) => {
+            if (result.value) {
+                var APP_DATA = CENTER_SV.SAVE_REMARK_CERT(LIST_GMP, sessionStorage.IDA, sessionStorage.CITIZEN_ID);
+                APP_DATA.then(function (datas) {
+                    var result = datas.data;
+                    success_data(result);
 
+                });
+            }
         });
+
+
     };
 
 
@@ -229,5 +244,33 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
             }
         });
     };
+    $scope.BTN_DH_CONFIRM = function (STATUS_ID) {
+        Swal.fire({
+            title: 'คุณต้องการส่งใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนอนุมัติ!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการส่งข้อมูล',
+            cancelButtonText: 'ยกเลิก'
+        }).then((result) => {
+            if (result.value) {
+                if (STATUS_ID != '7') {
+                    var APP_DATA = CENTER_SV.UPDATE_STATUS_DH_STAFF(STATUS_ID,sessionStorage.IDA, sessionStorage.CITIZEN_ID ,sessionStorage.PVCODE);
+                    APP_DATA.then(function (datas) {
+                        var result = datas.data;
+                        success_data(result);
+                    });
+                } else  {
+                    REDIRECT('/DH_STAFF/FRM_DH_STAFF_REMARK');
+                }
+            }
+        });
+    };
+
+
+    //
+
 
 });

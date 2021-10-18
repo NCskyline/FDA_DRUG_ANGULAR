@@ -3255,6 +3255,108 @@ Namespace Controllers
 
             Return Json(result, JsonRequestBehavior.AllowGet)
         End Function
+        Function UPDATE_STATUS_DH_STAFF(ByVal STATUS_ID As String, ByVal IDA As Integer, ByVal CITIZEN_ID As String, ByVal PVCODE As String) As JsonResult
+            Dim result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim dao As New DAO_DRUG.ClsDBdh15rqt
+            dao.GetDataby_IDA(IDA)
+            Dim lcn_ida As Integer = 0
+            Try
+                lcn_ida = dao.fields.FK_IDA
+            Catch ex As Exception
+
+            End Try
+            Dim RCVNO As Integer
+
+            If STATUS_ID = 3 Then
+                Dim bao As New BAO_GENNO.GenNumber
+                RCVNO = bao.GEN_NO_04(con_year(Date.Now.Year()), PVCODE, dao.fields.PROCESS_ID, dao.fields.lcnno, "", 0, IDA, "")
+                dao.fields.rcvno = RCVNO
+                dao.fields.RCVNO_DISPLAY = bao.FORMAT_NUMBER_MINI(con_year(Date.Now.Year()), RCVNO)
+                dao.fields.rcvdate = Date.Now
+                dao.fields.STATUS_ID = STATUS_ID
+                dao.fields.RCVDATE_DISPLAY = Date.Now.ToShortDateString()
+
+                dao.update()
+                AddLogStatus(3, dao.fields.PROCESS_ID, CITIZEN_ID, IDA)
+
+                'Dim ws_118 As New WS_AUTHENTICATION.Authentication
+                'Dim ws_66 As New Authentication_66.Authentication
+                'Dim ws_104 As New AUTHENTICATION_104.Authentication
+                'Try
+                '    ws_118.Timeout = 10000
+                '    ws_118.AUTHEN_LOG_DATA(_CLS.TOKEN, _CLS.CITIZEN_ID, _CLS.SYSTEM_ID, _CLS.GROUPS, _CLS.ID_MENU, "DRUG", 0, HttpContext.Current.Request.Url.AbsoluteUri, "พิจารณาคำขอเภสัชเคมีภัณฑ์", _ProcessID)
+                'Catch ex As Exception
+                '    Try
+                '        ws_66.Timeout = 10000
+                '        ws_66.AUTHEN_LOG_DATA(_CLS.TOKEN, _CLS.CITIZEN_ID, _CLS.SYSTEM_ID, _CLS.GROUPS, _CLS.ID_MENU, "DRUG", 0, HttpContext.Current.Request.Url.AbsoluteUri, "พิจารณาคำขอเภสัชเคมีภัณฑ์", _ProcessID)
+
+                '    Catch ex2 As Exception
+                '        Try
+                '            ws_104.Timeout = 10000
+                '            ws_104.AUTHEN_LOG_DATA(_CLS.TOKEN, _CLS.CITIZEN_ID, _CLS.SYSTEM_ID, _CLS.GROUPS, _CLS.ID_MENU, "DRUG", 0, HttpContext.Current.Request.Url.AbsoluteUri, "พิจารณาคำขอเภสัชเคมีภัณฑ์", _ProcessID)
+
+                '        Catch ex3 As Exception
+                '            System.Web.UI.ScriptManager.RegisterStartupScript(Page, GetType(Page), "Codeblock", "alert('เกิดข้อผิดพลาดการเชื่อมต่อ');window.location.href = 'http://privus.fda.moph.go.th';", True)
+                '        End Try
+                '    End Try
+                'End Try
+
+                result = "ดำเนินการรับคำขอเรียบร้อยแล้ว เลขรับ คือ " & dao.fields.rcvno
+
+                'ElseIf STATUS_ID = 7 Then
+                '    Response.Redirect("FRM_DH_STAFF_REMARK.aspx?IDA=" & _IDA & "&TR_ID=" & _TR_ID & "&process=" & _ProcessID)
+
+            ElseIf STATUS_ID = 10 Then
+                Dim dao_lcn As New DAO_DRUG.ClsDBdalcn
+                dao_lcn.GetDataby_IDA(lcn_ida)
+                Try
+                    dao.fields.lcntpcd = dao_lcn.fields.lcntpcd
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.pvnabbr = dao_lcn.fields.pvnabbr
+                Catch ex As Exception
+
+                End Try
+                Try
+                    dao.fields.lcnsid = dao_lcn.fields.lcnsid
+                Catch ex As Exception
+
+                End Try
+
+                dao.fields.STATUS_ID = STATUS_ID
+                dao.update()
+
+
+                'Dim ws_118 As New WS_AUTHENTICATION.Authentication
+                'Dim ws_66 As New Authentication_66.Authentication
+                'Dim ws_104 As New AUTHENTICATION_104.Authentication
+                'Try
+                '    ws_118.Timeout = 10000
+                '    ws_118.AUTHEN_LOG_DATA(_CLS.TOKEN, _CLS.CITIZEN_ID, _CLS.SYSTEM_ID, _CLS.GROUPS, _CLS.ID_MENU, "DRUG", 0, HttpContext.Current.Request.Url.AbsoluteUri, "พิจารณาคำขอเภสัชเคมีภัณฑ์", _ProcessID)
+                'Catch ex As Exception
+                '    Try
+                '        ws_66.Timeout = 10000
+                '        ws_66.AUTHEN_LOG_DATA(_CLS.TOKEN, _CLS.CITIZEN_ID, _CLS.SYSTEM_ID, _CLS.GROUPS, _CLS.ID_MENU, "DRUG", 0, HttpContext.Current.Request.Url.AbsoluteUri, "พิจารณาคำขอเภสัชเคมีภัณฑ์", _ProcessID)
+
+                '    Catch ex2 As Exception
+                '        Try
+                '            ws_104.Timeout = 10000
+                '            ws_104.AUTHEN_LOG_DATA(_CLS.TOKEN, _CLS.CITIZEN_ID, _CLS.SYSTEM_ID, _CLS.GROUPS, _CLS.ID_MENU, "DRUG", 0, HttpContext.Current.Request.Url.AbsoluteUri, "พิจารณาคำขอเภสัชเคมีภัณฑ์", _ProcessID)
+
+                '        Catch ex3 As Exception
+                '            System.Web.UI.ScriptManager.RegisterStartupScript(Page, GetType(Page), "Codeblock", "alert('เกิดข้อผิดพลาดการเชื่อมต่อ');window.location.href = 'http://privus.fda.moph.go.th';", True)
+                '        End Try
+                '    End Try
+                'End Try
+
+                AddLogStatus(10, dao.fields.PROCESS_ID, CITIZEN_ID, IDA)
+                result = "ยืนยันการพิจารณาเรียบร้อยแล้ว"
+            End If
+            Return Json(result, JsonRequestBehavior.AllowGet)
+        End Function
         Function UPDATE_STATUS_DH(ByVal IDA As Integer, ByVal CITIZEN_ID As String) As JsonResult
             Dim result As String = ""
             Dim lcn_ida As Integer = 0
