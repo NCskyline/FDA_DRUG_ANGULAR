@@ -3136,6 +3136,23 @@ Namespace Controllers
 
             Return Json(result, JsonRequestBehavior.AllowGet)
         End Function
+        'BTN_SAVE_REMARK_CERT
+        Function SAVE_REMARK_CERT(ByVal XML_RMK As String, ByVal IDA As Integer, ByVal CITIZEN_ID As String) As JsonResult
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_DH = jss.Deserialize(XML_RMK, GetType(MODEL_LCN))
+            Dim result As String = ""
+            Dim dao As New DAO_DRUG.TB_CER
+            dao.GetDataby_IDA2(IDA)
+            dao.fields.STATUS_ID = 7
+            dao.fields.REMARK = bb.CER.REMARK
+            dao.update()
+
+            AddLogStatus(7, dao.fields.PROCESS_ID, CITIZEN_ID, IDA)
+            result = "ดำเนินการคืนคำขอเรียบร้อยแล้ว"
+
+            Return Json(result, JsonRequestBehavior.AllowGet)
+        End Function
+
         Function SAVE_LCN_PAYNOTE(ByVal XML_PAY As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal PVCODE As String) As JsonResult
             Dim jss As New JavaScriptSerializer
             Dim bb As MODEL_LCN = jss.Deserialize(XML_PAY, GetType(MODEL_LCN))
@@ -3207,7 +3224,37 @@ Namespace Controllers
             End If
             Return Json(result, JsonRequestBehavior.AllowGet)
         End Function
+        Function APPROVE_CERT_STAFF(ByVal IDA As Integer, ByVal CITIZEN_ID As String) As JsonResult
+            Dim result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bao As New BAO_GENNO.GenNumber 'test
+            Dim dao As New DAO_DRUG.TB_CER
+            dao.GetDataby_IDA2(IDA)
+            Dim cernumber As String = bao.GEN_CER_NO_V2(con_year(Date.Now.Year.ToString()), 10, dao.fields.CER_TYPE, "", "1", "1", IDA, "")
+            Dim rcvno As String = bao.GEN_CER_RCVNO(con_year(Date.Now.Year.ToString()), 10, dao.fields.CER_TYPE, "", "1", "2", IDA, "")
 
+            dao.fields.CER_NUMBER = cernumber
+            dao.fields.CER_DATE = Date.Now
+            dao.fields.RCVNO = rcvno
+            dao.fields.RCVDATE = Date.Now
+            dao.fields.STATUS_ID = 8
+            dao.fields.CER_FORMAT = cernumber
+            dao.update()
+
+            Try
+                'Dim ws As New AUTHEN_LOG.Authentication
+                'ws.AUTHEN_LOG_DATA(_CLS.TOKEN, _CLS.CITIZEN_ID, _CLS.SYSTEM_ID, _CLS.GROUPS, _CLS.ID_MENU, "DRUG", _TR_ID, HttpContext.Current.Request.Url.AbsoluteUri, "จนท. พิจารณาคำขอ Cert", dao_tr.fields.PROCESS_ID)
+            Catch ex As Exception
+
+            End Try
+
+            AddLogStatus(8, dao.fields.PROCESS_ID, CITIZEN_ID, IDA)
+            'alert("เลขรับ คือ " & rcvno.ToString() & " REF CER คือ " & cernumber) 'test
+
+            result = "เลขรับ คือ " & rcvno.ToString() & " REF CER คือ " & cernumber
+
+            Return Json(result, JsonRequestBehavior.AllowGet)
+        End Function
         Function UPDATE_STATUS_DH(ByVal IDA As Integer, ByVal CITIZEN_ID As String) As JsonResult
             Dim result As String = ""
             Dim lcn_ida As Integer = 0

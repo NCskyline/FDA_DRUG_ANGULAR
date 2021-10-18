@@ -782,9 +782,9 @@ End Code
                         </tr>
                         <tr>
                             <td>
-                                <select class="form-control" >
-                                    <option>อนุมัติ</option>
-                                    <option>ไม่อนุมัติ</option>
+                                <select class="form-control" ng-model="STATUS_ID" >
+                                    <option value="8">อนุมัติ</option>
+                                    <option value="7">ไม่อนุมัติ</option>
                                 </select>
                             </td>  
                         </tr>
@@ -792,7 +792,7 @@ End Code
 
                     <br />
                     <div align="center">
-                        <input type="button" style="width:80%" class="btn btn-lg " ng-click="BTN_CERT_CONFIRM()" value="บันทึก" />
+                        <input type="button" style="width:80%" class="btn btn-lg " ng-click="BTN_CERT_CONFIRM(STATUS_ID)" value="บันทึก" />
                     </div>
                     <br />
                     <br />

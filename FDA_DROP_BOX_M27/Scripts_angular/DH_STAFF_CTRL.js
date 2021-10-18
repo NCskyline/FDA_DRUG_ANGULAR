@@ -190,15 +190,36 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
     $scope.BTN_BACK = function () {
         REDIRECT('/AUTHEN/FRM_STAFF_MAIN');
     };
+    
+    $scope.BTN_BACK_DH = function () {
+        REDIRECT('/DH_STAFF/FRM_PREVIEW_CERT_STAFF');
+    };
 
-    $scope.BTN_CERT_CONFIRM = function () {
-        Swal.fire({
-            title: 'SUCCESS',
-            text: '',
-            icon: 'ดฟสหำ',
-            confirmButtonColor: '#3085d6',
-            confirmButtonText: 'OK'
+    $scope.BTN_SAVE_REMARK_CERT = function () {
+        var APP_DATA = CENTER_SV.SAVE_REMARK_CERT(LIST_GMP, sessionStorage.IDA, sessionStorage.CITIZEN_ID);
+        APP_DATA.then(function (datas) {
+            var result = datas.data;
+            success_data(result);
+
         });
+    };
+
+
+    $scope.BTN_CERT_CONFIRM = function (STATUS_ID) {
+        if (STATUS_ID == '8') {
+            var APP_DATA = CENTER_SV.APPROVE_CERT_STAFF(sessionStorage.IDA, sessionStorage.CITIZEN_ID);
+            APP_DATA.then(function (datas) {
+                var result = datas.data;
+                success_data(result);
+
+            });
+        } else if (STATUS_ID == '7') {
+            REDIRECT('/DH_STAFF/FRM_STAFF_CER_REMARK');
+        }
+
+
+        
+
     };
 
 

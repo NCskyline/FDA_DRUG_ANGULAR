@@ -15,6 +15,6 @@ End Code
 
         <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_REMARK_CERT()" value="บันทึกยกเลิก" />
 
-        <input type="button" class="btn btn-lg " ng-click="" value="ย้อนกลับ" />
+        <input type="button" class="btn btn-lg " ng-click="BTN_BACK_DH()" value="ย้อนกลับ" />
     </div>
 </div>

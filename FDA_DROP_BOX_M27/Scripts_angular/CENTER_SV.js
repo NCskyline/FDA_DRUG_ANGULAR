@@ -45,6 +45,35 @@
         });
         return response;
     };
+    
+    this.SAVE_REMARK_CERT = function (XML_RMK, IDA, CITIZEN_ID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SAVE_REMARK_CERT"),
+            dataType: "json",
+            data: {
+                XML_RMK: JSON.stringify(XML_RMK),
+                IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID
+
+            }
+        });
+        return response;
+    };
+    
+    this.APPROVE_CERT_STAFF = function (IDA, CITIZEN_ID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/APPROVE_CERT_STAFF"),
+            dataType: "json",
+            data: {
+                IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID
+
+            }
+        });
+        return response;
+    };
 
     this.GET_FULLDATA_LCN_EDIT = function (MODEL) {
         var response = $http({
