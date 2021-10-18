@@ -206,23 +206,28 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
 
     $scope.BTN_CERT_CONFIRM = function (STATUS_ID) {
-        if (STATUS_ID == '8') {
-            var APP_DATA = CENTER_SV.APPROVE_CERT_STAFF(sessionStorage.IDA, sessionStorage.CITIZEN_ID);
-            APP_DATA.then(function (datas) {
-                var result = datas.data;
-                success_data(result);
-
-            });
-        } else if (STATUS_ID == '7') {
-            REDIRECT('/DH_STAFF/FRM_STAFF_CER_REMARK');
-        }
-
-
-        
-
+        Swal.fire({
+            title: 'คุณต้องการส่งใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนอนุมัติ!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการอนุมัติ',
+            cancelButtonText: 'ยกเลิก'
+        }).then((result) => {
+            if (result.value) {
+                if (STATUS_ID == '8') {
+                    var APP_DATA = CENTER_SV.APPROVE_CERT_STAFF(sessionStorage.IDA, sessionStorage.CITIZEN_ID);
+                    APP_DATA.then(function (datas) {
+                        var result = datas.data;
+                        success_data(result);
+                    });
+                } else if (STATUS_ID == '7') {
+                    REDIRECT('/DH_STAFF/FRM_STAFF_CER_REMARK');
+                }
+            }
+        });
     };
-
-
-
 
 });
