@@ -32,7 +32,6 @@
 </script>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
-    <div ng-show="LIST_LCN.PROCESS == '105'">
         <div style="font-family:'Taviraj';font-size:24px;">
             <h1 style="text-align:right;font-size:24px;">
                 <strong>เเบบ</strong>
@@ -288,32 +287,6 @@
                 </tr>
             </table>
             <br />
-            @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
-            @*<div class="row">
-            <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
-                    <table width="100%" style="font-family:'Taviraj'">
-                        <thead>
-                            <tr>
-                                <td>เภสัชกรชั้น</td>
-                                <td>ชื่อ-นามสกุล</td>
-                                <td>เลขบัตรประจำตัวประชาชน</td>
-                                <td>ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่</td>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="data in DATA_PHR_SHOW">
-                                <td>{{data.PHR_LEVEL}}</td>
-                                <td>{{data.PHR_NAME}}</td>
-                                <td>{{data.PHR_CTZNO}}</td>
-                                <td>{{data.PHR_TEXT_NUM}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>*@
             <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />
             <div>
                 <table class="table" width="100%">
@@ -418,27 +391,6 @@
             </table>
             <br />
             <br />
-            @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
-            @*<div class="row">
-            <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
-                    <table width="100%" style="font-family:'Taviraj'">
-                        <thead>
-                            <tr>
-                                <td>ชื่อสถานที่เก็บ</td>
-                                <td>อยู่เลขที่</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="data in DATA_KEEP_SHOW">
-                                <td>{{datas.thanameplace}}</td>
-                                <td>{{datas.fulladdr}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>*@
             <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />
             <div>
                 <table class="table" style="width:100%;">
@@ -506,35 +458,10 @@
                     </div>
                 </div>
             </div>
-            @*<br />
-            <div class="col-sm-12">
-                <div class="row">
-                    <div class="col-sm-3" style="text-align:center">
-                        รายละเอืยด :
-                    </div>
-                    <div class="col-sm-9">
-                        {{REMARK}}
-                    </div>
-                </div>
-                <br />
-                <table class="table" style="width:100%">
-                    <tr>
-                        <td>ชื่อไฟล์</td>
-                        <td></td>
-                    </tr>
-                    <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
-                        <td>{{datas.FILENAME}}</td>
-                        <td>
-                            <a ng-show="PROCESS == '105'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                        </td>
-                    </tr>
-                </table>
-            </div>*@
             <br />
             <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
                 <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
                 <input type="button" class="btn btn-lg " ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
             </div>
         </div>
-    </div>
 </div>
