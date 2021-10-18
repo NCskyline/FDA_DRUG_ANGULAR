@@ -792,11 +792,12 @@ End Code
 
                     <br />
                     <div align="center">
-                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_CERT_CONFIRM()" value="บันทึก" />
+                        <input type="button" style="width:80%" class="btn btn-lg " ng-click="BTN_CERT_CONFIRM()" value="บันทึก" />
                     </div>
                     <br />
+                    <br />
                     <div align="center">
-                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_BACK()" value="ย้อนกลับ" />
+                        <input type="button" style="width:80%" class="btn btn-lg " ng-click="BTN_BACK()" value="ย้อนกลับ" />
                     </div>
                     <br />
                     <div>
