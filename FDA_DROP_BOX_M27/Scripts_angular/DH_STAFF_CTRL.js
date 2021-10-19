@@ -193,8 +193,12 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
         getdataDH.then(function (datas) {
 
             $scope.LIST_DH = datas.data;
+            if ($scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE != 'undefined' && $scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE != null) {
             $scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE)));
             $scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE)));
+
+            }
+           
 
         }, function () { });
 
