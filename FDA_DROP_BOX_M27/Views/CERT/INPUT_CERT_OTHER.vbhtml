@@ -162,7 +162,7 @@ End Code
     </h2>
     <table width="100%">
         <tr>
-            <td style="height:25px;width:35%;">
+            <td style="height:25px;width:35%;font-family:'Taviraj';font-size:20px;">
                 10. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
             </td>
             <td>

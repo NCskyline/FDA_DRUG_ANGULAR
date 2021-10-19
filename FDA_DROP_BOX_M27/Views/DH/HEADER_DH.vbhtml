@@ -54,12 +54,12 @@ End Code*@
                 ใบอนุญาต เลขที่
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
-                <span style="padding-left:5px;" />  <label>{{LIST_DH.LCN_NO_DISPLAY}}</label>
+                <span style="padding-left:5px;" /><label>{{LIST_DH.LCN_NO_DISPLAY}}</label>
             </td>
            
         </tr>
-
     </table>
+    <br />
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
             <td width="10%">อยู่เลขที่ </td>
@@ -76,6 +76,7 @@ End Code*@
             <td>มีความประสงค์ขอ</td>
         </tr>
     </table>
+    <br />
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
             <td width="25%">
@@ -95,10 +96,12 @@ End Code*@
 
                 <form name="myForm">
                     ซึ่ง
+                    <label>&nbsp;</label>
                     <label>
                         <input type="radio" ng-model="LIST_DH.dh15rqt.CHK_TYPE_CHEMICAL" value="1">
                         เภสัชเคมีภัณฑ์เดี่ยว
                     </label>
+                    <label>&nbsp;&nbsp;</label>
                     <label>
                         <input type="radio" ng-model="LIST_DH.dh15rqt.CHK_TYPE_CHEMICAL" value="2">
                         เภสัชเคมีภัณฑ์กึ่งสำเร็จรูป
@@ -193,5 +196,3 @@ End Code*@
         <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
     </div>
 </div>
-
-
