@@ -47,20 +47,20 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         if (PROCESS_ID == '31' || PROCESS_ID == '32' || PROCESS_ID == '33' || PROCESS_ID == '34' || PROCESS_ID == '36') {
 
             if (PROCESS_ID == '31') {
-                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยมาตรฐาน GMP  (Registration of Manufacture with GMP Standard)';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยมาตรฐาน GMP (Registration of Manufacturer with GMP Standard)';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
 
             }
             else if (PROCESS_ID == '32') {
-                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยมาตรฐาน ISO';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยมาตรฐาน ISO (Registration of Manufacturer with ISO Standard)';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
             }
             else if (PROCESS_ID == '33') {
-                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยมาตรฐาน HACCP';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยมาตรฐาน HACCP (Registration of Manufacturer with HACCP Standard)';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
             }
             else if (PROCESS_ID == '34') {
-                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยเอกสารหลักฐานการขายไปยังประเทศที่มีระบบคุณภาพที่ อย. ยอมรับ';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยเอกสารหลักฐานการขายไปยังประเทศที่มีระบบคุณภาพที่ อย. ยอมรับ (Registration of Manufacturer with Purchase Order Document from Country with FDA equivalent Quality Control System)';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
             }
             else if (PROCESS_ID == '36') {
@@ -81,15 +81,15 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         else if (PROCESS_ID == '14' || PROCESS_ID == '15' || PROCESS_ID == '16' || PROCESS_ID == '17') {
 
             if (PROCESS_ID == '14') {
-                $scope.HEADER = '( เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา )';
+                $scope.HEADER = '( ที่เป็นสารออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ (Active Substance in Locally Manufactured Drug Products) )';
                 $scope.SUB_PATH = SET_URL_SV('/DH/FRM_MAIN_DH');
             }
             else if (PROCESS_ID == '15') {
-                $scope.HEADER = '( เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา )';
+                $scope.HEADER = '( ที่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ (Active Substance not in Locally Manufactured Drug Products) )';
                 $scope.SUB_PATH = SET_URL_SV('/DH/FRM_MAIN_DH');
             }
             else if (PROCESS_ID == '16') {
-                $scope.HEADER = '( ไม่เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา )';
+                $scope.HEADER = '( ที่เป็นสารไม่ออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ (Excipient in Locally Manufactured Drug Products) )';
                 $scope.SUB_PATH = SET_URL_SV('/DH/FRM_MAIN_DH');
             }
             else if (PROCESS_ID == '17') {
