@@ -60,7 +60,7 @@
 
     Public lcnno As String
     Public rcvno As String
-    Public rcvdate As Date
+    Public rcvdate As DateTime
     Public thanameplace As String
     Public nameOperator As String
     Public Certificate_Number As String
@@ -68,8 +68,8 @@
     Public Address As String
     Public Province As String
     Public Country As String
-    Public MFD_DATE As Date
-    Public EXP_DATE As Date
+    Public MFD_DATE As DateTime
+    Public EXP_DATE As DateTime
     Public NAME As String
     Public LCN_TYPE As Integer
     Public LCN_NO_DISPLAY As String

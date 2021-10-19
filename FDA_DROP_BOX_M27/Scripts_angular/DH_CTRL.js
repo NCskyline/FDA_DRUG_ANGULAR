@@ -503,6 +503,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
 
     $scope.BTN_SAVE_DH = function () {
+        
         var Getdata = CENTER_SV.INSERT_DH($scope.LIST_DH, $scope.PROCESS_ID);
         Getdata.then(function (datas) {
             if (datas.data.Result == "success") {

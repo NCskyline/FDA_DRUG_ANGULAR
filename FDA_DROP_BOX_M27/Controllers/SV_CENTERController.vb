@@ -3656,6 +3656,7 @@ Namespace Controllers
                 Dim dao As New DAO_DRUG.ClsDBdh15rqt
 
                 dao.fields = bb.dh15rqt
+                dao.fields.LCN_IDA = bb.session.LCN_IDA
                 dao.fields.TR_ID = tr_id
                 dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
                 If _ProcessID = 14 Then
