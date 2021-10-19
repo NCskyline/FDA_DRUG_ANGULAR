@@ -15,6 +15,17 @@ Public Class BAO
         Return dt
     End Function
     '
+
+    Public Function SP_MAS_STATUS_STAFF_BY_GROUP_DDL(ByVal STAT_GROUP As String, ByVal GROUP_DLL As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim dt As New DataTable
+        Dim sql As String = "exec SP_MAS_STATUS_STAFF_BY_GROUP_DDL @stat_group=" & STAT_GROUP & " , @group=" & GROUP_DLL
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_STATUS_SELECT_DH_STAFF"
+        Return dt
+    End Function
+
+
     Public Function SP_STAFF_OFFER_DDL_BY_PVNCD(ByVal PVCODE As String) As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_STAFF_OFFER_DDL_BY_PVNCD @pvncd =" & PVCODE

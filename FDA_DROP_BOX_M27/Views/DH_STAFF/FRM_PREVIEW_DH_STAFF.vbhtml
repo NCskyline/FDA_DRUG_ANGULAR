@@ -590,9 +590,8 @@ End Code
                         </tr>
                         <tr>
                             <td>
-                                <select class="form-control" ng-model="STATUS_ID">
-                                    <option>อนุมัติ</option>
-                                    <option>ไม่อนุมัติ</option>
+                                <select style="font-family:'Taviraj';font-size:20px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="STATUS_ID">
+                                    <option ng-repeat="x in STAT_LIST" value="{{x.STATUS_ID}}">{{x.STATUS_NAME}}</option>
                                 </select>
                             </td>
                         </tr>

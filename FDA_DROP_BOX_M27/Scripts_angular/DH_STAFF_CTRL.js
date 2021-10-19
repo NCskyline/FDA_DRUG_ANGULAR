@@ -131,7 +131,7 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
         //    $scope.fax = datas.data.FAX;
         //}, function () { });
 
-        var Set_PREVIEW = CENTER_SV.GET_PREVIEW_CERT(IDA);
+        var Set_PREVIEW = CENTER_SV.GET_PREVIEW_CERT(sessionStorage.IDA);
         Set_PREVIEW.then(function (datas) {
 
             $scope.LIST_GMP = datas.data;
@@ -150,6 +150,12 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
             }, function () { });
 
         }, function () { });
+
+
+
+
+
+
     };
 
     $scope.PREVIEW_DH = function () {
@@ -168,7 +174,7 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
             $scope.HEADER_PROCESS = 'ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ';
         }
 
-        var getdata = CENTER_SV.GET_INFORMARION_DH(LCN_IDA);
+        var getdata = CENTER_SV.GET_INFORMARION_DH(sessionStorage.LCN_IDA);
         getdata.then(function (datas) {
 
             $scope.LIST_LCN = datas.data;
@@ -185,6 +191,14 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
             $scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE)));
 
         }, function () { });
+
+        var data_stat = CENTER_SV.SP_STATUS_SELECT_DH_STAFF(sessionStorage.IDA , 22);
+        data_stat.then(function (datas) {
+            $scope.STAT_LIST = datas.data;
+
+        }, function () { });
+
+
     };
 
     $scope.BTN_BACK = function () {
