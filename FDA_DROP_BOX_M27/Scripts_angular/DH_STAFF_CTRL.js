@@ -160,7 +160,7 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     $scope.PREVIEW_DH = function () {
 
-        $scope.PROCESS_ID = sessionStorage.DH_PROCESS_ID;
+        $scope.PROCESS_ID = sessionStorage.PROCESS_ID;
         if ($scope.PROCESS_ID == '14') {
             $scope.HEADER_PROCESS = 'เป็นสารออกฤทธิ์ตามทะเบียนตำรับยาผลิตในประเทศ';
         }
@@ -170,7 +170,7 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
         else if ($scope.PROCESS_ID == '16') {
             $scope.HEADER_PROCESS = 'ไม่เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา';
         }
-        else if (PROCESS_ID == '17') {
+        else if ($scope.PROCESS_ID == '17') {
             $scope.HEADER_PROCESS = 'ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ';
         }
 
