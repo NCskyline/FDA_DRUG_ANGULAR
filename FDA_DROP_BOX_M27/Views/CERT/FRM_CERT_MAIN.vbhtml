@@ -33,14 +33,22 @@ End Code
                     <table style="margin-top:10px;width:100%;" class="table table-condensed">
                         <thead>
                             <tr>
-                                <th>เลขอ้างอิงสถานที่ผลิต</th>
-                                <th>วันที่ยื่นคำขอ</th>
-                                <th>รหัสดำเนินการ</th>
-                                <th>ชื่อผู้ผลิต</th>
-                                <th>ประเทศ</th>
-                                <th>วันหมดอายุใบรับรอง</th>
-                                <th>สถานะ</th>
-                                <th>เหตุผลการคืนคำขอ</th>
+                                <th>เลขอ้างอิงสถานที่ผลิต <br />
+                                ThFDA-D Ref</th>
+                                <th>วันที่ยื่นคำขอ <br />
+                                Submission Date</th>
+                                <th>รหัสดำเนินการ <br />
+                                Submission No.</th>
+                                <th>ชื่อผู้ผลิต <br />
+                                Manufacturer</th>
+                                <th>ประเทศ <br />
+                                Country</th>
+                                <th>วันหมดอายุใบรับรอง <br />
+                                Valid Date of Certification</th>
+                                <th>สถานะ <br />
+                                Status</th>
+                                <th>เหตุผลการคืนคำขอ <br />
+                                Rejection Reason</th>
                                 <th></th>
                             </tr>
                         </thead>

@@ -124,7 +124,7 @@ End Code
         <tr>
             <td style="height:25px">
                 <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="2" />
-                ชื่อหน่วยงานอื่นที่ได้รับการรับรองจากหน่วยงานรัฐของประเทศที่ออกใบรับรอง (Certification Agency Accredited by Government Agency)
+                หน่วยงานอื่นที่ได้รับการรับรองจากหน่วยงานรัฐของประเทศที่ออกใบรับรอง (Certification Agency Accredited by Government Agency)
             </td>
             <td>
             </td>
@@ -143,10 +143,12 @@ End Code
                                     <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" value="1">
                                     PIC/S GMP
                                 </label>
+                                <label>&nbsp;</label>
                                 <label>
                                     <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="2">
                                     WHO GMP
                                 </label>
+                                <label>&nbsp;</label>
                                 <label>
                                     <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" value="3">
                                     National GMP
@@ -154,7 +156,7 @@ End Code
                             </form>
                         </td>
                         <td>
-                            &nbsp; ประเทศ (Country)<font color="red">*</font>
+                            &nbsp; ประเทศ (Country)<font color="red">* &nbsp;&nbsp;</font>
                         </td>
                         <td>
                             <select style="font-family:'Taviraj';font-size:20px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_GMP">
@@ -185,9 +187,4 @@ End Code
         </tr>
     </table>
     <br />
-    <div>
-        <h2 style="font-family:'Taviraj';font-size:24px;">
-            แนบไฟล์ใบรับรอง และเอกสารอื่น (Attach Files of Certificate and Other Documents)
-        </h2>
-    </div>
 </div>

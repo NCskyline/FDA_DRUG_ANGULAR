@@ -55,25 +55,25 @@
                     <ol class="listree-submenu-items">
                         <li>
                             <div class="listree-submenu-heading">สารออกฤทธิ์ (Active Substance)</div>
-                            <ol class="listree-submenu-items">
+                            <ul class="listree-submenu-items">
                                 <li>
                                     <a ng-click="DATA_CHE1('37')" style="color:cornflowerblue">สารเดี่ยว (Substance)</a>
                                 </li>
                                 <li>
                                     <a ng-click="DATA_CHE2('38')" style="color:cornflowerblue">สารผสม (Mixture)</a>
                                 </li>
-                            </ol>
+                            </ul>
                         </li>
                         <li>
                             <div class="listree-submenu-heading">สารไม่ออกฤทธิ์ (Excipient)</div>
-                            <ol class="listree-submenu-items">
+                            <ul class="listree-submenu-items">
                                 <li>
                                     <a ng-click="DATA_CHE3('66')" style="color:cornflowerblue">สารเดี่ยว (Substance)</a>
                                 </li>
                                 <li>
                                     <a ng-click="DATA_CHE4('67')" style="color:cornflowerblue">สารผสม (Mixture)</a>
                                 </li>
-                            </ol>
+                            </ul>
                         </li>
                     </ol>
                 </li>
