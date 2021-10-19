@@ -18,7 +18,7 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
     //var CITIZEN = '0105527028430'//'0105527028430';0000000000000
     var IDA = sessionStorage.IDA;
     var IDA_CHEM_RQT = 8721;
-    Full_Model()
+    Full_Model();
     Pageload_CHEM();
 
     function Pageload_CHEM() {
