@@ -232,7 +232,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
 
     $scope.SELECT_DH = function (data) {
         sessionStorage.IDA = data.IDA;
-        //sessionStorage.STAGE = 'SHOW';
+        sessionStorage.PROCESS_ID = data.PROCESS_ID;
         //sessionStorage.PREVIEW_CERT_IDA = datas.IDA;
         REDIRECT('/DH_STAFF/FRM_PREVIEW_DH_STAFF');
     };
