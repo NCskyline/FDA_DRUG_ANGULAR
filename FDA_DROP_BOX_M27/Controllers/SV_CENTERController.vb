@@ -254,6 +254,27 @@ Namespace Controllers
 
         End Function
 
+
+
+        Function SP_STATUS_SELECT_DH_STAFF(ByVal IDA As String, ByVal STAT_GROUP As String)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            Dim int_group_ddl As Integer = 0
+            Dim dao As New DAO_DRUG.ClsDBdh15rqt
+            dao.GetDataby_IDA(IDA)
+
+            If dao.fields.STATUS_ID <= 2 Then
+                int_group_ddl = 1
+            ElseIf dao.fields.STATUS_ID >= 3 Then
+                int_group_ddl = 4
+            End If
+
+            dt = bao.SP_MAS_STATUS_STAFF_BY_GROUP_DDL(STAT_GROUP, int_group_ddl)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
+
         Function SP_MAS_CHEMICAL_by_IOWANM_AND_AORI(ByVal iowanm As String, ByVal aori As String) As JsonResult
             Dim dt As New DataTable
             Dim bao As New BAO

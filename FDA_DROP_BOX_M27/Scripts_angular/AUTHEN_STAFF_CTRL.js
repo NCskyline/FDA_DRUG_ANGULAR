@@ -224,6 +224,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
 
     $scope.SELECT_CER = function (data) {
         sessionStorage.IDA = data.IDA;
+        sessionStorage.LCN_IDA = data.FK_IDA;
         //sessionStorage.STAGE = 'SHOW';
         //sessionStorage.PREVIEW_CERT_IDA = datas.IDA;
         REDIRECT('/DH_STAFF/FRM_PREVIEW_CERT_STAFF');

@@ -29,10 +29,10 @@ End Code
         </tr>
     </table>
 
-    <table>
+    <table width="30%">
         <tr>
             <td>
-                Ref Cer
+                เลขที่อ้างอิงสถานที่ผลิต (ThFDA-D Ref)
             </td>
             <td>
                 <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA" ng-change="Getdetails_REF_CER(LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA)">
@@ -45,7 +45,7 @@ End Code
     <table width="100%">
         <tr>
             <td>
-                ชื่อผู้ผลิต
+                ชื่อผู้ผลิต (Manufacturer)
             </td>
             <td width="30%" style="border-bottom:dotted;border-bottom-width:thin;">
                 <label>
@@ -53,7 +53,7 @@ End Code
                 </label>
             </td>
             <td>
-                ประเทศ
+                ประเทศ (Country)
             </td>
             <td width="20%" style="border-bottom:dotted;border-bottom-width:thin;">
                 <label>
@@ -61,15 +61,39 @@ End Code
                 </label>
             </td>
         </tr>
+    </table>
+    <table>
         <tr>
             <td>
-                ชื่อผู้แทนจำหน่ายในต่างประเทศ (ซื้อผ่าน)
+                วันเดือนปีที่ออกใบรับรอง (Issue Date)
+            </td>
+            <td style="border-bottom:dotted;border-bottom-width:thin;">
+                <label>
+                    {{LIST_REF_CERT.CER.DOCUMENT_DATE}}
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                วันเดือนปีที่หมดอายุ (Valid Until)
+            </td>
+            <td style="border-bottom:dotted;border-bottom-width:thin;">
+                <label>
+                    {{LIST_REF_CERT.CER.EXP_DOCUMENT_DATE}}
+                </label>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+                ชื่อผู้แทนจำหน่ายในต่างประเทศ (ซื้อผ่าน) (Foreign Distributor (Purchasing through))
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
             <td>
-                ประเทศ
+                ประเทศ (Country)
             </td>
             <td>
                 <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
@@ -80,32 +104,10 @@ End Code
         </tr>
     </table>
     <br />
-    <table>
-        <tr>
-            <td>
-                วันเดือนปีที่ออกใบรับรอง
-            </td>
-            <td>
-                <label>
-                    {{LIST_REF_CERT.CER.DOCUMENT_DATE}}
-                </label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                วันเดือนปีที่หมดอายุ
-            </td>
-            <td>
-                <label>
-                    {{LIST_REF_CERT.CER.EXP_DOCUMENT_DATE}}
-                </label>
-            </td>
-        </tr>
-    </table>
     <table width="100%">
         <tr>
             <td>
-                ชื่อการค้า <font color="red">*</font>
+                ชื่อการค้า (Trade Name) <font color="red">*</font>
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.TRADING_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -114,7 +116,7 @@ End Code
         </tr>
         <tr>
             <td>
-                มาตรฐาน (ตำรายา)
+                มาตรฐานตามตำรับยา (Phamacopoeia Standard of Drug Substance)
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -122,22 +124,22 @@ End Code
         </tr>
         <tr>
             <td>
-                จำนวน
+                จำนวนภาชนะบรรจุ (ต.ย. 2 ถุง) <br />
+                (Quantity (Number of Packages e.g. 2 bags))
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.unit_alpha3" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
             <td>
-                ปริมาณ
+                น้ำหนัก / ปริมาตรรวม (ต.ย. 10 กิโลกรัม โดย 10 กิโลกรัม มาจาก 2 ถุง x 5 กิโลกรัมต่อถุง) <br />
+                (Total Weight / Volume (e.g. 10 kg. 10 kg which comes from 2 bags x 5 kg/bag))
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.amount" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
     </table>
-
-    //Table เพิ่มสาร <br />
-
+    <br />
     เหตุผลในการผลิต/นำเข้าฯ
     <table>
         <tr>
@@ -171,7 +173,7 @@ End Code
                     </label> <br />
                     <label>
                         <input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH2" value="1">
-                        สำเนาใบอนุญาตผลิตในต่างประเทศ และรับรองสำเนาโดยผู้รับอนุญาตที่ขอจดแจ้งเภสัชเคมีภัณฑ์
+                        สำเนาใบอนุญาตผลิตเภสัชเคมีภัณฑ์ในต่างประเทศ และรับรองสำเนาโดยผู้รับอนุญาตที่ขอจดแจ้งเภสัชเคมีภัณฑ์
                     </label> <br />
                     <label>
                         <input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH3" value="1">
@@ -197,4 +199,5 @@ End Code
             </td>
         </tr>
     </table>
+    <div style="color:red">*ภค.1 หมายถึง การนำเข้าสาร / ครั้ง ตามจำนวนที่ระบุหรือปริมาณรวม (นำเข้าหลายครั้ง) แต่ไม่เกินปริมาณที่ขอ</div>
 </div>

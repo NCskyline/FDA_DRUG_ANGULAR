@@ -4,7 +4,7 @@
 End Code
 
     <div>
-        <div><h3 style="color:red">เภสัชเคมีภัณฑ์ > {{HEADER}}</h3></div>
+        <div><h3 style="color:red">ออกเลขจดแจ้งเภสัชเคมีภัณฑ์{{HEADER}}</h3></div>
         <div>
             <table>
                 <tr>
@@ -16,7 +16,7 @@ End Code
                     <td>{{nameOperator}}</td>
                 </tr> 
                 <tr>
-                    <td>ที่ตั้ง (Addres)</td>
+                    <td>ที่ตั้ง (Address)</td>
                     <td>{{thanameplace}}</td>
                 </tr>
             </table>
