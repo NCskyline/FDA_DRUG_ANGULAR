@@ -146,10 +146,4 @@ End Code
             </td>
         </tr>
     </table>
-    <br />
-    <div>
-        <h2 style="font-family:'Taviraj';font-size:24px;">
-            แนบไฟล์ใบรับรอง และเอกสารอื่น (Attach Files of Certificate and Other Documents)
-        </h2>
-    </div>
 </div>

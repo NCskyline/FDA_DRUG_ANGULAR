@@ -64,7 +64,17 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                5. สถานที่ผลิตได้มาตรฐาน GMP ตาม (โปรดระบุ)
+                5. วันที่ขายที่ระบุในหลักฐานการขาย (Sale Date on Purchase Order)<font color="red">*</font>
+            </td>
+            <td>
+                <md-datepicker ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.SALE_DATE" md-placeholder="Enter date"
+                               input-aria-describedby="datepicker-description"
+                               input-aria-labelledby="datepicker-header "></md-datepicker>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:25px">
+                6. มาตรฐานสถานที่ผลิตเภสัชเคมีภัณฑ์ (Standard of Drug Substance Manufacturer)
             </td>
             <td>
                 <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD">
@@ -76,26 +86,17 @@ End Code
             </td>
         </tr>
         @*<tr>
-                <td style="height:25px">
-                    Global Location Number (GLN) :
-                </td>
-                <td>
-                    <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
-                </td>
-            </tr>*@
-        <tr>
             <td style="height:25px">
-                6. วันที่ขายที่ระบุในหลักฐานการขาย<font color="red">*</font>
+                Global Location Number (GLN) :
             </td>
             <td>
-                <md-datepicker ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.SALE_DATE" md-placeholder="Enter date"
-                               input-aria-describedby="datepicker-description"
-                               input-aria-labelledby="datepicker-header "></md-datepicker>
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
-        </tr>
+        </tr>*@
+
         <tr>
             <td style="height:25px">
-                7. ชื่อผู้ซื้อ (Purchaser)<font color="red">*</font>
+                7. ชื่อผู้ผลิตยาสำเร็จรูปในต่างประเทศที่เป็นผู้ซื้อ (Foreign Drug Product Manufacturer as Purchaser)<font color="red">*</font>
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER.BUYER_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -105,7 +106,7 @@ End Code
 
         <tr>
             <td style="height:25px">
-                8. ประเทศผู้ซื้อ (Purchaser's Country)<font color="red">*</font>
+                8. ประเทศผู้ซื้อ (Country of Purchaser)<font color="red">*</font>
             </td>
             <td>
                 <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.BUYER_COUNTRY">
@@ -118,7 +119,7 @@ End Code
 
         <tr>
             <td style="height:25px">
-                9. มาตราฐานสถานที่ผลิตยาสำเร็จรูปของประเทศผู้ซื้อได้ GMP ตาม (โปรดระบุ)<font color="red">*</font>
+                9. มาตรฐาน GMP ของสถานที่ผลิตยาสำเร็จรูปของผู้ซื้อ (GMP Standard of Drug Product manufacturer as Purchaser)<font color="red">*</font>
             </td>
             <td>
                 <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.BUYER_STANDARD">
@@ -142,10 +143,4 @@ End Code
             </td>
         </tr>
     </table>
-    <br />
-    <div>
-        <h2 style="font-family:'Taviraj';font-size:24px;">
-            แนบไฟล์ใบรับรอง และเอกสารอื่น (Attach Files of Certificate and Other Documents)
-        </h2>
-    </div>
 </div>

@@ -8,8 +8,16 @@ End Code
         <div>
             <table>
                 <tr>
-                    <td>License number :</td>
+                    <td>เลขที่ใบอนุญาต (License Number)</td>
                     <td>{{LCNNO_NO}}</td>
+                </tr>
+                <tr>
+                    <td>ชื่อผู้รับอนุญาต (License Name)</td>
+                    <td>{{nameOperator}}</td>
+                </tr> 
+                <tr>
+                    <td>ที่ตั้ง (Addres)</td>
+                    <td>{{thanameplace}}</td>
                 </tr>
             </table>
             <br />
@@ -18,6 +26,7 @@ End Code
             <div style="color:red">2.เพื่อป้องกันไม่ให้เกิดปัญหาการชำระเงิน แนะนำ ใช้เครื่องพิมพ์ ชนิดเลเซอร์ในการพิมพ์ใบสั่งชำระ</div>
             <div style="color:red">3.ไม่สามารถออกใบสั่งชำระที่ออกจากระบบอื่นที่ไม่ได้ออกมาจากระบบเภสัชเคมีภัณฑ์นี้ได้</div>
             <div style="color:red">*หากพบปัญหาในการใช้งาน ขอความกรุณาแจ้งมาที่ drug-smarthelp@fda.moph.go.th ด้วยครับ</div>
+            <div style="color:red">*กรุณาตรวจสอบคำขอก่อนสร้างใบสั่งชำระ กรณีชำระเงินแล้ว ระบบไม่สามารถแก้ไขได้</div>
             <hr />
             <table style="width:100%">
                 <tr>
@@ -32,13 +41,24 @@ End Code
                         <table style="margin-top:10px;width:100%;" class="table table-condensed">
                             <thead>
                                 <tr>
-                                    <th>เลขที่รับคำขอ</th>
-                                    <th>วันที่ยื่นคำขอ</th>
-                                    <th>สถานะ</th>
-                                    <th>รหัส 15 หลัก</th>
-                                    <th>ชื่อสาร</th>
-                                    <th>รหัสการดำเนินการ</th>
-                                    <th>เหตุผลการคืนคำขอ</th>
+                                    <th>เลขที่รับคำขอ <br />
+                                    Submission Number</th>
+                                    <th>วันที่ยื่นคำขอ <br />
+                                    Submission Date</th>
+                                    <th>สถานะ <br />
+                                    Status</th>
+                                    <th>เลขจดแจ้ง <br />
+                                    DRM Number</th>
+                                    <th>วันหมดอายุเลขจดแจ้ง <br />
+                                    Valid Date of DRM No.</th>
+                                    <th>ชื่อสาร <br />
+                                    Substance</th>
+                                    <th>ชื่อผู้ผลิต <br />
+                                    Manufacturer</th>
+                                    <th>รหัสการดำเนินการ <br />
+                                    Submission No.</th>
+                                    <th>เหตุผลการคืนคำขอ <br />
+                                    Rejection Reason</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -49,7 +69,9 @@ End Code
                                     <td>{{datas.REQUEST_DATE}}</td>
                                     <td>{{datas.STATUS_NAME}}</td>
                                     <td>{{datas.phm15dgt}}</td>
+                                    <td>{{}}</td>
                                     <td>{{datas.CAS_NAME}}</td>
+                                    <td>{{}}</td>
                                     <td>{{datas.TR_ID}}</td>
                                     <td>{{datas.REMARK}}</td>
                                     <td>
