@@ -37,5 +37,9 @@ Namespace Controllers
         Function FRM_DH_STAFF_REMARK() As ActionResult
             Return View()
         End Function
+
+        Function FRM_EDIT_REQUEST() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace

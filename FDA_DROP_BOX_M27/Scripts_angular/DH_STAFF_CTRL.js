@@ -1,4 +1,6 @@
-﻿app.filter('startFrom', function () {
+﻿
+
+app.filter('startFrom', function () {
     return function (input, start) {
         if (input) {
             start = +start;
@@ -63,6 +65,10 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
         }, function () { });
 
+        var getData_LIST = CENTER_SV.SETMODEL_LIST();
+        getData_LIST.then(function (datas) {
+            $scope.DOC_LIST = datas.data;
+        }, function () { });
     }
 
     function Full_Model() {
@@ -240,10 +246,13 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
                     });
                 } else if (STATUS_ID == '7') {
                     REDIRECT('/DH_STAFF/FRM_STAFF_CER_REMARK');
+                } else if (STATUS_ID == '5') {
+                    REDIRECT('/DH_STAFF/FRM_EDIT_REQUEST');
                 }
             }
         });
     };
+
     $scope.BTN_DH_CONFIRM = function (STATUS_ID) {
         Swal.fire({
             title: 'คุณต้องการส่งใช่หรือไม่ ?',
@@ -269,8 +278,100 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
         });
     };
 
+    $scope.BTN_REQUEST = function (DES,REQUEST_DATE) {
+        Swal.fire({
+            title: 'คุณต้องการส่งใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนส่ง!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการส่งข้อมูล',
+            cancelButtonText: 'ยกเลิก'
+        }).then((result) => {
+            if (result.value) {
+                success_data('SUCCESS');
+            }
+        });
+    };
 
+    $scope.ADD_FILE_LIST = function () {
+        var obj = {
+            TR_ID: '',
+            DES: '',
+            FILENAME: '',
+            FILE_DATA: '',
+            PATH: '',
+            FLAG: '',
+            TYPE: '',
+            SIZE: 0
+        };
+        $scope.DOC_LIST.FILE_LISTs.push(obj);
+    };
+    $scope.deleteRow = function (datas, i) {
+
+        if (datas.PIORITY == 'HIGH') {
+            ERR_DATA(datas.DES + ' : เป็นเอกสารบังคับไม่สามารถลบออกได้');
+        } else if (datas.PIORITY == 'LOW') {
+            ERR_DATA(datas.DES + ' : ไม่สามารถลบออกได้');
+        } else {
+            $scope.DOC_LIST.FILE_LISTs.splice(i, 1);
+        }
+    };
     //
+    function CV_DATE(data) {
+        return new Date(parseInt(data.replace('/Date(', '').replace(')/', ''))).toLocaleDateString();
+    }
 
+    function filwill(dateString) {
+        try {
+            var dateArray = dateString.split("/");
+            dateString = dateArray[0]; //+ "/" + dateArray[0] + "/" + dateArray[2];
+        }
+        catch (err) {
+
+        }
+        return dateString;
+    }
+
+    //แปลงเวลา เข้าข้อมูล (แสดง)
+    function CHANGE_FORMATDATE(DATE_CHANGE) {
+        var dateString = DATE_CHANGE;
+        var currentTime = new Date(dateString);
+        var month = currentTime.getMonth() + 1;
+        if (month == '01') {
+            month = "ม.ค.";
+        } else if (month == '02') {
+            month = "ก.พ.";
+        } else if (month == '03') {
+            month = "มี.ค.";
+        } else if (month == '04') {
+            month = "เม.ย.";
+        } else if (month == '05') {
+            month = "พ.ค.";
+        } else if (month == '06') {
+            month = "มิ.ย.";
+        } else if (month == '07') {
+            month = "ก.ค.";
+        } else if (month == '08') {
+            month = "ส.ค.";
+        } else if (month == '09') {
+            month = "ก.ย.";
+        } else if (month == '10') {
+            month = "ต.ค.";
+        } else if (month == '11') {
+            month = "พ.ย.";
+        } else if (month == '12') {
+            month = "ธ.ค.";
+        }
+        var day = currentTime.getDate();
+        var year = currentTime.getFullYear();
+        if (year > 2500) {
+            year = year - 543;
+        } else {
+            year = year + 543;
+        }
+        return DATE_CHANGE = day + " " + month + " " + year;
+    }
 
 });
