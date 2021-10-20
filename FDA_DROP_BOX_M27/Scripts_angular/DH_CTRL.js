@@ -109,8 +109,56 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         }
     };
 
+    $scope.DH_EDIT = function () {
+        $scope.PROCESS_ID = sessionStorage.DH_PROCESS_ID;
+        if ($scope.PROCESS_ID == '14') {
+            $scope.HEADER_PROCESS = 'เป็นสารออกฤทธิ์ตามทะเบียนตำรับยาผลิตในประเทศ';
+        }
+        else if ($scope.PROCESS_ID == '15') {
+            $scope.HEADER_PROCESS = 'เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา';
+        }
+        else if ($scope.PROCESS_ID == '16') {
+            $scope.HEADER_PROCESS = 'ไม่เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา';
+        }
+        else if (PROCESS_ID == '17') {
+            $scope.HEADER_PROCESS = 'ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ';
+        }
 
+        var getdata = CENTER_SV.GET_INFORMARION_DH(LCN_IDA);
+        getdata.then(function (datas) {
+
+            $scope.LIST_LCN = datas.data;
+            $scope.LIST_LCN.session = sessionStorage;
+
+        }, function () { });
+
+        var IDA = sessionStorage.IDA;
+        var getdataDH = CENTER_SV.GET_PREVIEW_DH(IDA);
+        getdataDH.then(function (datas) {
+
+            $scope.LIST_DH = datas.data;
+            $scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE)));
+            $scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE)));
+
+        }, function () { });
+
+        var data_CNT = CENTER_SV.SP_MASTER_sysisocnt();
+        data_CNT.then(function (datas) {
+            $scope.CNT_LIST = datas.data;
+
+        }, function () { });
+
+        var data_REF_CERT = CENTER_SV.SP_MASTER_CER_PK_BY_FK_IDA(LCN_IDA);
+        data_REF_CERT.then(function (datas) {
+            $scope.REF_CERT = datas.data;
+
+        }, function () { });
+        
+    };
     
+    $scope.BTN_EDIT = function () {
+        REDIRECT('/DH/FRM_DH_EDIT_REQUEST');
+    };
 
 
     $scope.DATA_CHE1 = function (PROCESS) {
