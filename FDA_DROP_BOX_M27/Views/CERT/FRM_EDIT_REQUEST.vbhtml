@@ -24,7 +24,7 @@ End Code
                     </div>
                 </div>
                 <br />
-                @*<div class="row">
+                <div class="row">
                     <div class="col-sm-3 set-topic">
                         กำหนดส่งเอกสาร :
                     </div>
@@ -35,7 +35,7 @@ End Code
 
                         </md-datepicker>
                     </div>
-                </div>*@
+                </div>
             </div>
 
             <div class="row" style="padding-top: 30px;">

@@ -51,5 +51,14 @@ Namespace Controllers
         Function FRM_EDIT_REQUEST() As ActionResult
             Return View()
         End Function
+        '
+        Function PREVIEW_CHEM_DH() As ActionResult
+            Return View()
+        End Function
+
+        Function FRM_DH_EDIT_REQUEST() As ActionResult
+            Return View()
+        End Function
     End Class
+
 End Namespace

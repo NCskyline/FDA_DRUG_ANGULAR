@@ -136,6 +136,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         
     }
 
+
     function Full_Model() {
 
         var MODLE_GMP = CENTER_SV.SETMODEL_DH();
@@ -146,6 +147,28 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
         }, function () { });
     }
+
+    $scope.CER_EDIT = function () {
+        var Set_EDIT = CENTER_SV.GET_PREVIEW_CERT(IDA);
+        Set_EDIT.then(function (datas) {
+
+            $scope.LIST_GMP = datas.data;
+            $scope.LIST_GMP.session = sessionStorage;
+
+            var TR_ID = $scope.LIST_GMP.CER.TR_ID;
+            var PROCESS = $scope.LIST_GMP.CER.CER_TYPE;
+
+            $scope.LIST_GMP.CER.DOCUMENT_DATE = filwill_DATE(CHANGE_FORMATDATEPICKER($scope.LIST_GMP.CER.DOCUMENT_DATE));
+            $scope.LIST_GMP.CER.EXP_DOCUMENT_DATE = filwill_DATE(CHANGE_FORMATDATEPICKER($scope.LIST_GMP.CER.EXP_DOCUMENT_DATE));
+            $scope.INPUT_CHEM = SET_URL_SV('/CERT/PREVIEW_CHEMICAL');
+
+            var File = CENTER_SV.GETDATA_FILE_TR_ID_TYPE(TR_ID, PROCESS);
+            File.then(function (datas) {
+                $scope.LIST_File = datas.data;
+            }, function () { });
+
+        }, function () { });
+    };
 
     $scope.BTN_ADD_CHEM = function (datas) {
         
@@ -337,10 +360,31 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
             }, function () { });
         });
-        
-
+       
     };
 
+    $scope.BTN_SEND_REQUEST = function () {
+        Swal.fire({
+            title: 'คุณต้องการส่งใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนส่ง!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการส่งข้อมูล',
+            cancelButtonText: 'ยกเลิก'
+        }).then((result) => {
+            if (result.value) {
+                success_data('SUCCESS');
+                REDIRECT('/DH/FRM_MAIN_PAGE_PHESAJ');
+            }
+        });
+        
+    };
+
+    $scope.BTN_EDIT = function () {
+        REDIRECT('/CERT/FRM_CERT_EDIT_REQUEST');
+    };
 
     $scope.OPEN_DOC_PATH = function (PATH, FILENAME) {
         var urls = SET_URL_SV('/HOME/OPEN_DOC_PATH?PATH=' + PATH + '&FILENAME=' + FILENAME);
@@ -463,7 +507,30 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         $scope.GMP_CHEM.splice(i, 1);
     };
 
-  
+    /// ---------- แปลงวันที่ เข้า DATEPICKER -------------
+    function CV_DATEPICKER(data) {
+        return new Date(parseInt(data.replace('/Date(', '').replace(')/', ''))).toLocaleDateString('th-TH');
+    }
+
+    function filwill_DATE(dateString) {
+        try {
+            var dateArray = dateString.split("/");
+            dateString = dateArray[1] + "/" + dateArray[0] + "/" + dateArray[2];
+        }
+        catch (err) {
+
+        }
+        return dateString;
+    }
+
+    function CHANGE_FORMATDATEPICKER(DATE_CHANGE) {
+        var dateString = DATE_CHANGE.substr(6);
+        var currentTime = new Date(parseInt(dateString));
+        var month = currentTime.getMonth() + 1;
+        var day = currentTime.getDate();
+        var year = currentTime.getFullYear();
+        return DATE_CHANGE = day + "/" + month + "/" + year;
+    }
 
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });
