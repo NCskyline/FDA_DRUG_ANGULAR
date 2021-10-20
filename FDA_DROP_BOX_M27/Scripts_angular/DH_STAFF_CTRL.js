@@ -196,9 +196,15 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
             if ($scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE != 'undefined' && $scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE != null) {
             $scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE)));
             $scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE)));
+            
 
             }
-           
+
+            $scope.INPUT_CHEM_DH = SET_URL_SV('/DH/PREVIEW_CHEM_DH');
+            var File = CENTER_SV.GETDATA_FILE_TR_ID_TYPE($scope.LIST_DH.dh15rqt.TR_ID, $scope.PROCESS_ID);
+            File.then(function (datas) {
+                $scope.LIST_File = datas.data;
+            }, function () { });
 
         }, function () { });
 
@@ -286,9 +292,21 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 if (STATUS_ID != '7') {
                     var APP_DATA = CENTER_SV.UPDATE_STATUS_DH_STAFF(STATUS_ID,sessionStorage.IDA, sessionStorage.CITIZEN_ID ,sessionStorage.PVCODE);
                     APP_DATA.then(function (datas) {
+
                         var result = datas.data;
                         success_data(result);
+
+                        var data_stat = CENTER_SV.SP_STATUS_SELECT_DH_STAFF(sessionStorage.IDA, 22);
+                        data_stat.then(function (datas) {
+                            $scope.STAT_LIST = datas.data;
+
+                        }, function () { });
+
+
                     });
+
+                    
+
                 } else  {
                     REDIRECT('/DH_STAFF/FRM_DH_STAFF_REMARK');
                 }

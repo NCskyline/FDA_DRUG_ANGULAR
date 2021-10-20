@@ -33,19 +33,19 @@ End Code
                     </table>
                     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
                         <tr>
-                            <td width="30%">
+                            <td width="39%">
                                 <form name="myForm">
                                     <label>
-                                        <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="1">
+                                        <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="1" disabled>
                                         ผลิต
                                     </label>
                                     <label>
-                                        <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="2">
+                                        <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="2" disabled>
                                         นำหรือสั่ง เข้ามาในราชอาณาจักร ซึ่งยาแผนปัจจุบัน
                                     </label>
                                 </form>
                             </td>
-                            <td align="right" width="10%">
+                            <td align="right" width="20%">
                                 ใบอนุญาต เลขที่
                             </td>
                             <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -64,23 +64,23 @@ End Code
                             <td></td>
                         </tr>
                         <tr>
-                            <td>หมายเลขโทรศัพท์ </td>
+                            <td width="20%">หมายเลขโทรศัพท์ </td>
                             <td colspan="2" style="border-bottom:dotted;border-bottom-width:thin;">
                                 <label>{{LIST_LCN.TEL}}</label>
                             </td>
-                            <td>มีความประสงค์ขอ</td>
+                            <td width="20%">มีความประสงค์ขอ</td>
                         </tr>
                     </table>
                     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
                         <tr>
-                            <td width="25%">
+                            <td width="39%">
                                 <form name="myForm">
                                     <label>
-                                        <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="1">
+                                        <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="1" disabled>
                                         ผลิต
                                     </label>
                                     <label>
-                                        <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="2">
+                                        <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="2" disabled>
                                         นำหรือสั่งเข้ามาในราชอาณาจักร
                                     </label>
                                 </form>
@@ -91,11 +91,11 @@ End Code
                                 <form name="myForm">
                                     ซึ่ง
                                     <label>
-                                        <input type="radio" ng-model="LIST_LCN.dh15rqt.CHK_TYPE_CHEMICAL" value="1">
+                                        <input type="radio" ng-model="LIST_DH.dh15rqt.CHK_TYPE_CHEMICAL" value="1" disabled>
                                         เภสัชเคมีภัณฑ์เดี่ยว
                                     </label>
                                     <label>
-                                        <input type="radio" ng-model="LIST_LCN.dh15rqt.CHK_TYPE_CHEMICAL" value="2">
+                                        <input type="radio" ng-model="LIST_DH.dh15rqt.CHK_TYPE_CHEMICAL" value="2" disabled>
                                         เภสัชเคมีภัณฑ์กึ่งสำเร็จรูป
                                     </label>
                                 </form>
@@ -579,6 +579,29 @@ End Code
 
 
                 </div>
+                <br />
+                <div ng-include="INPUT_CHEM_DH">
+
+                </div>
+                <br />
+                <div>
+                    <h2 style="font-family:'Taviraj';font-size:20px;">
+                        ไฟล์แนบ
+                    </h2>
+                    <table class="table" style="width:100%">
+                        <tr>
+                            <td>ชื่อไฟล์</td>
+                            <td></td>
+                        </tr>
+                        <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                            <td>{{datas.FILENAME}}</td>
+                            <td>
+                                <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
             </div>
             <div class="part part-1-3 ic">
                 <div class="card">
@@ -590,7 +613,7 @@ End Code
                         </tr>
                         <tr>
                             <td>
-                                <select style="font-family:'Taviraj';font-size:20px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="STATUS_ID">
+                                <select style="font-family:'Taviraj';font-size:20px;" ng-model="STATUS_ID">
                                     <option ng-repeat="x in STAT_LIST" value="{{x.STATUS_ID}}">{{x.STATUS_NAME}}</option>
                                 </select>
                             </td>
