@@ -777,7 +777,7 @@ Namespace Controllers
 
                 model.rcvno = rcvno                                    ' เอาข้อมูลมาโชว์ที่  label
                 Try
-                    model.rcvdate = CDate(TbNO.fields.rcvdate).ToLongDateString()       ' เอาข้อมูล แล้วเปลี่ยนตัดค่า เวลาออก
+                    model.rcvdate = TbNO.fields.rcvdate      ' เอาข้อมูล แล้วเปลี่ยนตัดค่า เวลาออก
                 Catch ex As Exception
 
                 End Try

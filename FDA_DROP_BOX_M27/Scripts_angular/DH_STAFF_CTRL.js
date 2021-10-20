@@ -311,6 +311,7 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 success_data('SUCCESS');
             }
         });
+        REDIRECT('/AUTHEN/FRM_STAFF_MAIN');
     };
 
     $scope.ADD_FILE_LIST = function () {

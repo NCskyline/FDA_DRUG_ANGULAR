@@ -737,6 +737,8 @@
     <Content Include="Views\CERT\FRM_EDIT_REQUEST.vbhtml" />
     <Content Include="Views\DH\FRM_EDIT_REQUEST.vbhtml" />
     <Content Include="Views\DH_STAFF\FRM_EDIT_REQUEST.vbhtml" />
+    <Content Include="Views\CERT\FRM_CERT_EDIT_REQUEST.vbhtml" />
+    <Content Include="Views\DH\FRM_DH_EDIT_REQUEST.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>

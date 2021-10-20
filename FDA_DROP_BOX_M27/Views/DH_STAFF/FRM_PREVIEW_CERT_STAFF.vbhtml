@@ -138,7 +138,7 @@ End Code
                                             <form name="rdl_gmp">
 
                                                 <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="1">
-                                                PIC / S GMP
+                                                PIC/S GMP
 
                                                 <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="2">
                                                 WHO GMP

@@ -770,6 +770,7 @@ End Code
         <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
         <input type="button" class="btn btn-lg" ng-click="BTN_SEND()" value="ยื่นคำขอ" ng-disabled="LIST_GMP.CLOSE_BTN" />
         <input type="button" class="btn btn-lg" ng-click="PDF_PREVIEW()" value="PDF PREVIEW" />
+        <input type="button" class="btn btn-lg" ng-click="BTN_EDIT()" value="แก้ไขคำขอ" ng-show="LIST_GMP.CER.STATUS_ID == '5'" />
     </div>
 
 </div>
