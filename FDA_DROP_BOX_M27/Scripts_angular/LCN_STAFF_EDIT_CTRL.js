@@ -1,10 +1,12 @@
 ﻿app.controller('LCN_STAFF_EDIT_CTRL', function ($scope, CENTER_SV, $http, $location) {
-    var LCN_IDA = 3114;//sessionStorage.LCN_IDA;//sessionStorage.LCN_IDA;
-    var LCT_IDA = 69778;
-    var CITIZEN_ID ='0105522020724';
+    var LCN_IDA = sessionStorage.LCN_IDA;//sessionStorage.LCN_IDA;//sessionStorage.LCN_IDA;
+    var LCT_IDA = sessionStorage.LCT_IDA;
+    var CITIZEN_ID = sessionStorage.CITIZEN_ID_AUTHORIZE;
     var LOCATION_ADDRESS_IDA = LCT_IDA;
-    var CITIZEN_ID_AUTHORIZE = '0105522020724'; //sessionStorage.CITIZEN_ID_AUTHORIZE; //=
+    //var CITIZEN_ID_AUTHORIZE = '0105522020724';
+    var CITIZEN_ID_AUTHORIZE = sessionStorage.CITIZEN_ID_AUTHORIZE;
     var LOCATION_TYPE = QueryString("LOCATION_TYPE");
+
     //$scope.currentPage = 0;
     //$scope.paging = {
     //    total: 20,
@@ -20,7 +22,7 @@
 
         //}, function () { });  
 
-        //var data_LCN_SHOW = CENTER_SV.GET_LCN_NO_STAFF_EDIT(LCN_IDA);
+       // //var data_LCN_SHOW = CENTER_SV.GET_LCN_NO_STAFF_EDIT(LCN_IDA);
         //data_LCN_SHOW.then(function (datas) {
         //    //$scope.INFO_LIST = datas.data;
         //    sessionStorage.CITIZEN_ID_AUTHORIZE = datas.data.CITIZEN_ID_AUTHORIZE;
@@ -139,9 +141,10 @@
             $scope.INFO_LIST.dalcn.cnccscd = datas.data.dalcn.cnccscd;
 
             //$scope.INFO_LIST.dalcn.cncdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.cncdate); //filwill(CHANGE_FORMATDATE(CV_DATE($scope.INFO_LIST.dalcn.cncdate)));
-
+            $scope.INFO_LIST.dalcn.cncdate = filwill_DATE(CHANGE_FORMATDATEPICKER($scope.INFO_LIST.dalcn.cncdate));
             //$scope.INFO_LIST.dalcn.frtappdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.frtappdate);
             //$scope.INFO_LIST.dalcn.appdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.appdate);
+            $scope.INFO_LIST.dalcn.appdate = filwill_DATE(CHANGE_FORMATDATEPICKER($scope.INFO_LIST.dalcn.appdate));
             //$scope.INFO_LIST.dalcn.lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.lmdfdate);
 
             //$scope.INFO_LIST.dalcn.rcvdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.rcvdate);
@@ -160,7 +163,7 @@
             //$scope.INFO_LIST.dalcn.syslctaddr_validdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslctaddr_validdate);
             //$scope.INFO_LIST.dalcn.syslctaddr_lmdfdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.syslctaddr_lmdfdate);
             //$scope.INFO_LIST.dalcn.FIRST_APP_DATE = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.FIRST_APP_DATE);
-            //$scope.INFO_LIST.dalcn.expdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.expdate); 
+            //$scope.INFO_LIST.dalcn.expdate = ConvertJsonDateToDate($scope.INFO_LIST.dalcn.expdate);
 
 
 
@@ -383,6 +386,7 @@
         sessionStorage.CITIZEN_ID_AUTHORIZE = datas.CITIZEN;
         sessionStorage.LCNNO = datas.lcnno;
         sessionStorage.LCN_IDA = datas.IDA;
+        sessionStorage.LCT_IDA = datas.LCT_IDA;
         var url = "/LCN_STAFF_EDIT/FRM_LCN_STAFF_LCN_INFORMATION";
         REDIRECT(url);
     };
@@ -617,5 +621,83 @@
         });
     };
 
+    function CV_DATE(data) {
+        return new Date(parseInt(data.replace('/Date(', '').replace(')/', ''))).toLocaleDateString();
+    }
 
+    function filwill(dateString) {
+        try {
+            var dateArray = dateString.split("/");
+            dateString = dateArray[0]; //+ "/" + dateArray[0] + "/" + dateArray[2];
+        }
+        catch (err) {
+
+        }
+        return dateString;
+    }
+
+    //แปลงเวลา เข้าข้อมูล (แสดง)
+    function CHANGE_FORMATDATE(DATE_CHANGE) {
+        var dateString = DATE_CHANGE;
+        var currentTime = new Date(dateString);
+        var month = currentTime.getMonth() + 1;
+        if (month == '01') {
+            month = "ม.ค.";
+        } else if (month == '02') {
+            month = "ก.พ.";
+        } else if (month == '03') {
+            month = "มี.ค.";
+        } else if (month == '04') {
+            month = "เม.ย.";
+        } else if (month == '05') {
+            month = "พ.ค.";
+        } else if (month == '06') {
+            month = "มิ.ย.";
+        } else if (month == '07') {
+            month = "ก.ค.";
+        } else if (month == '08') {
+            month = "ส.ค.";
+        } else if (month == '09') {
+            month = "ก.ย.";
+        } else if (month == '10') {
+            month = "ต.ค.";
+        } else if (month == '11') {
+            month = "พ.ย.";
+        } else if (month == '12') {
+            month = "ธ.ค.";
+        }
+        var day = currentTime.getDate();
+        var year = currentTime.getFullYear();
+        if (year > 2500) {
+            year = year - 543;
+        } else {
+            year = year + 543;
+        }
+        return DATE_CHANGE = day + " " + month + " " + year;
+    }
+
+    /// ---------- แปลงวันที่ เข้า DATEPICKER -------------
+    function CV_DATEPICKER(data) {
+        return new Date(parseInt(data.replace('/Date(', '').replace(')/', ''))).toLocaleDateString('th-TH');
+    }
+
+    function filwill_DATE(dateString) {
+        try {
+            var dateArray = dateString.split("/");
+            dateString = dateArray[1] + "/" + dateArray[0] + "/" + dateArray[2];
+        }
+        catch (err) {
+
+        }
+        return dateString;
+    }
+
+    function CHANGE_FORMATDATEPICKER(DATE_CHANGE) {
+        var dateString = DATE_CHANGE.substr(6);
+        var currentTime = new Date(parseInt(dateString));
+        var month = currentTime.getMonth() + 1;
+        var day = currentTime.getDate();
+        var year = currentTime.getFullYear();
+        return DATE_CHANGE = day + "/" + month + "/" + year;
+    }
 });

@@ -71,7 +71,7 @@
                     วันที่ออกให้ครั้งแรก :
                 </td>
                 <td>
-                    {{first_appdate}}
+                    {{INFO_LIST.first_appdate}}
                 </td>
             </tr>
         </table>
