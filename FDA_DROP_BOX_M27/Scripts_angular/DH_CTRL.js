@@ -599,4 +599,3 @@ app.filter('startFrom', function () {
         return [];
     };
 });
-
