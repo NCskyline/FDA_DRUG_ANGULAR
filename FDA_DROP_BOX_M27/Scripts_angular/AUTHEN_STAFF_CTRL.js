@@ -98,8 +98,8 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                         $scope.DATA_LCN_STAFF = datas.data;
                     }, function () { });
                 } else {
-                    var dataLcn = CENTER_SV.SP_STAFF_DALCN_BY_PVNCD(sessionStorage.PVCODE);
-                    dataLcn.then(function (datas) {
+                    var dataLcn1 = CENTER_SV.SP_STAFF_DALCN_BY_PVNCD(sessionStorage.PVCODE);
+                    dataLcn1.then(function (datas) {
                         $scope.DATA_LCN_STAFF = datas.data;
                     }, function () { });
 
@@ -114,8 +114,8 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
             } else if (SEQ == '8') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN_STAFF/FRM_EXTEND_TIME_LOCATION_STAFF_MAIN');
      
-                var dataedit = CENTER_SV.SP_STAFF_EXTEND(sessionStorage.GROUPS, sessionStorage.PVCODE);
-                dataedit.then(function (datas) {
+                var dataedit7 = CENTER_SV.SP_STAFF_EXTEND(sessionStorage.GROUPS, sessionStorage.PVCODE);
+                dataedit7.then(function (datas) {
                     $scope.DATA_LCN_EXTEND_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '10') {
@@ -136,15 +136,15 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
 
             } else if (SEQ == '998') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN_STAFF/FRM_SUBSTITUTE_NCT_MAIN_STAFF');
-                var dataedit = CENTER_SV.SP_DALCN_NCT_SUBSTITUTE_STAFF();
-                dataedit.then(function (datas) {
+                var dataedit6 = CENTER_SV.SP_DALCN_NCT_SUBSTITUTE_STAFF();
+                dataedit6.then(function (datas) {
                     $scope.DATA_LCN_STT_STAFF = datas.data;
                 }, function () { });
                 
             } else if (SEQ == '999') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN_STAFF/FRM_EDIT_LCN_STAFF_MAIN');
-                var dataedit = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
-                dataedit.then(function (datas) {
+                var dataedit5 = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
+                dataedit5.then(function (datas) {
                     $scope.DATA_LCN_EDIT_STAFF = datas.data;
                 }, function () { });
                 
@@ -155,8 +155,8 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
             if (SEQ == '2') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/TABEAN_YA_MAIN_STAFF');
 
-                var dataedit = CENTER_SV.SP_DRRGT_TABEAN_STAFF();
-                dataedit.then(function (datas) {
+                var dataedit4 = CENTER_SV.SP_DRRGT_TABEAN_STAFF();
+                dataedit4.then(function (datas) {
                     $scope.DATA_TABEAN_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '3') {
@@ -166,8 +166,8 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
 
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_RGT_EDIT_MAIN_STAFF');
 
-                var dataedit = CENTER_SV.SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS('130099');
-                dataedit.then(function (datas) {
+                var dataedit3 = CENTER_SV.SP_DRRGT_EDIT_REQUEST_STAFF_PROCESS('130099');
+                dataedit3.then(function (datas) {
                     $scope.DATA_EDIT_TABEAN_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '5') {
@@ -177,15 +177,15 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
             } else if (SEQ == '6') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_DS_STAFF_DRUG');
                 
-                var dataedit = CENTER_SV.SP_STAFF_DS();
-                dataedit.then(function (datas) {
+                var dataedit2 = CENTER_SV.SP_STAFF_DS();
+                dataedit2.then(function (datas) {
                     $scope.DATA_DS_STAFF = datas.data;
                 }, function () { });
                 
             } else if (SEQ == '996') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_SUBSTITUTE_TABEAN_STAFF_MAIN');
-                var dataedit = CENTER_SV.SP_DRRGT_SUBSTITUTE_STAFF();
-                dataedit.then(function (datas) {
+                var dataedit1 = CENTER_SV.SP_DRRGT_SUBSTITUTE_STAFF();
+                dataedit1.then(function (datas) {
                     $scope.DATA_STT_TABEAN_STAFF = datas.data;
                 }, function () { });
                 
@@ -212,8 +212,8 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 }, function () { });
             } else if (SEQ == '2') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_DH_MAIN_STAFF');
-                var dataLo = CENTER_SV.SP_STAFF_DH15RQT();
-                dataLo.then(function (datas) {
+                var dataLo1 = CENTER_SV.SP_STAFF_DH15RQT();
+                dataLo1.then(function (datas) {
                     $scope.LIST_DH_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '3') {

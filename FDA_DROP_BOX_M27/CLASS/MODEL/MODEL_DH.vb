@@ -19,12 +19,12 @@
         End Set
     End Property
 
-    Private _DH15_DETAIL_CASCHEMICAL As New DH15_DETAIL_CASCHEMICAL
-    Public Property DH15_DETAIL_CASCHEMICAL() As DH15_DETAIL_CASCHEMICAL
+    Private _DH15_DETAIL_CASCHEMICAL As New List(Of DH15_DETAIL_CASCHEMICAL)
+    Public Property DH15_DETAIL_CASCHEMICAL() As List(Of DH15_DETAIL_CASCHEMICAL)
         Get
             Return _DH15_DETAIL_CASCHEMICAL
         End Get
-        Set(ByVal value As DH15_DETAIL_CASCHEMICAL)
+        Set(ByVal value As List(Of DH15_DETAIL_CASCHEMICAL))
             _DH15_DETAIL_CASCHEMICAL = value
         End Set
     End Property

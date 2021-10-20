@@ -800,8 +800,8 @@
             }, function () { });
 
         } else {
-            var data_lct = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(IDENTIFY);
-            data_lct.then(function (datas) {
+            var data_lct1 = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(IDENTIFY);
+            data_lct1.then(function (datas) {
                 $scope.LIST_EXTEND = datas.data;
 
             }, function () { });

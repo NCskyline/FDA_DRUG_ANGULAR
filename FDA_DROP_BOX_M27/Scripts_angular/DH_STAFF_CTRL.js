@@ -83,59 +83,7 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
     }
 
     $scope.PREVIEW_CER = function () {
-        //var data_CNT = CENTER_SV.SP_MASTER_sysisocnt();
-        //data_CNT.then(function (datas) {
-        //    $scope.CNT_LIST = datas.data;
-
-        //}, function () { });
-
-        //var MODLE_GMP = CENTER_SV.SETMODEL_DH();
-        //MODLE_GMP.then(function (datas) {
-
-        //    $scope.LIST_GMP = datas.data;
-        //    $scope.LIST_GMP.session = sessionStorage;
-
-        //}, function () { });
-
-        //var data_HEADER_CERT = CENTER_SV.SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(CITIZEN, '');
-        //data_HEADER_CERT.then(function (datas) {
-        //    $scope.LCN_NAME = datas.data;
-
-        //}, function () { });
-
-        //var getData_LIST = CENTER_SV.SETMODEL_LIST();
-        //getData_LIST.then(function (datas) {
-        //    $scope.DOC_LIST = datas.data;
-        //}, function () { });
-
-        //var data_LCN_LCT = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(LCT_IDA);
-        //data_LCN_LCT.then(function (datas) {
-        //    $scope.LCN_LCT = datas.data;
-
-        //}, function () { });
-
-        //var GetdataCHEM = CENTER_SV.SP_MAS_CHEMICAL_by_IOWANM_AND_AORI("", "A");
-        //GetdataCHEM.then(function (datas) {
-        //    $scope.LIST_CHEM = '';
-        //    var auto = $scope.LIST_CHEM.length;
-        //    $scope.currentPage = 1;
-        //    $scope.entryLimit = 10;
-        //    $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
-        //    $scope.loading_profile = false;
-        //    $scope.product_show = true;
-        //}, function () { });
-
-        //var data_LCN_SHOW = CENTER_SV.GET_LCNNO_SHOW(LCN_IDA);
-        //data_LCN_SHOW.then(function (datas) {
-        //    $scope.LCNNO_SHOW = datas.data.LCNNO_SHOW;
-        //    $scope.TYPE_IMPORT = datas.data.TYPE_IMPORT;
-        //    $scope.THANAMEPLACE = datas.data.THANAMEPLACE;
-        //    $scope.thanameplace = datas.data.THANAMEPLACE;
-        //    $scope.thanm = datas.data.NAME;
-        //    $scope.fulladdr2 = datas.data.FULL_ADDR;
-        //    $scope.tel = datas.data.TEL;
-        //    $scope.fax = datas.data.FAX;
-        //}, function () { });
+        
 
         var Set_PREVIEW = CENTER_SV.GET_PREVIEW_CERT(sessionStorage.IDA);
         Set_PREVIEW.then(function (datas) {
@@ -156,12 +104,6 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
             }, function () { });
 
         }, function () { });
-
-
-
-
-
-
     };
 
     $scope.PREVIEW_DH = function () {
@@ -194,10 +136,8 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
             $scope.LIST_DH = datas.data;
             if ($scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE != 'undefined' && $scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE != null) {
-            $scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE)));
-            $scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE)));
-            
-
+                $scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE)));
+                $scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE)));
             }
 
             $scope.INPUT_CHEM_DH = SET_URL_SV('/DH/PREVIEW_CHEM_DH');

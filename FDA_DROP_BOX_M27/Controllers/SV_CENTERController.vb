@@ -2194,7 +2194,7 @@ Namespace Controllers
 
             End Try
             Try
-                model.DH15_DETAIL_CASCHEMICAL = dao_cas.fields
+                model.DH15_DETAIL_CASCHEMICAL = dao_cas.Details
             Catch ex As Exception
 
             End Try

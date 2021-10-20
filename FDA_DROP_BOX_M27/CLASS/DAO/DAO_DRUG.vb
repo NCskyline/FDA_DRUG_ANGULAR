@@ -4765,6 +4765,20 @@ Namespace DAO_DRUG
         Inherits MAINCONTEXT                    'เรียก Class แม่มาใช้เพื่อให้รู้จักว่าเป็น Table ไหน
 
         Public fields As New DH15_DETAIL_CASCHEMICAL            'ใส่ชื่อ Table   (dh15rqt)
+        Private _Details As New List(Of DH15_DETAIL_CASCHEMICAL)
+        Public Property Details() As List(Of DH15_DETAIL_CASCHEMICAL)
+            Get
+                Return _Details
+            End Get
+            Set(ByVal value As List(Of DH15_DETAIL_CASCHEMICAL))
+                _Details = value
+            End Set
+        End Property
+
+        Private Sub AddDetails()
+            Details.Add(fields)
+            fields = New DH15_DETAIL_CASCHEMICAL
+        End Sub
         Public Sub GetDataby_IDA(ByVal IDA As Integer)
 
             datas = (From p In db.DH15_DETAIL_CASCHEMICALs Where p.IDA = IDA Select p) 'การ Where   table(DH15_DETAIL_MANUFACTUREs)เติม s เพื่อไม่ให้ชื่อซ้ำกับ Table   (P คือ ประกาศตัวแปรเป็น Table)
@@ -4775,6 +4789,7 @@ Namespace DAO_DRUG
 
             datas = (From p In db.DH15_DETAIL_CASCHEMICALs Where p.FK_IDA = IDA Select p) 'การ Where   table(DH15_DETAIL_MANUFACTUREs)เติม s เพื่อไม่ให้ชื่อซ้ำกับ Table   (P คือ ประกาศตัวแปรเป็น Table)
             For Each Me.fields In datas
+                AddDetails()
             Next
         End Sub
         Public Sub insert()
