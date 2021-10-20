@@ -2172,7 +2172,12 @@ Namespace Controllers
 
             Dim dao_c As New DAO_DRUG.TB_CER
             Dim dao_manu As New DAO_DRUG.TB_DH15_DETAIL_MANUFACTURE
+            Dim dao_cas As New DAO_DRUG.TB_DH15_DETAIL_CASCHEMICAL
+            Try
+                dao_cas.GetDataby_FK_IDA(IDA)
+            Catch ex As Exception
 
+            End Try
             Try
                 dao_manu.GetData_by_FK_IDA(IDA)
             Catch ex As Exception
@@ -2185,6 +2190,11 @@ Namespace Controllers
             End Try
             Try
                 model.REF_CER_NO = dao_c.fields.CER_FORMAT
+            Catch ex As Exception
+
+            End Try
+            Try
+                model.DH15_DETAIL_CASCHEMICAL = dao_cas.fields
             Catch ex As Exception
 
             End Try
