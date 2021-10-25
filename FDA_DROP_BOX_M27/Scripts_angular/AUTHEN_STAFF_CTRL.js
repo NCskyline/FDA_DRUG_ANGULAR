@@ -208,7 +208,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_STAFF_CER_MAIN');
                 var dataLo = CENTER_SV.SP_STAFF_CER();
                 dataLo.then(function (datas) {
-                    $scope.LIST_GMP_STAFF = datas.data;
+                    $scope.LIST_GMP_STAFF = datas.data;   
                 }, function () { });
             } else if (SEQ == '2') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_DH_MAIN_STAFF');
