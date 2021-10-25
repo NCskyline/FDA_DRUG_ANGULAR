@@ -61,6 +61,21 @@
         return response;
     };
     
+    this.SAVE_REMARK_DH = function (XML_RMK, IDA, CITIZEN_ID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SAVE_REMARK_DH"),
+            dataType: "json",
+            data: {
+                XML_RMK: JSON.stringify(XML_RMK),
+                IDA: IDA,
+                CITIZEN_ID: CITIZEN_ID
+
+            }
+        });
+        return response;
+    };
+
     this.APPROVE_CERT_STAFF = function (IDA, CITIZEN_ID) {
         var response = $http({
             method: "post",
