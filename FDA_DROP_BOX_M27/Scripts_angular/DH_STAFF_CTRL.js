@@ -188,6 +188,30 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
 
     };
+    
+    $scope.BTN_UPDATE_DH_REMARK = function () {
+        Swal.fire({
+            title: 'คุณต้องการส่งใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนยกเลิกคำขอ!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการยกเลิกคำขอ',
+            cancelButtonText: 'ไม่ใช่'
+        }).then((result) => {
+            if (result.value) {
+                var APP_DATA = CENTER_SV.SAVE_REMARK_DH(LIST_DH, sessionStorage.IDA, sessionStorage.CITIZEN_ID);
+                APP_DATA.then(function (datas) {
+                    var result = datas.data;
+                    success_data(result);
+
+                });
+            }
+        });
+
+
+    };
 
 
     $scope.BTN_CERT_CONFIRM = function (STATUS_ID) {

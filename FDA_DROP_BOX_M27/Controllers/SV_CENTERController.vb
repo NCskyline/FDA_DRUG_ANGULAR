@@ -3170,7 +3170,7 @@ Namespace Controllers
         'BTN_SAVE_REMARK_CERT
         Function SAVE_REMARK_CERT(ByVal XML_RMK As String, ByVal IDA As Integer, ByVal CITIZEN_ID As String) As JsonResult
             Dim jss As New JavaScriptSerializer
-            Dim bb As MODEL_DH = jss.Deserialize(XML_RMK, GetType(MODEL_LCN))
+            Dim bb As MODEL_DH = jss.Deserialize(XML_RMK, GetType(MODEL_DH))
             Dim result As String = ""
             Dim dao As New DAO_DRUG.TB_CER
             dao.GetDataby_IDA2(IDA)
@@ -3183,6 +3183,22 @@ Namespace Controllers
 
             Return Json(result, JsonRequestBehavior.AllowGet)
         End Function
+        Function SAVE_REMARK_DH(ByVal XML_RMK As String, ByVal IDA As Integer, ByVal CITIZEN_ID As String) As JsonResult
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_DH = jss.Deserialize(XML_RMK, GetType(MODEL_DH))
+            Dim result As String = ""
+            Dim dao As New DAO_DRUG.ClsDBdh15rqt
+            dao.GetDataby_IDA(IDA)
+            dao.fields.STATUS_ID = 7
+            dao.fields.REMARK = bb.dh15rqt.REMARK
+            dao.update()
+
+            AddLogStatus(7, dao.fields.PROCESS_ID, CITIZEN_ID, IDA)
+            result = "ดำเนินการคืนคำขอเรียบร้อยแล้ว"
+
+            Return Json(result, JsonRequestBehavior.AllowGet)
+        End Function
+
 
         Function SAVE_LCN_PAYNOTE(ByVal XML_PAY As String, ByVal LCN_IDA As Integer, ByVal CITIZEN_ID As String, ByVal PVCODE As String) As JsonResult
             Dim jss As New JavaScriptSerializer

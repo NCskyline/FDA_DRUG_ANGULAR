@@ -7,7 +7,7 @@ End Code
         <h1>หมายเหตุการคืนคำขอ</h1>
     </div>
     <div class="panel-body">
-        <input type="text" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.REMARK" style="width:100%;height:311px;" />
+        <input type="text" ng-model="LIST_DH.DALCN_EDIT_REQUEST.REMARK" style="width:100%;height:311px;" />
 
     </div>
     <div class="panel-footer">
