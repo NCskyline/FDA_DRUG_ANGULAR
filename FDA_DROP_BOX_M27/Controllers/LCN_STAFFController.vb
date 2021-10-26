@@ -41,5 +41,9 @@ Namespace Controllers
         Function FRM_STAFF_OFFER_INSERT_AND_UPDATE() As ActionResult
             Return View()
         End Function
+
+        Function PREVIEW_LCN_STAFF() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
