@@ -164,7 +164,7 @@
         <h1>รูปถ่ายที่แนบในใบอนุญาต</h1>
         <div>
 
-            <img data-ng-src="data:image/png;base64,{{INFO_LIST.dalcn.IMAGE_BSN}}" stye="width:20%;height:20% " />
+            <img data-ng-src="data:image/png;base64,{{INFO_LIST.dalcn.IMAGE_BSN}}" style="width:20%;height:20% " />
 
         </div>
         <table>

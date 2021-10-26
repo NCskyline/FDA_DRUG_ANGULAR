@@ -18,7 +18,7 @@
         //var MODEL_EDIT_LCN = CENTER_SV.SETMODEL_EDIT_LCN();
         //MODEL_EDIT_LCN.then(function (datas) {
 
-        //    $scope.LIST_EDIT_LCN = datas.data;
+           //$scope.LIST_EDIT_LCN = datas.data;
 
         //}, function () { });  
 
