@@ -222,6 +222,12 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         }
     };
 
+    $scope.SELECT_STAFF_LCN = function (data) {
+        sessionStorage.CITIZEN_ID_AUTHORIZE = data.CITIZEN_ID_AUTHORIZE;
+        sessionStorage.LCT_IDA = data.LCT_IDA;
+        REDIRECT('/LCN_STAFF/PREVIEW_LCN_STAFF');
+    };
+
     $scope.SELECT_CER = function (data) {
         sessionStorage.IDA = data.IDA;
         sessionStorage.LCN_IDA = data.FK_IDA;
