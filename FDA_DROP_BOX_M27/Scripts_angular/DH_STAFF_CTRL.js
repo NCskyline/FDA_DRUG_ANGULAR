@@ -253,7 +253,7 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
             cancelButtonText: 'ยกเลิก'
         }).then((result) => {
             if (result.value) {
-                if (STATUS_ID == '7') {
+                if (STATUS_ID == '3') {
                     var APP_DATA = CENTER_SV.UPDATE_STATUS_DH_STAFF(STATUS_ID,sessionStorage.IDA, sessionStorage.CITIZEN_ID ,sessionStorage.PVCODE);
                     APP_DATA.then(function (datas) {
 
