@@ -613,7 +613,7 @@ End Code
                         </tr>
                         <tr>
                             <td>
-                                <select style="font-family:'Taviraj';font-size:20px;" ng-model="STATUS_ID">
+                                <select style="font-family:'Taviraj';font-size:20px;" ng-model="STATUS_ID" class="form-control">
                                     <option ng-repeat="x in STAT_LIST" value="{{x.STATUS_ID}}">{{x.STATUS_NAME}}</option>
                                 </select>
                             </td>

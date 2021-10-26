@@ -42,7 +42,8 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
             $scope.thanameplace = datas.data.thanameplace;
             $scope.nameOperator = datas.data.nameOperator;
         }, function () { });
- 
+
+        
         
         if (PROCESS_ID == '31' || PROCESS_ID == '32' || PROCESS_ID == '33' || PROCESS_ID == '34' || PROCESS_ID == '36') {
 
@@ -124,6 +125,11 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
             $scope.HEADER_PROCESS = 'ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ';
         }
 
+        var getData_LIST = CENTER_SV.SETMODEL_LIST();
+        getData_LIST.then(function (datas) {
+            $scope.DOC_LIST = datas.data;
+        }, function () { });
+
         var getdata = CENTER_SV.GET_INFORMARION_DH(LCN_IDA);
         getdata.then(function (datas) {
 
@@ -137,8 +143,16 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         getdataDH.then(function (datas) {
 
             $scope.LIST_DH = datas.data;
+            var TR_ID = $scope.LIST_DH.dh15rqt.TR_ID;
+            var PROCESS = $scope.LIST_DH.dh15rqt.PROCESS_ID;
+
             $scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.DOCUMENT_DATE)));
             $scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_DH.DH15_DETAIL_CER.EXP_DOCUMENT_DATE)));
+
+            var File = CENTER_SV.GETDATA_FILE_TR_ID_TYPE(TR_ID, PROCESS);
+            File.then(function (datas) {
+                $scope.LIST_File = datas.data;
+            }, function () { });
 
         }, function () { });
 
@@ -548,7 +562,24 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         }, function () { });
     };
 
+    $scope.BTN_SEND_REQUEST = function () {
+        Swal.fire({
+            title: 'คุณต้องการส่งใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนส่ง!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการส่งข้อมูล',
+            cancelButtonText: 'ยกเลิก'
+        }).then((result) => {
+            if (result.value) {
+                success_data('SUCCESS');
+                REDIRECT('/DH/FRM_MAIN_PAGE_PHESAJ');
+            }
+        });
 
+    };
 
     $scope.BTN_SAVE_DH = function () {
         
@@ -574,6 +605,20 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 });
             }
         });
+    };
+
+    $scope.ADD_FILE_LIST = function () {
+        var obj = {
+            TR_ID: '',
+            DES: '',
+            FILENAME: '',
+            FILE_DATA: '',
+            PATH: '',
+            FLAG: '',
+            TYPE: '',
+            SIZE: 0
+        };
+        $scope.DOC_LIST.FILE_LISTs.push(obj);
     };
 
     function CV_DATE(data) {
