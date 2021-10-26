@@ -7,8 +7,9 @@ End Code
     <script type="text/javascript">
         $(document).ready(function () {
             $('select').selectpicker('refresh');
-        })
+        });
     </script>
+
 
     <div class="ic" style="font-family:'Taviraj';font-size:20px;">
         <center>
@@ -24,7 +25,7 @@ End Code
                     เลขที่อ้างอิงสถานที่ผลิต (ThFDA-D Ref)
                 </td>
                 <td>
-                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA" ng-change="Getdetails_REF_CER(LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA)">
+                    <select id="REF_CERT" class="selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA" ng-change="Getdetails_REF_CER(LIST_DH.DH15_DETAIL_CER.CER_DETAIL_CHEMICAL_IDA)">
                         <option ng-repeat="ref in REF_CERT" value="{{ref.IDA}}">{{ref.CER_NUMBER}}</option>
                     </select>
                 </td>
@@ -84,7 +85,7 @@ End Code
                     ประเทศ (Country)
                 </td>
                 <td>
-                    <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
+                    <select id="country" class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
                         @*<option value="0">--กรุณาเลือก--</option>*@
                         <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                     </select>
