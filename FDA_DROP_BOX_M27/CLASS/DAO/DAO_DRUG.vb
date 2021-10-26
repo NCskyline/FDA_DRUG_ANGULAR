@@ -4490,6 +4490,11 @@ Namespace DAO_DRUG
             For Each Me.fields In datas
             Next
         End Sub
+        Public Sub GetDataby_CER_IDA(ByVal IDA As Integer)
+            datas = (From p In db.DH15_DETAIL_CERs Where p.CER_DETAIL_CHEMICAL_IDA = IDA Select p)
+            For Each Me.fields In datas
+            Next
+        End Sub
 
         Public Sub GetDataAll()
             datas = (From p In db.DH15_DETAIL_CERs Select p)

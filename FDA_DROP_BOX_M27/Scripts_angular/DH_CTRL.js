@@ -676,6 +676,10 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         return DATE_CHANGE = day + " " + month + " " + year;
     }
 
+    $(function () {
+        $('.selectpicker').selectpicker();
+    });
+
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });
     $scope.$on('UNLOAD', function () { $scope.loading = false; alert('2'); });

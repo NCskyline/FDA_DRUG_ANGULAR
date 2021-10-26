@@ -2268,8 +2268,6 @@ Namespace Controllers
             'dao.GetDataby_FK_IDA(IDA)
             Dim dao As New DAO_DRUG.TB_CER
 
-
-
             Try
                 dao.GetDataby_IDA2(IDA)
                 model.CER = dao.fields
@@ -2286,7 +2284,9 @@ Namespace Controllers
 
             End Try
             Try
-
+                Dim dao_m As New DAO_DRUG.TB_DH15_DETAIL_CER
+                dao_m.GetDataby_CER_IDA(IDA)
+                model.DH15_DETAIL_CER = dao_m.fields
             Catch ex As Exception
 
             End Try
