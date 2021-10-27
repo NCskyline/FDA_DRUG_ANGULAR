@@ -481,13 +481,14 @@
 
 
 
-    this.INSERT_DH = function (data, ProcessID) {
+    this.INSERT_DH = function (data , datachem, ProcessID) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/INSERT_DH"),
             dataType: "json",
             data: {
                 XML_DH: JSON.stringify(data),
+                XML_CHEM: JSON.stringify(datachem),
                 _ProcessID: ProcessID
             }
         });

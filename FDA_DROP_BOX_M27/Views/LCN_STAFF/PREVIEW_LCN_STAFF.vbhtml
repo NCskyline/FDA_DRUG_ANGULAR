@@ -390,7 +390,6 @@ End Code
             </div>
         </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS == '103'">
                 <div class="ic" style="width:100%;font-family:'Taviraj';font-size:24px">
                     <h1 style="text-align:right;font-size:24px;">
@@ -916,9 +915,7 @@ End Code
                     </table>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS == 104">
                 <div style="font-family:'Taviraj';font-size:24px;width:100%">
                     <h1 style="text-align:right;font-size:24px;">
@@ -1379,9 +1376,7 @@ End Code
                     </table>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS == '105'">
                 <div style="font-family:'Taviraj';font-size:24px;">
                     <h1 style="text-align:right;font-size:24px;">
@@ -1766,9 +1761,7 @@ End Code
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS == 106">
                 <div style="font-family:'Taviraj'">
 
@@ -2285,9 +2278,9 @@ End Code
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+
+
             <div ng-show="LIST_LCN.PROCESS == '107'">
                 <div style="font-family:'Taviraj';font-size:24px;">
                     <h2 style="text-align:center;font-size:24px;">
@@ -2668,9 +2661,7 @@ End Code
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS == '108'">
                 <div style="font-family:'Taviraj';font-size:24px;">
                     <h2 style="text-align:center;font-size:24px;">
@@ -3051,9 +3042,7 @@ End Code
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS == '109'">
                 <div style="font-family:'Taviraj';font-size:24px;">
                     <h2 style="text-align:center;font-size:24px;">
@@ -3434,9 +3423,7 @@ End Code
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS == '131'">
                 <div style="font-family:'Taviraj';font-size:24px;">
                     <h1 style="text-align:left;font-size:24px;">
@@ -4124,9 +4111,7 @@ End Code
                     </table>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS == '132'">
                 <div style="font-family:'Taviraj';font-size:24px;">
                     <h1 style="text-align:left;font-size:24px;">
@@ -4814,9 +4799,7 @@ End Code
                     </table>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS == '123'">
                 <div style="font-family:'Taviraj';font-size:24px;">
                     <h1 style="text-align:left;font-size:24px;">
@@ -5534,9 +5517,7 @@ End Code
                     </table>
                 </div>
             </div>
-        </div>
-
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
+  
             <div ng-show="LIST_LCN.PROCESS == '124'">
                 <div style="font-family:'Taviraj';font-size:24px;">
                     <h1 style="text-align:left;font-size:24px;">
@@ -6254,9 +6235,7 @@ End Code
                     </table>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show=".LIST_LCN.PROCESS == '133'">
                 <div style="font-family:'Taviraj';font-size:24px;">
                     <h1 style="text-align:left;font-size:24px;">
@@ -6803,9 +6782,7 @@ End Code
                     </table>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show=".LIST_LCN.PROCESS == '134'">
                 <div style="font-family:'Taviraj';font-size:24px;">
                     <h1 style="text-align:left;font-size:24px;">
@@ -7352,9 +7329,7 @@ End Code
                     </table>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS =='125'">
                 <div style="font-family:'Taviraj';font-size:24px;">
                     <h1 style="text-align:left;font-size:24px;">
@@ -8080,9 +8055,7 @@ End Code
                     <br />
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS =='126'">
                 <div style="font-family:'Taviraj';font-size:24px;">
                     <h1 style="text-align:left;font-size:24px;">
@@ -8808,9 +8781,7 @@ End Code
                     <br />
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS == '116'">
                 <div style="font-family:'Taviraj';font-size:24px;width:100%">
                     <div>
@@ -9166,9 +9137,7 @@ End Code
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS == '117'">
                 <div style="font-family:'Taviraj';font-size:24px;width:100%">
                     <div>
@@ -9524,9 +9493,7 @@ End Code
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS == '115'">
                 <div style="font-family:'Taviraj';font-size:24px;width:100%">
                     <div>
@@ -9882,9 +9849,7 @@ End Code
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN>PROCESS == '127'">
                 <div style="font-family:'Taviraj';font-size:24px;">
                     <h1 style="text-align:left;font-size:24px;">
@@ -10531,9 +10496,7 @@ End Code
                     </table>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN>PROCESS == '128'">
                 <div style="font-family:'Taviraj';font-size:24px;">
                     <h1 style="text-align:left;font-size:24px;">
@@ -11180,9 +11143,7 @@ End Code
                     </table>
                 </div>
             </div>
-        </div>
 
-        <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
             <div ng-show="LIST_LCN.PROCESS == '114'">
                 <div style="font-family:'Taviraj';font-size:24px;width:100%">
                     <div>
@@ -11539,7 +11500,7 @@ End Code
                 </div>
             </div>
             @*-------------------------------------------------------------------*@
-        </div>
+
         <div class="part part-1-3 ic">
 
         </div>
