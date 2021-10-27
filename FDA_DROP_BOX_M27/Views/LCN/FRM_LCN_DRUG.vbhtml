@@ -194,7 +194,7 @@ End Code
                                             <td>{{data.REMARK}}</td>
                                             <td>
                                                 <span class="fa fa-eye"></span>
-                                                <a ng-click="">
+                                                <a ng-click="BTN_PREVIEW(data)">
                                                     ดูข้อมูล
                                                 </a>
                                             </td>

@@ -1023,6 +1023,11 @@
         REDIRECT('/LCN/FRM_LCN_NEWS');
     };
 
+    $scope.BTN_PREVIEW = function (data) {
+        sessionStorage.LCN_IDA = data.IDA;
+        REDIRECT('/LCN/PREVIEW_INPUT_LCN');
+    };
+
     $scope.BTN_SAVE_LCN_INPUT = function () {
         $scope.LIST_LCN.session = sessionStorage;
 

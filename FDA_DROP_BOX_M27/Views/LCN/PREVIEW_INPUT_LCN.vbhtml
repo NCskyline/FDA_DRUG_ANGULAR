@@ -2513,7 +2513,7 @@
                     {{LIST_LCN.DALCN_PHR.PHR_NAME}}
             </td>
             </tr>
-            </table>*@
+            </table>
             <table style="font-size:20px;width:100%">
                 <tr>
                     <td style="width:20%">
@@ -2896,7 +2896,7 @@
                 {{LIST_LCN.DALCN_PHR.PHR_NAME}}
             </td>
             </tr>
-            </table>*@
+            </table>
             <table style="font-size:20px;width:100%">
                 <tr>
                     <td style="width:20%">
@@ -3279,7 +3279,7 @@
                 {{LIST_LCN.DALCN_PHR.PHR_NAME}}
             </td>
             </tr>
-            </table>*@
+            </table>
             <table style="font-size:20px;width:100%">
                 <tr>
                     <td style="width:20%">
