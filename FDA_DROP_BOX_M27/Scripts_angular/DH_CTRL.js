@@ -582,10 +582,12 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     };
 
     $scope.BTN_SAVE_DH = function () {
-        
+        $scope.LIST_DH.EXP_DATE = Date.now;
+        $scope.LIST_DH.MFD_DATE = Date.now;
+        $scope.LIST_DH.rcvdate = Date.now;
         var Getdata = CENTER_SV.INSERT_DH($scope.LIST_DH, $scope.PROCESS_ID);
         Getdata.then(function (datas) {
-            if (datas.data.Result == "success") {
+            if (datas.data == "success") {
                 Swal.fire({
                     title: 'SUCCESS',
                     text: 'บันทึกข้อมูลเรียบร้อย',

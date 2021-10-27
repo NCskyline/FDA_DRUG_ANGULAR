@@ -3684,6 +3684,9 @@ Namespace Controllers
                 dao.fields = bb.dh15rqt
                 dao.fields.LCN_IDA = bb.session.LCN_IDA
                 dao.fields.TR_ID = tr_id
+                dao.fields.STATUS_ID = 1
+                dao.fields.REQUEST_DATE = Date.Now
+                dao.fields.PROCESS_ID = _ProcessID
                 dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
                 If _ProcessID = 14 Then
                     dao.fields.QUOTA_TYPE = "00"
