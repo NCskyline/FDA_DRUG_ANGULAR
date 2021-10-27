@@ -594,7 +594,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         $scope.LIST_DH.EXP_DATE = Date.now;
         $scope.LIST_DH.MFD_DATE = Date.now;
         $scope.LIST_DH.rcvdate = Date.now;
-        var Getdata = CENTER_SV.INSERT_DH($scope.LIST_DH, $scope.PROCESS_ID);
+        var Getdata = CENTER_SV.INSERT_DH($scope.LIST_DH, $scope.GMP_CHEM, $scope.PROCESS_ID);
         Getdata.then(function (datas) {
             $scope.result = datas.data;
             if ($scope.result == "success") {
