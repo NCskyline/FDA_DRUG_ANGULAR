@@ -596,7 +596,8 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         $scope.LIST_DH.rcvdate = Date.now;
         var Getdata = CENTER_SV.INSERT_DH($scope.LIST_DH, $scope.PROCESS_ID);
         Getdata.then(function (datas) {
-            if (datas.data == "success") {
+            $scope.result = datas.data;
+            if ($scope.result == "success") {
                 Swal.fire({
                     title: 'SUCCESS',
                     text: 'บันทึกข้อมูลเรียบร้อย',
