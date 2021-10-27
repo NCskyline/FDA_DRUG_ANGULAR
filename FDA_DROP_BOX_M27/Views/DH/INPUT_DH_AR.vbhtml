@@ -6,10 +6,12 @@ End Code
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $('select').selectpicker('refresh');
+            $('#REF_CERT').selectpicker('refresh');
+        });
+        $(document).ready(function () {
+            $('#country').selectpicker('refresh');
         });
     </script>
-
 
     <div class="ic" style="font-family:'Taviraj';font-size:20px;">
         <center>
