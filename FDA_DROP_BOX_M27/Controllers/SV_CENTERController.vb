@@ -53,6 +53,14 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
 
         End Function
+        Function SP_CER_DETAIL_CASCHEMICAL_by_TR_ID(ByVal FK_IDA As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_CER_DETAIL_CASCHEMICAL_by_TR_ID(FK_IDA)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
 
         Function SP_STAFF_EXTEND(ByVal _GROUPS As String, ByVal PVCODE As String) As JsonResult
             Dim DT As New DataTable

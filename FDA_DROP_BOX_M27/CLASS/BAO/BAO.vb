@@ -15,7 +15,18 @@ Public Class BAO
         Return dt
     End Function
     '
+    Public Function SP_CER_DETAIL_CASCHEMICAL_by_TR_ID(ByVal FK_IDA As Integer) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_CER_DETAIL_CASCHEMICAL_by_TR_ID @FK_IDA =  " & FK_IDA
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
 
+        End Try
+        dt.TableName = "SP_CER_DETAIL_CASCHEMICAL_by_TR_ID"
+        Return dt
+    End Function
     Public Function SP_MAS_STATUS_STAFF_BY_GROUP_DDL(ByVal STAT_GROUP As String, ByVal GROUP_DLL As String) As DataTable
         Dim clsds As New ClassDataset
         Dim dt As New DataTable

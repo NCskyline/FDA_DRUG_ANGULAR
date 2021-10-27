@@ -560,6 +560,15 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
             //$scope.LIST_REF_CERT.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME = datas.data[0].thanameplace;
 
         }, function () { });
+
+        var GetdataCHEM = CENTER_SV.SP_CER_DETAIL_CASCHEMICAL_by_TR_ID(IDA);
+        GetdataCHEM.then(function (datas) {
+            $scope.LIST_CHEM = datas.data;
+
+        }, function () { });
+
+
+
     };
 
     $scope.BTN_SEND_REQUEST = function () {

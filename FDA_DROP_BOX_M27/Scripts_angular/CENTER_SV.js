@@ -241,6 +241,17 @@
         return response;
     };
     
+    this.SP_CER_DETAIL_CASCHEMICAL_by_TR_ID = function (FK_IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_CER_DETAIL_CASCHEMICAL_by_TR_ID"),
+            params: {
+                FK_IDA: FK_IDA
+            }
+        });
+        return response;
+    };
+
     this.GET_LCN_EDIT = function (IDA) {
         var response = $http({
             method: "post",
