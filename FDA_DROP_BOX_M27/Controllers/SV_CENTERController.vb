@@ -3715,13 +3715,16 @@ Namespace Controllers
 
 
                 Dim IDA As Integer = dao.fields.IDA
-
+                Dim ii As Integer = 1
                 Dim dao_chem_dh As New DAO_DRUG.TB_DH15_DETAIL_CASCHEMICAL
                 dao_chem_dh.Details = jss.Deserialize(XML_CHEM, GetType(List(Of DH15_DETAIL_CASCHEMICAL)))
                 For Each dao_chem_dh.fields In dao_chem_dh.Details
                     dao_chem_dh.fields.FK_IDA = IDA
+                    dao_chem_dh.fields.ROW_ID = ii
+                    dao_chem_dh.fields.TR_ID = tr_id
                     dao_chem_dh.insert()
                     dao_chem_dh = New DAO_DRUG.TB_DH15_DETAIL_CASCHEMICAL
+                    ii += 1
                 Next
 
 
