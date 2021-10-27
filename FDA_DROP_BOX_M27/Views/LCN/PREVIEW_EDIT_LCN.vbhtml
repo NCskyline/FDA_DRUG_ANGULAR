@@ -1,7 +1,7 @@
 ﻿@*@Code
         ViewData("Title") = "PREVIEW_EDIT_LCN"
     End Code*@
-
+@*<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()" ng-cloak="">*@
 <div ng-show="LIST_GMP.DALCN_EDIT_REQUEST.PROCESS_ID == '11105'">
     <div style="font-family:'Taviraj';font-size:24px;">
         <div>
@@ -2241,3 +2241,4 @@
         <div style="font-size:20px">การยื่นทางอิเล็กทรอนิกส์ที่สำนักงานคณะกรรมการอาหารและยากำหนด</div>
     </div>
 </div>
+@*</div>*@
