@@ -53,6 +53,14 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
 
         End Function
+        Function SP_CER_DETAIL_CASCHEMICAL_by_TR_ID(ByVal FK_IDA As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_CER_DETAIL_CASCHEMICAL_by_TR_ID(FK_IDA)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
 
         Function SP_STAFF_EXTEND(ByVal _GROUPS As String, ByVal PVCODE As String) As JsonResult
             Dim DT As New DataTable
@@ -3684,6 +3692,9 @@ Namespace Controllers
                 dao.fields = bb.dh15rqt
                 dao.fields.LCN_IDA = bb.session.LCN_IDA
                 dao.fields.TR_ID = tr_id
+                dao.fields.STATUS_ID = 1
+                dao.fields.REQUEST_DATE = Date.Now
+                dao.fields.PROCESS_ID = _ProcessID
                 dao.fields.IDENTIFY = bb.session.CITIZEN_ID_AUTHORIZE
                 If _ProcessID = 14 Then
                     dao.fields.QUOTA_TYPE = "00"

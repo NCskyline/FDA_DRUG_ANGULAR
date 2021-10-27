@@ -560,6 +560,15 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
             //$scope.LIST_REF_CERT.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME = datas.data[0].thanameplace;
 
         }, function () { });
+
+        var GetdataCHEM = CENTER_SV.SP_CER_DETAIL_CASCHEMICAL_by_TR_ID(IDA);
+        GetdataCHEM.then(function (datas) {
+            $scope.LIST_CHEM = datas.data;
+
+        }, function () { });
+
+
+
     };
 
     $scope.BTN_SEND_REQUEST = function () {
@@ -582,10 +591,13 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     };
 
     $scope.BTN_SAVE_DH = function () {
-        
+        $scope.LIST_DH.EXP_DATE = Date.now;
+        $scope.LIST_DH.MFD_DATE = Date.now;
+        $scope.LIST_DH.rcvdate = Date.now;
         var Getdata = CENTER_SV.INSERT_DH($scope.LIST_DH, $scope.PROCESS_ID);
         Getdata.then(function (datas) {
-            if (datas.data.Result == "success") {
+            $scope.result = datas.data;
+            if ($scope.result == "success") {
                 Swal.fire({
                     title: 'SUCCESS',
                     text: 'บันทึกข้อมูลเรียบร้อย',
