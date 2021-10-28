@@ -8,7 +8,7 @@ End Code
 
 <div ng-app="ANGULAR_APP" ng-controller="LCN_CTRL" ng-init="EDIT_LCN()">
     <div class="ic">
-        <div ng-show="LIST_LCN.dalcn.PROCESS == '101'">
+        <div ng-show="LIST_LCN.dalcn.PROCESS_ID == '101'">
             <div style="font-family:'Taviraj';font-size:24px;width:100%">
                 <h1 style="text-align:right;font-size:24px;">
                     <strong>แบบ ข.ย.๑</strong>
@@ -489,5 +489,11 @@ End Code
         <div ng-show="LIST_LCN.dalcn.PROCESS == '103'">
 
         </div>
+        <br />
+        <div style="text-align:center">
+            <input type="button" class="btn btn-lg" ng-click="BTN_SEND_REQUEST()" value="บันทึกและส่งเรื่องคืนเจ้าหน้าที่" />
+            <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+        </div>
     </div>
+
 </div>

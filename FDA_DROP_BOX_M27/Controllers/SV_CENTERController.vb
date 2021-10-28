@@ -858,18 +858,18 @@ Namespace Controllers
             Next
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
-        Function GET_LCN_INFORMATION_INPUT_V2(ByVal IDENTIFY As String, ByVal LCT_IDA As String) As JsonResult
+        Function GET_LCN_INFORMATION_INPUT_V2(ByVal IDENTIFY As String, ByVal LCT_IDA As String, ByVal LCN_IDA As String) As JsonResult
             Dim model As New MODEL_LCN
             Dim bao As New BAO
 
             model.IDENTIFY = IDENTIFY
             Dim lcnno_auto As String = ""
             Dim lcnno_format As String = ""
-            Dim HEAD_LCN_IDA As Integer = 0
+            ''Dim HEAD_LCN_IDA As Integer = 0
             Try
-                If HEAD_LCN_IDA <> 0 Then
+                If LCN_IDA <> 0 Then
                     Dim dao_main As New DAO_DRUG.ClsDBdalcn
-                    dao_main.GetDataby_IDA(HEAD_LCN_IDA)
+                    dao_main.GetDataby_IDA(LCN_IDA)
                     Try
                         lcnno_auto = dao_main.fields.lcnno
                     Catch ex As Exception
@@ -890,9 +890,10 @@ Namespace Controllers
                     End Try
 
                     model.HEAD_LCNNO_NCT = lcnno_format
+                    model.dalcn = dao_main.fields
 
                     Dim dao_phr As New DAO_DRUG.ClsDBDALCN_PHR
-                    dao_phr.GetDataby_FK_IDA(HEAD_LCN_IDA)
+                    dao_phr.GetDataby_FK_IDA(LCN_IDA)
 
                     Try
                         model.DALCN_PHR = dao_phr.fields

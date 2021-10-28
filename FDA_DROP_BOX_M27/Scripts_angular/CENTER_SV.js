@@ -349,13 +349,14 @@
         return response;
     };
 
-    this.GET_LCN_INFORMATION_INPUT_V2 = function ( IDENTIFY, LCT_IDA) {
+    this.GET_LCN_INFORMATION_INPUT_V2 = function ( IDENTIFY, LCT_IDA, LCN_IDA) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/GET_LCN_INFORMATION_INPUT_V2"),
             params: {
                 IDENTIFY: IDENTIFY,
-                LCT_IDA: LCT_IDA
+                LCT_IDA: LCT_IDA,
+                LCN_IDA: LCN_IDA
             }
         });
         return response;

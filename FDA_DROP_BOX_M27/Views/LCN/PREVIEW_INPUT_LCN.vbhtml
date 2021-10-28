@@ -182,8 +182,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -405,6 +405,23 @@
             <div style="margin-left:10%;font-size:20px">(๖) สำเนาหรือรูปถ่ายใบอนุญาตประกอบวิชาชีพเภสัชกรรมของเภสัชกรทุกคน ซึ่งรับจะเป็นผู้มีหน้าที่ปฏิบัติการของผู้ขออนุญาต</div>
             <div style="margin-left:10%;font-size:20px">(๗) เอกสารแสดงว่าเป็นผู้ดำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
             <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <br />
             <br />
             <table style="font-size:20px;width:40%;float:right">
@@ -11537,9 +11554,13 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
-        <input type="button" class="btn btn-lg" ng-click="BTN_SEND_LCN()" value="ยื่นคำขอ" ng-disabled="" />
-        <input type="button" class="btn btn-lg btn-success" ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
-        <input type="button" class="btn btn-lg btn-success" ng-click="BTN_EDIT()" value="แก้ไขคำขอ" ng-show="" />
+    <br />
+    <div>
+        <div class="col-sm-12" style="text-align:center">
+            <input type="button" class="btn btn-lg" ng-click="BTN_SEND_LCN()" value="ยื่นคำขอ" ng-disabled="" />
+            <input type="button" class="btn btn-lg btn-success" ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
+            <input type="button" class="btn btn-lg btn-success" ng-click="BTN_EDIT()" value="แก้ไขคำขอ" ng-show="LIST_LCN.dalcn.STATUS_ID == '5'" />
+        </div>
     </div>
+    
 </div>

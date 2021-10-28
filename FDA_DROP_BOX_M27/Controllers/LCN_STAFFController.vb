@@ -45,6 +45,9 @@ Namespace Controllers
         Function PREVIEW_LCN_STAFF() As ActionResult
             Return View()
         End Function
+        Function FRM_EDIT_REQUEST() As ActionResult
+            Return View()
+        End Function
     End Class
 
     Public Class LCN_STAFFCENTERController

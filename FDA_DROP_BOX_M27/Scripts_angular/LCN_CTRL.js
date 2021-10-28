@@ -463,7 +463,7 @@
     };
 
     $scope.BTN_EDIT = function () {
-        REDIRECT('/LCN/FRM_LCN_EDIT_REQUEST');
+        REDIRECT('/LCN/FRM_LCN_EDIT_RETURN');
     };
 
     $scope.BTN_INPUT = function () {
@@ -656,7 +656,7 @@
 
     $scope.EDIT_LCN = function () {
         var process = sessionStorage.PROCESS;
-        var LCN_IDA = sessionStorage.LCN_ID;
+        var LCN_IDA = sessionStorage.LCN_IDA;
         if (process == '101') {
             sessionStorage.HEAD_LCN_IDA = LCN_IDA;
             $scope.lcnnoType = '(ขย1)';
@@ -688,7 +688,7 @@
             $scope.DOC_LIST = datas.data;
         }, function () { });
 
-        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT_V2(sessionStorage.CITIZEN_ID_AUTHORIZE, sessionStorage.LCT_IDA);
+        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT_V2(sessionStorage.CITIZEN_ID_AUTHORIZE, sessionStorage.LCT_IDA, LCN_IDA);
         MODLE_LCN.then(function (datas) {
 
             $scope.LIST_LCN = datas.data;
@@ -827,48 +827,57 @@
     $scope.pageload = function () {
 
         var process = sessionStorage.PROCESS;
-        if (process == '101') {
-            sessionStorage.HEAD_LCN_IDA = 0;
-            $scope.lcnnoType = '(ขย1)';
-        } else if (process == '103') {
-            sessionStorage.HEAD_LCN_IDA = 0;
-            $scope.lcnnoType = '(ขย3)';
-        } else if (process == '104') {
-            sessionStorage.HEAD_LCN_IDA = 0;
-            $scope.lcnnoType = '(ขย4)';
-        } else if (process == '105') {
-            sessionStorage.HEAD_LCN_IDA = 0;
-            $scope.lcnnoType = '(นย1)';
-        } else if (process == '106') {
-            sessionStorage.HEAD_LCN_IDA = 0;
-            $scope.lcnnoType = '(ผย1)';
-        } else if (process == '107') {
-            sessionStorage.HEAD_LCN_IDA = 0;
-            $scope.lcnnoType = '(ขยบ)';
-        } else if (process == '108') {
-            sessionStorage.HEAD_LCN_IDA = 0;
-            $scope.lcnnoType = '(นยบ)';
-        } else if (process == '109') {
-            sessionStorage.HEAD_LCN_IDA = 0;
-            $scope.lcnnoType = '(ผยบ)';
-        } else $scope.lcnnoType = '';
+        var LCN_IDA = sessionStorage.LCN_IDA;
+        //if (process == '101') {
+        //    sessionStorage.HEAD_LCN_IDA = 0;
+        //    $scope.lcnnoType = '(ขย1)';
+        //} else if (process == '103') {
+        //    sessionStorage.HEAD_LCN_IDA = 0;
+        //    $scope.lcnnoType = '(ขย3)';
+        //} else if (process == '104') {
+        //    sessionStorage.HEAD_LCN_IDA = 0;
+        //    $scope.lcnnoType = '(ขย4)';
+        //} else if (process == '105') {
+        //    sessionStorage.HEAD_LCN_IDA = 0;
+        //    $scope.lcnnoType = '(นย1)';
+        //} else if (process == '106') {
+        //    sessionStorage.HEAD_LCN_IDA = 0;
+        //    $scope.lcnnoType = '(ผย1)';
+        //} else if (process == '107') {
+        //    sessionStorage.HEAD_LCN_IDA = 0;
+        //    $scope.lcnnoType = '(ขยบ)';
+        //} else if (process == '108') {
+        //    sessionStorage.HEAD_LCN_IDA = 0;
+        //    $scope.lcnnoType = '(นยบ)';
+        //} else if (process == '109') {
+        //    sessionStorage.HEAD_LCN_IDA = 0;
+        //    $scope.lcnnoType = '(ผยบ)';
+        //} else $scope.lcnnoType = '';
 
         var getData_LIST = CENTER_SV.SETMODEL_LIST_LCN(process);
         getData_LIST.then(function (datas) {
             $scope.DOC_LIST = datas.data;
         }, function () { });
 
-        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT_V2(sessionStorage.CITIZEN_ID_AUTHORIZE, sessionStorage.LCT_IDA);
+        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT_V2(sessionStorage.CITIZEN_ID_AUTHORIZE, sessionStorage.LCT_IDA, LCN_IDA);
         MODLE_LCN.then(function (datas) {
 
             $scope.LIST_LCN = datas.data;
             $scope.LIST_LCN.PROCESS = sessionStorage.PROCESS;
             $scope.LIST_LCN.session = sessionStorage;
             //$scope.LIST_LCN.PROCESS = "101";
+            var TR_ID = $scope.LIST_LCN.dalcn.TR_ID;
+            var PROCESS = $scope.LIST_LCN.dalcn.PROCESS_ID;
+
+            var File = CENTER_SV.GETDATA_FILE_TR_ID_TYPE(TR_ID, PROCESS);
+            File.then(function (datas) {
+                $scope.LIST_File = datas.data;
+            }, function () { });
+
         }, function () { });
 
         
-        var MODEL_HEAD = CENTER_SV.GET_HEAD_LCN_INFORMATION_INPUT(sessionStorage.HEAD_LCN_IDA);
+        var MODEL_HEAD = CENTER_SV.GET_HEAD_LCN_INFORMATION_INPUT(LCN_IDA);
         MODEL_HEAD.then(function (datas) {
 
             $scope.LIST_HEAD_LCN = datas.data;
@@ -1354,7 +1363,44 @@
         }
     };
 
+    $scope.BTN_BACK = function () {
+        REDIRECT('/LCN/FRM_LCN_NEWS');
+    };
+
     $scope.BTN_SEND_LCN = function () {
+        Swal.fire({
+            title: 'คุณต้องการส่งใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนส่ง!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการส่งข้อมูล',
+            cancelButtonText: 'ยกเลิก'
+        }).then((result) => {
+            if (result.value) {
+                success_data('SUCCESS');
+                REDIRECT('/LCN/FRM_LCN_NEWS');
+            }
+        });
+    };
+
+    $scope.BTN_SEND_REQUEST = function () {
+        Swal.fire({
+            title: 'คุณต้องการส่งใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนส่ง!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการส่งข้อมูล',
+            cancelButtonText: 'ยกเลิก'
+        }).then((result) => {
+            if (result.value) {
+                success_data('SUCCESS');
+                REDIRECT('/LCN/FRM_LCN_NEWS');
+            }
+        });
 
     };
 });

@@ -8,11 +8,14 @@
     var IDENTIFY = sessionStorage.CITIZEN_ID_AUTHORIZE;
     var HEAD_LCN_IDA = sessionStorage.HEAD_LCN_IDA;
     
-    //Pageload();
+    Pageload();
 
-    //function Pageload() {
-
-    //}
+    function Pageload() {
+        var getData_LIST = CENTER_SV.SETMODEL_LIST();
+        getData_LIST.then(function (datas) {
+            $scope.DOC_LIST = datas.data;
+        }, function () { });
+    }
 
     $scope.LoadPreview = function () {
         var process = sessionStorage.PROCESS;
@@ -43,10 +46,10 @@
             $scope.lcnnoType = '(ผยบ)';
         } else $scope.lcnnoType = '';
 
-        var getData_LIST = CENTER_SV.SETMODEL_LIST_LCN(process);
-        getData_LIST.then(function (datas) {
-            $scope.DOC_LIST = datas.data;
-        }, function () { });
+        //var getData_LIST = CENTER_SV.SETMODEL_LIST_LCN(process);
+        //getData_LIST.then(function (datas) {
+        //    $scope.DOC_LIST = datas.data;
+        //}, function () { });
 
         var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT_V2(sessionStorage.CITIZEN_ID_AUTHORIZE, sessionStorage.LCT_IDA);
         MODLE_LCN.then(function (datas) {
@@ -123,6 +126,10 @@
         
     };
 
+    $scope.BTN_BACK = function () {
+        REDIRECT('/AUTHEN/FRM_STAFF_MAIN');
+    };
+
     $scope.BTN_LCN_CONFIRM = function (STATUS_ID) {
         Swal.fire({
             title: 'คุณต้องการส่งใช่หรือไม่ ?',
@@ -152,5 +159,47 @@
                     REDIRECT('/KCN_STAFF/FRM_DH_STAFF_REMARK');
             }
         });
+    };
+
+    $scope.BTN_REQUEST = function (DES, REQUEST_DATE) {
+        Swal.fire({
+            title: 'คุณต้องการส่งใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนส่ง!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการส่งข้อมูล',
+            cancelButtonText: 'ยกเลิก'
+        }).then((result) => {
+            if (result.value) {
+                success_data('SUCCESS');
+                REDIRECT('/AUTHEN/FRM_STAFF_MAIN');
+            }
+        });
+        
+    };
+
+    $scope.ADD_FILE_LIST = function () {
+        var obj = {
+            TR_ID: '',
+            DES: '',
+            FILENAME: '',
+            FILE_DATA: '',
+            PATH: '',
+            FLAG: '',
+            TYPE: '',
+            SIZE: 0
+        };
+        $scope.DOC_LIST.FILE_LISTs.push(obj);
+    };
+    $scope.deleteRow = function (datas, i) {
+
+        if (datas.PIORITY == 'HIGH') {
+            ERR_DATA(datas.DES + ' : เป็นเอกสารบังคับไม่สามารถลบออกได้');
+        } else if (datas.PIORITY == 'LOW') {
+            ERR_DATA(datas.DES + ' : ไม่สามารถลบออกได้');
+        } else 
+            $scope.DOC_LIST.FILE_LISTs.splice(i, 1);
     };
 });
