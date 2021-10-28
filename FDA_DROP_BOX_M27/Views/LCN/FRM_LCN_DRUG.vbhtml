@@ -2,11 +2,11 @@
     ViewData("Title") = "FRM_LCN_DRUG"
     Layout = ""
 End Code
-@*<link rel="stylesheet" href="../dist/listree.min.css" />*@
-@*<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
+<link rel="stylesheet" href="../dist/listree.min.css" />
+<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
-<script src="~/Scripts_angular/LCN_CTRL.js"></script>*@
-@*<link href="../css/bootstrap_limitless.min.css" rel="stylesheet" />*@
+<script src="~/Scripts_angular/LCN_CTRL.js"></script>
+<link href="../css/bootstrap_limitless.min.css" rel="stylesheet" />
 
 <div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP">
     <div style="width:100%;font-family:'Taviraj'">

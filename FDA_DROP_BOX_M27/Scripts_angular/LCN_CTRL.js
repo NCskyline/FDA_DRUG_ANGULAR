@@ -462,6 +462,10 @@
 
     };
 
+    $scope.BTN_EDIT = function () {
+        REDIRECT('/LCN/FRM_LCN_EDIT_REQUEST');
+    };
+
     $scope.BTN_INPUT = function () {
 
         if (sessionStorage.PROCESS == '101') {
@@ -1114,12 +1118,6 @@
         });
     };
 
-    $scope.BTN_BACK = function () {
-        REDIRECT('/LCN/FRM_LCN_NEWS');
-    };
-
-   
-
     $scope.BTN_LCN_BACK = function () {
         //REDIRECT('/LCN/FRM_LCN_DRUG?PROCESS=' + sessionStorage.PROCESS);
         REDIRECT('/LCN/FRM_LCN_NEWS');
@@ -1127,6 +1125,7 @@
 
     $scope.BTN_PREVIEW = function (data) {
         sessionStorage.LCN_IDA = data.IDA;
+        sessionStorage.PROCESS_ID = data.PROCESS_ID;
         REDIRECT('/LCN/PREVIEW_INPUT_LCN');
     };
 
@@ -1353,5 +1352,9 @@
                 datas.FILENAME = '';
             }
         }
+    };
+
+    $scope.BTN_SEND_LCN = function () {
+
     };
 });
