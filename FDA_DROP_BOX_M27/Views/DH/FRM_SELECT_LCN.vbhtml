@@ -26,7 +26,7 @@ End Code*@
         <hr />
         <div class="row">
             <div class="col-sm-12">
-                <div class="card" ng-repeat="datas in LIST_LCN | filter : filter" style=" border-top: 10px solid #277210;">
+                <div class="card" ng-repeat="datas in LIST_LCN | filter : filter" style=" border-top: 10px solid #F9D027;">
 
                     <div class="card-body" style="padding:unset;font-size: 15px;">
                         <div class="row">

@@ -446,6 +446,17 @@
         });
         return response;
     };
+    
+    this.SP_STAFF_DH15RQT_V2 = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STAFF_DH15RQT_V2"),
+            //params: {
+            //    identify: IDENTIFY
+            //}
+        });
+        return response;
+    };
 
     this.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR = function (IDENTIFY , _year) {
         var response = $http({
