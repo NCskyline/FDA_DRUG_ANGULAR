@@ -58,7 +58,7 @@ function CHK_TOKEN() {
         TOKEN = sessionStorage.token;
         THANM_DATA = sessionStorage.THANM;
         CITIZEN_ID_AUTHORIZE = sessionStorage.CITIZEN_ID_AUTHORIZE;
-        LCN_ID = sessionStorage.LCN_ID;
+        LCN_ID = sessionStorage.LCN_IDA;
         LCNNO = sessionStorage.LCNNO;
         LCN_TYPE = sessionStorage.LCN_TYPE;
         LCN_ADDR = sessionStorage.LCN_ADDR;

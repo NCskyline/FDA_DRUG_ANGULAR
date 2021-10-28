@@ -6,9 +6,9 @@ End Code
     <script src="~/Scripts_angular/CENTER_SV.js"></script>
     <script src="~/Scripts_angular/LCN_CTRL.js"></script>
 
-<div ng-app="ANGULAR_APP" ng-controller="LCN_CTRL">
-    <div class="ic" >
-        <div ng-show="LIST_LCN.dalcn.P">
+<div ng-app="ANGULAR_APP" ng-controller="LCN_CTRL" ng-init="EDIT_LCN()">
+    <div class="ic">
+        <div ng-show="LIST_LCN.dalcn.PROCESS == '101'">
             <div style="font-family:'Taviraj';font-size:24px;width:100%">
                 <h1 style="text-align:right;font-size:24px;">
                     <strong>แบบ ข.ย.๑</strong>
@@ -448,6 +448,46 @@ End Code
                 ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ
             </div>
             <br />
+        </div>
+        <div class="row">
+            <div class="col-sm-12" style="width:100%">
+                <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
+                    <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
+                        หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
+                    </div>
+                    <div class="card-header" ng-show="datas.PIORITY=='LOW'">
+                        หัวข้อเอกสาร (ไม่บังคับแนบ)
+                    </div>
+                    <div class="card-body">
+
+                        <table class="table" style="width:100%">
+                            <tr>
+                                <td colspan="5">
+                                    {{datas.DES}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:15%;"><input id="file-input" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                                <td style="width:10%;">ชื่อไฟล์</td>
+                                <td style="width:50%;">{{datas.FILENAME}}</td>
+                                <td style="width:5%">
+                                    <a ng-click="OPEN_DOC_PATH(datas.PATH)">{{FLAG}}</a>
+                                </td>
+                                <td style="width:20%; text-align: right;">
+                                    @*<input type="button" ng-click="UPLOAD_PDFs(datas)" value="บันทึก" />*@
+                                    @*<input type="button" ng-click="deleteRow(datas,$index)" value="ลบ" />*@
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div ng-show="LIST_LCN.dalcn.PROCESS == '103'">
+
         </div>
     </div>
 </div>

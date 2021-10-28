@@ -16,29 +16,30 @@
 
     $scope.LoadPreview = function () {
         var process = sessionStorage.PROCESS;
+        var LCN_IDA = sessionStorage.LCN_IDA;
         if (process == '101') {
-            sessionStorage.HEAD_LCN_IDA = 0;
+            sessionStorage.HEAD_LCN_IDA = LCN_IDA;
             $scope.lcnnoType = '(ขย1)';
         } else if (process == '103') {
-            sessionStorage.HEAD_LCN_IDA = 0;
+            sessionStorage.HEAD_LCN_IDA = LCN_IDA;
             $scope.lcnnoType = '(ขย3)';
         } else if (process == '104') {
-            sessionStorage.HEAD_LCN_IDA = 0;
+            sessionStorage.HEAD_LCN_IDA = LCN_IDA;
             $scope.lcnnoType = '(ขย4)';
         } else if (process == '105') {
-            sessionStorage.HEAD_LCN_IDA = 0;
+            sessionStorage.HEAD_LCN_IDA = LCN_IDA;
             $scope.lcnnoType = '(นย1)';
         } else if (process == '106') {
-            sessionStorage.HEAD_LCN_IDA = 0;
+            sessionStorage.HEAD_LCN_IDA = LCN_IDA;
             $scope.lcnnoType = '(ผย1)';
         } else if (process == '107') {
-            sessionStorage.HEAD_LCN_IDA = 0;
+            sessionStorage.HEAD_LCN_IDA = LCN_IDA;
             $scope.lcnnoType = '(ขยบ)';
         } else if (process == '108') {
-            sessionStorage.HEAD_LCN_IDA = 0;
+            sessionStorage.HEAD_LCN_IDA = LCN_IDA;
             $scope.lcnnoType = '(นยบ)';
         } else if (process == '109') {
-            sessionStorage.HEAD_LCN_IDA = 0;
+            sessionStorage.HEAD_LCN_IDA = LCN_IDA;
             $scope.lcnnoType = '(ผยบ)';
         } else $scope.lcnnoType = '';
 
@@ -54,6 +55,12 @@
             $scope.LIST_LCN.PROCESS = sessionStorage.PROCESS;
             $scope.LIST_LCN.session = sessionStorage;
             //$scope.LIST_LCN.PROCESS = "101";
+        }, function () { });
+
+        var data_stat = CENTER_SV.SP_STATUS_SELECT_LCN_STAFF(LCN_IDA, 2);
+        data_stat.then(function (datas) {
+            $scope.STAT_LIST = datas.data;
+
         }, function () { });
 
 
@@ -112,5 +119,38 @@
         dataPHR.then(function (datas) {
             $scope.DATA_PHR_SHOW = datas.data;
         }, function () { });
+
+        
+    };
+
+    $scope.BTN_LCN_CONFIRM = function (STATUS_ID) {
+        Swal.fire({
+            title: 'คุณต้องการส่งใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนอนุมัติ!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการส่งข้อมูล',
+            cancelButtonText: 'ยกเลิก'
+        }).then((result) => {
+            if (result.value) {
+                if (STATUS_ID == '3') {
+                    success_data('success');
+
+                    var data_stat = CENTER_SV.SP_STATUS_SELECT_LCN_STAFF(sessionStorage.IDA, 2);
+                    data_stat.then(function (datas) {
+                        $scope.STAT_LIST = datas.data;
+
+                    }, function () { });
+
+
+                    
+                } else if (STATUS_ID == '5') {
+                    REDIRECT('/LCN_STAFF/FRM_EDIT_REQUEST');
+                } else
+                    REDIRECT('/KCN_STAFF/FRM_DH_STAFF_REMARK');
+            }
+        });
     };
 });

@@ -1508,7 +1508,7 @@ Namespace Controllers
                     End Try
 
                     model.HEAD_LCNNO_NCT = lcnno_format
-
+                    model.dalcn = dao_main.fields
 
                 End If
 
