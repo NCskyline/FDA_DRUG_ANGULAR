@@ -11501,8 +11501,36 @@ End Code
             </div>
             @*-------------------------------------------------------------------*@
 
-        <div class="part part-1-3 ic">
+    <div class="part part-1-3 ic">
+        <div class="card">
+            <table class="table">
+                <tr>
+                    <td>
+                        สถานะ
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select style="font-family:'Taviraj';font-size:20px;" ng-model="STATUS_ID" class="form-control">
+                            <option ng-repeat="x in STAT_LIST" value="{{x.STATUS_ID}}">{{x.STATUS_NAME}}</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
 
+            <br />
+            <div align="center">
+                <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_LCN_CONFIRM(STATUS_ID)" value="บันทึก" />
+            </div>
+            <br />
+            <div align="center">
+                <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_BACK()" value="ย้อนกลับ" />
+            </div>
+            <br />
+            <div>
+
+            </div>
         </div>
+    </div>
     </div>
 </div>
