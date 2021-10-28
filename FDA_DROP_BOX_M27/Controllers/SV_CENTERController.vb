@@ -45,6 +45,14 @@ Namespace Controllers
 
         End Function
 
+        Function SP_STAFF_DH15RQT_V2() As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_STAFF_DH15RQT_V2()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
         Function SP_STAFF_OFFER_DDL_BY_PVNCD(ByVal PVCODE As String) As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO

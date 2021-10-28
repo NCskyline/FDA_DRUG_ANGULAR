@@ -218,6 +218,12 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 }, function () { });
             } else if (SEQ == '3') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_CHEMICAL_STAFF_MAIN');
+            } else if (SEQ == '4') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_DH_SEARCH');
+                var dataLo1 = CENTER_SV.SP_STAFF_DH15RQT_V2();
+                dataLo1.then(function (datas) {
+                    $scope.LIST_DRM = datas.data;
+                }, function () { });
             }
         }
     };
