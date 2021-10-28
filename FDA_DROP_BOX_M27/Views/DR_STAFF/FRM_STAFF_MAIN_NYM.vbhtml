@@ -30,7 +30,7 @@ End Code
             <h1>นยม. 2</h1>
             <div class="row">
                 <div class="col-sm-12" style="width:100%;">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'" class="table" id="myTable" datatable="ng">
                             <thead style="font-weight:300;">
                                 <tr>
@@ -72,7 +72,7 @@ End Code
             <h1>นยม. 3</h1>
             <div class="row">
                 <div class="col-sm-12" style="width:100%;">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'" class="table" id="myTable" datatable="ng">
                             <thead style="font-weight:300;">
                                 <tr>
@@ -114,7 +114,7 @@ End Code
             <h1>นยม4 (รัฐ)</h1>
             <div class="row">
                 <div class="col-sm-12" style="width:100%;">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'" class="table" id="myTable" datatable="ng">
                             <thead style="font-weight:300;">
                                 <tr>
@@ -156,7 +156,7 @@ End Code
             <h1>นยม. 4 (เอกชน)</h1>
             <div class="row">
                 <div class="col-sm-12" style="width:100%;">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'" class="table" id="myTable" datatable="ng">
                             <thead style="font-weight:300;">
                                 <tr>
