@@ -53,7 +53,7 @@ End Code
                 </td>
             </tr>
         </table>
-        <table>
+        <table width="100%">
             <tr>
                 <td>
                     วันที่ที่ออกใบรับรอง (Issue Date)
@@ -83,6 +83,7 @@ End Code
                 <td>
                     <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
+                <td style="width:5px;"></td>
                 <td>
                     ประเทศ (Country)
                 </td>

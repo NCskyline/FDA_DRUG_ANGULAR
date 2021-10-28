@@ -1,8 +1,10 @@
 ﻿@Code
     ViewData("Title") = "FRM_EDIT_REQUEST"
 End Code
-
-    <div ng-controller="" ng-app="ANGULAR_APP">
+    <script src="~/Scripts_angular/ANGULAR_APP.js"></script>
+    <script src="~/Scripts_angular/CENTER_SV.js"></script>
+    <script src="~/Scripts_angular/LCN_STAFF_CTRL.js"></script>
+    <div ng-controller="LCN_STAFF_CTRL" ng-app="ANGULAR_APP">
         <div class="ic">
             <div>
                 <div class="row">
@@ -20,18 +22,18 @@ End Code
                     </div>
                 </div>
                 <br />
-                @*<div class="row">
+                <div class="row">
                     <div class="col-sm-3 set-topic">
                         กำหนดส่งเอกสาร :
                     </div>
                     <div class="col-sm-9">
-                        <md-datepicker ng-model="datas.MFD_DATE" md-placeholder="Enter date"
+                        <md-datepicker ng-model="REQUEST_DATE" md-placeholder="Enter date"
                                        input-aria-describedby="datepicker-description"
                                        input-aria-labelledby="datepicker-header ">
 
                         </md-datepicker>
                     </div>
-                </div>*@
+                </div>
             </div>
 
             <div class="row" style="padding-top: 30px;">
@@ -77,7 +79,7 @@ End Code
                 </div>
 
                 <div class="col-sm-12" style="text-align:center;margin-bottom:20px;">
-                    <input type="button" class="btn btn-lg btn-success" ng-click="ADD_DATA1(DES)" value="บันทึก" />
+                    <input type="button" class="btn btn-lg btn-success" ng-click="BTN_REQUEST(DES,REQUEST_DATE)" value="บันทึก" />
                 </div>
             </div>
 

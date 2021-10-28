@@ -10,6 +10,7 @@ End Code
 
     <div class="content-part no-pm" style="font-family:'Taviraj'">
         <div class="part part-1-3">
+            <br />
             <div align="center"><h3>ระบบจัดการ</h3></div>
             <div ng-repeat="datas in SET_MAIN_PAGE1">
                 <div class="l-sign"><span class="ss"></span></div>
@@ -24,6 +25,7 @@ End Code
                 </div>
 
             </div>
+            <br />
 
             <div align="center"><h3>ระบบสถานที่ด้านยา</h3></div>
             <div ng-repeat="datas in SET_MAIN_PAGE2">
@@ -31,7 +33,7 @@ End Code
                 <div>
                     <div data-target="s1" class="l-item s{{$index+1}}">
                         <span ng-show="loadarray[$index].LOADING" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.BTN_GROUP , datas.IDgroup , datas.SEQ)" style="width:100%;background-color:darkgrey">
+                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.BTN_GROUP , datas.IDgroup , datas.SEQ)" style="width:100%;background-color:#EEEEE6">
                             @*<i class="h-icon fas fa-bookmark"></i>*@
                             {{datas.BTN_NAME}}
                         </div>
@@ -39,6 +41,7 @@ End Code
                 </div>
 
             </div>
+            <br />
 
             <div align="center"><h3>ระบบผลิตภัณฑ์ยา</h3></div>
             <div ng-repeat="datas in SET_MAIN_PAGE3">
@@ -46,7 +49,7 @@ End Code
                 <div>
                     <div data-target="s1" class="l-item s{{$index+1}}">
                         <span ng-show="loadarray[$index].LOADING" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.BTN_GROUP , datas.IDgroup , datas.SEQ)" style="width:100%;background-color:darkgrey">
+                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.BTN_GROUP , datas.IDgroup , datas.SEQ)" style="width:100%;background-color:#EEEEE6">
                             @*<i class="h-icon fas fa-bookmark"></i>*@
                             {{datas.BTN_NAME}}
                         </div>
@@ -54,6 +57,7 @@ End Code
                 </div>
 
             </div>
+            <br />
 
             <div align="center"><h3>ระบบเภสัชเคมีภัณฑ์</h3></div>
             <div ng-repeat="datas in SET_MAIN_PAGE4">
@@ -61,7 +65,7 @@ End Code
                 <div>
                     <div data-target="s1" class="l-item s{{$index+1}}">
                         <span ng-show="loadarray[$index].LOADING" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.BTN_GROUP , datas.IDgroup , datas.SEQ)" style="width:100%;background-color:darkgrey">
+                        <div class="l-text hide-xs button" ng-click="BTN_SUB_MENU_CLICK(datas.BTN_GROUP , datas.IDgroup , datas.SEQ)" style="width:100%;background-color:#EEEEE6">
                             @*<i class="h-icon fas fa-bookmark"></i>*@
                             {{datas.BTN_NAME}}
                         </div>

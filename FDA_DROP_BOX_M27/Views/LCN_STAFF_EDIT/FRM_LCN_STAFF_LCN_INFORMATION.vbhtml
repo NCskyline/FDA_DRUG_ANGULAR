@@ -199,7 +199,7 @@
 
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table style="margin-top:10px;width:100%;" class="table table-condensed">
                             <thead>
                                 <tr>
@@ -246,7 +246,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
+                <div class="card" style=" border-top: 10px solid #F9D027;">
                     <table style="margin-top:10px;width:100%;" class="table table-condensed">
                         <thead>
                             <tr>
@@ -288,7 +288,7 @@
         </table>
         <div class="row">
             <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
+                <div class="card" style=" border-top: 10px solid #F9D027;">
                     <table style="margin-top:10px;width:100%;" class="table table-condensed">
                         <thead>
                             <tr>
@@ -334,7 +334,7 @@
         </table>
         <div class="row">
             <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
+                <div class="card" style=" border-top: 10px solid #F9D027;">
                     <table style="margin-top:10px;width:100%;" class="table table-condensed">
                         <thead>
                             <tr>
@@ -374,7 +374,7 @@
         </table>
         <div class="row">
             <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
+                <div class="card" style=" border-top: 10px solid #F9D027;">
                     <table style="margin-top:10px;width:100%;" class="table table-condensed">
                         <thead>
                             <tr>
