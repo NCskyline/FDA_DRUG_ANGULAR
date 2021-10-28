@@ -219,6 +219,18 @@
         return response;
     };
 
+    this.SP_STATUS_SELECT_LCN_STAFF = function (IDA, STAT_GROUP) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/LCN_STAFFCENTER/SP_STATUS_SELECT_LCN_STAFF"),
+            params: {
+                IDA: IDA,
+                STAT_GROUP: STAT_GROUP
+            }
+        });
+        return response;
+    };
+
     this.SP_STAFF_EXTEND = function (_GROUP,PVCODE) {
         var response = $http({
             method: "post",
@@ -427,6 +439,17 @@
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/SP_DRRGT_SUBSTITUTE_STAFF"),
+            //params: {
+            //    identify: IDENTIFY
+            //}
+        });
+        return response;
+    };
+    
+    this.SP_STAFF_DH15RQT_V2 = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STAFF_DH15RQT_V2"),
             //params: {
             //    identify: IDENTIFY
             //}
