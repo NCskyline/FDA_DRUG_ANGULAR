@@ -314,7 +314,7 @@
 
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -337,7 +337,7 @@
             <h3>เภสัชกร</h3>
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -730,7 +730,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <br />
             <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
+                <div class="card" style=" border-top: 10px solid #F9D027;">
                     <table width="100%" style="font-family:'Taviraj'">
                         <thead>
                             <tr>
@@ -884,7 +884,7 @@
             <br />
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -1274,7 +1274,7 @@
             <br />
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
+                <div class="card" style=" border-top: 10px solid #F9D027;">
                     <table width="100%" style="font-family:'Taviraj'">
                         <thead>
                             <tr>
@@ -1346,7 +1346,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -1701,7 +1701,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -1800,7 +1800,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -2226,7 +2226,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -2312,7 +2312,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -2617,7 +2617,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -2698,7 +2698,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -2998,7 +2998,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -3079,7 +3079,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -3379,7 +3379,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -3460,7 +3460,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -3935,7 +3935,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -4016,7 +4016,7 @@
             <br />
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
+                <div class="card" style=" border-top: 10px solid #F9D027;">
                     <table width="100%" style="font-family:'Taviraj'">
                         <thead>
                             <tr>
@@ -4623,7 +4623,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -4704,7 +4704,7 @@
             <br />
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
+                <div class="card" style=" border-top: 10px solid #F9D027;">
                     <table width="100%" style="font-family:'Taviraj'">
                         <thead>
                             <tr>
@@ -5243,7 +5243,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -5421,7 +5421,7 @@
             <br />
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
+                <div class="card" style=" border-top: 10px solid #F9D027;">
                     <table width="100%" style="font-family:'Taviraj'">
                         <thead>
                             <tr>
@@ -5961,7 +5961,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -6139,7 +6139,7 @@
             <br />
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
+                <div class="card" style=" border-top: 10px solid #F9D027;">
                     <table width="100%" style="font-family:'Taviraj'">
                         <thead>
                             <tr>
@@ -6698,7 +6698,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -7245,7 +7245,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -7771,7 +7771,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -7948,7 +7948,7 @@
             <br />
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
+                <div class="card" style=" border-top: 10px solid #F9D027;">
                     <table width="100%" style="font-family:'Taviraj'">
                         <thead>
                             <tr>
@@ -8497,7 +8497,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -8674,7 +8674,7 @@
             <br />
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
+                <div class="card" style=" border-top: 10px solid #F9D027;">
                     <table width="100%" style="font-family:'Taviraj'">
                         <thead>
                             <tr>
@@ -9101,7 +9101,7 @@
                 @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="card" style=" border-top: 10px solid #277210;">
+                        <div class="card" style=" border-top: 10px solid #F9D027;">
                             <table width="100%" style="font-family:'Taviraj'">
                                 <thead>
                                     <tr>
@@ -9457,7 +9457,7 @@
                 @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="card" style=" border-top: 10px solid #277210;">
+                        <div class="card" style=" border-top: 10px solid #F9D027;">
                             <table width="100%" style="font-family:'Taviraj'">
                                 <thead>
                                     <tr>
@@ -9813,7 +9813,7 @@
                 @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="card" style=" border-top: 10px solid #277210;">
+                        <div class="card" style=" border-top: 10px solid #F9D027;">
                             <table width="100%" style="font-family:'Taviraj'">
                                 <thead>
                                     <tr>
@@ -10329,7 +10329,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -10407,7 +10407,7 @@
             <br />
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
+                <div class="card" style=" border-top: 10px solid #F9D027;">
                     <table width="100%" style="font-family:'Taviraj'">
                         <thead>
                             <tr>
@@ -10976,7 +10976,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -11054,7 +11054,7 @@
             <br />
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />*@
             <div class="col-sm-12">
-                <div class="card" style=" border-top: 10px solid #277210;">
+                <div class="card" style=" border-top: 10px solid #F9D027;">
                     <table width="100%" style="font-family:'Taviraj'">
                         <thead>
                             <tr>
@@ -11463,7 +11463,7 @@
                 @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="card" style=" border-top: 10px solid #277210;">
+                        <div class="card" style=" border-top: 10px solid #F9D027;">
                             <table width="100%" style="font-family:'Taviraj'">
                                 <thead>
                                     <tr>
