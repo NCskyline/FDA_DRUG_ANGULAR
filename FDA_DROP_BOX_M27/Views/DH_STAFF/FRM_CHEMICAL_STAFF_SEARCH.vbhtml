@@ -39,21 +39,21 @@ End Code
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="data in LIST_GMP.CER_DETAIL_CASCHEMICAL">
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>ดูข้อมูล</td>
+            <tr ng-repeat="data in LIST_CHEM">
+                <td>{{data.IDA}}</td>
+                <td>{{data.cas_number}}</td>
+                <td>{{data.iowanm}}</td>
+                <td>{{data.iowacd}}</td>
+                <td>{{data.runno}}</td>
+                <td>{{data.salt}}</td>
+                <td>{{data.syn}}</td>
+                <td>{{data.aori}}</td>
+                <td>{{data.REGIS_STATUS}}</td>
+                <td>{{data.INN}}</td>
+                <td>{{data.INN_TH}}</td>
+                <td>{{data.Version_update}}</td>
+                <td>{{data.STATUS_IOWA}}</td>
+                <td>แก้ไข</td>
             </tr>
         </tbody>
         <tfoot>

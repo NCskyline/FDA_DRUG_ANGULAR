@@ -223,8 +223,29 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 var dataLo1 = CENTER_SV.SP_STAFF_DH15RQT_V2();
                 dataLo1.then(function (datas) {
                     $scope.LIST_DRM = datas.data;
+                    //$scope.currentPage = 1;
+                    //$scope.entryLimit = 20;
+                    //$scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
+                    //$scope.loading_profile = false;
+                    //$scope.product_show = true;
                 }, function () { });
+            } else if (SEQ == '5') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_CHEMICAL_STAFF_SEARCH');
+                var dataLo1 = CENTER_SV.SP_MAS_CHEMICAL_SEARCH_RESULT_STAFF();
+                dataLo1.then(function (datas) {
+                    $scope.LIST_CHEM = datas.data;
+                }, function () { });
+                
+            } else if (SEQ == '6') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_CER_STAFF_SEARCH');
+                var dataLo1 = CENTER_SV.SP_CER_SEARCH();
+                dataLo1.then(function (datas) {
+                    $scope.LIST_CERT = datas.data;
+                }, function () { });
+
             }
+
+
         }
     };
 

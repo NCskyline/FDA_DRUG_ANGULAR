@@ -36,14 +36,14 @@ End Code
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="data in LIST_GMP.CER_DETAIL_CASCHEMICAL">
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
-                <td>{{NULL}}</td>
+            <tr ng-repeat="data in LIST_CERT">
+                <td>{{data.TR_ID}}</td>
+                <td>{{data.thacntnm}}</td>
+                <td>{{data.CER_FORMAT}}</td>
+                <td>{{data.REQUEST_DATE}}</td>
+                <td>{{data.STATUS_NAME}}</td>
+                <td>{{data.FOREIGN_LOCATION_NAME}}</td>
+                <td>{{data.cer_type}}</td>
                 <td>ดูข้อมูล</td>
             </tr>
         </tbody>

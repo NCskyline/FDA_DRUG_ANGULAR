@@ -15,6 +15,34 @@ Public Class BAO
         Return dt
     End Function
     '
+    Public Function SP_CER_SEARCH() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_CER_SEARCH"
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+
+        Return dt
+    End Function
+
+    Public Function SP_MAS_CHEMICAL_SEARCH_RESULT_STAFF() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_MAS_CHEMICAL_SEARCH_RESULT_STAFF "
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+
+        Return dt
+    End Function
+
     Public Function SP_STAFF_DH15RQT_V2() As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_STAFF_DH15RQT_V2 "

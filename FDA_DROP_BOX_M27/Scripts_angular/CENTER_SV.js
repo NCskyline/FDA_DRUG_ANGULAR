@@ -445,14 +445,30 @@
         });
         return response;
     };
-    
+
     this.SP_STAFF_DH15RQT_V2 = function () {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/SV_CENTER/SP_STAFF_DH15RQT_V2"),
-            //params: {
-            //    identify: IDENTIFY
-            //}
+            url: SET_URL_SV("/SV_CENTER/SP_STAFF_DH15RQT_V2")
+
+        });
+        return response;
+    };
+    
+    this.SP_MAS_CHEMICAL_SEARCH_RESULT_STAFF = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_MAS_CHEMICAL_SEARCH_RESULT_STAFF")
+
+        });
+        return response;
+    };
+    
+    this.SP_CER_SEARCH = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_CER_SEARCH")
+
         });
         return response;
     };
