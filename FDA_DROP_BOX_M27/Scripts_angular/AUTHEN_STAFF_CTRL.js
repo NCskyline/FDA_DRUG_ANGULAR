@@ -9,6 +9,21 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
     $scope.DOC_TITLE = "TEST";
     $scope.IS_USE = 0;
 
+    $scope.currentPage = 0;
+    $scope.paging = {
+        total: 20,
+        current: 1,
+        onPageChanged: loadPages
+    };
+    function loadPages() {
+        console.log('Current page is : ' + $scope.paging.current);
+
+        // TODO : Load current page Data here
+
+        $scope.currentPage = $scope.paging.current;
+    }
+
+
     pageload();
 
     function pageload() {
@@ -223,11 +238,11 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 var dataLo1 = CENTER_SV.SP_STAFF_DH15RQT_V2();
                 dataLo1.then(function (datas) {
                     $scope.LIST_DRM = datas.data;
-                    //$scope.currentPage = 1;
-                    //$scope.entryLimit = 20;
-                    //$scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
-                    //$scope.loading_profile = false;
-                    //$scope.product_show = true;
+                    $scope.currentPage = 1;
+                    $scope.entryLimit = 20;
+                    $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
+                    $scope.loading_profile = false;
+                    $scope.product_show = true;
                 }, function () { });
             } else if (SEQ == '5') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_CHEMICAL_STAFF_SEARCH');
