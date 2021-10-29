@@ -19,12 +19,10 @@ End Code*@
         }]);
 </script>*@
 
-
-
 <div class="ic" ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="pageloadDH()">
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
-            <td width="20%" align="right">
+            <td width="25%" align="right">
                 ข้าพเจ้า
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;" align="center">
@@ -33,17 +31,18 @@ End Code*@
             <td>
                 ผู้รับอนุญาต
             </td>
-
         </tr>
     </table>
+    <br />
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
-            <td width="30%">
+            <td width="45%" align="center">
                 <form name="myForm">
                     <label>
                         <input type="radio" ng-model="LIST_DH.CHK_TYPE_LCN" value="1">
                         ผลิต
                     </label>
+                    <label>&nbsp;&nbsp;&nbsp;</label>
                     <label>
                         <input type="radio" ng-model="LIST_DH.CHK_TYPE_LCN" value="2">
                         นำหรือสั่ง เข้ามาในราชอาณาจักร ซึ่งยาแผนปัจจุบัน
@@ -53,10 +52,10 @@ End Code*@
             <td align="right" width="10%">
                 ใบอนุญาต เลขที่
             </td>
+            <td width="2%"></td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
-                <span style="padding-left:5px;" /><label>{{LIST_DH.LCN_NO_DISPLAY}}</label>
+                <label>{{LIST_DH.LCN_NO_DISPLAY}}</label>
             </td>
-
         </tr>
     </table>
     <br />
@@ -79,21 +78,20 @@ End Code*@
     <br />
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
-            <td width="25%">
+            <td width="50%" align="center">
                 <form name="myForm">
                     <label>
                         <input type="radio" ng-model="LIST_DH.CHK_TYPE_LCN" value="1">
                         ผลิต
                     </label>
+                    <label>&nbsp;&nbsp;&nbsp;</label>
                     <label>
                         <input type="radio" ng-model="LIST_DH.CHK_TYPE_LCN" value="2">
                         นำหรือสั่งเข้ามาในราชอาณาจักร
                     </label>
                 </form>
-
             </td>
             <td>
-
                 <form name="myForm">
                     ซึ่ง
                     <label>&nbsp;</label>
@@ -101,7 +99,7 @@ End Code*@
                         <input type="radio" ng-model="LIST_DH.dh15rqt.CHK_TYPE_CHEMICAL" value="1">
                         เภสัชเคมีภัณฑ์เดี่ยว
                     </label>
-                    <label>&nbsp;&nbsp;</label>
+                    <label>&nbsp;&nbsp;&nbsp;</label>
                     <label>
                         <input type="radio" ng-model="LIST_DH.dh15rqt.CHK_TYPE_CHEMICAL" value="2">
                         เภสัชเคมีภัณฑ์กึ่งสำเร็จรูป
@@ -179,81 +177,81 @@ End Code*@
     </div>
 
    <div ng-show="PROCESS_ID == '16'">
-            <div>
-                <table width="100%">
-                    <tr>
-                        <td align="right" width="50%">
-                            <input class="form-control" placeholder="ค้นหาสารที่นี่..." ng-model="iowanm" />
-                        </td>
-                        <td align="left" width="50%">
-                            <button class="btn btn-lg" ng-click="BTN_SEARCH_CHEM(iowanm)" value="ค้นหาสารที่นี่">ค้นหาสาร</button>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="ic">
-                <table id="myTable" datatable="ng" class="dataTable" width="100%">
-                    <thead>
-                        <tr>
-                            <th>ชื่อสาร</th>
-                            <th>A or I</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="datas in LIST_CHEM | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
-                            <td>{{datas.iowanm}}</td>
-                            <td>{{datas.aori}}</td>
-                            <td>
-                                <a ng-click="BTN_ADD_CHEM(datas)">
-                                    เลือกสาร
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
+       <div>
+           <table width="100%">
+               <tr>
+                   <td align="right" width="50%">
+                       <input class="form-control" placeholder="ค้นหาสารที่นี่..." ng-model="iowanm" />
+                   </td>
+                   <td align="left" width="50%">
+                       <button class="btn btn-lg" ng-click="BTN_SEARCH_CHEM(iowanm)" value="ค้นหาสารที่นี่">ค้นหาสาร</button>
+                   </td>
+               </tr>
+           </table>
+       </div>
+       <div class="ic">
+           <table id="myTable" datatable="ng" class="dataTable" width="100%">
+               <thead>
+                   <tr>
+                       <th>ชื่อสาร</th>
+                       <th>A or I</th>
+                       <th></th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr ng-repeat="datas in LIST_CHEM | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                       <td>{{datas.iowanm}}</td>
+                       <td>{{datas.aori}}</td>
+                       <td>
+                           <a ng-click="BTN_ADD_CHEM(datas)">
+                               เลือกสาร
+                           </a>
+                       </td>
+                   </tr>
+               </tbody>
+               <tfoot>
                         <tr></tr>
-                    </tfoot>
-                </table>
-                <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
-                                ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
-                                boundary-link-numbers="true" rotate="false" max-size="maxSize">
-                </uib-pagination>
-                <div align="center">
-                    <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
-                    <button type="button" class="btn btn-sm" ng-disabled="currentPage >= LIST_CHEM.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
+               </tfoot>
+           </table>
+           <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
+                           ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
+                           boundary-link-numbers="true" rotate="false" max-size="maxSize">
+           </uib-pagination>
+           <div align="center">
+               <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
+               <button type="button" class="btn btn-sm" ng-disabled="currentPage >= LIST_CHEM.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
+           </div>
+       </div>
 
-            <div>
-                <table class="dataTable" width="100%">
-                    <thead>
-                        <tr>
-                            <th>ลำดับ</th>
-                            <th>ชื่อสาร</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="datas in GMP_CHEM">
-                            <td>{{$index + 1}}</td>
-                            <td>{{datas.CAS_NAME}}</td>
-                            <td>
-                                <span class="fas fa-edit"></span>
-                                <a ng-click="deleteCHEM(datas,$index)">
-                                    ลบสาร
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr></tr>
-                    </tfoot>
-                </table>
-            </div>
-            <br />
-        </div>
-        <div style="text-align:center">
-            <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_DH()" value="บันทึก" />
-            <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
-        </div>
-    </div>
+       <div>
+           <table class="dataTable" width="100%">
+               <thead>
+                   <tr>
+                       <th>ลำดับ</th>
+                       <th>ชื่อสาร</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr ng-repeat="datas in GMP_CHEM">
+                       <td>{{$index + 1}}</td>
+                       <td>{{datas.CAS_NAME}}</td>
+                       <td>
+                           <span class="fas fa-edit"></span>
+                           <a ng-click="deleteCHEM(datas,$index)">
+                               ลบสาร
+                           </a>
+                       </td>
+                   </tr>
+               </tbody>
+               <tfoot>
+                   <tr></tr>
+               </tfoot>
+           </table>
+       </div>
+   </div>
+   <br />
+   <div style="text-align:center">
+       <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_DH()" value="บันทึก" />
+       <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+   </div>
+</div>

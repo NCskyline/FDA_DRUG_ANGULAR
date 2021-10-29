@@ -801,7 +801,7 @@
                         <td>
                             ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่
                         </td>
-                        <td colspan="4"></td>
+                        <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                     </tr>
                     <tr>
                         <td>
@@ -1330,7 +1330,7 @@
                     <td>
                         ใบอนุญาตประกอบวิชาชีพ
                     </td>
-                    <td colspan="4"></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                 </tr>
                 <tr>
                     <td>
@@ -1685,7 +1685,7 @@
                     <td>
                         ใบอนุญาตประกอบวิชาชีพ
                     </td>
-                    <td colspan="4"></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                 </tr>
                 <tr>
                     <td>
@@ -2033,8 +2033,9 @@
                     <td style="width:100px">
                         เวลาทำการ
                     </td>
-                    <td style="text-align:left">
-                        <input type="text" ng-model="LIST_LCN.dalcn.opentime" style="font-family:'Taviraj';font-size:20px;" />
+                    <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
+                        @*<input type="text" ng-model="LIST_LCN.dalcn.opentime" style="font-family:'Taviraj';font-size:20px;" />*@
+                        {{LIST_LCN.dalcn.opentime}}
                     </td>
                 </tr>
             </table>
@@ -2188,7 +2189,7 @@
                     <td>
                         ชื่อสถานที่เก็บ ( 1 ) :
                     </td>
-                    <td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
                             @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
@@ -2281,7 +2282,7 @@
                     <td>
                         ใบอนุญาตประกอบวิชาชีพ
                     </td>
-                    <td colspan="4"></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                 </tr>
                 <tr>
                     <td>
@@ -2659,7 +2660,7 @@
                     <td>
                         ชื่อสถานที่เก็บ ( 1 ) :
                     </td>
-                    <td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
                             @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
@@ -3040,7 +3041,7 @@
                     <td>
                         ชื่อสถานที่เก็บ ( 1 ) :
                     </td>
-                    <td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
                             @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
@@ -3421,7 +3422,7 @@
                     <td>
                         ชื่อสถานที่เก็บ ( 1 ) :
                     </td>
-                    <td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
                             @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
@@ -4526,7 +4527,8 @@
                                 <input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_floor" id="chbl_typeee" value="1">
                                 อื่นๆ (โปรดระบุ)
                             </label>
-                            <input type="text" ng-model="LIST_LCN.dalcn.syslctaddr_thasoi" id="chbl_typeee" ng-value="1">
+                            @*<input type="text" ng-model="LIST_LCN.dalcn.syslctaddr_thasoi" id="chbl_typeee" ng-value="1">*@
+                            {{LIST_LCN.dalcn.syslctaddr_thasoi}}
                         </form>
                     </td>
                 </tr>
@@ -4607,7 +4609,7 @@
                     <td>
                         ใบอนุญาตประกอบวิชาชีพ
                     </td>
-                    <td colspan="4"></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                 </tr>
                 <tr>
                     <td>
@@ -5227,13 +5229,13 @@
                     <td>
                         ใบอนุญาตประกอบวิชาชีพ
                     </td>
-                    <td colspan="4"></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                 </tr>
                 <tr>
                     <td>
                         เภสัชกรรมเลขที่
                     </td>
-                    <td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_TEXT_NUM" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
                         {{LIST_PHR_ADD.PHR_TEXT_NUM}}
                     </td>
@@ -5945,13 +5947,13 @@
                     <td>
                         ใบอนุญาตประกอบวิชาชีพ
                     </td>
-                    <td colspan="4"></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                 </tr>
                 <tr>
                     <td>
                         เภสัชกรรมเลขที่
                     </td>
-                    <td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_TEXT_NUM" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
                         {{LIST_PHR_ADD.PHR_TEXT_NUM}}
                     </td>
@@ -6682,7 +6684,7 @@
                     <td>
                         ใบอนุญาตประกอบวิชาชีพ
                     </td>
-                    <td colspan="4"></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                 </tr>
                 <tr>
                     <td>
@@ -7229,7 +7231,7 @@
                     <td>
                         ใบอนุญาตประกอบวิชาชีพ
                     </td>
-                    <td colspan="4"></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                 </tr>
                 <tr>
                     <td>
@@ -7755,7 +7757,7 @@
                     <td>
                         ใบอนุญาตประกอบวิชาชีพ
                     </td>
-                    <td colspan="4"></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                 </tr>
                 <tr>
                     <td>
@@ -8481,7 +8483,7 @@
                     <td>
                         ใบอนุญาตประกอบวิชาชีพ
                     </td>
-                    <td colspan="4"></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                 </tr>
                 <tr>
                     <td>
@@ -8964,8 +8966,9 @@
                         <td>
                             สัญชาติ
                         </td>
-                        <td style="text-align:left;width:10%;">
-                            <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />
+                        <td style="text-align:left;width:10%;border-bottom:dotted;border-bottom-width:thin;">
+                            @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />*@
+                                {{LIST_LCN.dalcn.NATION}}
                         </td>
                     </tr>
                 </table>
@@ -9085,7 +9088,7 @@
                         <td>
                             ใบอนุญาตประกอบวิชาชีพ
                         </td>
-                        <td colspan="4"></td>
+                        <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                     </tr>
                     <tr>
                         <td>
@@ -9320,8 +9323,9 @@
                         <td>
                             สัญชาติ
                         </td>
-                        <td style="text-align:left;width:10%;">
-                            <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />
+                        <td style="text-align:left;width:10%;border-bottom:dotted;border-bottom-width:thin;">
+                            @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />*@
+                            {{LIST_LCN.dalcn.NATION}}
                         </td>
                     </tr>
                 </table>
@@ -9441,7 +9445,7 @@
                         <td>
                             ใบอนุญาตประกอบวิชาชีพ
                         </td>
-                        <td colspan="4"></td>
+                        <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                     </tr>
                     <tr>
                         <td>
@@ -9658,11 +9662,12 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'Taviraj';" type="text" />
+                                            @*<input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'Taviraj';" type="text" />*@
+                                                {{LIST_LCN.BSN_IDENTIFY}}
                                         </td>
-                                        <td>
+                                        @*<td>
                                             <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>
+                                        </td>*@
                                     </tr>
                                 </table>
                             </form>
@@ -9677,7 +9682,8 @@
                             สัญชาติ
                         </td>
                         <td style="text-align:left;width:10%;">
-                            <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />
+                            @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />*@
+                                {{LIST_LCN.dalcn.NATION}}
                         </td>
                     </tr>
                 </table>
@@ -9797,7 +9803,7 @@
                         <td>
                             ใบอนุญาตประกอบวิชาชีพ
                         </td>
-                        <td colspan="4"></td>
+                        <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                     </tr>
                     <tr>
                         <td>
@@ -10253,8 +10259,9 @@
                     <td style="width:25%">
                         มีความประสงค์ขอรับอนุญาตผลิตวัตถุออกฤทธิ์ในหมวด
                     </td>
-                    <td colspan="3">
-                        <input class="form-control inline" ng-model="LIST_LCN.dalcn.CATEGORY_DRUG" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="3">
+                        @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.CATEGORY_DRUG" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
+                            {{LIST_LCN.dalcn.CATEGORY_DRUG}}
                     </td>
                 </tr>
                 <tr>
@@ -10313,7 +10320,7 @@
                     <td>
                         ใบอนุญาตประกอบวิชาชีพ
                     </td>
-                    <td colspan="4"></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                 </tr>
                 <tr>
                     <td>
@@ -10360,7 +10367,7 @@
                     <td>
                         ณ สถานที่ชื่อ
                     </td>
-                    <td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
                             @*<option value="">--กรุณาเลือก--</option>*@
@@ -10900,8 +10907,9 @@
                     <td style="width:25%">
                         มีความประสงค์ขอรับอนุญาตผลิตวัตถุออกฤทธิ์ในหมวด
                     </td>
-                    <td colspan="3">
-                        <input class="form-control inline" ng-model="LIST_LCN.dalcn.CATEGORY_DRUG" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="3">
+                        @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.CATEGORY_DRUG" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
+                            {{LIST_LCN.dalcn.CATEGORY_DRUG}}
                     </td>
                 </tr>
                 <tr>
@@ -10960,7 +10968,7 @@
                     <td>
                         ใบอนุญาตประกอบวิชาชีพ
                     </td>
-                    <td colspan="4"></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                 </tr>
                 <tr>
                     <td>
@@ -11308,11 +11316,12 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'Taviraj';" type="text" />
+                                            @*<input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'Taviraj';" type="text" />*@
+                                                {{LIST_LCN.BSN_IDENTIFY}}
                                         </td>
-                                        <td>
+                                        @*<td>
                                             <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>
+                                        </td>*@
                                     </tr>
                                 </table>
                             </form>
@@ -11327,7 +11336,8 @@
                             สัญชาติ
                         </td>
                         <td style="text-align:left;width:10%;">
-                            <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />
+                            @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />*@
+                            {{LIST_LCN.dalcn.NATION}}
                         </td>
                     </tr>
                 </table>
@@ -11447,7 +11457,7 @@
                         <td>
                             ใบอนุญาตประกอบวิชาชีพ
                         </td>
-                        <td colspan="4"></td>
+                        <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="4"></td>
                     </tr>
                     <tr>
                         <td>

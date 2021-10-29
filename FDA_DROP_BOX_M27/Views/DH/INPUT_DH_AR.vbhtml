@@ -20,8 +20,8 @@ End Code
                 เป็นสารออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ
             </h2>
         </center>
-
-        <table width="30%">
+        <br />
+        <table width="40%">
             <tr>
                 <td>
                     เลขที่อ้างอิงสถานที่ผลิต (ThFDA-D Ref)
@@ -38,11 +38,12 @@ End Code
                 <td>
                     ชื่อผู้ผลิตเภสัชเคมีภัณฑ์ (Drug Substance Manufacturer)
                 </td>
-                <td width="30%" style="border-bottom:dotted;border-bottom-width:thin;">
+                <td width="28%" style="border-bottom:dotted;border-bottom-width:thin;">
                     <label>
                         {{LIST_REF_CERT.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME}}
                     </label>
                 </td>
+                <td width="2%"></td>
                 <td>
                     ประเทศ (Country)
                 </td>
@@ -55,7 +56,7 @@ End Code
         </table>
         <table width="100%">
             <tr>
-                <td>
+                <td width="24%">
                     วันที่ที่ออกใบรับรอง (Issue Date)
                 </td>
                 <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -75,7 +76,7 @@ End Code
                 </td>
             </tr>
         </table>
-        <table width="100%">
+        <table width="95%">
             <tr>
                 <td>
                     ชื่อผู้แทนจำหน่ายในต่างประเทศ (ซื้อผ่าน) (Foreign Distributor (Purchasing through))
@@ -83,9 +84,9 @@ End Code
                 <td>
                     <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </td>
-                <td style="width:5px;"></td>
+                <td width="3%"></td>
                 <td>
-                    ประเทศ (Country)
+                    ประเทศ (Country)<span style="padding-left:1em;"></span>
                 </td>
                 <td>
                     <select id="country" class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
@@ -95,8 +96,7 @@ End Code
                 </td>
             </tr>
         </table>
-        <br />
-        <table width="100%">
+        <table width="43%">
             <tr>
                 <td>
                     ชื่อการค้า (Trade Name) <font color="red">*</font>
@@ -106,6 +106,8 @@ End Code
                 </td>
 
             </tr>
+        </table>
+        <table width="65%">
             <tr>
                 <td>
                     มาตรฐานตามตำรับยา (Phamacopoeia Standard of Drug Substance)

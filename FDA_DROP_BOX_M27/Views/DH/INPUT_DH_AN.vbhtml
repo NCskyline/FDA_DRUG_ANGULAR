@@ -20,16 +20,16 @@ End Code
             เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ
         </h2>
     </center>
+    <br />
     <table>
         <tr>
             <td>
-
                 <div ng-include src="'Views/DH/HEADER_DH'"></div>
             </td>
         </tr>
     </table>
 
-    <table width="30%">
+    <table width="40%">
         <tr>
             <td>
                 เลขที่อ้างอิงสถานที่ผลิต (ThFDA-D Ref)
@@ -52,19 +52,20 @@ End Code
                     {{LIST_REF_CERT.CER.FOREIGN_LOCATION_NAME}}
                 </label>
             </td>
+            <td width="2%"></td>
             <td>
                 ประเทศ (Country)
             </td>
-            <td width="20%" style="border-bottom:dotted;border-bottom-width:thin;">
+            <td width="40%" style="border-bottom:dotted;border-bottom-width:thin;">
                 <label>
                     {{LIST_REF_CERT.COUNTRY_NAME}}
                 </label>
             </td>
         </tr>
     </table>
-    <table>
+    <table width="100%">
         <tr>
-            <td>
+            <td width="24%">
                 วันเดือนปีที่ออกใบรับรอง (Issue Date)
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -103,7 +104,6 @@ End Code
             </td>
         </tr>
     </table>
-    <br />
     <table width="100%">
         <tr>
             <td>
@@ -146,53 +146,54 @@ End Code
             <td>
                 <form name="myForm">
                     <label>
-                        <input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="1">
+                        <span style="padding-left:2em;"><input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="1"></span>
                         ใช้ในการผลิตยาตัวอย่างเพื่อขอขึ้นทะเบียนตำรับยา
                     </label> <br />
                     <label>
-                        <input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="2">
+                        <span style="padding-left:2em;"><input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="2"></span>
                         ใช้ในการพัฒนาตำรับยาที่ได้เลขทะเบียนแล้ว
                     </label> <br />
                     <label>
-                        <input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="3">
+                        <span style="padding-left:2em;"><input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="3"></span>
                         อื่น ๆ (ระบุ)
                     </label>
                     <input />
                 </form>
             </td>
         </tr>
-    </table> <br />
+    </table>
+    <br />
     พร้อมนี้ได้แนบหลักฐานประกอบการพิจารณา ดังนี้
-    <table>
+    <table width="100%">
         <tr>
             <td>
                 <form name="myForm">
                     <label>
-                        <input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH1" value="1">
+                        <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH1" value="1"></span>
                         สำเนา ผ.ย. ๘ ที่ได้รับอนุมัติแล้ว พร้อมหนังสือสั่งซื้อจากผู้รับอนุญาตผลิตยา
                     </label> <br />
                     <label>
-                        <input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH2" value="1">
+                        <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH2" value="1"></span>
                         สำเนาใบอนุญาตผลิตเภสัชเคมีภัณฑ์ในต่างประเทศ และรับรองสำเนาโดยผู้รับอนุญาตที่ขอจดแจ้งเภสัชเคมีภัณฑ์
                     </label> <br />
                     <label>
-                        <input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH3" value="1">
+                        <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH3" value="1"></span>
                         สำเนาใบสำคัญการขึ้นทะเบียนตำรับยา และสำเนา ท.ย.๑ หน้า๑ และหน้า๒/แบบ ย.๑ หน้า๓
                     </label> <br />
                     <label>
-                        <input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH4" value="1">
+                        <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH4" value="1"></span>
                         สำเนารายงานผลการตรวจวิเคราะห์คุณภาพ (Certification of Analysis) ซึ่งระบุข้อกำหนดมาตราฐาน
                         (Specifications)
                     </label> <br />
                     <label>
-                        <input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH5" value="1">
+                        <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH5" value="1"></span>
                         สำเนาหนังสือรับรองมาตราฐานหลักเกณฑ์วิธีการที่ดีในการผลิตเภสัชเคมีภัณฑ์
                         (GoodManufacturing Practice) ตามมาตราฐานองค์การอนามัยโลกหรือเทียบเท่า (กรณีนำเข้า)
                         (Specifications)
                     </label> <br />
                     <label>
-                        <input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH6" value="1">
-                        อื่น ๆ (ระบุ)
+                        <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH6" value="1"></span>
+                        อื่น ๆ (ระบุ)<span style="padding-left:1em;"></span>
                     </label>
                     <input class="form-control inline" ng-model="LIST_DH.dh15rqt.OTHER_ATTACH" style="font-family:'Taviraj';font-size:20px;" type="text" />
                 </form>
