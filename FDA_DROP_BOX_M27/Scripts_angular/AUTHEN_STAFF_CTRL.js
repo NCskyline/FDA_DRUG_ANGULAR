@@ -9,23 +9,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
     $scope.DOC_TITLE = "TEST";
     $scope.IS_USE = 0;
 
-    //------------------------------ PAGINGNATION ---------------------------//
-
-    $scope.currentPage = 0;
-    $scope.paging = {
-        total: 20,
-        current: 1,
-        onPageChanged: loadPages
-    };
-    function loadPages() {
-        console.log('Current page is : ' + $scope.paging.current);
-
-        // TODO : Load current page Data here
-
-        $scope.currentPage = $scope.paging.current;
-    }
-
-    //----------------------------------------------------------------------//
+   
 
     pageload();
 
@@ -466,6 +450,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });
     $scope.$on('UNLOAD', function () { $scope.loading = false; alert('2'); });
 }]);
+
 app.filter('startFrom', function () {
     return function (input, start) {
         if (input) {
