@@ -4,7 +4,7 @@ End Code
 
 
 <div>
-    <p style="text-align: center;">ค้นหาเภสัชเคมีภัณฑ์</p>
+    <H2 style="text-align: center;">ค้นหาเภสัชเคมีภัณฑ์</H2>
 </div>
 <br />
 <div class="row">
@@ -31,41 +31,45 @@ End Code
         </tr>
     </table>*@
 <br />
-<div align="center">
-    <table class="dataTable" style="width:100%">
-        <thead>
-            <tr>
-                <th style="width:5%">เลข DRM</th>
-                <th style="width:20%">ชื่อสาร</th>
-                <th style="width:10%">เลขที่คำขอ</th>
-                <th style="width:10%">วันที่ยื่นคำขอ</th>
-                <th style="width:5%">สถานะ</th>
-                <th style="width:20%">รหัสการดำเนินการ</th>
-                <th style="width:5%"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="data in LIST_DRM">
-                <td>{{data.phm15dgt}}</td>
-                <td>{{data.CAS_NAME}}</td>
-                <td>{{data.rcvno}}</td>
-                <td>{{data.rcvdate}}</td>
-                <td>{{data.STATUS_NAME}}</td>
-                <td>{{data.TR_ID}}</td>
-                <td>ดูข้อมูล</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr></tr>
-        </tfoot>
-    </table>
-    <hr />
-    @*<uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
-                    ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
-                    boundary-link-numbers="true" rotate="false" max-size="maxSize">
-    </uib-pagination>
-    <div align="right">
-        <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
-        <button type="button" class="btn btn-sm" ng-disabled="currentPage >= DATA_GMP.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
-    </div>*@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card" style=" border-top: 10px solid #F9D027;">
+            <table style="margin-top:10px;width:100%;" class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th style="width:5%">เลข DRM</th>
+                        <th style="width:20%">ชื่อสาร</th>
+                        <th style="width:10%">เลขที่คำขอ</th>
+                        <th style="width:10%">วันที่ยื่นคำขอ</th>
+                        <th style="width:5%">สถานะ</th>
+                        <th style="width:20%">รหัสการดำเนินการ</th>
+                        <th style="width:5%"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in LIST_DRM | filter : filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                        <td>{{data.phm15dgt}}</td>
+                        <td>{{data.CAS_NAME}}</td>
+                        <td>{{data.rcvno}}</td>
+                        <td>{{data.rcvdate}}</td>
+                        <td>{{data.STATUS_NAME}}</td>
+                        <td>{{data.TR_ID}}</td>
+                        <td>ดูข้อมูล</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr></tr>
+                </tfoot>
+            </table>
+            <hr />
+            <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
+                            ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
+                            boundary-link-numbers="true" rotate="false" max-size="maxSize">
+            </uib-pagination>
+            <div align="right">
+                <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
+                <button type="button" class="btn btn-sm" ng-disabled="currentPage >= LIST_DRM.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
 </div>
