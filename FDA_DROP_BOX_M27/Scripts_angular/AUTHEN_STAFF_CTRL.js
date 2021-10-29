@@ -9,20 +9,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
     $scope.DOC_TITLE = "TEST";
     $scope.IS_USE = 0;
 
-    $scope.currentPage = 0;
-    $scope.paging = {
-        total: 20,
-        current: 1,
-        onPageChanged: loadPages
-    };
-    function loadPages() {
-        console.log('Current page is : ' + $scope.paging.current);
-
-        // TODO : Load current page Data here
-
-        $scope.currentPage = $scope.paging.current;
-    }
-
+   
 
     pageload();
 
@@ -235,10 +222,10 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_CHEMICAL_STAFF_MAIN');
             } else if (SEQ == '4') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_DH_SEARCH');
-                var dataLo1 = CENTER_SV.SP_STAFF_DH15RQT_V2();
-                dataLo1.then(function (datas) {
+                var dataLo3 = CENTER_SV.SP_STAFF_DH15RQT_V2();
+                dataLo3.then(function (datas) {
                     $scope.LIST_DRM = datas.data;
-                    $scope.currentPage = 1;
+                    $scope.currentPage = 0;
                     $scope.entryLimit = 20;
                     $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
                     $scope.loading_profile = false;
@@ -246,15 +233,15 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 }, function () { });
             } else if (SEQ == '5') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_CHEMICAL_STAFF_SEARCH');
-                var dataLo1 = CENTER_SV.SP_MAS_CHEMICAL_SEARCH_RESULT_STAFF();
-                dataLo1.then(function (datas) {
+                var dataLo4 = CENTER_SV.SP_MAS_CHEMICAL_SEARCH_RESULT_STAFF();
+                dataLo4.then(function (datas) {
                     $scope.LIST_CHEM = datas.data;
                 }, function () { });
                 
             } else if (SEQ == '6') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_CER_STAFF_SEARCH');
-                var dataLo1 = CENTER_SV.SP_CER_SEARCH();
-                dataLo1.then(function (datas) {
+                var dataLo2 = CENTER_SV.SP_CER_SEARCH();
+                dataLo2.then(function (datas) {
                     $scope.LIST_CERT = datas.data;
                 }, function () { });
 
@@ -464,5 +451,14 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
     $scope.$on('UNLOAD', function () { $scope.loading = false; alert('2'); });
 }]);
 
+app.filter('startFrom', function () {
+    return function (input, start) {
+        if (input) {
+            start = +start;
+            return input.slice(start);
+        }
+        return [];
+    };
+});
 
 
