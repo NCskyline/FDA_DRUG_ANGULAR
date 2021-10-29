@@ -4,7 +4,7 @@ End Code
 
 
 <div>
-    <p style="text-align: center;">ค้นหาเภสัชเคมีภัณฑ์</p>
+    <H2 style="text-align: center;">ค้นหาเภสัชเคมีภัณฑ์</H2>
 </div>
 <br />
 <div class="row">
