@@ -15,5 +15,14 @@ Namespace Controllers
             Return View()
         End Function
 
+        Function FRM_PROFESSIONAL_MAIN() As ActionResult
+            Return View()
+        End Function
+        Function FRM_PROFESSIONAL_INSERT_AND_UPDATE() As ActionResult
+            Return View()
+        End Function
+        Function FRM_PROFESSIONAL_IMPORT() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
