@@ -746,6 +746,8 @@
     <Content Include="Views\MASTER_DATA\FRM_PROFESSIONAL_IMPORT.vbhtml" />
     <Content Include="Views\MASTER_DATA\FRM_PROFESSIONAL_INSERT_AND_UPDATE.vbhtml" />
     <Content Include="Views\MASTER_DATA\FRM_PROFESSIONAL_MAIN.vbhtml" />
+    <Content Include="Views\LCN\INPUT_F_D2_198_1_UPFILE.vbhtml" />
+    <Content Include="Views\LCN\INPUT_F_D2_198_1_UPFILE_N.vbhtml" />
     <Content Include="Views\MASTER_DATA\FRM_SEARCH_PERSON.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
