@@ -68,6 +68,18 @@
         End Set
     End Property
 
+
+    Private _MAS_EXPERT_NAME As New MAS_EXPERT_NAME
+    Public Property MAS_EXPERT_NAME() As MAS_EXPERT_NAME
+        Get
+            Return _MAS_EXPERT_NAME
+        End Get
+        Set(ByVal value As MAS_EXPERT_NAME)
+            _MAS_EXPERT_NAME = value
+        End Set
+    End Property
+
+
     Public Property LCN_IDA() As String
         Get
             Return _LCN_IDA
@@ -257,6 +269,8 @@
     Public TABLET_CAPSULE As String
     Public PHARMACEUTICAL_CHEMICALS As String
     Public APPDATE_STR As String
+    Public tha_fullnm As String
+
 End Class
 Public Class MODEL_LOCATION
     Private _LOCATION_LISTs As New List(Of LOCATION_LIST)
