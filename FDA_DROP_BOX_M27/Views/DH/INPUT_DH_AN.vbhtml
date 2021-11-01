@@ -85,7 +85,7 @@ End Code
             </td>
         </tr>
     </table>
-    <table>
+    <table width="100%">
         <tr>
             <td>
                 ชื่อผู้แทนจำหน่ายในต่างประเทศ (ซื้อผ่าน) (Foreign Distributor (Purchasing through))
@@ -93,6 +93,7 @@ End Code
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
+            <td width="2%"></td>
             <td>
                 ประเทศ (Country)
             </td>
@@ -104,7 +105,7 @@ End Code
             </td>
         </tr>
     </table>
-    <table width="100%">
+    <table width="43%">
         <tr>
             <td>
                 ชื่อการค้า (Trade Name) <font color="red">*</font>
@@ -114,6 +115,8 @@ End Code
             </td>
 
         </tr>
+    </table>
+    <table width="60%">
         <tr>
             <td>
                 มาตรฐานตามตำรับยา (Phamacopoeia Standard of Drug Substance)
@@ -122,6 +125,8 @@ End Code
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
+    </table>
+    <table width="100%">
         <tr>
             <td>
                 จำนวนภาชนะบรรจุ (ต.ย. 2 ถุง) <br />
@@ -130,6 +135,7 @@ End Code
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.unit_alpha3" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
+            <td width="2%"></td>
             <td>
                 น้ำหนัก / ปริมาตรรวม (ต.ย. 10 กิโลกรัม โดย 10 กิโลกรัม มาจาก 2 ถุง x 5 กิโลกรัมต่อถุง) <br />
                 (Total Weight / Volume (e.g. 10 kg. 10 kg which comes from 2 bags x 5 kg/bag))
@@ -153,11 +159,19 @@ End Code
                         <span style="padding-left:2em;"><input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="2"></span>
                         ใช้ในการพัฒนาตำรับยาที่ได้เลขทะเบียนแล้ว
                     </label> <br />
-                    <label>
-                        <span style="padding-left:2em;"><input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="3"></span>
-                        อื่น ๆ (ระบุ)
-                    </label>
-                    <input />
+                    <table>
+                        <tr>
+                            <td>
+                                <span style="padding-left:2em;"><input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="3"></span>
+                                อื่น ๆ (ระบุ)<span style="padding-left:1em;"></span>
+                            </td>
+                            <td>
+                                <input class="form-control inline" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                            </td>
+                        </tr>
+                       
+                    </table>
+                    
                 </form>
             </td>
         </tr>
@@ -191,11 +205,17 @@ End Code
                         (GoodManufacturing Practice) ตามมาตราฐานองค์การอนามัยโลกหรือเทียบเท่า (กรณีนำเข้า)
                         (Specifications)
                     </label> <br />
-                    <label>
-                        <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH6" value="1"></span>
-                        อื่น ๆ (ระบุ)<span style="padding-left:1em;"></span>
-                    </label>
-                    <input class="form-control inline" ng-model="LIST_DH.dh15rqt.OTHER_ATTACH" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <table>
+                        <tr>
+                            <td>
+                                <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH6" value="1"></span>
+                                อื่น ๆ (ระบุ)<span style="padding-left:1em;"></span>
+                            </td>
+                            <td>
+                                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.OTHER_ATTACH" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                            </td>
+                        </tr>
+                    </table>
                 </form>
             </td>
         </tr>

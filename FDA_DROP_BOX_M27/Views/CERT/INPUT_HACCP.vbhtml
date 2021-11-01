@@ -62,7 +62,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                รหัสไปรษณีย์ (Postal Code / Zip Code) 
+                <span style="padding-left:1em">รหัสไปรษณีย์ (Postal Code / Zip Code)</span>
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -96,7 +96,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                วันที่หมดอายุใบรับรอง HACCP (Expiry Date / Valid Until)<font color="red">*</font>
+                <span style="padding-left:1em">วันที่หมดอายุใบรับรอง HACCP (Expiry Date / Valid Until)<font color="red">*</font></span>
             </td>
             <td>
                 <md-datepicker ng-model="LIST_GMP.CER.EXP_DOCUMENT_DATE" md-placeholder="Enter date" id="end_date"
@@ -114,7 +114,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                    ประเทศของหน่วยงานที่ออกใบรับรอง (Country of Certification Agency)
+                <span style="padding-left:1em">ประเทศของหน่วยงานที่ออกใบรับรอง (Country of Certification Agency)</span>
             </td>
             <td>
                 <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" id="ddl_country2" ng-model="LIST_GMP.CER.COUNTRY_OF_DEPARTMENT_IDA">

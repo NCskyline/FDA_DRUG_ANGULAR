@@ -77,7 +77,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                รหัสไปรษณีย์ (Postal Code / Zip Code)
+                <span style="padding-left:1em">รหัสไปรษณีย์ (Postal Code / Zip Code)</span>
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -96,7 +96,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                วันที่หมดอายุใบรับรอง GMP (Expiry Date / Valid Until)<font color="red">*</font>
+                <span style="padding-left:1em">วันที่หมดอายุใบรับรอง GMP (Expiry Date / Valid Until)<font color="red">*</font></span>
             </td>
             <td>
                 <md-datepicker ng-model="LIST_GMP.CER.EXP_DOCUMENT_DATE" md-placeholder="Enter date"
@@ -108,14 +108,13 @@ End Code
             <td style="height:25px">
                 8. หน่วยงานที่ออกใบรับรอง (Certification Agency)<font color="red">*</font>
             </td>
-            <td>
-                &nbsp;
-            </td>
         </tr>
         <tr>
             <td>
-                <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="1" />
-                หน่วยงานรัฐที่ออกใบรับรอง (Government Certification Agency)
+                <span style="padding-left:1em">
+                    <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="1" />
+                    หน่วยงานรัฐที่ออกใบรับรอง (Government Certification Agency)
+                </span>
             </td>
             <td rowspan="2" ;">
                 <input class="form-control inline" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME" style="font-family:'Taviraj';font-size:20px;height:100px;" type="text" />
@@ -123,10 +122,10 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="2" />
-                หน่วยงานอื่นที่ได้รับการรับรองจากหน่วยงานรัฐของประเทศที่ออกใบรับรอง (Certification Agency Accredited by Government Agency)
-            </td>
-            <td>
+                <span style="padding-left:1em">
+                    <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="2" />
+                    หน่วยงานอื่นที่ได้รับการรับรองจากหน่วยงานรัฐของประเทศที่ออกใบรับรอง (Certification Agency Accredited by Government Agency)
+                </span>
             </td>
         </tr>
         <tr>
@@ -155,9 +154,11 @@ End Code
                                 </label>
                             </form>
                         </td>
+                        <td width="10%"></td>
                         <td>
-                            &nbsp; ประเทศ (Country)<font color="red">* &nbsp;&nbsp;</font>
+                            ประเทศ (Country)<font color="red">*</font>
                         </td>
+                        <td width="2%"></td>
                         <td>
                             <select style="font-family:'Taviraj';font-size:20px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_GMP">
                                 @*<option value="0">--กรุณาเลือก--</option>*@

@@ -89,7 +89,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                รหัสไปรษณีย์ (Postal Code / Zip Code)
+                <span style="padding-left:1em">รหัสไปรษณีย์ (Postal Code / Zip Code)</span>
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -105,17 +105,6 @@ End Code
         </tr>*@
         <tr>
             <td style="height:25px">
-                ประเทศ (Country)<font color="red">*</font>
-            </td>
-            <td>
-                <select class="form-control selectpicker" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_ID" data-live-search="true" title="-- Please select --">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
-                    <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td style="height:25px">
                 8. วันที่ออกใบรับรอง (Issue Date)<font color="red">*</font>
             </td>
             <td>
@@ -128,7 +117,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                วันที่หมดอายุใบรับรอง (Expiry Date / Valid Until)<font color="red">*</font>
+                <span style="padding-left:1em">วันที่หมดอายุใบรับรอง (Expiry Date / Valid Until)<font color="red">*</font></span>
             </td>
             <td>
                 <md-datepicker ng-model="LIST_GMP.CER.EXP_DOCUMENT_DATE" md-placeholder="Enter date"
@@ -146,7 +135,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                ประเทศของหน่วยงานที่ออกใบรับรอง (Country of Certification Agency)
+                <span style="padding-left:1em">ประเทศของหน่วยงานที่ออกใบรับรอง (Country of Certification Agency)</span>
             </td>
             <td>
                 <select class="form-control selectpicker" data-live-search="true" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.COUNTRY_OF_DEPARTMENT_IDA" title="-- Please select --">

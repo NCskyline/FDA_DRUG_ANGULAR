@@ -20,7 +20,7 @@ End Code
     </h2>
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
-            <td style="height:25px">
+            <td style="height:25px;width:35%">
                 1. ชื่อผู้ผลิตเภสัชเคมีภัณฑ์ (Drug Substance Manufacturer)<font color="red">*</font>
             </td>
             <td>
@@ -56,7 +56,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                รหัสไปรษณีย์ (Postal Code / Zip Code)
+                <span style="padding-left:1em">รหัสไปรษณีย์ (Postal Code / Zip Code)</span>
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -103,7 +103,6 @@ End Code
 
             </td>
         </tr>
-
         <tr>
             <td style="height:25px">
                 8. ประเทศผู้ซื้อ (Country of Purchaser)<font color="red">*</font>
@@ -113,10 +112,8 @@ End Code
                     @*<option value="0">--กรุณาเลือก--</option>*@
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
-
             </td>
         </tr>
-
         <tr>
             <td style="height:25px">
                 9. มาตรฐาน GMP ของสถานที่ผลิตยาสำเร็จรูปของผู้ซื้อ (GMP Standard of Drug Product manufacturer as Purchaser)<font color="red">*</font>
