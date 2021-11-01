@@ -358,6 +358,7 @@
                     </td>
                 </tr>
             </table>
+            <br />
 
             <table style="width:90%;font-size:20px;">
                 <tr>
@@ -370,12 +371,12 @@
                         <form name="rdl_gmp">
 
                             <label>
-                                <input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_thaaddr" id="chbl_typeee" value="1">
-                                นำเข้ามาเป็นวัตถุดิบเพื่อจำหน่าย
+                                <span style="padding-left:5em"><input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_thaaddr" id="chbl_typeee" value="1">
+                                นำเข้ามาเป็นวัตถุดิบเพื่อจำหน่าย</span>
                             </label>
                             <label>
-                                <input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_engaddr" id="chbl_typeee" ng-value="1">
-                                นำเข้ามาเป็นวัตถุดิบเพื่อผลิตวัตถุตำรับ
+                                <span style="padding-left:1em"><input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_engaddr" id="chbl_typeee" ng-value="1">
+                                นำเข้ามาเป็นวัตถุดิบเพื่อผลิตวัตถุตำรับ</span>
                             </label>
                         </form>
                     </td>
@@ -384,12 +385,12 @@
                     <td>
                         <form name="rdl_gmp">
                             <label>
-                                <input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_room" id="chbl_typeee" value="1">
-                                นำเข้ามาเป็นผลิตภัณฑ์สำเร็จรูปเพื่อจำหน่าย
+                                <span style="padding-left:5em"><input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_room" id="chbl_typeee" value="1">
+                                นำเข้ามาเป็นผลิตภัณฑ์สำเร็จรูปเพื่อจำหน่าย</span>
                             </label>
                             <label>
-                                <input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_engsoi" id="chbl_typeee" ng-value="1">
-                                นำเข้ามาเป็นผลิตภัณฑ์สำเร็จรูปเพื่อส่งออก
+                                <span style="padding-left:1em"><input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_engsoi" id="chbl_typeee" ng-value="1">
+                                นำเข้ามาเป็นผลิตภัณฑ์สำเร็จรูปเพื่อส่งออก</span>
                             </label>
                         </form>
                     </td>
@@ -397,11 +398,15 @@
                 <tr>
                     <td>
                         <form name="rdl_gmp">
-                            <label>
-                                <input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_floor" id="chbl_typeee" value="1">
-                                อื่นๆ (โปรดระบุ)
-                            </label>
-                            <input type="text" ng-model="LIST_LCN.dalcn.syslctaddr_thasoi" id="chbl_typeee" ng-value="1">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <span style="padding-left:5em"><input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_floor" id="chbl_typeee" value="1">
+                                            อื่นๆ (โปรดระบุ)</span>
+                                    </td>
+                                    <td><input type="text" ng-model="LIST_LCN.dalcn.syslctaddr_thasoi" id="chbl_typeee" ng-value="1"></td>
+                                </tr>
+                            </table>
                         </form>
                     </td>
                 </tr>

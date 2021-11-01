@@ -194,11 +194,13 @@
                     <td>
                         ปี
                     </td>
+                    <td></td>
                     <td>
                         สัญชาติ
                     </td>
-                    <td style="text-align:left;width:10%;">
-                        @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />*@
+                    <td width="2%"></td>
+                    <td>
+                        <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />
                     </td>
 
                 </tr>
@@ -246,7 +248,7 @@
 
             <table style="font-size:20px;width:100%">
                 <tr>
-                    <td style="width:155px">
+                    <td style="width:10%">
                         โทรศัพท์
                     </td>
                     <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;" width="500">

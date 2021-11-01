@@ -164,10 +164,15 @@ End Code
         <div >
             <div style="width:100%;">
                 <div>
-                    <table width="100%" style="font-family:'Taviraj'">
+                    <table width="100%" style="font-family:'Taviraj';font-size:20px;">
                         <tr>
                             <td width="40%">ใบอนุญาต  {{lcnnoType}}</td>
-
+                        </tr>
+                    </table>
+                    <hr />
+                    <table width="100%" style="font-family:'Taviraj'">
+                        <tr>
+                            <td><input style="width:60%" class="form-control" placeholder="ค้นหา..." ng-model="filter" /></td>
                             <td align="right">
                                 <button class="btn btn-lg" ng-click="BTN_INPUT()">สร้างคำขอ</button>
                             </td>

@@ -169,11 +169,13 @@
                     <td>
                         ปี
                     </td>
+                    <td></td>
                     <td>
                         สัญชาติ
                     </td>
+                    <td width="2%"></td>
                     <td>
-                        @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />*@
+                        <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />
                     </td>
 
                 </tr>
@@ -198,6 +200,7 @@
                     </td>
                 </tr>
             </table>
+            <br />
             <div style="font-size:20px">
                 ขอรับใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร
             </div>

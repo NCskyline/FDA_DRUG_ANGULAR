@@ -191,11 +191,13 @@
                     <td>
                         ปี
                     </td>
+                    <td></td>
                     <td>
                         สัญชาติ
                     </td>
-                    <td style="text-align:left;width:10%;border-bottom:dotted;border-bottom-width:thin;">
-                        @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
+                    <td width="2%"></td>
+                    <td>
+                        <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';font-size:20px;" type="text" />
                     </td>
 
                 </tr>

@@ -195,24 +195,24 @@
                                 </td>
                             </tr>
                         </table>
-
-
                     </form>
                 </td>
                 <td>
                     อายุ
                 </td>
-                <td style="text-align: left; width: 20%;border-bottom:dotted;border-bottom-width:thin;" align="center">
+                <td style="text-align: left; width:20%;border-bottom:dotted;border-bottom-width:thin;" align="center">
                     <label>{{LIST_LCN.AGE}}</label>
                 </td>
                 <td>
                     ปี
                 </td>
+                <td></td>
                 <td>
                     สัญชาติ
                 </td>
-                <td style="text-align:left;width:10%;border-bottom:dotted;border-bottom-width:thin;">
-                    @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />*@
+                <td width="2%"></td>
+                <td>
+                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />
                 </td>
 
             </tr>
@@ -249,7 +249,7 @@
                     E-mail
                 </td>
                 <td>
-                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.Email" style="font-family:'Taviraj';border-bottom:dotted;border-bottom-width:thin;" type="text" />
+                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.Email" style="font-family:'Taviraj';" type="text" />
                 </td>
             </tr>
         </table>
@@ -356,8 +356,6 @@
                 </td>
             </tr>
         </table>
-
-
         <br />
         <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_KEEP(LIST_LABEL,LIST_LCN.LOCATION_SELECT)" />
         <div>
@@ -552,7 +550,7 @@
             <td>
                 (ลายมือชื่อ)
             </td>
-            <td style="width:50%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
+            <td style="width:60%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
             <td style="text-align:left">
                 ผู้ขออนุญาต
             </td>
@@ -561,7 +559,7 @@
             <td>
                 (
             </td>
-            <td style="width:50%;text-align:center;border-bottom:dotted;border-bottom-width:thin;">
+            <td style="width:60%;text-align:center;border-bottom:dotted;border-bottom-width:thin;">
                 <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
             </td>
             <td style="text-align:left">
