@@ -227,7 +227,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                     $scope.LIST_DRM = datas.data;
                     $scope.currentPage = 0;
                     $scope.entryLimit = 20;
-                    $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
+                    $scope.noOfPages = Math.ceil($scope.LIST_DRM.Length / $scope.entryLimit);
                     $scope.loading_profile = false;
                     $scope.product_show = true;
                 }, function () { });
