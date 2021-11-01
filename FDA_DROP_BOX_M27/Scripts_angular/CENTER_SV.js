@@ -434,8 +434,17 @@
         });
         return response;
     };
-
     
+    this.SP_SEARCH_PERSON = function (search) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_SEARCH_PERSON"),
+            params: {
+                search: search
+            }
+        });
+        return response;
+    };
     this.SP_DRRGT_SUBSTITUTE_STAFF = function () {
         var response = $http({
             method: "post",
@@ -469,6 +478,16 @@
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/SP_CER_SEARCH")
+
+        });
+        return response;
+    };
+
+    
+    this.SP_GET_ALL_PROFESSIONAL = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_GET_ALL_PROFESSIONAL")
 
         });
         return response;

@@ -86,7 +86,15 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
     $scope.BTN_SUB_MENU_CLICK = function (BTN_GROUP, IDgroup, SEQ) {
 
         if (BTN_GROUP == '0') {
-            gg;
+            
+            if (SEQ == '5') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/MASTER_DATA/FRM_PROFESSIONAL_MAIN');
+                var dataedit = CENTER_SV.SP_GET_ALL_PROFESSIONAL();
+                dataedit.then(function (datas) {
+                    $scope.DATA_PROFESS = datas.data;
+                }, function () { });
+            }
+
         } else if (BTN_GROUP == '1') {
             if (SEQ == '4') {
 
@@ -306,7 +314,42 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
             }
         });
     };
-    
+    $scope.BTN_SEARCH_NAME_PRO = function (txt_search) {
+
+        var GetdataPRO = CENTER_SV.SP_SEARCH_PERSON(txt_search);
+        GetdataPRO.then(function (datas) {
+            $scope.LIST_PROFESSIONAL = datas.data;
+
+        }, function () { });
+    };
+
+    $scope.BTN_ADD_PROFESS = function (datas) {
+
+        var obj = {
+            tha_fullnm: datas.tha_fullnm,
+            identify: datas.identify,
+
+        };
+        $scope.PROFESS_DATA.push(obj);
+    };
+    $scope.deletePROFESS = function (data, i) {
+        $scope.PROFESS_DATA.splice(i, 1);
+    };
+
+    $scope.BTN_SAVE_PROFESS = function () {
+
+        var Getdata = CENTER_SV.INSERT_PROFESSIONAL($scope.PROFESS_DATA);
+        Getdata.then(function (datas) {
+            Swal.fire({
+                title: 'SUCCESS',
+                text: 'บันทึกข้อมูลเรียบร้อย',
+                icon: 'ดฟสหำ',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+
+            });
+        });
+    };
 
     $scope.BTN_SAVE_CSD = function () {
         var APP_DATA = CENTER_SV.SAVE_LCN_CONSIDER(LIST_APP_LCN, sessionStorage.LCN_IDA, sessionStorage.CITIZEN_ID , sessionStorage.PVCODE);

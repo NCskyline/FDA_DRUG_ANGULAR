@@ -113,11 +113,13 @@
                     <td>
                         ปี
                     </td>
+                    <td></td>
                     <td>
                         สัญชาติ
                     </td>
-                    <td style="text-align:left;width:10%;">
-                        @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />*@
+                    <td width="2%"></td>
+                    <td>
+                        <input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />
                     </td>
 
                 </tr>
@@ -130,7 +132,6 @@
                     <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;" colspan="3">
                         <label>{{LIST_LCN.BSN_FULL_ADDR}}</label>
                     </td>
-
                 </tr>
                 <tr>
                     <td>
@@ -149,18 +150,21 @@
                     <td>
                         <form name="rdl_gmp">
 
+                            <label>&nbsp;</label>
                             <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" value="109" disabled="disabled">
                             ผลิตยาแผนโบราณ
 
+                            <label>&nbsp;</label>
                             <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" value="107" disabled="disabled">
                             ขายยาแผนโบราณ
 
+                            <label>&nbsp;</label>
                             <input type="radio" ng-model="LIST_LCN.PROCESS" id="rdl_lcn_process" value="108" disabled="disabled">
                             นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร
 
                         </form>
                     </td>
-                    <td>
+                    <td width="5%">
                         หมวด
                     </td>
                     <td>
@@ -334,10 +338,11 @@
                     <td>
                         เป็นผู้มีหน้าที่ปฏิบัติการตามมาตรา
                     </td>
+                    <td width="2%"></td>
                     <td>
                         <form name="rdl_gmp">
-                            <label><input type="radio" ng-model="LIST_LCN.PHR_LAW_SECTION" id="rdl_law_select" value="1"> มาตรา ๖๘</label>
-                            <label><input type="radio" ng-model="LIST_LCN.PHR_LAW_SECTION" id="rdl_law_select" value="2"> มาตรา ๖๙</label>
+                            <label><input type="radio" ng-model="LIST_LCN.PHR_LAW_SECTION" id="rdl_law_select" value="1"> มาตรา ๖๘</label>&nbsp;&nbsp;
+                            <label><input type="radio" ng-model="LIST_LCN.PHR_LAW_SECTION" id="rdl_law_select" value="2"> มาตรา ๖๙</label>&nbsp;&nbsp;
                             <label><input type="radio" ng-model="LIST_LCN.PHR_LAW_SECTION" id="rdl_law_select" value="3">  มาตรา ๗๐ แห่งพระราชบัญญัติยา พ.ศ. ๒๕๑๐ </label>
 
                         </form>

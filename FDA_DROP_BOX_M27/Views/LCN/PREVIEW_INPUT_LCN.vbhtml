@@ -182,12 +182,10 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                        </td>*@
                                 </tr>
                             </table>
-
-
                         </form>
                     </td>
                     <td>
@@ -199,9 +197,11 @@
                     <td>
                         ปี
                     </td>
+                    <td></td>
                     <td>
                         สัญชาติ
                     </td>
+                    <td width="2%"></td>
                     <td style="text-align:left;width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />*@
                         {{LIST_LCN.dalcn.NATION}}
@@ -310,6 +310,44 @@
             <br />
             <div style=" font-size:20px;margin-left:5%">๑) ให้ตอบมากกว่า ๑ ข้อ ในกรณีมีลักษณะการประกอบการมากกว่าหนึ่งลักษณะโดยการตอบจะมีผลต่อการประเมินความพร้อมของสถานที่ </div>
             <div style=" font-size:20px">อุปกรณ์ และการดำเนินการตามหลักวิธีปฏิบัติทางเภสัชกรรมชุมชน เพื่อประกอบการอนุญาต</div>
+            <br />
+            <table style="width:50%">
+                <tr>
+                    <td>
+                        ชื่อสถานที่เก็บ ( 1 ) :
+                    </td>
+                    <td>
+                        @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
+                            @*<option value="">--กรุณาเลือก--</option>*@
+                            @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
+                        </select>*@
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        อยู่เลขที่
+                    </td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
+                        <label>{{LIST_LABEL.fulladdr}}</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        โทรศัพท์
+                    </td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
+                        <label>{{LIST_LABEL.tel}}</label>
+                    </td>
+                </tr>
+                <tr style="font-size: 20px">
+                    <td>
+                        โทรศัพท์มือถือ
+                    </td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin;">
+                        <label>{{LIST_LABEL.Mobile}}</label>
+                    </td>
+                </tr>
+            </table>
             <br />
 
             <div class="row">
@@ -583,8 +621,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                        </td>*@
                                 </tr>
                             </table>
 
@@ -600,9 +638,11 @@
                     <td>
                         ปี
                     </td>
+                    <td></td>
                     <td>
                         สัญชาติ
                     </td>
+                    <td width="2%"></td>
                     <td style="text-align:left;width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
                         {{LIST_LCN.dalcn.NATION}}
@@ -695,9 +735,9 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                        @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -756,9 +796,9 @@
                     </td>
                     <td>
                         @*<select ng-model="LIST_PHR_ADD.PHR_CHK_JOB">
-                                <option value="1">ผู้ประกอบวิชาชีพเภสัชกรรม</option>
-                                <option value="2">ผู้ประกอบวิชาชีพการสัตวแพทย์</option>
-                            </select>*@
+                        <option value="1">ผู้ประกอบวิชาชีพเภสัชกรรม</option>
+                        <option value="2">ผู้ประกอบวิชาชีพการสัตวแพทย์</option>
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_CHK_JOB}}
                     </td>
                 </tr>
@@ -778,9 +818,9 @@
                         </td>
                         <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                             @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                                @*<option value="0">--กรุณาเลือก--</option>*@
+                        @*<option value="0">--กรุณาเลือก--</option>*@
                             @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                                </select>*@
+                        </select>*@
                             {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                         </td>
                         <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -843,9 +883,9 @@
                         </td>
                         <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                             @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                                @*<option value="0">--กรุณาเลือก--</option>*@
+                        @*<option value="0">--กรุณาเลือก--</option>*@
                             @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                                </select>*@
+                        </select>*@
                             {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                         </td>
                         <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -947,6 +987,24 @@
             <div style="margin-left:10%;font-size:20px">(๖) สำเนาหรือรูปถ่ายใบอนุญาตประกอบวิชาชีพเภสัชกรรมของเภสัชกรทุกคน ซึ่งรับจะเป็นผู้มีหน้าที่ปฏิบัติการของผู้ขออนุญาต</div>
             <div style="margin-left:10%;font-size:20px">(๗) เอกสารแสดงว่าเป็นผู้ดำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
             <div style="margin-left:10%;font-size:20px">(๘) เอกสารอื่นๆ ถ้าจำเป็น</div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <br />
             <br />
             <br />
@@ -1103,8 +1161,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                        </td>*@
                                 </tr>
                             </table>
 
@@ -1120,9 +1178,11 @@
                     <td>
                         ปี
                     </td>
+                    <td></td>
                     <td>
                         สัญชาติ
                     </td>
+                    <td width="2%"></td>
                     <td style="text-align:left;width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
                         {{LIST_LCN.dalcn.NATION}}
@@ -1239,9 +1299,9 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -1307,9 +1367,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -1408,6 +1468,24 @@
             <div style="margin-left:10%;font-size:20px">(๕) สัญญาระหว่างผู้ขออนุญาตและเภสัชกร ซึ่งรับจะเป็นผู้มีหน้าที่ปฏิบัติการของผู้ขออนุญาต</div>
             <div style="margin-left:10%;font-size:20px">(๖) สำเนาหรือรูปถ่ายใบอนุญาตประกอบวิชาชีพเภสัชกรรมของเภสัชกรทุกคน ซึ่งรับจะเป็นผู้มีหน้าที่ปฏิบัติการของผู้ขออนุญาต</div>
             <div style="margin-left:10%;font-size:20px">(๗) เอกสารแสดงว่าเป็นผู้ดำเนินกิจการ (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <br />
             <br />
             <br />
@@ -1557,8 +1635,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -1663,9 +1741,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
@@ -1764,9 +1842,9 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -1817,6 +1895,24 @@
                         </table>
                     </div>
                 </div>
+            </div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -1951,8 +2047,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -2191,9 +2287,9 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -2259,9 +2355,9 @@
                     </td>
                     <td style="width:10%">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -2299,12 +2395,12 @@
                     </td>
                     <td>
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_PHR_ADD.PHR_JOB_TYPE">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in CNT_functnm" value="{{x.functcd}}">{{x.functnm}}</option>
-                            </select>*@
+                    </select>*@
                         @*<div hidden>
-                                {{LIST_PHR_ADD.PHR_JOB_TYPE_NAME}}
-                            </div>*@
+                        {{LIST_PHR_ADD.PHR_JOB_TYPE_NAME}}
+                    </div>*@
 
                     </td>
                 </tr>
@@ -2335,6 +2431,24 @@
                         </table>
                     </div>
                 </div>
+            </div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -2424,8 +2538,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -2559,9 +2673,9 @@
                     </td>
                     <td style="text-align:left ;width:7.5%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.DALCN_PHR.PHR_PREFIX_ID}}
                     </td>
                     <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
@@ -2584,9 +2698,9 @@
                     </td>
                     <td style="width:10%">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -2662,9 +2776,9 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                            @*<option value="">--กรุณาเลือก--</option>*@
+                    @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -2716,6 +2830,24 @@
                         </table>
                     </div>
                 </div>
+            </div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -2805,8 +2937,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -2940,9 +3072,9 @@
                     </td>
                     <td style="text-align:left ;width:7.5%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.DALCN_PHR.PHR_PREFIX_ID}}
                     </td>
                     <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
@@ -2965,9 +3097,9 @@
                     </td>
                     <td style="width:10%">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -3043,9 +3175,9 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                            @*<option value="">--กรุณาเลือก--</option>*@
+                    @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -3097,6 +3229,24 @@
                         </table>
                     </div>
                 </div>
+            </div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -3186,8 +3336,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -3321,9 +3471,9 @@
                     </td>
                     <td style="text-align:left ;width:7.5%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.DALCN_PHR.PHR_PREFIX_ID}}
                     </td>
                     <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
@@ -3346,9 +3496,9 @@
                     </td>
                     <td style="width:10%">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -3424,9 +3574,9 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                            @*<option value="">--กรุณาเลือก--</option>*@
+                    @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -3478,6 +3628,24 @@
                         </table>
                     </div>
                 </div>
+            </div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -3718,8 +3886,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -3897,9 +4065,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td>
@@ -3973,9 +4141,9 @@
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                            @*<option value="">--กรุณาเลือก--</option>*@
+                    @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -4121,9 +4289,26 @@
                         ใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
                     </td>
                 </tr>
-
             </table>
             <div style="margin-left:5%;font-size:20px;text-align:center"><strong>ข้าพเจ้าขอรับรองว่า ข้อความและเอกสารหรือหลักฐานทั้งหมดที่ยื่นเพื่อประกอบคำขอรับใบอนุญาตเป็นความจริงทุกประการ</strong></div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <br />
             <br />
 
@@ -4406,8 +4591,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -4586,9 +4771,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td>
@@ -4662,9 +4847,9 @@
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                            @*<option value="">--กรุณาเลือก--</option>*@
+                    @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -4813,6 +4998,24 @@
 
             </table>
             <div style="margin-left:5%;font-size:20px;text-align:center"><strong>ข้าพเจ้าขอรับรองว่า ข้อความและเอกสารหรือหลักฐานทั้งหมดที่ยื่นเพื่อประกอบคำขอรับใบอนุญาตเป็นความจริงทุกประการ</strong></div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <br />
             <br />
 
@@ -5096,8 +5299,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -5206,9 +5409,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -5379,9 +5582,9 @@
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                            @*<option value="">--กรุณาเลือก--</option>*@
+                    @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -5541,6 +5744,24 @@
 
             </table>
             <div style="margin-left:5%;font-size:20px;text-align:center"><strong>ข้าพเจ้าขอรับรองว่า ข้อความและเอกสารหรือหลักฐานทั้งหมดที่ยื่นเพื่อประกอบคำขอรับใบอนุญาตเป็นความจริงทุกประการ</strong></div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <br />
             <br />
 
@@ -5814,8 +6035,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -5924,9 +6145,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -6097,9 +6318,9 @@
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                            @*<option value="">--กรุณาเลือก--</option>*@
+                    @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -6259,6 +6480,24 @@
 
             </table>
             <div style="margin-left:5%;font-size:20px;text-align:center"><strong>ข้าพเจ้าขอรับรองว่า ข้อความและเอกสารหรือหลักฐานทั้งหมดที่ยื่นเพื่อประกอบคำขอรับใบอนุญาตเป็นความจริงทุกประการ</strong></div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <br />
             <br />
 
@@ -6534,8 +6773,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -6661,9 +6900,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -6797,6 +7036,24 @@
 
             </table>
             <div style="margin-left:5%;font-size:20px;text-align:center"><strong>ข้าพเจ้าขอรับรองว่า ข้อความและเอกสารหรือหลักฐานทั้งหมดที่ยื่นเพื่อประกอบคำขอรับใบอนุญาตเป็นความจริงทุกประการ</strong></div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <br />
             <br />
 
@@ -7081,8 +7338,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -7208,9 +7465,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -7304,7 +7561,7 @@
                 </tr>
                 <tr>
                     <td>
-                        (๖) รูปถ่ายแสดงที่นำำเข้าหรือเก็บซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ของสถานประกอบการจำำนวน ๑ รูป
+                        (๖) รูปถ่ายแสดงที่นำเข้าหรือเก็บซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ของสถานประกอบการจำนวน ๑ รูป
                     </td>
                 </tr>
             </table>
@@ -7344,6 +7601,24 @@
 
             </table>
             <div style="margin-left:5%;font-size:20px;text-align:center"><strong>ข้าพเจ้าขอรับรองว่า ข้อความและเอกสารหรือหลักฐานทั้งหมดที่ยื่นเพื่อประกอบคำขอรับใบอนุญาตเป็นความจริงทุกประการ</strong></div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <br />
             <br />
 
@@ -7624,8 +7899,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -7734,9 +8009,9 @@
                     </td>
                     <td style="width:10%">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -7906,9 +8181,9 @@
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                            @*<option value="">--กรุณาเลือก--</option>*@
+                    @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -8068,6 +8343,24 @@
 
             </table>
             <div style="margin-left:5%;font-size:20px;text-align:center"><strong>ข้าพเจ้าขอรับรองว่า ข้อความและเอกสารหรือหลักฐานทั้งหมดที่ยื่นเพื่อประกอบคำขอรับใบอนุญาตเป็นความจริงทุกประการ</strong></div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <br />
             <br />
 
@@ -8350,8 +8643,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -8460,9 +8753,9 @@
                     </td>
                     <td style="width:10%">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -8632,9 +8925,9 @@
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                            @*<option value="">--กรุณาเลือก--</option>*@
+                    @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -8794,6 +9087,24 @@
 
             </table>
             <div style="margin-left:5%;font-size:20px;text-align:center"><strong>ข้าพเจ้าขอรับรองว่า ข้อความและเอกสารหรือหลักฐานทั้งหมดที่ยื่นเพื่อประกอบคำขอรับใบอนุญาตเป็นความจริงทุกประการ</strong></div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <br />
             <br />
 
@@ -8968,7 +9279,7 @@
                         </td>
                         <td style="text-align:left;width:10%;border-bottom:dotted;border-bottom-width:thin;">
                             @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />*@
-                                {{LIST_LCN.dalcn.NATION}}
+                            {{LIST_LCN.dalcn.NATION}}
                         </td>
                     </tr>
                 </table>
@@ -9065,9 +9376,9 @@
                         </td>
                         <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                             @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                                @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                             @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                                </select>*@
+                    </select>*@
                             {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                         </td>
                         <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -9168,8 +9479,26 @@
                         <td style="width: 98%">(๘) เอกสารหรือหลักฐานอื่นๆ(ถ้ามี)</td>
                     </tr>
                 </table>
-                <br /><br />
-
+                <br />
+                <div>
+                    <h2 style="font-family:'Taviraj';font-size:20px;">
+                        ไฟล์แนบ
+                    </h2>
+                    <table class="table" style="width:100%">
+                        <tr>
+                            <td>ชื่อไฟล์</td>
+                            <td></td>
+                        </tr>
+                        <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                            <td>{{datas.FILENAME}}</td>
+                            <td>
+                                <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br />
+                <br />
 
                 <table style="font-size:20px;width:70%;float:right">
                     <tr>
@@ -9422,9 +9751,9 @@
                         </td>
                         <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                             @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                                @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                             @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                                </select>*@
+                    </select>*@
                             {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                         </td>
                         <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -9525,8 +9854,26 @@
                         <td style="width: 98%">(๘) เอกสารหรือหลักฐานอื่นๆ(ถ้ามี)</td>
                     </tr>
                 </table>
-                <br /><br />
-
+                <br />
+                <div>
+                    <h2 style="font-family:'Taviraj';font-size:20px;">
+                        ไฟล์แนบ
+                    </h2>
+                    <table class="table" style="width:100%">
+                        <tr>
+                            <td>ชื่อไฟล์</td>
+                            <td></td>
+                        </tr>
+                        <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                            <td>{{datas.FILENAME}}</td>
+                            <td>
+                                <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br />
+                <br />
 
                 <table style="font-size:20px;width:70%;float:right">
                     <tr>
@@ -9663,11 +10010,11 @@
                                     <tr>
                                         <td>
                                             @*<input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'Taviraj';" type="text" />*@
-                                                {{LIST_LCN.BSN_IDENTIFY}}
+                                            {{LIST_LCN.BSN_IDENTIFY}}
                                         </td>
                                         @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                     </tr>
                                 </table>
                             </form>
@@ -9683,7 +10030,7 @@
                         </td>
                         <td style="text-align:left;width:10%;">
                             @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.NATION" style="font-family:'Taviraj';" type="text" />*@
-                                {{LIST_LCN.dalcn.NATION}}
+                            {{LIST_LCN.dalcn.NATION}}
                         </td>
                     </tr>
                 </table>
@@ -9780,9 +10127,9 @@
                         </td>
                         <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                             @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                                @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                             @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                                </select>*@
+                    </select>*@
                             {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                         </td>
                         <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -9883,8 +10230,26 @@
                         <td style="width: 98%">(๘) เอกสารหรือหลักฐานอื่นๆ(ถ้ามี)</td>
                     </tr>
                 </table>
-                <br /><br />
-
+                <br />
+                <div>
+                    <h2 style="font-family:'Taviraj';font-size:20px;">
+                        ไฟล์แนบ
+                    </h2>
+                    <table class="table" style="width:100%">
+                        <tr>
+                            <td>ชื่อไฟล์</td>
+                            <td></td>
+                        </tr>
+                        <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                            <td>{{datas.FILENAME}}</td>
+                            <td>
+                                <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br />
+                <br />
 
                 <table style="font-size:20px;width:70%;float:right">
                     <tr>
@@ -10150,8 +10515,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                 </tr>
                             </table>
 
@@ -10261,7 +10626,7 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="3">
                         @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.CATEGORY_DRUG" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
-                            {{LIST_LCN.dalcn.CATEGORY_DRUG}}
+                        {{LIST_LCN.dalcn.CATEGORY_DRUG}}
                     </td>
                 </tr>
                 <tr>
@@ -10297,9 +10662,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                            @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -10370,9 +10735,9 @@
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                            @*<option value="">--กรุณาเลือก--</option>*@
+                    @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                            </select>*@
+                    </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -10474,7 +10839,7 @@
                 </tr>
                 <tr>
                     <td>
-                        (๗) รูปถ่ายแสดงที่ผลิตหรือเก็บซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ของสถานประกอบการจำำนวน ๑ รูป
+                        (๗) รูปถ่ายแสดงที่ผลิตหรือเก็บซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ของสถานประกอบการจำนวน ๑ รูป
                     </td>
                 </tr>
             </table>
@@ -10515,6 +10880,24 @@
 
             </table>
             <div style="margin-left:5%;font-size:20px;text-align:center"><strong>ข้าพเจ้าขอรับรองว่า ข้อความและเอกสารหรือหลักฐานทั้งหมดที่ยื่นเพื่อประกอบคำขอรับใบอนุญาตเป็นความจริงทุกประการ</strong></div>
+            <br />
+            <div>
+                <h2 style="font-family:'Taviraj';font-size:20px;">
+                    ไฟล์แนบ
+                </h2>
+                <table class="table" style="width:100%">
+                    <tr>
+                        <td>ชื่อไฟล์</td>
+                        <td></td>
+                    </tr>
+                    <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                        <td>{{datas.FILENAME}}</td>
+                        <td>
+                            <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <br />
             <br />
 
@@ -11317,11 +11700,11 @@
                                     <tr>
                                         <td>
                                             @*<input class="form-control inline" ng-model="LIST_LCN.BSN_IDENTIFY" id="txt_bsn_identify" style="font-family:'Taviraj';" type="text" />*@
-                                                {{LIST_LCN.BSN_IDENTIFY}}
+                                            {{LIST_LCN.BSN_IDENTIFY}}
                                         </td>
                                         @*<td>
-                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                        </td>*@
+                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                </td>*@
                                     </tr>
                                 </table>
                             </form>
@@ -11434,9 +11817,9 @@
                         </td>
                         <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                             @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                                @*<option value="0">--กรุณาเลือก--</option>*@
+                    @*<option value="0">--กรุณาเลือก--</option>*@
                             @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                                </select>*@
+                    </select>*@
                             {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                         </td>
                         <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -11537,7 +11920,26 @@
                         <td style="width: 98%">(๘) เอกสารหรือหลักฐานอื่นๆ(ถ้ามี)</td>
                     </tr>
                 </table>
-                <br /><br />
+                <br />
+                <div>
+                    <h2 style="font-family:'Taviraj';font-size:20px;">
+                        ไฟล์แนบ
+                    </h2>
+                    <table class="table" style="width:100%">
+                        <tr>
+                            <td>ชื่อไฟล์</td>
+                            <td></td>
+                        </tr>
+                        <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                            <td>{{datas.FILENAME}}</td>
+                            <td>
+                                <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br />
+                <br />
                 <table style="font-size:20px;width:70%;float:right">
                     <tr>
                         <td style="width:10%;text-align:center">

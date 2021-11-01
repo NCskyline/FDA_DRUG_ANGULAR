@@ -6,6 +6,32 @@ Public Class BAO
     Private _conn_CPN As String = System.Configuration.ConfigurationManager.ConnectionStrings("LGTPERMISSIONConnectionString").ConnectionString
     Private _con_d As String = System.Configuration.ConfigurationManager.ConnectionStrings("LGT_DRUGConnectionString").ConnectionString
     '
+
+    Public Function SP_SEARCH_PERSON(ByVal search As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_SEARCH_PERSON @search='" & search & "'"
+        Dim dta As New DataTable
+        Try
+            dta = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+        dta.TableName = "SP_SEARCH_PERSON"
+        Return dta
+    End Function
+    Public Function SP_GET_ALL_PROFESSIONAL() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_GET_ALL_PROFESSIONAL "
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+        dt.TableName = "SP_GET_ALL_PROFESSIONAL"
+        Return dt
+    End Function
     Public Function SP_SYSPREFIX() As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_SYSPREFIX"

@@ -36,6 +36,15 @@ Namespace Controllers
 
 #Region "STORE"
 
+        Function SP_GET_ALL_PROFESSIONAL() As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_GET_ALL_PROFESSIONAL()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
+
         Function SP_STAFF_DH15RQT() As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO
@@ -4955,6 +4964,31 @@ Namespace Controllers
             End Try
             dao.insert()
 
+            Return Json(Result, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function INSERT_PROFESSIONAL(ByVal XML_DATA As String)
+            Dim Result As String = ""
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_LCN = jss.Deserialize(XML_DATA, GetType(MODEL_LCN))
+            Try
+                Dim dao1 As New DAO_DRUG.TB_MAS_EXPERT_NAME
+                dao1.GetDataby_ctzno(bb.IDENTIFY)
+                If dao1.fields.IDA = 0 Then
+                    Dim dao As New DAO_DRUG.TB_MAS_EXPERT_NAME
+                    dao.fields.IDENTIFY = bb.IDENTIFY
+                    dao.fields.FULLNAME = bb.tha_fullnm
+                    dao.fields.PREFIXCD = 0
+                    dao.insert()
+                Else
+                    dao1.fields.IDENTIFY = bb.IDENTIFY
+                    dao1.fields.FULLNAME = bb.tha_fullnm
+                    dao1.update()
+                End If
+                Result = "SUCCESS"
+            Catch ex As Exception
+                Result = "FAIL"
+            End Try
             Return Json(Result, JsonRequestBehavior.AllowGet)
         End Function
 
