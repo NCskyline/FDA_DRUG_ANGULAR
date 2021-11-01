@@ -29,19 +29,22 @@ End Code
             <td>
                 ชื่อผู้ผลิต (Manufacturer)
             </td>
-            <td width="30%">
+            <td width="55%">
                 <input class="form-control inline" ng-model="LIST_DH.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
+            <td width="2%"></td>
             <td>
                 ประเทศ (Country)
             </td>
-            <td width="10%">
+            <td width="20%">
                 <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_DH.DH15_DETAIL_CER.COUNTRY_NAME">
                     @*<option value="0">--กรุณาเลือก--</option>*@
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                 </select>
             </td>
         </tr>
+    </table>
+    <table width="100%">
         <tr>
             <td>
                 ชื่อผู้แทนจำหน่ายในต่างประเทศ (ซื้อผ่าน) (Foreign Distributor (Purchasing through))
@@ -49,6 +52,7 @@ End Code
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
+            <td width="2%"></td>
             <td>
                 ประเทศ (Country)
             </td>
@@ -59,6 +63,8 @@ End Code
                 </select>
             </td>
         </tr>
+    </table>
+    <table width="43%">
         <tr>
             <td>
                 ชื่อการค้า (Trade Name)<font color="red">*</font>
@@ -69,7 +75,7 @@ End Code
         </tr>
     </table>
     <br />
-    <table>
+    <table width="60%">
         <tr>
             <td>
                 มาตรฐานตามตำรับยา (Phamacopoeia Standard of Drug Substance)
@@ -78,6 +84,8 @@ End Code
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
         </tr>
+    </table>
+    <table width="30%">
         <tr>
             <td>
                 เกรด
