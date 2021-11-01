@@ -1,6 +1,6 @@
 ﻿<script type="text/javascript">
 
-</script>
+</script> 
 
 <script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>

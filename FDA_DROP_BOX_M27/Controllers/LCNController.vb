@@ -202,7 +202,12 @@ Namespace Controllers
         Function FRM_LCN_EDIT_RETURN() As ActionResult
             Return View()
         End Function
-
+        Function INPUT_F_D2_198_1_UPFILE() As ActionResult
+            Return View()
+        End Function
+        Function INPUT_F_D2_198_1_UPFILE_N() As ActionResult
+            Return View()
+        End Function
 
     End Class
 
