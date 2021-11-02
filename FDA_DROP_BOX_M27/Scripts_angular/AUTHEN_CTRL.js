@@ -45,7 +45,7 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
                     } else if (TYPE == 'DH') {
                         window.location = "/DH/FRM_MAIN_PAGE_PHESAJ";
                     } else if (TYPE == 'DR') {
-                        window.location = "/DH/FRM_MAIN_PAGE_PRODUCT";
+                        window.location = "/DR/FRM_MAIN_PAGE_PRODUCT";
                     }
 
                 } else {
