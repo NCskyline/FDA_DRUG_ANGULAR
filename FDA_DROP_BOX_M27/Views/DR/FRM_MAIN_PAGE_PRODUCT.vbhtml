@@ -1,8 +1,12 @@
 ﻿@Code
     ViewData("Title") = "FRM_MAIN_PAGE_PRODUCT"
 End Code
+    <script src="~/Scripts_angular/ANGULAR_APP.js"></script>
+    <script src="~/Scripts_angular/CENTER_SV.js"></script>
+    <script src="~/Scripts_angular/DR_CTRL.js"></script>
 
-    <div>
+
+    <div ng-app="ANGULAR_APP" ng-controller="DR_CTRL">
         <div class="content-part " style="font-family:'Taviraj';width:100%">
             <div class="part part-1-3 ic">
                 <ul class="listree">
