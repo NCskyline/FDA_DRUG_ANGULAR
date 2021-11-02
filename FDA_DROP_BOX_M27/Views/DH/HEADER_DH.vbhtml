@@ -78,7 +78,7 @@ End Code*@
     <br />
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
-            <td width="50%" align="center">
+            <td align="center">
                 <form name="myForm">
                     <label>
                         <input type="radio" ng-model="LIST_DH.CHK_TYPE_LCN" value="1">
@@ -91,9 +91,13 @@ End Code*@
                     </label>
                 </form>
             </td>
-            <td>
+        </tr>
+    </table>
+    <table width="100%" style="font-family:'Taviraj';font-size:20px;">
+        <tr>
+            <td align="center">
                 <form name="myForm">
-                    ซึ่ง
+                    ซึ่ง <font color="red">*</font>
                     <label>&nbsp;</label>
                     <label>
                         <input type="radio" ng-model="LIST_DH.dh15rqt.CHK_TYPE_CHEMICAL" value="1">
@@ -115,6 +119,18 @@ End Code*@
         <div ng-include="INPUT" style="width:100%;"></div>
     </div>
     <div ng-show="PROCESS_ID == '14' || PROCESS_ID == '15'">
+        <div>
+            <table width="100%">
+                <tr>
+                    <td align="right" width="50%">
+                        <input class="form-control" placeholder="ค้นหาสารที่นี่..." ng-model="iowanm" />
+                    </td>
+                    <td align="left" width="50%">
+                        <button class="btn btn-lg" ng-click="BTN_SEARCH_CHEM(iowanm)" value="ค้นหาสารที่นี่">ค้นหาสาร</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
         <div class="ic">
             <table id="myTable" datatable="ng" class="dataTable" width="100%">
                 <thead>

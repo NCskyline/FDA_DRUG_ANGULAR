@@ -7,6 +7,11 @@
                 <h3>เพิ่มชื่อสาร</h3>
             </div>
             <br />
+            <table width="100%" style="font-family:'Taviraj';">
+                <tr>
+                    <td><input style="width:60%" class="form-control" placeholder="ค้นหา..." ng-model="filter" /></td>
+                </tr>
+            </table>
             <div class="row" width="100%">
                 <div class="col-sm-12">
                     <div align="center" class="card" style=" border-top: 10px solid #F9D027;">
@@ -20,7 +25,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="data in LIST_CHEM_STAFF">
+                                <tr ng-repeat="data in LIST_CHEM_STAFF | filter: filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
                                     <td>{{data.iowanm}}</td>
                                     <td>{{data.chem_type2}}</td>
                                     <td>{{data.REQUEST_DATE}}</td>

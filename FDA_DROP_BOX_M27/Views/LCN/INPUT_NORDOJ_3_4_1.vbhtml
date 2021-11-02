@@ -890,30 +890,7 @@
                 </tr>
 
             </table>
-            @*<br />
-        <div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-3" style="text-align:center">
-                    รายละเอืยด :
-                </div>
-                <div class="col-sm-9">
-                    {{REMARK}}
-                </div>
-            </div>
             <br />
-            <table class="table" style="width:100%">
-                <tr>
-                    <td>ชื่อไฟล์</td>
-                    <td></td>
-                </tr>
-                <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
-                    <td>{{datas.FILENAME}}</td>
-                    <td>
-                        <a ng-show="PROCESS == '131'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                    </td>
-                </tr>
-            </table>
-        </div>*@
             <br />
             <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
                 <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />

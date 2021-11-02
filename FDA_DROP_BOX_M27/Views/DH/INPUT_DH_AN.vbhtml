@@ -85,19 +85,21 @@ End Code
             </td>
         </tr>
     </table>
-    <table width="100%">
+    <table>
         <tr>
             <td>
                 ชื่อผู้แทนจำหน่ายในต่างประเทศ (ซื้อผ่าน) (Foreign Distributor (Purchasing through))
             </td>
+            <td width="2%"></td>
             <td>
-                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;width:270px;" type="text" />
             </td>
             <td width="2%"></td>
             <td>
                 ประเทศ (Country)
             </td>
-            <td>
+            <td width="2%"></td>
+            <td width="17%">
                 <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
                     @*<option value="0">--กรุณาเลือก--</option>*@
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
@@ -105,43 +107,49 @@ End Code
             </td>
         </tr>
     </table>
-    <table width="43%">
+    <table>
         <tr>
             <td>
                 ชื่อการค้า (Trade Name) <font color="red">*</font>
             </td>
+            <td width="2%"></td>
             <td>
-                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.TRADING_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.TRADING_NAME" style="font-family:'Taviraj';font-size:20px;width:1210px;" type="text" />
             </td>
-
         </tr>
     </table>
-    <table width="60%">
+    <table>
         <tr>
             <td>
                 มาตรฐานตามตำรับยา (Phamacopoeia Standard of Drug Substance)
             </td>
+            <td width="2%"></td>
             <td>
-                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'Taviraj';font-size:20px;width:850px;" type="text" />
             </td>
         </tr>
     </table>
-    <table width="100%">
+    <table>
         <tr>
             <td>
                 จำนวนภาชนะบรรจุ (ต.ย. 2 ถุง) <br />
                 (Quantity (Number of Packages e.g. 2 bags))
             </td>
-            <td>
-                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.unit_alpha3" style="font-family:'Taviraj';font-size:20px;" type="text" />
-            </td>
             <td width="2%"></td>
+            <td>
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.unit_alpha3" style="font-family:'Taviraj';font-size:20px;width:1040px;" type="text" />
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
             <td>
                 น้ำหนัก / ปริมาตรรวม (ต.ย. 10 กิโลกรัม โดย 10 กิโลกรัม มาจาก 2 ถุง x 5 กิโลกรัมต่อถุง) <br />
                 (Total Weight / Volume (e.g. 10 kg. 10 kg which comes from 2 bags x 5 kg/bag))
             </td>
+            <td width="2%"></td>
             <td>
-                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.amount" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.amount" style="font-family:'Taviraj';font-size:20px;width:722px;" type="text" />
             </td>
         </tr>
     </table>
@@ -166,7 +174,7 @@ End Code
                                 อื่น ๆ (ระบุ)<span style="padding-left:1em;"></span>
                             </td>
                             <td>
-                                <input class="form-control inline" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                                <input class="form-control inline" style="font-family:'Taviraj';font-size:20px;width:1300px;" type="text" />
                             </td>
                         </tr>
                        
@@ -212,7 +220,7 @@ End Code
                                 อื่น ๆ (ระบุ)<span style="padding-left:1em;"></span>
                             </td>
                             <td>
-                                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.OTHER_ATTACH" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.OTHER_ATTACH" style="font-family:'Taviraj';font-size:20px;width:1300px;" type="text" />
                             </td>
                         </tr>
                     </table>

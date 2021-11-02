@@ -5,10 +5,15 @@ End Code
     <div>
         <div style="font-family:'Taviraj';width:100%">
             <div>
-                <div >
+                <div>
                     <h3>GMP สถานที่ผลิต</h3>
                 </div>
                 <br />
+                <table width="100%" style="font-family:'Taviraj';">
+                    <tr>
+                        <td><input style="width:60%" class="form-control" placeholder="ค้นหา..." ng-model="filter" /></td>
+                    </tr>
+                </table>
                 <div class="row" width="100%">
                     <div class="col-sm-12">
                         <div align="center" class="card" style=" border-top: 10px solid #F9D027;">
@@ -24,7 +29,7 @@ End Code
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="data in LIST_GMP_STAFF">
+                                    <tr ng-repeat="data in LIST_GMP_STAFF | filter: filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
                                         <td>{{data.rcvno}}</td>
                                         <td>{{data.rcvdate}}</td>
                                         <td>{{data.REQ_DATE}}</td>

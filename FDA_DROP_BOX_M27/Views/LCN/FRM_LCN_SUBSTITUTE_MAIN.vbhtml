@@ -37,7 +37,7 @@ End Code
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr ng-repeat="data in DATA_SUBTITUTE">
+                                        <tr ng-repeat="data in DATA_SUBTITUTE | filter: filter">
                                             <td>{{data.RCVNO_MANUAL}}</td>
                                             <td>{{data.LCNNO_MANUAL}}</td>
                                             <td>{{data.STATUS_NAME}}</td>
@@ -60,8 +60,6 @@ End Code
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
