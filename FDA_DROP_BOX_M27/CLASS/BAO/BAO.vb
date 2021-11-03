@@ -41,6 +41,14 @@ Public Class BAO
         Return dt
     End Function
     '
+    Public Function SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID(ByVal FK_IDA As Integer, ByVal process As Integer) As DataTable
+        Dim clsds As New ClassDataset
+        Dim dt As New DataTable
+        Dim sql As String = "exec SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID @FK_IDA=" & FK_IDA & " , @PROCESS_ID=" & process
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID"
+        Return dt
+    End Function
     Public Function SP_CER_SEARCH() As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_CER_SEARCH"

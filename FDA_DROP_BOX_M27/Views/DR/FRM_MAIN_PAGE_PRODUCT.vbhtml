@@ -14,13 +14,13 @@ End Code
                         <div class="listree-submenu-heading">ก. โปรกเลือกประเภทยา</div>
                         <ul class="listree-submenu-items" style="color:black">
                             <li>
-                                <a ng-click="BTN_MENU('1300001')" style="color:#06B716">ยาแผนปัจจุบัน สำหรับมนุษย์</a>  @*ng-click="DATA_GMP('31')"*@
+                                <a ng-click="BTN_MENU('130001')" style="color:#06B716">ยาแผนปัจจุบัน สำหรับมนุษย์</a>  @*ng-click="DATA_GMP('31')"*@
                             </li>
                             <li>
-                                <a ng-click="BTN_MENU('1300002')" style="color:#06B716">ยาแผนปัจจุบัน สำหรับสัตว์</a>
+                                <a ng-click="BTN_MENU('130002')" style="color:#06B716">ยาแผนปัจจุบัน สำหรับสัตว์</a>
                             </li>
                             <li>
-                                <a ng-click="BTN_MENU('1300004')" style="color:#06B716">ยาแผนโบราณ สำหรับสัตว์</a>
+                                <a ng-click="BTN_MENU('130004')" style="color:#06B716">ยาแผนโบราณ สำหรับสัตว์</a>
                             </li>
                         </ul>
                     </li>

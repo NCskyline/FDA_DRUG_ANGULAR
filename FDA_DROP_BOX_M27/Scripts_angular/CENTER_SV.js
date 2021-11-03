@@ -15,7 +15,19 @@
         });
         return response;
     };
-    
+
+    this.SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID = function (FK_IDA, process) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/DR_CENTER/SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID"),
+            params: {
+                FK_IDA: FK_IDA,
+                process: process
+            }
+        });
+        return response;
+    };
+
     this.UPDATE_LCN_EDIT_CONSIDER = function (XML_DATA, IDA, CITIZEN_ID) {
         var response = $http({
             method: "post",

@@ -44,7 +44,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         var data_CNT = CENTER_SV.SP_MASTER_sysisocnt();
         data_CNT.then(function (datas) {
             $scope.CNT_LIST = datas.data;
-         
+            dropdown();
         }, function () { });
 
         var MODLE_GMP = CENTER_SV.SETMODEL_DH();
@@ -134,6 +134,11 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         }  
     }
 
+    function dropdown() {
+        $(document).ready(function () {
+            $('select').selectpicker('refresh');
+        });
+    }
 
     function Full_Model() {
 
@@ -354,11 +359,9 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
                 $scope.LIST_GMP.CER.DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_GMP.CER.DOCUMENT_DATE)));
                 $scope.LIST_GMP.CER.EXP_DOCUMENT_DATE = filwill(CHANGE_FORMATDATE(CV_DATE($scope.LIST_GMP.CER.EXP_DOCUMENT_DATE)));
-                //$scope.INPUT_CHEM = SET_URL_SV('/CERT/PREVIEW_CHEMICAL');
 
             }, function () { });
         });
-       
     };
 
     $scope.BTN_SEND_REQUEST = function () {

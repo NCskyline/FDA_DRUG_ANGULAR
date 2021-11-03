@@ -53,16 +53,6 @@
         }
 </style>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#PREFIX').selectpicker('refresh');
-    })
-</script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#LOCATION_KEEP').selectpicker('refresh');
-    })
-</script>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
     @*<div ng-show="LIST_LCN.PROCESS == '101'">*@
