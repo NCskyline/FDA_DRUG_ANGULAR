@@ -317,6 +317,14 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         });
     };
 
+    
+    $scope.BTN_SEARCH_DH_STAFF = function (STATUS_ID, TR_ID, DRM, CAS_NAME) {
+        var getdata = CENTER_SV.SP_STAFF_DH15RQT_SEARCH(STATUS_ID, TR_ID, DRM, CAS_NAME);
+        getdata.then(function (datas) {
+            $scope.LIST_DRM = datas.data;
+        });
+    };
+
     $scope.BTN_SAVE_APP = function () {
         var APP_DATA = CENTER_SV.UPDATE_APPROVE_NAME(LIST_APP_LCN, sessionStorage.LCN_IDA,sessionStorage.CITIZEN_ID);
         APP_DATA.then(function (datas) {

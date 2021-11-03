@@ -21,19 +21,20 @@ End Code
             <td style="width:12%">สถานะ</td>
             <td style="width:30%">
                 <select style="font-family:'Taviraj';font-size:20px;"  ng-model="STATUS_ID">
+                    <option value="">-- กรุณาเลือกสถานะ --</option>
                     <option ng-repeat="x in LIST_STATUS" value="{{x.STATUS_ID}}">{{x.STATUS_NAME}}</option>
                 </select>
             </td>
             <td style="width:12%">เลขดำเนินการ</td>
-            <td style="width:30%"><input type="text" style="width:30%"></td>
+            <td style="width:30%"><input type="text" style="width:30%" ng-model="TR_ID" ></td>
             <td>
-            <input type="button" value="ค้นหา" />
+            <input type="button" value="ค้นหา" ng-click="BTN_SEARCH_DH_STAFF(STATUS_ID,TR_ID, DRM, iowanm)" />
             </td>
         <tr>
             <td style="width:12%">เลข DRM</td>
-            <td style="width:30%"><input type="text" style="width:30%"></td>
+            <td style="width:30%"><input type="text" style="width:30%" ng-model="DRM"></td>
             <td style="width:12%">ชื่อสาร</td>
-            <td style="width:30%"><input type="text" style="width:30%"></td>
+            <td style="width:30%"><input type="text" style="width:30%" ng-model="iowanm"></td>
         </tr>
     </table>
 <br />
