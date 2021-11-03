@@ -193,7 +193,7 @@ End Code
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr ng-repeat="data in DATA_LCN_MAIN | filter: filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                                        <tr ng-repeat="data in DATA_LCN_MAIN | filter: filter">
                                             <td>{{data.LCNNO_MANUAL}}</td>
                                             <td>{{data.thanameplace}}</td>
                                             <td>{{data.STATUS_NAME}}</td>

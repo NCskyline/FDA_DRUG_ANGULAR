@@ -15,7 +15,7 @@ End Code
                 <td>{{nameOperator}}</td>
             </tr>
             <tr>
-                <td>ชื่อสถานที่ (Establish Name)</td>
+                <td>ชื่อสถานที่ (Establishment Name)</td>
                 <td>{{thanameplace}}</td>
             </tr>
         </table>

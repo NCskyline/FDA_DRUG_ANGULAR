@@ -254,8 +254,8 @@
         
         var data_lcn = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(sessionStorage.LCT_IDA, sessionStorage.PROCESS, sessionStorage.CITIZEN_ID_AUTHORIZE);
         data_lcn.then(function (datas) {
-            //$scope.DATA_LCN_MAIN = datas.data;
-            //$scope.DATA_LCN_MAIN.lcnnoType = $scope.lcnnoType;
+            $scope.DATA_LCN_MAIN = datas.data;
+            $scope.DATA_LCN_MAIN.lcnnoType = $scope.lcnnoType;
             //$scope.currentPage = 1;
             //$scope.entryLimit = 20;
             //$scope.noOfPages = Math.ceil($scope.DATA_LCN_MAIN.length / $scope.entryLimit);
@@ -1149,8 +1149,8 @@
     };
 
     $scope.BTN_EDIT_PREVIEW = function (data) {
-        sessionStorage.LCT_IDA = data.IDA;
-        sessionStorage.PROCESS = data.PROCESS;
+        sessionStorage.LCT_IDA = data.LCT_IDA;
+        //sessionStorage.PROCESS = data.PROCESS;
         REDIRECT('/LCN/PREVIEW_EDIT_LCN');
     };
 
