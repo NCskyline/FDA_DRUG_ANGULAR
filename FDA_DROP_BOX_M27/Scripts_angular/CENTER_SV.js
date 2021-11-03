@@ -194,6 +194,20 @@
         });
         return response;
     };
+    
+    this.SP_STAFF_DH15RQT_SEARCH = function (STATUS_ID, TR_ID, DRM, CAS_NAME) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STAFF_DH15RQT_SEARCH"),
+            params: {
+                STATUS_ID: STATUS_ID,
+                TR_ID: TR_ID,
+                DRM: DRM,
+                CAS_NAME: CAS_NAME
+            }
+        });
+        return response;
+    };
 
     this.SP_DRRGT_FOR_SEARCH_FROM_SAI = function (txt) {
         var response = $http({
