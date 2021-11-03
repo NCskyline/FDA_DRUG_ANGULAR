@@ -186,44 +186,7 @@
                 <td style="width:95%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"><label>{{LIST_LABEL_LCT.tel}}</label></td>
             </tr>
         </table>
-        <br />
-        <div class="row">
-            <div class="col-sm-12" style="width:100%">
-                <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
-                    <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
-                        หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
-                    </div>
-                    <div class="card-header" ng-show="datas.PIORITY=='LOW'">
-                        หัวข้อเอกสาร (ไม่บังคับแนบ)
-                    </div>
-                    <div class="card-body">
-
-                        <table class="table" style="width:100%">
-                            <tr>
-                                <td colspan="5">
-                                    {{datas.DES}}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width:15%;"><input id="file-input" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                                <td style="width:10%;">ชื่อไฟล์</td>
-                                <td style="width:50%;">{{datas.FILENAME}}</td>
-                                <td style="width:5%">
-                                    <a ng-click="OPEN_DOC_PATH(datas.PATH)">{{FLAG}}</a>
-                                </td>
-                                <td style="width:20%; text-align: right;">
-                                    @*<input type="button" ng-click="UPLOAD_PDFs(datas)" value="บันทึก" />*@
-                                    @*<input type="button" ng-click="deleteRow(datas,$index)" value="ลบ" />*@
-                                </td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        @*<table>
+        <table>
             <tr>
                 <td>ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ</td>
             <tr>
@@ -241,7 +204,7 @@
             <tr>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp; (๓) เอกสารแสดงว่าเป็นผู้ได้รับอนุญาต</td>
             </tr>
-        </table>*@
+        </table>
         <table style="width:100%">
             <tr>
                 <td style="width:50%;text-align:center"></td>
@@ -255,29 +218,7 @@
         <div>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(๒) ในกรณีที่ใบอนุญาตถูกทำลายในสาระสำคัญ ให้แนบใบอนุญาตนั้น มาด้วย</div>
         <div>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(๓) ใส่เครื่องหมาย &#10004 ในช่อง[  ] หน้าข้อความที่ต้องการ</div>
         <br />
-        @*<div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-3" style="text-align:center">
-                    รายละเอืยด :
-                </div>
-                <div class="col-sm-9">
-                    {{REMARK}}
-                </div>
-            </div>
-            <br />
-            <table class="table" style="width:100%">
-                <tr>
-                    <td>ชื่อไฟล์</td>
-                    <td></td>
-                </tr>
-                <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
-                    <td>{{datas.FILENAME}}</td>
-                    <td>
-                        <a ng-show="PROCESS == '100702'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                    </td>
-                </tr>
-            </table>
-        </div>*@
+      
         <br />
         <div style="text-align:center">
             <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_STT()" value="ย้อนกลับ" />

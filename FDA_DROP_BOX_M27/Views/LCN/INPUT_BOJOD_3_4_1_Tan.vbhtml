@@ -400,8 +400,8 @@
             </tr>
         </table>
         <br />
-        @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />*@
-        @*<input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />*@
+        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
+        <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
         <br />
         <table style="width:100%;font-size:20px">
             <tr>
@@ -546,8 +546,8 @@
             </tr>
 
         </table>
-        @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />*@
-        @*<input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />*@
+        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
+        <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
         <br />
         <br />
 
@@ -589,101 +589,101 @@
             </div>
         </div>
         @*<div style="margin-left:5%;font-size:20px"><strong>๕.๑ <u>กรณีขอรับใบอนุญาต (กรณีรายใหม่)</u></strong></div>
-        <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๑ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%">
-            <tr>
-                <td>
-                    (๑) สำเนาใบอนุญาตขายยาแผนปัจจุบันตามกฎหมายว่าด้วยยา
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    (๒) คำรับรองของผู้รับอนุญาตและเภสัชกรผู้ควบคุมกิจการ
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    (๓) รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้ง
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    ให้ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    (๔) สำเนาใบอนุญาตประกอบวิชาชีพเภสัชกรรม
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    (๕) หนังสือแต่งตั้งผู้ดำเนินกิจการ กรณีผู้ขอรับใบอนุญาตเป็นนิติบุคคล
-                </td>
-            </tr>
-        </table>
-        <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๒ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ โดยการขายส่งตรง</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%">
-            <tr>
-                <td>
-                    (๑) สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    (๒) รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
-                </td>
-            </tr>
-        </table>
-        <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๓ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ ในบริเวณสถานที่ที่มีการประชุม</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%">
-            <tr>
-                <td>
-                    (๑) สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี
-                </td>
-            </tr>
-        </table>
+            <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๑ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong></div>
+            <table style="width:90%;font-size:20px ;margin-left:10%">
+                <tr>
+                    <td>
+                        (๑) สำเนาใบอนุญาตขายยาแผนปัจจุบันตามกฎหมายว่าด้วยยา
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        (๒) คำรับรองของผู้รับอนุญาตและเภสัชกรผู้ควบคุมกิจการ
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        (๓) รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้ง
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ให้ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        (๔) สำเนาใบอนุญาตประกอบวิชาชีพเภสัชกรรม
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        (๕) หนังสือแต่งตั้งผู้ดำเนินกิจการ กรณีผู้ขอรับใบอนุญาตเป็นนิติบุคคล
+                    </td>
+                </tr>
+            </table>
+            <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๒ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ โดยการขายส่งตรง</strong></div>
+            <table style="width:90%;font-size:20px ;margin-left:10%">
+                <tr>
+                    <td>
+                        (๑) สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        (๒) รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
+                    </td>
+                </tr>
+            </table>
+            <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๓ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ ในบริเวณสถานที่ที่มีการประชุม</strong></div>
+            <table style="width:90%;font-size:20px ;margin-left:10%">
+                <tr>
+                    <td>
+                        (๑) สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี
+                    </td>
+                </tr>
+            </table>
 
-        <div style="margin-left:5%;font-size:20px"><strong>๕.๒ กรณีขอต่ออายุใบอนุญาต</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%">
-            <tr>
-                <td>
-                    (๑) ใบอนุญาตฉบับเดิม
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    (๒) รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการ
-                    เกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
-                </td>
-            </tr>
+            <div style="margin-left:5%;font-size:20px"><strong>๕.๒ กรณีขอต่ออายุใบอนุญาต</strong></div>
+            <table style="width:90%;font-size:20px ;margin-left:10%">
+                <tr>
+                    <td>
+                        (๑) ใบอนุญาตฉบับเดิม
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        (๒) รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการ
+                        เกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
+                    </td>
+                </tr>
 
-        </table>
-        <div style="margin-left:5%;font-size:20px"><strong>๕.๓ กรณีขอรับใบแทนใบอนุญาต</strong></div>
-        <table style="width:90%;font-size:20px ;margin-left:10%">
-            <tr>
-                <td>
-                    (๑) ใบแจ้งความ กรณีใบอนุญาตสูญหาย
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    (๒) ใบอนุญาต กรณีใบอนุญาตดังกล่าวถูกทำลายบางส่วนหรือลบเลือนในสาระสำคัญ
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    (๓) รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับ
-                    ใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
-                </td>
-            </tr>
+            </table>
+            <div style="margin-left:5%;font-size:20px"><strong>๕.๓ กรณีขอรับใบแทนใบอนุญาต</strong></div>
+            <table style="width:90%;font-size:20px ;margin-left:10%">
+                <tr>
+                    <td>
+                        (๑) ใบแจ้งความ กรณีใบอนุญาตสูญหาย
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        (๒) ใบอนุญาต กรณีใบอนุญาตดังกล่าวถูกทำลายบางส่วนหรือลบเลือนในสาระสำคัญ
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        (๓) รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับ
+                        ใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ
+                    </td>
+                </tr>
 
-        </table>*@
+            </table>*@
         <div style="margin-left:5%;font-size:20px;text-align:center"><strong>ข้าพเจ้าขอรับรองว่า ข้อความและเอกสารหรือหลักฐานทั้งหมดที่ยื่นเพื่อประกอบคำขอรับใบอนุญาตเป็นความจริงทุกประการ</strong></div>
         <br />
         <br />
@@ -729,35 +729,13 @@
 
         </table>
         <br />
-        @*<div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-3" style="text-align:center">
-                    รายละเอืยด :
-                </div>
-                <div class="col-sm-9">
-                    {{REMARK}}
-                </div>
-            </div>
-            <br />
-            <table class="table" style="width:100%">
-                <tr>
-                    <td>ชื่อไฟล์</td>
-                    <td></td>
-                </tr>
-                <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
-                    <td>{{datas.FILENAME}}</td>
-                    <td>
-                        <a ng-show="PROCESS == '123'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                    </td>
-                </tr>
-            </table>
-        </div>*@
+
     </div>
-        <br />
-        <div style="text-align:center">
-            <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
-            <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_STT()" value="บันทึก" />
-        </div>
+    <br />
+    <div style="text-align:center">
+        <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+        <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_STT()" value="บันทึก" />
+    </div>
 </div>
 
 

@@ -92,7 +92,7 @@
                     </td>
                 </tr>
             </table>
-            <br /><br /><br /><br /><br /><br /><br />
+            <br /><br />
             <div class="row">
                 <div class="col-sm-12" style="width:100%">
                     <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
@@ -130,19 +130,19 @@
                 </div>
             </div>
             @*<table style="width:100%">
-            <tr>
-                <td style="width:10%"></td>
-                <td style="width:90%">ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ</td>
-            </tr>
-            <tr>
-                <td style="width:10%"></td>
-                <td style="width:90%">1.ใบอนุญาต</td>
-            </tr>
-            <tr>
-                <td style="width:10%"></td>
-                <td style="width:90%">2.เอกสารที่เป็นหลักฐานเกี่ยวข้องกับรายการเปลี่ยนแปลง</td>
-            </tr>
-        </table>*@
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td style="width:90%">ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ</td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td style="width:90%">1.ใบอนุญาต</td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td style="width:90%">2.เอกสารที่เป็นหลักฐานเกี่ยวข้องกับรายการเปลี่ยนแปลง</td>
+                    </tr>
+                </table>*@
             <br /><br /><br /><br />
             <table style="width:100%">
                 <tr>
@@ -152,30 +152,12 @@
                     <td style="width:20%; text-align:start">ผู้ยื่นคำขอ</td>
                 </tr>
             </table>
-            @*<br />
-        <div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-3" style="text-align:center">
-                    รายละเอืยด :
-                </div>
-                <div class="col-sm-9">
-                    {{REMARK}}
-                </div>
-            </div>
-            <br />
-            <table class="table" style="width:100%">
-                <tr>
-                    <td>ชื่อไฟล์</td>
-                    <td></td>
-                </tr>
-                <tr ng-repeat="datas in LIST_GMP.DALCN_EDIT_REQUEST" style="background-color:#FDFCE3">
-                    <td>{{datas.FILENAME}}</td>
-                    <td>
-                        <a ng-show="PROCESS.ID == '11109'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                    </td>
-                </tr>
-            </table>
-        </div>*@
+
         </div>
+    </div>
+    <br />
+    <div style="text-align:center">
+        <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+        <input type="button" class="btn btn-lg" ng-click="BTN_SAVE_EDIT()" value="บันทึก" />
     </div>
 </div>
