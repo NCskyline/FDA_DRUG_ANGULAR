@@ -67,5 +67,56 @@ Namespace Controllers
         Function TABEAN_YA_MAIN_STAFF() As ActionResult
             Return View()
         End Function
+        Function FRM_SEARCH_LCN() As ActionResult
+            Return View()
+        End Function
+        Function FRM_REGISTRATION_MAIN() As ActionResult
+            Return View()
+        End Function
+    End Class
+    Public Class DR_CENTERController
+        Inherits Controller
+
+        Public _APP As String = System.Configuration.ConfigurationManager.AppSettings("APP")
+        Public _SYSTEM_ID As String = System.Configuration.ConfigurationManager.AppSettings("SYSTEM_ID")
+        Public _PATH_BOX As String = System.Configuration.ConfigurationManager.AppSettings("PATH_BOX")
+        Public _PATH_BOX_TEMPLATE As String = System.Configuration.ConfigurationManager.AppSettings("PATH_BOX_TEMPLATE")
+        Public _PATH_PDF_TEMPLATE As String = System.Configuration.ConfigurationManager.AppSettings("PATH_PDF_TEMPLATE")    'ที่อยู่ Path
+        Public _PATH_XML_CLASS As String = System.Configuration.ConfigurationManager.AppSettings("PATH_XML_CLASS")          'ที่อยู่ Path
+        Public _PATH_PDF_XML_CLASS As String = System.Configuration.ConfigurationManager.AppSettings("PATH_PDF_XML_CLASS")  'ที่อยู่ Path
+        Public _PATH_PDF_TRADER As String = System.Configuration.ConfigurationManager.AppSettings("PATH_PDF_TRADER")        'ที่อยู่ Path
+        Public _PATH_XML_TRADER As String = System.Configuration.ConfigurationManager.AppSettings("PATH_XML_TRADER")        'ที่อยู่ Path
+        Public _PATH_DEFAULT As String = System.Configuration.ConfigurationManager.AppSettings("PATH_DEFALUT")              'ที่อยู่ Path
+        Public _PATH_EDIT As String = System.Configuration.ConfigurationManager.AppSettings("PATH_EDIT")              'ที่อยู่ Path
+        Public _PATH_SUBS As String = System.Configuration.ConfigurationManager.AppSettings("PATH_EDIT")
+        Public _RDLC As String = System.Configuration.ConfigurationManager.AppSettings("RDLC")
+        Public _PATH_XML_IMPORT As String = System.Configuration.ConfigurationManager.AppSettings("PATH_XML_IMPORT")        'มินทำต้องทำต่อ 5555555555555555555
+        Public _PATH_PDF_IMPORT As String = System.Configuration.ConfigurationManager.AppSettings("PATH_PDF_IMPORT")
+        Dim msg_r As New MODEL_RESULT
+
+#Region "STORE"
+        Function SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID(ByVal FK_IDA As Integer, ByVal process As Integer)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID(FK_IDA, process)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+        End Function
+#End Region
+
+#Region "FILE_ATTACH"
+
+#End Region
+
+#Region "INSERT_DATA"
+
+#End Region
+
+#Region "UPDATE_DATA"
+
+#End Region
+
+
+
     End Class
 End Namespace

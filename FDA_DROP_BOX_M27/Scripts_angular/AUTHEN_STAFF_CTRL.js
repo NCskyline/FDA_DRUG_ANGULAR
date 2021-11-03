@@ -229,16 +229,30 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
             } else if (SEQ == '3') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_CHEMICAL_STAFF_MAIN');
             } else if (SEQ == '4') {
+                
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_DH_SEARCH');
-                var dataLo3 = CENTER_SV.SP_STAFF_DH15RQT_V2();
-                dataLo3.then(function (datas) {
-                    $scope.LIST_DRM = datas.data;
-                    $scope.currentPage = 0;
-                    $scope.entryLimit = 20;
-                    $scope.noOfPages = Math.ceil($scope.LIST_DRM.Length / $scope.entryLimit);
-                    $scope.loading_profile = false;
-                    $scope.product_show = true;
+                
+                var DATASTAT = CENTER_SV.SP_STATUS_CERT_STAFF_FIX();
+                DATASTAT.then(function (datas) {
+                    $scope.LIST_STATUS = datas.data;
                 }, function () { });
+
+
+
+
+
+                //var dataLo3 = CENTER_SV.SP_STAFF_DH15RQT_V2();
+                //dataLo3.then(function (datas) {
+                //    $scope.LIST_DRM = datas.data;
+                //    $scope.currentPage = 0;
+                //    $scope.entryLimit = 20;
+                //    $scope.noOfPages = Math.ceil($scope.LIST_DRM.Length / $scope.entryLimit);
+                //    $scope.loading_profile = false;
+                //    $scope.product_show = true;
+                //}, function () { });
+
+
+
             } else if (SEQ == '5') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_CHEMICAL_STAFF_SEARCH');
                 var dataLo4 = CENTER_SV.SP_MAS_CHEMICAL_SEARCH_RESULT_STAFF();
@@ -300,6 +314,14 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         var getdata = CENTER_SV.SP_STAFF_NYM_ALL(process_id);
         getdata.then(function (datas) {
             $scope.DATA_NYM_STAFF = datas.data;
+        });
+    };
+
+    
+    $scope.BTN_SEARCH_DH_STAFF = function (STATUS_ID, TR_ID, DRM, CAS_NAME) {
+        var getdata = CENTER_SV.SP_STAFF_DH15RQT_SEARCH(STATUS_ID, TR_ID, DRM, CAS_NAME);
+        getdata.then(function (datas) {
+            $scope.LIST_DRM = datas.data;
         });
     };
 

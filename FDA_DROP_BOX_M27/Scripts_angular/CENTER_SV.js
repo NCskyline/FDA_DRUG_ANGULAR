@@ -15,7 +15,19 @@
         });
         return response;
     };
-    
+
+    this.SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID = function (FK_IDA, process) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/DR_CENTER/SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID"),
+            params: {
+                FK_IDA: FK_IDA,
+                process: process
+            }
+        });
+        return response;
+    };
+
     this.UPDATE_LCN_EDIT_CONSIDER = function (XML_DATA, IDA, CITIZEN_ID) {
         var response = $http({
             method: "post",
@@ -126,6 +138,16 @@
         return response;
     };
     
+    this.SP_STATUS_CERT_STAFF_FIX = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STATUS_CERT_STAFF_FIX"),
+
+        });
+        return response;
+    };
+
+
     this.SP_DRRGT_TABEAN_STAFF = function () {
         var response = $http({
             method: "post",
@@ -168,6 +190,20 @@
                 val4: val4,
                 val5: val5,
                 CITIZEN_ID: CITIZEN_ID
+            }
+        });
+        return response;
+    };
+    
+    this.SP_STAFF_DH15RQT_SEARCH = function (STATUS_ID, TR_ID, DRM, CAS_NAME) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STAFF_DH15RQT_SEARCH"),
+            params: {
+                STATUS_ID: STATUS_ID,
+                TR_ID: TR_ID,
+                DRM: DRM,
+                CAS_NAME: CAS_NAME
             }
         });
         return response;

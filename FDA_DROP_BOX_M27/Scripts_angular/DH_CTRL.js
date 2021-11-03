@@ -27,7 +27,13 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
     }
 
     //----------------------------------------------------------------------//
-    
+
+    function dropdown() {
+        $(document).ready(function () {
+            $('select').selectpicker('refresh');
+        });
+    }
+
     $scope.pageload = function () {
         if (DO_ST == '1') {
             sessionStorage.DH_PROCESS_ID = '';
@@ -159,13 +165,13 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         var data_CNT = CENTER_SV.SP_MASTER_sysisocnt();
         data_CNT.then(function (datas) {
             $scope.CNT_LIST = datas.data;
-
+            dropdown();
         }, function () { });
 
         var data_REF_CERT = CENTER_SV.SP_MASTER_CER_PK_BY_FK_IDA(LCN_IDA);
         data_REF_CERT.then(function (datas) {
             $scope.REF_CERT = datas.data;
-
+            dropdown();
         }, function () { });
         
     };
@@ -298,13 +304,13 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         var data_CNT = CENTER_SV.SP_MASTER_sysisocnt();
         data_CNT.then(function (datas) {
             $scope.CNT_LIST = datas.data;
-
+            dropdown();
         }, function () { });
 
         var data_REF_CERT = CENTER_SV.SP_MASTER_CER_PK_BY_FK_IDA(LCN_IDA);
         data_REF_CERT.then(function (datas) {
             $scope.REF_CERT = datas.data;
-
+            dropdown();
         }, function () { });
 
         var MODLE_DH = CENTER_SV.SETMODEL_DHA();

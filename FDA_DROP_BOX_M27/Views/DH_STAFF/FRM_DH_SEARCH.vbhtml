@@ -7,7 +7,7 @@ End Code
     <H2 style="text-align: center;">ค้นหาเภสัชเคมีภัณฑ์</H2>
 </div>
 <br />
-<div class="row">
+@*<div class="row">
     <div class="col-sm-12">
         <div class="search-item">
             <input class="search-input" type="text" placeholder="ค้นหา..." ng-model="filter">
@@ -15,21 +15,28 @@ End Code
         </div>
     </div>
 </div>
-<hr />
-@*<table style="width:100%">
+<hr />*@
+<table style="width:100%">
         <tr>
             <td style="width:12%">สถานะ</td>
-            <td style="width:30%"><input type="text" style="width:30%"></td>
+            <td style="width:30%">
+                <select style="font-family:'Taviraj';font-size:20px;"  ng-model="STATUS_ID">
+                    <option value="">-- กรุณาเลือกสถานะ --</option>
+                    <option ng-repeat="x in LIST_STATUS" value="{{x.STATUS_ID}}">{{x.STATUS_NAME}}</option>
+                </select>
+            </td>
             <td style="width:12%">เลขดำเนินการ</td>
-            <td style="width:30%"><input type="text" style="width:30%"></td>
-            <td><button style="width:16%">ค้นหา</button></td>
+            <td style="width:30%"><input type="text" style="width:30%" ng-model="TR_ID" ></td>
+            <td>
+            <input type="button" value="ค้นหา" ng-click="BTN_SEARCH_DH_STAFF(STATUS_ID,TR_ID, DRM, iowanm)" />
+            </td>
         <tr>
             <td style="width:12%">เลข DRM</td>
-            <td style="width:30%"><input type="text" style="width:30%"></td>
+            <td style="width:30%"><input type="text" style="width:30%" ng-model="DRM"></td>
             <td style="width:12%">ชื่อสาร</td>
-            <td style="width:30%"><input type="text" style="width:30%"></td>
+            <td style="width:30%"><input type="text" style="width:30%" ng-model="iowanm"></td>
         </tr>
-    </table>*@
+    </table>
 <br />
 <div class="row">
     <div class="col-sm-12">
@@ -47,7 +54,7 @@ End Code
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="data in LIST_DRM | filter : filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                    <tr ng-repeat="data in LIST_DRM">
                         <td>{{data.phm15dgt}}</td>
                         <td>{{data.CAS_NAME}}</td>
                         <td>{{data.rcvno}}</td>
@@ -62,14 +69,14 @@ End Code
                 </tfoot>
             </table>
             <hr />
-            <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
+            @*<uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
                             ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
                             boundary-link-numbers="true" rotate="false" max-size="maxSize">
             </uib-pagination>
             <div align="right">
                 <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
                 <button type="button" class="btn btn-sm" ng-disabled="currentPage >= LIST_DRM.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
-            </div>
+            </div>*@
         </div>
     </div>
 </div>

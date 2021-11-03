@@ -63,6 +63,22 @@ Namespace Controllers
 
         End Function
         '
+        Function SP_STATUS_CERT_STAFF_FIX() As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_STATUS_CERT_STAFF_FIX()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+
+        End Function
+        Public Function SP_STAFF_DH15RQT_SEARCH(ByVal STATUS_ID As String, ByVal TR_ID As String, ByVal DRM As String, ByVal CAS_NAME As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_STAFF_DH15RQT_SEARCH(STATUS_ID, TR_ID, DRM, CAS_NAME)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+        End Function
+
         Function SP_MAS_CHEMICAL_SEARCH_RESULT_STAFF() As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO
