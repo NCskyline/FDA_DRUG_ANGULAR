@@ -16,19 +16,20 @@
     //var IDENTIFY = '0000000000000';
     var HEAD_LCN_IDA = sessionStorage.HEAD_LCN_IDA;
     //var LCT_IDA = 117194;
-    //$scope.currentPage = 0;
-    //$scope.paging = {
-    //    total: 10,
-    //    current: 1,
-    //    onPageChanged: loadPages
-    //};
-    //function loadPages() {
-    //    console.log('Current page is : ' + $scope.paging.current);
+
+    $scope.currentPage = 0;
+    $scope.paging = {
+        total: 10,
+        current: 1,
+        onPageChanged: loadPages
+    };
+    function loadPages() {
+        console.log('Current page is : ' + $scope.paging.current);
 
     //    // TODO : Load current page Data here
 
-    //    $scope.currentPage = $scope.paging.current;
-    //}
+      $scope.currentPage = $scope.paging.current;
+    }
 
     Pageload();
     LOAD_MODEL();
@@ -255,7 +256,7 @@
         var data_lcn = CENTER_SV.SP_CUSTOMER_LCN_BY_FK_IDA_PROCESS_IDEN_V2(sessionStorage.LCT_IDA, sessionStorage.PROCESS, sessionStorage.CITIZEN_ID_AUTHORIZE);
         data_lcn.then(function (datas) {
             $scope.DATA_LCN_MAIN = datas.data;
-            //$scope.DATA_LCN_MAIN.lcnnoType = $scope.lcnnoType;
+            $scope.DATA_LCN_MAIN.lcnnoType = $scope.lcnnoType;
             //$scope.currentPage = 1;
             //$scope.entryLimit = 20;
             //$scope.noOfPages = Math.ceil($scope.DATA_LCN_MAIN.length / $scope.entryLimit);
@@ -1127,6 +1128,12 @@
         sessionStorage.LCN_IDA = data.IDA;
         sessionStorage.PROCESS_ID = data.PROCESS_ID;
         REDIRECT('/LCN/PREVIEW_INPUT_LCN');
+    };
+
+    $scope.BTN_EDIT_PREVIEW = function (data) {
+        sessionStorage.LCT_IDA = data.LCT_IDA;
+        //sessionStorage.PROCESS = data.PROCESS;
+        REDIRECT('/LCN/PREVIEW_EDIT_LCN');
     };
 
     $scope.BTN_SAVE_LCN_INPUT = function () {

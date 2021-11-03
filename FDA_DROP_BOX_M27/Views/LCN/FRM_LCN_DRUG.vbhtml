@@ -185,6 +185,7 @@ End Code
                                     <thead style="font-weight:300;">
                                         <tr>
                                             <td>เลขที่ใบอนุญาต</td>
+                                            <td>ชื่อสถานที่</td>
                                             <td>สถานะ</td>
                                             <td>เลขดำเนินการ</td>
                                             <td>เหตุผลการคืนคำขอ</td>
@@ -192,8 +193,9 @@ End Code
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr ng-repeat="data in DATA_LCN_MAIN">
+                                        <tr ng-repeat="data in DATA_LCN_MAIN | filter: filter">
                                             <td>{{data.LCNNO_MANUAL}}</td>
+                                            <td>{{data.thanameplace}}</td>
                                             <td>{{data.STATUS_NAME}}</td>
                                             <td>{{data.TRANSECTION_ID_UPLOAD}}</td>
                                             <td>{{data.REMARK}}</td>
@@ -224,15 +226,7 @@ End Code
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
-
-
-
-
     </div>
 </div>
-
-

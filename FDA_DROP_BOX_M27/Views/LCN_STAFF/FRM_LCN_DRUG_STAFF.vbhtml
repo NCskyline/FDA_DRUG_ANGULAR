@@ -5,6 +5,11 @@ End Code
 <br />
 <h4>คำขอใบอนุญาตสถานที่ด้านยา</h4><br />
 @*<div ng-controller="AUTHEN_STAFF_CTRL" ng-app="ANGULAR_APP">*@
+<table width="100%" style="font-family:'Taviraj';">
+    <tr>
+        <td><input style="width:60%" class="form-control" placeholder="ค้นหา..." ng-model="filter" /></td>
+    </tr>
+</table>
 <div class="row">
     <div class="col-sm-12" style="width:100%;">
         <div class="card" style=" border-top: 10px solid #F9D027;">
@@ -22,7 +27,7 @@ End Code
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="data in DATA_LCN_STAFF">
+                    <tr ng-repeat="data in DATA_LCN_STAFF | filter: filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
                         <td>{{data.LCNNO_MANUAL}}</td>
                         <td>{{data.fulladdr}}</td>
                         <td>{{data.STATUS_NAME}}</td>

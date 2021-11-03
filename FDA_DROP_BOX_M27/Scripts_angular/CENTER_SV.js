@@ -138,6 +138,16 @@
         return response;
     };
     
+    this.SP_STATUS_CERT_STAFF_FIX = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STATUS_CERT_STAFF_FIX"),
+
+        });
+        return response;
+    };
+
+
     this.SP_DRRGT_TABEAN_STAFF = function () {
         var response = $http({
             method: "post",

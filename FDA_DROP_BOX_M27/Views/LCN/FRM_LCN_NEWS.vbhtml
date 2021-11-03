@@ -29,13 +29,13 @@
                             <a ng-click="BTN_MENU('106')" style="color:#06B716">ผย1</a>
                         </li>
                         <li>
-                            <a ng-click="BTN_MENU('107')" style="color:#06B716">ขยบ</a>
+                            <a ng-click="BTN_MENU('107')" style="color:#06B716">ขยบ (ยาสัตว์)</a>
                         </li>
                         <li>
-                            <a ng-click="BTN_MENU('108')" style="color:#06B716">นยบ</a>
+                            <a ng-click="BTN_MENU('108')" style="color:#06B716">นยบ (ยาสัตว์)</a>
                         </li>
                         <li>
-                            <a ng-click="BTN_MENU('109')" style="color:#06B716">ผยบ</a>
+                            <a ng-click="BTN_MENU('109')" style="color:#06B716">ผยบ (ยาสัตว์)</a>
                         </li>
                     </ul>
                 </li>
@@ -46,28 +46,28 @@
                             <div class="listree-submenu-heading">วัตถุออกฤทธิ์จิตและประสาทประเภท ๓ , ๔</div>
                             <ul class="listree-submenu-items" style="color:black">
                                 <li>
-                                    <a ng-click="BTN_MENU('131')" style="color:#06B716">นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('131')" style="color:#06B716">นำเข้าวัตถุออกฤทธิ์ ฯ ในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a ng-click="BTN_MENU('132')" style="color:#06B716">นำเข้าวัตถุออกฤทธิ์ฯในประเภท ๔</a>
+                                    <a ng-click="BTN_MENU('132')" style="color:#06B716">นำเข้าวัตถุออกฤทธิ์ ฯ ในประเภท ๔</a>
                                 </li>
                                 <li>
-                                    <a ng-click="BTN_MENU('123')" style="color:#06B716">ขายวัตถุออกฤทธิ์ฯในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('123')" style="color:#06B716">ขายวัตถุออกฤทธิ์ ฯ ในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a ng-click="BTN_MENU('124')" style="color:#06B716">ขายวัตถุออกฤทธิ์ฯในประเภท ๔</a>
+                                    <a ng-click="BTN_MENU('124')" style="color:#06B716">ขายวัตถุออกฤทธิ์ ฯ ในประเภท ๔</a>
                                 </li>
                                 <li>
-                                    <a ng-click="BTN_MENU('133')" style="color:#06B716">ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('133')" style="color:#06B716">ส่งออกวัตถุออกฤทธิ์ ฯ ในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a ng-click="BTN_MENU('134')" style="color:#06B716">ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๔</a>
+                                    <a ng-click="BTN_MENU('134')" style="color:#06B716">ส่งออกวัตถุออกฤทธิ์ ฯ ในประเภท ๔</a>
                                 </li>
                                 <li>
-                                    <a ng-click="BTN_MENU('125')" style="color:#06B716">ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('125')" style="color:#06B716">ขายวัตถุออกฤทธิ์ ฯ โดยการขายส่งตรง ในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a ng-click="BTN_MENU('126')" style="color:#06B716">ขายวัตถุออกฤทธิ์ฯโดยการขายส่งตรง ในประเภท ๔</a>
+                                    <a ng-click="BTN_MENU('126')" style="color:#06B716">ขายวัตถุออกฤทธิ์ ฯ โดยการขายส่งตรง ในประเภท ๔</a>
                                 </li>
                             </ul>
                         </li>
@@ -89,10 +89,10 @@
                             <div class="listree-submenu-heading">ผลิตวัตถุออกฤทธิ์ฯประเภท ๓ หรือ ๔</div>
                             <ul class="listree-submenu-items" style="color:black">
                                 <li>
-                                    <a ng-click="BTN_MENU('127')" style="color:#06B716">ผลิตวัตถุออกฤทธิ์ฯในประเภท ๓</a>
+                                    <a ng-click="BTN_MENU('127')" style="color:#06B716">ผลิตวัตถุออกฤทธิ์ ฯ ในประเภท ๓</a>
                                 </li>
                                 <li>
-                                    <a ng-click="BTN_MENU('128')" style="color:#06B716">ผลิตวัตถุออกฤทธิ์ฯในประเภท ๔</a>
+                                    <a ng-click="BTN_MENU('128')" style="color:#06B716">ผลิตวัตถุออกฤทธิ์ ฯ ในประเภท ๔</a>
                                 </li>
                             </ul>
                         </li>

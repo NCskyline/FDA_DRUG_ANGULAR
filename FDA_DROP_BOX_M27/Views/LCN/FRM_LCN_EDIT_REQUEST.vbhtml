@@ -38,14 +38,14 @@ End Code
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
+                                        <tr ng-repeat="data in DATA_EDIT_LCN_RQT | filter: filter">
                                             <td>{{data.RCVNO_MANUAL}}</td>
                                             <td>{{data.LCNNO_MANUAL}}</td>
                                             <td>{{data.STATUS_NAME}}</td>
                                             <td>{{data.TRANSACTION_UPLOAD}}</td>
                                             <td>
                                                 <span class="fa fa-eye"></span>
-                                                <a ng-click="">
+                                                <a ng-click="BTN_EDIT_PREVIEW(data)">
                                                     ดูข้อมูล
                                                 </a>
                                             </td>
@@ -55,15 +55,8 @@ End Code
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
-
-
-
-
         </div>
     </div>
-
 </div>

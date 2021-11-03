@@ -136,7 +136,7 @@ End Code
             <td>
                 <table>
                     <tr>
-                        <td style="height:25px">
+                        <td style="height:25px;">
                             <form name="rdl_gmp">
                                 <label>
                                     <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" value="1">
@@ -154,22 +154,19 @@ End Code
                                 </label>
                             </form>
                         </td>
-                        <td width="10%"></td>
+                        <td width="5%"></td>
                         <td>
                             ประเทศ (Country)<font color="red">*</font>
                         </td>
                         <td width="2%"></td>
-                        <td>
+                        <td width="32%">
                             <select style="font-family:'Taviraj';font-size:20px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_GMP">
                                 @*<option value="0">--กรุณาเลือก--</option>*@
                                 <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                             </select>
-
                         </td>
                     </tr>
                 </table>
-
-
             </td>
         </tr>
     </table>
