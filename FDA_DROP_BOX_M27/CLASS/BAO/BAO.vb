@@ -41,6 +41,15 @@ Public Class BAO
         Return dt
     End Function
     '
+    Public Function SP_STATUS_CERT_STAFF_FIX() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_STATUS_CERT_STAFF_FIX"
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_STATUS_CERT_STAFF_FIX"
+        Return dt
+    End Function
+
     Public Function SP_CER_SEARCH() As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_CER_SEARCH"
