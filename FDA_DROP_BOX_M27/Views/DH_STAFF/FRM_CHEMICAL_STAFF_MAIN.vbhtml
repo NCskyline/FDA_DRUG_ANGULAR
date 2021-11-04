@@ -18,9 +18,9 @@
                         <table style="margin-top:10px;width:100%;" class="table table-condensed">
                             <thead>
                                 <tr>
-                                    <th style="width:5%">ชื่อสาร</th>
+                                    <th style="width:8%">ชื่อสาร</th>
                                     <th style="width:20%">ชนิด</th>
-                                    <th style="width:10%">วันที่ยื่นคำขอ</th>
+                                    <th style="width:13%">วันที่ยื่นคำขอ</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -29,7 +29,12 @@
                                     <td>{{data.iowanm}}</td>
                                     <td>{{data.chem_type2}}</td>
                                     <td>{{data.REQUEST_DATE}}</td>
-                                    <td>ดูข้อมูล</td>
+                                    <td>
+                                        <span class="fa fa-eye"></span>
+                                        <a ng-click="">
+                                            ดูข้อมูล
+                                        </a>
+                                    </td>
                                 </tr>
                             </tbody>
                             <tfoot>

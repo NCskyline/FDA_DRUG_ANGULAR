@@ -10,20 +10,20 @@
                 <tr>
                     <td style="width:5%">สถานะ</td>
                     <td>
-                        <select style="font-family:'Taviraj';font-size:16px;">
+                        <select style="font-family:'Taviraj';font-size:20px;">
                             <option value="0">--กรุณาเลือก--</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td style="width:5%">ชื่อการค้า	</td>
-                    <td style="width:10%"><input type="text"></td>
+                    <td style="width:10%"><input class="form-control inline" type="text"></td>
                 </tr>
                 <tr>
                     <td style="width:5%">เลขที่รับคำขอ	</td>
-                    <td style="width:10%"><input type="text"></td>
+                    <td style="width:10%"><input class="form-control inline" type="text"></td>
                     <td style="width:2%"></td>
-                    <td style="width:10%"><button class="btn btn-lg">ค้นหา</button></td>
+                    <td style="width:10%"><button class="btn btn-lg" style="width:150px;height:40px">ค้นหา</button></td>
                 </tr>
             </table>
             <br />
@@ -33,13 +33,13 @@
                         <table style="margin-top:10px;width:100%;" class="table table-condensed">
                             <thead>
                                 <tr>
-                                    <th style="width:15%">เลขที่รับคำขอ</th>
-                                    <th style="width:15%">วันที่รับ</th>
-                                    <th style="width:15%">วันที่ยื่นคำขอ</th>
+                                    <th style="width:13%">เลขที่รับคำขอ</th>
+                                    <th style="width:13%">วันที่รับ</th>
+                                    <th style="width:13%">วันที่ยื่นคำขอ</th>
                                     <th style="width:15%">สถานะ</th>
                                     <th style="width:20%">ชื่อการค้า</th>
                                     <th style="width:15%">รหัสดำเนินการ</th>
-                                    <th style="width:5%"></th>
+                                    <th style="width:11%"></th>
                                 </tr>
                             </thead>
                             <tbody>

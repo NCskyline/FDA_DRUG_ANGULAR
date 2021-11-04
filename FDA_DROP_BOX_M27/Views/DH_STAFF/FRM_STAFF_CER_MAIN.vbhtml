@@ -20,12 +20,12 @@ End Code
                             <table style="margin-top:10px;width:100%;" class="table table-condensed">
                                 <thead>
                                     <tr>
-                                        <th style="width:20%">เลขที่รับคำขอ</th>
+                                        <th style="width:19%">เลขที่รับคำขอ</th>
                                         <th style="width:15%">วันที่รับ</th>
                                         <th style="width:15%">วันที่ยื่น</th>
                                         <th style="width:20%">สถานะ</th>
                                         <th style="width:20%">รหัสดำเนินการ</th>
-                                        <th style="width:10%"></th>
+                                        <th style="width:11%"></th>
                                     </tr>
                                 </thead>
                                 <tbody>

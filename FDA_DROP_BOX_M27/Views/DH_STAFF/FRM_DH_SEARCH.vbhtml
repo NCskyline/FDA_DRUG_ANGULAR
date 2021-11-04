@@ -14,30 +14,7 @@
         </div>
     </div>
     <hr />*@
-<table style="width:100%">
-        <tr>
-            <td style="width:12%">สถานะ</td>
-            <td style="width:30%">
-                <select style="font-family:'Taviraj';font-size:20px;"  ng-model="STATUS_ID">
-                    <option value="">-- กรุณาเลือกสถานะ --</option>
-                    <option ng-repeat="x in LIST_STATUS" value="{{x.STATUS_ID}}">{{x.STATUS_NAME}}</option>
-                </select>
-            </td>
-            <td style="width:12%">เลขดำเนินการ</td>
-            <td style="width:30%"><input type="text" style="width:100%" ng-model="TR_ID" ></td>
-
-        <tr>
-            <td style="width:12%">เลข DRM</td>
-            <td style="width:30%"><input type="text" style="width:100%" ng-model="DRM"></td>
-            <td style="width:12%">ชื่อสาร</td>
-            <td style="width:30%"><input type="text" style="width:100%" ng-model="iowanm"></td>
-        </tr>
-    <tr>
-        <td colspan="4" align="center">
-            <input type="button" value="ค้นหา" ng-click="BTN_SEARCH_DH_STAFF(STATUS_ID,TR_ID, DRM, iowanm)" style="width:150px;height:40px;" />
-        </td>
-    </tr>
-    </table>
+<table width="100%">
     <tr>
         <td style="width:12%">สถานะ</td>
         <td style="width:30%">
@@ -48,16 +25,21 @@
         </td>
         <td width="2%"></td>
         <td style="width:12%">เลขดำเนินการ</td>
-        <td style="width:30%"><input class="form-control inline" type="text" style="width:350px" ng-model="TR_ID"></td>
-        <td>
-            <input class="btn btn-lg" type="button" value="ค้นหา" ng-click="BTN_SEARCH_DH_STAFF(STATUS_ID,TR_ID, DRM, iowanm)" style="width:100px" />
-        </td>
+        <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="TR_ID"></td>
     <tr>
         <td style="width:12%">เลข DRM</td>
-        <td style="width:30%"><input class="form-control inline" type="text" style="width:300px" ng-model="DRM"></td>
+        <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="DRM"></td>
         <td width="2%"></td>
         <td style="width:12%">ชื่อสาร</td>
-        <td style="width:30%"><input class="form-control inline" type="text" style="width:300px" ng-model="iowanm"></td>
+        <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="iowanm"></td>
+    </tr>
+</table>
+<br />
+<table width="100%">
+    <tr>
+        <td colspan="6" align="center">
+            <input class="btn btn-lg" type="button" value="ค้นหา" ng-click="BTN_SEARCH_DH_STAFF(STATUS_ID,TR_ID, DRM, iowanm)" style="width:150px;height:40px;" />
+        </td>
     </tr>
 </table>
 <br />
@@ -67,7 +49,7 @@
             <table style="margin-top:10px;width:100%;" class="table table-condensed">
                 <thead>
                     <tr>
-                        <th style="width:5%">เลข DRM</th>
+                        <th style="width:8%">เลข DRM</th>
                         <th style="width:20%">ชื่อสาร</th>
                         <th style="width:10%">เลขที่คำขอ</th>
                         <th style="width:10%">วันที่ยื่นคำขอ</th>
@@ -84,7 +66,12 @@
                         <td>{{data.rcvdate}}</td>
                         <td>{{data.STATUS_NAME}}</td>
                         <td>{{data.TR_ID}}</td>
-                        <td>ดูข้อมูล</td>
+                        <td>
+                            <span class="fa fa-eye"></span>
+                            <a ng-click>
+                                ดูข้อมูล
+                            </a>
+                        </td>
                     </tr>
                 </tbody>
                 <tfoot>
