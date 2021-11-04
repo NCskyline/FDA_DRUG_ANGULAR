@@ -40,15 +40,15 @@
         /** Demo styles for mdCalendar. */
     }
 
-        .datepickerdemoBasicUsage md-content {
-            padding-bottom: 200px;
-        }
+    .datepickerdemoBasicUsage md-content {
+        padding-bottom: 200px;
+    }
 
-        .datepickerdemoBasicUsage .validation-messages {
-            font-size: 12px;
-            color: #dd2c00;
-            margin-left: 15px;
-        }
+    .datepickerdemoBasicUsage .validation-messages {
+        font-size: 12px;
+        color: #dd2c00;
+        margin-left: 15px;
+    }
 </style>
 
 <div class="ic" ng-app="ANGULAR_APP" ng-controller="LCN_STAFF_CTRL" ng-init="LoadPreview()">
