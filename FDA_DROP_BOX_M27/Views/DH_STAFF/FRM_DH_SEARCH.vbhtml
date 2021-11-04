@@ -1,6 +1,4 @@
-﻿@Code
-    Layout = ""
-End Code
+﻿@Code Layout = "" End Code
 
 
 <div>
@@ -8,14 +6,14 @@ End Code
 </div>
 <br />
 @*<div class="row">
-    <div class="col-sm-12">
-        <div class="search-item">
-            <input class="search-input" type="text" placeholder="ค้นหา..." ng-model="filter">
-            <i class="fa fa-search search-icon"></i>
+        <div class="col-sm-12">
+            <div class="search-item">
+                <input class="search-input" type="text" placeholder="ค้นหา..." ng-model="filter">
+                <i class="fa fa-search search-icon"></i>
+            </div>
         </div>
     </div>
-</div>
-<hr />*@
+    <hr />*@
 <table style="width:100%">
         <tr>
             <td style="width:12%">สถานะ</td>
@@ -26,17 +24,42 @@ End Code
                 </select>
             </td>
             <td style="width:12%">เลขดำเนินการ</td>
-            <td style="width:30%"><input type="text" style="width:30%" ng-model="TR_ID" ></td>
-            <td>
-            <input type="button" value="ค้นหา" ng-click="BTN_SEARCH_DH_STAFF(STATUS_ID,TR_ID, DRM, iowanm)" />
-            </td>
+            <td style="width:30%"><input type="text" style="width:100%" ng-model="TR_ID" ></td>
+
         <tr>
             <td style="width:12%">เลข DRM</td>
-            <td style="width:30%"><input type="text" style="width:30%" ng-model="DRM"></td>
+            <td style="width:30%"><input type="text" style="width:100%" ng-model="DRM"></td>
             <td style="width:12%">ชื่อสาร</td>
-            <td style="width:30%"><input type="text" style="width:30%" ng-model="iowanm"></td>
+            <td style="width:30%"><input type="text" style="width:100%" ng-model="iowanm"></td>
         </tr>
+    <tr>
+        <td colspan="4" align="center">
+            <input type="button" value="ค้นหา" ng-click="BTN_SEARCH_DH_STAFF(STATUS_ID,TR_ID, DRM, iowanm)" style="width:150px;height:40px;" />
+        </td>
+    </tr>
     </table>
+    <tr>
+        <td style="width:12%">สถานะ</td>
+        <td style="width:30%">
+            <select style="font-family:'Taviraj';font-size:20px;" ng-model="STATUS_ID">
+                <option value="">-- กรุณาเลือกสถานะ --</option>
+                <option ng-repeat="x in LIST_STATUS" value="{{x.STATUS_ID}}">{{x.STATUS_NAME}}</option>
+            </select>
+        </td>
+        <td width="2%"></td>
+        <td style="width:12%">เลขดำเนินการ</td>
+        <td style="width:30%"><input class="form-control inline" type="text" style="width:350px" ng-model="TR_ID"></td>
+        <td>
+            <input class="btn btn-lg" type="button" value="ค้นหา" ng-click="BTN_SEARCH_DH_STAFF(STATUS_ID,TR_ID, DRM, iowanm)" style="width:100px" />
+        </td>
+    <tr>
+        <td style="width:12%">เลข DRM</td>
+        <td style="width:30%"><input class="form-control inline" type="text" style="width:300px" ng-model="DRM"></td>
+        <td width="2%"></td>
+        <td style="width:12%">ชื่อสาร</td>
+        <td style="width:30%"><input class="form-control inline" type="text" style="width:300px" ng-model="iowanm"></td>
+    </tr>
+</table>
 <br />
 <div class="row">
     <div class="col-sm-12">
@@ -70,13 +93,13 @@ End Code
             </table>
             <hr />
             @*<uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
-                            ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
-                            boundary-link-numbers="true" rotate="false" max-size="maxSize">
-            </uib-pagination>
-            <div align="right">
-                <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
-                <button type="button" class="btn btn-sm" ng-disabled="currentPage >= LIST_DRM.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
-            </div>*@
+                                ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
+                                boundary-link-numbers="true" rotate="false" max-size="maxSize">
+                </uib-pagination>
+                <div align="right">
+                    <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
+                    <button type="button" class="btn btn-sm" ng-disabled="currentPage >= LIST_DRM.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
+                </div>*@
         </div>
     </div>
 </div>

@@ -208,6 +208,31 @@
         });
         return response;
     };
+    
+    this.SP_STAFF_IOWA_SEARCH = function (IOWANM, IOWACD) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STAFF_IOWA_SEARCH"),
+            params: {
+                IOWANM: IOWANM,
+                IOWACD: IOWACD
+            }
+        });
+        return response;
+    };
+    
+    this.SP_STAFF_CERT_SEARCH = function (CER_FORMAT, FOREIGN_LOCATION_NAME, TR_ID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_STAFF_CERT_SEARCH"),
+            params: {
+                CER_FORMAT: CER_FORMAT,
+                FOREIGN_LOCATION_NAME: FOREIGN_LOCATION_NAME,
+                TR_ID: TR_ID
+            }
+        });
+        return response;
+    };
 
     this.SP_DRRGT_FOR_SEARCH_FROM_SAI = function (txt) {
         var response = $http({
