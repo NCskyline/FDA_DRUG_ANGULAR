@@ -49,16 +49,6 @@ Public Class BAO
         dt.TableName = "SP_STATUS_CERT_STAFF_FIX"
         Return dt
     End Function
-
-    Public Function SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID(ByVal FK_IDA As Integer, ByVal process As Integer) As DataTable
-        Dim clsds As New ClassDataset
-        Dim dt As New DataTable
-        Dim sql As String = "exec SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID @FK_IDA=" & FK_IDA & " , @PROCESS_ID=" & process
-        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
-        dt.TableName = "SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID"
-        Return dt
-    End Function
-
     Public Function SP_STAFF_DH15RQT_SEARCH(ByVal STATUS_ID As String, ByVal TR_ID As String, ByVal DRM As String, ByVal CAS_NAME As String) As DataTable
         Dim clsds As New ClassDataset
 
@@ -69,14 +59,14 @@ Public Class BAO
 
 
         If STATUS_ID <> "" And STATUS_ID IsNot Nothing Then
-            sql_where = "STATUS_ID like '%" & STATUS_ID & "%'"
+            sql_where = "STATUS_ID = '" & STATUS_ID & "'"
         End If
 
         If TR_ID <> "" And TR_ID IsNot Nothing Then
             If sql_where = "" Then
                 sql_where = "TR_ID like '%" & TR_ID & "%'"
             Else
-                sql_where = " and TR_ID like '%" & TR_ID & "%'"
+                sql_where &= " and TR_ID like '%" & TR_ID & "%'"
             End If
         End If
 
@@ -84,7 +74,7 @@ Public Class BAO
             If sql_where = "" Then
                 sql_where = "phm15dgt like '%" & DRM & "%'"
             Else
-                sql_where = " and phm15dgt like '%" & DRM & "%'"
+                sql_where &= " and phm15dgt like '%" & DRM & "%'"
             End If
         End If
 
@@ -92,7 +82,7 @@ Public Class BAO
             If sql_where = "" Then
                 sql_where = "CAS_NAME like '%" & CAS_NAME & "%'"
             Else
-                sql_where = " and CAS_NAME like '%" & CAS_NAME & "%'"
+                sql_where &= " and CAS_NAME like '%" & CAS_NAME & "%'"
             End If
         End If
         Dim dtt As New DataTable
@@ -104,6 +94,17 @@ Public Class BAO
         dtt.TableName = "SP_STAFF_DH15RQT_SEARCH"
         Return dtt
     End Function
+
+    Public Function SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID(ByVal FK_IDA As Integer, ByVal process As Integer) As DataTable
+        Dim clsds As New ClassDataset
+        Dim dt As New DataTable
+        Dim sql As String = "exec SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID @FK_IDA=" & FK_IDA & " , @PROCESS_ID=" & process
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID"
+        Return dt
+    End Function
+
+
 
     Public Function SP_CER_SEARCH() As DataTable
         Dim clsds As New ClassDataset
