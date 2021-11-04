@@ -11,10 +11,10 @@ End Code
 <table style="width:100%">
     <tr>
         <td style="width:12%">ชื่อสารที่ต้องการค้นหา</td>
-        <td style="width:30%"><input type="text" style="width:30%"></td>
+        <td style="width:30%"><input type="text" style="width:100%" ng-model="name"></td>
         <td style="width:12%">เลข iowa (ยาว)</td>
-        <td style="width:30%"><input type="text" style="width:30%"></td>
-        <td><button style="width:16%">ค้นหา</button></td>
+        <td style="width:30%"><input type="text" style="width:100%" ng-model="iowa"></td>
+        <td><input type="button" value="ค้นหา" ng-click="BTN_SEARCH_DH_STAFF(STATUS_ID,TR_ID, DRM, iowanm)" style="width:150px;height:40px;" /></td>
     </tr>
 </table>
 <br />
@@ -39,7 +39,7 @@ End Code
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="data in LIST_CHEM">
+            <tr ng-repeat="data in LIST_SEARCH_CHEM">
                 <td>{{data.IDA}}</td>
                 <td>{{data.cas_number}}</td>
                 <td>{{data.iowanm}}</td>

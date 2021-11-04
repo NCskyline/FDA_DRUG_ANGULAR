@@ -26,16 +26,19 @@ End Code
                 </select>
             </td>
             <td style="width:12%">เลขดำเนินการ</td>
-            <td style="width:30%"><input type="text" style="width:30%" ng-model="TR_ID" ></td>
-            <td>
-            <input type="button" value="ค้นหา" ng-click="BTN_SEARCH_DH_STAFF(STATUS_ID,TR_ID, DRM, iowanm)" />
-            </td>
+            <td style="width:30%"><input type="text" style="width:100%" ng-model="TR_ID" ></td>
+
         <tr>
             <td style="width:12%">เลข DRM</td>
-            <td style="width:30%"><input type="text" style="width:30%" ng-model="DRM"></td>
+            <td style="width:30%"><input type="text" style="width:100%" ng-model="DRM"></td>
             <td style="width:12%">ชื่อสาร</td>
-            <td style="width:30%"><input type="text" style="width:30%" ng-model="iowanm"></td>
+            <td style="width:30%"><input type="text" style="width:100%" ng-model="iowanm"></td>
         </tr>
+    <tr>
+        <td colspan="4" align="center">
+            <input type="button" value="ค้นหา" ng-click="BTN_SEARCH_DH_STAFF(STATUS_ID,TR_ID, DRM, iowanm)" style="width:150px;height:40px;" />
+        </td>
+    </tr>
     </table>
 <br />
 <div class="row">
