@@ -473,8 +473,8 @@
             </tr>
         </table>
         <br />
-        @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />*@
-        @*<input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />*@
+        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
+        <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
         <br />
         <div style="margin-left:5%;font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
         <br />
@@ -535,8 +535,8 @@
             </tr>
         </table>
         <br />
-        @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />*@
-        @*<input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />*@
+        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" />
+        <input type="button" style="font-size:20px;width:100px;margin-left:10px" value="ลบ" />
         <br />
         <div style="margin-left:5%;font-size:20px">เป็นผู้ควบคุมตามมาตรา ๕๓ แห่งพระราชบัญญัติวัตถุที่ออกฤทธิ์ต่อจิตและประสาท พ.ศ. ๒๕๕๙</div>
         <br />
@@ -690,30 +690,7 @@
             </tr>
 
         </table>
-        @*<br />
-        <div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-3" style="text-align:center">
-                    รายละเอืยด :
-                </div>
-                <div class="col-sm-9">
-                    {{REMARK}}
-                </div>
-            </div>
-            <br />
-            <table class="table" style="width:100%">
-                <tr>
-                    <td>ชื่อไฟล์</td>
-                    <td></td>
-                </tr>
-                <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
-                    <td>{{datas.FILENAME}}</td>
-                    <td>
-                        <a ng-show="PROCESS == '131'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                    </td>
-                </tr>
-            </table>
-        </div>*@
+     
         <br />
         <div style="text-align:center">
             <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />

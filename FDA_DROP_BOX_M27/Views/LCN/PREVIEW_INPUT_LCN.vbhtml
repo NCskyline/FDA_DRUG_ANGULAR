@@ -40,15 +40,15 @@
         /** Demo styles for mdCalendar. */
     }
 
-        .datepickerdemoBasicUsage md-content {
-            padding-bottom: 200px;
-        }
+    .datepickerdemoBasicUsage md-content {
+        padding-bottom: 200px;
+    }
 
-        .datepickerdemoBasicUsage .validation-messages {
-            font-size: 12px;
-            color: #dd2c00;
-            margin-left: 15px;
-        }
+    .datepickerdemoBasicUsage .validation-messages {
+        font-size: 12px;
+        color: #dd2c00;
+        margin-left: 15px;
+    }
 </style>
 
 <div class="ic" ng-app="ANGULAR_APP" ng-controller="LCN_CTRL" ng-init="pageload()">
@@ -182,8 +182,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                        </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
                         </form>
@@ -319,8 +319,8 @@
                     <td>
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
                             @*<option value="">--กรุณาเลือก--</option>*@
-                            @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                        </select>*@
+                        @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
+                            </select>*@
                     </td>
                 </tr>
                 <tr>
@@ -621,8 +621,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                        </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -735,9 +735,9 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                        @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -796,9 +796,9 @@
                     </td>
                     <td>
                         @*<select ng-model="LIST_PHR_ADD.PHR_CHK_JOB">
-                        <option value="1">ผู้ประกอบวิชาชีพเภสัชกรรม</option>
-                        <option value="2">ผู้ประกอบวิชาชีพการสัตวแพทย์</option>
-                    </select>*@
+                                <option value="1">ผู้ประกอบวิชาชีพเภสัชกรรม</option>
+                                <option value="2">ผู้ประกอบวิชาชีพการสัตวแพทย์</option>
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_CHK_JOB}}
                     </td>
                 </tr>
@@ -818,9 +818,9 @@
                         </td>
                         <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                             @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                        @*<option value="0">--กรุณาเลือก--</option>*@
+                                @*<option value="0">--กรุณาเลือก--</option>*@
                             @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                        </select>*@
+                                </select>*@
                             {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                         </td>
                         <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -883,9 +883,9 @@
                         </td>
                         <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                             @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                        @*<option value="0">--กรุณาเลือก--</option>*@
+                                @*<option value="0">--กรุณาเลือก--</option>*@
                             @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                        </select>*@
+                                </select>*@
                             {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                         </td>
                         <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -1161,8 +1161,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                        </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -1299,9 +1299,9 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -1367,9 +1367,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -1635,8 +1635,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -1741,9 +1741,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<input class="form-control inline" ng-model="LIST_PHR_ADD.PHR_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
@@ -1842,9 +1842,9 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -2047,8 +2047,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -2287,9 +2287,9 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -2355,9 +2355,9 @@
                     </td>
                     <td style="width:10%">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -2395,12 +2395,12 @@
                     </td>
                     <td>
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_PHR_ADD.PHR_JOB_TYPE">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in CNT_functnm" value="{{x.functcd}}">{{x.functnm}}</option>
-                    </select>*@
+                            </select>*@
                         @*<div hidden>
-                        {{LIST_PHR_ADD.PHR_JOB_TYPE_NAME}}
-                    </div>*@
+                                {{LIST_PHR_ADD.PHR_JOB_TYPE_NAME}}
+                            </div>*@
 
                     </td>
                 </tr>
@@ -2538,8 +2538,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -2673,9 +2673,9 @@
                     </td>
                     <td style="text-align:left ;width:7.5%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.DALCN_PHR.PHR_PREFIX_ID}}
                     </td>
                     <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
@@ -2698,9 +2698,9 @@
                     </td>
                     <td style="width:10%">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -2776,9 +2776,9 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                    @*<option value="">--กรุณาเลือก--</option>*@
+                            @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -2937,8 +2937,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -3072,9 +3072,9 @@
                     </td>
                     <td style="text-align:left ;width:7.5%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.DALCN_PHR.PHR_PREFIX_ID}}
                     </td>
                     <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
@@ -3097,9 +3097,9 @@
                     </td>
                     <td style="width:10%">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -3175,9 +3175,9 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                    @*<option value="">--กรุณาเลือก--</option>*@
+                            @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -3336,8 +3336,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -3471,9 +3471,9 @@
                     </td>
                     <td style="text-align:left ;width:7.5%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="dropdown" ng-model="LIST_LCN.DALCN_PHR.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.DALCN_PHR.PHR_PREFIX_ID}}
                     </td>
                     <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
@@ -3496,9 +3496,9 @@
                     </td>
                     <td style="width:10%">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -3574,9 +3574,9 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                    @*<option value="">--กรุณาเลือก--</option>*@
+                            @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -3886,8 +3886,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -4007,7 +4007,8 @@
                                 <input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_floor" id="chbl_typeee" value="1">
                                 อื่นๆ (โปรดระบุ)
                             </label>
-                            <input type="text" ng-model="LIST_LCN.dalcn.syslctaddr_thasoi" id="chbl_typeee" ng-value="1">
+                            @*<input type="text" ng-model="LIST_LCN.dalcn.syslctaddr_thasoi" id="chbl_typeee" ng-value="1">*@
+                            {{LIST_LCN.dalcn.syslctaddr_thasoi}}
                         </form>
                     </td>
                 </tr>
@@ -4065,9 +4066,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td>
@@ -4141,9 +4142,9 @@
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                    @*<option value="">--กรุณาเลือก--</option>*@
+                            @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -4591,8 +4592,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -4771,9 +4772,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td>
@@ -4847,9 +4848,9 @@
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                    @*<option value="">--กรุณาเลือก--</option>*@
+                            @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -5299,8 +5300,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -5409,9 +5410,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -5582,9 +5583,9 @@
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                    @*<option value="">--กรุณาเลือก--</option>*@
+                            @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -6035,8 +6036,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -6145,9 +6146,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -6318,9 +6319,9 @@
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                    @*<option value="">--กรุณาเลือก--</option>*@
+                            @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -6773,8 +6774,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -6900,9 +6901,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -7338,8 +7339,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -7465,9 +7466,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -7899,8 +7900,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -8009,9 +8010,9 @@
                     </td>
                     <td style="width:10%">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -8181,9 +8182,9 @@
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                    @*<option value="">--กรุณาเลือก--</option>*@
+                            @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -8643,8 +8644,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -8753,9 +8754,9 @@
                     </td>
                     <td style="width:10%">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -8925,9 +8926,9 @@
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                    @*<option value="">--กรุณาเลือก--</option>*@
+                            @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -9376,9 +9377,9 @@
                         </td>
                         <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                             @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                                @*<option value="0">--กรุณาเลือก--</option>*@
                             @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                                </select>*@
                             {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                         </td>
                         <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -9751,9 +9752,9 @@
                         </td>
                         <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                             @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                                @*<option value="0">--กรุณาเลือก--</option>*@
                             @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                                </select>*@
                             {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                         </td>
                         <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -10013,8 +10014,8 @@
                                             {{LIST_LCN.BSN_IDENTIFY}}
                                         </td>
                                         @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                                <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                            </td>*@
                                     </tr>
                                 </table>
                             </form>
@@ -10127,9 +10128,9 @@
                         </td>
                         <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                             @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                                @*<option value="0">--กรุณาเลือก--</option>*@
                             @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                                </select>*@
                             {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                         </td>
                         <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -10515,8 +10516,8 @@
                                         {{LIST_LCN.BSN_IDENTIFY}}
                                     </td>
                                     @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                            <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                        </td>*@
                                 </tr>
                             </table>
 
@@ -10662,9 +10663,9 @@
                     </td>
                     <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                            @*<option value="0">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -10735,9 +10736,9 @@
                     <td style="border-bottom:dotted;border-bottom-width:thin;">
 
                         @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails(LIST_LCN.LOCATION_SELECT)">
-                    @*<option value="">--กรุณาเลือก--</option>*@
+                            @*<option value="">--กรุณาเลือก--</option>*@
                         @*<option ng-repeat="x in REF_LOCATION_KEEP" value="{{x.IDA}}">{{x.thanameplace}}</option>
-                    </select>*@
+                            </select>*@
                         {{LIST_LCN.LOCATION_SELECT}}
                     </td>
                 </tr>
@@ -11292,7 +11293,7 @@
                     </td>
                     <td style="border-bottom:dotted;border-bottom-width:thin;" colspan="3">
                         @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.CATEGORY_DRUG" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
-                            {{LIST_LCN.dalcn.CATEGORY_DRUG}}
+                        {{LIST_LCN.dalcn.CATEGORY_DRUG}}
                     </td>
                 </tr>
                 <tr>
@@ -11703,8 +11704,8 @@
                                             {{LIST_LCN.BSN_IDENTIFY}}
                                         </td>
                                         @*<td>
-                                    <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
-                                </td>*@
+                                                <input type="button" value="ค้นหาผู้ดำเนินฯ" ng-click="BTN_Search_BSN(LIST_LCN.BSN_IDENTIFY)" />
+                                            </td>*@
                                     </tr>
                                 </table>
                             </form>
@@ -11817,9 +11818,9 @@
                         </td>
                         <td style="width:10%;border-bottom:dotted;border-bottom-width:thin;">
                             @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
-                    @*<option value="0">--กรุณาเลือก--</option>*@
+                                @*<option value="0">--กรุณาเลือก--</option>*@
                             @*<option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
-                    </select>*@
+                                </select>*@
                             {{LIST_PHR_ADD.PHR_PREFIX_ID}}
                         </td>
                         <td style="border-bottom:dotted;border-bottom-width:thin;">
@@ -11974,5 +11975,5 @@
             <input type="button" class="btn btn-lg btn-success" ng-click="BTN_EDIT()" value="แก้ไขคำขอ" ng-show="LIST_LCN.dalcn.STATUS_ID == '5'" />
         </div>
     </div>
-    
+
 </div>
