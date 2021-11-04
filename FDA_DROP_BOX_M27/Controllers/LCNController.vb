@@ -168,6 +168,10 @@ Namespace Controllers
         Function PREVIEW_INPUT_LCN() As ActionResult
             Return View()
         End Function
+
+        Function PREVIEW_SUBTITUTE_LCN() As ActionResult
+            Return View()
+        End Function
         '
         Function FRM_SELECT_LCT() As ActionResult
             Return View()

@@ -21,7 +21,8 @@
     <OptionInfer>On</OptionInfer>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -40,6 +41,7 @@
     <OutputPath>bin\</OutputPath>
     <DocumentationFile>FDA_DROP_BOX_M27.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <CodeAnalysisRuleSet>SecurityRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -749,6 +751,7 @@
     <Content Include="Views\LCN\INPUT_F_D2_198_1_UPFILE.vbhtml" />
     <Content Include="Views\LCN\INPUT_F_D2_198_1_UPFILE_N.vbhtml" />
     <Content Include="Views\MASTER_DATA\FRM_SEARCH_PERSON.vbhtml" />
+    <Content Include="Views\LCN\PREVIEW_SUBTITUTE_LCN.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>

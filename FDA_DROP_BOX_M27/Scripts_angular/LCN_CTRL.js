@@ -1136,6 +1136,11 @@
         REDIRECT('/LCN/PREVIEW_EDIT_LCN');
     };
 
+    $scope.BTN_SUBTITUTE_PREVIEW = function (data) {
+        sessionStorage.LCN_IDA = data.IDA;
+        REDIRECT('/LCN/PREVIEW_SUBTITUTE_LCN');
+    };
+
     $scope.BTN_SAVE_LCN_INPUT = function () {
         $scope.LIST_LCN.session = sessionStorage;
 

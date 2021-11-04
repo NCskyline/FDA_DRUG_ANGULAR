@@ -113,43 +113,7 @@
                 <td><input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" /></td>
             </tr>
         </table>
-        <div class="row">
-            <div class="col-sm-12" style="width:100%">
-                <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
-                    <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
-                        หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
-                    </div>
-                    <div class="card-header" ng-show="datas.PIORITY=='LOW'">
-                        หัวข้อเอกสาร (ไม่บังคับแนบ)
-                    </div>
-                    <div class="card-body">
-
-                        <table class="table" style="width:100%">
-                            <tr>
-                                <td colspan="5">
-                                    {{datas.DES}}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width:15%;"><input id="file-input" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                                <td style="width:10%;">ชื่อไฟล์</td>
-                                <td style="width:50%;">{{datas.FILENAME}}</td>
-                                <td style="width:5%">
-                                    <a ng-click="OPEN_DOC_PATH(datas.PATH)">{{FLAG}}</a>
-                                </td>
-                                <td style="width:20%; text-align: right;">
-                                    @*<input type="button" ng-click="UPLOAD_PDFs(datas)" value="บันทึก" />*@
-                                    @*<input type="button" ng-click="deleteRow(datas,$index)" value="ลบ" />*@
-                                </td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        @*<table>
+        <table>
             <tr>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ</td>
             <tr>
@@ -157,7 +121,7 @@
             <tr>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;(๒) เอกสารที่เป็นหลักฐานเกี่ยวข้องกับรายการที่ขอเปลี่ยนแปลง</td>
             </tr>
-        </table>*@
+        </table>
         <table style="width:100%">
             <tr>
                 <td style="width:50%;text-align:center"></td>
@@ -174,30 +138,6 @@
                 <td style="width:20%;text-align:start">ผู้มีหน้าที่ปฏิบัติการ</td>
             </tr>
         </table>
-        @*<br />
-        <div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-3" style="text-align:center">
-                    รายละเอืยด :
-                </div>
-                <div class="col-sm-9">
-                    {{REMARK}}
-                </div>
-            </div>
-            <br />
-            <table class="table" style="width:100%">
-                <tr>
-                    <td>ชื่อไฟล์</td>
-                    <td></td>
-                </tr>
-                <tr ng-repeat="datas in LIST_GMP.DALCN_EDIT_REQUEST" style="background-color:#FDFCE3">
-                    <td>{{datas.FILENAME}}</td>
-                    <td>
-                        <a ng-show="PROCESS_ID == '11107'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                    </td>
-                </tr>
-            </table>
-        </div>*@
     </div>
     <br />
     <div style="text-align:center">
