@@ -26,7 +26,7 @@ End Code
                         </td>
                         <td></td>
                         <td align="right">
-                            <input class="form-control" style="color:white;background-color:#38A86B" type="button" value="สร้างชื่อตำรับ" />
+                            <input class="form-control" style="color:white;background-color:#38A86B" type="button" ng-click="BTN_DL(Process_ID)" value="สร้างชื่อตำรับ" />
                         </td>
                     </tr>
                 </table>
@@ -55,9 +55,19 @@ End Code
                             <td>{{datas.DRUG_NAME_THAI}}</td>
                             <td>{{datas.DRUG_NAME_OTHER}}</td>
                             <td>{{datas.TR_ID}}</td>
+                            <td>
+                                <span class="fas fa-edit"></span>
+                                <a ng-click="BTN_EDIT(datas)">
+                                    เพิ่มข้อมูล
+                                </a>
+                            </td>
                             <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>
+                                <span class="fa fa-eye"></span>
+                                <a ng-click="BTN_DATA(data)">
+                                    เลือก
+                                </a>
+                            </td>
                         </tr>
                     </table>
                 </div>

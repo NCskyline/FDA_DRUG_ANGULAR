@@ -43,7 +43,7 @@ End Code
 }
 </style>
 <div > @*ng-app="ANGULAR_APP" ng-controller="DR_CTRL"*@
-    <div style="font-family:'Taviraj'">
+    <div class="ic" style="font-family:'Taviraj'">
         <div>
             <h1>ข้อมูล</h1>
             <table class="table" width="100%" border="1">
@@ -73,7 +73,7 @@ End Code
             <br />
             <div>
                 <div class="tab">
-                    <button class="tablinks" onclick="openTab(event, 'DS')">ยาตัวอย่าง</button>
+                    <button class="tablinks" onclick="openTab(event, 'DS')" id="defaultOpen">ยาตัวอย่าง</button>
                     <button class="tablinks" onclick="openTab(event, 'DR')">ย.1</button>
                 </div>
             </div>
@@ -91,6 +91,7 @@ End Code
                         </td>
                     </tr>
                 </table>
+                <br />
                 <div class="row">
                     <div class="col-sm-12" style="width:100%;">
                         <div class="card" style=" border-top: 10px solid #277210;">
@@ -231,4 +232,5 @@ End Code
         document.getElementById(Type).style.display = "block";
         evt.currentTarget.className += " active";
     }
+    document.getElementById("defaultOpen").click();
 </script>

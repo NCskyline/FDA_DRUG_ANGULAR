@@ -84,7 +84,7 @@ End Code
         <br />*@
 
             <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'FIRST')" id="defaultOpen">เอกสารที่ผู้ขออนุญาตต้องเตรียม (นิติบุคคล)</button>
+                <button class="tablinks" onclick="openTab(event, 'FIRST')">เอกสารที่ผู้ขออนุญาตต้องเตรียม (นิติบุคคล)</button>
                 <button class="tablinks" onclick="openTab(event, 'SECOND')">เอกสารที่ผู้มีหน้าที่ปฏิบัติการต้องเตรียม</button>
                 <button class="tablinks" onclick="openTab(event, 'THIRD')">เอกสาร</button>
             </div>

@@ -131,6 +131,19 @@
 
     };
 
+    $scope.BTN_DL = function (process) {
+        sessionStorage.PROCESS = process;
+        REDIRECT('/DL/INPUT_DL');
+    };
+
+    $scope.BTN_EDIT = function (data) {
+        REDIRECT('/DL/FRM_REGISTRATION_OTHER_DETAIL');
+    };
+
+    $scope.BTN_DATA = function (data) {
+        REDIRECT('/DR/TABEAN_YA_MAIN');
+    };
+
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });
     $scope.$on('UNLOAD', function () { $scope.loading = false; alert('2'); });

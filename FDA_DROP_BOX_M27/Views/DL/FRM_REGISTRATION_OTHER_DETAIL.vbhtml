@@ -1,7 +1,9 @@
 ﻿@Code
     ViewData("Title") = "FRM_REGISTRATION_OTHER_DETAIL"
 End Code
-
+    <script src="~/Scripts_angular/ANGULAR_APP.js"></script>
+    <script src="~/Scripts_angular/CENTER_SV.js"></script>
+    <script src="~/Scripts_angular/DL_CTRL.js"></script>
     <style>
         .tab {
             overflow: hidden;
@@ -39,9 +41,8 @@ End Code
         }
     </style>
 
-<h2>FRM_REGISTRATION_OTHER_DETAIL</h2>
 
-<div>
+<div ng-app="ANGULAR_APP" ng-controller="DL_CTRL">
     <div style="font-family:'Taviraj';width:100%">
         <div class="in">
             <div class="tab">
