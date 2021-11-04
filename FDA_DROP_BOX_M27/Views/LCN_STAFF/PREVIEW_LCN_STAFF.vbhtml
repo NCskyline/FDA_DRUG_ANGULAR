@@ -9896,7 +9896,7 @@
                     </div>
                 </div>
 
-                <div ng-show="LIST_LCN>PROCESS == '127'">
+                <div ng-show="LIST_LCN.PROCESS == '127'">
                     <div style="font-family:'Taviraj';font-size:24px;">
                         <h1 style="text-align:left;font-size:24px;">
                             <strong>แบบ ผ.ว.จ. ๓/๔-๑</strong>
@@ -10544,7 +10544,7 @@
                     </div>
                 </div>
 
-                <div ng-show="LIST_LCN>PROCESS == '128'">
+                <div ng-show="LIST_LCN.PROCESS == '128'">
                     <div style="font-family:'Taviraj';font-size:24px;">
                         <h1 style="text-align:left;font-size:24px;">
                             <strong>แบบ ผ.ว.จ. ๓/๔-๑</strong>

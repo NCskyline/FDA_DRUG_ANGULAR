@@ -5,21 +5,21 @@ End Code
 
 
 <div>
-    <p style="text-align: center;">ค้นหาสาร</p>
+    <p style="text-align: center;font-family:'Taviraj';font-size:24px">ค้นหาสาร</p>
 </div>
 <br />
 <table style="width:100%">
     <tr>
-        <td style="width:12%">ชื่อสารที่ต้องการค้นหา</td>
-        <td style="width:30%"><input type="text" style="width:30%"></td>
+        <td style="width:15%">ชื่อสารที่ต้องการค้นหา</td>
+        <td style="width:30%"><input class="form-control inline" type="text" style="width:300px"></td>
         <td style="width:12%">เลข iowa (ยาว)</td>
-        <td style="width:30%"><input type="text" style="width:30%"></td>
-        <td><button style="width:16%">ค้นหา</button></td>
+        <td style="width:30%"><input class="form-control inline" type="text" style="width:300px"></td>
+        <td><button class="btn btn-lg" style="width:100px">ค้นหา</button></td>
     </tr>
 </table>
 <br />
-<div align="center">
-    <table class="dataTable" style="width:100%">
+<div align="center" style="border-top:10px solid #F9D027">
+    <table class="dataTable" style="width:100%;margin-top:10px;">
         <thead>
             <tr>
                 <th style="width:5%">IDA</th>

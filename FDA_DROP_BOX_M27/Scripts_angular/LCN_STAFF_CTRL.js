@@ -44,8 +44,37 @@
         } else if (process == '109') {
             sessionStorage.HEAD_LCN_IDA = LCN_IDA;
             $scope.lcnnoType = '(ผยบ)';
+        } else if (process == '123') {
+            $scope.lcnnoType = '(ขย.1)';
+        } else if (process == '124') {
+            $scope.lcnnoType = ('ขย1');
+        } else if (process == '125') {
+            $scope.lcnnoType = ('ขย1');
+        } else if (process == '126') {
+            $scope.lcnnoType = ('ขย1');
+        } else if (process == '131') {
+            $scope.lcnnoType = ('นย1');
+        } else if (process == '132') {
+            $scope.lcnnoType = ('นย1');
+        } else if (process == '133') {
+            $scope.lcnnoType = ('ขย1');
+        } else if (process == '134') {
+            $scope.lcnnoType = ('ขย1');
+        } else if (process == '127') {
+            $scope.lcnnoType = ('ผวจ3');
+        } else if (process == '128') {
+            $scope.lcnnoType = ('ผวจ4');
+        } else if (process == '114') {
+            $scope.lcnnoType = ('ผย1');
+        } else if (process == '115') {
+            $scope.lcnnoType = ('ขย1');
+        } else if (process == '116') {
+            $scope.lcnnoType = ('นย1');
+        } else if (process == '117') {
+            $scope.lcnnoType = ('ขย1');
         } else $scope.lcnnoType = '';
 
+        
         //var getData_LIST = CENTER_SV.SETMODEL_LIST_LCN(process);
         //getData_LIST.then(function (datas) {
         //    $scope.DOC_LIST = datas.data;
