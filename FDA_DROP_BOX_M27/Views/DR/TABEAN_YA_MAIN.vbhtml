@@ -42,8 +42,8 @@ End Code
   border-top: none;
 }
 </style>
-<div > @*ng-app="ANGULAR_APP" ng-controller="DR_CTRL"*@
-    <div style="font-family:'Taviraj'">
+<div ng-app="ANGULAR_APP" ng-controller="DR_CTRL"> 
+    <div class="ic" style="font-family:'Taviraj'">
         <div>
             <h1>ข้อมูล</h1>
             <table class="table" width="100%" border="1">
@@ -73,7 +73,7 @@ End Code
             <br />
             <div>
                 <div class="tab">
-                    <button class="tablinks" onclick="openTab(event, 'DS')">ยาตัวอย่าง</button>
+                    <button class="tablinks" onclick="openTab(event, 'DS')" id="defaultOpen">ยาตัวอย่าง</button>
                     <button class="tablinks" onclick="openTab(event, 'DR')">ย.1</button>
                 </div>
             </div>
@@ -91,6 +91,7 @@ End Code
                         </td>
                     </tr>
                 </table>
+                <br />
                 <div class="row">
                     <div class="col-sm-12" style="width:100%;">
                         <div class="card" style=" border-top: 10px solid #277210;">
@@ -133,7 +134,10 @@ End Code
                     <td width="40%">ใบอนุญาตคำขออนุญาตผลิตยาตัวอย่างเพื่อขอขึ้นทะเบียนตำรับยา ({{lcnnoType}})</td>
 
                     <td align="right">
-                        <button class="btn btn-lg" ng-click="BTN_EDIT_INPUT()">สร้างคำขอ</button>
+                        <button class="btn btn-lg" ng-click="BTN_INPUT()">สร้างคำขอ</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg" ng-click="BTN_TRANSFER()">คำขอ Transfer/Refer/Copy</button>
                     </td>
                 </tr>
             </table>
@@ -155,16 +159,25 @@ End Code
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
-                                        <td>{{data.RCVNO_MANUAL}}</td>
-                                        <td>{{data.LCNNO_MANUAL}}</td>
-                                        <td>{{data.STATUS_NAME}}</td>
-                                        <td>{{data.TRANSACTION_UPLOAD}}</td>
+                                    @*<tr ng-repeat="data in DATA_EDIT_LCN_RQT">
+            <td>{{data.RCVNO_MANUAL}}</td>
+            <td>{{data.LCNNO_MANUAL}}</td>
+            <td>{{data.STATUS_NAME}}</td>
+            <td>{{data.TRANSACTION_UPLOAD}}</td>
+            <td>
+                <span class="fa fa-eye"></span>
+                <a ng-click="">
+                    ดูข้อมูล
+                </a>
+            </td>
+        </tr>*@
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                         <td>
-                                            <span class="fa fa-eye"></span>
-                                            <a ng-click="">
-                                                ดูข้อมูล
-                                            </a>
+                                            <input type="button" ng-click="BTN_PREVIEW()" value="ดูข้อมูลล" />
                                         </td>
                                     </tr>
                                 </tbody>
@@ -231,4 +244,5 @@ End Code
         document.getElementById(Type).style.display = "block";
         evt.currentTarget.className += " active";
     }
+    document.getElementById("defaultOpen").click();
 </script>

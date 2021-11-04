@@ -557,6 +557,7 @@
     <Content Include="Scripts_angular\DH_STAFF_CTRL.js" />
     <Content Include="Scripts_angular\DL_CTRL.js" />
     <Content Include="Scripts_angular\DR_CTRL.js" />
+    <Content Include="Scripts_angular\DR_STAFF_CTRL_.js" />
     <Content Include="Scripts_angular\JS_COMMON.js" />
     <Content Include="js\map.js" />
     <Content Include="js\maps\fusioncharts.usa.js" />
@@ -752,6 +753,9 @@
     <Content Include="Views\LCN\INPUT_F_D2_198_1_UPFILE_N.vbhtml" />
     <Content Include="Views\MASTER_DATA\FRM_SEARCH_PERSON.vbhtml" />
     <Content Include="Views\LCN\PREVIEW_SUBTITUTE_LCN.vbhtml" />
+    <Content Include="Views\DR\INPUT_YOR_1.vbhtml" />
+    <Content Include="Views\DR_STAFF\FRM_DR_STAFF_CONFIRM.vbhtml" />
+    <Content Include="Views\DR\FRM_DR_TRANSFER_DL.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>
