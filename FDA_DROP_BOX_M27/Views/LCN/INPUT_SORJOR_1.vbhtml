@@ -92,7 +92,7 @@ End Code
         <td style="width:55%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
     </tr>
 </table>
-<table style="width:100%" border="1">   
+<table style="width:100%" border="1">
     <tr>
         <td style="width:10%"></td>
         <td style="width:90%;">ขอรับใบอนุญาตส่งออกวัตถุออกฤทธิ์ ณ สถานที่ชื่อ</td>
@@ -158,8 +158,16 @@ End Code
 <br />
 <div>&nbsp;&nbsp;&nbsp;&nbsp;พร้อมกับคำขอนี้ ข้าพเจ้าได้ส่งมอบหลักฐานต่างๆมาด้วย คือ</div>
 @*<div>&nbsp;&nbsp;&nbsp;&nbsp;(๑) รูปถ่ายขนาด ๓ x ๔ เซนติเมตร จำนวน ๔ รูป</div>
-<div>&nbsp;&nbsp;&nbsp;&nbsp;(๒) สำเนาใบผลิต ขาย หรือนำเข้าซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</div>
-<div>&nbsp;&nbsp;&nbsp;&nbsp;(๓) เอกสารอื่นๆ (ถ้ามี)</div>*@
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;(๒) สำเนาใบผลิต ขาย หรือนำเข้าซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;(๓) เอกสารอื่นๆ (ถ้ามี)</div>*@
+<br />
+<div class="row">
+    <div class="col-sm-12 in" style="width:100%">
+        <div ng-include="FILE_ATTACH">
+
+        </div>
+    </div>
+</div>
 <br />
 <table style="width:100%">
     <tr>
