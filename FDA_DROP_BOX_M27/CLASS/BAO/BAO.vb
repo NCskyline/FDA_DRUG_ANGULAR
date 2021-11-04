@@ -95,6 +95,75 @@ Public Class BAO
         Return dtt
     End Function
 
+    Public Function SP_STAFF_IOWA_SEARCH(ByVal IOWANM As String, ByVal IOWACD As String) As DataTable
+        Dim clsds As New ClassDataset
+
+        Dim sql As String = ""
+        sql = "select * from [dbo].[Vw_SEARCH_IOWA_RQT] "
+        Dim sql_where As String = ""
+
+
+
+        If IOWANM <> "" And IOWANM IsNot Nothing Then
+            sql_where = "iowanm like '%" & IOWANM & "%'"
+        End If
+
+        If IOWACD <> "" And IOWACD IsNot Nothing Then
+            If sql_where = "" Then
+                sql_where = "IOWA like '%" & IOWACD & "%'"
+            Else
+                sql_where &= " and IOWA like '%" & IOWACD & "%'"
+            End If
+        End If
+
+        Dim dtt As New DataTable
+        '"exec SP_STAFF_DH15RQT_SEARCH @STATUS_ID='" & STATUS_ID & "' , @TR_ID='" & TR_ID & "',@DRM='" & DRM & "',@CAS_NAME='" & CAS_NAME & "'"
+        If Trim(sql_where) <> "" Then
+            sql &= "where " & sql_where
+        End If
+        dtt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dtt.TableName = "SP_STAFF_IOWA_SEARCH"
+        Return dtt
+    End Function
+
+    Public Function SP_STAFF_CERT_SEARCH(ByVal CER_FORMAT As String, ByVal FOREIGN_LOCATION_NAME As String, ByVal TR_ID As String) As DataTable
+        Dim clsds As New ClassDataset
+
+        Dim sql As String = ""
+        sql = "select * from [dbo].[Vw_SEARCH_CER_STAFF] "
+        Dim sql_where As String = ""
+
+
+
+        If CER_FORMAT <> "" And CER_FORMAT IsNot Nothing Then
+            sql_where = "CER_FORMAT like '%" & CER_FORMAT & "%'"
+        End If
+
+        If FOREIGN_LOCATION_NAME <> "" And FOREIGN_LOCATION_NAME IsNot Nothing Then
+            If sql_where = "" Then
+                sql_where = "FOREIGN_LOCATION_NAME like '%" & FOREIGN_LOCATION_NAME & "%'"
+            Else
+                sql_where &= " and FOREIGN_LOCATION_NAME like '%" & FOREIGN_LOCATION_NAME & "%'"
+            End If
+        End If
+        If TR_ID <> "" And TR_ID IsNot Nothing Then
+            If sql_where = "" Then
+                sql_where = "TR_ID like '%" & TR_ID & "%'"
+            Else
+                sql_where &= " and TR_ID like '%" & TR_ID & "%'"
+            End If
+        End If
+
+
+        Dim dtt As New DataTable
+        '"exec SP_STAFF_DH15RQT_SEARCH @STATUS_ID='" & STATUS_ID & "' , @TR_ID='" & TR_ID & "',@DRM='" & DRM & "',@CAS_NAME='" & CAS_NAME & "'"
+        If Trim(sql_where) <> "" Then
+            sql &= "where " & sql_where
+        End If
+        dtt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dtt.TableName = "SP_STAFF_CERT_SEARCH"
+        Return dtt
+    End Function
     Public Function SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID(ByVal FK_IDA As Integer, ByVal process As Integer) As DataTable
         Dim clsds As New ClassDataset
         Dim dt As New DataTable
