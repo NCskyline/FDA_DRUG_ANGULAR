@@ -107,7 +107,7 @@
                     </ul>
                 </li>
                 <li>
-                    <div class="listree-submenu-heading">คำขอแก้ไข/คำขอใบแทน/คำขอต่ออายุ</div>
+                    <div class="listree-submenu-heading">คำขอแก้ไข/คำขอใบแทน</div>
                     <ul class="listree-submenu-items">
                         <li>
                             <div>คำขอแก้ไขใบอนุญาต</div>
@@ -206,9 +206,19 @@
                                     <a ng-click="BTN_MENU('100794')" style="color:#06B716">คำขอคำขอย้ายสถานที่ ยาแผนโบราณ สำหรับสัตว์</a>
                                 </li>
                                 @*<li>
-                                    <a ng-click="BTN_MENU('100795')" style="color:#06B716">คำขอย้ายสถานที่ ยาเสพติดให้โทษประเภทที่ 3</a>
-                                </li>*@
+                            <a ng-click="BTN_MENU('100795')" style="color:#06B716">คำขอย้ายสถานที่ ยาเสพติดให้โทษประเภทที่ 3</a>
+                        </li>*@
                             </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="listree-submenu-heading">ยื่นคำขอต่ออายุใบอนุญาต (ระบบใหม่)</div>
+                    <ul class="listree-submenu-items" style="color:black">
+                        <li>
+                            <a ng-click="BTN_MENU('EXTEND')" style="color:#06B716">
+                                ยื่นคำขอต่ออายุใบอนุญาต (ระบบใหม่)
+                            </a>
                         </li>
                     </ul>
                 </li>

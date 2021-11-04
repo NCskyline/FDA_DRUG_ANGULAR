@@ -187,7 +187,7 @@
 
             }, function () { });
 
-        } else if (process == '100701' || process == '100702' || process == '100703' || process == '100704' || process == '100705' || process == '100766' || process == '100767' || process == '100768' || process == '100769' || process == '100770' || process == '100771' || process == '100772' || process == '100773' || process == '100774'|| process == '100775' || process == '100776' || process == '100777' || process == '100791' || process == '100792' || process == '100793' || process == '100794') {
+        } else if (process == '100701' || process == '100702' || process == '100703' || process == '100704' || process == '100705' || process == '100766' || process == '100767' || process == '100768' || process == '100769' || process == '100770' || process == '100771' || process == '100772' || process == '100773' || process == '100774' || process == '100775' || process == '100776' || process == '100777' || process == '100791' || process == '100792' || process == '100793' || process == '100794') {
             if (process == '100701') {
                 $scope.lcnnoType = 'คำขอใบแทนใบอนุญาตสถานที่ขายยาแผนปัจจุบัน';
             } else if (process == '100702') {
@@ -230,7 +230,7 @@
                 $scope.lcnnoType = 'คำขอย้ายสถานที่ ผลิตยาแผนปัจจุบัน';
             } else if (sessionStorage.PROCESS == '100794') {
                 $scope.lcnnoType = 'คำขอคำขอย้ายสถานที่ ยาแผนโบราณ สำหรับสัตว์';
-            } 
+            }
 
             sessionStorage.PROCESS = process;
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_SUBSTITUTE_MAIN');
@@ -241,7 +241,10 @@
 
                 $scope.DATA_SUBTITUTE = datas.data;
             }, function () { });
-        } 
+
+        } else if (process == 'EXTEND') {
+            $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_EXTEND_TIME_LOCATION_MAIN_USER'); 
+        }
 
         var dataLo1 = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
         dataLo1.then(function (datas) {
@@ -404,7 +407,7 @@
                 $scope.DATA_LCN_F_EDIT = datas.data;
             }, function () { });
 
-        } else if (process == '100701' || process == '100702' || process == '100703' || process == '100704' || process == '100705' || process == '100766' || process == '100767' || process == '100768' || process == '100769' || process == '100770' || process == '100771' || process == '100772' || process == '100773' || process == '100774'|| process == '100775' || process == '100776' || process == '100777' || process == '100791' || process == '100792' || process == '100793' || process == '100794') {
+        } else if (process == '100701' || process == '100702' || process == '100703' || process == '100704' || process == '100705' || process == '100766' || process == '100767' || process == '100768' || process == '100769' || process == '100770' || process == '100771' || process == '100772' || process == '100773' || process == '100774' || process == '100775' || process == '100776' || process == '100777' || process == '100791' || process == '100792' || process == '100793' || process == '100794') {
             if (process == '100701') {
                 $scope.lcnnoType = 'ใบแทน สถานที่ขายยาแผนปัจจุบัน';
             } else if (process == '100702') {
@@ -445,14 +448,14 @@
                 $scope.lcnnoType = 'คำขอย้ายสถานที่ ขายยาแผนปัจจุบัน';
             } else if (process == '100792') {
                 $scope.lcnnoType = 'คำขอย้ายสถานที่ นำเข้ายาแผนปัจจุบัน';
-              
+
             } else if (process == '100793') {
                 $scope.lcnnoType = 'คำขอย้ายสถานที่ ผลิตยาแผนปัจจุบัน';
-              
+
             } else if (process == '100794') {
                 $scope.lcnnoType = 'คำขอคำขอย้ายสถานที่ ยาแผนโบราณ สำหรับสัตว์';
-                
-            } 
+
+            }
 
             sessionStorage.PROCESS = process;
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_SELECT');
@@ -460,6 +463,9 @@
             data4.then(function (datas) {
                 $scope.DATA_LCN_F_EDIT = datas.data;
             }, function () { });
+        } else if (process == 'EXTEND') {
+            sessionStorage.PROCESS = process;
+            location.reload();
         }
 
     };
@@ -515,7 +521,15 @@
             } else if (sessionStorage.PROCESS == '134') {
                 $scope.lcnnoType = '(ขย1) > (ส่งออกวัตถุออกฤทธิ์ฯในประเภท ๔)';
                 REDIRECT('/LCN/INPUT_SORDOJ_3_4_1');
-            } 
+            }
+        } else if (sessionStorage.PROCESS == '127' || sessionStorage.PROCESS == '128') {
+            if (sessionStorage.PROCESS == '127') {
+                $scope.lcnnoType = '(ผวจ3) > (ผลิตวัตถุออกฤทธิ์ ฯ ในประเภท ๓)';
+                REDIRECT('/LCN/INPUT_PORDOJ_3_4_1');
+            } else if (sessionStorage.PROCESS == '128') {
+                $scope.lcnnoType = '(ผวจ4) > (ผลิตวัตถุออกฤทธิ์ ฯ ในประเภท ๔)';
+                REDIRECT('/LCN/INPUT_PORDOJ_3_4_1');
+            }
         } else if (sessionStorage.PROCESS == '114' || sessionStorage.PROCESS == '115' || sessionStorage.PROCESS == '116' || sessionStorage.PROCESS == '117') {
             if (sessionStorage.PROCESS == '114') {
                 $scope.lcnnoType = '(ผย1) > (ผลิตซึ่งยาเสพติดให้โทษในประเภท ๓)';
@@ -792,7 +806,7 @@
         $scope.lcnnoType = lcnnotype;
         //$scope.SUB_PATH = SET_URL_SV('/LCN/FRM_LCN_DRUG');
         sessionStorage.HEAD_LCN_IDA = datas.IDA;
-        $scope.FULL_MODEL.PROCESS = datas.PROCESS_LCN;
+        sessionStorage.PROCESS = datas.PROCESS_LCN;
         REDIRECT("/LCN/FRM_LCN_NEWS");
 
 

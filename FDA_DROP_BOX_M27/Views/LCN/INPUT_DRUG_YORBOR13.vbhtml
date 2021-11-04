@@ -168,37 +168,8 @@ End Code
             </tr>
         </table>*@
         <div class="row">
-            <div class="col-sm-10" style="width:100%">
-                <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
-                    <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
-                        หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
-                    </div>
-                    <div class="card-header" ng-show="datas.PIORITY=='LOW'">
-                        หัวข้อเอกสาร (ไม่บังคับแนบ)
-                    </div>
-                    <div class="card-body">
-
-                        <table class="table" style="width:100%">
-                            <tr>
-                                <td colspan="5">
-                                    {{datas.DES}}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width:15%;"><input id="file-input" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                                <td style="width:10%;">ชื่อไฟล์</td>
-                                <td style="width:50%;">{{datas.FILENAME}}</td>
-                                <td style="width:5%">
-                                    <a ng-click="OPEN_DOC_PATH(datas.PATH)">{{FLAG}}</a>
-                                </td>
-                                <td style="width:20%; text-align: right;">
-                                    @*<input type="button" ng-click="UPLOAD_PDFs(datas)" value="บันทึก" />*@
-                                    @*<input type="button" ng-click="deleteRow(datas,$index)" value="ลบ" />*@
-                                </td>
-                            </tr>
-
-                        </table>
-                    </div>
+            <div class="col-sm-12 in" style="width:100%">
+                <div ng-include="FILE_ATTACH">
 
                 </div>
             </div>

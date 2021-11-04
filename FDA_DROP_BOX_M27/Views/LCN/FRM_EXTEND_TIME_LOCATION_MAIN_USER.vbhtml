@@ -1,7 +1,12 @@
-﻿<script src="../Scripts_angular/ANGULAR_APP.js"></script>
+﻿@Code
+    Layout = ""
+End Code
+
+
+<script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
-<div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" class="ic" ng-init="pageload()">
+<div  ng-init="pageload()"> @*ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" class="ic"*@
     <div style="font-family:'Taviraj';font-size:20px;">
         <h2>ต่ออายุใบอนุญาตสถานที่ด้านยา</h2>
         <table width="100%">
@@ -11,7 +16,7 @@
                     <table>
                         <tr>
                             <td>
-                                <input type="button" value="รีเฟรชหน้าจอ" ng-click="RELOAD_PAGE()"/>
+                                <input type="button" value="รีเฟรชหน้าจอ" ng-click="RELOAD_PAGE()" />
                             </td>
                             <td>
                                 <input type="button" value="ยื่นคำขอต่ออายุใบอนุญาต (ระบบใหม่)" ng-click="BTN_EXTEND()" />
