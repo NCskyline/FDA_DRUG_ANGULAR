@@ -11,13 +11,13 @@ End Code
 <table style="width:100%">
     <tr>
         <td style="width:8%">เลขที่ CER</td>
-        <td style="width:30%"><input type="text" style="width:30%"></td>
+        <td style="width:30%"><input type="text" style="width:100%" ng-model="CER_FORMAT"></td>
         <td style="width:12%">ชื่อผู้ผลิตต่างประเทศ</td>
-        <td style="width:30%"><input type="text" style="width:30%"></td>
-        <td><button style="width:20%">ค้นหา</button></td>
+        <td style="width:30%"><input type="text" style="width:100%" ng-model="FOREIGN_LOCATION_NAME"></td>
+        <td><input type="button" value="ค้นหา" ng-click="BTN_SEARCH_CERT_STAFF(CER_FORMAT,FOREIGN_LOCATION_NAME,TR_ID)" style="width:150px;height:40px;" /></td>
     <tr>
         <td style="width:8%">เลขดำเนินการ</td>
-        <td style="width:30%"><input type="text" style="width:30%"></td>
+        <td style="width:30%"><input type="text" style="width:100%" ng-model="TR_ID"></td>
     </tr>
 </table>
 <br />

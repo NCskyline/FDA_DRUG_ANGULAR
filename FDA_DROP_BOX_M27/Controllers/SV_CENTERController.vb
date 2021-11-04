@@ -79,6 +79,22 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
         End Function
 
+        Public Function SP_STAFF_IOWA_SEARCH(ByVal IOWANM As String, ByVal IOWACD As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_STAFF_IOWA_SEARCH(IOWANM, IOWACD)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+        End Function
+
+        Public Function SP_STAFF_CERT_SEARCH(ByVal CER_FORMAT As String, ByVal FOREIGN_LOCATION_NAME As String, ByVal TR_ID As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_STAFF_CERT_SEARCH(CER_FORMAT, FOREIGN_LOCATION_NAME, TR_ID)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+        End Function
+
         Function SP_MAS_CHEMICAL_SEARCH_RESULT_STAFF() As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO

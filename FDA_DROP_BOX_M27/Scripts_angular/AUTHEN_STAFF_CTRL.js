@@ -232,10 +232,10 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_DH_SEARCH');
                 
-                var DATASTAT = CENTER_SV.SP_STATUS_CERT_STAFF_FIX();
-                DATASTAT.then(function (datas) {
-                    $scope.LIST_STATUS = datas.data;
-                }, function () { });
+                //var DATASTAT = CENTER_SV.SP_STATUS_CERT_STAFF_FIX();
+                //DATASTAT.then(function (datas) {
+                //    $scope.LIST_STATUS = datas.data;
+                //}, function () { });
 
 
 
@@ -255,17 +255,18 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
 
             } else if (SEQ == '5') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_CHEMICAL_STAFF_SEARCH');
-                var dataLo4 = CENTER_SV.SP_MAS_CHEMICAL_SEARCH_RESULT_STAFF();
-                dataLo4.then(function (datas) {
-                    $scope.LIST_CHEM = datas.data;
-                }, function () { });
+                
+                //var dataLo4 = CENTER_SV.SP_STAFF_IOWA_SEARCH();
+                //dataLo4.then(function (datas) {
+                //    $scope.LIST_CHEM = datas.data;
+                //}, function () { });
                 
             } else if (SEQ == '6') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_CER_STAFF_SEARCH');
-                var dataLo2 = CENTER_SV.SP_CER_SEARCH();
-                dataLo2.then(function (datas) {
-                    $scope.LIST_CERT = datas.data;
-                }, function () { });
+                //var dataLo2 = CENTER_SV.SP_CER_SEARCH();
+                //dataLo2.then(function (datas) {
+                //    $scope.LIST_CERT = datas.data;
+                //}, function () { });
 
             }
 
@@ -326,7 +327,21 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
             $scope.LIST_DRM = datas.data;
         });
     };
+    
+    $scope.BTN_SEARCH_IOWA_STAFF = function (IOWANM,IOWACD) {
+        var getdata = CENTER_SV.SP_STAFF_IOWA_SEARCH(IOWANM, IOWACD);
+        getdata.then(function (datas) {
+            $scope.LIST_SEARCH_CHEM = datas.data;
+        });
+    };
+    
 
+    $scope.BTN_SEARCH_CERT_STAFF = function (CER_FORMAT, FOREIGN_LOCATION_NAME, TR_ID) {
+        var getdata = CENTER_SV.SP_STAFF_CERT_SEARCH(CER_FORMAT, FOREIGN_LOCATION_NAME, TR_ID);
+        getdata.then(function (datas) {
+            $scope.LIST_CERT = datas.data;
+        });
+    };
     $scope.BTN_SAVE_APP = function () {
         var APP_DATA = CENTER_SV.UPDATE_APPROVE_NAME(LIST_APP_LCN, sessionStorage.LCN_IDA,sessionStorage.CITIZEN_ID);
         APP_DATA.then(function (datas) {
