@@ -42,7 +42,7 @@ End Code
   border-top: none;
 }
 </style>
-<div > @*ng-app="ANGULAR_APP" ng-controller="DR_CTRL"*@
+<div ng-app="ANGULAR_APP" ng-controller="DR_CTRL"> 
     <div class="ic" style="font-family:'Taviraj'">
         <div>
             <h1>ข้อมูล</h1>
@@ -134,7 +134,10 @@ End Code
                     <td width="40%">ใบอนุญาตคำขออนุญาตผลิตยาตัวอย่างเพื่อขอขึ้นทะเบียนตำรับยา ({{lcnnoType}})</td>
 
                     <td align="right">
-                        <button class="btn btn-lg" ng-click="BTN_EDIT_INPUT()">สร้างคำขอ</button>
+                        <button class="btn btn-lg" ng-click="BTN_INPUT()">สร้างคำขอ</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg" ng-click="BTN_TRANSFER()">คำขอ Transfer/Refer/Copy</button>
                     </td>
                 </tr>
             </table>
@@ -156,16 +159,25 @@ End Code
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
-                                        <td>{{data.RCVNO_MANUAL}}</td>
-                                        <td>{{data.LCNNO_MANUAL}}</td>
-                                        <td>{{data.STATUS_NAME}}</td>
-                                        <td>{{data.TRANSACTION_UPLOAD}}</td>
+                                    @*<tr ng-repeat="data in DATA_EDIT_LCN_RQT">
+            <td>{{data.RCVNO_MANUAL}}</td>
+            <td>{{data.LCNNO_MANUAL}}</td>
+            <td>{{data.STATUS_NAME}}</td>
+            <td>{{data.TRANSACTION_UPLOAD}}</td>
+            <td>
+                <span class="fa fa-eye"></span>
+                <a ng-click="">
+                    ดูข้อมูล
+                </a>
+            </td>
+        </tr>*@
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                         <td>
-                                            <span class="fa fa-eye"></span>
-                                            <a ng-click="">
-                                                ดูข้อมูล
-                                            </a>
+                                            <input type="button" ng-click="BTN_PREVIEW()" value="ดูข้อมูลล" />
                                         </td>
                                     </tr>
                                 </tbody>

@@ -165,10 +165,10 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
             if (SEQ == '2') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/TABEAN_YA_MAIN_STAFF');
 
-                var dataedit4 = CENTER_SV.SP_DRRGT_TABEAN_STAFF();
-                dataedit4.then(function (datas) {
-                    $scope.DATA_TABEAN_STAFF = datas.data;
-                }, function () { });
+                //var dataedit4 = CENTER_SV.SP_DRRGT_TABEAN_STAFF();
+                //dataedit4.then(function (datas) {
+                //    $scope.DATA_TABEAN_STAFF = datas.data;
+                //}, function () { });
             } else if (SEQ == '3') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_TABEAN_SEARCH');
                 //FRM_TABEAN_SEARCH
@@ -281,7 +281,9 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         REDIRECT('/LCN_STAFF/PREVIEW_LCN_STAFF');
     };
 
-
+    $scope.BTN_PREVIEW_DR = function () {
+        REDIRECT('/DR_STAFF/FRM_DR_STAFF_CONFIRM');
+    };
 
     $scope.SELECT_CER = function (data) {
         sessionStorage.IDA = data.IDA;

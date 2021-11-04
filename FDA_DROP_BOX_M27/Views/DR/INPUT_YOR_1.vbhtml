@@ -2,8 +2,12 @@
     ViewData("Title") = "INPUT_YOR_1"
 End Code
 
-<div>
-    <div>
+    <script src="~/Scripts_angular/ANGULAR_APP.js"></script>
+    <script src="~/Scripts_angular/CENTER_SV.js"></script>
+    <script src="~/Scripts_angular/DR_CTRL.js"></script>
+
+<div class="ic" ng-app="" ng-controller="">
+    <div style="font-family:'Taviraj';width:100%">
         <div>
             <p style="text-align: right;">แบบ ย.1</p>
             <p style="text-align: right;">FORM MA-1</p>

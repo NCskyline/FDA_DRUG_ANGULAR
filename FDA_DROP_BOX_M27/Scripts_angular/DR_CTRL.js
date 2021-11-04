@@ -144,6 +144,18 @@
         REDIRECT('/DR/TABEAN_YA_MAIN');
     };
 
+    $scope.BTN_INPUT = function (data) {
+        REDIRECT('/DR/INPUT_YOR_1');
+    };
+
+    $scope.BTN_PREVIEW = function () {
+        REDIRECT('/DR/INPUT_YOR_1');
+    };
+
+    $scope.BTN_TRANSFER = function () {
+        REDIRECT('/DR/FRM_DR_TRANSFER_DL');
+    };
+
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });
     $scope.$on('UNLOAD', function () { $scope.loading = false; alert('2'); });

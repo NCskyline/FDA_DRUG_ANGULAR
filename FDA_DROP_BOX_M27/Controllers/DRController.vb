@@ -73,6 +73,12 @@ Namespace Controllers
         Function FRM_REGISTRATION_MAIN() As ActionResult
             Return View()
         End Function
+        Function INPUT_YOR_1() As ActionResult
+            Return View()
+        End Function
+        Function FRM_DR_TRANSFER_DL() As ActionResult
+            Return View()
+        End Function
     End Class
     Public Class DR_CENTERController
         Inherits Controller
