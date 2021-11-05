@@ -2125,6 +2125,12 @@ Partial Public Class Linq_DRUGDataContext
     End Sub
   Partial Private Sub DeleteFILE_ATTACH(instance As FILE_ATTACH)
     End Sub
+  Partial Private Sub InsertDR_RECLASS(instance As DR_RECLASS)
+    End Sub
+  Partial Private Sub UpdateDR_RECLASS(instance As DR_RECLASS)
+    End Sub
+  Partial Private Sub DeleteDR_RECLASS(instance As DR_RECLASS)
+    End Sub
   #End Region
 	
 	Public Sub New()
@@ -4285,6 +4291,12 @@ Partial Public Class Linq_DRUGDataContext
 	Public ReadOnly Property FILE_ATTACHes() As System.Data.Linq.Table(Of FILE_ATTACH)
 		Get
 			Return Me.GetTable(Of FILE_ATTACH)
+		End Get
+	End Property
+	
+	Public ReadOnly Property DR_RECLASSes() As System.Data.Linq.Table(Of DR_RECLASS)
+		Get
+			Return Me.GetTable(Of DR_RECLASS)
 		End Get
 	End Property
 End Class
@@ -138880,6 +138892,552 @@ Partial Public Class FILE_ATTACH
 				Me._FILE_PATH = value
 				Me.SendPropertyChanged("FILE_PATH")
 				Me.OnFILE_PATHChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.DR_RECLASS")>  _
+Partial Public Class DR_RECLASS
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _IDA As Integer
+	
+	Private _FK_IDA As System.Nullable(Of Integer)
+	
+	Private _CTZNO As String
+	
+	Private _IDENTIFY As String
+	
+	Private _CONSIDER_DATE As System.Nullable(Of Date)
+	
+	Private _FK_STAFF_OFFER_IDA As String
+	
+	Private _PROCESS_ID As String
+	
+	Private _OLD_DOSESAGE As System.Nullable(Of Integer)
+	
+	Private _NEW_DOSESAGE As System.Nullable(Of Integer)
+	
+	Private _ATTACH1 As String
+	
+	Private _ATTACH2 As String
+	
+	Private _ATTACH3 As String
+	
+	Private _TR_ID As System.Nullable(Of Integer)
+	
+	Private _SIGN_NAME As String
+	
+	Private _SIGN_IDENTIFY As String
+	
+	Private _STAFF_APP_IDENTIFY As String
+	
+	Private _TYPE_REQUEST_ID As String
+	
+	Private _C_NO As String
+	
+	Private _A_NO As String
+	
+	Private _IS_CANCEL As System.Nullable(Of Integer)
+	
+	Private _CANCEL_DATE As System.Nullable(Of Date)
+	
+	Private _WRITE_AT As String
+	
+	Private _WRITE_DATE As System.Nullable(Of Date)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnIDAChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnIDAChanged()
+    End Sub
+    Partial Private Sub OnFK_IDAChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnFK_IDAChanged()
+    End Sub
+    Partial Private Sub OnCTZNOChanging(value As String)
+    End Sub
+    Partial Private Sub OnCTZNOChanged()
+    End Sub
+    Partial Private Sub OnIDENTIFYChanging(value As String)
+    End Sub
+    Partial Private Sub OnIDENTIFYChanged()
+    End Sub
+    Partial Private Sub OnCONSIDER_DATEChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnCONSIDER_DATEChanged()
+    End Sub
+    Partial Private Sub OnFK_STAFF_OFFER_IDAChanging(value As String)
+    End Sub
+    Partial Private Sub OnFK_STAFF_OFFER_IDAChanged()
+    End Sub
+    Partial Private Sub OnPROCESS_IDChanging(value As String)
+    End Sub
+    Partial Private Sub OnPROCESS_IDChanged()
+    End Sub
+    Partial Private Sub OnOLD_DOSESAGEChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnOLD_DOSESAGEChanged()
+    End Sub
+    Partial Private Sub OnNEW_DOSESAGEChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnNEW_DOSESAGEChanged()
+    End Sub
+    Partial Private Sub OnATTACH1Changing(value As String)
+    End Sub
+    Partial Private Sub OnATTACH1Changed()
+    End Sub
+    Partial Private Sub OnATTACH2Changing(value As String)
+    End Sub
+    Partial Private Sub OnATTACH2Changed()
+    End Sub
+    Partial Private Sub OnATTACH3Changing(value As String)
+    End Sub
+    Partial Private Sub OnATTACH3Changed()
+    End Sub
+    Partial Private Sub OnTR_IDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnTR_IDChanged()
+    End Sub
+    Partial Private Sub OnSIGN_NAMEChanging(value As String)
+    End Sub
+    Partial Private Sub OnSIGN_NAMEChanged()
+    End Sub
+    Partial Private Sub OnSIGN_IDENTIFYChanging(value As String)
+    End Sub
+    Partial Private Sub OnSIGN_IDENTIFYChanged()
+    End Sub
+    Partial Private Sub OnSTAFF_APP_IDENTIFYChanging(value As String)
+    End Sub
+    Partial Private Sub OnSTAFF_APP_IDENTIFYChanged()
+    End Sub
+    Partial Private Sub OnTYPE_REQUEST_IDChanging(value As String)
+    End Sub
+    Partial Private Sub OnTYPE_REQUEST_IDChanged()
+    End Sub
+    Partial Private Sub OnC_NOChanging(value As String)
+    End Sub
+    Partial Private Sub OnC_NOChanged()
+    End Sub
+    Partial Private Sub OnA_NOChanging(value As String)
+    End Sub
+    Partial Private Sub OnA_NOChanged()
+    End Sub
+    Partial Private Sub OnIS_CANCELChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnIS_CANCELChanged()
+    End Sub
+    Partial Private Sub OnCANCEL_DATEChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnCANCEL_DATEChanged()
+    End Sub
+    Partial Private Sub OnWRITE_ATChanging(value As String)
+    End Sub
+    Partial Private Sub OnWRITE_ATChanged()
+    End Sub
+    Partial Private Sub OnWRITE_DATEChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnWRITE_DATEChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDA", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property IDA() As Integer
+		Get
+			Return Me._IDA
+		End Get
+		Set
+			If ((Me._IDA = value)  _
+						= false) Then
+				Me.OnIDAChanging(value)
+				Me.SendPropertyChanging
+				Me._IDA = value
+				Me.SendPropertyChanged("IDA")
+				Me.OnIDAChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FK_IDA", DbType:="Int")>  _
+	Public Property FK_IDA() As System.Nullable(Of Integer)
+		Get
+			Return Me._FK_IDA
+		End Get
+		Set
+			If (Me._FK_IDA.Equals(value) = false) Then
+				Me.OnFK_IDAChanging(value)
+				Me.SendPropertyChanging
+				Me._FK_IDA = value
+				Me.SendPropertyChanged("FK_IDA")
+				Me.OnFK_IDAChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CTZNO", DbType:="NVarChar(MAX)")>  _
+	Public Property CTZNO() As String
+		Get
+			Return Me._CTZNO
+		End Get
+		Set
+			If (String.Equals(Me._CTZNO, value) = false) Then
+				Me.OnCTZNOChanging(value)
+				Me.SendPropertyChanging
+				Me._CTZNO = value
+				Me.SendPropertyChanged("CTZNO")
+				Me.OnCTZNOChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDENTIFY", DbType:="NVarChar(MAX)")>  _
+	Public Property IDENTIFY() As String
+		Get
+			Return Me._IDENTIFY
+		End Get
+		Set
+			If (String.Equals(Me._IDENTIFY, value) = false) Then
+				Me.OnIDENTIFYChanging(value)
+				Me.SendPropertyChanging
+				Me._IDENTIFY = value
+				Me.SendPropertyChanged("IDENTIFY")
+				Me.OnIDENTIFYChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CONSIDER_DATE", DbType:="DateTime")>  _
+	Public Property CONSIDER_DATE() As System.Nullable(Of Date)
+		Get
+			Return Me._CONSIDER_DATE
+		End Get
+		Set
+			If (Me._CONSIDER_DATE.Equals(value) = false) Then
+				Me.OnCONSIDER_DATEChanging(value)
+				Me.SendPropertyChanging
+				Me._CONSIDER_DATE = value
+				Me.SendPropertyChanged("CONSIDER_DATE")
+				Me.OnCONSIDER_DATEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FK_STAFF_OFFER_IDA", DbType:="NVarChar(50)")>  _
+	Public Property FK_STAFF_OFFER_IDA() As String
+		Get
+			Return Me._FK_STAFF_OFFER_IDA
+		End Get
+		Set
+			If (String.Equals(Me._FK_STAFF_OFFER_IDA, value) = false) Then
+				Me.OnFK_STAFF_OFFER_IDAChanging(value)
+				Me.SendPropertyChanging
+				Me._FK_STAFF_OFFER_IDA = value
+				Me.SendPropertyChanged("FK_STAFF_OFFER_IDA")
+				Me.OnFK_STAFF_OFFER_IDAChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PROCESS_ID", DbType:="NVarChar(MAX)")>  _
+	Public Property PROCESS_ID() As String
+		Get
+			Return Me._PROCESS_ID
+		End Get
+		Set
+			If (String.Equals(Me._PROCESS_ID, value) = false) Then
+				Me.OnPROCESS_IDChanging(value)
+				Me.SendPropertyChanging
+				Me._PROCESS_ID = value
+				Me.SendPropertyChanged("PROCESS_ID")
+				Me.OnPROCESS_IDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_OLD_DOSESAGE", DbType:="Int")>  _
+	Public Property OLD_DOSESAGE() As System.Nullable(Of Integer)
+		Get
+			Return Me._OLD_DOSESAGE
+		End Get
+		Set
+			If (Me._OLD_DOSESAGE.Equals(value) = false) Then
+				Me.OnOLD_DOSESAGEChanging(value)
+				Me.SendPropertyChanging
+				Me._OLD_DOSESAGE = value
+				Me.SendPropertyChanged("OLD_DOSESAGE")
+				Me.OnOLD_DOSESAGEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NEW_DOSESAGE", DbType:="Int")>  _
+	Public Property NEW_DOSESAGE() As System.Nullable(Of Integer)
+		Get
+			Return Me._NEW_DOSESAGE
+		End Get
+		Set
+			If (Me._NEW_DOSESAGE.Equals(value) = false) Then
+				Me.OnNEW_DOSESAGEChanging(value)
+				Me.SendPropertyChanging
+				Me._NEW_DOSESAGE = value
+				Me.SendPropertyChanged("NEW_DOSESAGE")
+				Me.OnNEW_DOSESAGEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ATTACH1", DbType:="NVarChar(50)")>  _
+	Public Property ATTACH1() As String
+		Get
+			Return Me._ATTACH1
+		End Get
+		Set
+			If (String.Equals(Me._ATTACH1, value) = false) Then
+				Me.OnATTACH1Changing(value)
+				Me.SendPropertyChanging
+				Me._ATTACH1 = value
+				Me.SendPropertyChanged("ATTACH1")
+				Me.OnATTACH1Changed
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ATTACH2", DbType:="NVarChar(50)")>  _
+	Public Property ATTACH2() As String
+		Get
+			Return Me._ATTACH2
+		End Get
+		Set
+			If (String.Equals(Me._ATTACH2, value) = false) Then
+				Me.OnATTACH2Changing(value)
+				Me.SendPropertyChanging
+				Me._ATTACH2 = value
+				Me.SendPropertyChanged("ATTACH2")
+				Me.OnATTACH2Changed
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ATTACH3", DbType:="NVarChar(50)")>  _
+	Public Property ATTACH3() As String
+		Get
+			Return Me._ATTACH3
+		End Get
+		Set
+			If (String.Equals(Me._ATTACH3, value) = false) Then
+				Me.OnATTACH3Changing(value)
+				Me.SendPropertyChanging
+				Me._ATTACH3 = value
+				Me.SendPropertyChanged("ATTACH3")
+				Me.OnATTACH3Changed
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TR_ID", DbType:="Int")>  _
+	Public Property TR_ID() As System.Nullable(Of Integer)
+		Get
+			Return Me._TR_ID
+		End Get
+		Set
+			If (Me._TR_ID.Equals(value) = false) Then
+				Me.OnTR_IDChanging(value)
+				Me.SendPropertyChanging
+				Me._TR_ID = value
+				Me.SendPropertyChanged("TR_ID")
+				Me.OnTR_IDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SIGN_NAME", DbType:="NVarChar(MAX)")>  _
+	Public Property SIGN_NAME() As String
+		Get
+			Return Me._SIGN_NAME
+		End Get
+		Set
+			If (String.Equals(Me._SIGN_NAME, value) = false) Then
+				Me.OnSIGN_NAMEChanging(value)
+				Me.SendPropertyChanging
+				Me._SIGN_NAME = value
+				Me.SendPropertyChanged("SIGN_NAME")
+				Me.OnSIGN_NAMEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SIGN_IDENTIFY", DbType:="NVarChar(MAX)")>  _
+	Public Property SIGN_IDENTIFY() As String
+		Get
+			Return Me._SIGN_IDENTIFY
+		End Get
+		Set
+			If (String.Equals(Me._SIGN_IDENTIFY, value) = false) Then
+				Me.OnSIGN_IDENTIFYChanging(value)
+				Me.SendPropertyChanging
+				Me._SIGN_IDENTIFY = value
+				Me.SendPropertyChanged("SIGN_IDENTIFY")
+				Me.OnSIGN_IDENTIFYChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_STAFF_APP_IDENTIFY", DbType:="NVarChar(MAX)")>  _
+	Public Property STAFF_APP_IDENTIFY() As String
+		Get
+			Return Me._STAFF_APP_IDENTIFY
+		End Get
+		Set
+			If (String.Equals(Me._STAFF_APP_IDENTIFY, value) = false) Then
+				Me.OnSTAFF_APP_IDENTIFYChanging(value)
+				Me.SendPropertyChanging
+				Me._STAFF_APP_IDENTIFY = value
+				Me.SendPropertyChanged("STAFF_APP_IDENTIFY")
+				Me.OnSTAFF_APP_IDENTIFYChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TYPE_REQUEST_ID", DbType:="NVarChar(MAX)")>  _
+	Public Property TYPE_REQUEST_ID() As String
+		Get
+			Return Me._TYPE_REQUEST_ID
+		End Get
+		Set
+			If (String.Equals(Me._TYPE_REQUEST_ID, value) = false) Then
+				Me.OnTYPE_REQUEST_IDChanging(value)
+				Me.SendPropertyChanging
+				Me._TYPE_REQUEST_ID = value
+				Me.SendPropertyChanged("TYPE_REQUEST_ID")
+				Me.OnTYPE_REQUEST_IDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_C_NO", DbType:="NVarChar(MAX)")>  _
+	Public Property C_NO() As String
+		Get
+			Return Me._C_NO
+		End Get
+		Set
+			If (String.Equals(Me._C_NO, value) = false) Then
+				Me.OnC_NOChanging(value)
+				Me.SendPropertyChanging
+				Me._C_NO = value
+				Me.SendPropertyChanged("C_NO")
+				Me.OnC_NOChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_A_NO", DbType:="NVarChar(MAX)")>  _
+	Public Property A_NO() As String
+		Get
+			Return Me._A_NO
+		End Get
+		Set
+			If (String.Equals(Me._A_NO, value) = false) Then
+				Me.OnA_NOChanging(value)
+				Me.SendPropertyChanging
+				Me._A_NO = value
+				Me.SendPropertyChanged("A_NO")
+				Me.OnA_NOChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IS_CANCEL", DbType:="Int")>  _
+	Public Property IS_CANCEL() As System.Nullable(Of Integer)
+		Get
+			Return Me._IS_CANCEL
+		End Get
+		Set
+			If (Me._IS_CANCEL.Equals(value) = false) Then
+				Me.OnIS_CANCELChanging(value)
+				Me.SendPropertyChanging
+				Me._IS_CANCEL = value
+				Me.SendPropertyChanged("IS_CANCEL")
+				Me.OnIS_CANCELChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CANCEL_DATE", DbType:="DateTime")>  _
+	Public Property CANCEL_DATE() As System.Nullable(Of Date)
+		Get
+			Return Me._CANCEL_DATE
+		End Get
+		Set
+			If (Me._CANCEL_DATE.Equals(value) = false) Then
+				Me.OnCANCEL_DATEChanging(value)
+				Me.SendPropertyChanging
+				Me._CANCEL_DATE = value
+				Me.SendPropertyChanged("CANCEL_DATE")
+				Me.OnCANCEL_DATEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_WRITE_AT", DbType:="NVarChar(MAX)")>  _
+	Public Property WRITE_AT() As String
+		Get
+			Return Me._WRITE_AT
+		End Get
+		Set
+			If (String.Equals(Me._WRITE_AT, value) = false) Then
+				Me.OnWRITE_ATChanging(value)
+				Me.SendPropertyChanging
+				Me._WRITE_AT = value
+				Me.SendPropertyChanged("WRITE_AT")
+				Me.OnWRITE_ATChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_WRITE_DATE", DbType:="DateTime")>  _
+	Public Property WRITE_DATE() As System.Nullable(Of Date)
+		Get
+			Return Me._WRITE_DATE
+		End Get
+		Set
+			If (Me._WRITE_DATE.Equals(value) = false) Then
+				Me.OnWRITE_DATEChanging(value)
+				Me.SendPropertyChanging
+				Me._WRITE_DATE = value
+				Me.SendPropertyChanged("WRITE_DATE")
+				Me.OnWRITE_DATEChanged
 			End If
 		End Set
 	End Property

@@ -14300,6 +14300,48 @@ Namespace DAO_DRUG
             Next
         End Sub
     End Class
+    Public Class TB_DR_RECLASS
+        Inherits MAINCONTEXT
+        Public fields As New DR_RECLASS
+        Public Sub insert()
+            db.DR_RECLASSes.InsertOnSubmit(fields)
+            db.SubmitChanges()
+        End Sub
+
+        Public Sub update()
+            db.SubmitChanges()
+        End Sub
+        Public Sub GetDataby_IDA(ByVal _IDA As Integer)
+
+            datas = (From p In db.DR_RECLASSes Where p.IDA = _IDA Select p)
+            For Each Me.fields In datas
+            Next
+        End Sub
+        Public Sub delete()
+            db.DR_RECLASSes.DeleteOnSubmit(fields)
+            db.SubmitChanges()
+        End Sub
+        Private _Details As New List(Of DR_RECLASS)
+        Public Property Details() As List(Of DR_RECLASS)
+            Get
+                Return _Details
+            End Get
+            Set(ByVal value As List(Of DR_RECLASS))
+                _Details = value
+            End Set
+        End Property
+        Public Sub AddDetails()
+            Details.Add(fields)
+            fields = New DR_RECLASS
+        End Sub
+        Public Sub GetDataby_PROCESS(ByVal PROCESS_ID As String)
+
+            datas = (From p In db.DR_RECLASSes Where p.PROCESS_ID = PROCESS_ID Order By p.IDA Select p)
+            For Each Me.fields In datas
+                AddDetails()
+            Next
+        End Sub
+    End Class
 End Namespace
 
 

@@ -79,6 +79,9 @@ Namespace Controllers
         Function FRM_DR_TRANSFER_DL() As ActionResult
             Return View()
         End Function
+        Function INPUT_RECLASS() As ActionResult
+            Return View()
+        End Function
     End Class
     Public Class DR_CENTERController
         Inherits Controller
