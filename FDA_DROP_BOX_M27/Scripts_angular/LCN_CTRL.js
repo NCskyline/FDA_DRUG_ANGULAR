@@ -1145,9 +1145,10 @@
     };
 
     $scope.BTN_EDIT_PREVIEW = function (data) {
+        sessionStorage.LCN_IDA = data.IDA;
         sessionStorage.LCT_IDA = data.LCT_IDA;
-        //sessionStorage.PROCESS = data.PROCESS;
-        REDIRECT('/LCN/PREVIEW_EDIT_LCN');
+        sessionStorage.PROCESS = data.PROCESS_ID;
+        REDIRECT('/LCN/PREVIEW_INPUT_LCN');
     };
 
     $scope.BTN_SUBTITUTE_PREVIEW = function (data) {
