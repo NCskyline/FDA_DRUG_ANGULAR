@@ -138967,6 +138967,12 @@ Partial Public Class DR_RECLASS
 	
 	Private _WRITE_DATE As System.Nullable(Of Date)
 	
+	Private _STATUS_ID As System.Nullable(Of Integer)
+	
+	Private _RCVNO As System.Nullable(Of Integer)
+	
+	Private _RCVDATE As System.Nullable(Of Date)
+	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
     End Sub
@@ -139065,6 +139071,18 @@ Partial Public Class DR_RECLASS
     Partial Private Sub OnWRITE_DATEChanging(value As System.Nullable(Of Date))
     End Sub
     Partial Private Sub OnWRITE_DATEChanged()
+    End Sub
+    Partial Private Sub OnSTATUS_IDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnSTATUS_IDChanged()
+    End Sub
+    Partial Private Sub OnRCVNOChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnRCVNOChanged()
+    End Sub
+    Partial Private Sub OnRCVDATEChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnRCVDATEChanged()
     End Sub
     #End Region
 	
@@ -139438,6 +139456,54 @@ Partial Public Class DR_RECLASS
 				Me._WRITE_DATE = value
 				Me.SendPropertyChanged("WRITE_DATE")
 				Me.OnWRITE_DATEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_STATUS_ID", DbType:="Int")>  _
+	Public Property STATUS_ID() As System.Nullable(Of Integer)
+		Get
+			Return Me._STATUS_ID
+		End Get
+		Set
+			If (Me._STATUS_ID.Equals(value) = false) Then
+				Me.OnSTATUS_IDChanging(value)
+				Me.SendPropertyChanging
+				Me._STATUS_ID = value
+				Me.SendPropertyChanged("STATUS_ID")
+				Me.OnSTATUS_IDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_RCVNO", DbType:="Int")>  _
+	Public Property RCVNO() As System.Nullable(Of Integer)
+		Get
+			Return Me._RCVNO
+		End Get
+		Set
+			If (Me._RCVNO.Equals(value) = false) Then
+				Me.OnRCVNOChanging(value)
+				Me.SendPropertyChanging
+				Me._RCVNO = value
+				Me.SendPropertyChanged("RCVNO")
+				Me.OnRCVNOChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_RCVDATE", DbType:="DateTime")>  _
+	Public Property RCVDATE() As System.Nullable(Of Date)
+		Get
+			Return Me._RCVDATE
+		End Get
+		Set
+			If (Me._RCVDATE.Equals(value) = false) Then
+				Me.OnRCVDATEChanging(value)
+				Me.SendPropertyChanging
+				Me._RCVDATE = value
+				Me.SendPropertyChanged("RCVDATE")
+				Me.OnRCVDATEChanged
 			End If
 		End Set
 	End Property

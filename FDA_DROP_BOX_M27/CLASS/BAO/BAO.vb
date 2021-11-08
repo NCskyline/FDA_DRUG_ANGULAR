@@ -173,7 +173,14 @@ Public Class BAO
         Return dt
     End Function
 
-
+    Public Function SP_RECLASS_BY_NEWCODE(ByVal newcode As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim dt As New DataTable
+        Dim sql As String = "exec SP_RECLASS_BY_NEWCODE @newcode= '" & newcode & "'"
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_RECLASS_BY_NEWCODE"
+        Return dt
+    End Function
 
     Public Function SP_CER_SEARCH() As DataTable
         Dim clsds As New ClassDataset
