@@ -87,6 +87,14 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
         End Function
 
+        Public Function SP_RECLASS_BY_NEWCODE(ByVal newcode As String) As JsonResult
+            Dim DT As New DataTable
+            Dim BAO As New BAO
+            DT = BAO.SP_RECLASS_BY_NEWCODE(newcode)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
+        End Function
+
         Public Function SP_STAFF_CERT_SEARCH(ByVal CER_FORMAT As String, ByVal FOREIGN_LOCATION_NAME As String, ByVal TR_ID As String) As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO
