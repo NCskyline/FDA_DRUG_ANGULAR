@@ -760,6 +760,8 @@
     <Content Include="Views\DR\INPUT_RECLASS_ATTACH.vbhtml" />
     <Content Include="Views\DR\FRM_RECLASS_MAIN.vbhtml" />
     <Content Include="Views\DR_STAFF\FRM_EXTEND_TIME_LOCATION_STAFF_MAIN.vbhtml" />
+    <Content Include="Views\DR_EDIT_REQUEST\FRM_RGT_EDIT_MAIN.vbhtml" />
+    <Content Include="Views\DR_EDIT_REQUEST\FRM_RGT_EDIT_CONFIRM.vbhtml" />
     <Content Include="Views\MASTER_DATA\FRM_STAFF_LOCATION_MANUAL_MAIN.vbhtml" />
     <Content Include="Views\MASTER_DATA\FRM_STAFF_LOCATION_MANUAL_INSERT.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
