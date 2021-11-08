@@ -1153,7 +1153,7 @@
 
     $scope.BTN_SUBTITUTE_PREVIEW = function (data) {
         sessionStorage.LCN_IDA = data.IDA;
-        REDIRECT('/LCN/PREVIEW_SUBTITUTE_LCN');
+        REDIRECT('/LCN/PREVIEW_INPUT_LCN');
     };
 
     $scope.BTN_SAVE_LCN_INPUT = function () {
