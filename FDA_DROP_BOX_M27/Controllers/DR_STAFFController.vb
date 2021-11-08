@@ -33,6 +33,9 @@ Namespace Controllers
         Function FRM_DR_STAFF_CONFIRM() As ActionResult
             Return View()
         End Function
+        Function FRM_EXTEND_TIME_LOCATION_STAFF_MAIN() As ActionResult
+            Return View()
+        End Function
 
     End Class
 End Namespace
