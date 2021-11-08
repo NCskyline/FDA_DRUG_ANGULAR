@@ -24,5 +24,9 @@ Namespace Controllers
         Function FRM_PROFESSIONAL_IMPORT() As ActionResult
             Return View()
         End Function
+
+        Function FRM_STAFF_LOCATION_MANUAL_MAIN() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
