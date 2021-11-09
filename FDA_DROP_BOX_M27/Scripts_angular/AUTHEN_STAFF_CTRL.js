@@ -70,6 +70,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         //}, function () { });
 
 
+
     }
 
 
@@ -232,10 +233,10 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
                 
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DH_STAFF/FRM_DH_SEARCH');
                 
-                //var DATASTAT = CENTER_SV.SP_STATUS_CERT_STAFF_FIX();
-                //DATASTAT.then(function (datas) {
-                //    $scope.LIST_STATUS = datas.data;
-                //}, function () { });
+                var DATASTAT = CENTER_SV.SP_STATUS_CERT_STAFF_FIX();
+                DATASTAT.then(function (datas) {
+                    $scope.LIST_STATUS = datas.data;
+                }, function () { });
 
 
 
