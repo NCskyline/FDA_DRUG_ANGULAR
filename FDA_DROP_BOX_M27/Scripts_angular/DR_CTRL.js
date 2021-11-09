@@ -105,8 +105,8 @@
         }, function () { });
 
         
-        var data3 = CENTER_SV.SP_RECLASS_BY_NEWCODE(sessionStorage.NEWCODE);
-        data3.then(function (datas) {
+        var data4 = CENTER_SV.SP_RECLASS_BY_NEWCODE(sessionStorage.NEWCODE);
+        data4.then(function (datas) {
             $scope.DATA_RECLASS = datas.data;
         }, function () { });
 
@@ -136,6 +136,8 @@
 
         if (process == '130001' || process == '130002' || process == '13004') {
             REDIRECT('/DR/FRM_SEARCH_LCN?PROCESS=' + process);
+        } else if (process == '130099') {
+            REDIRECT('/DR/FRM_RGT_SELECT?PROCESS=' + process);
         }
     };
 

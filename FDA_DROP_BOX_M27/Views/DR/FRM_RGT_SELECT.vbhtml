@@ -60,7 +60,7 @@ End Code
                                     <div class="row set-a-btn">
                                         <div class="col-sm-12 ">
                                             <span class="fa fa-eye"></span>
-                                            <a ng-click="SELECT_LCN(datas,'12')">
+                                            <a ng-click="SELECT_REGIST(datas,'12')">
                                                 เลือก
                                             </a>
                                         </div>
