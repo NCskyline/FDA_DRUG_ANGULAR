@@ -10,17 +10,22 @@ End Code
 <br />
 <table style="width:100%">
     <tr>
-        <td style="width:12%">เลขที่ CER</td>
+        <td style="width:12%">เลขอ้างอิงสถานที่ผลิต <br /> (ThFDA-DRef)</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="CER_FORMAT"></td>
         <td width="2%"></td>
-        <td style="width:15%">ชื่อผู้ผลิตต่างประเทศ</td>
+        <td style="width:15%">ชื่อผู้ผลิตเภสัชเคมีภัณฑ์</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="FOREIGN_LOCATION_NAME"></td>
         <td width="2%"></td>
-        <td><input class="btn btn-lg" type="button" value="ค้นหา" ng-click="BTN_SEARCH_CERT_STAFF(CER_FORMAT,FOREIGN_LOCATION_NAME,TR_ID)" style="width:150px;height:40px;" /></td>
+        <td><input class="btn btn-lg" type="button" value="ค้นหา" ng-click="BTN_SEARCH_CERT_STAFF(CER_FORMAT,FOREIGN_LOCATION_NAME,TR_ID,thanm)" style="width:150px;height:40px;" /></td>
     </tr>
     <tr>
         <td style="width:12%">เลขดำเนินการ</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="TR_ID"></td>
+        <td width="2%"></td>
+        <td style="width:15%">ชื่อผู้รับผู้รับอนุญาต <br />(ผลิต/นำสั่ง)</td>
+        <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="thanm"></td>
+        <td width="2%"></td>
+        <td style="width:150px"></td>
     </tr>
 </table>
 <br />

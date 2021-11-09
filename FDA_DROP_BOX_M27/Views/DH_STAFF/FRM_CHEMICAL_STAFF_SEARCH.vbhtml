@@ -35,8 +35,8 @@ End Code
                         <th style="width:3%">syn</th>
                         <th style="width:3%">aori</th>
                         <th style="width:10%">REGIS_STATUS</th>
-                        <th style="width:5%">INN</th>
-                        <th style="width:5%">INN_TH</th>
+                        @*<th style="width:5%">INN</th>
+                        <th style="width:5%">INN_TH</th>*@
                         @*<th style="width:15%">Version update</th>*@
                         <th style="width:10%">สถานะ</th>
                         <th style="width:5%"></th>
@@ -53,8 +53,8 @@ End Code
                         <td>{{data.syn}}</td>
                         <td>{{data.aori}}</td>
                         <td>{{data.REGIS_STATUS}}</td>
-                        <td>{{data.INN}}</td>
-                        <td>{{data.INN_TH}}</td>
+                        @*<td>{{data.INN}}</td>
+                        <td>{{data.INN_TH}}</td>*@
                         @*<td>{{data.Version_update}}</td>*@
                         <td>{{data.STATUS_IOWA}}</td>
                         <td>
