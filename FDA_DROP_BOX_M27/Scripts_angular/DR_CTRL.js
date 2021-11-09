@@ -157,7 +157,7 @@
 
     };
     $scope.SELECT_REGIST = function (datas) {
-
+        sessionStorage.PROCESS_ID = PROCESS_ID;
         sessionStorage.NEWCODE = datas.newcode;
         REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
 
@@ -195,6 +195,10 @@
 
     $scope.BTN_PREVIEW_RGT_EDIT = function () {
         REDIRECT('/DR_EDIT_REQUEST/FRM_RGT_EDIT_CONFIRM');
+    };
+
+    $scope.BTN_BACK = function () {
+        REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
     };
 
 }).controller('appController', ['$scope', function ($scope) {

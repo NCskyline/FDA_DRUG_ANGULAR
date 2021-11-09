@@ -1,5 +1,5 @@
 ﻿@Code
-    ViewData("Title") = "FRM_RGT_EDIT_MAIN"
+    Layout = ""
 End Code
 
 <div>
@@ -7,8 +7,8 @@ End Code
         <div>
             <table class="table" width="100%">
                 <tr>
-                    <td width="30%">คำขอแก้ไขเปลี่ยนแปลงทะเบียน > K 1/62 (NC)</td> @*{{register}}*@
-                    <td width="60%" align="center">
+                    <td width="40%">คำขอแก้ไขเปลี่ยนแปลงทะเบียน > K 1/62 (NC)</td> @*{{register}}*@
+                    <td width="50%" align="center">
                         <select style="width:40%;font-family:'Taviraj'" class="form-control">
                             <option>นาย ณัฐสิทธิ์ อาจเมือง</option>
                             <option></option>

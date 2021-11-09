@@ -47,7 +47,12 @@ End Code
                 margin-left: 15px;
             }
     </style>
-    <div >
+
+    <script src="~/Scripts_angular/ANGULAR_APP.js"></script>
+    <script src="~/Scripts_angular/CENTER_SV.js"></script>
+    <script src="~/Scripts_angular/DR_CTRL.js"></script>
+
+    <div ng-app="ANGULAR_APP" ng-controller="DR_CTRL">
         <div class="content-part">
             <div class="part part-2-3">
                 <div style="font-family:'Taviraj';font-size:24px;width:100%">
@@ -438,7 +443,7 @@ End Code
                     </div>
                     <br />
                     <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%" ">
-                        <input type="button" class="form-control" value="กลับหน้ารายการ" />
+                        <input type="button" class="form-control" ng-click="BTN_BACK()" value="กลับหน้ารายการ" />
                     </div>
                 </div>
             </div>
