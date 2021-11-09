@@ -193,6 +193,10 @@
         REDIRECT('/DR/FRM_DR_TRANSFER_DL');
     };
 
+    $scope.BTN_PREVIEW_EXTEND = function () {
+        REDIRECT('/DR/FRM_RGT_EDIT_CONFIRM');
+    };
+
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });
     $scope.$on('UNLOAD', function () { $scope.loading = false; alert('2'); });
