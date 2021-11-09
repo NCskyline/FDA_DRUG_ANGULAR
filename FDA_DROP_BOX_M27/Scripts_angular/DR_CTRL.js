@@ -136,7 +136,7 @@
 
         if (process == '130001' || process == '130002' || process == '13004') {
             REDIRECT('/DR/FRM_SEARCH_LCN?PROCESS=' + process);
-        } else if (process == '130099') {
+        } else if (process == '130099' || process == '140099') {
             REDIRECT('/DR/FRM_RGT_SELECT?PROCESS=' + process);
         }
     };

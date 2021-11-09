@@ -57,7 +57,7 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
                     } else if (TYPE == 'DH') {
                         window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PHESAJ";  // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง
                     } else if (TYPE == 'DR') {
-                        window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PRODUCT";
+                        window.location = "/FDA_DRUG_ANGULAR_DEMO/DR/FRM_MAIN_PAGE_PRODUCT";
                     }
                     
                 }
