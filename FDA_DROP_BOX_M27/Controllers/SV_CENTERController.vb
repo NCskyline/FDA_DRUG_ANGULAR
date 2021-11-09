@@ -71,10 +71,10 @@ Namespace Controllers
             Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
 
         End Function
-        Public Function SP_STAFF_DH15RQT_SEARCH(ByVal STATUS_ID As String, ByVal TR_ID As String, ByVal DRM As String, ByVal CAS_NAME As String) As JsonResult
+        Public Function SP_STAFF_DH15RQT_SEARCH(ByVal STATUS_ID As String, ByVal TR_ID As String, ByVal DRM As String, ByVal CAS_NAME As String, ByVal thanm As String, ByVal frgn As String) As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO
-            DT = BAO.SP_STAFF_DH15RQT_SEARCH(STATUS_ID, TR_ID, DRM, CAS_NAME)
+            DT = BAO.SP_STAFF_DH15RQT_SEARCH(STATUS_ID, TR_ID, DRM, CAS_NAME, thanm, frgn)
             Dim clsds As New ClassDataset
             Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
         End Function
@@ -102,10 +102,10 @@ Namespace Controllers
             Dim clsds As New ClassDataset
             Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
         End Function
-        Public Function SP_STAFF_CERT_SEARCH(ByVal CER_FORMAT As String, ByVal FOREIGN_LOCATION_NAME As String, ByVal TR_ID As String) As JsonResult
+        Public Function SP_STAFF_CERT_SEARCH(ByVal CER_FORMAT As String, ByVal FOREIGN_LOCATION_NAME As String, ByVal TR_ID As String, ByVal thanm As String) As JsonResult
             Dim DT As New DataTable
             Dim BAO As New BAO
-            DT = BAO.SP_STAFF_CERT_SEARCH(CER_FORMAT, FOREIGN_LOCATION_NAME, TR_ID)
+            DT = BAO.SP_STAFF_CERT_SEARCH(CER_FORMAT, FOREIGN_LOCATION_NAME, TR_ID, thanm)
             Dim clsds As New ClassDataset
             Return Json(clsds.DataTableToJSON(DT), JsonRequestBehavior.AllowGet)
         End Function

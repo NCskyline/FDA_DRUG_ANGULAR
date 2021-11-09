@@ -49,7 +49,7 @@ Public Class BAO
         dt.TableName = "SP_STATUS_CERT_STAFF_FIX"
         Return dt
     End Function
-    Public Function SP_STAFF_DH15RQT_SEARCH(ByVal STATUS_ID As String, ByVal TR_ID As String, ByVal DRM As String, ByVal CAS_NAME As String) As DataTable
+    Public Function SP_STAFF_DH15RQT_SEARCH(ByVal STATUS_ID As String, ByVal TR_ID As String, ByVal DRM As String, ByVal CAS_NAME As String, ByVal thanm As String, ByVal frgn As String) As DataTable
         Dim clsds As New ClassDataset
 
         Dim sql As String = ""
@@ -83,6 +83,20 @@ Public Class BAO
                 sql_where = "CAS_NAME like '%" & CAS_NAME & "%'"
             Else
                 sql_where &= " and CAS_NAME like '%" & CAS_NAME & "%'"
+            End If
+        End If
+        If thanm <> "" And thanm IsNot Nothing Then
+            If sql_where = "" Then
+                sql_where = "thanm like '%" & thanm & "%'"
+            Else
+                sql_where &= " and thanm like '%" & thanm & "%'"
+            End If
+        End If
+        If frgn <> "" And frgn IsNot Nothing Then
+            If sql_where = "" Then
+                sql_where = "NAME_ADDRESS like '%" & frgn & "%'"
+            Else
+                sql_where &= " and NAME_ADDRESS like '%" & frgn & "%'"
             End If
         End If
         Dim dtt As New DataTable
@@ -126,7 +140,7 @@ Public Class BAO
         Return dtt
     End Function
 
-    Public Function SP_STAFF_CERT_SEARCH(ByVal CER_FORMAT As String, ByVal FOREIGN_LOCATION_NAME As String, ByVal TR_ID As String) As DataTable
+    Public Function SP_STAFF_CERT_SEARCH(ByVal CER_FORMAT As String, ByVal FOREIGN_LOCATION_NAME As String, ByVal TR_ID As String, ByVal thanm As String) As DataTable
         Dim clsds As New ClassDataset
 
         Dim sql As String = ""
@@ -154,7 +168,13 @@ Public Class BAO
             End If
         End If
 
-
+        If thanm <> "" And thanm IsNot Nothing Then
+            If sql_where = "" Then
+                sql_where = "thanm like '%" & thanm & "%'"
+            Else
+                sql_where &= " and thanm like '%" & thanm & "%'"
+            End If
+        End If
         Dim dtt As New DataTable
         '"exec SP_STAFF_DH15RQT_SEARCH @STATUS_ID='" & STATUS_ID & "' , @TR_ID='" & TR_ID & "',@DRM='" & DRM & "',@CAS_NAME='" & CAS_NAME & "'"
         If Trim(sql_where) <> "" Then

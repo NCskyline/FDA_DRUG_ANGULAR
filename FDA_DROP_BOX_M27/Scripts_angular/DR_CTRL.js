@@ -15,6 +15,8 @@
     }
 
     function pageload() {
+
+        $scope.FILE_ATTACH = SET_URL_SV('/DR/INPUT_RECLASS_ATTACH');
         var process = sessionStorage.PROCESS_ID;
         if (process == 130001 || process == 130002 || process == 130004) {
             $scope.SUB_PATH = SET_URL_SV('/DL/DL_MAIN');
@@ -22,6 +24,14 @@
             $scope.SUB_PATH = SET_URL_SV('/DR/FRM_RECLASS_MAIN');
         } else if (process == 130099) {
             $scope.SUB_PATH = SET_URL_SV('/DR_EDIT_REQUEST/FRM_RGT_EDIT_MAIN');
+        } else if (process == 1027) {
+            $scope.SUB_PATH = SET_URL_SV('/DI/FRM_DRUG_IMPORT_NYM2');
+        } else if (process == 1028) {
+            $scope.SUB_PATH = SET_URL_SV('/DI/FRM_DRUG_IMPORT_NYM3');
+        } else if (process == 1029) {
+            $scope.SUB_PATH = SET_URL_SV('/DI/FRM_DRUG_IMPORT_NYM4');
+        } else if (process == 1031) {
+            $scope.SUB_PATH = SET_URL_SV('/DI/FRM_DRUG_IMPORT_NYM4_2');
         }
 
         if (process != undefined) {
@@ -138,6 +148,8 @@
             REDIRECT('/DR/FRM_SEARCH_LCN?PROCESS=' + process);
         } else if (process == '130099' || process == '140099') {
             REDIRECT('/DR/FRM_RGT_SELECT?PROCESS=' + process);
+        } else if (process == '1026' || process == '1027' || process == '1028' || process == '1029' || process == '1031') {
+            REDIRECT('/DI/FRM_SEARCH_LCN_TO_DL?PROCESS=' + process);
         }
     };
 
@@ -195,6 +207,15 @@
 
     $scope.BTN_PREVIEW_RGT_EDIT = function () {
         REDIRECT('/DR_EDIT_REQUEST/FRM_RGT_EDIT_CONFIRM');
+    };
+
+    $scope.BTN_DS_INPUT = function () {
+        REDIRECT('/DS/INPUT_DS_PORYOR8');
+        //if (process == 1701) {
+        //    REDIRECT('/DS/INPUT_DS_PORYOR8');
+        //} else if (process == 1702) {
+        //    REDIRECT('/DS/INPUT_DS_NORYOR8');
+        //}
     };
 
     $scope.BTN_BACK = function () {

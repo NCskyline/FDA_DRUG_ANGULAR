@@ -188,10 +188,12 @@
     <Compile Include="Controllers\CERTController.vb" />
     <Compile Include="Controllers\DHController.vb" />
     <Compile Include="Controllers\DH_STAFFController.vb" />
+    <Compile Include="Controllers\DIController.vb" />
     <Compile Include="Controllers\DLController.vb" />
     <Compile Include="Controllers\DRController.vb" />
     <Compile Include="Controllers\DR_EDIT_REQUESTController.vb" />
     <Compile Include="Controllers\DR_STAFFController.vb" />
+    <Compile Include="Controllers\DSController.vb" />
     <Compile Include="Controllers\LCNController.vb" />
     <Compile Include="Controllers\LCN_STAFFController.vb" />
     <Compile Include="Controllers\LCN_STAFF_EDITController.vb" />
@@ -555,6 +557,7 @@
     <Content Include="Scripts_angular\CERT_GMP_CTRL.js" />
     <Content Include="Scripts_angular\DH_CTRL.js" />
     <Content Include="Scripts_angular\DH_STAFF_CTRL.js" />
+    <Content Include="Scripts_angular\DI_CTRL.js" />
     <Content Include="Scripts_angular\DL_CTRL.js" />
     <Content Include="Scripts_angular\DR_CTRL.js" />
     <Content Include="Scripts_angular\DR_STAFF_CTRL_.js" />
@@ -765,6 +768,14 @@
     <Content Include="Views\MASTER_DATA\FRM_STAFF_LOCATION_MANUAL_MAIN.vbhtml" />
     <Content Include="Views\MASTER_DATA\FRM_STAFF_LOCATION_MANUAL_INSERT.vbhtml" />
     <Content Include="Views\DR\FRM_RGT_SELECT.vbhtml" />
+    <Content Include="Views\DI\FRM_SEARCH_LCN_TO_DL.vbhtml" />
+    <Content Include="Views\DI\FRM_DRUG_IMPORT_NYM2.vbhtml" />
+    <Content Include="Views\DI\FRM_DRUG_IMPORT_NYM3.vbhtml" />
+    <Content Include="Views\DI\FRM_DRUG_IMPORT_NYM4.vbhtml" />
+    <Content Include="Views\DI\FRM_DRUG_IMPORT_NYM4_2.vbhtml" />
+    <Content Include="Views\DS\INPUT_DS_NORYOR8.vbhtml" />
+    <Content Include="Views\DS\INPUT_DS_PORYOR8.vbhtml" />
+    <Content Include="Views\LCN\FRM_EXTEND_LCN_ATTACH_PAGE.vbhtml" />
     <Content Include="Views\LCN\PREVIEW_EXTEND.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
@@ -2009,8 +2020,6 @@
     <Folder Include="Models\" />
     <Folder Include="PDF\" />
     <Folder Include="Scripts_angular\DR\" />
-    <Folder Include="Views\DI\" />
-    <Folder Include="Views\DS\" />
     <Folder Include="Views\LCN\EDIT\" />
     <Folder Include="Views\NCT\" />
     <Folder Include="Views\SV_CENTER\" />

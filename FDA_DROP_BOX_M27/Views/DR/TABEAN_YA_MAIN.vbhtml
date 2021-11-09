@@ -49,25 +49,25 @@ End Code
             <table class="table" width="100%" border="1">
                 <tr>
                     <td>ชื่อบริษัท</td>
-                    <td></td>
+                    <td>ทดสอบ จำกัด</td>
                     <td>เลขที่ใบอนุญาต</td>
-                    <td></td>
+                    <td>ผย1 กท 999/2563</td>
                 </tr>
                 <tr>
                     <td>ชื่อยา (ภาษาไหย)</td>
-                    <td></td>
+                    <td>พาราทดสอบ</td>
                     <td>ชื่อยา (ภาษาอังกฤษ)</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>หมวดยา</td>
-                    <td></td>
+                    <td>แก๊สทางการแพทย์</td>
                     <td>ชนิดยา</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>เลขที่ตำรับ</td>
-                    <td></td>
+                    <td>DL-64-01257</td>
                 </tr>
             </table>
             <br />
@@ -87,7 +87,7 @@ End Code
                         <td width="40%">ใบอนุญาตคำขออนุญาตผลิตยาตัวอย่างเพื่อขอขึ้นทะเบียนตำรับยา ({{lcnnoType}})</td>
 
                         <td align="right">
-                            <button class="btn btn-lg" ng-click="BTN_EDIT_INPUT()">สร้างคำขอ</button>
+                            <button class="btn btn-lg" ng-click="BTN_DS_INPUT()">สร้างคำขอ</button>
                         </td>
                     </tr>
                 </table>

@@ -2,7 +2,7 @@
 
 
 <div>
-    <H2 style="text-align: center;">ค้นหาเภสัชเคมีภัณฑ์</H2>
+    <H2 style="text-align: center;">ค้นหาการจดแจ้งเภสัชเคมีภัณฑ์</H2>
 </div>
 <br />
 @*<div class="row">
@@ -27,18 +27,25 @@
         <td style="width:12%">เลขดำเนินการ</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="TR_ID"></td>
     <tr>
-        <td style="width:12%">เลข DRM</td>
+        <td style="width:12%">เลขจดแจ้ง</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="DRM"></td>
         <td width="2%"></td>
         <td style="width:12%">ชื่อสาร</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="iowanm"></td>
+    </tr>
+    <tr>
+        <td style="width:12%">ผู้รับอนุญาต</td>
+        <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="thanm"></td>
+        <td width="2%"></td>
+        <td style="width:12%">ผู้ผลิตเภสัชเคมีภัณฑ์</td>
+        <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="frgn"></td>
     </tr>
 </table>
 <br />
 <table width="100%">
     <tr>
         <td colspan="6" align="center">
-            <input class="btn btn-lg" type="button" value="ค้นหา" ng-click="BTN_SEARCH_DH_STAFF(STATUS_ID,TR_ID, DRM, iowanm)" style="width:150px;height:40px;" />
+            <input class="btn btn-lg" type="button" value="ค้นหา" ng-click="BTN_SEARCH_DH_STAFF(STATUS_ID,TR_ID, DRM, iowanm,thanm,frgn)" style="width:150px;height:40px;" />
         </td>
     </tr>
 </table>
@@ -49,23 +56,28 @@
             <table style="margin-top:10px;width:100%;" class="table table-condensed">
                 <thead>
                     <tr>
-                        <th style="width:8%">เลข DRM</th>
+                        <th style="width:8%">รหัสการดำเนินการ</th>
+                        <th style="width:8%">วันที่ยื่นคำขอ</th>
+                        <th style="width:10%">เลขจดแจ้ง</th>
                         <th style="width:20%">ชื่อสาร</th>
-                        <th style="width:10%">เลขที่คำขอ</th>
-                        <th style="width:10%">วันที่ยื่นคำขอ</th>
+                        <th style="width:10%">ชื่อผู้ผลิตภค.</th>
+                        <th style="width:10%">ชื่อผู้รับฯ</th>
+                        <th style="width:5%">ประเภท</th>
                         <th style="width:5%">สถานะ</th>
-                        <th style="width:20%">รหัสการดำเนินการ</th>
+
                         <th style="width:5%"></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-repeat="data in LIST_DRM">
+                        <td>{{data.TR_ID}}</td>
+                        <td>{{data.rcvdate}}</td>
                         <td>{{data.phm15dgt}}</td>
                         <td>{{data.CAS_NAME}}</td>
-                        <td>{{data.rcvno}}</td>
-                        <td>{{data.rcvdate}}</td>
+                        <td>{{data.NAME_ADDRESS}}</td>
+                        <td>{{data.thanm}}</td>
+                        <td>{{data.CER_TYPE}}</td>
                         <td>{{data.STATUS_NAME}}</td>
-                        <td>{{data.TR_ID}}</td>
                         <td>
                             <span class="fa fa-eye"></span>
                             <a ng-click>

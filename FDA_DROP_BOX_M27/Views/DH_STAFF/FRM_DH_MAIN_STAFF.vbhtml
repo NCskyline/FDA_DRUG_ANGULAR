@@ -4,7 +4,7 @@
     <div style="font-family:'Taviraj';width:100%">
         <div>
             <div>
-                <h3>เภสัชเคมีภัณฑ์</h3>
+                <h3>จดแจ้งเภสัชเคมีภัณฑ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ (ภค.1)</h3>
             </div>
             <table style="width:100%">
                 <tr>
@@ -16,7 +16,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="width:5%">ชื่อการค้า	</td>
+                    <td style="width:5%">ชื่อสาร	</td>
                     <td style="width:10%"><input class="form-control inline" type="text"></td>
                 </tr>
                 <tr>
@@ -37,7 +37,7 @@
                                     <th style="width:13%">วันที่รับ</th>
                                     <th style="width:13%">วันที่ยื่นคำขอ</th>
                                     <th style="width:15%">สถานะ</th>
-                                    <th style="width:20%">ชื่อการค้า</th>
+                                    <th style="width:20%">ชื่อสาร</th>
                                     <th style="width:15%">รหัสดำเนินการ</th>
                                     <th style="width:11%"></th>
                                 </tr>
