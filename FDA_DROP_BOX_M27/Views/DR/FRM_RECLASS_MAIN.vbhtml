@@ -7,7 +7,7 @@ End Code
     <div>
         <table>
             <tr>
-                <td>ลขทะเบียน</td>
+                <td>เลขทะเบียน</td>
                 <td>{{RGTNO_DISPLAY}}</td>
             </tr>
             @*<tr>
@@ -52,13 +52,26 @@ End Code
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="datas in DATA_RECLASS | filter : filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                            @*<tr ng-repeat="datas in DATA_RECLASS | filter : filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
 
                                 <td>{{datas.TR_ID}}</td>
                                 <td>{{datas.RCVNO_DISPLAY}}</td>
                                 <td>{{datas.RGTNO_DISPLAY}}</td>
                                 <td>{{datas.DRUG_NAME}}</td>
                                 <td>{{datas.STATUS_NAME}}</td>
+                                <td>
+                                    <span class="fa fa-eye"></span>
+                                    <a ng-click="SELECT_RECLASS(datas)">
+                                        เลือก
+                                    </a>
+                                </td>
+                            </tr>*@
+                            <tr>
+                                <td>640009999</td>
+                                <td></td>
+                                <td>K 1/62 (NC)</td>
+                                <td>ทดสอบ4 /test4</td>
+                                <td>เจ้าหน้าที่ตรวจสอบเอกสาร</td>
                                 <td>
                                     <span class="fa fa-eye"></span>
                                     <a ng-click="SELECT_RECLASS(datas)">

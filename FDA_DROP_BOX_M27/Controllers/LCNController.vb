@@ -212,6 +212,9 @@ Namespace Controllers
         Function INPUT_F_D2_198_1_UPFILE_N() As ActionResult
             Return View()
         End Function
+        Function FRM_EXTEND_LCN_ATTACH_PAGE() As ActionResult
+            Return View()
+        End Function
 
     End Class
 
