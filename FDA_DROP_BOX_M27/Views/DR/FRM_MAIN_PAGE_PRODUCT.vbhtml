@@ -11,7 +11,7 @@ End Code
             <div class="part part-1-3 ic">
                 <ul class="listree">
                     <li>
-                        <div class="listree-submenu-heading">ก. โปรกเลือกประเภทยา</div>
+                        <div class="listree-submenu-heading"><b>ก. โปรกเลือกประเภทยา</b></div>
                         <ul class="listree-submenu-items" style="color:black">
                             <li>
                                 <a ng-click="BTN_MENU('130001')" style="color:#06B716">ยาแผนปัจจุบัน สำหรับมนุษย์</a>  @*ng-click="DATA_GMP('31')"*@
@@ -25,16 +25,26 @@ End Code
                         </ul>
                     </li>
                     <li>
-                        @*<div class="listree-submenu-heading">ข. เภสัชเคมีภัณฑ์</div>*@
-                        <ul class="listree-submenu-heading" style="color:black">
-                            <li>
-                                <a href="../DH/FRM_SELECT_LCN?PROCESS=14">ข. รายการ DRUG REVIEW</a>
-                            </li>
-                        </ul>
+                        <div class="listree-submenu-heading" style="color:black">
+                            <a href="../DH/FRM_SELECT_LCN?PROCESS=14">ข. รายการ DRUG REVIEW</a>
+                        </div>
                     </li>
                     <li>
-                        <div class="listree-submenu-heading">ช. นำเข้ายาเฉพาะครั้ง</div>
+                        <div class="listree-submenu-heading" style="color:black">
+                            <a ng-click="BTN_MENU('130099')" style="color:#06B716">ค. คำขอแก้ไขรายการในทะเบียนตำรับยา</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="listree-submenu-heading" style="color:black">
+                            <a ng-click="BTN_MENU('99')" style="color:#06B716">ง. คำขอใบแทนใบสำคัญการขึ้นทะเบียนตำรับยา</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="listree-submenu-heading"><b>ช. นำเข้ายาเฉพาะครั้ง</b></div>
                         <ul class="listree-submenu-items" style="color:black">
+                            <li>
+                                <a ng-click="BTN_MENU('1026')" style="color:#06B716">เพื่อการวิจัย (น.ย.ม.1)</a>  @*ng-click="DATA_GMP('31')"*@
+                            </li>
                             <li>
                                 <a ng-click="BTN_MENU('1027')" style="color:#06B716">เพื่อการวิเคราะห์ (น.ย.ม.2)</a>  @*ng-click="DATA_GMP('31')"*@
                             </li>
@@ -50,12 +60,9 @@ End Code
                         </ul>
                     </li>
                     <li>
-                        @*<div class="listree-submenu-heading">ข. เภสัชเคมีภัณฑ์</div>*@
-                        <ul class="listree-submenu-heading" style="color:black">
-                            <li>
-                                <a ng-click="BTN_MENU('DROPBOX')" style="color:#06B716">ฌ. ระบบยื่นคำขออย่างง่าย</a>
-                            </li>
-                        </ul>
+                        <div class="listree-submenu-heading">
+                            <a ng-click="BTN_MENU('DROPBOX')" style="color:#06B716">ฌ. ระบบยื่นคำขออย่างง่าย</a>
+                        </div>
                     </li>
                 </ul>
             </div>

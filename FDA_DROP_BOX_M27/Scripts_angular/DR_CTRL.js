@@ -18,6 +18,8 @@
         var process = sessionStorage.PROCESS_ID;
         if (process == 130001 || process == 130002 || process == 130004) {
             $scope.SUB_PATH = SET_URL_SV('/DL/DL_MAIN');
+        } else if (process == 130099) {
+            $scope.SUB_PATH = SET_URL_SV('/DR_EDIT_REQUEST/FRM_RGT_EDIT_MAIN');
         }
 
         if (process != undefined) {
@@ -119,6 +121,8 @@
 
         if (process == '130001' || process == '130002' || process == '13004') {
             REDIRECT('/DR/FRM_SEARCH_LCN?PROCESS=' + process);
+        } else if (process == '130099') {
+            REDIRECT('/DR/FRM_SEARCH_LCN?PROCESS=' + process);
         }
     };
 
@@ -156,8 +160,8 @@
         REDIRECT('/DR/FRM_DR_TRANSFER_DL');
     };
 
-    $scope.BTN_PREVIEW_EXTEND = function () {
-        REDIRECT('/DR/FRM_RGT_EDIT_CONFIRM');
+    $scope.BTN_PREVIEW_RGT_EDIT = function () {
+        REDIRECT('/DR_EDIT_REQUEST/FRM_RGT_EDIT_CONFIRM');
     };
 
 }).controller('appController', ['$scope', function ($scope) {
