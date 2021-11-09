@@ -1,5 +1,5 @@
 ﻿@Code
-    ViewData("Title") = "FRM_RGT_EDIT_MAIN"
+    Layout = ""
 End Code
 
 <div>
@@ -7,9 +7,9 @@ End Code
         <div>
             <table class="table" width="100%">
                 <tr>
-                    <td width="30%">คำขอแก้ไขเปลี่ยนแปลงทะเบียน > K 1/62 (NC)</td> @*{{register}}*@
-                    <td width="60%" align="center">
-                        <select style="width:40%;" class="form-control">
+                    <td width="40%">คำขอแก้ไขเปลี่ยนแปลงทะเบียน > K 1/62 (NC)</td> @*{{register}}*@
+                    <td width="50%" align="center">
+                        <select style="width:40%;font-family:'Taviraj'" class="form-control">
                             <option>นาย ณัฐสิทธิ์ อาจเมือง</option>
                             <option></option>
                         </select>
@@ -25,7 +25,8 @@ End Code
             <div class="col-sm-12" style="width:100%;">
                 <div class="card" style="border-top: 10px solid #F9D027;">
                     <table width="100%" class="table">
-                        <thead style="font-weight:300;">
+                        <thead style="        font-weight: 300;
+">
                             <tr>
                                 <td>เลขรับที่</td>
                                 <td>ทะเบียน</td>
@@ -51,7 +52,7 @@ End Code
                                 </td>
                                 <td>
                                     <span class="fa fa-eye"></span>
-                                    <a ng-click="BTN_PREVIEW_EXTEND()">
+                                    <a ng-click="BTN_PREVIEW_RGT_EDIT()">
                                         ดูข้อมูล
                                     </a>
                                 </td>

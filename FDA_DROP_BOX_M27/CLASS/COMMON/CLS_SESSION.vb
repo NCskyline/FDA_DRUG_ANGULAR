@@ -240,4 +240,14 @@
             _HEAD_LCN_IDA = value
         End Set
     End Property
+
+    Private _NEWCODE As String
+    Public Property NEWCODE() As String
+        Get
+            Return _NEWCODE
+        End Get
+        Set(ByVal value As String)
+            _NEWCODE = value
+        End Set
+    End Property
 End Class

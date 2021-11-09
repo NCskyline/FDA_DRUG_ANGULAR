@@ -182,6 +182,14 @@ Public Class BAO
         Return dt
     End Function
 
+    Public Function SP_REGISTER_SELECT(ByVal identify As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim dt As New DataTable
+        Dim sql As String = "exec SP_REGISTER_SELECT @identify= '" & identify & "'"
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_REGISTER_SELECT"
+        Return dt
+    End Function
     Public Function SP_CER_SEARCH() As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_CER_SEARCH"

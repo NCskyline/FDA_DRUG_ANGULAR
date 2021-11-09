@@ -231,6 +231,19 @@
         });
         return response;
     };
+
+    
+    this.SP_REGISTER_SELECT = function (identify) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_REGISTER_SELECT"),
+            params: {
+                identify: identify
+            }
+        });
+        return response;
+    };
+
     this.SP_STAFF_CERT_SEARCH = function (CER_FORMAT, FOREIGN_LOCATION_NAME, TR_ID) {
         var response = $http({
             method: "post",
