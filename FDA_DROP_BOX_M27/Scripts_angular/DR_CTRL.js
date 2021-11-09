@@ -18,6 +18,8 @@
         var process = sessionStorage.PROCESS_ID;
         if (process == 130001 || process == 130002 || process == 130004) {
             $scope.SUB_PATH = SET_URL_SV('/DL/DL_MAIN');
+        } else if (process =='140099') {
+            $scope.SUB_PATH = SET_URL_SV('/DR/FRM_RECLASS_MAIN');
         } else if (process == 130099) {
             $scope.SUB_PATH = SET_URL_SV('/DR_EDIT_REQUEST/FRM_RGT_EDIT_MAIN');
         }
@@ -96,6 +98,19 @@
         Getdata.then(function (datas) {
             $scope.LIST_LCN = datas.data;
         });
+
+        var data3 = CENTER_SV.SP_REGISTER_SELECT(CITIZEN);
+        data3.then(function (datas) {
+            $scope.DATA_RGT = datas.data;
+        }, function () { });
+
+        
+        var data3 = CENTER_SV.SP_RECLASS_BY_NEWCODE(sessionStorage.NEWCODE);
+        data3.then(function (datas) {
+            $scope.DATA_RECLASS = datas.data;
+        }, function () { });
+
+
         //var id = '@Html.IdFor( o => o.model )';
         //var dropdown = $("#" + id);
         //var vall = dropdown.val();
@@ -121,10 +136,15 @@
 
         if (process == '130001' || process == '130002' || process == '13004') {
             REDIRECT('/DR/FRM_SEARCH_LCN?PROCESS=' + process);
-        } else if (process == '130099') {
-            REDIRECT('/DR/FRM_SEARCH_LCN?PROCESS=' + process);
         }
     };
+
+    
+    //$scope.pageload_sel = function () {
+       
+    
+    //};
+
 
     $scope.SELECT_LCN = function (datas) {
 
@@ -134,6 +154,13 @@
         REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
 
     };
+    $scope.SELECT_REGIST = function (datas) {
+
+        sessionStorage.NEWCODE = datas.newcode;
+        REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
+
+    };
+
 
     $scope.BTN_DL = function (process) {
         sessionStorage.PROCESS = process;
@@ -150,6 +177,10 @@
 
     $scope.BTN_INPUT = function (data) {
         REDIRECT('/DR/INPUT_YOR_1');
+    };
+    
+    $scope.BTN_INPUT_RECLASS = function () {
+        REDIRECT('/DR/INPUT_RECLASS');
     };
 
     $scope.BTN_PREVIEW = function () {

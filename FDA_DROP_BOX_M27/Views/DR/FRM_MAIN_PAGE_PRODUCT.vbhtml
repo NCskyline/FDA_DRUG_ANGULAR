@@ -64,6 +64,15 @@ End Code
                             <a ng-click="BTN_MENU('DROPBOX')" style="color:#06B716">ฌ. ระบบยื่นคำขออย่างง่าย</a>
                         </div>
                     </li>
+                    <li>
+                        <div class="listree-submenu-heading">ญ. คำขอเปลี่ยนประเภทยา</div>
+                        <ul class="listree-submenu-items" style="color:black">
+                            <li>
+                                <a ng-click="BTN_MENU('140099')" style="color:#06B716">คำขอเปลี่ยนประเภทยาแผนปัจจุบันสำหรับมนุษย์</a>
+                            </li>
+                        </ul>
+                    </li>
+
                 </ul>
             </div>
             <div class="part part-2-3 ic">

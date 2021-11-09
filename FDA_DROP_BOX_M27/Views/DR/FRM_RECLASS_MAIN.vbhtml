@@ -3,27 +3,27 @@
 End Code
 
 <div style="font-family:'Taviraj';width:100%">
-    <div><h3 style="color:red">{{HEADER}}</h3></div>
+    <div><h3 style="color:red"> คำขอเปลี่ยนประเภทยาแผนปัจจุบันสำหรับมนุษย์</h3></div>
     <div>
-        @*<table>
+        <table>
             <tr>
-                <td>เลขที่ใบอนุญาต (License Number)</td>
-                <td>{{LCNNO_NO}}</td>
+                <td>ลขทะเบียน</td>
+                <td>{{RGTNO_DISPLAY}}</td>
             </tr>
-            <tr>
+            @*<tr>
                 <td>ชื่อผู้รับอนุญาต (License Name)</td>
                 <td>{{nameOperator}}</td>
             </tr>
             <tr>
                 <td>ชื่อสถานที่ (Establishment Name)</td>
                 <td>{{thanameplace}}</td>
-            </tr>
+            </tr>*@
         </table>
-        <hr />*@
+        <hr />
         <table style="width:100%">
             <tr>
                 <td style="width:100%"><input style="width:60%" class="form-control" placeholder="ค้นหา..." ng-model="filter" /></td>
-                <td align="right"><button class="btn btn-lg" ng-click="INPUT_RECLASS()">สร้างคำขอ</button></td>
+                <td align="right"><button class="btn btn-lg" ng-click="BTN_INPUT_RECLASS()">สร้างคำขอ</button></td>
             </tr>
         </table>
         <br />
