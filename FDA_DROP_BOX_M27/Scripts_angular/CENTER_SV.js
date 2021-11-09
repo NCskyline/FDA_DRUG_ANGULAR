@@ -195,7 +195,7 @@
         return response;
     };
     
-    this.SP_STAFF_DH15RQT_SEARCH = function (STATUS_ID, TR_ID, DRM, CAS_NAME) {
+    this.SP_STAFF_DH15RQT_SEARCH = function (STATUS_ID, TR_ID, DRM, CAS_NAME, thanm, frgn) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/SP_STAFF_DH15RQT_SEARCH"),
@@ -203,7 +203,9 @@
                 STATUS_ID: STATUS_ID,
                 TR_ID: TR_ID,
                 DRM: DRM,
-                CAS_NAME: CAS_NAME
+                CAS_NAME: CAS_NAME,
+                thanm: thanm, 
+                frgn: frgn
             }
         });
         return response;
@@ -244,14 +246,15 @@
         return response;
     };
 
-    this.SP_STAFF_CERT_SEARCH = function (CER_FORMAT, FOREIGN_LOCATION_NAME, TR_ID) {
+    this.SP_STAFF_CERT_SEARCH = function (CER_FORMAT, FOREIGN_LOCATION_NAME, TR_ID, thanm) {
         var response = $http({
             method: "post",
             url: SET_URL_SV("/SV_CENTER/SP_STAFF_CERT_SEARCH"),
             params: {
                 CER_FORMAT: CER_FORMAT,
                 FOREIGN_LOCATION_NAME: FOREIGN_LOCATION_NAME,
-                TR_ID: TR_ID
+                TR_ID: TR_ID,
+                thanm: thanm
             }
         });
         return response;

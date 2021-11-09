@@ -324,8 +324,8 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
     };
 
     
-    $scope.BTN_SEARCH_DH_STAFF = function (STATUS_ID, TR_ID, DRM, CAS_NAME) {
-        var getdata = CENTER_SV.SP_STAFF_DH15RQT_SEARCH(STATUS_ID, TR_ID, DRM, CAS_NAME);
+    $scope.BTN_SEARCH_DH_STAFF = function (STATUS_ID, TR_ID, DRM, CAS_NAME, thanm, frgn) {
+        var getdata = CENTER_SV.SP_STAFF_DH15RQT_SEARCH(STATUS_ID, TR_ID, DRM, CAS_NAME, thanm, frgn);
         getdata.then(function (datas) {
             $scope.LIST_DRM = datas.data;
         });
@@ -339,8 +339,8 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
     };
     
 
-    $scope.BTN_SEARCH_CERT_STAFF = function (CER_FORMAT, FOREIGN_LOCATION_NAME, TR_ID) {
-        var getdata = CENTER_SV.SP_STAFF_CERT_SEARCH(CER_FORMAT, FOREIGN_LOCATION_NAME, TR_ID);
+    $scope.BTN_SEARCH_CERT_STAFF = function (CER_FORMAT, FOREIGN_LOCATION_NAME, TR_ID, thanm) {
+        var getdata = CENTER_SV.SP_STAFF_CERT_SEARCH(CER_FORMAT, FOREIGN_LOCATION_NAME, TR_ID, thanm);
         getdata.then(function (datas) {
             $scope.LIST_CERT = datas.data;
         });
