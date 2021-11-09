@@ -18,7 +18,7 @@
         var process = sessionStorage.PROCESS_ID;
         if (process == 130001 || process == 130002 || process == 130004) {
             $scope.SUB_PATH = SET_URL_SV('/DL/DL_MAIN');
-        } else if (process =='140099') {
+        } else if (process == 140099) {
             $scope.SUB_PATH = SET_URL_SV('/DR/FRM_RECLASS_MAIN');
         } else if (process == 130099) {
             $scope.SUB_PATH = SET_URL_SV('/DR_EDIT_REQUEST/FRM_RGT_EDIT_MAIN');
