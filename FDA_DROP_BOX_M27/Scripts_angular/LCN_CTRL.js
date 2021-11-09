@@ -7,11 +7,11 @@
     $scope.COLLECT_KEEP = [];
     $scope.COLLECT_PHR = [];
     $scope.PDF = [];
-    //var LCN_IDA = 70911;//sessionStorage.LCN_IDA;
+    var LCN_IDA = 70911;//sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;  //
     var PROCESS = sessionStorage.PROCESS; //QueryString("PROCESS");
     //var CITIZEN = '0105527028430';//'0105527028430';0000000000000
-    //var BSN_IDENTIFY = "1710500118665";
+    var BSN_IDENTIFY = "1710500118665";
     var IDENTIFY = sessionStorage.CITIZEN_ID_AUTHORIZE; //"0000000000000";
     //var IDENTIFY = '0000000000000';
     var HEAD_LCN_IDA = sessionStorage.HEAD_LCN_IDA;
@@ -1070,23 +1070,23 @@
         }, function () { });
 
     };
-    $scope.getdetails_phr = function () {
-        var data_phr = CENTER_SV.GET_LCN_SUBTITUTE_INPUT(BSN_IDENTIFY, LCN_IDA);
-        data_phr.then(function (datas) {
+    //$scope.getdetails_phr = function () {
+    //    var data_phr = CENTER_SV.GET_LCN_SUBTITUTE_INPUT(BSN_IDENTIFY, LCN_IDA);
+    //    data_phr.then(function (datas) {
 
-            $scope.LIST_PHR = datas.data;
-        }, function () { });
+    //        $scope.LIST_PHR = datas.data;
+    //    }, function () { });
 
-    };
+    //};
     
-    $scope.getdetails_keep = function () {
-        var data_phr = CENTER_SV.GET_LCN_SUBTITUTE_INPUT(BSN_IDENTIFY, LCN_IDA);
-        data_phr.then(function (datas) {
+    //$scope.getdetails_keep = function () {
+    //    var data_phr = CENTER_SV.GET_LCN_SUBTITUTE_INPUT(BSN_IDENTIFY, LCN_IDA);
+    //    data_phr.then(function (datas) {
 
-            $scope.LIST_KEEP = datas.data;
-        }, function () { });
+    //        $scope.LIST_KEEP = datas.data;
+    //    }, function () { });
 
-    };
+    //};
 
     $scope.BTN_Search_BSN = function (BSN_IDENTIFY) {
 
@@ -1154,8 +1154,14 @@
     $scope.BTN_SUBTITUTE_PREVIEW = function (data) {
         sessionStorage.LCN_IDA = data.IDA;
         sessionStorage.LCT_IDA = data.LCT_IDA;
-        sessionStorage.PROCESS = data.PROCESS_ID;
+       // sessionStorage.PROCESS = data.PROCESS_ID;
         REDIRECT('/LCN/PREVIEW_SUBTITUTE_LCN');
+    };
+
+    $scope.BTN_PREVIEW_EXTEND = function (data) {
+        sessionStorage.LCN_IDA = data.IDA;
+        sessionStorage.PROCESS_ID = data.PROCESS_ID;
+        REDIRECT('/LCN/PREVIEW_EXTEND');
     };
 
     $scope.BTN_SAVE_LCN_INPUT = function () {

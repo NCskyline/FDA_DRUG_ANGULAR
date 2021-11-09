@@ -68,7 +68,7 @@ End Code
                                 <td>{{data.expyear}}</td>
                                 <td>
                                     <span class="fa fa-eye"></span>
-                                    <a ng-click="BTN_PREVIEW(data)">
+                                    <a ng-click="BTN_PREVIEW_EXTEND(data)">
                                         ดูข้อมูล
                                     </a>
                                 </td>
