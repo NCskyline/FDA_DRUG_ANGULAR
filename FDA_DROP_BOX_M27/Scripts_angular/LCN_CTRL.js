@@ -249,9 +249,9 @@
         var dataLo1 = CENTER_SV.SP_LCN_BY_PROCESS_AND_IDEN(process, sessionStorage.CITIZEN_ID_AUTHORIZE);
         dataLo1.then(function (datas) {
                 $scope.DATA_LCN_LIST = datas.data;
-                if (process >= 123) {
-                        sessionStorage.LCT_IDA = datas.data[0].LCT_IDA;
-                }
+               // if (process >= 123) {
+                 //       sessionStorage.LCT_IDA = datas.data[0].LCT_IDA;
+               // }
 
                
         }, function () { });
@@ -1147,8 +1147,8 @@
     $scope.BTN_EDIT_PREVIEW = function (data) {
         sessionStorage.LCN_IDA = data.IDA;
         sessionStorage.LCT_IDA = data.LCT_IDA;
-        sessionStorage.PROCESS = data.PROCESS_ID;
-        REDIRECT('/LCN/PREVIEW_INPUT_LCN');
+        //sessionStorage.PROCESS = data.PROCESS_ID;
+        REDIRECT('/LCN/PREVIEW_EDIT_LCN');
     };
 
     $scope.BTN_SUBTITUTE_PREVIEW = function (data) {

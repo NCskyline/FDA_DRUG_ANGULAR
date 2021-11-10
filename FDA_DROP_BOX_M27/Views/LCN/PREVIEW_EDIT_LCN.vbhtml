@@ -53,7 +53,7 @@
 </style>
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()">
-    <div ng-show="LIST_GMP.DALCN_EDIT_REQUEST.PROCESS_ID == '11105'">
+    <div ng-show="LIST_LCN.PROCESS == '11105'">
         <div style="font-family:'Taviraj';font-size:24px;">
             <div>
                 <p style="text-align: right;">แบบ ข.ย.๑๗</p>
@@ -234,7 +234,7 @@
         </div>
     </div>
 
-    <div ng-show="LIST_GMP.DALCN_EDIT_REQUEST.PROCESS_ID == '11106'">
+    <div ng-show="LIST_LCN.PROCESS == '11106'">
         <div style="font-family:'Taviraj';font-size:24px;">
             <div>
                 <p style="text-align: right;">แบบ ผ.ย.๑๒</p>
@@ -363,7 +363,7 @@
         </div>
     </div>
 
-    <div ng-show="LIST_GMP.DALCN_EDIT_REQUEST.PROCESS_ID == '11107'">
+    <div ng-show="LIST_LCN.PROCESS == '11107'">
         <div style="font-family:'Taviraj';font-size:24px;">
             <div>
                 <p style="text-align: right;">แบบ น.ย.๑๑</p>
@@ -497,7 +497,7 @@
         </div>
     </div>
 
-    <div ng-show="LIST_GMP.DALCN_EDIT_REQUEST.PROCESS_ID == '11108'">
+    <div ng-show="LIST_LCN.PROCESS == '11108'">
         <div style="font-family:'Taviraj';font-size:24px;">
             <div>
                 <p style="text-align: right;">แบบ ย.บ.๑๖</p>
@@ -657,7 +657,7 @@
         </div>
     </div>
 
-    <div ng-show="LIST_GMP.DALCN_EDIT_REQUEST.PROCESS_ID == '11109'">
+    <div ng-show="LIST_LCN.PROCESS == '11109'">
         <div style="font-family:'Taviraj';font-size:15px;">
             <div>
                 <h1 style="text-align:center;">
