@@ -117,8 +117,6 @@ End Code
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.TRADING_NAME" style="font-family:'Taviraj';font-size:20px;width:1210px;" type="text" />
             </td>
         </tr>
-    </table>
-    <table>
         <tr>
             <td>
                 มาตรฐานตามตำรับยา (Phamacopoeia Standard of Drug Substance)
@@ -128,8 +126,6 @@ End Code
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'Taviraj';font-size:20px;width:850px;" type="text" />
             </td>
         </tr>
-    </table>
-    <table>
         <tr>
             <td>
                 จำนวนภาชนะบรรจุ (ต.ย. 2 ถุง) <br />
@@ -141,6 +137,7 @@ End Code
             </td>
         </tr>
     </table>
+    <br />
     <table>
         <tr>
             <td>
@@ -171,10 +168,10 @@ End Code
                         <tr>
                             <td>
                                 <span style="padding-left:2em;"><input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="3"></span>
-                                อื่น ๆ (ระบุ)<span style="padding-left:1em;"></span>
+                                อื่น ๆ (ระบุ)<font color="red">*</font>
                             </td>
                             <td>
-                                <input class="form-control inline" style="font-family:'Taviraj';font-size:20px;width:1300px;" type="text" />
+                                <input class="form-control inline" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
                             </td>
                         </tr>
                        
@@ -216,11 +213,13 @@ End Code
                     <table>
                         <tr>
                             <td>
-                                <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH6" value="1"></span>
-                                อื่น ๆ (ระบุ)<span style="padding-left:1em;"></span>
+                                <label>
+                                    <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH6" value="1"></span>
+                                    อื่น ๆ (ระบุ)<font color="red">*</font>
+                                </label>   
                             </td>
                             <td>
-                                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.OTHER_ATTACH" style="font-family:'Taviraj';font-size:20px;width:1300px;" type="text" />
+                                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.OTHER_ATTACH" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
                             </td>
                         </tr>
                     </table>
@@ -228,5 +227,5 @@ End Code
             </td>
         </tr>
     </table>
-    <div style="color:red">*ภค.1 หมายถึง การนำเข้าสาร / ครั้ง ตามจำนวนที่ระบุหรือปริมาณรวม (นำเข้าหลายครั้ง) แต่ไม่เกินปริมาณที่ขอ</div>
+    <div style="color:red">*ภค.1 หมายถึง การนำเข้าสาร ตามจำนวนที่ระบุหรือปริมาณรวม (นำเข้าหลายครั้ง) แต่ไม่เกินปริมาณที่ขอ</div>
 </div>

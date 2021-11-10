@@ -97,7 +97,7 @@ End Code*@
         <tr>
             <td align="center">
                 <form name="myForm">
-                    ซึ่ง <font color="red">*</font>
+                    ซึ่ง<font color="red">*</font>
                     <label>&nbsp;</label>
                     <label>
                         <input type="radio" ng-model="LIST_DH.dh15rqt.CHK_TYPE_CHEMICAL" value="1">
@@ -136,7 +136,7 @@ End Code*@
                 <thead>
                     <tr>
                         <th>ชื่อสาร</th>
-                        <th>A or I</th>
+                        <th>A</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -210,7 +210,7 @@ End Code*@
                <thead>
                    <tr>
                        <th>ชื่อสาร</th>
-                       <th>A or I</th>
+                       <th>A</th>
                        <th></th>
                    </tr>
                </thead>

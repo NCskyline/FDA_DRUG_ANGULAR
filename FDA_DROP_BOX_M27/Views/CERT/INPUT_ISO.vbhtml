@@ -14,10 +14,10 @@ End Code
 
 <div class="ic">
     <h2 style="font-family:'Taviraj';font-size:24px;">
-        รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์
+        <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
     </h2>
     <h2 style="font-family:'Taviraj';font-size:24px;">
-        <b> (Information of Certificate of Drug Substance Manufacturer)</b>
+        <b>(Information of Certificate of Drug Substance Manufacturer)</b>
     </h2>
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
@@ -98,7 +98,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                <span style="padding-left:1em">วันที่หมดอายุใบรับรอง ISO (Expiry Date / Valid Until)</span>
+                <span style="padding-left:1em">วันที่หมดอายุใบรับรอง ISO (Expiry Date / Valid Until)<font color="red">*</font></span>
             </td>
             <td>
                 <md-datepicker ng-model="LIST_GMP.CER.EXP_DOCUMENT_DATE" md-placeholder="Enter date"
@@ -136,7 +136,7 @@ End Code
     </table>
     <br />
     <h2 style="font-family:'Taviraj';font-size:24px;">
-        <b> รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification) </b>
+        <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
     </h2>
     <table width="100%">
         <tr>
