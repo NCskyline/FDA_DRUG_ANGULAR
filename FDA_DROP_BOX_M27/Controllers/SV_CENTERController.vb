@@ -1132,6 +1132,7 @@ Namespace Controllers
                     End Try
 
                     model.HEAD_LCNNO_NCT = lcnno_format
+                    model.dalcn = dao_main.fields
 
                     Dim dao_phr As New DAO_DRUG.ClsDBDALCN_PHR
                     dao_phr.GetDataby_FK_IDA(HEAD_LCN_IDA)

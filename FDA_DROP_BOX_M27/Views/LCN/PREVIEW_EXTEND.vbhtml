@@ -1,6 +1,12 @@
-﻿
-@Code ViewData("Title") = "INPUT_DRUG_PORYOR9" End Code
-<div class="ic" ng-app="" ng-controller="">
+﻿@Code
+    ViewData("Title") = "PREVIEW_EXTEND"
+End Code
+
+<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
+<script src="~/Scripts_angular/CENTER_SV.js"></script>
+<script src="~/Scripts_angular/LCN_CTRL.js"></script>
+
+<div class="ic" ng-app="" ng-controller="LCN_CTRL">
     <div style="font-family:'Taviraj';font-size:20px;">
         <div>
             <p style="text-align: right;">แบบ ผ.ย.๙</p>
@@ -38,23 +44,20 @@
                 <td style="text-align:right;width:90%">
                     เขียนที่
                 </td>
-                <td style="width:40%">
-                    <input class="form-control inline" ng-model="LIST_LCN.LCN_EXTEND_LITE.WRITE_AT" style="font-family:'Taviraj';" type="text" />
+                <td style="width:40%;border-bottom:dotted;border-bottom-width:thin;">
+
+                    {{LIST_LCN.LCN_EXTEND_LITE.WRITE_AT}}
                 </td>
             </tr>
             <tr>
                 <td style="text-align:right;width:100px">
                     วันที่
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin;">
 
-                    <md-datepicker ng-model="LIST_LCN.LCN_EXTEND_LITE.WRITE_DATE" md-placeholder="Enter date"
-                                   input-aria-describedby="datepicker-description"
-                                   input-aria-labelledby="datepicker-header ">
-                    </md-datepicker>
+                    {{LIST_LCN.LCN_EXTEND_LITE.WRITE_DATE}}
                 </td>
             </tr>
-
         </table>
         <br />
         <table style="width:100%">
