@@ -6,8 +6,8 @@ End Code
     <script src="~/Scripts_angular/CENTER_SV.js"></script>
     <script src="~/Scripts_angular/DR_CTRL.js"></script>
 
-<div class="ic" ng-app="" ng-controller="">
-    <div style="font-family:'Taviraj';width:100%">
+<div  ng-app="" ng-controller="">
+    <div class="ic" style="font-family:'Taviraj';width:100%">
         <div>
             <p style="text-align: right;">แบบ ย.1</p>
             <p style="text-align: right;">FORM MA-1</p>
@@ -55,7 +55,7 @@ End Code
                 <td style="width:30%"></td>
             </tr>
             <tr>
-                <div><h4>๑.รายละเอียดของผู้ยื่นคำขอและผู้ผลิต</h4></div>
+                <h4>๑.รายละเอียดของผู้ยื่นคำขอและผู้ผลิต</h4>
             </tr>
         </table>
         <div> &nbsp; &nbsp; &nbsp;๑.๑ ชื่อและที่อยู่ของผู้ยื่นคำขอ (ผู้รับอนุญาตผลิต ผู้รับอนุญาตนำหรือสั่งยาเข้ามาในราชอาณาจักร)</div>
@@ -185,25 +185,46 @@ End Code
         </tr>
         <div>&nbsp; &nbsp; &nbsp;๒.๓ ชื่อและปริมาณของตัวยาสำำคัญและส่วนประกอบในตำรับยา</div>
 
+        <table style="width:100%">
+            <tr>
+                <td style="width:5%">Each</td>
+                <td style="width:10%;text-align:center"></td>
+                <td style="width:10%;text-align:center"></td>
+                <td style="width:75%;text-align:start">Contains</td>
+            </tr>
+        </table>
         <table style="width:100%" border="1">
             <tr>
-                <td style="width:35%;text-align:center">ชื่อสามัญ/ชื่อวัตถุ :</td>
-                <td style="width:30%;text-align:center">เอกสารอ้างอิง</td>
-                <td style="width:35%;text-align:center">ปริมาณต่อหน่วย</td>
+                <td style="width:5%;text-align:center">ลำดับ</td>
+                <td style="width:30%;text-align:center">ชื่อสามัญ/ชื่อวัตถุ</td>
+                <td style="width:10%;text-align:center">ปริมาณ</td>
+                <td style="width:5%;text-align:center">หน่วย</td>
+                <td style="width:3%;text-align:center">ประเภท</td>
+                <td style="width:20%;text-align:center">เอกสารอ้างอิง</td>
+                <td style="width:27%;text-align:center">หมายเหตุ</td>
             </tr>
             <tr>
-                <td style="width:35%;text-align:start">ตัวยาสำคัญ : (ดูรายละเอียดแนบท้าย)</td>
-                <td style="width:30%;text-align:center"></td>
-                <td style="width:35%;text-align:center"></td>
-            </tr>
-            <tr>
-                <td style="width:35%;text-align:start">ส่วนประกอบ : (ดูรายละเอียดแนบท้าย)</td>
-                <td style="width:30%;text-align:center"></td>
-                <td style="width:35%;text-align:center"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
         </table>
         <br />
-        <div><h4>๓.ยาตัวอย่าง</h4></div>
+        <div>
+            &nbsp; &nbsp; &nbsp;๒.๔ รายการขนาดบรรจุที่แนบท้ายคำขอ
+        </div>
+        <table style="width:100%">
+            <tr>
+                <td style="width:100%;text-align:center"></td>
+            </tr>
+        </table>
+
+        <br />
+        @*<div><h4>๓.ยาตัวอย่าง</h4></div>
         <div><h4>๔.หลักฐานแสดงข้อมูลด้านวิชาการของตำรับยา</h4></div>
         <div> &nbsp; &nbsp; &nbsp;๔.๑ เอกสารด้านคุณภาพ</div>
         <div> &nbsp; &nbsp; &nbsp;๔.๒ เอกสารด้านความปลอดภับ</div>
@@ -215,7 +236,7 @@ End Code
         <div><h4>&nbsp; &nbsp; &nbsp;ทะเบียนสิทธิภูมิปัญญาการแพทย์แผนไทยส่วนบุคคลภูมิปัญญาที่เป็นตำรับยาแผนไทยทั่วไปหรือตำราการแพทย์แผนไทย</h4></div>
         <div><h4>&nbsp; &nbsp; &nbsp;ทั่วไป หรือการได้รับอนุญาตให้ใช้ประโยชน์จากตำรับยาแผนไทยของชาติ หรือตำราการแพทย์แผนไทยของชาติตาม</h4></div>
         <div><h4>&nbsp; &nbsp; &nbsp;กฏหมายว่าด้วยการคุ้มครองและส่งเสริมภูมิปัญญาการแพทย์แผนไทย (ถ้ามี)</h4></div>
-        <div><h4>๘. หลักฐานอื่น ๆ ตามที่สำนักงานคณะกรรมการอาหารและยากำหนด</h4></div>
+        <div><h4>๘. หลักฐานอื่น ๆ ตามที่สำนักงานคณะกรรมการอาหารและยากำหนด</h4></div>*@
         <table style="width:100%">
             <tr>
                 <td style="width:50%;text-align:center"></td>
@@ -238,44 +259,11 @@ End Code
         <div>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(๓) กรณีเป็นทะเบียนตำรับยาที่นำหรือสั่งเข้ามาในราชอาณาจักรผู้ยื่นคำขอตามข้อ ๑.๑ ต้องเป็นผู้รับอนุญาตนำหรือสั่งยาเข้ามาในราชอาณาจักรเท่านั้น</div>
         <div>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(๔) ชื่อของผู้ผลิตตามข้อ ๑.๑ - ๑.๔ ในบางกรณีอาจหมายความรวมถึงชื่อสถานที่ผลิตด้วยก็ได้</div>
         <br />
-        <div style="text-align:center"><h3>รายละเอียดสูตรตำรับที่แนบท้ายคำขอ</h3></div>
-        <table style="width:100%">
-            <tr>
-                <td style="width:5%">Each</td>
-                <td style="width:10%;text-align:center"></td>
-                <td style="width:10%;text-align:center"></td>
-                <td style="width:75%;text-align:start">Contains</td>
-            </tr>
-        </table>
-        <table style="width:100%" border="1">
-            <tr>
-                <td style="width:5%;text-align:center">ลำดับ</td>
-                <td style="width:30%;text-align:center">ชื่อสามัญ/ชื่อวัตถุ</td>
-                <td style="width:10%;text-align:center">ปริมาณ</td>
-                <td style="width:5%;text-align:center">หน่วย</td>
-                <td style="width:3%;text-align:center">ประเภท</td>
-                <td style="width:20%;text-align:center">เอกสารอ้างอิง</td>
-                <td style="width:27%;text-align:center">หมายเหตุ</td>
-            </tr>
-        </table>
-        <table style="width:100%" border="1">
-            <tr>
-                <td style="width:5%;text-align:center"></td>
-                <td style="width:30%;text-align:start"></td>
-                <td style="width:10%;text-align:center"></td>
-                <td style="width:5%;text-align:center"></td>
-                <td style="width:3%;text-align:start"></td>
-                <td style="width:20%;text-align:start"></td>
-            </tr>
-        </table>
-        <br />
-        <hr />
-        <div style="text-align:center"><h4>รายการขนาดบรรจุที่แนบท้ายคำขอ</h4></div>
-        <table style="width:100%" border="1">
-            <tr>
-                <td style="width:100%;text-align:center"></td>
-            </tr>
-        </table>
+        @*<div style="text-align:center"><h3>รายละเอียดสูตรตำรับที่แนบท้ายคำขอ</h3></div>*@
+    </div>
+    <div class="in">
+        <div>
 
+        </div>
     </div>
 </div>

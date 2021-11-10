@@ -1383,6 +1383,10 @@
         }
     };
 
+    $scope.BTN_FILE = function () {
+        REDIRECT('/LCN/FRM_EXTEND_LCN_ATTACH_PAGE');
+    };
+
     $scope.BTN_BACK = function () {
         REDIRECT('/LCN/FRM_LCN_NEWS');
     };

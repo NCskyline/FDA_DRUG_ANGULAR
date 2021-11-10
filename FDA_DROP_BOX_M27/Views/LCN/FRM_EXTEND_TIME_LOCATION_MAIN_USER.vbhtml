@@ -72,6 +72,12 @@ End Code
                                         ดูข้อมูล
                                     </a>
                                 </td>
+                                <td>
+                                    <span class="fa fa-pager"></span>
+                                    <a ng-click="BTN_FILE(data)">
+                                        พิมพ์ใบปะหน้า
+                                    </a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
