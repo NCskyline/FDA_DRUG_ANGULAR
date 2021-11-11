@@ -94,7 +94,7 @@ End Code
                 <br />
                 <div class="row">
                     <div class="col-sm-12" style="width:100%;">
-                        <div class="card" style=" border-top: 10px solid #277210;">
+                        <div class="card" style=" border-top: 10px solid #F9D027;">
                             <table width="100%" style="font-family:'Taviraj'" class="table">
                                 <thead style="font-weight:300;">
                                     <tr>
@@ -147,7 +147,7 @@ End Code
                 <h3 style="color:red">คำขอขึ้นทะเบียน</h3>
                 <div class="row">
                     <div class="col-sm-12" style="width:100%;">
-                        <div class="card" style=" border-top: 10px solid #277210;">
+                        <div class="card" style=" border-top: 10px solid #F9D027;">
                             <table width="100%" style="font-family:'Taviraj'" class="table">
                                 <thead style="font-weight:300;">
                                     <tr>
@@ -191,7 +191,7 @@ End Code
                 <h3 style="color:red">ทะเบียนตำรับ</h3>
                 <div class="row">
                     <div class="col-sm-12" style="width:100%;">
-                        <div class="card" style=" border-top: 10px solid #277210;">
+                        <div class="card" style=" border-top: 10px solid #F9D027;">
                             <table width="100%" style="font-family:'Taviraj'" class="table">
                                 <thead style="font-weight:300;">
                                     <tr>

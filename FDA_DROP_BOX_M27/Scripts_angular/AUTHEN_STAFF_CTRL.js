@@ -276,7 +276,7 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
     };
 
     $scope.SELECT_STAFF_LCN = function (data) {
-        sessionStorage.LCT_IDA = data.LCT_IDA;
+        sessionStorage.LCT_IDA = data.la_IDA;
         sessionStorage.LCN_IDA = data.IDA;
         sessionStorage.PROCESS = data.PROCESS_ID;
         REDIRECT('/LCN_STAFF/PREVIEW_LCN_STAFF');

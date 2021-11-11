@@ -12,13 +12,10 @@ End Code
             <td width="20%">ประเภท :</td>
             <td>
                 <select class="form-control">
-                    <option>Referred</option>
+                    <option>Referred</option> 
                     <option>Transferred</option>
                     <option>Copy</option>
                     <option>ปลด SMP</option>
-                    <option>การขออนุมัติโครงร่างการศึกษาความเท่าเทียมกันทางผลการรักษา (Therapeutic equivalence protocol)</option>
-                    <option>การขออนุมัติรายงานการยกเว้นการศึกษาชีวสมมูลในมนุษย์แบบ BCS Class I และ Dose Proportionality</option>
-                    <option>การขออนุมัติรายงานการศึกษาชีวสมมูล (Bioequivalence report)</option>
                 </select>
             </td>
             <td></td>
