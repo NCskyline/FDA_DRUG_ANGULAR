@@ -10,10 +10,10 @@ End Code
 
 <div class="ic" > @*ng-repeat="datas in LIST_GMP"*@
     <h2 style="font-family:'Taviraj';font-size:24px;">
-        <b> รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
+        <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
     </h2>
     <h2 style="font-family:'Taviraj';font-size:24px;">
-        <b> (Information of Certificate of Drug Substance Manufacturer)</b>
+        <b>(Information of Certificate of Drug Substance Manufacturer)</b>
     </h2>
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
@@ -66,7 +66,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                6. ประเทศ (Country<font color="red">*</font>
+                6. ประเทศ (Country)<font color="red">*</font>
             </td>
             <td>
                 <select style="font-family:'Taviraj';font-size:20px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_GMP.CER.COUNTRY_ID">
@@ -116,7 +116,7 @@ End Code
                     หน่วยงานรัฐที่ออกใบรับรอง (Government Certification Agency)
                 </span>
             </td>
-            <td rowspan="2" ;">
+            <td rowspan="2">
                 <input class="form-control inline" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME" style="font-family:'Taviraj';font-size:20px;height:100px;" type="text" />
             </td>
         </tr>
@@ -172,7 +172,7 @@ End Code
     </table>
     <br />
     <h2 style="font-family:'Taviraj';font-size:24px;">
-        <b> รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification) </b>
+        <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
     </h2>
     <table width="100%">
         <tr>

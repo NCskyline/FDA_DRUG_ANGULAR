@@ -12,10 +12,10 @@ End Code
 
 <div class="ic">
     <h2 style="font-family:'Taviraj';font-size:24px;">
-        <b> รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
+        <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
     </h2>
     <h2 style="font-family:'Taviraj';font-size:24px;">
-        <b> (Information of Certificate of Drug Substance Manufacturer)</b>
+        <b>(Information of Certificate of Drug Substance Manufacturer)</b>
     </h2>
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
@@ -134,7 +134,7 @@ End Code
     </table>
     <br />
     <h2 style="font-family:'Taviraj';font-size:24px;">
-        <b> รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification) </b>
+        <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
     </h2>
     <table width="100%">
         <tr>

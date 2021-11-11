@@ -76,8 +76,6 @@ End Code
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.TRADING_NAME" style="font-family:'Taviraj';font-size:20px;width:1215px;" type="text" />
             </td>
         </tr>
-    </table>
-    <table>
         <tr>
             <td>
                 มาตรฐานตามตำรับยา (Phamacopoeia Standard of Drug Substance)
@@ -87,8 +85,6 @@ End Code
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'Taviraj';font-size:20px;width:853px;" type="text" />
             </td>
         </tr>
-    </table>
-    <table>
         <tr>
             <td>
                 เกรด

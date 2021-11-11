@@ -10,20 +10,23 @@ End Code
     <div ng-show="LIST_GMP.CER.CER_TYPE == '31'">
         @*ng-repeat="datas in LIST_GMP"  ng-show="PROCESS == '31'" *@
         <h2 style="font-family:'Taviraj';font-size:24px;">
-            <b> แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ (Certificate of GMP)</b>
+            <b> รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
+        </h2>
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            <b>(Information of Certificate of Drug Substance Manufacturer)</b>
         </h2>
         <table width="100%" style="font-family:'Taviraj';font-size:20px;" class="table">
             <tr>
                 <td style="height:25px;width:35%;font-weight: bolder">
-                    1. เลขที่ใบรับรอง (Certificate Number)<font color="red">*</font>  :
+                    1. เลขที่ใบรับรอง (Certificate Number)<font color="red">*</font>
                 </td>
-                <td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
                     {{LIST_GMP.CER.CERTIFICATION_NUMBER_ALL}}
                 </td>
             </tr>
             <tr>
                 <td style="height:25px;font-weight: bolder">
-                    2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
+                    2. ชื่อผู้ผลิต (Manufacturer)<font color="red">*</font>
                 </td>
                 <td>
 
@@ -32,7 +35,15 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight: bolder">
-                    3. ที่อยู่ (Address)<font color="red">*</font> :
+                    3. เลขที่ใบอนุญาตผลิต (Manufacturing Licence Number)
+                </td>
+                <td>
+                    {{LIST_GMP.CER.MANUFACTURER_LICENCE_NUMBER}}
+                </td>
+            </tr>
+            <tr>
+                <td style="height:25px;font-weight: bolder">
+                    4. ที่ตั้ง (Site Address)<font color="red">*</font>
                 </td>
                 <td>
 
@@ -41,7 +52,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight: bolder">
-                    4. เมือง (City / Province/ State)<font color="red">*</font> :
+                    5. เมือง (City / Province / State)<font color="red">*</font>
                 </td>
                 <td>
                     {{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY}}
@@ -49,7 +60,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight: bolder">
-                    5. ประเทศ (Country)<font color="red">*</font> :
+                    6. ประเทศ (Country)<font color="red">*</font>
                 </td>
                 <td>
                     {{LIST_GMP.COUNTRY_NAME}}
@@ -57,7 +68,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight: bolder">
-                    รหัสไปรษณีย์ (Post code/Zip code) :
+                    <span style="padding-left:1em">รหัสไปรษณีย์ (Postal Code / Zip Code)</span>
                 </td>
                 <td>
                     {{LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE}}
@@ -65,23 +76,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight: bolder">
-                    6. Manufacturer&quot;s License Number :
-                </td>
-                <td>
-                    {{LIST_GMP.CER.MANUFACTURER_LICENCE_NUMBER}}
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight: bolder">
-                    Global Location Number (GLN) :
-                </td>
-                <td>
-                    {{LIST_GMP.CER_DETAIL_MANUFACTURE.GLN}}
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight: bolder">
-                    7. วันเดือนปีที่ออกหนังสือ GMP (Issue Date)<font color="red">*</font> :
+                    7. วันที่ออกใบรับรอง GMP (Issue Date)<font color="red">*</font>
                 </td>
                 <td>
                     {{LIST_GMP.STR_DOCUMENT_DATE}}
@@ -89,7 +84,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight: bolder">
-                    วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
+                    <span style="padding-left:1em">วันที่หมดอายุใบรับรอง GMP (Expiry Date / Valid Until)<font color="red">*</font></span>
                 </td>
                 <td>
 
@@ -98,18 +93,20 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight: bolder">
-                    8. หน่วยงานที่ออกใบรับรอง<font color="red">*</font>
+                    8. หน่วยงานที่ออกใบรับรอง (Certification Agency)<font color="red">*</font>
                 </td>
                 <td>
                     &nbsp;
                 </td>
             </tr>
             <tr>
-                <td>
-                    <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="1" />
-                    ชื่อหน่วยงานรัฐของประเทศผู้ผลิต
+                <td style="height:25px;font-weight: bolder">
+                    <span style="padding-left:1em">
+                        <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="1" />
+                        หน่วยงานรัฐที่ออกใบรับรอง (Government Certification Agency)
+                    </span>
                 </td>
-                <td rowspan="2" ;">
+                <td rowspan="2">
                     @*<input class="form-control inline" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME" style="font-family:'Taviraj';font-size:20px;height:100px;" type="text" />*@
                     {{LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME}}
 
@@ -117,8 +114,10 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight: bolder">
-                    <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="2" />
-                    ชื่อหน่วยงานอื่นที่ได้รับการรับรองจากหน่วยงานรัฐของประเทศผู้ผลิต
+                    <span style="padding-left:1em">
+                        <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="2" />
+                        หน่วยงานอื่นที่ได้รับการรับรองจากหน่วยงานรัฐของประเทศที่ออกใบรับรอง (Certification Agency Accredited by Government Agency)
+                    </span>
                 </td>
                 <td></td>
             </tr>
@@ -132,19 +131,23 @@ End Code
                         <tr>
                             <td style="height:25px">
                                 <form name="rdl_gmp">
-
-                                    <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="1">
-                                    PIC / S GMP
-
-                                    <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="2">
-                                    WHO GMP
-
-                                    <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="3">
-                                    National GMP
-
+                                    <label>
+                                        <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="1">
+                                        PIC / S GMP
+                                    </label>
+                                    <label>&nbsp;</label>
+                                    <label>
+                                        <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="2">
+                                        WHO GMP
+                                    </label>
+                                    <label>&nbsp;</label>
+                                    <label>
+                                        <input type="radio" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.STANDARD_ID" id="Rdl_gmpt" ng-value="3">
+                                        National GMP
+                                    </label>
                                 </form>
                             </td>
-                            <td>
+                            <td style="height:25px;font-weight: bolder">
                                 &nbsp; ประเทศ<font color="red">*</font>
                             </td>
                             <td style="height:25px">
@@ -162,13 +165,13 @@ End Code
             </tr>
         </table>
         <br />
-        <h2 style="font-family:'Taviraj';font-size:20px;">
-            <b> รายละเอียดผลิตภัณฑ์ที่ได้รับการรับรอง </b>
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
         </h2>
         <table width="100%" style="font-family:'Taviraj';font-size:20px;">
             <tr>
-                <td style="height:25px;width:35%;">
-                    10. ขอบเขตของประเภทยาที่รับรอง
+                <td style="height:25px;width:35%;font-weight: bolder">
+                    10. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.CER_SCOPE}}</label>
@@ -202,13 +205,16 @@ End Code
 
     @*-------------ISO------------------*@
     <div ng-show="LIST_GMP.CER.CER_TYPE == '32'">
-        <h2 style="font-family:'Taviraj';font-size:20px;">
-            แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ (ISO)
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
+        </h2>
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            <b>(Information of Certificate of Drug Substance Manufacturer)</b>
         </h2>
         <table width="100%" style="font-family:'Taviraj';font-size:20px;">
             <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
-                    1. Certification Number/Registration Number/License Number<font color="red">*</font> :
+                    1. เลขที่ใบรับรอง (Certificate Number / Registration Number)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.CERTIFICATION_NUMBER_ALL}}</label>
@@ -216,7 +222,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
+                    2. ชื่อผู้ผลิต (Manufacturer)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.NAME_ADDRESS}}</label>
@@ -224,7 +230,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    3. ที่อยู่ (Address)<font color="red">*</font> :
+                    3. ที่ตั้ง (Site Address)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER}}</label>
@@ -232,7 +238,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    4. เมือง (City / Province/ State)<font color="red">*</font> :
+                    4. เมือง (City / Province / State)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY}}</label>
@@ -240,7 +246,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    5. ประเทศ (Country)<font color="red">*</font> :
+                    5. ประเทศ (Country)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.COUNTRY_NAME}}</label>
@@ -248,7 +254,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    รหัสไปรษณีย์ (Post code/Zip code) :
+                    <span>รหัสไปรษณีย์ (Postal Code / Zip Code)</span>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE}}</label>
@@ -256,23 +262,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    6. Organization Code (รหัสองค์กร) :
-                </td>
-                <td>
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ORGANIZATION_CODE}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height: 25px;font-weight:bolder">
-                    Global Location Number (GLN) :
-                </td>
-                <td>
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.GLN}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    7. วันเดือนปีที่ออกหนังสือ ISO (Issue Date)<font color="red">*</font> :
+                    6. วันที่ออกใบรับรอง ISO (Issue Date)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.DOCUMENT_DATE}}</label>
@@ -280,7 +270,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    วันเดือนปีที่หมดอายุ (Expiry Date) :
+                    <span style="padding-left:1em">วันที่หมดอายุใบรับรอง ISO (Expiry Date / Valid Until)<font color="red">*</font></span>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.EXP_DOCUMENT_DATE}}</label>
@@ -288,7 +278,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    8. หน่วยงานที่ออกใบรับรอง (Certification Body)<font color="red">*</font>
+                    7. หน่วยงานที่ออกใบรับรอง (Certification Agency)<font color="red">*</font>
                 </td>
                 <td>
 
@@ -297,7 +287,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    ประเทศของหน่วยงานที่ออกใบรับรอง :
+                    <span style="padding-left:1em">ประเทศของหน่วยงานที่ออกใบรับรอง (Country of Certification Agency)</span>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.COUNTRY_OF_DEPARTMENT_NAME}}</label>
@@ -305,7 +295,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    9. สถานที่ผลิตได้มาตรฐาน ISO ที่เกี่ยวกับการผลิต<font color="red">*</font> :
+                    8. มาตรฐาน ISO เกี่ยวกับการผลิตของสถานที่ผลิต ต.ย. ISO 9001 : 2015, ISO 22000 : 2018 (ISO Standard for Production of Manufacturer e.g. ISO 9001 : 2015, ISO 22000 : 2018)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.DEPARTMENT_REGIST_CER_NAME}}</label>
@@ -313,13 +303,13 @@ End Code
             </tr>
         </table>
         <br />
-        <h2>
-            รายละเอียดผลิตภัณฑ์ที่ได้รับการรับรอง
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
         </h2>
         <table width="100%">
             <tr>
-                <td style="height:25px;width:35%;font-weight:bolder">
-                    10. ขอบเขตของประเภทยาที่รับรอง
+                <td style="height:25px;width:35%;font-weight: bolder;font-family:'Taviraj';font-size:20px;">
+                    9. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.CER_SCOPE}}</label>
@@ -335,13 +325,16 @@ End Code
     @*-------------ISO------------------*@
     @*-------------HACCP------------------*@
     <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '33'">
-        <h2 style="font-family: 'Taviraj';font-size: 20px;">
-            แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ (HACCP)
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
+        </h2>
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            <b>(Information of Certificate of Drug Substance Manufacturer)</b>
         </h2>
         <table width="100%" style="font-family:'Taviraj';font-size:20px;">
             <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
-                    1. Certification number/Registration Number/License Number<font color="red">*</font> :
+                    1. เลขที่ใบรับรอง (Certificate Number / Registration Number)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.CERTIFICATION_NUMBER_ALL}}</label>
@@ -349,7 +342,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
+                    2. ชื่อผู้ผลิต (Manufacturer)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.NAME_ADDRESS}}</label>
@@ -357,7 +350,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    3. ที่อยู่ (Address)<font color="red">*</font> :
+                    3. ที่ตั้ง (Site Address)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER}}</label>
@@ -365,7 +358,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    4. เมือง (City / Province/ State)<font color="red">*</font> :
+                    4. เมือง (City / Province / State)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY}}</label>
@@ -373,7 +366,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    5. ประเทศ (Country)<font color="red">*</font> :
+                    5. ประเทศ (Country)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.COUNTRY_NAME}}</label>
@@ -381,7 +374,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    รหัสไปรษณีย์ (Post code/Zip code) :
+                    <span style="padding-left:1em">รหัสไปรษณีย์ (Post Code/Zip Code)</span>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE}}</label>
@@ -389,23 +382,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    6. Organization Code (รหัสองค์กร)<font color="red">*</font> :
-                </td>
-                <td>
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ORGANIZATION_CODE}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    Global Location Number (GLN) :
-                </td>
-                <td>
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.GLN}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    7. วันเดือนปีที่ออกหนังสือ HACCP (Issue Date)<font color="red">*</font> :
+                    6. วันที่ออกใบรับรอง HACCP (Issue Date)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.DOCUMENT_DATE}}</label>
@@ -413,7 +390,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
+                    <span style="padding-left:1em">วันที่หมดอายุใบรับรอง HACCP (Expiry Date / Valid Until)<font color="red">*</font></span>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.EXP_DOCUMENT_DATE}}</label>
@@ -421,7 +398,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    8. หน่วยงานที่ออกใบรับรอง (Certification Body)
+                    7. หน่วยงานที่ออกใบรับรอง (Certification Agency)
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME}}</label>
@@ -430,7 +407,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    ประเทศของหน่วยงานที่ออกใบรับรอง :
+                    <span style="padding-left:1em">ประเทศของหน่วยงานที่ออกใบรับรอง (Country of Certification Agency)</span>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_OF_DEPARTMENT_NAME}}</label>
@@ -439,7 +416,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    9. สถานที่ผลิตได้มาตฐาน HACCP ตาม :
+                    8. มาตฐาน HACCP ขแงสถานที่ผลิต ต.ย. Codex General Principles of Food Hygiene CAC/RCP 1-1969 (HACCP Standard of Manufacturer e.g. Codex General Principles of Food Hygiene CAC/RCP 1-1969)
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD}}</label>
@@ -449,13 +426,13 @@ End Code
             </tr>
         </table>
         <br />
-        <h2 style="font-family:'Taviraj';font-size:20px;">
-            รายละเอียดผลิตภัณฑ์ที่ได้รับการรับรอง
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
         </h2>
         <table width="100%">
             <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
-                    10. ขอบเขตของประเภทยาที่รับรอง
+                    9. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.CER_SCOPE}}</label>
@@ -471,13 +448,16 @@ End Code
     @*-------------HACCP------------------*@
     @*-------------PICS------------------*@
     <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '34'">
-        <h2 style="font-family:'Taviraj';font-size:20px;">
-            แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ (Purchase Order)
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
+        </h2>
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            <b>(Information of Certificate of Drug Substance Manufacturer)</b>
         </h2>
         <table width="100%" style="font-family:'Taviraj';font-size:20px;">
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    1. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
+                    1. ชื่อผู้ผลิตเภสัชเคมีภัณฑ์ (Drug Substance Manufacturer)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.NAME_ADDRESS}}</label>
@@ -485,7 +465,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    2. ที่อยู่ (Address)<font color="red">*</font> :
+                    2. ที่ตั้ง (Site Address)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.ADDRESS_NUMBER}}</label>
@@ -493,7 +473,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    3. เมือง (City / Province/ State)<font color="red">*</font> :
+                    3. เมือง (City / Province / State)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.ADDRESS_CITY}}</label>
@@ -501,7 +481,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    4. ประเทศ (Country)<font color="red">*</font> :
+                    4. ประเทศ (Country)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.COUNTRY_NAME}}</label>
@@ -509,7 +489,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    รหัสไปรษณีย์ (Post code/Zip code) :
+                    <span style="padding-left:1em">รหัสไปรษณีย์ (Postal Code / Zip Code)</span>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE}}</label>
@@ -517,7 +497,15 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    5. สถานที่ผลิตได้มาตรฐาน GMP ตาม (โปรดระบุ) :
+                    5. วันที่ขายที่ระบุในหลักฐานการขาย (Sale Date on Purchase Order)<font color="red">*</font>
+                </td>
+                <td>
+                    <label>{{LIST_GMP.CER.SALE_DATE}}</label>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:25px;font-weight:bolder">
+                    6. มาตรฐานสถานที่ผลิตเภสัชเคมีภัณฑ์ (Standard of Drug Substance Manufacturer)
                 </td>
                 <td>
                     <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD">
@@ -529,24 +517,8 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height: 25px;font-weight:bolder">
-                    Global Location Number (GLN) :
-                </td>
-                <td>
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.GLN}}</label>
-                </td>
-            </tr>
-            <tr>
                 <td style="height:25px;font-weight:bolder">
-                    6. วันเดือนปีการขายที่ระบุในหลักฐานการขาย<font color="red">*</font> :
-                </td>
-                <td>
-                    <label>{{LIST_GMP.CER.SALE_DATE}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    7. ชื่อผู้ซื้อ (Purchaser)<font color="red">*</font>
+                    7. ชื่อผู้ผลิตยาสำเร็จรูปในต่างประเทศที่เป็นผู้ซื้อ (Foreign Drug Product Manufacturer as Purchaser)<font color="red">*</font>
                 </td>
                 <td>
                     <input class="form-control inline" ng-model="LIST_GMP.CER.BUYER_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -556,16 +528,15 @@ End Code
 
             <tr>
                 <td style="height: 25px;font-weight:bolder">
-                    8. ประเทศผู้ซื้อ (Purchaser's Country*)<font color="red">*</font>
+                    8. ประเทศผู้ซื้อ (Country of Purchaser)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.BUYER_COUNTRY_NAME}}</label>
                 </td>
             </tr>
-
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    9. มาตราฐานสถานที่ผลิตยาสำเร็จรูปของประเทศผู้ซื้อได้ GMP ตาม (โปรดระบุ)<font color="red">*</font> :
+                    9. มาตรฐาน GMP ของสถานที่ผลิตยาสำเร็จรูปของผู้ซื้อ (GMP Standard of Drug Product manufacturer as Purchaser)<font color="red">*</font>
                 </td>
                 <td>
                     <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.BUYER_STANDARD">
@@ -576,13 +547,13 @@ End Code
             </tr>
         </table>
         <br />
-        <h2>
-            รายละเอียดผลิตภัณฑ์ที่ได้รับการรับรอง
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
         </h2>
         <table width="100%">
             <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
-                    10. ขอบเขตของประเภทยาที่รับรอง
+                    10. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.CER_SCOPE}}</label>
@@ -598,13 +569,24 @@ End Code
     @*-------------PICS------------------*@
     @*-------------OTHER------------------*@
     <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '36'">
-        <h2 style="font-family:'Taviraj';font-size:20px;">
-            แบบกรอกรายละเอียดใบรับรองสถานที่ผลิตในต่างประเทศ (Other)
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
+        </h2>
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            <b>(Information of Certificate of Drug Substance Manufacturer)</b>
         </h2>
         <table width="100%" style="font-family:'Taviraj';font-size:20px;">
             <tr>
+                <td style="font-weight:bolder">
+                    1. เลข สธ หนังสือ อย. ให้ความเห็นชอบ ตย. 1009.4.3/123 (Reference No. of FDA Approval Letter e.g. 1009.4.3/123)<font color="red">*</font>
+                </td>
+                <td>
+                    <label>{{LIST_GMP.CER.DEPARTMENT_REGIST_CER_DOCNO}}</label>
+                </td>
+            </tr>
+            <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
-                    1. Reference Number<font color="red">*</font> :
+                    2. เลขที่ใบรับรอง (Certificate Number / Registration Number)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.CERTIFICATION_NUMBER_ALL}}</label>
@@ -612,7 +594,7 @@ End Code
             </tr>
             <tr>
                 <td style="font-weight:bolder">
-                    2. ชื่อสถานที่ผลิตในต่างประเทศ (Manufacturer)<font color="red">*</font> :
+                    3. ชื่อผู้ผลิต (Manufacturer)<font color="red">*</font>
                 </td>
                 <td>
 
@@ -621,41 +603,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    3. ที่อยู่ (Address)<font color="red">*</font> :
-                </td>
-                <td>
-
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    4. เมือง (City / Province/ State)<font color="red">*</font> :
-                </td>
-                <td>
-
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    5. ประเทศ (Country)<font color="red">*</font> :
-                </td>
-                <td>
-                    <label>{{LIST_GMP.COUNTRY_NAME}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    รหัสไปรษณีย์ (Post code/Zip code) :
-                </td>
-                <td>
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    6. Manufactur&#39;s License Number<font color="red">*</font> :
+                    4. เลขที่ใบอนุญาตผลิต (Manufacturing License Number)<font color="red">*</font>
                 </td>
                 <td>
 
@@ -664,39 +612,41 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    Global Location Number (GLN) :
+                    5. ที่ตั้ง (Site Address)<font color="red">*</font>
                 </td>
                 <td>
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.GLN}}</label>
+
+                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_NUMBER}}</label>
                 </td>
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    7. หน่วยงานที่ออกเอกสาร<font color="red">*</font> :
+                    6. เมือง (City / Province / State)<font color="red">*</font>
                 </td>
                 <td>
-                    <label>{{LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME}}</label>
+
+                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY}}</label>
                 </td>
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    ประเทศ (Country)<font color="red">*</font> :
+                    7. ประเทศ (Country)<font color="red">*</font>
                 </td>
                 <td>
-                    <label>{{LIST_GMP.CER.COUNTRY_NAME}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="font-weight:bolder">
-                    8. เลขหนังสือให้ความเห็นชอบ<font color="red">*</font> :
-                </td>
-                <td>
-                    <label>{{LIST_GMP.CER.DEPARTMENT_REGIST_CER_DOCNO}}</label>
+                    <label>{{LIST_GMP.COUNTRY_NAME}}</label>
                 </td>
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    9. วันเดือนปีที่ออกหนังสือ (Issue Date)<font color="red">*</font> :
+                    <span style="padding-left:1em">รหัสไปรษณีย์ (Postal Code / Zip Code)</span>
+                </td>
+                <td>
+                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE}}</label>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:25px;font-weight:bolder">
+                    8. วันที่ออกใบรับรอง (Issue Date)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.DOCUMENT_DATE}}</label>
@@ -704,7 +654,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    วันเดือนปีที่หมดอายุ (Expiry Date)<font color="red">*</font> :
+                    <span style="padding-left:1em">วันที่หมดอายุใบรับรอง (Expiry Date / Valid Until)<font color="red">*</font></span>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.EXP_DOCUMENT_DATE}}</label>
@@ -712,7 +662,15 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    ประเทศของหน่วยงานที่ออกใบรับรอง :
+                    9. หน่วยงานที่ออกใบรับรอง (Certification Agency)<font color="red">*</font>
+                </td>
+                <td>
+                    <label>{{LIST_GMP.CER.DEPARTMENT_REGIST_CER_NAME}}</label>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:25px;font-weight:bolder">
+                    <span style="padding-left:1em">ประเทศของหน่วยงานที่ออกใบรับรอง (Country of Certification Agency)</span>
                 </td>
                 <td>
                     <label>{{LIST_GMP.COUNTRY_OF_DEPARTMENT_NAME}}</label>
@@ -720,13 +678,13 @@ End Code
             </tr>
         </table>
         <br />
-        <h2 style="font-family:'Taviraj';font-size:20px;">
-            รายละเอียดผลิตภัณฑ์
+        <h2 style="font-family:'Taviraj';font-size:24px;">
+            รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substance under the Certification)
         </h2>
         <table width="100%">
             <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
-                    10. ขอบข่าย
+                    10. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.CER_SCOPE}}</label>
@@ -742,29 +700,29 @@ End Code
     @*-------------OTHER------------------*@
     <br />
     @*<div class="col-sm-12">
-        <div class="row">
-            <div class="col-sm-3" style="text-align:center">
-                รายละเอืยด :
+            <div class="row">
+                <div class="col-sm-3" style="text-align:center">
+                    รายละเอืยด :
+                </div>
+                <div class="col-sm-9">
+                    {{REMARK}}
+                </div>
             </div>
-            <div class="col-sm-9">
-                {{REMARK}}
-            </div>
-        </div>
-        <br />
-        <table class="table" style="width:100%">
-            <tr>
-                <td>ชื่อไฟล์</td>
-                <td></td>
-            </tr>
-            <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
-                <td>{{datas.FILENAME}}</td>
-                <td>
-                    <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                </td>
-            </tr>
-        </table>
-        <br />
-    </div>*@
+            <br />
+            <table class="table" style="width:100%">
+                <tr>
+                    <td>ชื่อไฟล์</td>
+                    <td></td>
+                </tr>
+                <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                    <td>{{datas.FILENAME}}</td>
+                    <td>
+                        <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                    </td>
+                </tr>
+            </table>
+            <br />
+        </div>*@
     <br />
     <div style="text-align:center">
         <input type="button" class="btn btn-lg" ng-click="BTN_BACK()" value="ย้อนกลับ" />
