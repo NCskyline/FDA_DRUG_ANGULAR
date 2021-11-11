@@ -254,7 +254,7 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    <span>รหัสไปรษณีย์ (Postal Code / Zip Code)</span>
+                    <span style="padding-left:1em">รหัสไปรษณีย์ (Postal Code / Zip Code)</span>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE}}</label>
