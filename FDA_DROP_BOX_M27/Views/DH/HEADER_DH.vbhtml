@@ -20,6 +20,13 @@ End Code*@
 </script>*@
 
 <div class="ic" ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="pageloadDH()">
+    <center>
+        <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2> <br />
+        <h2>
+            {{HEADER_PROCESS}}
+        </h2>
+    </center>
+    <br />
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
             <td width="25%" align="right">
@@ -49,17 +56,17 @@ End Code*@
                     </label>
                 </form>
             </td>
-            <td align="right" width="10%">
+        </tr>
+    </table>
+    <table width="100%" style="font-family:'Taviraj';font-size:20px">
+        <tr>
+            <td width="10%">
                 ใบอนุญาต เลขที่
             </td>
-            <td width="2%"></td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
                 <label>{{LIST_DH.LCN_NO_DISPLAY}}</label>
             </td>
         </tr>
-    </table>
-    <br />
-    <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
             <td width="10%">อยู่เลขที่ </td>
             <td colspan="2" style="border-bottom:dotted;border-bottom-width:thin;">
@@ -114,7 +121,6 @@ End Code*@
     </table>
     <div style="font-family:'Taviraj';font-size:20px;">มีรายละเอียดดังนี้</div>
     <br />
-
     <div class="row">
         <div ng-include="INPUT" style="width:100%;"></div>
     </div>

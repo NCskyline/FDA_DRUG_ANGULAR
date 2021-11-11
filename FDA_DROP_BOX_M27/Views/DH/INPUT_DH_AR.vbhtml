@@ -12,13 +12,13 @@
 </script>
 
 <div class="ic" style="font-family:'Taviraj';font-size:20px;">
-    <center>
+    @*<center>
         <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2> <br />
         <h2>
             เป็นสารออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ
         </h2>
     </center>
-    <br />
+    <br />*@
     <table width="40%">
         <tr>
             <td>
@@ -74,21 +74,19 @@
             </td>
         </tr>
     </table>
-    <table>
+    <table width="100%">
         <tr>
-            <td>
+            <td width="50%">
                 ชื่อผู้แทนจำหน่ายในต่างประเทศ (ซื้อผ่าน) (Foreign Distributor (Purchasing through))
             </td>
-            <td width="2%"></td>
             <td>
-                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;width:272px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
             </td>
             <td width="2%"></td>
             <td>
                 ประเทศ (Country)
             </td>
-            <td width="2%"></td>
-            <td width="17%">
+            <td width="15%">
                 <select id="country" class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
                     @*<option value="0">--กรุณาเลือก--</option>*@
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
@@ -96,25 +94,23 @@
             </td>
         </tr>
     </table>
-    <table>
+    <table width="100%">
         <tr>
-            <td>
+            <td width="20%">
                 ชื่อการค้า (Trade Name) <font color="red">*</font>
             </td>
-            <td width="2%"></td>
             <td>
-                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.TRADING_NAME" style="font-family:'Taviraj';font-size:20px;width:1210px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.TRADING_NAME" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
             </td>
         </tr>
     </table>
-    <table>
+    <table width="100%">
         <tr>
-            <td>
+            <td width="40%">
                 มาตรฐานตามตำรับยา (Phamacopoeia Standard of Drug Substance)
             </td>
-            <td width="2%"></td>
             <td>
-                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'Taviraj';font-size:20px;width:850px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
             </td>
         </tr>
     </table>
