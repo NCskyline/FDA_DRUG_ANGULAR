@@ -21,7 +21,11 @@ End Code
     </table>
 
     <div ng-show="LIST_EDIT_LCN.LOCATION_TYPE == '1'">
+        @*<h3>ที่ตั้ง</h3>*@
+    </div>
 
+    <div ng-show="LIST_EDIT_LCN.LOCATION_TYPE == '2'">
+        @*<h3>สถานที่เก็บ</h3>*@
     </div>
 
     <h3>ชื่อสถานที่</h3>

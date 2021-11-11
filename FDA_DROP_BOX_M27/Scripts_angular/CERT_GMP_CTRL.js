@@ -119,18 +119,23 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
         if (PROCESS == '31') {
             $scope.INPUT = SET_URL_SV('/CERT/INPUT_GMP');
+            $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยมาตรฐาน GMP (Registration of Manufacturer with GMP Standard)';
         }
         else if (PROCESS == '32') {
             $scope.INPUT = SET_URL_SV('/CERT/INPUT_ISO');
+            $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยมาตรฐาน ISO (Registration of Manufacturer with ISO Standard)';
         }
         else if (PROCESS == '33') {
             $scope.INPUT = SET_URL_SV('/CERT/INPUT_HACCP');
+            $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยมาตรฐาน HACCP (Registration of Manufacturer with HACCP Standard)';
         }
         else if (PROCESS == '34') {
             $scope.INPUT = SET_URL_SV('/CERT/INPUT_PICS');
+            $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยเอกสารหลักฐานการขายไปยังประเทศที่มีระบบคุณภาพที่ อย. ยอมรับ (Registration of Manufacturer with Purchase Order Document from Country with FDA equivalent Quality Control System)';
         }
         else if (PROCESS == '36') {
             $scope.INPUT = SET_URL_SV('/CERT/INPUT_CERT_OTHER');
+            $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยเอกสารอื่นๆ ที่ อย.เห็นชอบ (Registration of Manfacturer with FDA Approved Document)';
         }  
     }
 

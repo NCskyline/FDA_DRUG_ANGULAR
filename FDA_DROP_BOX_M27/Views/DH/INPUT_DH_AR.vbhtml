@@ -96,7 +96,7 @@
     </table>
     <table width="100%">
         <tr>
-            <td width="20%">
+            <td width="15%">
                 ชื่อการค้า (Trade Name) <font color="red">*</font>
             </td>
             <td>

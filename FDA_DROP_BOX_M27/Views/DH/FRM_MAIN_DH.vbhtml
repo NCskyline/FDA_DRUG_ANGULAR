@@ -4,7 +4,7 @@
 End Code
 
     <div>
-        <div><h3 style="color:red">ออกเลขจดแจ้งเภสัชเคมีภัณฑ์{{HEADER}}</h3></div>
+        <div><h3 style="color:red">ออกเลขจดแจ้งเภสัชเคมีภัณฑ์ {{HEADER}}</h3></div>
         <div>
             <table>
                 <tr>

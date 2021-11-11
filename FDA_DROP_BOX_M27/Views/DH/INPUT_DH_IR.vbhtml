@@ -50,14 +50,13 @@ End Code
                 ชื่อผู้แทนจำหน่ายในต่างประเทศ (ซื้อผ่าน) (Foreign Distributor (Purchasing through))
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;width:272px;" type="text" />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
             </td>
             <td width="2%"></td>
             <td>
                 ประเทศ (Country)
             </td>
-            <td width="2%"></td>
-            <td width="17%">
+            <td width="15%">
                 <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
                     @*<option value="0">--กรุณาเลือก--</option>*@
                     <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
@@ -67,7 +66,7 @@ End Code
     </table>
     <table width="100%">
         <tr>
-            <td width="20%">
+            <td width="15%">
                 ชื่อการค้า (Trade Name)<font color="red">*</font>
             </td>
             <td colspan="3">
@@ -87,7 +86,7 @@ End Code
     </table>
     <table width="100%">
         <tr>
-            <td>
+            <td width="5%">
                 เกรด
             </td>
             <td>

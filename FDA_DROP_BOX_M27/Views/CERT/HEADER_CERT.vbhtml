@@ -10,7 +10,12 @@ End Code
 
 
 <div class="ic" ng-controller="CERT_GMP_CTRL" ng-app="ANGULAR_APP">
-    <h1></h1>
+    <center style="font-family:'Taviraj';">
+        <h1>
+            {{HEADER}}
+        </h1>
+    </center>
+    <br />
     <div style="font-family:'Taviraj'">
         <table width="100%" style="font-size:22px;">
             <tr>
@@ -78,6 +83,7 @@ End Code
                 </td>
             </tr>
         </table>
+        <br />
         <div ng-include="INPUT">
 
         </div>
