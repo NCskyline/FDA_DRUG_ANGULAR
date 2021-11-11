@@ -110,13 +110,13 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
         $scope.PROCESS_ID = sessionStorage.PROCESS_ID;
         if ($scope.PROCESS_ID == '14') {
-            $scope.HEADER_PROCESS = 'เป็นสารออกฤทธิ์ตามทะเบียนตำรับยาผลิตในประเทศ';
+            $scope.HEADER_PROCESS = 'เป็นสารออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ';
         }
         else if ($scope.PROCESS_ID == '15') {
-            $scope.HEADER_PROCESS = 'เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา';
+            $scope.HEADER_PROCESS = 'เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ';
         }
         else if ($scope.PROCESS_ID == '16') {
-            $scope.HEADER_PROCESS = 'ไม่เป็นสารออกฤทธิ์ตามทะเบียนตำรับยา';
+            $scope.HEADER_PROCESS = 'เป็นสารไม่ออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ';
         }
         else if ($scope.PROCESS_ID == '17') {
             $scope.HEADER_PROCESS = 'ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ';

@@ -33,27 +33,30 @@ End Code
                     </table>
                     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
                         <tr>
-                            <td width="45%" align="center">
+                            <td align="center">
                                 <form name="myForm">
                                     <label>
                                         <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="1" disabled>
                                         ผลิต
                                     </label>
+                                    <label>&nbsp;</label>
                                     <label>
                                         <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="2" disabled>
                                         นำหรือสั่ง เข้ามาในราชอาณาจักร ซึ่งยาแผนปัจจุบัน
                                     </label>
                                 </form>
                             </td>
-                            <td align="right" width="20%">
+                        </tr>
+                    </table>
+                    <table width="100%" style="font-family:'Taviraj';font-size:20px;">
+                        <tr>
+                            <td width="20%">
                                 ใบอนุญาต เลขที่
                             </td>
                             <td style="border-bottom:dotted;border-bottom-width:thin;">
-                                <span style="padding-left:5px;" />  <label>{{LIST_LCN.LCN_NO_DISPLAY}}</label>
+                                <label>{{LIST_LCN.LCN_NO_DISPLAY}}</label>
                             </td>
-
                         </tr>
-
                     </table>
                     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
                         <tr>
@@ -79,6 +82,7 @@ End Code
                                         <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="1" disabled>
                                         ผลิต
                                     </label>
+                                    <label>&nbsp;&nbsp;&nbsp;</label>
                                     <label>
                                         <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="2" disabled>
                                         นำหรือสั่งเข้ามาในราชอาณาจักร
@@ -88,7 +92,7 @@ End Code
                             </td>
                         </tr>
                     </table>
-                    <table>
+                    <table width="100%" style="font-family:'Taviraj';font-size:20px;">
                         <tr>
                             <td align="center">
                                 <form name="myForm">
@@ -115,7 +119,7 @@ End Code
                         <table width="100%">
                             <tr>
                                 <td width="20%">
-                                    Ref Cer
+                                    เลขที่อ้างอิงสถานที่ผลิต (ThFDA-D Ref)
                                 </td>
                                 <td>
                                     {{LIST_DH.REF_CER_NO}}
@@ -205,7 +209,7 @@ End Code
                         <table width="100%">
                             <tr>
                                 <td width="20%">
-                                    Ref Cer
+                                    เลขที่อ้างอิงสถานที่ผลิต (ThFDA-D Ref)
                                 </td>
                                 <td>
                                     {{LIST_DH.REF_CER_NO}}
@@ -468,184 +472,185 @@ End Code
                     @*-------------IR------------------*@
                     @*-------------IN------------------*@
                     @*<div class="ic" ng-show="LIST_DH.dh15rqt.PROCESS_ID == '17'">
-                        <table width="100%">
-                            <tr>
-                                <td>
-                                    ชื่อผู้ผลิต
-                                </td>
-                                <td width="30%">
-                                    <label>
-                                        {{LIST_DH.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME}}
-                                    </label>
-                                </td>
-                                <td>
-                                    ประเทศ
-                                </td>
-                                <td width="10%">
-                                    <label>
-                                        {{LIST_DH.COUNTRY_NAME}}
-                                    </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    ชื่อผู้แทนจำหน่ายในต่างประเทศ (ซื้อผ่าน)
-                                </td>
-                                <td>
-                                    <label>
-                                        {{LIST_DH.dh15rqt.AGENT_NAME}}
-                                    </label>
-                                </td>
-                                <td>
-                                    ประเทศ
-                                </td>
-                                <td>
-                                    <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
-                                        <option value="0">--กรุณาเลือก--</option>
-                                        <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
-                                    </select>
-                                    <label>
-                                        {{LIST_DH.AGENT_COUNTRY_NAME}}
-                                    </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    ชื่อการค้า<font color="red">*</font>
-                                </td>
-                                <td colspan="3">
-                                    <label>
-                                        {{LIST_DH.dh15rqt.TRADING_NAME}}
-                                    </label>
-                                </td>
-                            </tr>
-                        </table>
-                        <br />
-                        //Table เพิ่มสาร <br />
-                        <br />
-                        <table>
-                            <tr>
-                                <td>
-                                    มาตรฐาน (ตำรายา)
-                                </td>
-                                <td>
-                                    <label>
-                                        {{LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS}}
-                                    </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    เกรด
-                                </td>
-                                <td>
-                                    <label>
-                                        {{LIST_DH.dh15rqt.GRADE}}
-                                    </label>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    จำนวน
-                                </td>
-                                <td>
-                                    <label>
-                                        {{LIST_DH.dh15rqt.amount}}
-                                    </label>
-                                </td>
-                                <td>
-                                    ปริมาณ
-                                </td>
-                                <td>
-                                    <label>
-                                        {{LIST_DH.dh15rqt.quantity}}
-                                    </label>
-                                </td>
-                            </tr>
-                        </table>
-                        เหตุผลในการผลิต/นำเข้าฯ
-                        <table>
-                            <tr>
-                                <td>
-                                    <form name="myForm">
+                            <table width="100%">
+                                <tr>
+                                    <td>
+                                        ชื่อผู้ผลิต
+                                    </td>
+                                    <td width="30%">
                                         <label>
-                                            <input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="1">
-                                            ใช้ในการผลิตยาตัวอย่างเพื่อขอขึ้นทะเบียนตำรับยา
-                                        </label> <br />
-                                        <label>
-                                            <input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="2">
-                                            ใช้ในการพัฒนาตำรับยาที่ได้เลขทะเบียนแล้ว
-                                        </label> <br />
-                                        <label>
-                                            <input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="3">
-                                            อื่น ๆ (ระบุ)
+                                            {{LIST_DH.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME}}
                                         </label>
+                                    </td>
+                                    <td>
+                                        ประเทศ
+                                    </td>
+                                    <td width="10%">
                                         <label>
-                                            {{LIST_DH.dh15rqt.OTHER_PURPOSE}}
+                                            {{LIST_DH.COUNTRY_NAME}}
                                         </label>
-                                    </form>
-                                </td>
-                            </tr>
-                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        ชื่อผู้แทนจำหน่ายในต่างประเทศ (ซื้อผ่าน)
+                                    </td>
+                                    <td>
+                                        <label>
+                                            {{LIST_DH.dh15rqt.AGENT_NAME}}
+                                        </label>
+                                    </td>
+                                    <td>
+                                        ประเทศ
+                                    </td>
+                                    <td>
+                                        <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_DH.dh15rqt.AGENT_COUNTRY_ID">
+                                            <option value="0">--กรุณาเลือก--</option>
+                                            <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
+                                        </select>
+                                        <label>
+                                            {{LIST_DH.AGENT_COUNTRY_NAME}}
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        ชื่อการค้า<font color="red">*</font>
+                                    </td>
+                                    <td colspan="3">
+                                        <label>
+                                            {{LIST_DH.dh15rqt.TRADING_NAME}}
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br />
+                            //Table เพิ่มสาร <br />
+                            <br />
+                            <table>
+                                <tr>
+                                    <td>
+                                        มาตรฐาน (ตำรายา)
+                                    </td>
+                                    <td>
+                                        <label>
+                                            {{LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS}}
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        เกรด
+                                    </td>
+                                    <td>
+                                        <label>
+                                            {{LIST_DH.dh15rqt.GRADE}}
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <td>
+                                        จำนวน
+                                    </td>
+                                    <td>
+                                        <label>
+                                            {{LIST_DH.dh15rqt.amount}}
+                                        </label>
+                                    </td>
+                                    <td>
+                                        ปริมาณ
+                                    </td>
+                                    <td>
+                                        <label>
+                                            {{LIST_DH.dh15rqt.quantity}}
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            เหตุผลในการผลิต/นำเข้าฯ
+                            <table>
+                                <tr>
+                                    <td>
+                                        <form name="myForm">
+                                            <label>
+                                                <input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="1">
+                                                ใช้ในการผลิตยาตัวอย่างเพื่อขอขึ้นทะเบียนตำรับยา
+                                            </label> <br />
+                                            <label>
+                                                <input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="2">
+                                                ใช้ในการพัฒนาตำรับยาที่ได้เลขทะเบียนแล้ว
+                                            </label> <br />
+                                            <label>
+                                                <input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="3">
+                                                อื่น ๆ (ระบุ)
+                                            </label>
+                                            <label>
+                                                {{LIST_DH.dh15rqt.OTHER_PURPOSE}}
+                                            </label>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </table>
 
-                    </div>
+                        </div>
 
 
-                </div>*@
-                <br />
-                <div ng-include="INPUT_CHEM_DH">
-
-                </div>
-                <br />
-                <div>
-                    <h2 style="font-family:'Taviraj';font-size:20px;">
-                        ไฟล์แนบ
-                    </h2>
-                    <table class="table" style="width:100%">
-                        <tr>
-                            <td>ชื่อไฟล์</td>
-                            <td></td>
-                        </tr>
-                        <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
-                            <td>{{datas.FILENAME}}</td>
-                            <td>
-                                <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
-            </div>
-            <div class="part part-1-3 ic">
-                <div class="card">
-                    <table class="table">
-                        <tr>
-                            <td>
-                                สถานะ
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <select style="font-family:'Taviraj';font-size:20px;" ng-model="STATUS_ID" class="form-control">
-                                    <option ng-repeat="x in STAT_LIST" value="{{x.STATUS_ID}}">{{x.STATUS_NAME}}</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </table>
-
+                    </div>*@
                     <br />
-                    <div align="center">
-                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_DH_CONFIRM(STATUS_ID)" value="บันทึก" />
-                    </div>
-                    <br />
-                    <div align="center">
-                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_BACK()" value="ย้อนกลับ" />
+                    <div ng-include="INPUT_CHEM_DH">
+
                     </div>
                     <br />
                     <div>
+                        <h2 style="font-family:'Taviraj';font-size:20px;">
+                            ไฟล์แนบ
+                        </h2>
+                        <table class="table" style="width:100%">
+                            <tr>
+                                <td>ชื่อไฟล์</td>
+                                <td></td>
+                            </tr>
+                            <tr ng-repeat="datas in LIST_File.FILE_LISTs" style="background-color:#FDFCE3">
+                                <td>{{datas.FILENAME}}</td>
+                                <td>
+                                    <a ng-show="datas.PATH != null && datas.PATH != ''" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
 
+                </div>
+                <div class="part part-1-3 ic">
+                    <div class="card">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    สถานะ
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select style="font-family:'Taviraj';font-size:20px;" ng-model="STATUS_ID" class="form-control">
+                                        <option ng-repeat="x in STAT_LIST" value="{{x.STATUS_ID}}">{{x.STATUS_NAME}}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <br />
+                        <div align="center">
+                            <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_DH_CONFIRM(STATUS_ID)" value="บันทึก" />
+                        </div>
+                        <br />
+                        <div align="center">
+                            <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_BACK()" value="ย้อนกลับ" />
+                        </div>
+                        <br />
+                        <div>
+
+                        </div>
                     </div>
                 </div>
             </div>

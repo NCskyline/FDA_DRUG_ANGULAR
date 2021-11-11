@@ -29,24 +29,29 @@ End Code
         </table>
         <table width="100%" style="font-family:'Taviraj';font-size:20px;">
             <tr>
-                <td width="45%" align="center">
+                <td align="center">
                     <form name="myForm">
                         <label>
                             <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="1">
                             ผลิต
                         </label>
+                        <label>&nbsp;</label>
                         <label>
                             <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="2">
                             นำหรือสั่ง เข้ามาในราชอาณาจักร ซึ่งยาแผนปัจจุบัน
                         </label>
                     </form>
                 </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
                 <td align="right" width="10%">
                     ใบอนุญาต เลขที่
                 </td>
                 <td width="2%"></td>
                 <td style="border-bottom:dotted;border-bottom-width:thin;">
-                    <span style="padding-left:5px;" /><label>{{LIST_LCN.LCN_NO_DISPLAY}}</label>
+                    <label>{{LIST_LCN.LCN_NO_DISPLAY}}</label>
                 </td>
             </tr>
         </table>
@@ -74,6 +79,7 @@ End Code
                             <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="1">
                             ผลิต
                         </label>
+                        <label>&nbsp;&nbsp;&nbsp;</label>
                         <label>
                             <input type="radio" ng-model="LIST_LCN.CHK_TYPE_LCN" value="2">
                             นำหรือสั่งเข้ามาในราชอาณาจักร
@@ -109,7 +115,7 @@ End Code
             <table width="100%">
                 <tr>
                     <td width="20%">
-                        Ref Cer
+                        เลขที่อ้างอิงสถานที่ผลิต (ThFDA-D Ref)
                     </td>
                     <td>
                         {{LIST_DH.REF_CER_NO}}
@@ -199,7 +205,7 @@ End Code
             <table width="100%">
                 <tr>
                     <td width="20%">
-                        Ref Cer
+                        เลขที่อ้างอิงสถานที่ผลิต (ThFDA-D Ref)
                     </td>
                     <td>
                         {{LIST_DH.REF_CER_NO}}
