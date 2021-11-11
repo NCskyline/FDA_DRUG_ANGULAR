@@ -262,8 +262,69 @@ End Code
         @*<div style="text-align:center"><h3>รายละเอียดสูตรตำรับที่แนบท้ายคำขอ</h3></div>*@
     </div>
     <div class="in">
+        <br />
         <div>
+            <h2><b>รายการไฟล์แนบ</b></h2>
+        </div>
+        <br />
 
+        <table class="table" width="100%">
+            <tr>
+                <td width="40%">รูปภาพยา</td>
+                <td>
+                    <input id="file-input" style="width:70%" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" />
+                </td>
+            </tr>
+            <tr>
+                <td>ฉลากและเอกสารกำกับผลิตภัณฑ์ ทุกภาชนะบรรจุ</td>
+                <td>
+                    <input id="file-input" style="width:70%" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" />
+                </td>
+            </tr>
+            <tr>
+                <td>ผลการวิเคราะห์คุณภาพยาสำเร็จรูป</td>
+                <td>
+                    <input id="file-input" style="width:70%" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" />
+                </td>
+            </tr>
+            <tr>
+                <td>คำรับรองเงื่อนไขต่างๆที่เกี่ยวข้อง</td>
+                <td>
+                    <input id="file-input" style="width:70%" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" />
+                </td>
+            </tr>
+            <tr>
+                <td>กรรมวิธีการผลิต</td>
+                <td>
+                    <input id="file-input" style="width:70%" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" />
+                </td>
+            </tr>
+            <tr>
+                <td>การขออนุมัติโครงร่างการศึกษาความเท่าเทียมกันทางผลการรักษา (Therapeutic equivalence protocol)</td>
+                <td>
+                    <input id="file-input" style="width:70%" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" />
+                </td>
+            </tr>
+            <tr>
+                <td>การขออนุมัติรายงานการยกเว้นการศึกษาชีวสมมูลในมนุษย์แบบ BCS Class I และ Dose Proportionality</td>
+                <td>
+                    <input id="file-input" style="width:70%" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" />
+                </td>
+            </tr>
+            <tr>
+                <td>การขออนุมัติรายงานการศึกษาชีวสมมูล (Bioequivalence report)</td>
+                <td>
+                    <input id="file-input" style="width:70%" ng-model="datas.FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <a style="color:red">หมายเหตุ : กรุณาแนบเอกสารเพิ่มเติมให้ครบทั้ง 6 ข้อ ในรูปแบบ PDF</a>
+        <br />
+        <br />
+        <div style="text-align:center">
+            <button class="btn btn-lg">บันทึก</button>
+            <button class="btn btn-lg" ng-click="BTN_BACK()">ย้อนกลับ</button>
         </div>
     </div>
 </div>
