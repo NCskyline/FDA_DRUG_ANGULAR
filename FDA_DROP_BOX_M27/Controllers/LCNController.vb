@@ -219,6 +219,9 @@ Namespace Controllers
         Function FRM_EXTEND_LCN_ATTACH_PAGE() As ActionResult
             Return View()
         End Function
+        Function FRM_EXTEND_TIME_LOCATION_STAFF_MAIN() As ActionResult
+            Return View()
+        End Function
 
     End Class
 

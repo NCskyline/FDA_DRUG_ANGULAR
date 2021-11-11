@@ -15,7 +15,7 @@ End Code
                         </select>
                     </td>
                     <td>
-                        <input type="button" class="form-control" value="สร้างคำขอแก้ไข" />
+                        <input type="button" class="form-control" ng-click="BTN_INPUT_YOR5()" value="สร้างคำขอแก้ไข" />
                     </td>
                 </tr>
             </table>

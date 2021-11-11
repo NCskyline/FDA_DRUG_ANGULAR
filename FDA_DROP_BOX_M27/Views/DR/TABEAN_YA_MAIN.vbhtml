@@ -156,6 +156,7 @@ End Code
                                         <td>ชื่อภาษาอังกฤษ</td>
                                         <td>รหัสการดำเนินการ</td>
                                         <td></td>
+                                        <td></td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -177,7 +178,16 @@ End Code
                                         <td></td>
                                         <td></td>
                                         <td>
-                                            <input type="button" ng-click="BTN_PREVIEW()" value="ดูข้อมูลล" />
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="BTN_PREVIEW(datas)">
+                                                ดูข้อมูลล
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="BTN_RQT(datas)">
+                                                เพิ่มข้อมูลส่วนที่ 2
+                                            </a>
                                         </td>
                                     </tr>
                                 </tbody>

@@ -148,8 +148,11 @@
             REDIRECT('/DR/FRM_SEARCH_LCN?PROCESS=' + process);
         } else if (process == '130099' || process == '140099') {
             REDIRECT('/DR/FRM_RGT_SELECT?PROCESS=' + process);
-        } else if (process == '1026' || process == '1027' || process == '1028' || process == '1029' || process == '1031') {
+        } else if (process == '1027' || process == '1028' || process == '1029' || process == '1031') {
             REDIRECT('/DI/FRM_SEARCH_LCN_TO_DL?PROCESS=' + process);
+        } else if (process == '1026') {
+            //var url = 'http://164.115.28.156/FDA_DRUG_IMPORT_ORDER/Home/MAIN';
+            window.open('http://164.115.28.156/FDA_DRUG_IMPORT_ORDER/Home/MAIN');
         }
     };
 
@@ -216,6 +219,14 @@
         //} else if (process == 1702) {
         //    REDIRECT('/DS/INPUT_DS_NORYOR8');
         //}
+    };
+
+    $scope.BTN_RQT = function () {
+        REDIRECT('/DR/FRM_RQT_REGIST_INFORMATION');
+    };
+
+    $scope.BTN_INPUT_YOR5 = function () {
+        REDIRECT('/DR_EDIT_REQUEST/INPUT_YOR_5');
     };
 
     $scope.BTN_BACK = function () {

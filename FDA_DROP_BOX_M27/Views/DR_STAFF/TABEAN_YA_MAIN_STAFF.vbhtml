@@ -83,9 +83,17 @@ End Code
                             <td></td>
                             <td></td>
                             <td>
-                                <input type="button" ng-click="BTN_PREVIEW_DR()" value="ดูข้อมูล" />
+                                <span class="fa fa-eye"></span>
+                                <a ng-click="BTN_PREVIEW_DR()">
+                                    ดูข้อมูลล
+                                </a>
                             </td>
-                            <td></td>
+                            <td>
+                                <span class="fa fa-pencil-alt"></span>
+                                <a ng-click="BTN_RQT()">
+                                    เพิ่มข้อมูลส่วนที่ 2
+                                </a>
+                            </td>
                             <td></td>
                             <td></td>
                             <td></td>

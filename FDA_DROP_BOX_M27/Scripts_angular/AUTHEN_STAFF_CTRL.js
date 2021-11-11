@@ -290,6 +290,10 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         REDIRECT('/DR_STAFF/FRM_DR_STAFF_CONFIRM');
     };
 
+    $scope.BTN_RQT = function () {
+        REDIRECT('/DR/FRM_RQT_REGIST_INFORMATION');
+    };
+
     $scope.SELECT_CER = function (data) {
         sessionStorage.IDA = data.IDA;
         sessionStorage.LCN_IDA = data.FK_IDA;
