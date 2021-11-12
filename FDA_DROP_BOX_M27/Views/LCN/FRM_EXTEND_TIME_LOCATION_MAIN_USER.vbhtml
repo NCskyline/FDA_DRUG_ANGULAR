@@ -55,30 +55,56 @@ End Code
                                 <td>เหตุผลการคืนคำขอ</td>
                                 <td>เพื่อต่ออายุในปี</td>
                                 <td></td>
+                                @*<td></td>*@
                             </tr>
                         </thead>
+                        @*<tbody>
+            <tr ng-repeat="data in LIST_EXTEND">
+                <td>{{data.LCNNO_MANUAL}}</td>
+                <td>{{data.STATUS_NAME}}</td>
+                <td>{{data.thanameplace}}</td>
+                <td>{{data.fulladdr}}</td>
+                <td>{{data.TRANSECTION_ID_UPLOAD}}</td>
+                <td>{{data.REMARK}}</td>
+                <td>{{data.expyear}}</td>
+                <td>
+                    <span class="fa fa-eye"></span>
+                    <a ng-click="BTN_PREVIEW_EXTEND(data)">
+                        ดูข้อมูล
+                    </a>
+                </td>
+                <td>
+                    <span class="fa fa-pager"></span>
+                    <a ng-click="BTN_FILE(data)">
+                        พิมพ์ใบปะหน้า
+                    </a>
+                </td>
+            </tr>
+        </tbody>*@
                         <tbody>
-                            <tr ng-repeat="data in LIST_EXTEND">
-                                <td>{{data.LCNNO_MANUAL}}</td>
-                                <td>{{data.STATUS_NAME}}</td>
-                                <td>{{data.thanameplace}}</td>
-                                <td>{{data.fulladdr}}</td>
-                                <td>{{data.TRANSECTION_ID_UPLOAD}}</td>
-                                <td>{{data.REMARK}}</td>
-                                <td>{{data.expyear}}</td>
+                            <tr>
+                                <td>ผย1 กท 1/2564</td>
+                                <td>ชำระเงินคำขอแล้วรอเจ้าหน้าที่พิจารณา</td>
+                                <td>บริษัท ทดสอบ จำกัด</td>
+                                <td>12/5 ตรอก/ซอย หิ้ว ถนน พระประแดง หมู่ที่ 3 ตำบล/แขวง สุขเดือนห้า อำเภอ/เขต เนินขาม จังหวัด ชัยนาท 10921</td>
+                                <td>6400005</td>
+                                <td></td>
+                                <td>2565</td>
                                 <td>
                                     <span class="fa fa-eye"></span>
                                     <a ng-click="BTN_PREVIEW_EXTEND(data)">
                                         ดูข้อมูล
                                     </a>
                                 </td>
-                                <td>
+                                @*<td>
                                     <span class="fa fa-pager"></span>
                                     <a ng-click="BTN_FILE(data)">
                                         พิมพ์ใบปะหน้า
                                     </a>
-                                </td>
+                                </td>*@
                             </tr>
+                           
+
                         </tbody>
                     </table>
                 </div>

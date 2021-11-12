@@ -4,7 +4,7 @@
 End Code
 
 <br />
-<h4>คำขอแก้ไขใบอนุญาตสถานที่ด้านยา</h4><br />
+<h4>คำขอต่ออายุใบอนุญาตสถานที่ด้านยา</h4><br />
 <table style="width:100%">
 <tr>
     <td style="width:8%">เลขนิติบุคคล/เลขบัตรประชาชน</td>
@@ -50,11 +50,9 @@ End Code
                         <td>{{data.extend_year}}</td>
                         <td>{{data.TRANSACTION_UPLOAD}}</td>
                         <td>{{data.STAFF_NAME}}</td>
-                        <td>{{data.STATUS_NAME}}</td>
-                        <td>{{data.STATUS_NAME}}</td>
                         <td>
                             <span class="fa fa-eye"></span>
-                            <a ng-click="">
+                            <a ng-click="SELECT_STAFF_EXTEND_LCN(data)">
                                 ดูข้อมูล
                             </a>
                         </td>

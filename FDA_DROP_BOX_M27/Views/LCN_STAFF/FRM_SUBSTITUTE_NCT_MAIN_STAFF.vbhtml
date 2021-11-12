@@ -4,7 +4,7 @@
 End Code
 <br />
 <h4>คำขอใบแทน/ย้ายสถานที่ ใบอนุญาตสถานที่ด้านยา</h4><br />
-<div ng-controller="MAIN_STAFF_CTRL" ng-app="ANGULAR_APP">
+
     <div class="content-part " style="width:100%;font-family:'Taviraj'">
 
         <div class="part part-2-3 ic" style="width:100%;">
@@ -37,7 +37,7 @@ End Code
 
                                             <td>
                                                 <span class="fa fa-eye"></span>
-                                                <a ng-click="">
+                                                <a ng-click="SELECT_STAFF_STT_LCN(data)">
                                                     ดูข้อมูล
                                                 </a>
                                             </td>
@@ -63,4 +63,3 @@ End Code
 
 
     </div>
-</div>

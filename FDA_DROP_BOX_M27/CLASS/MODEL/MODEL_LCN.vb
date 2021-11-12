@@ -67,7 +67,15 @@
             _DALCN_EDIT_REQUEST = value
         End Set
     End Property
-
+    Private _LCN_EXTEND_LITE As New LCN_EXTEND_LITE
+    Public Property LCN_EXTEND_LITE() As LCN_EXTEND_LITE
+        Get
+            Return _LCN_EXTEND_LITE
+        End Get
+        Set(ByVal value As LCN_EXTEND_LITE)
+            _LCN_EXTEND_LITE = value
+        End Set
+    End Property
 
     Private _MAS_EXPERT_NAME As New MAS_EXPERT_NAME
     Public Property MAS_EXPERT_NAME() As MAS_EXPERT_NAME

@@ -276,6 +276,8 @@
            
         }, function () { });
 
+
+
     }
 
 
@@ -833,7 +835,7 @@
 
     $scope.BTN_EXTEND = function () {
         if (QueryString('staff') == '') {
-            var url = 'https://medicina.fda.moph.go.th/FDA_DRUG_EXT/AUTHEN/AUTHEN_GATEWAY?Token=' + sessionStorage.TOKEN + '&identify=' + sessionStorage.IDENTIFY;
+            var url = 'https://medicina.fda.moph.go.th/FDA_DRUG_EXT/AUTHEN/AUTHEN_GATEWAY?Token=' + sessionStorage.TOKEN + '&identify=' + sessionStorage.CITIZEN_ID_AUTHORIZE;
             window.open(url, '_blank').focus();
             //REDIRECT();
         } else {
@@ -998,6 +1000,18 @@
         
 
 
+    };
+
+    $scope.LoadPreviewExtend = function () {
+        
+        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT_EXTEND_LCN(sessionStorage.CITIZEN_ID_AUTHORIZE, sessionStorage.PROCESS, sessionStorage.LCN_IDA, sessionStorage.IDA);
+        MODLE_LCN.then(function (datas) {
+
+            $scope.LIST_EXTEND = datas.data;
+            $scope.LIST_EXTEND.PROCESS = sessionStorage.PROCESS;
+            $scope.LIST_EXTEND.session = sessionStorage;
+            //$scope.LIST_LCN.PROCESS = "101";
+        }, function () { });
     };
     //var myApp = angular.module("ANGULAR_APP", []);
     //myApp.controller("LCN_CTRL", function ($scope) {
@@ -1173,8 +1187,9 @@
     };
 
     $scope.BTN_PREVIEW_EXTEND = function (data) {
-        sessionStorage.LCN_IDA = data.IDA;
-        sessionStorage.PROCESS_ID = data.PROCESS_ID;
+        sessionStorage.IDA = '33404'; //data.IDA;
+        sessionStorage.LCN_IDA = '49409';
+        sessionStorage.PROCESS_ID = '100741';//data.PROCESS_ID;
         REDIRECT('/LCN/PREVIEW_EXTEND');
     };
 
@@ -1428,7 +1443,23 @@
             }
         });
     };
-
+    $scope.BTN_SEND_EXTEND_LCN = function () {
+        Swal.fire({
+            title: 'คุณต้องการส่งใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนส่ง!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการส่งข้อมูล',
+            cancelButtonText: 'ยกเลิก'
+        }).then((result) => {
+            if (result.value) {
+                success_data('SUCCESS');
+                REDIRECT('/LCN/FRM_LCN_NEWS');
+            }
+        });
+    };
     $scope.BTN_SEND_REQUEST = function () {
         Swal.fire({
             title: 'คุณต้องการส่งใช่หรือไม่ ?',
