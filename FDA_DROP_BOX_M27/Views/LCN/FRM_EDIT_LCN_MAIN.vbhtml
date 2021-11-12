@@ -45,7 +45,7 @@
                                     <td>64009999</td>
                                     <td>
                                         <span class="fa fa-eye"></span>
-                                        <a ng-click="SELECT_RECLASS(datas)">
+                                        <a ng-click="SELECT_EDIT(datas)">
                                             ดูข้อมูล
                                         </a>
                                     </td>

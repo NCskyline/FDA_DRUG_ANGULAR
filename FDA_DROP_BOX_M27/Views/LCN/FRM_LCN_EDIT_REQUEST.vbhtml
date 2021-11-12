@@ -37,21 +37,37 @@ End Code
                                             <td></td>
                                         </tr>
                                     </thead>
+                                    @*<tbody>
+            <tr ng-repeat="data in DATA_EDIT_LCN_RQT | filter: filter">
+                <td>{{data.RCVNO_MANUAL}}</td>
+                <td>{{data.LCNNO_MANUAL}}</td>
+                <td>{{data.STATUS_NAME}}</td>
+                <td>{{data.TRANSACTION_UPLOAD}}</td>
+                <td>
+                    <span class="fa fa-eye"></span>
+                    <a ng-click="BTN_EDIT_PREVIEW(data)">
+                        ดูข้อมูล
+                    </a>
+                </td>
+            </tr>
+        </tbody>*@
                                     <tbody>
-                                        <tr ng-repeat="data in DATA_EDIT_LCN_RQT | filter: filter">
-                                            <td>{{data.RCVNO_MANUAL}}</td>
-                                            <td>{{data.LCNNO_MANUAL}}</td>
-                                            <td>{{data.STATUS_NAME}}</td>
-                                            <td>{{data.TRANSACTION_UPLOAD}}</td>
+
+                                        <tr>
+                                            <td>640009999</td>
+                                            <td>ขย1 กท 9999/2555</td>
+                                            <td>ยื่นคำขอแล้วรอเจ้าหน้าที่พิจารณา</td>
+                                            <td>64009999</td>
                                             <td>
                                                 <span class="fa fa-eye"></span>
-                                                <a ng-click="BTN_EDIT_PREVIEW(data)">
+                                                <a ng-click="SELECT_EDIT(datas)">
                                                     ดูข้อมูล
                                                 </a>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
+                               
                             </div>
                         </div>
                     </div>

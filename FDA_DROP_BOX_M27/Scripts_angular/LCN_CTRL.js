@@ -823,6 +823,13 @@
         var url = "/LCN/FRM_LCN_NEWS";
         REDIRECT(url);
     };
+    
+    $scope.SELECT_EDIT = function (datas) {
+        sessionStorage.IDA = 1; //datas.IDA;
+        sessionStorage.process = '10005'; //datas.IDA;
+        var url = "/LCN/PREVIEW_EDIT_LCN";
+        REDIRECT(url);
+    };
 
     $scope.BTN_EXTEND = function () {
         if (QueryString('staff') == '') {
@@ -1048,7 +1055,14 @@
         //sessionStorage.PREVIEW_CERT_IDA = datas.IDA;
         REDIRECT('/LCN/PREVIEW_INPUT_LCN');
     };
+    $scope.SELECT_STT = function (datas) {
+        sessionStorage.IDA = '1';//datas.IDA;
 
+
+        //sessionStorage.STAGE = 'SHOW';
+        //sessionStorage.PREVIEW_CERT_IDA = datas.IDA;
+        REDIRECT('/LCN/PREVIEW_SUBTITUTE_LCN');
+    };
 
     $scope.getdetails_lct = function (LOCATION_ADDRESS_IDA) {
 
