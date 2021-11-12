@@ -19,17 +19,39 @@
                 <div class="col-sm-12">
                     <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table style="margin-top:10px;width:100%;" class="table table-condensed">
-                            <tr>
-                                <td>เลขรับที่</td>
-                                <td>เลขที่ใบอนุญาต</td>
-                                <td>สถานะ</td>
-                                <td>เลขดำเนินการ</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        เลขรับที่
+                                    </th>
+                                    <th>
+                                        เลขที่ใบอนุญาต
+                                    </th>
+                                    <th>
+                                        สถานะ
+                                    </th>
+                                    <th>
+                                        เลขดำเนินการ
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+    
+                                <tr>
+                                    <td>640009999</td>
+                                    <td>ขย1 กท 9999/2555</td>
+                                    <td>ยื่นคำขอแล้วรอเจ้าหน้าที่พิจารณา</td>
+                                    <td>64009999</td>
+                                    <td>
+                                        <span class="fa fa-eye"></span>
+                                        <a ng-click="SELECT_RECLASS(datas)">
+                                            ดูข้อมูล
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
                         </table>
-
                     </div>
                 </div>
             </div>
