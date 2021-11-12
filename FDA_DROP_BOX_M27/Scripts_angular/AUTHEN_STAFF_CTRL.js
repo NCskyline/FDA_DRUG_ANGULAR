@@ -290,16 +290,16 @@
         sessionStorage.PROCESS = data.PROCESS_ID;
         REDIRECT('/LCN_STAFF/PREVIEW_LCN_STAFF');
     };
-    $scope.SELECT_STAFF_LCN_EDIT = function (data) {
-        if (data.LCT_IDA == undefined) {
-            sessionStorage.LCT_IDA = data.la_IDA;
-        } else if (data.la_IDA == undefined) {
-            sessionStorage.LCT_IDA = data.LCT_IDA;
-        }
-        sessionStorage.IDA = data.IDA;
-        sessionStorage.PROCESS = data.PROCESS_ID;
-        REDIRECT('/LCN_STAFF/PREVIEW_LCN_EDIT_STAFF');
-    };
+    //$scope.SELECT_STAFF_LCN_EDIT = function (data) {
+    //    if (data.LCT_IDA == undefined) {
+    //        sessionStorage.LCT_IDA = data.la_IDA;
+    //    } else if (data.la_IDA == undefined) {
+    //        sessionStorage.LCT_IDA = data.LCT_IDA;
+    //    }
+    //    sessionStorage.IDA = data.IDA;
+    //    sessionStorage.PROCESS = data.PROCESS_ID;
+    //    REDIRECT('/LCN_STAFF/PREVIEW_LCN_EDIT_STAFF');
+    //};
     $scope.SELECT_STAFF_EXTEND_LCN = function (data) {
         //if (data.LCT_IDA == undefined) {
         //    sessionStorage.LCT_IDA = data.la_IDA;
@@ -317,7 +317,8 @@
         //} else if (data.la_IDA == undefined) {
         //    sessionStorage.LCT_IDA = data.LCT_IDA;
         //}
-        sessionStorage.IDA = data.IDA;
+        sessionStorage.LCN_IDA = data.IDA;
+        sessionStorage.LCT_IDA = data.LCT_IDA;
         sessionStorage.PROCESS = data.PROCESS_ID;
         REDIRECT('/LCN_STAFF/PREVIEW_LCN_STT_STAFF');
     };
@@ -325,7 +326,7 @@
     $scope.SELECT_STAFF_EDIT_LCN = function (data) {
         sessionStorage.LCT_IDA = data.LCT_IDA;
         sessionStorage.LCN_IDA = data.IDA;
-        //sessionStorage.PROCESS_ID = data.PROCESS_ID;
+        sessionStorage.PROCESS_ID = data.PROCESS_ID;
         REDIRECT('/LCN_STAFF/PREVIEW_LCN_EDIT_STAFF');
     };
 

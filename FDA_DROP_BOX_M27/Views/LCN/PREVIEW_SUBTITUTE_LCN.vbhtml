@@ -217,8 +217,9 @@ End Code
                 <table style="width:100%;">
                     <tr>
                         <td width="17%"><input type="checkbox" ng-model="LIST_LCN.REQUEST_TYPE" disabled />ใบแทนใบอนุญาตขายยา  เนื่องจาก</td>
-                        <td width="68%">
-                            <input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />
+                        <td width="68%" style="border-bottom:dotted;border-bottom-width:thin">
+                            @*<input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />*@
+                            {{LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE}}
                         </td>
                         <td width="15%">
                             (ระบุเหตุที่ขอรับใบแทน)
@@ -440,8 +441,9 @@ End Code
                             <tr>
                                 <td><input type="checkbox" ng-model="LIST_LCN.REQUEST_TYPE" disabled />ใบแทนใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรเนื่องจาก</td>
                             <tr>
-                                <td>
-                                    <input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />
+                                <td style="border-bottom:dotted;border-bottom-width:thin">
+                                    @*<input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />*@
+                                    {{LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE}}
                                 </td>
                             </tr>
                             <tr>
@@ -646,8 +648,9 @@ End Code
                             <tr>
                                 <td><input type="checkbox" ng-model="LIST_LCN.REQUEST_TYPE" disabled />ใบแทนใบอนุญาตผลิตนาแผนปัจจุบันเนื่องจาก</td>
                             <tr>
-                                <td>
-                                    <input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />
+                                <td style="border-bottom:dotted;border-bottom-width:thin">
+                                    @*<input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />*@
+                                    {{LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE}}
                                 </td>
                             </tr>
                             <tr>
@@ -912,8 +915,9 @@ End Code
                                     <td style="width:55%"><input type="checkbox" ng-model="LIST_LCN.LCN_TYPE" value="3" disabled />&nbsp; นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร เนื่องจาก</td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />
+                                    <td style="border-bottom:dotted;border-bottom-width:thin">
+                                        @*<input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />*@
+                                        {{LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE}}
                                     </td>
                                 </tr>
                                 <tr>
@@ -1103,7 +1107,7 @@ End Code
         </div>
     </div>
 
-    <div ng-show="LIST_GMP.DALCN_EDIT_REQUEST.PROCESS_ID == '100705'">
+    <div ng-show="LIST_LCN.PROCESS == '100705'">
         <div style="font-family:'Taviraj';font-size:24px;">
             <div>
                 <p style="text-align: right;">แบบ ข.ย.๑๗</p>
@@ -1228,8 +1232,9 @@ End Code
                 <tr>
                     <td>ขอเปลี่ยนแปลงรายการในใบอนุญาต ดังต่อไปนี้</td>
                 <tr>
-                    <td>
-                        <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" />
+                    <td style="border-bottom:dotted;border-bottom-width:thin">
+                        @*<input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" />*@
+                        {{LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION}}
                     </td>
                 </tr>
             </table>
@@ -2890,7 +2895,7 @@ End Code
                     <td style="font-size:20px;width:5%">
                         เลขที่
                     </td>
-                    <td style="font-size:20px ;width:15%;text-align:center"></td>
+                    <td style="font-size:20px ;width:15%;text-align:center;border-bottom:dotted;border-bottom-width:thin"></td>
                     <td style="font-size:20px">
                         (กรณีไม่ใช่ผู้มีสัญชาติไทย)
                     </td>
@@ -2977,7 +2982,8 @@ End Code
                         มีความประสงค์ขอรับอนุญาตผลิตวัตถุออกฤทธิ์ในหมวด
                     </td>
                     <td colspan="3">
-                        <input class="form-control inline" ng-model="LIST_LCN.dalcn.CATEGORY_DRUG" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                        @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.CATEGORY_DRUG" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
+                        {{LIST_LCN.dalcn.CATEGORY_DRUG}}
                     </td>
                 </tr>
                 <tr>
@@ -3474,7 +3480,7 @@ End Code
                     <td style="font-size:20px;width:5%">
                         เลขที่
                     </td>
-                    <td style="font-size:20px ;width:15%;text-align:center"></td>
+                    <td style="font-size:20px ;width:15%;text-align:center;border-bottom:dotted;border-bottom-width:thin"></td>
                     <td style="font-size:20px">
                         (กรณีไม่ใช่ผู้มีสัญชาติไทย)
                     </td>
@@ -3560,8 +3566,9 @@ End Code
                     <td style="width:25%">
                         มีความประสงค์ขอรับอนุญาตผลิตวัตถุออกฤทธิ์ในหมวด
                     </td>
-                    <td colspan="3">
-                        <input class="form-control inline" ng-model="LIST_LCN.dalcn.CATEGORY_DRUG" style="font-family:'TH SarabunPSK';font-size:20px;" type="text" />
+                    <td style="border-bottom:dotted;border-bottom-width:thin" colspan="3">
+                        @*<input class="form-control inline" ng-model="LIST_LCN.dalcn.CATEGORY_DRUG" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
+                        {{LIST_LCN.dalcn.CATEGORY_DRUG}}
                     </td>
                 </tr>
                 <tr>
@@ -4054,7 +4061,7 @@ End Code
                     <td style="font-size:20px;width:5%">
                         เลขที่
                     </td>
-                    <td style="font-size:20px ;width:15%;text-align:center"></td>
+                    <td style="font-size:20px ;width:15%;text-align:center;border-bottom:dotted;border-bottom-width:thin"></td>
                     <td style="font-size:20px">
                         (กรณีไม่ใช่ผู้มีสัญชาติไทย)
                     </td>
@@ -4154,7 +4161,8 @@ End Code
                                 <input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_floor" id="chbl_typeee" value="1">
                                 อื่นๆ (โปรดระบุ)
                             </label>
-                            <input type="text" ng-model="LIST_LCN.dalcn.syslctaddr_thasoi" id="chbl_typeee" ng-value="1">
+                            @*<input type="text" ng-model="LIST_LCN.dalcn.syslctaddr_thasoi" id="chbl_typeee" ng-value="1">*@
+                            {{LIST_LCN.dalcn.syslctaddr_thasoi}}
                         </form>
                     </td>
                 </tr>
@@ -4683,7 +4691,7 @@ End Code
                     <td style="font-size:20px;width:5%">
                         เลขที่
                     </td>
-                    <td style="font-size:20px ;width:15%;text-align:center"></td>
+                    <td style="font-size:20px ;width:15%;text-align:center;border-bottom:dotted;border-bottom-width:thin"></td>
                     <td style="font-size:20px">
                         (กรณีไม่ใช่ผู้มีสัญชาติไทย)
                     </td>
@@ -4783,7 +4791,8 @@ End Code
                                 <input type="checkbox" ng-model="LIST_LCN.dalcn.syslctaddr_floor" id="chbl_typeee" value="1">
                                 อื่นๆ (โปรดระบุ)
                             </label>
-                            <input type="text" ng-model="LIST_LCN.dalcn.syslctaddr_thasoi" id="chbl_typeee" ng-value="1">
+                            @*<input type="text" ng-model="LIST_LCN.dalcn.syslctaddr_thasoi" id="chbl_typeee" ng-value="1">*@
+                            {{LIST_LCN.dalcn.syslctaddr_thasoi}}
                         </form>
                     </td>
                 </tr>
@@ -8925,8 +8934,9 @@ End Code
                 <table style="width:100%;">
                     <tr>
                         <td width="17%"><input type="checkbox" ng-model="LIST_LCN.REQUEST_TYPE" disabled />ใบแทนใบอนุญาตขายยา  เนื่องจาก</td>
-                        <td width="68%">
-                            <input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />
+                        <td width="68%" style="border-bottom:dotted;border-bottom-width:thin">
+                            @*<input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />*@
+                            {{LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE}}
                         </td>
                         <td width="15%">
                             (ระบุเหตุที่ขอรับใบแทน)
@@ -9148,8 +9158,9 @@ End Code
                             <tr>
                                 <td><input type="checkbox" ng-model="LIST_LCN.REQUEST_TYPE" disabled />ใบแทนใบอนุญาตนำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรเนื่องจาก</td>
                             <tr>
-                                <td>
-                                    <input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />
+                                <td style="border-bottom:dotted;border-bottom-width:thin">
+                                    @*<input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />*@
+                                    {{LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE}}
                                 </td>
                             </tr>
                             <tr>
@@ -9354,8 +9365,9 @@ End Code
                             <tr>
                                 <td><input type="checkbox" ng-model="LIST_LCN.REQUEST_TYPE" disabled />ใบแทนใบอนุญาตผลิตนาแผนปัจจุบันเนื่องจาก</td>
                             <tr>
-                                <td>
-                                    <input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />
+                                <td style="border-bottom:dotted;border-bottom-width:thin">
+                                    @*<input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />*@
+                                    {{LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE}}
                                 </td>
                             </tr>
                             <tr>
@@ -9620,8 +9632,9 @@ End Code
                                     <td style="width:55%"><input type="checkbox" ng-model="LIST_LCN.LCN_TYPE" value="3" disabled />&nbsp; นำหรือสั่งยาแผนโบราณเข้ามาในราชอาณาจักร เนื่องจาก</td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />
+                                    <td style="border-bottom:dotted;border-bottom-width:thin">
+                                        @*<input type="text" ng-model="LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE" />*@
+                                        {{LIST_LCN.DALCN_NCT_SUBSTITUTE.PURPOSE}}
                                     </td>
                                 </tr>
                                 <tr>
