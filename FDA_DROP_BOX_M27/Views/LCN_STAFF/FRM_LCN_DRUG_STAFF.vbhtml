@@ -41,15 +41,15 @@ End Code
                         </td>
                         <td>
                             <span class="fa fa-eye"></span>
-                                <a ng-click="">
-                                    แก้ไขการเสนอลงนาม
-                                </a>
+                            <a ng-click="">
+                                แก้ไขการเสนอลงนาม
+                            </a>
                         </td>
                         <td>
                             <span class="fa fa-eye"></span>
-                                <a ng-click="">
-                                    เพิ่มผู้รับผิดชอบคำขอ
-                                </a>
+                            <a ng-click="">
+                                เพิ่มผู้รับผิดชอบคำขอ
+                            </a>
                         </td>
                     </tr>
                 </tbody>

@@ -1,6 +1,4 @@
-﻿
-
-app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
+﻿app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
 
     //$scope.loading = true;
@@ -275,15 +273,28 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         }
     };
 
+    //$scope.SELECT_STAFF_LCN = function (data) {
+    //    if (data.LCT_IDA == undefined) {
+    //        sessionStorage.LCT_IDA = data.la_IDA;
+    //    } else if (data.la_IDA == undefined) {
+    //        sessionStorage.LCT_IDA = data.LCT_IDA;
+    //    }
+    //    sessionStorage.LCN_IDA = data.IDA;
+    //    sessionStorage.PROCESS = data.PROCESS_ID;
+    //    REDIRECT('/LCN_STAFF/PREVIEW_LCN_STAFF');
+    //};
     $scope.SELECT_STAFF_LCN = function (data) {
-        if (data.LCT_IDA == undefined) {
-            sessionStorage.LCT_IDA = data.la_IDA;
-        } else if (data.la_IDA == undefined) {
-            sessionStorage.LCT_IDA = data.LCT_IDA;
-        }
+        sessionStorage.LCT_IDA = data.la_IDA;
         sessionStorage.LCN_IDA = data.IDA;
         sessionStorage.PROCESS = data.PROCESS_ID;
         REDIRECT('/LCN_STAFF/PREVIEW_LCN_STAFF');
+    };
+
+    $scope.SELECT_STAFF_EDIT_LCN = function (data) {
+        sessionStorage.LCT_IDA = data.LCT_IDA;
+        sessionStorage.LCN_IDA = data.IDA;
+        //sessionStorage.PROCESS_ID = data.PROCESS_ID;
+        REDIRECT('/LCN_STAFF/PREVIEW_LCN_EDIT_STAFF');
     };
 
     $scope.BTN_PREVIEW_DR = function () {

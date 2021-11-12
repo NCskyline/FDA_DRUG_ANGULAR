@@ -32,7 +32,7 @@ End Code
 
                         <td>
                             <span class="fa fa-eye"></span>
-                            <a ng-click="SELECT_STAFF_LCN(data)">
+                            <a ng-click="SELECT_STAFF_EDIT_LCN(data)">
                                 ดูข้อมูล
                             </a>
                         </td>

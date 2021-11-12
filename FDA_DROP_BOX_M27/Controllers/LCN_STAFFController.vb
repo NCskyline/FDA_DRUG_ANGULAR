@@ -45,6 +45,10 @@ Namespace Controllers
         Function PREVIEW_LCN_STAFF() As ActionResult
             Return View()
         End Function
+
+        Function PREVIEW_LCN_EDIT_STAFF() As ActionResult
+            Return View()
+        End Function
         Function FRM_EDIT_REQUEST() As ActionResult
             Return View()
         End Function
