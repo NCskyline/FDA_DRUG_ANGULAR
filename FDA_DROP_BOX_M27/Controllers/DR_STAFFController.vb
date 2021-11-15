@@ -43,5 +43,9 @@ Namespace Controllers
         Function PREVIEW_RECLASS_STAFF() As ActionResult
             Return View()
         End Function
+
+        Function FRM_STAFF_DR_RECLASS_MAIN() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
