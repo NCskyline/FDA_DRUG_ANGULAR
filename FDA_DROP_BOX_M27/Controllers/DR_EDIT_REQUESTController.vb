@@ -29,6 +29,12 @@ Namespace Controllers
         Function FRM_RGT_EDIT_CONSIDER() As ActionResult
             Return View()
         End Function
+        Function FRM_RQT_EDIT_V2() As ActionResult
+            Return View()
+        End Function
+        Function FRM_EDIT_REQUEST_STAFF_CONFIRM() As ActionResult
+            Return View()
+        End Function
 
     End Class
 End Namespace
