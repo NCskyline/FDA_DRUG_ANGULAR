@@ -222,6 +222,15 @@ Namespace Controllers
         Function FRM_EXTEND_TIME_LOCATION_STAFF_MAIN() As ActionResult
             Return View()
         End Function
+        Function FRM_MAIN_PRODUCT_LCN() As ActionResult
+            Return View()
+        End Function
+        Function FRM_LCN_LCT() As ActionResult
+            Return View()
+        End Function
+        Function POPUP_LCN_LCT_INSERT() As ActionResult
+            Return View()
+        End Function
 
     End Class
 

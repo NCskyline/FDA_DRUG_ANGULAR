@@ -792,6 +792,11 @@
     <Content Include="Views\DR_EDIT_REQUEST\FRM_RGT_EDIT_CONSIDER.vbhtml" />
     <Content Include="Views\DR_EDIT_REQUEST\FRM_RQT_EDIT_V2.vbhtml" />
     <Content Include="Views\DR_STAFF\FRM_EDIT_REQUEST_STAFF_CONFIRM.vbhtml" />
+    <Content Include="Views\LCN\FRM_MAIN_PRODUCT_LCN.vbhtml" />
+    <Content Include="Views\LCN\FRM_LCN_LCT.vbhtml" />
+    <Content Include="Views\LCN\POPUP_LCN_LCT_INSERT.vbhtml" />
+    <Content Include="Views\LCN_STAFF\FRM_LOCATION_STAFF_MAIN.vbhtml" />
+    <Content Include="Views\LCN_STAFF\FRM_LOCATION_STAFF_CONFIRM.vbhtml" />
     <Content Include="Views\DR_STAFF\PREVIEW_RGT_EDIT.vbhtml" />
     <Content Include="Views\DR\FRM_SUBSTITUTE_TABEAN_MAIN.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
