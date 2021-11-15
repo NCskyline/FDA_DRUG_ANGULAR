@@ -407,8 +407,78 @@ End Code
                 </div>
             </div>
         </div>
-        <div class="part part-1-3">
-
+        <div class="part part-1-3 ic" >
+            <div class="card">
+                <div >
+                    <div>
+                        @*style="width:80%;margin-left:10%"*@
+                        <table class="table">
+                            <tr>
+                                <td>วันที่ออกเลขรับคำขอ :</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>วันที่อนุมัติ :</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>วิธียื่นเอกสารประกอบคำขอ :</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>เลข identifier :</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>สถานะปัจจุบัน :</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <div>
+                            โปรดเลือกสถานะถัดไป
+                        </div>
+                        <div style="width:80%;margin-left:10%">
+                            <select class="form-control">
+                                <option></option>
+                            </select>
+                        </div>
+                        <br />
+                        <div>
+                            วันที่มีผลอนุมัติ
+                        </div>
+                        <div style="width:80%;margin-left:10%">
+                            <md-datepicker ng-model="LIST_GMP.CER.EXP_DOCUMENT_DATE" md-placeholder="Enter date"
+                                           input-aria-describedby="datepicker-description"
+                                           input-aria-labelledby="datepicker-header ">
+                            </md-datepicker>
+                        </div>
+                        <br />
+                        <div class="col-sm-12" style="text-align:center">
+                            <input type="button" style="width:90%" class="btn btn-lg " value="แก้ไขรายละเอียดคำขอ" />
+                        </div>
+                        <br />
+                        <div class="col-sm-12" style="text-align:center">
+                            <input type="button" style="width:90%" class="btn btn-lg " value="ยืนยัน" />
+                        </div>
+                        <br />
+                        <div class="col-sm-12" style="text-align:center" ">
+                            <input type="button" style="width:90%" class="btn btn-lg " value="ระบบปรับปรุงทะเบียน" />
+                        </div>
+                        <br />
+                        <div class="col-sm-12" style="text-align:center">
+                            <input type="button" style="width:90%" class="btn btn-lg " value="ยกเลิก" />
+                        </div>
+                        <br />
+                        <div class="col-sm-12" style="text-align:center">
+                            <input type="button" style="width:90%" class="btn btn-lg " value="Download PDF" />
+                        </div>
+                        <br />
+                        <div class="col-sm-12" style="text-align:center">
+                            <input type="button" style="width:90%" class="btn btn-lg " value="กลับหน้ารายการ" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

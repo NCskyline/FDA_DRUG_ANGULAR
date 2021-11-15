@@ -96,9 +96,9 @@
 
         } else if (BTN_GROUP == '1') {
             if (SEQ == '4') {
-
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN_STAFF/FRM_LOCATION_STAFF_MAIN');
             } else if (SEQ == '5') {
-
+                
             } else if (SEQ == '6') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN_STAFF/FRM_LCN_DRUG_STAFF');
                 if (sessionStorage.PVCODE == '10') {
@@ -116,8 +116,8 @@
             } else if (SEQ == '7') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN_STAFF/FRM_EDIT_LCN_STAFF_MAIN');
 
-                var dataedit = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
-                dataedit.then(function (datas) {
+                var dataedit1 = CENTER_SV.SP_DALCN_EDIT_REQUEST_STAFF();
+                dataedit1.then(function (datas) {
                     $scope.DATA_LCN_EDIT_STAFF = datas.data;
                 }, function () { });
             } else if (SEQ == '8') {
