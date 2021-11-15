@@ -782,6 +782,7 @@
     <Content Include="Views\LCN_STAFF\PREVIEW_LCN_EXTEND_STAFF.vbhtml" />
     <Content Include="Views\LCN_STAFF\PREVIEW_LCN_STT_STAFF.vbhtml" />
     <Content Include="Views\DR\PREVIEW_RECLASS.vbhtml" />
+    <Content Include="Views\DR_STAFF\PREVIEW_RECLASS_STAFF.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>

@@ -96,7 +96,9 @@ End Code
         <table width="100%" style="font-family:'Taviraj';font-size:20px">
             <tr>
                 <td width="10%" align="right">ข้าพเจ้า</td>
-                <td width="65%"><input class="form-control inline" style="font-family:'Taviraj';font-size:20px;width:100%" /></td>
+                <td width="65%" style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" style="font-family:'Taviraj';font-size:20px;width:100%" />*@
+                </td>
                 <td>ผู้รับอนุญาต/ผู้ดำเนินการ ตามใบอนุญาต</td>
             </tr>
         </table>
@@ -125,25 +127,35 @@ End Code
         <table width="100%" style="font-family:'Taviraj';font-size:20px">
             <tr>
                 <td width="10%" align="center">ใบอนุญาตเลขที่</td>
-                <td><input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" />*@
+                </td>
                 <td width="2%"></td>
                 <td width="15%">ในนาม บริษัท/ห้าง/ร้าน</td>
-                <td><input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" />*@
+                </td>
             </tr>
         </table>
         <table width="100%" style="font-family:'Taviraj';font-size:20px">
             <tr>
                 <td width="30%">ขอแก้ไขเปลี่ยนแปลงรายการในทะเบียนตำรับยาชื่อ</td>
-                <td><input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" />*@
+                </td>
             </tr>
         </table>
         <table width="100%" style="font-family:'Taviraj';font-size:20px">
             <tr>
                 <td width="8%">เลขทะเบียนที่</td>
-                <td><input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" />*@
+                </td>
                 <td width="2%"></td>
                 <td width="20%">รายการที่ขอแก้ไขเปลี่ยนแปลง (ระบุ)</td>
-                <td><input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" />*@
+                </td>
             </tr>
         </table>
         <br />
@@ -212,16 +224,16 @@ End Code
                 <td width="15%">
                     <input type="checkbox" />&nbsp;&nbsp;ไม่อนุญาต เนื่องจาก
                 </td>
-                <td>
-                    <input class="form-control inline" style="font-family:'Taviraj';font-size:20px;width:90%" type="text" />
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" style="font-family:'Taviraj';font-size:20px;width:90%" type="text" />*@
                 </td>
             </tr>
             <tr>
                 <td width="15%">
                     <input type="checkbox" />&nbsp;&nbsp;คำสั่งอื่น
                 </td>
-                <td>
-                    <input class="form-control inline" style="font-family:'Taviraj';font-size:20px;width:90%" type="text" />
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" style="font-family:'Taviraj';font-size:20px;width:90%" type="text" />*@
                 </td>
             </tr>
         </table>
@@ -276,16 +288,22 @@ End Code
                         </li>
                     </ul>
                 </td>
-                <td><input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" />*@
+                </td>
             </tr>
         </table>
         <table width="100%" style="font-family:'Taviraj';font-size:20px">
             <tr>
                 <td width="5%">ชื่อยา</td>
-                <td><input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" />*@
+                </td>
                 <td width="2%"></td>
                 <td width="10%">เลขทะเบียนที่</td>
-                <td><input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" />*@
+                </td>
             </tr>
         </table>
         <br />
@@ -325,7 +343,9 @@ End Code
         <table width="100%" style="font-family:'Taviraj';font-size:20px;margin-left:10%">
             <tr>
                 <td width="17%"><input type="checkbox" />&nbsp;&nbsp;อื่นๆ เกี่ยวกับผลิตภัณฑ์ยา<br /></td>
-                <td><input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:85%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:85%" />*@
+                </td>
             </tr>
         </table>
         <table width="100%" style="font-family:'Taviraj';font-size:20px">
@@ -337,14 +357,18 @@ End Code
                         </li>
                     </ul>
                 </td>
-                <td><input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:100%" />*@
+                </td>
             </tr>
         </table>
         <div style="font-size:20px;font-family:'Taviraj';margin-left:3%">ที่เคยได้รับอนุมัติไว้</div>
         <table width="100%" style="font-family:'Taviraj';font-size:20px;margin-left:3%">
             <tr>
                 <td width="5%">เป็น</td>
-                <td><input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:95%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:95%" />*@
+                </td>
             </tr>
         </table>
         <div style="font-size:20px;font-family:'Taviraj';margin-left:3%">เป็นการขอแก้ไขเปลี่ยนแปลง</div>
@@ -355,11 +379,17 @@ End Code
             <tr>
                 <td width="30%"><span style="padding-left:4em"><input type="checkbox" />&nbsp;&nbsp;ตาม ASEAN Variation Guideline(AVG)</span></td>
                 <td width="7%"><span style="padding-left:1em"><input type="checkbox" />&nbsp;&nbsp;MaV</span></td>
-                <td><input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:80%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:80%" />*@
+                </td>
                 <td width="8%"><span style="padding-left:1em"><input type="checkbox" />&nbsp;&nbsp;MiV-PA</span></td>
-                <td><input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:80%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:80%" />*@
+                </td>
                 <td width="8%"><span style="padding-left:1em"><input type="checkbox" />&nbsp;&nbsp;MiV-N</span></td>
-                <td><input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:80%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" type="text" style="font-family:'Taviraj';font-size:20px;width:80%" />*@
+                </td>
             </tr>
         </table>
         <table width="100%" style="font-family:'Taviraj';font-size:20px;margin-left:4%">
@@ -414,7 +444,9 @@ End Code
         <table width="100%" style="font-family:'Taviraj';font-size:20px">
             <tr>
                 <td width="10%"><span style="padding-left:2em"><input type="checkbox" />&nbsp;&nbsp;อื่นๆ</span></td>
-                <td><input class="form-control inline" style="font-family:'Taviraj';font-size:20px" type="text" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input class="form-control inline" style="font-family:'Taviraj';font-size:20px" type="text" />*@
+                </td>
             </tr>
         </table>
     </div>
