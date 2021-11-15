@@ -788,6 +788,9 @@
     <Content Include="Views\DR\FRM_DR_STAFF_CHECK_RQT.vbhtml" />
     <Content Include="Views\DR_STAFF\TABEAN_YA_STAFF_APPROVE.vbhtml" />
     <Content Include="Views\DR_STAFF\PREVIEW_RECLASS_STAFF.vbhtml" />
+    <Content Include="Views\DR_EDIT_REQUEST\FRM_RGT_EDIT_CHECK_RQT.vbhtml" />
+    <Content Include="Views\DR_EDIT_REQUEST\FRM_RGT_EDIT_STAFF_RECEIVE.vbhtml" />
+    <Content Include="Views\DR_EDIT_REQUEST\FRM_RGT_EDIT_CONSIDER.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>

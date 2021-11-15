@@ -20,6 +20,15 @@ Namespace Controllers
         Function FRM_RGT_EDIT_CONFIRM() As ActionResult
             Return View()
         End Function
+        Function FRM_RGT_EDIT_CHECK_RQT() As ActionResult
+            Return View()
+        End Function
+        Function FRM_RGT_EDIT_STAFF_RECEIVE() As ActionResult
+            Return View()
+        End Function
+        Function FRM_RGT_EDIT_CONSIDER() As ActionResult
+            Return View()
+        End Function
 
     End Class
 End Namespace
