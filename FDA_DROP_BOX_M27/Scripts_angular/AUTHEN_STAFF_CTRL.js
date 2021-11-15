@@ -1,6 +1,4 @@
-﻿
-
-app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
+﻿app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
 
     //$scope.loading = true;
@@ -125,7 +123,8 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
             } else if (SEQ == '8') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN_STAFF/FRM_EXTEND_TIME_LOCATION_STAFF_MAIN');
      
-                var dataedit7 = CENTER_SV.SP_STAFF_EXTEND(sessionStorage.GROUPS, sessionStorage.PVCODE);
+                //var dataedit7 = CENTER_SV.SP_STAFF_EXTEND(sessionStorage.GROUPS, sessionStorage.PVCODE);
+                var dataedit7 = CENTER_SV.SP_STAFF_EXTEND(21020, 10);
                 dataedit7.then(function (datas) {
                     $scope.DATA_LCN_EXTEND_STAFF = datas.data;
                 }, function () { });
@@ -275,15 +274,60 @@ app.controller('AUTHEN_STAFF_CTRL', function ($scope, CENTER_SV, $http, $locatio
         }
     };
 
+    //$scope.SELECT_STAFF_LCN = function (data) {
+    //    if (data.LCT_IDA == undefined) {
+    //        sessionStorage.LCT_IDA = data.la_IDA;
+    //    } else if (data.la_IDA == undefined) {
+    //        sessionStorage.LCT_IDA = data.LCT_IDA;
+    //    }
+    //    sessionStorage.LCN_IDA = data.IDA;
+    //    sessionStorage.PROCESS = data.PROCESS_ID;
+    //    REDIRECT('/LCN_STAFF/PREVIEW_LCN_STAFF');
+    //};
     $scope.SELECT_STAFF_LCN = function (data) {
-        if (data.LCT_IDA == undefined) {
-            sessionStorage.LCT_IDA = data.la_IDA;
-        } else if (data.la_IDA == undefined) {
-            sessionStorage.LCT_IDA = data.LCT_IDA;
-        }
+        sessionStorage.LCT_IDA = data.la_IDA;
         sessionStorage.LCN_IDA = data.IDA;
         sessionStorage.PROCESS = data.PROCESS_ID;
         REDIRECT('/LCN_STAFF/PREVIEW_LCN_STAFF');
+    };
+    //$scope.SELECT_STAFF_LCN_EDIT = function (data) {
+    //    if (data.LCT_IDA == undefined) {
+    //        sessionStorage.LCT_IDA = data.la_IDA;
+    //    } else if (data.la_IDA == undefined) {
+    //        sessionStorage.LCT_IDA = data.LCT_IDA;
+    //    }
+    //    sessionStorage.IDA = data.IDA;
+    //    sessionStorage.PROCESS = data.PROCESS_ID;
+    //    REDIRECT('/LCN_STAFF/PREVIEW_LCN_EDIT_STAFF');
+    //};
+    $scope.SELECT_STAFF_EXTEND_LCN = function (data) {
+        //if (data.LCT_IDA == undefined) {
+        //    sessionStorage.LCT_IDA = data.la_IDA;
+        //} else if (data.la_IDA == undefined) {
+        //    sessionStorage.LCT_IDA = data.LCT_IDA;
+        //}
+        sessionStorage.IDA = data.IDA;
+        sessionStorage.PROCESS = data.PROCESS_ID;
+        REDIRECT('/LCN_STAFF/PREVIEW_LCN_EXTEND_STAFF');
+    };
+
+    $scope.SELECT_STAFF_STT_LCN = function (data) {
+        //if (data.LCT_IDA == undefined) {
+        //    sessionStorage.LCT_IDA = data.la_IDA;
+        //} else if (data.la_IDA == undefined) {
+        //    sessionStorage.LCT_IDA = data.LCT_IDA;
+        //}
+        sessionStorage.LCN_IDA = data.IDA;
+        sessionStorage.LCT_IDA = data.LCT_IDA;
+        sessionStorage.PROCESS = data.PROCESS_ID;
+        REDIRECT('/LCN_STAFF/PREVIEW_LCN_STT_STAFF');
+    };
+
+    $scope.SELECT_STAFF_EDIT_LCN = function (data) {
+        sessionStorage.LCT_IDA = data.LCT_IDA;
+        sessionStorage.LCN_IDA = data.IDA;
+        sessionStorage.PROCESS_ID = data.PROCESS_ID;
+        REDIRECT('/LCN_STAFF/PREVIEW_LCN_EDIT_STAFF');
     };
 
     $scope.BTN_PREVIEW_DR = function () {

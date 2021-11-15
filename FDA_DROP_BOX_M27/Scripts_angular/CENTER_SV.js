@@ -474,6 +474,20 @@
         return response;
     };
     
+    this.GET_LCN_INFORMATION_INPUT_EXTEND_LCN = function (IDENTIFY, PROCESS_ID, LCN_IDA ,IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_LCN_INFORMATION_INPUT_EXTEND_LCN"),
+            params: {
+                IDENTIFY: IDENTIFY,
+                PROCESS_ID: PROCESS_ID,
+                LCN_IDA: LCN_IDA,
+                IDA: IDA
+            }
+        });
+        return response;
+    };
+
     this.GET_LCN_SUBTITUTE_INPUT = function (BSN_IDENTIFY, LCN_IDA) {
         var response = $http({
             method: "post",

@@ -178,8 +178,9 @@
                 <tr>
                     <td>ขอเปลี่ยนแปลงรายการในใบอนุญาต ดังต่อไปนี้</td>
                 <tr>
-                    <td>
-                        <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" />
+                    <td style="border-bottom:dotted;border-bottom-width:thin">
+                        @*<input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" />*@
+                        {{LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION}}
                     </td>
                 </tr>
             </table>
@@ -330,7 +331,10 @@
             <p>ขอเปลี่ยนแปลงรายการในใบอนุญาต ดังต่อไปนี้</p>
             <table style="width:100%">
                 <tr>
-                    <td><input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" /></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin">
+                        @*<input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" />*@
+                        {{LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION}}
+                    </td>
                 </tr>
             </table>
             <br />
@@ -464,7 +468,10 @@
             <div>ขอเปลี่ยนแปลงรายการในใบอนุญาต ดังต่อไปนี้</div>
             <table style="width:100%">
                 <tr>
-                    <td><input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" /></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin">
+                        @*<input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" />*@
+                        {{LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION}}
+                    </td>
                 </tr>
             </table>
             <br />
@@ -622,7 +629,10 @@
             <label>ขอเปลี่ยนแปลงรายการในใบอนุญาต ดังต่อไปนี้</label>
             <table style="width:100%">
                 <tr>
-                    <td><input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" /></td>
+                    <td style="border-bottom:dotted;border-bottom-width:thin">
+                        @*<input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" />*@
+                        {{LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION}}
+                    </td>
                 </tr>
             </table>
             <br />
@@ -738,9 +748,9 @@
                     <tr>
                         <td>ขอเปลี่ยนแปลงรายการในใบอนุญาต ดังต่อไปนี้</td>
                     <tr>
-                        <td>
-                            <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" />
-
+                        <td style="border-bottom:dotted;border-bottom-width:thin">
+                            @*<input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;width:100%;" type="text" />*@
+                            {{LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION}}
                         </td>
                     </tr>
                 </table>
@@ -1181,8 +1191,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <td style="border-bottom:dotted;border-bottom-width:thin">
+                        @*<input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
+                        {{LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION}}
                     </td>
                 </tr>
             </table>
@@ -1226,8 +1237,9 @@
                     <td style="width:25%">
                         หรือเพิ่ม แล้วแต่กรณี (ถ้ามี)
                     </td>
-                    <td>
-                        <input type="text" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" id="txt_EDIT_DESCRIPTION" />
+                    <td style="border-bottom:dotted;border-bottom-width:thin">
+                        @*<input type="text" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" id="txt_EDIT_DESCRIPTION" />*@
+                        {{LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION}}
                     </td>
                 </tr>
                 <tr>
@@ -1691,8 +1703,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <td style="border-bottom:dotted;border-bottom-width:thin">
+                        @*<input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
+                        {{LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION}}
                     </td>
                 </tr>
             </table>
@@ -1736,8 +1749,9 @@
                     <td style="width:25%">
                         หรือเพิ่ม แล้วแต่กรณี (ถ้ามี)
                     </td>
-                    <td>
-                        <input type="text" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" id="txt_EDIT_DESCRIPTION" />
+                    <td style="border-bottom:dotted;border-bottom-width:thin">
+                        @*<input type="text" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" id="txt_EDIT_DESCRIPTION" />*@
+                        {{LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION}}
                     </td>
                 </tr>
                 <tr>
@@ -2202,8 +2216,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                    <td style="border-bottom:dotted;border-bottom-width:thin">
+                        @*<input class="form-control inline" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" style="font-family:'Taviraj';font-size:20px;" type="text" />*@
+                        {{LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION}}
                     </td>
                 </tr>
             </table>
@@ -2247,8 +2262,9 @@
                     <td style="width:25%">
                         หรือเพิ่ม แล้วแต่กรณี (ถ้ามี)
                     </td>
-                    <td>
-                        <input type="text" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" id="txt_EDIT_DESCRIPTION" />
+                    <td style="border-bottom:dotted;border-bottom-width:thin">
+                        @*<input type="text" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" id="txt_EDIT_DESCRIPTION" />*@
+                        {{LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION}}
                     </td>
                 </tr>
                 <tr>

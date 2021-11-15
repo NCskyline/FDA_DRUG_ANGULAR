@@ -779,6 +779,9 @@
     <Content Include="Views\LCN\PREVIEW_EXTEND.vbhtml" />
     <Content Include="Views\DR_STAFF\FRM_STAFF_DR_RECLASS_MAIN.vbhtml" />
     <Content Include="Views\LCN_STAFF\PREVIEW_LCN_EDIT_STAFF.vbhtml" />
+    <Content Include="Views\LCN_STAFF\PREVIEW_LCN_EXTEND_STAFF.vbhtml" />
+    <Content Include="Views\LCN_STAFF\PREVIEW_LCN_STT_STAFF.vbhtml" />
+    <Content Include="Views\DR\PREVIEW_RECLASS.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_EXTEND_STAFF_CONFIRM.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_SUBSTITUTE_NCT_STAFF_CONFIRM.vbhtml" />
     <Content Include="Views\DR\FRM_DR_CONFIRM.vbhtml" />

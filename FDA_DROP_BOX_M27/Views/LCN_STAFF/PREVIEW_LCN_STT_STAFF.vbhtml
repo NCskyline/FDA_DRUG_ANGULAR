@@ -1,10 +1,8 @@
-﻿@Code
-    ViewData("Title") = "PREVIEW_SUBTITUTE_LCN"
-End Code
+﻿@Code ViewData("Title") = "PREVIEW_LCN_STT_STAFF" End Code
 
 <script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
-<script src="~/Scripts_angular/LCN_CTRL.js"></script>
+<script src="~/Scripts_angular/LCN_STAFF_CTRL.js"></script>
 
 <style>
     .title1 {
@@ -42,18 +40,18 @@ End Code
         /** Demo styles for mdCalendar. */
     }
 
-    .datepickerdemoBasicUsage md-content {
-        padding-bottom: 200px;
-    }
+        .datepickerdemoBasicUsage md-content {
+            padding-bottom: 200px;
+        }
 
-    .datepickerdemoBasicUsage .validation-messages {
-        font-size: 12px;
-        color: #dd2c00;
-        margin-left: 15px;
-    }
+        .datepickerdemoBasicUsage .validation-messages {
+            font-size: 12px;
+            color: #dd2c00;
+            margin-left: 15px;
+        }
 </style>
 
-<div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" class="ic" ng-init="pageload_subtitute()">
+<div ng-controller="LCN_STAFF_CTRL" ng-app="ANGULAR_APP" class="ic" ng-init="Pageload_subtitute()">
     <div ng-show="LIST_LCN.PROCESS == '100701'">
         <div class="content-part " style="width:100%;font-family:'Taviraj'">
             <div style="font-family:'Taviraj';font-size:20px;">
@@ -9832,3 +9830,4 @@ End Code
         </div>
     </div>
 </div>
+
