@@ -57,7 +57,6 @@ Namespace Controllers
         Function TABEAN_YA_MAIN() As ActionResult
             Return View()
         End Function
-
         Function FRM_RQT_REGIST_INFORMATION() As ActionResult
             Return View()
         End Function
@@ -76,6 +75,12 @@ Namespace Controllers
         Function INPUT_YOR_1() As ActionResult
             Return View()
         End Function
+        Function INPUT_YOR_3() As ActionResult
+            Return View()
+        End Function
+        Function PREVIEW_INPUT_YOR_3() As ActionResult
+            Return View()
+        End Function
         Function FRM_DR_TRANSFER_DL() As ActionResult
             Return View()
         End Function
@@ -85,15 +90,12 @@ Namespace Controllers
         Function INPUT_RECLASS_ATTACH() As ActionResult
             Return View()
         End Function
-
-
         Function FRM_RECLASS_MAIN() As ActionResult
             Return View()
         End Function
         Function FRM_RGT_SELECT() As ActionResult
             Return View()
         End Function
-
         Function PREVIEW_RECLASS() As ActionResult
             Return View()
         End Function
@@ -103,7 +105,6 @@ Namespace Controllers
         Function FRM_DR_STAFF_CHECK_RQT() As ActionResult
             Return View()
         End Function
-
     End Class
 
     Public Class DR_CENTERController
