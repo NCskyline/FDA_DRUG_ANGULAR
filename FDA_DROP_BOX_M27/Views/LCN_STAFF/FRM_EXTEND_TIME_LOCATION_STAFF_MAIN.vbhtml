@@ -1,5 +1,9 @@
 ﻿@Code 'ViewData("Title") = "FRM_EXTEND_TIME_LOCATION_STAFF_MAIN"
                 Layout = "" End Code
+@Code
+    ViewData("Title") = "FRM_EXTEND_TIME_LOCATION_STAFF_MAIN"
+    'Layout = ""
+End Code
 
 <br />
 <h4>คำขอต่ออายุใบอนุญาตสถานที่ด้านยา</h4>

@@ -36,6 +36,9 @@ Namespace Controllers
         Function FRM_EXTEND_TIME_LOCATION_STAFF_MAIN() As ActionResult
             Return View()
         End Function
+        Function TABEAN_YA_STAFF_APPROVE() As ActionResult
+            Return View()
+        End Function
 
         Function PREVIEW_RECLASS_STAFF() As ActionResult
             Return View()

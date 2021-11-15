@@ -7,6 +7,7 @@ End Code
 <script src="~/Scripts_angular/LCN_CTRL.js"></script>
 
 <div class="ic" ng-app="" ng-controller="LCN_CTRL" ng-init="LoadPreviewExtend()">
+<div class="ic" > @*ng-app="" ng-controller="LCN_CTRL"*@
     <div style="font-family:'Taviraj';font-size:20px;">
         <div>
             <p style="text-align: right;">แบบ ผ.ย.๙</p>
@@ -114,30 +115,7 @@ End Code
                 <td style="width:95%">ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ</td>
             </tr>
         </table>
-        @*<table style="width:100%">
-                <tr>
-                    <td style="width:5%"></td>
-                    <td style="width:95%">(๑) ใบรับรองของผู้ประกอบวิชาชีพเวชกรรม ซึ่งรับรองว่าผู้ดำเนินกิจการไม่เป็นโรคตามมาตรา ๑๔ (๖)แห่งพระราชบัญญัติยา พ.ศ. ๒๕๑๐</td>
-                </tr>
-            </table>
-            <table style="width:100%">
-                <tr>
-                    <td style="width:5%"></td>
-                    <td style="width:95%">(๒) ใบอนุญาตผลิตยาแผนปัจจุบันหรือใบแทน</td>
-                </tr>
-            </table>
-            <table style="width:100%">
-                <tr>
-                    <td style="width:5%"></td>
-                    <td style="width:95%">(๓) เอกสารแสดงว่าเป็นผู้จัดการหรือเป็นผู้แทน ซึ่งเป็นผู้ดำเนินกิจการของนิติบุคคล (กรณีนิติบุคคลเป็นผู้ขออนุญาต)</td>
-                </tr>
-            </table>
-            <table style="width:100%">
-                <tr>
-                    <td style="width:5%"></td>
-                    <td style="width:95%">(๔) เอกสารอื่นๆ ถ้ามี</td>
-                </tr>
-            </table>*@
+        
         <div class="row">
             <div class="col-sm-12 in" style="width:100%">
                 <div ng-include="FILE_ATTACH">

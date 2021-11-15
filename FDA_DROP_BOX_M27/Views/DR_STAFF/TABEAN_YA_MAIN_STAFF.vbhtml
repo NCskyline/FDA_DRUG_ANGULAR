@@ -28,52 +28,52 @@ End Code
                     </thead>
                     <tbody>
                         @*<tr ng-repeat="data in DATA_TABEAN_STAFF">
-                            <td>{{data.TR_ID}}</td>
-                            <td>{{data.RCVNO_MANUAL}}</td>
-                            <td>{{data.STATUS_NAME_STAFF}}</td>
-                            <td>{{data.thadrgnm}}</td>
+            <td>{{data.TR_ID}}</td>
+            <td>{{data.RCVNO_MANUAL}}</td>
+            <td>{{data.STATUS_NAME_STAFF}}</td>
+            <td>{{data.thadrgnm}}</td>
 
-                            <td>{{data.engdrgnm}}</td>
-                            <td>{{data.trans_code}}</td>
-                            <td>{{data.REMARK}}</td>
-                            <td>{{data.STAFF_NAME}}</td>
-                            <td>
-                                <span class="fa fa-eye"></span>
-                                <a ng-click="">
-                                    ดูข้อมูล
-                                </a>
-                            </td>
-                            <td>
-                                <span class="fa fa-eye"></span>
-                                <a ng-click="">
-                                    เพิ่มข้อมูลส่วนที่ 2
-                                </a>
-                            </td>
-                            <td>
-                                <span class="fa fa-eye"></span>
-                                <a ng-click="">
-                                    แบบฟอร์มทะเบียน
-                                </a>
-                            </td>
-                            <td>
-                                <span class="fa fa-eye"></span>
-                                <a ng-click="">
-                                    ใบนัด
-                                </a>
-                            </td>
-                            <td>
-                                <span class="fa fa-eye"></span>
-                                <a ng-click="">
-                                    เพิ่มการหยุดและขยายเวลา
-                                </a>
-                            </td>
-                            <td>
-                                <span class="fa fa-eye"></span>
-                                <a ng-click="">
-                                    เพิ่มผู้รับผิดชอบคำขอ
-                                </a>
-                            </td>
-                        </tr>*@
+            <td>{{data.engdrgnm}}</td>
+            <td>{{data.trans_code}}</td>
+            <td>{{data.REMARK}}</td>
+            <td>{{data.STAFF_NAME}}</td>
+            <td>
+                <span class="fa fa-eye"></span>
+                <a ng-click="">
+                    ดูข้อมูล
+                </a>
+            </td>
+            <td>
+                <span class="fa fa-eye"></span>
+                <a ng-click="">
+                    เพิ่มข้อมูลส่วนที่ 2
+                </a>
+            </td>
+            <td>
+                <span class="fa fa-eye"></span>
+                <a ng-click="">
+                    แบบฟอร์มทะเบียน
+                </a>
+            </td>
+            <td>
+                <span class="fa fa-eye"></span>
+                <a ng-click="">
+                    ใบนัด
+                </a>
+            </td>
+            <td>
+                <span class="fa fa-eye"></span>
+                <a ng-click="">
+                    เพิ่มการหยุดและขยายเวลา
+                </a>
+            </td>
+            <td>
+                <span class="fa fa-eye"></span>
+                <a ng-click="">
+                    เพิ่มผู้รับผิดชอบคำขอ
+                </a>
+            </td>
+        </tr>*@
                         <tr>
                             <td>640009999</td>
                             <td></td>
@@ -99,6 +99,57 @@ End Code
                             <td></td>
                             <td></td>
                         </tr>
+                        <tr>
+                            <td>640009999</td>
+                            <td></td>
+                            <td>อยู่ระหว่างตรวจรับคำขอ (อยู่ระหว่างตรวจรับคำขอ)</td>
+                            <td>พารา</td>
+                            <td>Para</td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <span class="fa fa-eye"></span>
+                                <a ng-click="BTN_PREVIEW_DR()">
+                                    ดูข้อมูลล
+                                </a>
+                            </td>
+                            <td>
+                                <span class="fa fa-pencil-alt"></span>
+                                <a ng-click="BTN_RQT()">
+                                    เพิ่มข้อมูลส่วนที่ 2
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>640009999</td>
+                            <td></td>
+                            <td>เสนอผลการประเมินแล้ว</td>
+                            <td>พารา</td>
+                            <td>Para</td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <span class="fa fa-eye"></span>
+                                <a ng-click="BTN_PREVIEW_DR()">
+                                    ดูข้อมูลล
+                                </a>
+                            </td>
+                            <td>
+                                <span class="fa fa-pencil-alt"></span>
+                                <a ng-click="BTN_RQT()">
+                                    เพิ่มข้อมูลส่วนที่ 2
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                       
                     </tbody>
                     <tfoot>
                         <tr></tr>

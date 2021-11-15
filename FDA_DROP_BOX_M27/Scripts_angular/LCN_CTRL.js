@@ -242,7 +242,7 @@
                 $scope.DATA_SUBTITUTE = datas.data;
             }, function () { });
 
-        } else if (process == 'EXTEND') {
+        } else if (process == '100741') {
             $scope.SUB_PATH = SET_URL_SV('/LCN/FRM_EXTEND_TIME_LOCATION_MAIN_USER'); 
         }
 
@@ -465,7 +465,7 @@
             data4.then(function (datas) {
                 $scope.DATA_LCN_F_EDIT = datas.data;
             }, function () { });
-        } else if (process == 'EXTEND') {
+        } else if (process == '100741') {
             sessionStorage.PROCESS = process;
             location.reload();
         }

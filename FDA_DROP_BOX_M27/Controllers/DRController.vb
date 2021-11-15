@@ -97,6 +97,13 @@ Namespace Controllers
         Function PREVIEW_RECLASS() As ActionResult
             Return View()
         End Function
+        Function FRM_DR_CONFIRM() As ActionResult
+            Return View()
+        End Function
+        Function FRM_DR_STAFF_CHECK_RQT() As ActionResult
+            Return View()
+        End Function
+
     End Class
 
     Public Class DR_CENTERController
