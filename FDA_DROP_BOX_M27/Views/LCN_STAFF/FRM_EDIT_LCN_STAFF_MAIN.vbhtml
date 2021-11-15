@@ -24,6 +24,18 @@ End Code
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td></td>
+                        <td>ขตวจ3 กท 99999/2563</td>
+                        <td>ชำระเงินค่ายื่นคำขอแล้ว รอเจ้าหน้าที่พิจารณา</td>
+                        <td>640009999</td>
+                        <td>
+                            <span class="fa fa-eye"></span>
+                            <a ng-click="SELECT_STAFF_LCN(data)">
+                                ดูข้อมูล
+                            </a>
+                        </td>
+                    </tr>
                     <tr ng-repeat="data in DATA_LCN_EDIT_STAFF | filter: filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
                         <td>{{data.RCVNO_MANUAL}}</td>
                         <td>{{data.LCNNO_MANUAL}}</td>
@@ -38,6 +50,7 @@ End Code
                         </td>
 
                     </tr>
+
                 </tbody>
                 <tfoot>
                     <tr></tr>

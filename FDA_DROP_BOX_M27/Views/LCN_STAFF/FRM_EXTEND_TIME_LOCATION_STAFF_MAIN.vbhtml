@@ -1,6 +1,6 @@
 ﻿@Code
-    'ViewData("Title") = "FRM_EXTEND_TIME_LOCATION_STAFF_MAIN"
-    Layout = ""
+    ViewData("Title") = "FRM_EXTEND_TIME_LOCATION_STAFF_MAIN"
+    'Layout = ""
 End Code
 
 <br />

@@ -52,8 +52,8 @@
      }
 </style>
 
-<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()">
-    <div ng-show="LIST_LCN.PROCESS == '11105'">
+<div class="ic" > @*ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()"*@
+    <div >@*ng-show="LIST_LCN.PROCESS == '11105'"*@
         <div style="font-family:'Taviraj';font-size:24px;">
             <div>
                 <p style="text-align: right;">แบบ ข.ย.๑๗</p>
@@ -2303,7 +2303,7 @@
     <br />
     <div>
         <div class="col-sm-12" style="text-align:center">
-            <input type="button" class="btn btn-lg" ng-click="BTN_SEND_LCN()" value="ยื่นคำขอ" ng-disabled="" />
+            <input type="button" class="btn btn-lg" ng-click="BTN_SEND_LCN()" value="บันทึก" ng-disabled="" />
             <input type="button" class="btn btn-lg btn-success" ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
             <input type="button" class="btn btn-lg btn-success" ng-click="BTN_EDIT()" value="แก้ไขคำขอ" ng-show="LIST_LCN.dalcn.STATUS_ID == '5'" />
         </div>

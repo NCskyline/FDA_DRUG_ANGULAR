@@ -173,10 +173,10 @@ End Code
             </td>
         </tr>*@
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>สร้างคำขอแล้ว รอชำระเงิน</td>
+                                        <td>พารา</td>
+                                        <td>para</td>
+                                        <td>640009999</td>
                                         <td>
                                             <span class="fa fa-eye"></span>
                                             <a ng-click="BTN_PREVIEW(datas)">
@@ -185,6 +185,24 @@ End Code
                                         </td>
                                         <td>
                                             <span class="fa fa-eye"></span>
+                                            <a ng-click="BTN_RQT(datas)">
+                                                เพิ่มข้อมูลส่วนที่ 2
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>บันทึกข้อมูลและรอสร้างคำขอ</td>
+                                        <td>พารา</td>
+                                        <td>para</td>
+                                        <td>640009999</td>
+                                        <td>
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="BTN_PREVIEW(datas)">
+                                                ดูข้อมูลล
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span class="fa fa-pager"></span>
                                             <a ng-click="BTN_RQT(datas)">
                                                 เพิ่มข้อมูลส่วนที่ 2
                                             </a>
@@ -210,9 +228,23 @@ End Code
                                         <td>ชื่อภาษาอังกฤษ</td>
                                         <td>รหัสการดำเนินการ</td>
                                         <td></td>
+                                        <td></td>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <tr>
+                                        <td>ชำระค่าใบสำคัญการขึ้นทะเบียน</td>
+                                        <td>พารา</td>
+                                        <td>para</td>
+                                        <td>640009999</td>
+                                        <td>
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="">
+                                                ดูข้อมูล
+                                            </a>
+                                        </td>
+                                        <td></td>
+                                    </tr>
                                     <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
                                         <td>{{data.RCVNO_MANUAL}}</td>
                                         <td>{{data.LCNNO_MANUAL}}</td>

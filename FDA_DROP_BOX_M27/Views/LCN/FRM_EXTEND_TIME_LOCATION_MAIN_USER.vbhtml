@@ -58,6 +58,48 @@ End Code
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <td>ขย1 กท 1/2564</td>
+                                <td>อนุมัติ</td>
+                                <td>บริษัท ทดสอบ จำกัด</td>
+                                <td>12/5 ตรอก/ซอย หิ้ว ถนน พระประแดง หมู่ที่ 3 ตำบล/แขวง สุขเดือนห้า อำเภอ/เขต เนินขาม จังหวัด ชัยนาท 10921</td>
+                                <td>6400007</td>
+                                <td></td>
+                                <td>2565</td>
+                                <td>
+                                    <span class="fa fa-eye"></span>
+                                    <a ng-click="BTN_PREVIEW_EXTEND(data)">
+                                        ดูข้อมูล
+                                    </a>
+                                </td>
+                                <td>
+                                    <span class="fa fa-pager"></span>
+                                    <a ng-click="BTN_FILE(data)">
+                                        พิมพ์ใบปะหน้า
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ขย1 กท 1/2564</td>
+                                <td>ชำระเงินคำขอแล้วรอเจ้าหน้าที่พิจารณา</td>
+                                <td>บริษัท ทดสอบ จำกัด</td>
+                                <td>12/5 ตรอก/ซอย หิ้ว ถนน พระประแดง หมู่ที่ 3 ตำบล/แขวง สุขเดือนห้า อำเภอ/เขต เนินขาม จังหวัด ชัยนาท 10921</td>
+                                <td>6400006</td>
+                                <td></td>
+                                <td>2565</td>
+                                <td>
+                                    <span class="fa fa-eye"></span>
+                                    <a ng-click="BTN_PREVIEW_EXTEND(data)">
+                                        ดูข้อมูล
+                                    </a>
+                                </td>
+                                <td>
+                                    <span class="fa fa-pager"></span>
+                                    <a ng-click="BTN_FILE(data)">
+                                        พิมพ์ใบปะหน้า
+                                    </a>
+                                </td>
+                            </tr>
                             <tr ng-repeat="data in LIST_EXTEND">
                                 <td>{{data.LCNNO_MANUAL}}</td>
                                 <td>{{data.STATUS_NAME}}</td>

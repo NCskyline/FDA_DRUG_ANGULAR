@@ -51,21 +51,32 @@ End Code
                 </td>
             </tr>
         </tbody>*@
-                                    <tbody>
-
-                                        <tr>
-                                            <td>640009999</td>
-                                            <td>ขย1 กท 9999/2555</td>
-                                            <td>ยื่นคำขอแล้วรอเจ้าหน้าที่พิจารณา</td>
-                                            <td>64009999</td>
-                                            <td>
-                                                <span class="fa fa-eye"></span>
-                                                <a ng-click="SELECT_EDIT(datas)">
-                                                    ดูข้อมูล
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td>640009999</td>
+                                        <td>ขย1 กท 9999/2555</td>
+                                        <td>คืนคำขอให้แก้ไข</td>
+                                        <td>64009999</td>
+                                        <td>
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="SELECT_EDIT(datas)">
+                                                ดูข้อมูล
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>640009999</td>
+                                        <td>ขย1 กท 9999/2555</td>
+                                        <td>ยื่นคำขอแล้วรอเจ้าหน้าที่พิจารณา</td>
+                                        <td>64009999</td>
+                                        <td>
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="SELECT_EDIT(datas)">
+                                                ดูข้อมูล
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
                                 </table>
                                
                             </div>

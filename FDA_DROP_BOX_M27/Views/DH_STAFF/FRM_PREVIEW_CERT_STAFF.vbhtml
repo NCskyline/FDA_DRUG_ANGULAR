@@ -809,7 +809,7 @@ End Code
                         <tr>
                             <td>
                                 <select class="form-control" ng-model="STATUS_ID" >
-                                    <option value="5">คืนให้แก้ไขคำขอ</option>
+                                    @*<option value="5">คืนให้แก้ไขคำขอ</option>*@
                                     <option value="8">อนุมัติ</option>
                                     <option value="7">ไม่อนุมัติ</option>
                                 </select>

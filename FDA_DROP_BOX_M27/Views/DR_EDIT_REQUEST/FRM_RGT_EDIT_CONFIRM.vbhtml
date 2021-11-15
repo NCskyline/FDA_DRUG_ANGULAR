@@ -261,7 +261,7 @@ End Code
                 <br />
                 <hr style="width:100%;border-color:black" />
                 <br />
-                <div style="font-family:'Taviraj';font-size:24px;width:100%">
+                <div class="in" style="font-family:'Taviraj';font-size:24px;width:100%">
                     <div>
                         <p style="font-family:'Taviraj';font-size:20px;text-align:right">แบบ ย. ๕ หน้า ๒</p>
                     </div>

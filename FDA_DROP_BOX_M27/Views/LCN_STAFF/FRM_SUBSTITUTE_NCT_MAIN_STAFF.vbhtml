@@ -1,10 +1,10 @@
 ﻿
 @Code
-    Layout = Nothing
+    Layout = ""
 End Code
 <br />
 <h4>คำขอใบแทน/ย้ายสถานที่ ใบอนุญาตสถานที่ด้านยา</h4><br />
-<div ng-controller="MAIN_STAFF_CTRL" ng-app="ANGULAR_APP">
+<div >
     <div class="content-part " style="width:100%;font-family:'Taviraj'">
 
         <div class="part part-2-3 ic" style="width:100%;">
@@ -28,6 +28,19 @@ End Code
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>ส่งเรื่องและรอพิจารณา</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="">
+                                                    ดูข้อมูล
+                                                </a>
+                                            </td>
+                                        </tr>
                                         <tr ng-repeat="data in DATA_LCN_STT_STAFF">
                                             <td>{{data.RCVNO_MANUAL}}</td>
                                             <td>{{data.LCNNO_MANUAL}}</td>

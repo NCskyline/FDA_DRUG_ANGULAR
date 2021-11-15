@@ -46,7 +46,7 @@ End Code
                                 <td>ทดสอบ4 /test4</td>
                                 <td>64009999</td>
                                 <td></td>
-                                <td>อยู่ระหว่างการประเมินคำขอ</td>
+                                <td>บันทึกและรอส่งเรื่อง</td>
                                 <td>
                                     <a ng-click="">ใบนัด</a>
                                 </td>
@@ -59,6 +59,63 @@ End Code
                                 <td>
                                 </td>
                             </tr>
+                            <tr>
+                                <td></td>
+                                <td>K 1/62 (NC)</td>
+                                <td>ทดสอบ4 /test4</td>
+                                <td>64009999</td>
+                                <td></td>
+                                <td>ส่งเรื่องและรอพิจารณา</td>
+                                <td>
+                                    <a ng-click="">ใบนัด</a>
+                                </td>
+                                <td>
+                                    <span class="fa fa-eye"></span>
+                                    <a ng-click="BTN_PREVIEW_RGT_EDIT()">
+                                        ดูข้อมูล
+                                    </a>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>K 1/62 (NC)</td>
+                                <td>ทดสอบ4 /test4</td>
+                                <td>64009999</td>
+                                <td></td>
+                                <td>เสนอลงนาม</td>
+                                <td>
+                                    <a ng-click="">ใบนัด</a>
+                                </td>
+                                <td>
+                                    <span class="fa fa-eye"></span>
+                                    <a ng-click="BTN_PREVIEW_RGT_EDIT()">
+                                        ดูข้อมูล
+                                    </a>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>K 1/62 (NC)</td>
+                                <td>ทดสอบ4 /test4</td>
+                                <td>64009999</td>
+                                <td></td>
+                                <td>อนุมัติ</td>
+                                <td>
+                                    <a ng-click="">ใบนัด</a>
+                                </td>
+                                <td>
+                                    <span class="fa fa-eye"></span>
+                                    <a ng-click="BTN_PREVIEW_RGT_EDIT()">
+                                        ดูข้อมูล
+                                    </a>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>                           
                         </tbody>
                         <tfoot>
                             <tr></tr>

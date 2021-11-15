@@ -216,7 +216,7 @@
                     <div class="listree-submenu-heading">ยื่นคำขอต่ออายุใบอนุญาต (ระบบใหม่)</div>
                     <ul class="listree-submenu-items" style="color:black">
                         <li>
-                            <a ng-click="BTN_MENU('EXTEND')" style="color:#06B716">
+                            <a ng-click="BTN_MENU('100741')" style="color:#06B716">
                                 ยื่นคำขอต่ออายุใบอนุญาต (ระบบใหม่)
                             </a>
                         </li>
