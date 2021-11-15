@@ -1,4 +1,4 @@
-﻿Imports System.Web.Mvc
+﻿
 
 Namespace Controllers
     Public Class LCN_STAFFController
@@ -56,13 +56,6 @@ Namespace Controllers
             Return View()
         End Function
 
-        Function PREVIEW_LCN_EDIT_STAFF() As ActionResult
-            Return View()
-        End Function
-
-        Function FRM_EXTEND_TIME_LOCATION_STAFF_MAIN() As ActionResult
-            Return View()
-        End Function
         Function PREVIEW_LCN_EDIT_STAFF() As ActionResult
             Return View()
         End Function
