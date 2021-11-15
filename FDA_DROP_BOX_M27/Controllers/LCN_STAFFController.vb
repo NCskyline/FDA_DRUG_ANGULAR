@@ -68,6 +68,12 @@ Namespace Controllers
         Function FRM_SUBSTITUTE_NCT_STAFF_CONFIRM() As ActionResult
             Return View()
         End Function
+        Function FRM_LOCATION_STAFF_MAIN() As ActionResult
+            Return View()
+        End Function
+        Function FRM_LOCATION_STAFF_CONFIRM() As ActionResult
+            Return View()
+        End Function
 
     End Class
 
