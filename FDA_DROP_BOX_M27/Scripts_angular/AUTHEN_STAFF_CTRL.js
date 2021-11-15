@@ -191,6 +191,14 @@
                 dataedit2.then(function (datas) {
                     $scope.DATA_DS_STAFF = datas.data;
                 }, function () { });
+
+            } else if (SEQ == '7') {
+                $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_STAFF_DR_RECLASS_MAIN');
+
+                //var dataedit2 = CENTER_SV.SP_STAFF_DS();
+                //dataedit2.then(function (datas) {
+                //    $scope.DATA_DS_STAFF = datas.data;
+                //}, function () { });
                 
             } else if (SEQ == '996') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_SUBSTITUTE_TABEAN_STAFF_MAIN');
@@ -359,6 +367,15 @@
         getdata.then(function (datas) {
             $scope.data = datas.data;
         });
+    };
+
+    
+    $scope.SELECT_RECLASS = function (data) {
+        //sessionStorage.IDA = data.IDA;
+        //sessionStorage.LCN_IDA = data.FK_IDA;
+        //sessionStorage.PROCESS_ID = data.PROCESS_ID;
+        //sessionStorage.PREVIEW_CERT_IDA = datas.IDA;
+        REDIRECT('/DR_STAFF/PREVIEW_RECLASS_STAFF');
     };
 
     $scope.BTN_SEARCH_TABEAN = function (txt) {
