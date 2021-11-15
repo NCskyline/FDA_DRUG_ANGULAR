@@ -38,7 +38,7 @@ End Code
                         <td>{{data.STAFF_NAME}}</td>
                         <td>
                             <span class="fa fa-eye"></span>
-                            <a ng-click="">
+                            <a ng-click="BTN_PREVIEW_RGT_EDIT()">
                                 ดูข้อมูล
                             </a>
                         </td>
