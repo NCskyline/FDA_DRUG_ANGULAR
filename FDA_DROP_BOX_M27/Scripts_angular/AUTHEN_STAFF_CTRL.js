@@ -67,7 +67,7 @@
         //    $scope.LIST_STAFF_OFFER = datas.data;
         //}, function () { });
 
-
+        $scope.FILE_ATTACH = SET_URL_SV('/DR/INPUT_RECLASS_ATTACH');
 
     }
 
@@ -368,8 +368,14 @@
             $scope.data = datas.data;
         });
     };
-
     
+    $scope.BTN_PREVIEW_RGT_EDIT = function (data) {
+        //sessionStorage.IDA = data.IDA;
+        //sessionStorage.LCN_IDA = data.FK_IDA;
+        //sessionStorage.PROCESS_ID = data.PROCESS_ID;
+        //sessionStorage.PREVIEW_CERT_IDA = datas.IDA;
+        REDIRECT('/DR_STAFF/PREVIEW_RGT_EDIT');
+    };
     $scope.SELECT_RECLASS = function (data) {
         //sessionStorage.IDA = data.IDA;
         //sessionStorage.LCN_IDA = data.FK_IDA;

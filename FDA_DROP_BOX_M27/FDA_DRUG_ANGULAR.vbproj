@@ -21,8 +21,7 @@
     <OptionInfer>On</OptionInfer>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>
-    </Use64BitIISExpress>
+    <Use64BitIISExpress>false</Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -798,6 +797,8 @@
     <Content Include="Views\LCN\POPUP_LCN_LCT_INSERT.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_LOCATION_STAFF_MAIN.vbhtml" />
     <Content Include="Views\LCN_STAFF\FRM_LOCATION_STAFF_CONFIRM.vbhtml" />
+    <Content Include="Views\DR_STAFF\PREVIEW_RGT_EDIT.vbhtml" />
+    <Content Include="Views\DR\FRM_SUBSTITUTE_TABEAN_MAIN.vbhtml" />
     <Content Include="Views\DR\INPUT_YOR_3.vbhtml" />
     <Content Include="Views\DR\PREVIEW_INPUT_YOR_3.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />

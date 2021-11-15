@@ -32,6 +32,8 @@
             $scope.SUB_PATH = SET_URL_SV('/DI/FRM_DRUG_IMPORT_NYM4');
         } else if (process == 1031) {
             $scope.SUB_PATH = SET_URL_SV('/DI/FRM_DRUG_IMPORT_NYM4_2');
+        } else if (process == '130098') {
+            $scope.SUB_PATH = SET_URL_SV('/DR/FRM_SUBSTITUTE_TABEAN_MAIN');
         }
 
         if (process != undefined) {
@@ -146,7 +148,7 @@
 
         if (process == '130001' || process == '130002' || process == '13004') {
             REDIRECT('/DR/FRM_SEARCH_LCN?PROCESS=' + process);
-        } else if (process == '130099' || process == '140099') {
+        } else if (process == '130099' || process == '140099' || process == '130098') {
             REDIRECT('/DR/FRM_RGT_SELECT?PROCESS=' + process);
         } else if (process == '1027' || process == '1028' || process == '1029' || process == '1031') {
             REDIRECT('/DI/FRM_SEARCH_LCN_TO_DL?PROCESS=' + process);

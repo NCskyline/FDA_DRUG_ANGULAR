@@ -47,6 +47,10 @@ Namespace Controllers
         Function FRM_STAFF_DR_RECLASS_MAIN() As ActionResult
             Return View()
         End Function
+
+        Function PREVIEW_RGT_EDIT() As ActionResult
+            Return View()
+        End Function
         Function FRM_EDIT_REQUEST_STAFF_CONFIRM() As ActionResult
             Return View()
         End Function
