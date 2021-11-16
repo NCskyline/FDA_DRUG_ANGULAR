@@ -5,7 +5,7 @@ End Code
 <br />
 <h4>คำขอใบแทน/ย้ายสถานที่ ใบอนุญาตสถานที่ด้านยา</h4><br />
 
-<div >
+<div>
     <div class="content-part " style="width:100%;font-family:'Taviraj'">
 
         <div class="part part-2-3 ic" style="width:100%;">
@@ -72,8 +72,5 @@ End Code
 
             </div>
         </div>
-
-
-
-
     </div>
+</div>

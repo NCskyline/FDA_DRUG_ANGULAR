@@ -450,7 +450,7 @@
                             <tr>
                                 <td><input type="checkbox" ng-model="LIST_LCN.REQUEST_TYPE" disabled />ย้ายสถานที่นำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักรในนามของ</td>
                             <tr>
-                                <td>
+                                <td style="border-bottom:dotted;border-bottom-width:thin">
                                     @*<select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj'" ng-model="LIST_LCN.LOCATION_SELECT" ng-change="getdetails_lct(LIST_LCN.LOCATION_SELECT)">
                                         @*<option value="0">--กรุณาเลือก--</option>*@
                                     @*<option ng-repeat="x in REF_LOCATION" value="{{x.IDA}}">{{x.thanameplace}}</option>
@@ -5470,7 +5470,7 @@
                 </tr>
                 <tr>
                     <td>
-                        (๖) รูปถ่ายแสดงที่นำำเข้าหรือเก็บซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ของสถานประกอบการจำำนวน ๑ รูป
+                        (๖) รูปถ่ายแสดงที่นำเข้าหรือเก็บซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ของสถานประกอบการจำำนวน ๑ รูป
                     </td>
                 </tr>
             </table>
@@ -5986,7 +5986,7 @@
                 </tr>
                 <tr>
                     <td>
-                        (๖) รูปถ่ายแสดงที่นำำเข้าหรือเก็บซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ของสถานประกอบการจำำนวน ๑ รูป
+                        (๖) รูปถ่ายแสดงที่นำเข้าหรือเก็บซึ่งวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ ของสถานประกอบการจำนวน ๑ รูป
                     </td>
                 </tr>
             </table>

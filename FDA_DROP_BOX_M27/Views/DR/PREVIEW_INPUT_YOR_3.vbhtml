@@ -51,22 +51,30 @@ End Code
                 <td width="30%">
                     <label>(๑) ขอรับใบแทนใบสำคัญการขึ้นทะเบียนตำรับยาชื่อ</label>
                 </td>
-                <td><input type="text" class="form-control inline" style="font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input type="text" class="form-control inline" style="font-size:20px;width:100%" />*@
+                </td>
             </tr>
             <tr>
                 <td width="30%">
                     <label style="padding-left:1.5em">ใบสำคัญการขึ้นทะเบียนตำรับยาเลขที่</label>
                 </td>
-                <td><input type="text" class="form-control inline" style="font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input type="text" class="form-control inline" style="font-size:20px;width:100%" />*@
+                </td>
             </tr>
         </table>
         <table width="100%" style="font-size:20px">
             <tr>
                 <td width="15%">(๒) ชื่อผู้รับอนุญาต</td>
-                <td><input type="text" class="form-control inline" style="font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input type="text" class="form-control inline" style="font-size:20px;width:100%" />*@
+                </td>
                 <td width="2%"></td>
                 <td width="10%">ใบอนุญาตเลขที่</td>
-                <td><input type="text" class="form-control inline" style="font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input type="text" class="form-control inline" style="font-size:20px;width:100%" />*@
+                </td>
             </tr>
         </table>
         <table width="100%" style="font-size:20px">
@@ -74,7 +82,9 @@ End Code
                 <td width="15%">
                     <label style="padding-left:1.5em">ชื่อผู้ดำเนินกิจการ</label>
                 </td>
-                <td><input type="text" class="form-control inline" style="font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input type="text" class="form-control inline" style="font-size:20px;width:100%" />*@
+                </td>
             </tr>
         </table>
         <table width="100%" style="font-size:20px">
@@ -82,7 +92,9 @@ End Code
                 <td width="30%">
                     <label>(๓) เหตุผลที่ขอใบแทนใบสำคัญการขึ้นทะเบียนตำรับยา</label>
                 </td>
-                <td><input type="text" class="form-control inline" style="font-size:20px;width:100%" /></td>
+                <td style="border-bottom:dotted;border-bottom-width:thin">
+                    @*<input type="text" class="form-control inline" style="font-size:20px;width:100%" />*@
+                </td>
             </tr>
         </table>
         <br />

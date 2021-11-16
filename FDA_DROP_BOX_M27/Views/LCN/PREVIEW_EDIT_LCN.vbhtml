@@ -52,8 +52,8 @@
      }
 </style>
 
-<div class="ic" > @*ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()"*@
-    <div >@*ng-show="LIST_LCN.PROCESS == '11105'"*@
+<div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload_modify()">
+    <div ng-show="LIST_LCN.PROCESS == '11105'">
         <div style="font-family:'Taviraj';font-size:24px;">
             <div>
                 <p style="text-align: right;">แบบ ข.ย.๑๗</p>
