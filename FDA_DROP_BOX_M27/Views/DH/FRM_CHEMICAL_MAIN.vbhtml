@@ -10,7 +10,7 @@ End Code
 <table style="width:100%">
     <tr>
         <td style="width:100%"><input style="width:60%" class="form-control" placeholder="ค้นหา..." ng-model="filter" /></td>
-        <td align="right"><button class="btn btn-lg" ng-click="ADD_CHEMICAL()">เพิ่มสาร</button></td>
+        <td align="right"><button class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="ADD_CHEMICAL()">เพิ่มสาร</button></td>
     </tr>    
 </table>
 <br />

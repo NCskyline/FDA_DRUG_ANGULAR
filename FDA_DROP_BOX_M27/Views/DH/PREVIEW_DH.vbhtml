@@ -593,8 +593,8 @@ End Code
         </div>*@
         @*-------------IN------------------*@
         <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
-            <input type="button" class="btn btn-lg" ng-click="BTN_SEND_DH()" value="ยื่นคำขอ" ng-disabled="LIST_DH.CLOSE_BTN" />
-            <input type="button" class="btn btn-lg btn-success" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+            <input type="button" class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_SEND_DH()" value="ยื่นคำขอ" ng-disabled="LIST_DH.CLOSE_BTN" />
+            <input type="button" class="btn btn-lg" style="background-color:#FFD700" ng-click="BTN_BACK()" value="ย้อนกลับ" />
             <input type="button" class="btn btn-lg btn-success" ng-click="BTN_EDIT()" value="แก้ไขคำขอ" ng-show="LIST_DH.dh15rqt.STATUS_ID == '5'" />
         </div>
     </div>

@@ -151,32 +151,30 @@
         dataPHR.then(function (datas) {
             $scope.DATA_PHR_SHOW = datas.data;
         }, function () { });
+    };
 
-        $scope.Page_modify = function () {
+    $scope.Pageload_modify = function () {
 
-            var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT_MODIFY(sessionStorage.CITIZEN_ID_AUTHORIZE, sessionStorage.LCT_IDA, sessionStorage.LCN_IDA);
-            MODLE_LCN.then(function (datas) {
+        var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT_MODIFY(sessionStorage.CITIZEN_ID_AUTHORIZE, sessionStorage.LCT_IDA, sessionStorage.LCN_IDA);
+        MODLE_LCN.then(function (datas) {
 
-                $scope.LIST_LCN = datas.data;
-                $scope.LIST_LCN.PROCESS = sessionStorage.PROCESS;
-                $scope.LIST_LCN.session = sessionStorage;
-                //$scope.LIST_LCN.PROCESS = "101";
-            }, function () { });
+            $scope.LIST_LCN = datas.data;
+            $scope.LIST_LCN.PROCESS = sessionStorage.PROCESS;
+            $scope.LIST_LCN.session = sessionStorage;
+            //$scope.LIST_LCN.PROCESS = "101";
+        }, function () { });
 
-            var data_keep = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP('2', sessionStorage.CITIZEN_ID_AUTHORIZE);
-            data_keep.then(function (datas) {
-                $scope.REF_LOCATION_KEEP = datas.data;
+        var data_keep = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_KEEP('2', sessionStorage.CITIZEN_ID_AUTHORIZE);
+        data_keep.then(function (datas) {
+            $scope.REF_LOCATION_KEEP = datas.data;
 
-            }, function () { });
+        }, function () { });
 
-            var data_lct = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_1('1', sessionStorage.CITIZEN_ID_AUTHORIZE);
-            data_lct.then(function (datas) {
-                $scope.REF_LOCATION = datas.data;
+        var data_lct = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_TYPE_CD_and_LCNSIDV2_1('1', sessionStorage.CITIZEN_ID_AUTHORIZE);
+        data_lct.then(function (datas) {
+            $scope.REF_LOCATION = datas.data;
 
-            }, function () { });
-        };
-
-        
+        }, function () { });
     };
 
     $scope.Pageload_subtitute = function () {

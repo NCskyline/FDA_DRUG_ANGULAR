@@ -21,7 +21,8 @@
     <OptionInfer>On</OptionInfer>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -801,6 +802,10 @@
     <Content Include="Views\DR\FRM_SUBSTITUTE_TABEAN_MAIN.vbhtml" />
     <Content Include="Views\DR\INPUT_YOR_3.vbhtml" />
     <Content Include="Views\DR\PREVIEW_INPUT_YOR_3.vbhtml" />
+    <Content Include="Views\DI\PREVIEW_NYM2.vbhtml" />
+    <Content Include="Views\DI\PREVIEW_NYM3.vbhtml" />
+    <Content Include="Views\DI\PREVIEW_NYM4.vbhtml" />
+    <Content Include="Views\DI\PREVIEW_NYM4_2.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>
