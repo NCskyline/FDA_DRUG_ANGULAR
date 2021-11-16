@@ -5,12 +5,12 @@ End Code
 
 
 <div>
-    <p style="font-family:'Taviraj';font-size:24px">ค้นหา Cer</p>
+    <p style="font-family:'Taviraj';font-size:24px">ค้นหาการลงทะเบียนสถานที่ผลิต</p>
 </div>
 <br />
 <table style="width:100%">
     <tr>
-        <td style="width:12%">เลขอ้างอิงสถานที่ผลิต <br /> (ThFDA-DRef)</td>
+        <td style="width:12%">เลขอ้างอิงสถานที่ผลิต <br />(ThFDA-DRef)</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="CER_FORMAT"></td>
         <td width="2%"></td>
         <td style="width:15%">ชื่อผู้ผลิตเภสัชเคมีภัณฑ์</td>

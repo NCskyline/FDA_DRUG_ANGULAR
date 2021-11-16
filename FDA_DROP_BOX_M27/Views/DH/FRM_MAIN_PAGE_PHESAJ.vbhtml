@@ -43,7 +43,7 @@
                         </li>
                         <li>
                             <a href="../DH/FRM_SELECT_LCN?PROCESS=16">สารไม่ออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ <br />
-                            (Excipient in Locally Manufactured Drug Products) </a>
+                            (Inactive in Locally Manufactured Drug Products) </a>
                         </li>
                         @*<li>
                             <a href="../DH/FRM_SELECT_LCN?PROCESS=17">4. ไม่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยา (ผลิต)</a>
@@ -51,27 +51,27 @@
                     </ol>
                 </li>
                 <li>
-                    <div class="listree-submenu-heading">ค. เพิ่มสาร (Add Substance)</div>
+                    <div class="listree-submenu-heading">ค. เพิ่มชื่อเภสัชเคมีภัณฑ์ (Addition of Drug Substance)</div>
                     <ol class="listree-submenu-items">
                         <li>
                             <div class="listree-submenu-heading">สารออกฤทธิ์ (Active Substance)</div>
                             <ul class="listree-submenu-items">
                                 <li>
-                                    <a ng-click="DATA_CHE1('37')" style="color:cornflowerblue">สารเดี่ยว (Substance)</a>
+                                    <a ng-click="DATA_CHE1('37')" style="color:cornflowerblue">เพิ่มสารออกฤทธิ์ชนิดสารเดี่ยว (Addition of Active Substance)</a>
                                 </li>
                                 <li>
-                                    <a ng-click="DATA_CHE2('38')" style="color:cornflowerblue">สารผสม (Mixture)</a>
+                                    <a ng-click="DATA_CHE2('38')" style="color:cornflowerblue">เพิ่มสารออกฤทธิ์ชนิดสารผสม (Addition of Active Substance Mixture)</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <div class="listree-submenu-heading">สารไม่ออกฤทธิ์ (Excipient)</div>
+                            <div class="listree-submenu-heading">สารไม่ออกฤทธิ์ (Inactive Substance)</div>
                             <ul class="listree-submenu-items">
                                 <li>
-                                    <a ng-click="DATA_CHE3('66')" style="color:cornflowerblue">สารเดี่ยว (Substance)</a>
+                                    <a ng-click="DATA_CHE3('66')" style="color:cornflowerblue">เพิ่มสารไม่ออกฤทธิ์ชนิดสารเดี่ยว (Addition of Inactive Substance)</a>
                                 </li>
                                 <li>
-                                    <a ng-click="DATA_CHE4('67')" style="color:cornflowerblue">สารผสม (Mixture)</a>
+                                    <a ng-click="DATA_CHE4('67')" style="color:cornflowerblue">เพิ่มสารไม่ออกฤทธิ์ชนิดสารผสม (Addition of Inactive Substance Mixture)</a>
                                 </li>
                             </ul>
                         </li>

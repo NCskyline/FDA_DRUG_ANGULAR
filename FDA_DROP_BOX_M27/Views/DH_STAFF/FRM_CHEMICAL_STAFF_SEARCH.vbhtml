@@ -5,7 +5,7 @@ End Code
 
 
 <div>
-    <p style="font-family:'Taviraj';font-size:24px">ค้นหาสาร</p>
+    <p style="font-family:'Taviraj';font-size:24px">ค้นหาเภสัชเคมีภัณฑ์</p>
 </div>
 <br />
 <table style="width:100%">

@@ -12,12 +12,12 @@ End Code
 
 
 <div class="ic">
-    <h2 style="font-family:'Taviraj';font-size:24px;">
+    <h3 style="font-family:'Taviraj'">
         <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
-    </h2>
-    <h2 style="font-family:'Taviraj';font-size:24px;">
+    </h3>
+    <h3 style="font-family:'Taviraj'">
         <b>(Information of Certificate of Drug Substance Manufacturer)</b>
-    </h2>
+    </h3>
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
             <td style="height:25px;width:35%">
@@ -74,7 +74,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                6. มาตรฐานสถานที่ผลิตเภสัชเคมีภัณฑ์ (Standard of Drug Substance Manufacturer)
+                6. มาตรฐานสถานที่ผลิตเภสัชเคมีภัณฑ์ (Standard of Drug Substance Manufacturer)<font color="red">*</font>
             </td>
             <td>
                 <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD">
@@ -116,7 +116,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                9. มาตรฐาน GMP ของสถานที่ผลิตยาสำเร็จรูปของผู้ซื้อ (GMP Standard of Drug Product manufacturer as Purchaser)<font color="red">*</font>
+                9. มาตรฐาน GMP ของสถานที่ผลิตยาสำเร็จรูปของผู้ซื้อ (GMP Standard of Drug Product Manufacturer as Purchaser)<font color="red">*</font>
             </td>
             <td>
                 <select class="form-control selectpicker" data-live-search="true" title="-- Please select --" style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.BUYER_STANDARD">
@@ -127,9 +127,9 @@ End Code
         </tr>
     </table>
     <br />
-    <h2 style="font-family:'Taviraj';font-size:24px;">
+    <h3 style="font-family:'Taviraj'">
         <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
-    </h2>
+    </h3>
     <table width="100%">
         <tr>
             <td style="height:25px;width:35%;font-family:'Taviraj';font-size:20px;">

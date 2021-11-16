@@ -30,7 +30,7 @@ End Code
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
             <td>
-                1. เลข สธ หนังสือ อย. ให้ความเห็นชอบ ตย. 1009.4.3/123 (Reference No. of FDA Approval Letter e.g. 1009.4.3/123)<font color="red">*</font>
+                1. เลข สธ หนังสือ อย. ให้ความเห็นชอบ ตย. 1009/123 (Reference No. of FDA Approval Letter e.g. 1009/123)<font color="red">*</font>
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_DOCNO" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -127,6 +127,16 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
+                <span style="padding-left:1em">วันที่หมดอายุระบุในหนังสือ อย.ให้ความเห็นชอบ (Expiry Date Indicated in FDA Approval Letter)</span>
+            </td>
+            <td>
+                <md-datepicker ng-model="" md-placeholder="Enter date"
+                               input-aria-describedby="datepicker-description"
+                               input-aria-labelledby="datepicker-header"></md-datepicker>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:25px">
                 9. หน่วยงานที่ออกใบรับรอง (Certification Agency)<font color="red">*</font>
             </td>
             <td>
@@ -144,6 +154,14 @@ End Code
                 </select>
             </td>
         </tr>
+        <tr>
+            <td style="height:25px">
+                10. สถานที่ผลิตได้มาตรฐาน (Standard of Manufacturer)
+            </td>
+            <td>
+                <input class="form-control inline" ng-model="" style="font-family:'Taviraj';font-size:20px" type="text" />
+            </td>
+        </tr>
     </table>
     <br />
     <h2 style="font-family:'Taviraj';font-size:24px;">
@@ -152,7 +170,7 @@ End Code
     <table width="100%">
         <tr>
             <td style="height:25px;width:35%;font-family:'Taviraj';font-size:20px;">
-                10. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
+                11. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER.CER_SCOPE" style="font-family:'Taviraj';font-size:20px;" type="text" />

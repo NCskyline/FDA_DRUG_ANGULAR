@@ -71,7 +71,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
             }
             else if (PROCESS_ID == '36') {
-                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยเอกสารอื่นๆ ที่ อย.เห็นชอบ (Registration of Manfacturer with FDA Approved Document)';
+                $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยเอกสารอื่นๆ ที่ อย.เห็นชอบ (Registration of Manfacturer with FDA Approved Documents)';
                 $scope.SUB_PATH = SET_URL_SV('/CERT/FRM_CERT_MAIN');
             }
 
@@ -88,15 +88,15 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         else if (PROCESS_ID == '14' || PROCESS_ID == '15' || PROCESS_ID == '16' || PROCESS_ID == '17') {
 
             if (PROCESS_ID == '14') {
-                $scope.HEADER = '(ที่เป็นสารออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ (Active Substance in Locally Manufactured Drug Products))';
+                $scope.HEADER = 'ที่เป็นสารออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ (Notification of Active Substance in Locally Manufactured Drug Products)';
                 $scope.SUB_PATH = SET_URL_SV('/DH/FRM_MAIN_DH');
             }
             else if (PROCESS_ID == '15') {
-                $scope.HEADER = '(ที่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ (Active Substance not in Locally Manufactured Drug Products))';
+                $scope.HEADER = 'ที่เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ (Notification of Active Substance not in Locally Manufactured Drug Products)';
                 $scope.SUB_PATH = SET_URL_SV('/DH/FRM_MAIN_DH');
             }
             else if (PROCESS_ID == '16') {
-                $scope.HEADER = '(ที่เป็นสารไม่ออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ (Excipient in Locally Manufactured Drug Products))';
+                $scope.HEADER = 'เป็นสารไม่ออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ (Notification of Inactive in Locally Manufactured Drug Products)';
                 $scope.SUB_PATH = SET_URL_SV('/DH/FRM_MAIN_DH');
             }
             else if (PROCESS_ID == '17') {
@@ -183,7 +183,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     $scope.DATA_CHE1 = function (PROCESS) {
 
-        $scope.HEADER = 'เพิ่มสารเคมีที่มีส่วนผสมของสารออกฤทธิ์ชนิดสารเดี่ยว';
+        $scope.HEADER = 'เพิ่มสารออกฤทธิ์ชนิดสารเดี่ยว (Addition of Active Substance)';
         $scope.SUB_PATH = SET_URL_SV('/DH/FRM_CHEMICAL_MAIN');
 
         var dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '1', 'A');
@@ -202,7 +202,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     $scope.DATA_CHE2 = function (PROCESS) {
 
-        $scope.HEADER = 'เพิ่มสารเคมีที่มีส่วนผสมของสารออกฤทธิ์ชนิดสารผสม';
+        $scope.HEADER = 'เพิ่มสารออกฤทธิ์ชนิดสารผสม (Addition of Active Substance Mixture)';
         $scope.SUB_PATH = SET_URL_SV('/DH/FRM_CHEMICAL_MAIN');
 
         var dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '2', 'A');
@@ -220,7 +220,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     $scope.DATA_CHE3 = function (PROCESS) {
 
-        $scope.HEADER = 'เพิ่มสารเคมีที่ไม่มีส่วนผสมของสารออกฤทธิ์ชนิดสารเดี่ยว';
+        $scope.HEADER = 'เพิ่มสารไม่ออกฤทธิ์ชนิดสารเดี่ยว (Addition of Inactive Substance)';
         $scope.SUB_PATH = SET_URL_SV('/DH/FRM_CHEMICAL_MAIN');
 
         dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '1', 'I');
@@ -238,7 +238,7 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     $scope.DATA_CHE4 = function (PROCESS) {
 
-        $scope.HEADER = 'เพิ่มสารเคมีที่ไม่มีส่วนผสมของสารออกฤทธิ์ชนิดสารผสม';
+        $scope.HEADER = 'เพิ่มสารไม่ออกฤทธิ์ชนิดสารผสม (Addition of Inactive Substance Mixture)';
         $scope.SUB_PATH = SET_URL_SV('/DH/FRM_CHEMICAL_MAIN');
 
         dataCHE = CENTER_SV.SP_CHEMICAL_REQUEST_CUSTOMER_CHEM_TYPE(CITIZEN, '1', '2', 'I');
@@ -291,14 +291,17 @@ app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
         if ($scope.PROCESS_ID  == '14') {
             $scope.INPUT = SET_URL_SV('/DH/INPUT_DH_AR');
             $scope.HEADER_PROCESS = 'เป็นสารออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ';
+            $scope.HEADER_PROCESS1 = '(Application to Notify Active Substance in Locally Manufactured Drug Products)';
         }
         else if ($scope.PROCESS_ID  == '15') {
             $scope.INPUT = SET_URL_SV('/DH/INPUT_DH_AN');
             $scope.HEADER_PROCESS = 'เป็นสารออกฤทธิ์ที่ไม่มีในทะเบียนตำรับยาผลิตในประเทศ';
+            $scope.HEADER_PROCESS1 = '(Application to Notify Active Substance in Locally Manufactured Drug Products)';
         }
         else if ($scope.PROCESS_ID  == '16') {
             $scope.INPUT = SET_URL_SV('/DH/INPUT_DH_IR');
-            $scope.HEADER_PROCESS = 'ไม่เป็นสารไม่ออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ';
+            $scope.HEADER_PROCESS = 'เป็นสารไม่ออกฤทธิ์ในทะเบียนตำรับยาผลิตในประเทศ';
+            $scope.HEADER_PROCESS1 = '(Application to Notify Active Substance in Locally Manufactured Drug Products)';
         }
         else if (PROCESS_ID == '17') {
             $scope.INPUT = SET_URL_SV('/DH/INPUT_DH_IN');

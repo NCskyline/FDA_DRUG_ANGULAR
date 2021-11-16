@@ -23,20 +23,18 @@
                 <option ng-repeat="x in LIST_STATUS" value="{{x.STATUS_ID}}">{{x.STATUS_NAME}}</option>
             </select>
         </td>
-        <td width="2%"></td>
         <td style="width:12%">เลขดำเนินการ</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="TR_ID"></td>
+    </tr>
     <tr>
         <td style="width:12%">เลขจดแจ้ง</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="DRM"></td>
-        <td width="2%"></td>
         <td style="width:12%">ชื่อสาร</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="iowanm"></td>
     </tr>
     <tr>
         <td style="width:12%">ผู้รับอนุญาต</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="thanm"></td>
-        <td width="2%"></td>
         <td style="width:12%">ผู้ผลิตเภสัชเคมีภัณฑ์</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="frgn"></td>
     </tr>
@@ -60,8 +58,8 @@
                         <th style="width:8%">วันที่ยื่นคำขอ</th>
                         <th style="width:10%">เลขจดแจ้ง</th>
                         <th style="width:20%">ชื่อสาร</th>
-                        <th style="width:10%">ชื่อผู้ผลิตภค.</th>
-                        <th style="width:10%">ชื่อผู้รับฯ</th>
+                        <th style="width:10%">ชื่อผู้ผลิต</th>
+                        <th style="width:10%">ชื่อผู้รับอนุญาต</th>
                         <th style="width:5%">ประเภท</th>
                         <th style="width:5%">สถานะ</th>
 

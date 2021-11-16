@@ -9,12 +9,12 @@ End Code
     </script>
 
 <div class="ic" > @*ng-repeat="datas in LIST_GMP"*@
-    <h2 style="font-family:'Taviraj';font-size:24px;">
-        <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
-    </h2>
-    <h2 style="font-family:'Taviraj';font-size:24px;">
-        <b>(Information of Certificate of Drug Substance Manufacturer)</b>
-    </h2>
+    <h3 style="font-family:'Taviraj'">
+        <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์มาตรฐาน GMP</b>
+    </h3>
+    <h3 style="font-family:'Taviraj'">
+        <b>(Information of Certificate of Drug Substance Manufacturer with GMP Standard)</b>
+    </h3>
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
             <td style="height:25px;width:35%;">
@@ -58,7 +58,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                5. เมือง (City / Province/ State)<font color="red">*</font>
+                5. เมือง (City / Province / State)<font color="red">*</font>
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.ADDRESS_CITY" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -113,7 +113,7 @@ End Code
             <td>
                 <span style="padding-left:1em">
                     <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="1" />
-                    หน่วยงานรัฐที่ออกใบรับรอง (Government Certification Agency)
+                    หน่วยงานรัฐของประเทศที่ออกใบรับรอง (Government Certification Agency)
                 </span>
             </td>
             <td rowspan="2">
@@ -171,9 +171,9 @@ End Code
         </tr>
     </table>
     <br />
-    <h2 style="font-family:'Taviraj';font-size:24px;">
+    <h3 style="font-family:'Taviraj'">
         <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
-    </h2>
+    </h3>
     <table width="100%">
         <tr>
             <td style="height:25px;width:35%;font-family:'Taviraj';font-size:20px;">

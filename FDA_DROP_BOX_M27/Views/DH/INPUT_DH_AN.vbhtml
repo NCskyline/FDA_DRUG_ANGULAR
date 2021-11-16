@@ -44,19 +44,18 @@ End Code
     </table>
     <table width="100%">
         <tr>
-            <td>
+            <td width="15%">
                 ชื่อผู้ผลิต (Manufacturer)
             </td>
-            <td width="30%" style="border-bottom:dotted;border-bottom-width:thin;">
+            <td width="45%" style="border-bottom:dotted;border-bottom-width:thin">
                 <label>
                     {{LIST_REF_CERT.CER.FOREIGN_LOCATION_NAME}}
                 </label>
             </td>
-            <td width="2%"></td>
-            <td>
+            <td width="12%">
                 ประเทศ (Country)
             </td>
-            <td width="40%" style="border-bottom:dotted;border-bottom-width:thin;">
+            <td style="border-bottom:dotted;border-bottom-width:thin">
                 <label>
                     {{LIST_REF_CERT.COUNTRY_NAME}}
                 </label>
@@ -65,20 +64,34 @@ End Code
     </table>
     <table width="100%">
         <tr>
-            <td width="24%">
-                วันเดือนปีที่ออกใบรับรอง (Issue Date)
+            <td width="15%">
+                ที่ตั้ง (Site Address)
             </td>
-            <td style="border-bottom:dotted;border-bottom-width:thin;">
+            <td style="border-bottom:dotted;border-bottom-width:thin"></td>
+        </tr>
+    </table>
+    <table width="100%">
+        <tr>
+            <td width="20%">
+                เมือง (City / Province / State)
+            </td>
+            <td style="border-bottom:dotted;border-bottom-width:thin"></td>
+        </tr>
+        <tr>
+            <td width="20%">
+                วันที่ออกใบรับรอง (Issue Date)
+            </td>
+            <td style="border-bottom:dotted;border-bottom-width:thin">
                 <label>
                     {{LIST_REF_CERT.CER.DOCUMENT_DATE}}
                 </label>
             </td>
         </tr>
         <tr>
-            <td>
-                วันเดือนปีที่หมดอายุ (Valid Until)
+            <td width="20%">
+                วันที่หมดอายุใบรับรอง (Valid Until)
             </td>
-            <td style="border-bottom:dotted;border-bottom-width:thin;">
+            <td style="border-bottom:dotted;border-bottom-width:thin">
                 <label>
                     {{LIST_REF_CERT.CER.EXP_DOCUMENT_DATE}}
                 </label>
@@ -93,7 +106,6 @@ End Code
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
             </td>
-            <td width="2%"></td>
             <td>
                 ประเทศ (Country)
             </td>
@@ -117,17 +129,19 @@ End Code
     </table>
     <table width="100%">
         <tr>
-            <td width="30%">
+            <td width="40%">
                 มาตรฐานตามตำรับยา (Phamacopoeia Standard of Drug Substance)
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
             </td>
         </tr>
+    </table>
+    <table width="100%">
         <tr>
-            <td width="30%">
-                จำนวนภาชนะบรรจุ (ต.ย. 2 ถุง) <br />
-                (Quantity (Number of Packages e.g. 2 bags))
+            <td width="20%">
+                จำนวนภาชนะบรรจุ (ต.ย. 2 ถุง)<font color="red">*</font><br />
+                (Number of Packages e.g. 2 bags)
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.unit_alpha3" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
@@ -136,14 +150,13 @@ End Code
     </table>
     <table width="100%">
         <tr>
-            <td>
-                น้ำหนัก / ปริมาตรรวม (ต.ย. 10 กิโลกรัม โดย 10 กิโลกรัม มาจาก 2 ถุง x 5 กิโลกรัมต่อถุง) <br />
-                (Total Weight / Volume (e.g. 10 kg. 10 kg which comes from 2 bags x 5 kg/bag))
+            <td width="45%">
+                น้ำหนัก / ปริมาตรรวม (ต.ย. 10 กิโลกรัม โดยมาจาก 2 ถุง x 5 กิโลกรัมต่อถุง) <br />
+                (Total Weight / Volume e.g. 10 kg. which comes from 2 bags x 5 kg/bag)
             </td>
             <td>
-                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.amount" style="font-family:'Taviraj';font-size:20px;width:150%" type="text" />
+                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.amount" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
             </td>
-            <td width="10%"></td>
             <td width="5%">
                 Unit
             </td>
@@ -178,7 +191,6 @@ End Code
                                 <input class="form-control inline" style="font-family:'Taviraj';font-size:20px;width:300%" type="text" />
                             </td>
                         </tr>
-                       
                     </table>
                     
                 </form>
@@ -192,33 +204,32 @@ End Code
             <td>
                 <form name="myForm">
                     <label>
-                        <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH1" value="1"></span>
+                        <span style="padding-left:2em;"><input type="radio" ng-model="LIST_DH.dh15rqt.ATTACH1" value="1"></span>
                         สำเนา ผ.ย. ๘ ที่ได้รับอนุมัติแล้ว พร้อมหนังสือสั่งซื้อจากผู้รับอนุญาตผลิตยา
                     </label> <br />
                     <label>
-                        <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH2" value="1"></span>
+                        <span style="padding-left:2em;"><input type="radio" ng-model="LIST_DH.dh15rqt.ATTACH2" value="1"></span>
                         สำเนาใบอนุญาตผลิตเภสัชเคมีภัณฑ์ในต่างประเทศ และรับรองสำเนาโดยผู้รับอนุญาตที่ขอจดแจ้งเภสัชเคมีภัณฑ์
                     </label> <br />
                     <label>
-                        <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH3" value="1"></span>
+                        <span style="padding-left:2em;"><input type="radio" ng-model="LIST_DH.dh15rqt.ATTACH3" value="1"></span>
                         สำเนาใบสำคัญการขึ้นทะเบียนตำรับยา และสำเนา ท.ย.๑ หน้า๑ และหน้า๒/แบบ ย.๑ หน้า๓
                     </label> <br />
                     <label>
-                        <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH4" value="1"></span>
+                        <span style="padding-left:2em;"><input type="radio" ng-model="LIST_DH.dh15rqt.ATTACH4" value="1"></span>
                         สำเนารายงานผลการตรวจวิเคราะห์คุณภาพ (Certification of Analysis) ซึ่งระบุข้อกำหนดมาตราฐาน
                         (Specifications)
                     </label> <br />
                     <label>
-                        <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH5" value="1"></span>
+                        <span style="padding-left:2em;"><input type="radio" ng-model="LIST_DH.dh15rqt.ATTACH5" value="1"></span>
                         สำเนาหนังสือรับรองมาตราฐานหลักเกณฑ์วิธีการที่ดีในการผลิตเภสัชเคมีภัณฑ์
                         (GoodManufacturing Practice) ตามมาตราฐานองค์การอนามัยโลกหรือเทียบเท่า (กรณีนำเข้า)
-                        (Specifications)
                     </label> <br />
                     <table>
                         <tr>
                             <td width="40%">
                                 <label>
-                                    <span style="padding-left:2em;"><input type="checkbox" ng-model="LIST_DH.dh15rqt.ATTACH6" value="1"></span>
+                                    <span style="padding-left:2em;"><input type="radio" ng-model="LIST_DH.dh15rqt.ATTACH6" value="1"></span>
                                     อื่น ๆ (ระบุ)<font color="red">*</font>
                                 </label>   
                             </td>

@@ -11,12 +11,12 @@ End Code
 </script>
 
 <div class="ic">
-    <h2 style="font-family:'Taviraj';font-size:24px;">
-        <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
-    </h2>
-    <h2 style="font-family:'Taviraj';font-size:24px;">
-        <b>(Information of Certificate of Drug Substance Manufacturer)</b>
-    </h2>
+    <h3 style="font-family:'Taviraj'">
+        <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์มาตรฐาน HACCP</b>
+    </h3>
+    <h3 style="font-family:'Taviraj'">
+        <b>(Information of Certificate of Drug Substance Manufacturer with HACCP Standard)</b>
+    </h3>
     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
         <tr>
             <td style="height:25px;width:35%;">
@@ -125,7 +125,7 @@ End Code
         </tr>
         <tr>
             <td style="height:25px">
-                8. มาตฐาน HACCP ขแงสถานที่ผลิต ต.ย. Codex General Principles of Food Hygiene CAC/RCP 1-1969 (HACCP Standard of Manufacturer e.g. Codex General Principles of Food Hygiene CAC/RCP 1-1969)
+                8. มาตฐาน HACCP ของสถานที่ผลิต ต.ย. Codex General Principles of Food Hygiene CAC/RCP 1-1969 (HACCP Standard of Manufacturer e.g. Codex General Principles of Food Hygiene CAC/RCP 1-1969)
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD" style="font-family:'Taviraj';font-size:20px;" type="text" />
@@ -133,9 +133,9 @@ End Code
         </tr>
     </table>
     <br />
-    <h2 style="font-family:'Taviraj';font-size:24px;">
+    <h3 style="font-family:'Taviraj'">
         <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
-    </h2>
+    </h3>
     <table width="100%">
         <tr>
             <td style="height:25px;width:35%;font-family:'Taviraj';font-size:20px;">

@@ -7,7 +7,6 @@ End Code
         <div>
             <p style="text-align: right;">แบบ ย.๓</p>
             <p style="text-align: right;">FORM MA-3</p>
-
         </div>
         <table style="width:100%">
             <tr>

@@ -4,7 +4,7 @@
     <div style="font-family:'Taviraj';width:100%">
         <div>
             <div>
-                <h3>เพิ่มชื่อสาร</h3>
+                <h3>เพิ่มชื่อเภสัชเคมีภัณฑ์</h3>
             </div>
             <br />
             <table width="100%" style="font-family:'Taviraj';">

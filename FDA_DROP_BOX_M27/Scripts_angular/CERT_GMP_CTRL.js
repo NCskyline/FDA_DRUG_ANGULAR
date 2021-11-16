@@ -135,7 +135,7 @@ app.controller('CERT_GMP_CTRL', function ($scope, CENTER_SV, $http, $location) {
         }
         else if (PROCESS == '36') {
             $scope.INPUT = SET_URL_SV('/CERT/INPUT_CERT_OTHER');
-            $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยเอกสารอื่นๆ ที่ อย.เห็นชอบ (Registration of Manfacturer with FDA Approved Document)';
+            $scope.HEADER = 'ลงทะเบียนสถานที่ผลิตด้วยเอกสารอื่นๆ ที่ อย.เห็นชอบ (Registration of Manfacturer with FDA Approved Documents)';
         }  
     }
 

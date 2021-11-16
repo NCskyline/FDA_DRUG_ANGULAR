@@ -20,10 +20,19 @@ End Code*@
 </script>*@
 
 <div class="ic" ng-controller="DH_CTRL" ng-app="ANGULAR_APP" ng-init="pageloadDH()">
-    <center>
-        <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2> <br />
+    <div ng-show="PROCESS_ID == '15'">
+        <div>
+            <p style="text-align:right;font-size:20px">แบบ ภค.1</p>
+            <p style="text-align:right;font-size:20px">Form API-1</p>
+        </div>
+    </div>
+    <center style="font-family:'Taviraj'">
+        <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2>
         <h2>
             {{HEADER_PROCESS}}
+        </h2>
+        <h2>
+            {{HEADER_PROCESS1}}
         </h2>
     </center>
     <br />
@@ -61,7 +70,7 @@ End Code*@
     <table width="100%" style="font-family:'Taviraj';font-size:20px">
         <tr>
             <td width="10%">
-                ใบอนุญาต เลขที่
+                ใบอนุญาตเลขที่
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
                 <label>{{LIST_DH.LCN_NO_DISPLAY}}</label>
@@ -132,7 +141,7 @@ End Code*@
                         <input class="form-control" placeholder="ค้นหาสารที่นี่..." ng-model="iowanm" />
                     </td>
                     <td align="left" width="50%">
-                        <button class="btn btn-lg" ng-click="BTN_SEARCH_CHEM(iowanm)" value="ค้นหาสารที่นี่">ค้นหาสาร</button>
+                        <button class="btn btn-lg" ng-click="BTN_SEARCH_CHEM(iowanm)" value="ค้นหาสารที่นี่">ค้นหาสาร (Search for Substance)</button>
                     </td>
                 </tr>
             </table>
@@ -141,7 +150,7 @@ End Code*@
             <table id="myTable" datatable="ng" class="dataTable" width="100%">
                 <thead>
                     <tr>
-                        <th>ชื่อสาร</th>
+                        <th width="50%">ชื่อสาร (Substance)</th>
                         <th>A</th>
                         <th></th>
                     </tr>
@@ -166,8 +175,8 @@ End Code*@
                             boundary-link-numbers="true" rotate="false" max-size="maxSize">
             </uib-pagination>
             <div align="center">
-                <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
-                <button type="button" class="btn btn-sm" ng-disabled="currentPage >= LIST_CHEM.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
+                <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i> ก่อนหน้า (Previous)</button>
+                <button type="button" class="btn btn-sm" ng-disabled="currentPage >= LIST_CHEM.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป (Next)<i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
 
@@ -176,7 +185,7 @@ End Code*@
                 <thead>
                     <tr>
                         <th>ลำดับ</th>
-                        <th>ชื่อสาร</th>
+                        <th width="55%">ชื่อสาร (Substance)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -206,7 +215,7 @@ End Code*@
                        <input class="form-control" placeholder="ค้นหาสารที่นี่..." ng-model="iowanm" />
                    </td>
                    <td align="left" width="50%">
-                       <button class="btn btn-lg" ng-click="BTN_SEARCH_CHEM(iowanm)" value="ค้นหาสารที่นี่">ค้นหาสาร</button>
+                       <button class="btn btn-lg" ng-click="BTN_SEARCH_CHEM(iowanm)" value="ค้นหาสารที่นี่">ค้นหาสาร (Search for Substance)</button>
                    </td>
                </tr>
            </table>
@@ -215,7 +224,7 @@ End Code*@
            <table id="myTable" datatable="ng" class="dataTable" width="100%">
                <thead>
                    <tr>
-                       <th>ชื่อสาร</th>
+                       <th width="50%">ชื่อสาร (Substance)</th>
                        <th>A</th>
                        <th></th>
                    </tr>
@@ -240,8 +249,8 @@ End Code*@
                            boundary-link-numbers="true" rotate="false" max-size="maxSize">
            </uib-pagination>
            <div align="center">
-               <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
-               <button type="button" class="btn btn-sm" ng-disabled="currentPage >= LIST_CHEM.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
+               <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>ก่อนหน้า (Previous)</button>
+               <button type="button" class="btn btn-sm" ng-disabled="currentPage >= LIST_CHEM.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป (Next)<i class="fas fa-arrow-right"></i></button>
            </div>
        </div>
 
@@ -250,7 +259,7 @@ End Code*@
                <thead>
                    <tr>
                        <th>ลำดับ</th>
-                       <th>ชื่อสาร</th>
+                       <th width="55%">ชื่อสาร (Substance)</th>
                    </tr>
                </thead>
                <tbody>
@@ -273,7 +282,7 @@ End Code*@
    </div>
    <br />
    <div style="text-align:center">
-       <input type="button" class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_SAVE_DH()" value="บันทึก" />
-       <input type="button" class="btn btn-lg" style="background-color:#FFD700" ng-click="BTN_BACK()" value="ย้อนกลับ" />
+       <input type="button" class="btn btn-lg" style="background-color:#FFD700" ng-click="BTN_BACK()" value="ย้อนกลับ (Back)" />
+       <input type="button" class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_SAVE_DH()" value="บันทึก (Save)" />
    </div>
 </div>

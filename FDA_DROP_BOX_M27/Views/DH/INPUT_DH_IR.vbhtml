@@ -26,14 +26,13 @@ End Code
 
     <table width="100%">
         <tr>
-            <td>
+            <td width="15%">
                 ชื่อผู้ผลิต (Manufacturer)
             </td>
             <td width="50%">
                 <input class="form-control inline" ng-model="LIST_DH.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
             </td>
-            <td width="2%"></td>
-            <td>
+            <td width="12%">
                 ประเทศ (Country)
             </td>
             <td width="20%">
@@ -52,7 +51,6 @@ End Code
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
             </td>
-            <td width="2%"></td>
             <td>
                 ประเทศ (Country)
             </td>

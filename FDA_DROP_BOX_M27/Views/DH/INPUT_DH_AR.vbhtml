@@ -33,19 +33,18 @@
     </table>
     <table width="100%">
         <tr>
-            <td>
+            <td width="33%">
                 ชื่อผู้ผลิตเภสัชเคมีภัณฑ์ (Drug Substance Manufacturer)
             </td>
-            <td width="28%" style="border-bottom:dotted;border-bottom-width:thin;">
+            <td width="35%" style="border-bottom:dotted;border-bottom-width:thin">
                 <label>
                     {{LIST_REF_CERT.DH15_DETAIL_CER.FOREIGN_LOCATION_NAME}}
                 </label>
             </td>
-            <td width="2%"></td>
-            <td>
+            <td width="12%">
                 ประเทศ (Country)
             </td>
-            <td width="20%" style="border-bottom:dotted;border-bottom-width:thin;">
+            <td style="border-bottom:dotted;border-bottom-width:thin">
                 <label>
                     {{LIST_REF_CERT.COUNTRY_NAME}}
                 </label>
@@ -54,8 +53,22 @@
     </table>
     <table width="100%">
         <tr>
-            <td width="24%">
-                วันที่ที่ออกใบรับรอง (Issue Date)
+            <td width="15%">
+                ที่ตั้ง (Site Address)
+            </td>
+            <td style="border-bottom:dotted;border-bottom-width:thin"></td>
+        </tr>
+    </table>
+    <table width="100%">
+        <tr>
+            <td width="20%">
+                เมือง (City / Province / State)
+            </td>
+            <td style="border-bottom:dotted;border-bottom-width:thin"></td>
+        </tr>
+        <tr>
+            <td width="20%">
+                วันที่ออกใบรับรอง (Issue Date)
             </td>
             <td style="border-bottom:dotted;border-bottom-width:thin;">
                 <label>
@@ -64,10 +77,10 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td width="20%">
                 วันที่ใบรับรองหมดอายุ (Valid Until)
             </td>
-            <td style="border-bottom:dotted;border-bottom-width:thin;">
+            <td style="border-bottom:dotted;border-bottom-width:thin">
                 <label>
                     {{LIST_REF_CERT.CER.EXP_DOCUMENT_DATE}}
                 </label>
@@ -82,7 +95,6 @@
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.AGENT_NAME" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
             </td>
-            <td width="2%"></td>
             <td>
                 ประเทศ (Country)
             </td>

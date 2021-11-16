@@ -11,7 +11,7 @@ End Code
                 <td>{{LCNNO_NO}}</td>
             </tr>
             <tr>
-                <td>ชื่อผู้รับอนุญาต (License Name)</td>
+                <td>ชื่อผู้รับอนุญาต (License Holder Name)</td>
                 <td>{{nameOperator}}</td>
             </tr>
             <tr>
@@ -23,7 +23,7 @@ End Code
         <table style="width:100%">
             <tr>
                 <td style="width:100%"><input style="width:60%" class="form-control" placeholder="ค้นหา..." ng-model="filter" /></td>
-                <td align="right"><button class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="INPUT_CERT()">สร้างคำขอ</button></td>
+                <td align="right"><button class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="INPUT_CERT()">สร้างคำขอ (Create Application)</button></td>
             </tr>
         </table>
         <br />
@@ -38,7 +38,7 @@ End Code
                                 <th>วันที่ยื่นคำขอ <br />
                                 Submission Date</th>
                                 <th>รหัสดำเนินการ <br />
-                                Submission No.</th>
+                                Submission Code</th>
                                 <th>ชื่อผู้ผลิต <br />
                                 Manufacturer</th>
                                 <th>ประเทศ <br />
@@ -78,8 +78,8 @@ End Code
                                     boundary-link-numbers="true" rotate="false" max-size="maxSize">
                     </uib-pagination>
                     <div align="right">
-                        <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
-                        <button type="button" class="btn btn-sm" ng-disabled="currentPage >= DATA_GMP.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
+                        <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>ก่อนหน้า (Previous)</button>
+                        <button type="button" class="btn btn-sm" ng-disabled="currentPage >= DATA_GMP.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป (Next)<i class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>

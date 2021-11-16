@@ -10,7 +10,7 @@ End Code
 <table style="width:100%">
     <tr>
         <td style="width:100%"><input style="width:60%" class="form-control" placeholder="ค้นหา..." ng-model="filter" /></td>
-        <td align="right"><button class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="ADD_CHEMICAL()">เพิ่มสาร</button></td>
+        <td align="right"><button class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="ADD_CHEMICAL()">เพิ่มสาร (Add Substance)</button></td>
     </tr>    
 </table>
 <br />
@@ -21,9 +21,12 @@ End Code
                 <thead>
                     <tr>
                         <th>เลขรับ</th>
-                        <th>ชื่อสาร</th>
-                        <th>สถานะ</th>
-                        <th>รหัสสาร</th>
+                        <th>ชื่อสาร<br />
+                        Substance</th>
+                        <th>สถานะ<br />
+                        Status</th>
+                        <th>รหัสสาร<br />
+                        Code</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -50,8 +53,8 @@ End Code
                             boundary-link-numbers="true" rotate="false" max-size="maxSize">
             </uib-pagination>
             <div align="right">
-                <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
-                <button type="button" class="btn btn-sm" ng-disabled="currentPage >= DATA_CHEMICAL.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
+                <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>ก่อนหน้า (Previous)</button>
+                <button type="button" class="btn btn-sm" ng-disabled="currentPage >= DATA_CHEMICAL.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป (Next)<i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
     </div>
