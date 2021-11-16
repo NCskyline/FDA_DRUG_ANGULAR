@@ -1,8 +1,8 @@
 ﻿@Code
-    ViewData("Title") = "INPUT_YOR_3"
+    ViewData("Title") = "FRM_SUBSTITUTE_CONFIRM"
 End Code
 
-<div >
+<div>
     <div class="ic" style="font-family:'Taviraj';width:100%">
         <div>
             <p style="text-align: right;">แบบ ย.๓</p>
@@ -108,10 +108,14 @@ End Code
         <br />
         <br />
         <br />
-        <div style="text-align:center">
-            <button class="btn btn-lg" style="background-color:#38A86B;color:white">บันทึก</button>
-            <button class="btn btn-lg" style="background-color:#FFD700">ย้อนกับ</button>
-        </div>
         <br />
+        <br />
+        <div style="text-align:center">
+            <button class="btn btn-lg" style="background-color:#38A86B;color:white">ยื่นคำขอ</button>
+            <button class="btn btn-lg" style="background-color:#FF0000;color:white">ยกเลิก / ยกเลิกคำขอ</button>
+            <button class="btn btn-lg">ดาวน์โหลด PDF</button>
+            <button class="btn btn-lg" style="background-color:#FFD700">ย้อนกลับ</button>
+        </div>
     </div>
 </div>
+

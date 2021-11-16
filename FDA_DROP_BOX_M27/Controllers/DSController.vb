@@ -14,5 +14,9 @@ Namespace Controllers
         Function INPUT_DS_PORYOR8() As ActionResult
             Return View()
         End Function
+        Function FRM_DS_CONFIRM() As ActionResult
+            Return View()
+        End Function
+
     End Class
 End Namespace

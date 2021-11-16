@@ -34,6 +34,11 @@ End Code
                     <td></td>
                 </tr>
             </table>
+            <br />
+
+        </div>
+        <div class="in">
+            <br />
             <div align="center">
                 <h3>ข้อมูลใบอนุญาต</h3>
             </div>
@@ -136,6 +141,8 @@ End Code
                     </tr>
                 </table>
             </div>
+            <br />
+            <br />
             <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
                 <input type="button" class="btn btn-lg " value="บันทึก"/>
                 <input type="button" class="btn btn-lg "  value="ย้อนกลับ"/>

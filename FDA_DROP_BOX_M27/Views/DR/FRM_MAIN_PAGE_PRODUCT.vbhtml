@@ -36,7 +36,7 @@ End Code
                     </li>
                     <li>
                         <div class="listree-submenu-heading" style="color:black">
-                            <a ng-click="BTN_MENU('99')" style="color:#06B716">ง. คำขอใบแทนใบสำคัญการขึ้นทะเบียนตำรับยา</a>
+                            <a ng-click="BTN_MENU('130098')" style="color:#06B716">ง. คำขอใบแทนใบสำคัญการขึ้นทะเบียนตำรับยา</a>
                         </div>
                     </li>
                     <li>

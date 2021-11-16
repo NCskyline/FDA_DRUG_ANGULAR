@@ -103,9 +103,67 @@ End Code
                                         <td>เลขดำเนินการ</td>
                                         <td>สถานะ</td>
                                         <td></td>
+                                        <td></td>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <tr>
+                                        <td>DL-64-01257</td>
+                                        <td>พาราทดสอบ</td>
+                                        <td>640009999</td>
+                                        <td>บันทึกแล้ว รอการส่งเรื่อง</td>
+                                        <td>
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="">
+                                                ดูข้อมูล
+                                            </a>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DL-64-01257</td>
+                                        <td>พาราทดสอบ</td>
+                                        <td>640009999</td>
+                                        <td>ส่งเรื่องแล้ว รอการชำระเงิน</td>
+                                        <td>
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="">
+                                                ดูข้อมูล
+                                            </a>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DL-64-01257</td>
+                                        <td>พาราทดสอบ</td>
+                                        <td>640009999</td>
+                                        <td>อนุมัติคำขอ</td>
+                                        <td>
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="">
+                                                ดูข้อมูล
+                                            </a>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DL-64-01257</td>
+                                        <td>พาราทดสอบ</td>
+                                        <td>640009999</td>
+                                        <td>รอการแก้ไขคำขอ</td>
+                                        <td>
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="">
+                                                ดูข้อมูล
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span class="fa fa-pen"></span>
+                                            <a ng-click="">
+                                                ดูรายละเอียดที่ต้องแก้ไข
+                                            </a>
+                                        </td>
+                                    </tr>
                                     <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
                                         <td>{{data.RCVNO_MANUAL}}</td>
                                         <td>{{data.LCNNO_MANUAL}}</td>
@@ -115,6 +173,12 @@ End Code
                                             <span class="fa fa-eye"></span>
                                             <a ng-click="">
                                                 ดูข้อมูล
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span class="fa fa-pen"></span>
+                                            <a ng-click="">
+                                                ดูรายละเอียดที่ต้องแก้ไข
                                             </a>
                                         </td>
                                     </tr>

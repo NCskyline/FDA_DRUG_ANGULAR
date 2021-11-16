@@ -4433,16 +4433,6 @@
                 <strong>แบบ น.ว.จ. ๓/๔-๑</strong>
             </h1>
             <br />
-            <div class="title1">
-                <label style="font-size:16px;margin-top:25px">
-                    ที่ปิดรูปถ่าย<br />
-                    ผู้ขออนุญาติ<br />
-                    หรือ<br />
-                    ผู้ดำเนินกิจการ<br />
-                    ขนาด ๓ x ๔ ซม.<br />
-                </label>
-            </div>
-
             <div class="title2">
                 <table style="font-size:20px;width:95%;margin-top:10px;margin-left:10px">
                     <tr>
@@ -4475,9 +4465,16 @@
                         </td>
                     </tr>
                 </table>
-
             </div>
-
+            <div class="title1">
+                <label style="font-size:16px;margin-top:25px">
+                    ที่ปิดรูปถ่าย<br />
+                    ผู้ขออนุญาติ<br />
+                    หรือ<br />
+                    ผู้ดำเนินกิจการ<br />
+                    ขนาด ๓ x ๔ ซม.<br />
+                </label>
+            </div>
 
             <div style="clear:both"></div>
             <br />

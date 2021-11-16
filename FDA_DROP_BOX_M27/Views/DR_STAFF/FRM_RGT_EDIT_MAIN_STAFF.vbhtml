@@ -26,11 +26,69 @@ End Code
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>640009999</td>
+                        <td></td>
+                        <td>K 1/62</td>
+
+                        <td>พารา</td>
+                        <td>para</td>
+                        <td>ฉลากทุกขนาดบรรจุ และเอกสารกำกับยาตามที่ได้ขึ้นทะเบียนไว้</td>
+                        <td>อนุมัติ</td>
+                        <td></td>
+                        <td>
+                            <span class="fa fa-eye"></span>
+                            <a ng-click="BTN_PREVIEW_RGT_EDIT()">
+                                ดูข้อมูล
+                            </a>
+                        </td>
+                        <td>
+                            <span class="fa fa-eye"></span>
+                            <a ng-click="">
+                                ใบนัด
+                            </a>
+                        </td>
+                        <td>
+                            <span class="fa fa-eye"></span>
+                            <a ng-click="">
+                                เพิ่มผู้รับผิดชอบคำขอ
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>640009999</td>
+                        <td></td>
+                        <td>K 1/62</td>
+
+                        <td>พารา</td>
+                        <td>para</td>
+                        <td>ฉลากทุกขนาดบรรจุ และเอกสารกำกับยาตามที่ได้ขึ้นทะเบียนไว้</td>
+                        <td>เสนอลงนาม</td>
+                        <td></td>
+                        <td>
+                            <span class="fa fa-eye"></span>
+                            <a ng-click="BTN_PREVIEW_RGT_EDIT()">
+                                ดูข้อมูล
+                            </a>
+                        </td>
+                        <td>
+                            <span class="fa fa-eye"></span>
+                            <a ng-click="">
+                                ใบนัด
+                            </a>
+                        </td>
+                        <td>
+                            <span class="fa fa-eye"></span>
+                            <a ng-click="">
+                                เพิ่มผู้รับผิดชอบคำขอ
+                            </a>
+                        </td>
+                    </tr>
                     <tr ng-repeat="data in DATA_EDIT_TABEAN_STAFF">
                         <td>{{data.TR_ID}}</td>
                         <td>{{data.RCVNO_MANUAL}}</td>
                         <td>{{data.rgtno_display}}</td>
-                        
+
                         <td>{{data.thadrgnm}}</td>
                         <td>{{data.engdrgnm}}</td>
                         <td>{{data.EDIT_DESCRIPTION}}</td>

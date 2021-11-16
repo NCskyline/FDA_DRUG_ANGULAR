@@ -202,8 +202,8 @@
                 
             } else if (SEQ == '996') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_SUBSTITUTE_TABEAN_STAFF_MAIN');
-                var dataedit1 = CENTER_SV.SP_DRRGT_SUBSTITUTE_STAFF();
-                dataedit1.then(function (datas) {
+                var dataedit4 = CENTER_SV.SP_DRRGT_SUBSTITUTE_STAFF();
+                dataedit4.then(function (datas) {
                     $scope.DATA_STT_TABEAN_STAFF = datas.data;
                 }, function () { });
                 

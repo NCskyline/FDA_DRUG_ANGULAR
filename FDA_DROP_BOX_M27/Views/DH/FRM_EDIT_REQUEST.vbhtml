@@ -2,7 +2,7 @@
     ViewData("Title") = "FRM_EDIT_REQUEST"
 End Code
 
-    <div ng-controller="" ng-app="ANGULAR_APP">
+    <div @*ng-controller="" ng-app="ANGULAR_APP"*@>
         <div class="ic">
             <div>
                 <div class="row">
@@ -47,7 +47,7 @@ End Code
 
             <div class="row">
                 <div class="col-sm-12" style="width:100%">
-                    <div class="card" ng-repeat="datas in DOC_LIST.FILE_LISTs">
+                    <div class="card" >@*ng-repeat="datas in DOC_LIST.FILE_LISTs"*@
                         <div class="card-header" ng-show="datas.PIORITY=='HIGH'">
                             หัวข้อเอกสาร <span style="color:red;"> (บังคับแนบ)</span>
                         </div>

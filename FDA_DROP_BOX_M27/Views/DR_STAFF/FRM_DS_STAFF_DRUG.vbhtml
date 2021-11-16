@@ -20,6 +20,28 @@ End Code
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>5/12/2021 2:02:53 PM</td>
+                        <td>ผย8</td>
+                        <td>DL-64-00633</td>
+                        <td>ทดสอบยาตัวอย่าง/</td>
+                        <td>640000017	</td>
+                        <td>ชำระเงินแล้วรอการตรวจสอบ</td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <span class="fa fa-eye"></span>
+                            <a ng-click="">
+                                ดูข้อมูล
+                            </a>
+                        </td>
+                        <td>
+                            <span class="fa fa-eye"></span>
+                            <a ng-click="">
+                                เพิ่มข้อมูลส่วนที่ 2
+                            </a>
+                        </td>
+                    </tr>
                     <tr ng-repeat="data in DATA_DS_STAFF">
                         <td>{{data.UPLOAD_DATE}}</td>
                         <td>{{data.lcntpcd}}</td>
@@ -41,7 +63,7 @@ End Code
                                 เพิ่มข้อมูลส่วนที่ 2
                             </a>
                         </td>
-                       
+
                     </tr>
                 </tbody>
                 <tfoot>

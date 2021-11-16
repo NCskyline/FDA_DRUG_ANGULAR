@@ -54,5 +54,12 @@ Namespace Controllers
         Function FRM_EDIT_REQUEST_STAFF_CONFIRM() As ActionResult
             Return View()
         End Function
+        Function FRM_DS_STAFF_CONFRIM() As ActionResult
+            Return View()
+        End Function
+        Function FRM_SUBSTITUTE_TABEAN_STAFF_CONFIRM() As ActionResult
+            Return View()
+        End Function
+
     End Class
 End Namespace
