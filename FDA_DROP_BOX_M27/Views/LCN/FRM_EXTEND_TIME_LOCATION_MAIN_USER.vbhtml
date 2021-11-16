@@ -30,7 +30,7 @@ End Code
         </table>
         <table width="100%">
             <tr>
-                <td width="20%">แสดงรายการที่ยื่นคำขอต่ออายุ</td>
+                <td width="25%">แสดงรายการที่ยื่นคำขอต่ออายุ</td>
                 <td>
                     <select style="width:10%;" ng-model="YEAR_SELECT" ng-change="getdetails_extend(YEAR_SELECT)">
                         <option value="1" selected>ปีล่าสุด</option>

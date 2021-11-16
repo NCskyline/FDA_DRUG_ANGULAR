@@ -212,16 +212,16 @@ End Code
                             <td width="20%">
                                 <input type="checkbox" />&nbsp;&nbsp;ไม่อนุญาต เนื่องจาก
                             </td>
-                            <td>
-                                <input class="form-control inline" style="font-family:'Taviraj';font-size:20px" type="text" />
+                            <td style="border-bottom:dotted;border-bottom-width:thin">
+                                @*<input class="form-control inline" style="font-family:'Taviraj';font-size:20px" type="text" />*@
                             </td>
                         </tr>
                         <tr>
                             <td width="20%">
                                 <input type="checkbox" />&nbsp;&nbsp;คำสั่งอื่น
                             </td>
-                            <td>
-                                <input class="form-control inline" style="font-family:'Taviraj';font-size:20px" type="text" />
+                            <td style="border-bottom:dotted;border-bottom-width:thin">
+                                @*<input class="form-control inline" style="font-family:'Taviraj';font-size:20px" type="text" />*@
                             </td>
                         </tr>
                     </table>
@@ -408,7 +408,9 @@ End Code
                             </tr>
                             <tr>
                                 <td><span style="padding-left:2em"><input type="checkbox" />&nbsp;&nbsp;อื่นๆ</span></td>
-                                <td><input class="form-control inline" style="font-family:'Taviraj';font-size:20px" type="text" /></td>
+                                <td style="border-bottom:dotted;border-bottom-width:thin">
+                                    @*<input class="form-control inline" style="font-family:'Taviraj';font-size:20px" type="text" />*@
+                                </td>
                             </tr>
                         </table>
                         <br />

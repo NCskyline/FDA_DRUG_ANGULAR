@@ -334,7 +334,7 @@
     $scope.SELECT_STAFF_EDIT_LCN = function (data) {
         sessionStorage.LCT_IDA = data.LCT_IDA;
         sessionStorage.LCN_IDA = data.IDA;
-        sessionStorage.PROCESS_ID = data.PROCESS_ID;
+        sessionStorage.PROCESS = data.PROCESS_ID;
         REDIRECT('/LCN_STAFF/PREVIEW_LCN_EDIT_STAFF');
     };
 

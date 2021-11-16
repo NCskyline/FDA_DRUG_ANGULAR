@@ -802,6 +802,10 @@
     <Content Include="Views\DR\FRM_SUBSTITUTE_TABEAN_MAIN.vbhtml" />
     <Content Include="Views\DR\INPUT_YOR_3.vbhtml" />
     <Content Include="Views\DR\PREVIEW_INPUT_YOR_3.vbhtml" />
+    <Content Include="Views\DI\PREVIEW_NYM2.vbhtml" />
+    <Content Include="Views\DI\PREVIEW_NYM3.vbhtml" />
+    <Content Include="Views\DI\PREVIEW_NYM4.vbhtml" />
+    <Content Include="Views\DI\PREVIEW_NYM4_2.vbhtml" />
     <Content Include="Views\DR_STAFF\FRM_DS_STAFF_CONFRIM.vbhtml" />
     <Content Include="Views\DS\FRM_DS_CONFIRM.vbhtml" />
     <Content Include="Views\DR\FRM_SUBSTITUTE_CONFIRM.vbhtml" />
