@@ -60,6 +60,9 @@ Namespace Controllers
         Function FRM_SUBSTITUTE_TABEAN_STAFF_CONFIRM() As ActionResult
             Return View()
         End Function
+        Function FRM_NYM_STAFF_CONFIRM() As ActionResult
+            Return View()
+        End Function
 
     End Class
 End Namespace
