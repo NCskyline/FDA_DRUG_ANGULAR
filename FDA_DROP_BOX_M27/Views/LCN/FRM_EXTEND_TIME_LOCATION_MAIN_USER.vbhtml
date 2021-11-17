@@ -7,7 +7,7 @@ End Code
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
 <div  ng-init="pageload()"> @*ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" class="ic"*@
-    <div style="font-family:'Taviraj';font-size:20px;">
+    <div style="font-family:'Taviraj';font-size:20px">
         <h2>ต่ออายุใบอนุญาตสถานที่ด้านยา</h2>
         <table width="100%">
             <tr>
@@ -16,10 +16,10 @@ End Code
                     <table>
                         <tr>
                             <td>
-                                <input type="button" value="รีเฟรชหน้าจอ" ng-click="RELOAD_PAGE()" />
+                                <input class="btn btn-lg" type="button" value="รีเฟรชหน้าจอ" ng-click="RELOAD_PAGE()" />
                             </td>
                             <td>
-                                <input type="button" value="ยื่นคำขอต่ออายุใบอนุญาต (ระบบใหม่)" ng-click="BTN_EXTEND()" />
+                                <input class="btn btn-lg" type="button" value="ยื่นคำขอต่ออายุใบอนุญาต (ระบบใหม่)" ng-click="BTN_EXTEND()" />
                             </td>
                         </tr>
                     </table>

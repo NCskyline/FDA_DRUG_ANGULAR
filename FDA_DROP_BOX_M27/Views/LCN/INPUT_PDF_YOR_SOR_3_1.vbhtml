@@ -266,7 +266,7 @@
             @*<input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />*@
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card" style=" border-top: 10px solid #277210;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
                         <table width="100%" style="font-family:'Taviraj'">
                             <thead>
                                 <tr>
@@ -394,9 +394,8 @@
             <table style="width:100%">
                 <tr>
                     <td align="center">
-                        <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
-
-                        <input type="button" class="btn btn-lg " ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
+                        <input type="button" class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
+                        <input type="button" class="btn btn-lg" style="background-color:#FFD700" ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
                     </td>
                 </tr>
             </table>

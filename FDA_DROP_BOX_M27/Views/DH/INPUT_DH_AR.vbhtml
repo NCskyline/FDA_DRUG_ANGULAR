@@ -56,7 +56,9 @@
             <td width="15%">
                 ที่ตั้ง (Site Address)
             </td>
-            <td style="border-bottom:dotted;border-bottom-width:thin"></td>
+            <td style="border-bottom:dotted;border-bottom-width:thin">
+                {{}}
+            </td>
         </tr>
     </table>
     <table width="100%">
@@ -64,7 +66,9 @@
             <td width="20%">
                 เมือง (City / Province / State)
             </td>
-            <td style="border-bottom:dotted;border-bottom-width:thin"></td>
+            <td style="border-bottom:dotted;border-bottom-width:thin">
+                {{}}
+            </td>
         </tr>
         <tr>
             <td width="20%">
