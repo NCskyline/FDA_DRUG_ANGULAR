@@ -224,6 +224,11 @@
         });
 
     };
+    $scope.BTN_POPUP_RECLASS = function () {
+        $('#exampleModalLong').modal('show');
+
+    };
+    
     $scope.BTN_SEND_RECLASS = function () {
         Swal.fire({
             title: 'คุณต้องการยื่นคำขอใช่หรือไม่ ?',
@@ -242,7 +247,6 @@
         });
 
     };
-
     $scope.BTN_PREVIEW = function () {
         REDIRECT('/DR/INPUT_YOR_1');
     };

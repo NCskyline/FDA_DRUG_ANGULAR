@@ -49,6 +49,7 @@ End Code
                                     สถานะ
                                 </th>
                                 <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -78,6 +79,7 @@ End Code
                                         เลือก
                                     </a>
                                 </td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>640009999</td>
@@ -90,7 +92,7 @@ End Code
                                     <a ng-click="SELECT_RECLASS(datas)">
                                         เลือก
                                     </a>
-                                </td>
+                                </td><td></td>
                             </tr>
                             <tr>
                                 <td>640009999</td>
@@ -104,7 +106,14 @@ End Code
                                         เลือก
                                     </a>
                                 </td>
+                                <td>
+                                    <span class="fa fa-eye"></span>
+                                    <a ng-click="SELECT_RECLASS(datas)">
+                                        รายละเอียดการแก้ไข
+                                    </a>
+                                </td>
                             </tr>
+
                         </tbody>
                     </table>
                     <hr />
