@@ -63,7 +63,7 @@ End Code
         </table>
         <br /><br />
         <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'FIRST')" id="defaultOpen">เอกสารหลักฐาน</button>
+            <button class="tablinks" onclick="openTab(event, 'FIRST')" >เอกสารหลักฐาน</button>
             <button class="tablinks" onclick="openTab(event, 'SECOND')">บทสรุปโดยรวม (Overall Summary)</button>
             <button class="tablinks" onclick="openTab(event, 'THIRD')">ข้อมูลผลิตภัณฑ์</button>
             <button class="tablinks" onclick="openTab(event, 'FOUR')">ข้อมูลของอาการหรือโรคที่ใช้รักษา</button>
