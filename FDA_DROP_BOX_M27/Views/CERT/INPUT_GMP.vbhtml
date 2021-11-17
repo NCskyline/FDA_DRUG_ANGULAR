@@ -158,9 +158,8 @@ End Code
                         <td>
                             ประเทศ (Country)<font color="red">*</font>
                         </td>
-                        <td width="2%"></td>
                         <td width="32%">
-                            <select style="font-family:'Taviraj';font-size:20px;" class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_GMP">
+                            <select style="font-family:'Taviraj';font-size:20px" class="form-control selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.COUNTRY_GMP">
                                 @*<option value="0">--กรุณาเลือก--</option>*@
                                 <option ng-repeat="x in CNT_LIST" value="{{x.IDA}}">{{x.engcntnm}}</option>
                             </select>
@@ -176,7 +175,7 @@ End Code
     </h3>
     <table width="100%">
         <tr>
-            <td style="height:25px;width:35%;font-family:'Taviraj';font-size:20px;">
+            <td style="height:25px;width:35%;font-family:'Taviraj';font-size:20px">
                 10. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
             </td>
             <td>

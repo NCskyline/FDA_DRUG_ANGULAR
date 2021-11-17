@@ -12,7 +12,7 @@ End Code
     })
 </script>
 
-<div class="ic" style="font-family:'Taviraj';font-size:20px;">
+<div class="ic" style="font-family:'Taviraj';font-size:20px">
 
     @*<center>
         <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2> <br />
@@ -130,7 +130,7 @@ End Code
     <table width="100%">
         <tr>
             <td width="40%">
-                มาตรฐานตามตำรับยา (Phamacopoeia Standard of Drug Substance)
+                มาตรฐานตามตำรายา (Phamacopoeia Standard of Drug Substance)
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
@@ -151,7 +151,7 @@ End Code
     <table width="100%">
         <tr>
             <td width="45%">
-                น้ำหนัก / ปริมาตรรวม (ต.ย. 10 กิโลกรัม โดยมาจาก 2 ถุง x 5 กิโลกรัมต่อถุง) <br />
+                น้ำหนัก / ปริมาตรรวม (ต.ย. 10 กิโลกรัม โดยมาจาก 2 ถุง x 5 กิโลกรัมต่อถุง)<br />
                 (Total Weight / Volume e.g. 10 kg. which comes from 2 bags x 5 kg/bag)
             </td>
             <td>
@@ -169,7 +169,7 @@ End Code
     </table>
     <br />
     เหตุผลในการผลิต/นำเข้าฯ
-    <table>
+    <table width="100%">
         <tr>
             <td>
                 <form name="myForm">
@@ -181,14 +181,14 @@ End Code
                         <span style="padding-left:2em;"><input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="2"></span>
                         ใช้ในการพัฒนาตำรับยาที่ได้เลขทะเบียนแล้ว
                     </label> <br />
-                    <table>
+                    <table width="100%">
                         <tr>
-                            <td width="40%">
+                            <td width="12%">
                                 <span style="padding-left:2em;"><input type="radio" id="rdl_PURPOSE1" ng-model="LIST_DH.dh15rqt.PURPOSE1" value="3"></span>
                                 อื่น ๆ (ระบุ)<font color="red">*</font>
                             </td>
                             <td>
-                                <input class="form-control inline" style="font-family:'Taviraj';font-size:20px;width:300%" type="text" />
+                                <input class="form-control inline" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
                             </td>
                         </tr>
                     </table>
@@ -225,16 +225,16 @@ End Code
                         สำเนาหนังสือรับรองมาตราฐานหลักเกณฑ์วิธีการที่ดีในการผลิตเภสัชเคมีภัณฑ์
                         (GoodManufacturing Practice) ตามมาตราฐานองค์การอนามัยโลกหรือเทียบเท่า (กรณีนำเข้า)
                     </label> <br />
-                    <table>
+                    <table width="100%">
                         <tr>
-                            <td width="40%">
+                            <td width="12%">
                                 <label>
                                     <span style="padding-left:2em;"><input type="radio" ng-model="LIST_DH.dh15rqt.ATTACH6" value="1"></span>
                                     อื่น ๆ (ระบุ)<font color="red">*</font>
                                 </label>   
                             </td>
                             <td>
-                                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.OTHER_ATTACH" style="font-family:'Taviraj';font-size:20px;width:300%" type="text" />
+                                <input class="form-control inline" ng-model="LIST_DH.dh15rqt.OTHER_ATTACH" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
                             </td>
                         </tr>
                     </table>
@@ -242,5 +242,5 @@ End Code
             </td>
         </tr>
     </table>
-    <div style="color:red">*ภค.1 หมายถึง การนำเข้าสาร ตามจำนวนที่ระบุหรือปริมาณรวม (นำเข้าหลายครั้ง) แต่ไม่เกินปริมาณที่ขอ</div>
+    <div style="color:red">*ภค.1 หมายถึง การนำเข้าสาร / ครั้ง ตามจำนวนที่ระบุหรือปริมาณรวม (นำเข้าหลายครั้ง) แต่ไม่เกินปริมาณที่ขอ</div>
 </div>

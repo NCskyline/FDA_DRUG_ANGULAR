@@ -85,34 +85,14 @@
 
             </td>
         </tr>
-        <tr>
-            <td colspan="2">
-                <div style="text-align: center;">
-                    <table>
-                        <tr>
-                            <td>
-
-                                <input type="button" ID="btn_save" class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_SAVE_CHEM()" value="บันทึก (Save)" />
-                            </td>
-                            <td>
-                                @*<asp:Button ID="btn_edit" runat="server" Text="แก้ไข" CssClass="btn-lg" />*@
-                                <input type="button" ID="btn_edit" class="btn btn-lg" ng-click="BTN_EDIT_CHEM()" value="แก้ไข (Edit)" />
-                            </td>
-                            <td><input type="button" class="btn btn-lg" style="background-color:#FFD700" ng-click="BTN_BACK()" value="ย้อนกลับ (Back)" /></td>
-                        </tr>
-                    </table>
-
-
-
-                </div>
-
-
-
-            </td>
-        </tr>
-
     </table>
-</div>
-<div>
-
+    <br />
+    <br />
+    <div>
+        <div class="col-sm-12" style="text-align:center">
+            <input type="button" ID="btn_save" class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_SAVE_CHEM()" value="บันทึก (Save)" />
+            <input type="button" ID="btn_edit" class="btn btn-lg" ng-click="BTN_EDIT_CHEM()" value="แก้ไข (Edit)" />
+            <input type="button" class="btn btn-lg" style="background-color:#FFD700" ng-click="BTN_BACK()" value="ย้อนกลับ (Back)" />
+        </div>
+    </div>
 </div>

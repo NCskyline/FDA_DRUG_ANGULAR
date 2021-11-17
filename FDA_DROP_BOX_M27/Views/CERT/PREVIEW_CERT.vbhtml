@@ -9,23 +9,23 @@ End Code
     @*-------------GMP------------------*@
     <div ng-show="LIST_GMP.CER.CER_TYPE == '31'">
         @*ng-repeat="datas in LIST_GMP"  ng-show="PROCESS == '31'" *@
-        <h2 style="font-family:'Taviraj';font-size:24px;">
-            <b> รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
-        </h2>
-        <h2 style="font-family:'Taviraj';font-size:24px;">
-            <b>(Information of Certificate of Drug Substance Manufacturer)</b>
-        </h2>
+        <h3 style="font-family:'Taviraj'">
+            <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์มาตรฐาน GMP</b>
+        </h3>
+        <h3 style="font-family:'Taviraj'">
+            <b>(Information of Certificate of Drug Substance Manufacturer with GMP Standard)</b>
+        </h3>
         <table width="100%" style="font-family:'Taviraj';font-size:20px;" class="table">
             <tr>
-                <td style="height:25px;width:35%;font-weight: bolder">
+                <td style="height:25px;width:35%;font-weight:bolder">
                     1. เลขที่ใบรับรอง (Certificate Number)<font color="red">*</font>
                 </td>
-                <td style="border-bottom:dotted;border-bottom-width:thin">
+                <td>
                     {{LIST_GMP.CER.CERTIFICATION_NUMBER_ALL}}
                 </td>
             </tr>
             <tr>
-                <td style="height:25px;font-weight: bolder">
+                <td style="height:25px;font-weight:bolder">
                     2. ชื่อผู้ผลิต (Manufacturer)<font color="red">*</font>
                 </td>
                 <td>
@@ -34,7 +34,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px;font-weight: bolder">
+                <td style="height:25px;font-weight:bolder">
                     3. เลขที่ใบอนุญาตผลิต (Manufacturing Licence Number)
                 </td>
                 <td>
@@ -42,7 +42,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px;font-weight: bolder">
+                <td style="height:25px;font-weight:bolder">
                     4. ที่ตั้ง (Site Address)<font color="red">*</font>
                 </td>
                 <td>
@@ -51,7 +51,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px;font-weight: bolder">
+                <td style="height:25px;font-weight:bolder">
                     5. เมือง (City / Province / State)<font color="red">*</font>
                 </td>
                 <td>
@@ -59,7 +59,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px;font-weight: bolder">
+                <td style="height:25px;font-weight:bolder">
                     6. ประเทศ (Country)<font color="red">*</font>
                 </td>
                 <td>
@@ -67,7 +67,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px;font-weight: bolder">
+                <td style="height:25px;font-weight:bolder">
                     <span style="padding-left:1em">รหัสไปรษณีย์ (Postal Code / Zip Code)</span>
                 </td>
                 <td>
@@ -75,7 +75,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px;font-weight: bolder">
+                <td style="height:25px;font-weight:bolder">
                     7. วันที่ออกใบรับรอง GMP (Issue Date)<font color="red">*</font>
                 </td>
                 <td>
@@ -83,7 +83,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px;font-weight: bolder">
+                <td style="height:25px;font-weight:bolder">
                     <span style="padding-left:1em">วันที่หมดอายุใบรับรอง GMP (Expiry Date / Valid Until)<font color="red">*</font></span>
                 </td>
                 <td>
@@ -92,7 +92,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px;font-weight: bolder">
+                <td style="height:25px;font-weight:bolder">
                     8. หน่วยงานที่ออกใบรับรอง (Certification Agency)<font color="red">*</font>
                 </td>
                 <td>
@@ -100,10 +100,10 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px;font-weight: bolder">
+                <td style="height:25px;font-weight:bolder">
                     <span style="padding-left:1em">
                         <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="1" />
-                        หน่วยงานรัฐที่ออกใบรับรอง (Government Certification Agency)
+                        หน่วยงานรัฐของประเทศที่ออกใบรับรอง (Government Certification Agency)
                     </span>
                 </td>
                 <td rowspan="2">
@@ -113,7 +113,7 @@ End Code
                 </td>
             </tr>
             <tr>
-                <td style="height:25px;font-weight: bolder">
+                <td style="height:25px;font-weight:bolder">
                     <span style="padding-left:1em">
                         <input type="radio" ng-model="LIST_GMP.CER.DEPARTMENT_REGIST_CER_TYPE" id="Rdl_department" value="2" />
                         หน่วยงานอื่นที่ได้รับการรับรองจากหน่วยงานรัฐของประเทศที่ออกใบรับรอง (Certification Agency Accredited by Government Agency)
@@ -122,7 +122,7 @@ End Code
                 <td></td>
             </tr>
             <tr>
-                <td style="height:25px;font-weight: bolder">
+                <td style="height:25px;font-weight:bolder">
                     9. สถานที่ผลิตได้มาตรฐาน GMP ตาม<font color="red">*</font> :
 
                 </td>
@@ -165,12 +165,12 @@ End Code
             </tr>
         </table>
         <br />
-        <h2 style="font-family:'Taviraj';font-size:24px;">
+        <h3 style="font-family:'Taviraj'">
             <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
-        </h2>
-        <table width="100%" style="font-family:'Taviraj';font-size:20px;">
+        </h3>
+        <table width="100%" style="font-family:'Taviraj';font-size:20px">
             <tr>
-                <td style="height:25px;width:35%;font-weight: bolder">
+                <td style="height:25px;width:35%;font-weight:bolder">
                     10. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
                 </td>
                 <td>
@@ -205,13 +205,13 @@ End Code
 
     @*-------------ISO------------------*@
     <div ng-show="LIST_GMP.CER.CER_TYPE == '32'">
-        <h2 style="font-family:'Taviraj';font-size:24px;">
-            <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
-        </h2>
-        <h2 style="font-family:'Taviraj';font-size:24px;">
-            <b>(Information of Certificate of Drug Substance Manufacturer)</b>
-        </h2>
-        <table width="100%" style="font-family:'Taviraj';font-size:20px;">
+        <h3 style="font-family:'Taviraj'">
+            <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์มาตรฐาน ISO</b>
+        </h3>
+        <h3 style="font-family:'Taviraj'">
+            <b>(Information of Certificate of Drug Substance Manufacturer with ISO Standard)</b>
+        </h3>
+        <table width="100%" style="font-family:'Taviraj';font-size:20px" class="table">
             <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
                     1. เลขที่ใบรับรอง (Certificate Number / Registration Number)<font color="red">*</font>
@@ -303,12 +303,12 @@ End Code
             </tr>
         </table>
         <br />
-        <h2 style="font-family:'Taviraj';font-size:24px;">
+        <h3 style="font-family:'Taviraj'">
             <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
-        </h2>
+        </h3>
         <table width="100%">
             <tr>
-                <td style="height:25px;width:35%;font-weight: bolder;font-family:'Taviraj';font-size:20px;">
+                <td style="height:25px;width:35%;font-weight:bolder;font-family:'Taviraj';font-size:20px">
                     9. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
                 </td>
                 <td>
@@ -325,13 +325,13 @@ End Code
     @*-------------ISO------------------*@
     @*-------------HACCP------------------*@
     <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '33'">
-        <h2 style="font-family:'Taviraj';font-size:24px;">
-            <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
-        </h2>
-        <h2 style="font-family:'Taviraj';font-size:24px;">
-            <b>(Information of Certificate of Drug Substance Manufacturer)</b>
-        </h2>
-        <table width="100%" style="font-family:'Taviraj';font-size:20px;">
+        <h3 style="font-family:'Taviraj'">
+            <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์มาตรฐาน HACCP</b>
+        </h3>
+        <h3 style="font-family:'Taviraj'">
+            <b>(Information of Certificate of Drug Substance Manufacturer with HACCP Standard)</b>
+        </h3>
+        <table width="100%" style="font-family:'Taviraj';font-size:20px" class="table">
             <tr>
                 <td style="height:25px;width:35%;font-weight:bolder">
                     1. เลขที่ใบรับรอง (Certificate Number / Registration Number)<font color="red">*</font>
@@ -416,22 +416,20 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
-                    8. มาตฐาน HACCP ขแงสถานที่ผลิต ต.ย. Codex General Principles of Food Hygiene CAC/RCP 1-1969 (HACCP Standard of Manufacturer e.g. Codex General Principles of Food Hygiene CAC/RCP 1-1969)
+                    8. มาตฐาน HACCP ของสถานที่ผลิต ต.ย. Codex General Principles of Food Hygiene CAC/RCP 1-1969 (HACCP Standard of Manufacturer e.g. Codex General Principles of Food Hygiene CAC/RCP 1-1969)
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD}}</label>
-
-
                 </td>
             </tr>
         </table>
         <br />
-        <h2 style="font-family:'Taviraj';font-size:24px;">
+        <h3 style="font-family:'Taviraj'">
             <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
-        </h2>
+        </h3>
         <table width="100%">
             <tr>
-                <td style="height:25px;width:35%;font-weight:bolder">
+                <td style="height:25px;width:35%;font-weight:bolder;font-family:'Taviraj';font-size:20px">
                     9. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
                 </td>
                 <td>
@@ -447,125 +445,125 @@ End Code
     </div>
     @*-------------HACCP------------------*@
     @*-------------PICS------------------*@
-    <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '34'">
-        <h2 style="font-family:'Taviraj';font-size:24px;">
-            <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
-        </h2>
-        <h2 style="font-family:'Taviraj';font-size:24px;">
-            <b>(Information of Certificate of Drug Substance Manufacturer)</b>
-        </h2>
-        <table width="100%" style="font-family:'Taviraj';font-size:20px;">
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    1. ชื่อผู้ผลิตเภสัชเคมีภัณฑ์ (Drug Substance Manufacturer)<font color="red">*</font>
-                </td>
-                <td>
-                    <label>{{LIST_GMP.CER.NAME_ADDRESS}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    2. ที่ตั้ง (Site Address)<font color="red">*</font>
-                </td>
-                <td>
-                    <label>{{LIST_GMP.CER.ADDRESS_NUMBER}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    3. เมือง (City / Province / State)<font color="red">*</font>
-                </td>
-                <td>
-                    <label>{{LIST_GMP.CER.ADDRESS_CITY}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    4. ประเทศ (Country)<font color="red">*</font>
-                </td>
-                <td>
-                    <label>{{LIST_GMP.COUNTRY_NAME}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    <span style="padding-left:1em">รหัสไปรษณีย์ (Postal Code / Zip Code)</span>
-                </td>
-                <td>
-                    <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    5. วันที่ขายที่ระบุในหลักฐานการขาย (Sale Date on Purchase Order)<font color="red">*</font>
-                </td>
-                <td>
-                    <label>{{LIST_GMP.CER.SALE_DATE}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    6. มาตรฐานสถานที่ผลิตเภสัชเคมีภัณฑ์ (Standard of Drug Substance Manufacturer)
-                </td>
-                <td>
-                    <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD">
-                        <option value="0">--กรุณาเลือก--</option>
-                        <option value="1">PIC/S</option>
-                        <option value="2">National GMP</option>
-                        <option value="3">WHO GMP</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    7. ชื่อผู้ผลิตยาสำเร็จรูปในต่างประเทศที่เป็นผู้ซื้อ (Foreign Drug Product Manufacturer as Purchaser)<font color="red">*</font>
-                </td>
-                <td>
-                    <input class="form-control inline" ng-model="LIST_GMP.CER.BUYER_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
-                    <label>{{LIST_GMP.CER.BUYER_NAME}}</label>
-                </td>
-            </tr>
+<div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '34'">
+    <h3 style="font-family:'Taviraj'">
+        <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์</b>
+    </h3>
+    <h3 style="font-family:'Taviraj'">
+        <b>(Information of Certificate of Drug Substance Manufacturer)</b>
+    </h3>
+    <table width="100%" style="font-family:'Taviraj';font-size:20px" class="table">
+        <tr>
+            <td style="height:25px;font-weight:bolder">
+                1. ชื่อผู้ผลิตเภสัชเคมีภัณฑ์ (Drug Substance Manufacturer)<font color="red">*</font>
+            </td>
+            <td>
+                <label>{{LIST_GMP.CER.NAME_ADDRESS}}</label>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:25px;font-weight:bolder">
+                2. ที่ตั้ง (Site Address)<font color="red">*</font>
+            </td>
+            <td>
+                <label>{{LIST_GMP.CER.ADDRESS_NUMBER}}</label>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:25px;font-weight:bolder">
+                3. เมือง (City / Province / State)<font color="red">*</font>
+            </td>
+            <td>
+                <label>{{LIST_GMP.CER.ADDRESS_CITY}}</label>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:25px;font-weight:bolder">
+                4. ประเทศ (Country)<font color="red">*</font>
+            </td>
+            <td>
+                <label>{{LIST_GMP.COUNTRY_NAME}}</label>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:25px;font-weight:bolder">
+                <span style="padding-left:1em">รหัสไปรษณีย์ (Postal Code / Zip Code)</span>
+            </td>
+            <td>
+                <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.ZIPCODE}}</label>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:25px;font-weight:bolder">
+                5. วันที่ขายที่ระบุในหลักฐานการขาย (Sale Date on Purchase Order)<font color="red">*</font>
+            </td>
+            <td>
+                <label>{{LIST_GMP.CER.SALE_DATE}}</label>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:25px;font-weight:bolder">
+                6. มาตรฐานสถานที่ผลิตเภสัชเคมีภัณฑ์ (Standard of Drug Substance Manufacturer)<font color="red">*</font>
+            </td>
+            <td>
+                <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD">
+                    <option value="0">--กรุณาเลือก--</option>
+                    <option value="1">PIC/S</option>
+                    <option value="2">National GMP</option>
+                    <option value="3">WHO GMP</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:25px;font-weight:bolder">
+                7. ชื่อผู้ผลิตยาสำเร็จรูปในต่างประเทศที่เป็นผู้ซื้อ (Foreign Drug Product Manufacturer as Purchaser)<font color="red">*</font>
+            </td>
+            <td>
+                <input class="form-control inline" ng-model="LIST_GMP.CER.BUYER_NAME" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                <label>{{LIST_GMP.CER.BUYER_NAME}}</label>
+            </td>
+        </tr>
 
-            <tr>
-                <td style="height: 25px;font-weight:bolder">
-                    8. ประเทศผู้ซื้อ (Country of Purchaser)<font color="red">*</font>
-                </td>
-                <td>
-                    <label>{{LIST_GMP.BUYER_COUNTRY_NAME}}</label>
-                </td>
-            </tr>
-            <tr>
-                <td style="height:25px;font-weight:bolder">
-                    9. มาตรฐาน GMP ของสถานที่ผลิตยาสำเร็จรูปของผู้ซื้อ (GMP Standard of Drug Product manufacturer as Purchaser)<font color="red">*</font>
-                </td>
-                <td>
-                    <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.BUYER_STANDARD">
-                        <option value="0">--กรุณาเลือก--</option>
-                        <option value="1">ประเทศตามชื่อสมาชิก PIC/S</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
-        <br />
-        <h2 style="font-family:'Taviraj';font-size:24px;">
-            <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
-        </h2>
-        <table width="100%">
-            <tr>
-                <td style="height:25px;width:35%;font-weight:bolder">
-                    10. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
-                </td>
-                <td>
-                    <label>{{LIST_GMP.CER.CER_SCOPE}}</label>
-                </td>
-            </tr>
-        </table>
-        <br />
-        <div ng-include="INPUT_CHEM">
+        <tr>
+            <td style="height: 25px;font-weight:bolder">
+                8. ประเทศผู้ซื้อ (Country of Purchaser)<font color="red">*</font>
+            </td>
+            <td>
+                <label>{{LIST_GMP.BUYER_COUNTRY_NAME}}</label>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:25px;font-weight:bolder">
+                9. มาตรฐาน GMP ของสถานที่ผลิตยาสำเร็จรูปของผู้ซื้อ (GMP Standard of Drug Product Manufacturer as Purchaser)<font color="red">*</font>
+            </td>
+            <td>
+                <select style="font-family:'Taviraj';font-size:20px;" ng-model="LIST_GMP.CER.BUYER_STANDARD">
+                    @*<option value="0">--กรุณาเลือก--</option>*@
+                    <option value="1">ประเทศตามชื่อสมาชิก PIC/S</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <h3 style="font-family:'Taviraj'">
+        <b>รายละเอียดเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Information of Drug Substances under Certification)</b>
+    </h3>
+    <table width="100%">
+        <tr>
+            <td style="height:25px;width:35%;font-weight:bolder;font-family:'Taviraj';font-size:20px">
+                10. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
+            </td>
+            <td>
+                <label>{{LIST_GMP.CER.CER_SCOPE}}</label>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <div ng-include="INPUT_CHEM">
 
-        </div>
-        <br />
     </div>
+    <br />
+</div>
     @*-------------PICS------------------*@
     @*-------------OTHER------------------*@
     <div class="ic" ng-show="LIST_GMP.CER.CER_TYPE == '36'">
@@ -575,10 +573,10 @@ End Code
         <h2 style="font-family:'Taviraj';font-size:24px;">
             <b>(Information of Certificate of Drug Substance Manufacturer)</b>
         </h2>
-        <table width="100%" style="font-family:'Taviraj';font-size:20px;">
+        <table width="100%" style="font-family:'Taviraj';font-size:20px" class="table">
             <tr>
                 <td style="font-weight:bolder">
-                    1. เลข สธ หนังสือ อย. ให้ความเห็นชอบ ตย. 1009.4.3/123 (Reference No. of FDA Approval Letter e.g. 1009.4.3/123)<font color="red">*</font>
+                    1. เลข สธ หนังสือ อย. ให้ความเห็นชอบ ตย. 1009/123 (Reference No. of FDA Approval Letter e.g. 1009/123)<font color="red">*</font>
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.DEPARTMENT_REGIST_CER_DOCNO}}</label>
@@ -662,6 +660,14 @@ End Code
             </tr>
             <tr>
                 <td style="height:25px;font-weight:bolder">
+                    <span style="padding-left:1em">วันที่หมดอายุระบุในหนังสือ อย.ให้ความเห็นชอบ (Expiry Date Indicated in FDA Approval Letter)</span>
+                </td>
+                <td>
+                    <label></label>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:25px;font-weight:bolder">
                     9. หน่วยงานที่ออกใบรับรอง (Certification Agency)<font color="red">*</font>
                 </td>
                 <td>
@@ -676,6 +682,14 @@ End Code
                     <label>{{LIST_GMP.COUNTRY_OF_DEPARTMENT_NAME}}</label>
                 </td>
             </tr>
+            <tr>
+                <td style="height:25px;font-weight:bolder">
+                    10. สถานที่ผลิตได้มาตรฐาน (Standard of Manufacturer)
+                </td>
+                <td>
+                    <label></label>
+                </td>
+            </tr>
         </table>
         <br />
         <h2 style="font-family:'Taviraj';font-size:24px;">
@@ -683,8 +697,8 @@ End Code
         </h2>
         <table width="100%">
             <tr>
-                <td style="height:25px;width:35%;font-weight:bolder">
-                    10. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
+                <td style="height:25px;width:35%;font-weight:bolder;font-family:'Taviraj';font-size:20px">
+                    11. ขอบเขตของเภสัชเคมีภัณฑ์ที่ได้รับการรับรอง (Scope of Inspection / Certification)
                 </td>
                 <td>
                     <label>{{LIST_GMP.CER.CER_SCOPE}}</label>

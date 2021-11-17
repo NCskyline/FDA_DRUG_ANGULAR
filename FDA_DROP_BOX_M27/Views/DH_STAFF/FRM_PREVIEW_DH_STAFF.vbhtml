@@ -12,11 +12,15 @@ End Code
             <div class="part part-2-3 ic">
                 <div style="font-family:'Taviraj';width:100%">
                     <center>
-                        <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2> <br />
+                        <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2>
                         <h2>
                             {{HEADER_PROCESS}}
                         </h2>
+                        <h2>
+                            {{HEADER_PROCESS1}}
+                        </h2>
                     </center>
+                    <br />
                     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
                         <tr>
                             <td width="20%" align="right">
@@ -51,7 +55,7 @@ End Code
                     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
                         <tr>
                             <td width="20%">
-                                ใบอนุญาต เลขที่
+                                ใบอนุญาตเลขที่
                             </td>
                             <td style="border-bottom:dotted;border-bottom-width:thin;">
                                 <label>{{LIST_LCN.LCN_NO_DISPLAY}}</label>
