@@ -201,7 +201,29 @@
     $scope.BTN_INPUT_RECLASS = function () {
         REDIRECT('/DR/INPUT_RECLASS');
     };
+    
+    $scope.SELECT_RECLASS = function () {
+        REDIRECT('/DR/PREVIEW_RECLASS');
+    };
+    
+    $scope.BTN_SAVE_RECLASS = function () {
+        Swal.fire({
+            title: 'คุณต้องการส่งใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนส่ง!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการส่งข้อมูล',
+            cancelButtonText: 'ยกเลิก'
+        }).then((result) => {
+            if (result.value) {
+                success_data('SUCCESS');
+                REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
+            }
+        });
 
+    };
     $scope.BTN_PREVIEW = function () {
         REDIRECT('/DR/INPUT_YOR_1');
     };

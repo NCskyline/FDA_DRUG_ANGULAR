@@ -219,4 +219,10 @@ End Code
 
             </div>
         </div>
+
+        <br />
+        <div style="text-align:center">
+            <input type="button" class="btn btn-lg" style="background-color:#FFD700" ng-click="BTN_BACK()" value="ย้อนกลับ (Back)" />
+            <input type="button" class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_SAVE_RECLASS()" value="บันทึก (Save)" />
+        </div>
     </div>
