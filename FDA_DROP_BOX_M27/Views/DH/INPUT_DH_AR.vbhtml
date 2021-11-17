@@ -11,7 +11,7 @@
     });
 </script>
 
-<div class="ic" style="font-family:'Taviraj';font-size:20px;">
+<div class="ic" style="font-family:'Taviraj';font-size:20px">
     @*<center>
         <h2>คำขอจดแจ้งเภสัชเคมีภัณฑ์</h2> <br />
         <h2>
@@ -119,7 +119,7 @@
     <table width="100%">
         <tr>
             <td width="40%">
-                มาตรฐานตามตำรับยา (Phamacopoeia Standard of Drug Substance)
+                มาตรฐานตามตำรายา (Phamacopoeia Standard of Drug Substance)
             </td>
             <td>
                 <input class="form-control inline" ng-model="LIST_DH.dh15rqt.PHARMACOPOEIA_STANDARDS" style="font-family:'Taviraj';font-size:20px;width:100%" type="text" />
