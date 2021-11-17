@@ -138973,6 +138973,10 @@ Partial Public Class DR_RECLASS
 	
 	Private _RCVDATE As System.Nullable(Of Date)
 	
+	Private _EMAIL As String
+	
+	Private _TEL As String
+	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
     End Sub
@@ -139083,6 +139087,14 @@ Partial Public Class DR_RECLASS
     Partial Private Sub OnRCVDATEChanging(value As System.Nullable(Of Date))
     End Sub
     Partial Private Sub OnRCVDATEChanged()
+    End Sub
+    Partial Private Sub OnEMAILChanging(value As String)
+    End Sub
+    Partial Private Sub OnEMAILChanged()
+    End Sub
+    Partial Private Sub OnTELChanging(value As String)
+    End Sub
+    Partial Private Sub OnTELChanged()
     End Sub
     #End Region
 	
@@ -139504,6 +139516,38 @@ Partial Public Class DR_RECLASS
 				Me._RCVDATE = value
 				Me.SendPropertyChanged("RCVDATE")
 				Me.OnRCVDATEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_EMAIL", DbType:="NVarChar(MAX)")>  _
+	Public Property EMAIL() As String
+		Get
+			Return Me._EMAIL
+		End Get
+		Set
+			If (String.Equals(Me._EMAIL, value) = false) Then
+				Me.OnEMAILChanging(value)
+				Me.SendPropertyChanging
+				Me._EMAIL = value
+				Me.SendPropertyChanged("EMAIL")
+				Me.OnEMAILChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TEL", DbType:="NVarChar(MAX)")>  _
+	Public Property TEL() As String
+		Get
+			Return Me._TEL
+		End Get
+		Set
+			If (String.Equals(Me._TEL, value) = false) Then
+				Me.OnTELChanging(value)
+				Me.SendPropertyChanging
+				Me._TEL = value
+				Me.SendPropertyChanged("TEL")
+				Me.OnTELChanged
 			End If
 		End Set
 	End Property

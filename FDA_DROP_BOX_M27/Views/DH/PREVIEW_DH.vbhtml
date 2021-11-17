@@ -23,7 +23,7 @@ End Code
             </h2>
         </center>
         <br />
-        <table width="100%" style="font-family:'Taviraj';font-size:20px;">
+        <table width="100%" style="font-family:'Taviraj';font-size:20px">
             <tr>
                 <td width="20%" align="right">
                     ข้าพเจ้า
@@ -34,7 +34,6 @@ End Code
                 <td>
                     ผู้รับอนุญาต
                 </td>
-
             </tr>
         </table>
         <table width="100%" style="font-family:'Taviraj';font-size:20px;">

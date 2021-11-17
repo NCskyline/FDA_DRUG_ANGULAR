@@ -12,7 +12,7 @@
     pageload();
 
     function pageload() {
-       
+        $scope.FILE_ATTACH = SET_URL_SV('/DR/INPUT_RECLASS_ATTACH');
         var token = '';
         if (location.hostname == 'localhost') {
             token = "PASS";
@@ -67,7 +67,7 @@
         //    $scope.LIST_STAFF_OFFER = datas.data;
         //}, function () { });
 
-        $scope.FILE_ATTACH = SET_URL_SV('/DR/INPUT_RECLASS_ATTACH');
+       
 
     }
 

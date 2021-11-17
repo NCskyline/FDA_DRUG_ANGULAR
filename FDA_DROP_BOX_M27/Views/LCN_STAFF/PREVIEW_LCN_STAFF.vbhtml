@@ -11569,11 +11569,11 @@
 
                     <br />
                     <div align="center">
-                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_LCN_CONFIRM(STATUS_ID)" value="บันทึก" />
+                        <input type="button" style="width:50%;background-color:#38A86B;color:white" class="btn btn-lg " ng-click="BTN_LCN_CONFIRM(STATUS_ID)" value="บันทึก" />
                     </div>
                     <br />
                     <div align="center">
-                        <input type="button" style="width:50%" class="btn btn-lg " ng-click="BTN_BACK()" value="ย้อนกลับ" />
+                        <input type="button" style="width:50%;background-color:#FFD700" class="btn btn-lg " ng-click="BTN_BACK()" value="ย้อนกลับ" />
                     </div>
                     <br />
                     <div>

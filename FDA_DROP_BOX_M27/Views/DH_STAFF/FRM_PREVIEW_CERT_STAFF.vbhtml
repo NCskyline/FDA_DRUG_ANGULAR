@@ -716,7 +716,7 @@ End Code
                             <span style="padding-left:1em">วันที่หมดอายุระบุในหนังสือ อย.ให้ความเห็นชอบ (Expiry Date Indicated in FDA Approval Letter)</span>
                         </td>
                         <td>
-                            <label></label>
+                            <label>{{LIST_GMP.CER.EXP_DOCUMENT_DATE}}</label>
                         </td>
                     </tr>
                     <tr>
@@ -740,7 +740,7 @@ End Code
                             10. สถานที่ผลิตได้มาตรฐาน (Standard of Manufacturer)
                         </td>
                         <td>
-                            <label></label>
+                            <label>{{LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD}}</label>
                         </td>
                     </tr>
                 </table>

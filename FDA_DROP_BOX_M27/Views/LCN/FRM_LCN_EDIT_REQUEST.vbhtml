@@ -20,7 +20,7 @@ End Code
                         <tr>
                             <td width="100%"><input style="width:60%" class="form-control" placeholder="ค้นหา..." ng-model="filter" /></td>
                             <td align="right">
-                                <button class="btn btn-lg" ng-click="BTN_EDIT_INPUT()">สร้างคำขอ</button>
+                                <button class="btn btn-lg" ng-click="BTN_EDIT_INPUT()" style="background-color:#38A86B;color:white">สร้างคำขอ</button>
                             </td>
                         </tr>
                     </table>

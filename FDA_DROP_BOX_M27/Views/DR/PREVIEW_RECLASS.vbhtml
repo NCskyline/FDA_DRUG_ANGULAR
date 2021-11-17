@@ -223,9 +223,38 @@ End Code
     </div>
     <div>
         <div class="col-sm-12" style="text-align:center">
-            <input type="button" class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_SEND_RECLASS()" value="ยื่นคำขอ" ng-disabled="" />
+            @*<input type="button" class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_POPUP_RECLASS()" value="ยื่นคำขอ" ng-disabled="" />*@
             <input type="button" class="btn btn-lg" style="background-color:#FFD700" ng-click="BTN_BACK()" value="ย้อนกลับ" />
-            @*<input type="button" class="btn btn-lg btn-success" ng-click="BTN_EDIT()" value="แก้ไขคำขอ" ng-show="LIST_LCN.dalcn.STATUS_ID == '5'" />*@
+            <input type="button" class="btn btn-lg btn-success" ng-click="BTN_EDIT()" value="แก้ไขคำขอ" />
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="ic">
+                        <table>
+                            <tr>
+                                <td>Email</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tel</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        <div>
+                            <button class="btn btn-lg" ng-click="BTN_SEND_RECLASS()">บันทึก</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
