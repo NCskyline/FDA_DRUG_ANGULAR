@@ -174,7 +174,7 @@ End Code
                         <tr>
                             <td><input style="width:60%" class="form-control" placeholder="ค้นหา..." ng-model="filter" /></td>
                             <td align="right">
-                                <button class="btn btn-lg" ng-click="BTN_INPUT()">สร้างคำขอ</button>
+                                <button class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_INPUT()">สร้างคำขอ</button>
                             </td>
                         </tr>
                     </table>

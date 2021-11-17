@@ -9826,9 +9826,9 @@ End Code
     <br />
     <div>
         <div class="col-sm-12" style="text-align:center">
-            <input type="button" class="btn btn-lg" ng-click="BTN_SEND_LCN()" value="ยื่นคำขอ" ng-disabled="" />
-            <input type="button" class="btn btn-lg btn-success" ng-click="BTN_LCN_BACK()" value="ย้อนกลับ" />
-            <input type="button" class="btn btn-lg btn-success" ng-click="BTN_EDIT()" value="แก้ไขคำขอ" ng-show="LIST_LCN.dalcn.STATUS_ID == '5'" />
+            <input type="button" class="btn btn-lg" ng-click="BTN_SEND_LCN()" style="background-color:#38A86B;color:white" value="ยื่นคำขอ" ng-disabled="" />
+            <input type="button" class="btn btn-lg" ng-click="BTN_LCN_BACK()" style="background-color:#FFD700" value="ย้อนกลับ" />
+            <input type="button" class="btn btn-lg" ng-click="BTN_EDIT()" value="แก้ไขคำขอ" ng-show="LIST_LCN.dalcn.STATUS_ID == '5'" />
         </div>
     </div>
 </div>

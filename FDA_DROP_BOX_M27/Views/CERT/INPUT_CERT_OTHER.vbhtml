@@ -130,7 +130,7 @@ End Code
                 <span style="padding-left:1em">วันที่หมดอายุระบุในหนังสือ อย.ให้ความเห็นชอบ (Expiry Date Indicated in FDA Approval Letter)</span>
             </td>
             <td>
-                <md-datepicker ng-model="" md-placeholder="Enter date"
+                <md-datepicker ng-model="LIST_GMP.CER.EXP_DOCUMENT_DATE" md-placeholder="Enter date"
                                input-aria-describedby="datepicker-description"
                                input-aria-labelledby="datepicker-header"></md-datepicker>
             </td>
@@ -159,7 +159,7 @@ End Code
                 10. สถานที่ผลิตได้มาตรฐาน (Standard of Manufacturer)
             </td>
             <td>
-                <input class="form-control inline" ng-model="" style="font-family:'Taviraj';font-size:20px" type="text" />
+                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.LOCATION_STANDARD" style="font-family:'Taviraj';font-size:20px" type="text" />
             </td>
         </tr>
     </table>
