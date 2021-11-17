@@ -49,6 +49,32 @@ End Code
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <tr>
+                                        <td>8/30/2021 12:00:00 AM</td>
+                                        <td>DL-64-00633</td>
+                                        <td>ทดสอบยาตัวอย่าง</td>
+                                        <td>640009999</td>
+                                        <td>ชำระเงินแล้ว รอการตรวจสอบ</td>
+                                        <td>
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="">
+                                                ดูข้อมูล
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>8/30/2021 12:00:00 AM</td>
+                                        <td>DL-64-00633</td>
+                                        <td>ทดสอบยาตัวอย่าง</td>
+                                        <td>640009999</td>
+                                        <td>รับคำขอแล้วอยู่ระหว่างพิจารณา</td>
+                                        <td>
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="">
+                                                ดูข้อมูล
+                                            </a>
+                                        </td>
+                                    </tr>
                                     <tr ng-repeat="data in DATA_NYM_STAFF">
                                         <td>{{data.NYM2_DATE_TOP}}</td>
                                         <td>{{data.RCVNO_DISPLAY}}</td>
@@ -61,7 +87,6 @@ End Code
                                                 ดูข้อมูล
                                             </a>
                                         </td>
-
                                     </tr>
                                 </tbody>
                                 <tfoot>

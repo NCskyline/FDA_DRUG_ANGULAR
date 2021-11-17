@@ -294,6 +294,10 @@
         });
     };
 
+    $scope.BTN_CREATE = function () {
+        window.open('https://medicina.fda.moph.go.th/FDA_DRUG_IMPORT/AUTHEN/AUTHEN_GATEWAY?TOKEN=' + TOKEN + '&DL=106954&NYM=2&process=1027&CHK_SAVE=1&IDA=0');
+    };
+    
     $scope.BTN_BACK = function () {
         REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
     };

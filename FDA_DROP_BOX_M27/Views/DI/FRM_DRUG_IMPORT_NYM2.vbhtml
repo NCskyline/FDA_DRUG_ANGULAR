@@ -8,7 +8,7 @@ End Code
                 <table class="table" width="100%">
                     <tr>
                         <td align="right">
-                            <input style="width:30%" type="button" class="form-control" value="สร้างคำขอ" />
+                            <input style="width:30%" type="button" class="form-control" ng-click="BTN_CREATE()" value="สร้างคำขอ" />
                         </td>
                     </tr>
                 </table>
@@ -26,22 +26,90 @@ End Code
                                     <td>เลขดำเนินการ</td>
                                     <td>สถานะ</td>
                                     <td></td>
+                                    <td></td>
                                 </tr>
                             </thead>
                             <tbody>
+
                                 <tr>
                                     <td></td>
                                     <td>นยม2</td>
                                     <td>DL-64-01257</td>
                                     <td>พาราทดสอบ</td>
                                     <td>640000987</td>
-                                    <td>ชำระเงิรแล้ว รอรับคำขอ</td>
+                                    <td>บันทึกแล้ว รอการส่งเรื่อง</td>
                                     <td>
                                         <span class="fa fa-eye"></span>
                                         <a ng-click="SELECT_DI()">
                                             เลือก
                                         </a>
                                     </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>นยม2</td>
+                                    <td>DL-64-01257</td>
+                                    <td>พาราทดสอบ</td>
+                                    <td>640000987</td>
+                                    <td>ชำระเงินแล้ว รอการตรวจสอบ</td>
+                                    <td>
+                                        <span class="fa fa-eye"></span>
+                                        <a ng-click="SELECT_DI()">
+                                            เลือก
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>นยม2</td>
+                                    <td>DL-64-01257</td>
+                                    <td>พาราทดสอบ</td>
+                                    <td>640000987</td>
+                                    <td>รอการแก้ไขคำขอ</td>
+                                    <td>
+                                        <span class="fa fa-eye"></span>
+                                        <a ng-click="SELECT_DI()">
+                                            เลือก
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <span class="fa fa-pen"></span>
+                                        <a ng-click="">
+                                            ดูรายละเอียดที่ต้องแก้ไข
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>นยม2</td>
+                                    <td>DL-64-01257</td>
+                                    <td>พาราทดสอบ</td>
+                                    <td>640000987</td>
+                                    <td>เสนอลนาม</td>
+                                    <td>
+                                        <span class="fa fa-eye"></span>
+                                        <a ng-click="SELECT_DI()">
+                                            เลือก
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>นยม2</td>
+                                    <td>DL-64-01257</td>
+                                    <td>พาราทดสอบ</td>
+                                    <td>640000987</td>
+                                    <td>อนุมัติคำขอ</td>
+                                    <td>
+                                        <span class="fa fa-eye"></span>
+                                        <a ng-click="SELECT_DI()">
+                                            เลือก
+                                        </a>
+                                    </td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                         </table>
