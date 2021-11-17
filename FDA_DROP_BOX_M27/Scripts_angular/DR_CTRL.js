@@ -224,6 +224,25 @@
         });
 
     };
+    $scope.BTN_SEND_RECLASS = function () {
+        Swal.fire({
+            title: 'คุณต้องการยื่นคำขอใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนส่ง!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการยื่นคำขอ',
+            cancelButtonText: 'ยกเลิก'
+        }).then((result) => {
+            if (result.value) {
+                success_data('SUCCESS');
+                REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
+            }
+        });
+
+    };
+
     $scope.BTN_PREVIEW = function () {
         REDIRECT('/DR/INPUT_YOR_1');
     };
@@ -251,6 +270,28 @@
 
     $scope.BTN_INPUT_YOR5 = function () {
         REDIRECT('/DR_EDIT_REQUEST/INPUT_YOR_5');
+    };
+
+    $scope.BTN_SAVE_DS = function () {
+        $('#exampleModalLong').modal('show');
+    };
+
+    $scope.BTN_CONFIRM = function () {
+        Swal.fire({
+            title: 'คุณต้องการส่งใช่หรือไม่ ?',
+            text: "กรุณาตรวจสอบความถูกต้องก่อนส่ง!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ใช่, ฉันต้องการส่งข้อมูล',
+            cancelButtonText: 'ยกเลิก'
+        }).then((result) => {
+            if (result.value) {
+                success_data('SUCCESS');
+                REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
+            }
+        });
     };
 
     $scope.BTN_BACK = function () {

@@ -1,9 +1,12 @@
 ﻿@Code
     ViewData("Title") = "INPUT_DS_NORYOR8"
 End Code
+    <script src="~/Scripts_angular/ANGULAR_APP.js"></script>
+    <script src="~/Scripts_angular/CENTER_SV.js"></script>
+    <script src="~/Scripts_angular/DR_CTRL.js"></script>
 
 
-<div>
+<div ng-app="ANGULAR_APP" ng-controller="DR_CTRL">
     <div style="font-family:'Taviraj'">
         <div class="in">
             <div align="center">
@@ -120,7 +123,7 @@ End Code
                         <input type="button" class="form-control" value="บันทึก" />
                     </td>
                     <td>
-                        <input type="button" class="form-control" value="เพิ่ม/ลบ ขนาดบรรจุ"/>
+                        <input type="button" class="form-control" value="เพิ่ม/ลบ ขนาดบรรจุ" />
                     </td>
                 </tr>
             </table>
@@ -144,8 +147,8 @@ End Code
             <br />
             <br />
             <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
-                <input type="button" class="btn btn-lg " value="บันทึก"/>
-                <input type="button" class="btn btn-lg "  value="ย้อนกลับ"/>
+                <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_DS()" value="บันทึก" />
+                <input type="button" class="btn btn-lg " value="ย้อนกลับ" />
             </div>
         </div>
     </div>
