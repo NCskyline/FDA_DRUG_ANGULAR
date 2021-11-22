@@ -338,6 +338,12 @@
         REDIRECT('/LCN_STAFF/PREVIEW_LCN_EDIT_STAFF');
     };
 
+    
+    $scope.SELECT_NYM = function (data) {
+        sessionStorage.PROCESS = data.PROCESS_ID;
+        REDIRECT('/DR_STAFF/FRM_NYM_STAFF_CONFIRM');
+    };
+
     $scope.BTN_PREVIEW_DR = function () {
         REDIRECT('/DR_STAFF/FRM_DR_STAFF_CONFIRM');
     };

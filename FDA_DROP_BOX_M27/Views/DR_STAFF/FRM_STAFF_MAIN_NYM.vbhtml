@@ -32,8 +32,8 @@ End Code
         </div>
         <br />
         <div class="in">
-            <div ng-show="ddl_nym == '1027'">
-                <h1>นยม. 2</h1>
+            <div ng-show="ddl_nym == '1026'">
+                <h1>นยม. 1</h1>
                 <div class="row">
                     <div class="col-sm-12" style="width:100%;">
                         <div class="card" style=" border-top: 10px solid #F9D027;">
@@ -83,7 +83,7 @@ End Code
                                         <td>{{data.STATUS_NAME}}</td>
                                         <td>
                                             <span class="fa fa-eye"></span>
-                                            <a ng-click="">
+                                            <a ng-click="SELECT_NYM(data)">
                                                 ดูข้อมูล
                                             </a>
                                         </td>
@@ -99,132 +99,200 @@ End Code
                     </div>
                 </div>
             </div>
-            <div ng-show="ddl_nym == '1028'">
-                <h1>นยม. 3</h1>
-                <div class="row">
-                    <div class="col-sm-12" style="width:100%;">
-                        <div class="card" style=" border-top: 10px solid #F9D027;">
-                            <table width="100%" style="font-family:'Taviraj'" class="table" id="myTable" datatable="ng">
-                                <thead style="font-weight:300;">
-                                    <tr>
-                                        <td>วันเวลาที่ส่งคำขอ</td>
-                                        <td>รหัสบัญชีรายการยา</td>
-                                        <td>ชื่อยา (Th/Eng)</td>
-                                        <td>เลขดำเนินการ</td>
-                                        <td>สถานะ</td>
-                                        <td></td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="data in DATA_NYM_STAFF">
-                                        <td>{{data.NYM3_DATE_TOP}}</td>
-                                        <td>{{data.RCVNO_DISPLAY}}</td>
-                                        <td>{{data.NYM3_WISH_MED}}</td>
-                                        <td>{{data.TR_ID_FORMAT}}</td>
-                                        <td>{{data.STATUS_NAME}}</td>
-                                        <td>
-                                            <span class="fa fa-eye"></span>
-                                            <a ng-click="">
-                                                ดูข้อมูล
-                                            </a>
-                                        </td>
+            <div class="in">
+                <div ng-show="ddl_nym == '1027'">
+                    <h1>นยม. 2</h1>
+                    <div class="row">
+                        <div class="col-sm-12" style="width:100%;">
+                            <div class="card" style=" border-top: 10px solid #F9D027;">
+                                <table width="100%" style="font-family: 'Taviraj'" class="table" id="myTable" datatable="ng">
+                                    <thead style="font-weight:300;">
+                                        <tr>
+                                            <td>วันเวลาที่ส่งคำขอ</td>
+                                            <td>รหัสบัญชีรายการยา</td>
+                                            <td>ชื่อยา (Th/Eng)</td>
+                                            <td>เลขดำเนินการ</td>
+                                            <td>สถานะ</td>
+                                            <td></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>8/30/2021 12:00:00 AM</td>
+                                            <td>DL-64-00633</td>
+                                            <td>ทดสอบยาตัวอย่าง</td>
+                                            <td>640009999</td>
+                                            <td>ชำระเงินแล้ว รอการตรวจสอบ</td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="">
+                                                    ดูข้อมูล
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>8/30/2021 12:00:00 AM</td>
+                                            <td>DL-64-00633</td>
+                                            <td>ทดสอบยาตัวอย่าง</td>
+                                            <td>640009999</td>
+                                            <td>รับคำขอแล้วอยู่ระหว่างพิจารณา</td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="">
+                                                    ดูข้อมูล
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr ng-repeat="data in DATA_NYM_STAFF">
+                                            <td>{{data.NYM2_DATE_TOP}}</td>
+                                            <td>{{data.RCVNO_DISPLAY}}</td>
+                                            <td>{{data.NYM2_WISH_MED}}</td>
+                                            <td>{{data.TR_ID_FORMAT}}</td>
+                                            <td>{{data.STATUS_NAME}}</td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="SELECT_NYM(data)">
+                                                    ดูข้อมูล
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr></tr>
+                                    </tfoot>
+                                </table>
 
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr></tr>
-                                </tfoot>
-                            </table>
+                            </div>
 
                         </div>
-
                     </div>
                 </div>
-            </div>
-            <div ng-show="ddl_nym == '1029'">
-                <h1>นยม4 (รัฐ)</h1>
-                <div class="row">
-                    <div class="col-sm-12" style="width:100%;">
-                        <div class="card" style=" border-top: 10px solid #F9D027;">
-                            <table width="100%" style="font-family:'Taviraj'" class="table" id="myTable" datatable="ng">
-                                <thead style="font-weight:300;">
-                                    <tr>
-                                        <td>วันเวลาที่ส่งคำขอ</td>
-                                        <td>รหัสบัญชีรายการยา</td>
-                                        <td>ชื่อยา (Th/Eng)</td>
-                                        <td>เลขดำเนินการ</td>
-                                        <td>สถานะ</td>
-                                        <td></td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="data in DATA_NYM_STAFF">
-                                        <td>{{data.NYM4_DATE_TOP}}</td>
-                                        <td>{{data.RCVNO_DISPLAY}}</td>
-                                        <td>{{data.NYM4_WISH_MED}}</td>
-                                        <td>{{data.TR_ID_FORMAT}}</td>
-                                        <td>{{data.STATUS_NAME}}</td>
-                                        <td>
-                                            <span class="fa fa-eye"></span>
-                                            <a ng-click="">
-                                                ดูข้อมูล
-                                            </a>
-                                        </td>
+                <div ng-show="ddl_nym == '1028'">
+                    <h1>นยม. 3</h1>
+                    <div class="row">
+                        <div class="col-sm-12" style="width:100%;">
+                            <div class="card" style=" border-top: 10px solid #F9D027;">
+                                <table width="100%" style="font-family:'Taviraj'" class="table" id="myTable" datatable="ng">
+                                    <thead style="font-weight:300;">
+                                        <tr>
+                                            <td>วันเวลาที่ส่งคำขอ</td>
+                                            <td>รหัสบัญชีรายการยา</td>
+                                            <td>ชื่อยา (Th/Eng)</td>
+                                            <td>เลขดำเนินการ</td>
+                                            <td>สถานะ</td>
+                                            <td></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="data in DATA_NYM_STAFF">
+                                            <td>{{data.NYM3_DATE_TOP}}</td>
+                                            <td>{{data.RCVNO_DISPLAY}}</td>
+                                            <td>{{data.NYM3_WISH_MED}}</td>
+                                            <td>{{data.TR_ID_FORMAT}}</td>
+                                            <td>{{data.STATUS_NAME}}</td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="SELECT_NYM(data)">
+                                                    ดูข้อมูล
+                                                </a>
+                                            </td>
 
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr></tr>
-                                </tfoot>
-                            </table>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr></tr>
+                                    </tfoot>
+                                </table>
+
+                            </div>
 
                         </div>
-
                     </div>
                 </div>
-            </div>
-            <div ng-show="ddl_nym == '1031'">
-                <h1>นยม. 4 (เอกชน)</h1>
-                <div class="row">
-                    <div class="col-sm-12" style="width:100%;">
-                        <div class="card" style=" border-top: 10px solid #F9D027;">
-                            <table width="100%" style="font-family:'Taviraj'" class="table" id="myTable" datatable="ng">
-                                <thead style="font-weight:300;">
-                                    <tr>
-                                        <td>วันเวลาที่ส่งคำขอ</td>
-                                        <td>รหัสบัญชีรายการยา</td>
-                                        <td>ชื่อยา (Th/Eng)</td>
-                                        <td>เลขดำเนินการ</td>
-                                        <td>สถานะ</td>
-                                        <td></td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="data in DATA_NYM_STAFF">
-                                        <td>{{data.NYM4_COMPANY_DATE_TOP}}</td>
-                                        <td>{{data.RCVNO_DISPLAY}}</td>
-                                        <td>{{data.NYM4_COMPANY_WISH_MED}}</td>
-                                        <td>{{data.TR_ID_FORMAT}}</td>
-                                        <td>{{data.STATUS_NAME}}</td>
-                                        <td>
-                                            <span class="fa fa-eye"></span>
-                                            <a ng-click="">
-                                                ดูข้อมูล
-                                            </a>
-                                        </td>
+                <div ng-show="ddl_nym == '1029'">
+                    <h1>นยม4 (รัฐ)</h1>
+                    <div class="row">
+                        <div class="col-sm-12" style="width:100%;">
+                            <div class="card" style=" border-top: 10px solid #F9D027;">
+                                <table width="100%" style="font-family:'Taviraj'" class="table" id="myTable" datatable="ng">
+                                    <thead style="font-weight:300;">
+                                        <tr>
+                                            <td>วันเวลาที่ส่งคำขอ</td>
+                                            <td>รหัสบัญชีรายการยา</td>
+                                            <td>ชื่อยา (Th/Eng)</td>
+                                            <td>เลขดำเนินการ</td>
+                                            <td>สถานะ</td>
+                                            <td></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="data in DATA_NYM_STAFF">
+                                            <td>{{data.NYM4_DATE_TOP}}</td>
+                                            <td>{{data.RCVNO_DISPLAY}}</td>
+                                            <td>{{data.NYM4_WISH_MED}}</td>
+                                            <td>{{data.TR_ID_FORMAT}}</td>
+                                            <td>{{data.STATUS_NAME}}</td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="SELECT_NYM(data)">
+                                                    ดูข้อมูล
+                                                </a>
+                                            </td>
 
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr></tr>
-                                </tfoot>
-                            </table>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr></tr>
+                                    </tfoot>
+                                </table>
+
+                            </div>
 
                         </div>
+                    </div>
+                </div>
+                <div ng-show="ddl_nym == '1031'">
+                    <h1>นยม. 4 (เอกชน)</h1>
+                    <div class="row">
+                        <div class="col-sm-12" style="width:100%;">
+                            <div class="card" style=" border-top: 10px solid #F9D027;">
+                                <table width="100%" style="font-family:'Taviraj'" class="table" id="myTable" datatable="ng">
+                                    <thead style="font-weight:300;">
+                                        <tr>
+                                            <td>วันเวลาที่ส่งคำขอ</td>
+                                            <td>รหัสบัญชีรายการยา</td>
+                                            <td>ชื่อยา (Th/Eng)</td>
+                                            <td>เลขดำเนินการ</td>
+                                            <td>สถานะ</td>
+                                            <td></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="data in DATA_NYM_STAFF">
+                                            <td>{{data.NYM4_COMPANY_DATE_TOP}}</td>
+                                            <td>{{data.RCVNO_DISPLAY}}</td>
+                                            <td>{{data.NYM4_COMPANY_WISH_MED}}</td>
+                                            <td>{{data.TR_ID_FORMAT}}</td>
+                                            <td>{{data.STATUS_NAME}}</td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="SELECT_NYM(data)">
+                                                    ดูข้อมูล
+                                                </a>
+                                            </td>
 
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr></tr>
+                                    </tfoot>
+                                </table>
+
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
