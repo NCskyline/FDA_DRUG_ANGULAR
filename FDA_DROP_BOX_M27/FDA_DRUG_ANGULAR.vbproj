@@ -811,6 +811,9 @@
     <Content Include="Views\DR\FRM_SUBSTITUTE_CONFIRM.vbhtml" />
     <Content Include="Views\DR_STAFF\FRM_SUBSTITUTE_TABEAN_STAFF_CONFIRM.vbhtml" />
     <Content Include="Views\DR_STAFF\FRM_NYM_STAFF_CONFIRM.vbhtml" />
+    <Content Include="Views\DI\PREVIEW_NYM1.vbhtml" />
+    <Content Include="Views\DI\INPUT_EDITNORYORMOR1_PORYOR8.vbhtml" />
+    <Content Include="Views\DI\PREVIEW_EDITNORYORMOR1_PORYOR8.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
       <DependentUpon>Reference.map</DependentUpon>

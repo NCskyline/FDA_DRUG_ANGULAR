@@ -1,58 +1,58 @@
 ﻿@Code
-    ViewData("Title") = "FRM_NYM_STAFF_CONFIRM"
+    ViewData("Title") = "PREVIEW_EDITNORYORMOR1_PORYOR8"
 End Code
 
-    <style>
-        .title1 {
-            width: 150px;
-            height: 170px;
-            /*background-color: aqua;*/
-            text-align: center;
-            border: solid;
-            float: left;
+<style>
+    .title1 {
+        width: 150px;
+        height: 150px;
+        /*background-color: aqua;*/
+        text-align: center;
+        border: solid;
+        float: left;
+    }
+
+    .title2 {
+        width: 300px;
+        height: 100px;
+        /*background-color:antiquewhite;*/
+        text-align: center;
+        border: solid;
+        float: right;
+    }
+
+    .checkbox {
+        width: 20px;
+        height: 20px;
+        margin-left: 45%;
+        margin-top: 5%;
+    }
+
+    .hr {
+        width: 95%;
+        height: 10px;
+        background-color: black;
+    }
+
+    .datepickerdemoBasicUsage {
+        /** Demo styles for mdCalendar. */
+    }
+
+        .datepickerdemoBasicUsage md-content {
+            padding-bottom: 200px;
         }
 
-        .title2 {
-            width: 400px;
-            height: 120px;
-            /*background-color:antiquewhite;*/
-            text-align: center;
-            border: solid;
-            float: right;
+        .datepickerdemoBasicUsage .validation-messages {
+            font-size: 12px;
+            color: #dd2c00;
+            margin-left: 15px;
         }
-
-        .checkbox {
-            width: 20px;
-            height: 20px;
-            margin-left: 45%;
-            margin-top: 5%;
-        }
-
-        .hr {
-            width: 95%;
-            height: 10px;
-            background-color: black;
-        }
-
-        .datepickerdemoBasicUsage {
-            /** Demo styles for mdCalendar. */
-        }
-
-            .datepickerdemoBasicUsage md-content {
-                padding-bottom: 200px;
-            }
-
-            .datepickerdemoBasicUsage .validation-messages {
-                font-size: 12px;
-                color: #dd2c00;
-                margin-left: 15px;
-            }
-    </style>
+</style>
 
 
 <div>
     <div class="content-part">
-        <div class="part-2-3">
+        <div class="part part-2-3 ">
             <div class="ic">
                 <div style="font-family:'Taviraj'">
                     <div class="container">
@@ -366,68 +366,34 @@ End Code
                 </div>
             </div>
         </div>
-        <br />
-        <div class="part part-1-3 ic">
-            <div class="card">
-                <table class="table">
-                    <tr>
-                        <td>สถานะ :</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>ชื่อผู้ลงนาม :</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>วันที่เสนอลงนาม :</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>วันที่คาดว่าจะอนุมัติ :</td>
-                        <td></td>
-                    </tr>
-                </table>
-                <br />
-                <div>
-                    โปรดเลือกสถานะถัดไป
-                </div>
-                <div style="width:80%;margin-left:10%">
-                    <select class="form-control">
-                        <option></option>
-                    </select>
-                </div>
-                <br />
-                <div>
-                    วันที่รับ/อนุมัติ
-                </div>
-                <div style="width:80%;margin-left:10%">
-                    <md-datepicker ng-model="APP_DATE" md-placeholder="Enter date"
-                                   input-aria-describedby="datepicker-description"
-                                   input-aria-labelledby="datepicker-header ">
-                    </md-datepicker>
-                </div>
-                <br />
-                <div >
-                    เงื่อนไข/เหตุผลประกอบการอนุญาต/ไม่อนุญาต
-                </div>
-                <div style="width:80%;margin-left:10%">
-                    <textarea class="form-control" style="height:120px"></textarea>
-                </div>
-                <br />
-                <div class="col-sm-12" style="text-align:center">
-                    <input type="button" style="width:90%" class="btn btn-lg " value="ยืนยัน" />
-                </div>
-                <br />
-                <div class="col-sm-12" style="text-align:center">
-                    <input type="button" style="width:90%" class="btn btn-lg " value="ยกเลิก" />
-                </div>
-                <br />
-                <div class="col-sm-12" style="text-align:center">
-                    <input type="button" style="width:90%" class="btn btn-lg " value="Download PDF" />
-                </div>
-                <br />
-                <div class="col-sm-12" style="text-align:center">
-                    <input type="button" style="width:90%" class="btn btn-lg " value="กลับหน้ารายการ" />
+        <div class="part part-1-3">
+            <div class="ic">
+                <div class="card">
+                    <div>
+                        โปรดเลือกสถานะถัดไป
+                    </div>
+                    <br />
+                    <div style="width:80%;margin-left:10%">
+                        <select class="form-control">
+                            <option></option>
+                        </select>
+                    </div>
+                    <br />
+                    <div class="col-sm-12" style="text-align:center">
+                        <input type="button" style="width:90%" class="btn btn-lg " value="ยืนยัน" />
+                    </div>
+                    <br />
+                    <div class="col-sm-12" style="text-align:center">
+                        <input type="button" style="width:90%" class="btn btn-lg " value="ยกเลิก" />
+                    </div>
+                    <br />
+                    <div class="col-sm-12" style="text-align:center">
+                        <input type="button" style="width:90%" class="btn btn-lg " value="Download PDF" />
+                    </div>
+                    <br />
+                    <div class="col-sm-12" style="text-align:center">
+                        <input type="button" style="width:90%" class="btn btn-lg " value="กลับหน้ารายการ" />
+                    </div>
                 </div>
             </div>
         </div>

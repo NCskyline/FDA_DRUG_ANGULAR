@@ -225,8 +225,7 @@
 
     };
     $scope.BTN_POPUP_RECLASS = function () {
-        $('#exampleModalLong').modal('show');
-
+        Openmodel();
     };
     
     $scope.BTN_SEND_RECLASS = function () {
@@ -310,3 +309,7 @@
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });
     $scope.$on('UNLOAD', function () { $scope.loading = false; alert('2'); });
 }]);
+
+function Openmodel() {
+    $('#exampleModalLong').modal('toggle'); // เป็นคำสั่งเปิดปิด
+}

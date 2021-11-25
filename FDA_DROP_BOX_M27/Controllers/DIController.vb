@@ -23,6 +23,9 @@ Namespace Controllers
         Function FRM_DRUG_IMPORT_NYM4_2() As ActionResult
             Return View()
         End Function
+        Function PREVIEW_NYM1() As ActionResult
+            Return View()
+        End Function
         Function PREVIEW_NYM2() As ActionResult
             Return View()
         End Function
@@ -35,5 +38,12 @@ Namespace Controllers
         Function PREVIEW_NYM4_2() As ActionResult
             Return View()
         End Function
+        Function INPUT_EDITNORYORMOR1_PORYOR8() As ActionResult
+            Return View()
+        End Function
+        Function PREVIEW_EDITNORYORMOR1_PORYOR8() As ActionResult
+            Return View()
+        End Function
+
     End Class
 End Namespace
