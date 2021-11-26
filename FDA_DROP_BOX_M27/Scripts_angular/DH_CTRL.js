@@ -720,3 +720,7 @@ app.filter('startFrom', function () {
         return [];
     };
 });
+
+function Openmodel() {
+    $('#exampleModalLong').modal('toggle'); // เป็นคำสั่งเปิดปิด
+}

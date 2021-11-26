@@ -68,4 +68,8 @@
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });
     $scope.$on('UNLOAD', function () { $scope.loading = false; alert('2'); });
-}]);
+    }]);
+
+function Openmodel() {
+    $('#exampleModalLong').modal('toggle'); // เป็นคำสั่งเปิดปิด
+}

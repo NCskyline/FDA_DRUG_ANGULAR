@@ -700,4 +700,11 @@
         var year = currentTime.getFullYear();
         return DATE_CHANGE = day + "/" + month + "/" + year;
     }
+
+    function Openmodel() {
+        $('#exampleModalLong').modal('toggle'); // เป็นคำสั่งเปิดปิด
+    }
+
+
+
 });

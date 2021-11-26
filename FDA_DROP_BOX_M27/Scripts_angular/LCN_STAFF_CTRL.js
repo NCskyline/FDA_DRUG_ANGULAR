@@ -288,4 +288,10 @@
         } else 
             $scope.DOC_LIST.FILE_LISTs.splice(i, 1);
     };
+
+    function Openmodel() {
+        $('#exampleModalLong').modal('toggle'); // เป็นคำสั่งเปิดปิด
+    }
+
+
 });
