@@ -98,7 +98,7 @@
             if (SEQ == '4') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN_STAFF/FRM_LOCATION_STAFF_MAIN');
             } else if (SEQ == '5') {
-                
+                alert('ระบบยังไม่เปิดใช้งาน');
             } else if (SEQ == '6') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/LCN_STAFF/FRM_LCN_DRUG_STAFF');
                 if (sessionStorage.PVCODE == '10') {

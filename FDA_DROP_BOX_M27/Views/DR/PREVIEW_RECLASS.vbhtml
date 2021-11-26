@@ -223,7 +223,7 @@ End Code
     </div>
     <div>
         <div class="col-sm-12" style="text-align:center">
-            @*<input type="button" class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_POPUP_RECLASS()" value="ยื่นคำขอ" ng-disabled="" />*@
+            <input type="button" class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_POPUP_RECLASS()" value="ยื่นคำขอ" ng-disabled="" />
             <input type="button" class="btn btn-lg" style="background-color:#FFD700" ng-click="BTN_BACK()" value="ย้อนกลับ" />
             <input type="button" class="btn btn-lg btn-success" ng-click="BTN_EDIT()" value="แก้ไขคำขอ" />
         </div>

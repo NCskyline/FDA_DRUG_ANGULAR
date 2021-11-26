@@ -71,16 +71,15 @@ End Code
                         </div>
                     </div>
                 </div>
-
             </div>
 
         </div>
         <div class="part part-2-3 ic">
-
+            
             <div ng-include="SUB_MAIN_PAGE">
 
             </div>
-
+            
         </div>
     </div>
 
