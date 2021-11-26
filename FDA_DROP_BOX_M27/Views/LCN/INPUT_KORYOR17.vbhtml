@@ -124,7 +124,11 @@
                 <td style="width:87%;text-align:center;border-bottom:dotted;border-bottom-width:thin;"><label>{{LIST_LCN.tel}}</label></td>
             </tr>
         </table>
-        <table style="width:100%">
+        <br />
+        <div ng-include="EDIT_PATH">
+
+        </div>
+        @*<table style="width:100%">
             <tr>
                 <td>ขอเปลี่ยนแปลงรายการในใบอนุญาต ดังต่อไปนี้</td>
             <tr>
@@ -133,7 +137,7 @@
 
                 </td>
             </tr>
-        </table>
+        </table>*@
         <br />
         <table>
             <tr>

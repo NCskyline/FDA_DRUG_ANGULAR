@@ -950,7 +950,7 @@
     }
 
     $scope.pageload_modify = function () {
-
+        $scope.EDIT_PATH = SET_URL_SV('/LCN/INPUT_EDIT_LCN');
         var MODLE_LCN = CENTER_SV.GET_LCN_INFORMATION_INPUT_MODIFY(sessionStorage.CITIZEN_ID_AUTHORIZE, sessionStorage.LCT_IDA, sessionStorage.LCN_IDA);
         MODLE_LCN.then(function (datas) {
 
@@ -1477,5 +1477,9 @@
             }
         });
 
+    };
+
+    $scope.BTN_Switch = function (value) {
+        $scope.value = value;
     };
 });
