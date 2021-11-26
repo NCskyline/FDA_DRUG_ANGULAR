@@ -161,7 +161,7 @@ End Code
             </div>*@
 
 
-        <div >
+        <div>
             <div style="width:100%;">
                 <div>
                     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
@@ -179,7 +179,7 @@ End Code
                         </tr>
                     </table>
                     <div class="row">
-                        <div class="col-sm-12" style="width:100%;" >
+                        <div class="col-sm-12" style="width:100%;">
                             <div class="card" style=" border-top: 10px solid #F9D027;">
                                 <table width="100%" style="font-family:'Taviraj'" class="table" id="myTable" datatable="ng">
                                     <thead style="font-weight:300;">
@@ -213,14 +213,14 @@ End Code
                                 </table>
 
                                 @*<hr />
-                                <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
-                                                ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
-                                                boundary-link-numbers="true" rotate="false" max-size="maxSize">
-                                </uib-pagination>
-                                <div align="center">
-                                    <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
-                                    <button type="button" class="btn btn-sm" ng-disabled="currentPage >= DATA_LCN_MAIN.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
-                                </div>*@
+                                    <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
+                                                    ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
+                                                    boundary-link-numbers="true" rotate="false" max-size="maxSize">
+                                    </uib-pagination>
+                                    <div align="center">
+                                        <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i>  ก่อนหน้า</button>
+                                        <button type="button" class="btn btn-sm" ng-disabled="currentPage >= DATA_LCN_MAIN.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป <i class="fas fa-arrow-right"></i></button>
+                                    </div>*@
                             </div>
 
                         </div>
@@ -228,5 +228,8 @@ End Code
                 </div>
             </div>
         </div>
+    </div>
+    <div align="right">
+        <a ng-click="BTN_PAYMENT()">ชำระเงินคลิ๊กที่นี่</a>
     </div>
 </div>

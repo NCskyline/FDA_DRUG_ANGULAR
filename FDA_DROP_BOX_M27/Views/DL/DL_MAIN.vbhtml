@@ -26,15 +26,15 @@ End Code
                         </td>
                         <td></td>
                         <td align="right">
-                            <input class="form-control" style="color:white;background-color:#38A86B" type="button" ng-click="BTN_DL(Process_ID)" value="สร้างชื่อตำรับ" />
+                            <input class="btn btn-lg" style="width:90%;color:white;background-color:#38A86B" type="button" ng-click="BTN_DL(Process_ID)" value="สร้างชื่อตำรับ" />
                         </td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
-    <br/>
-    <div >
+    <br />
+    <div>
         <div class="row">
             <div class="col-sm-12">
                 <div class="card" style=" border-top: 10px solid #F9D027;">
@@ -73,6 +73,9 @@ End Code
                 </div>
             </div>
         </div>
+    </div>
+    <div align="right">
+        <a ng-click="BTN_PAYMENT()">ชำระเงินคลิ๊กที่นี่</a>
     </div>
 </div>
 
