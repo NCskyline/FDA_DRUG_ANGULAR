@@ -7,7 +7,7 @@ End Code
     <script src="~/Scripts_angular/CENTER_SV.js"></script>
 
 
-<div class="ic" ng-app="ANGULAR_APP" ng-controller="LCN_CTRL">
+<div class="ic" @*ng-app="ANGULAR_APP" ng-controller="LCN_CTRL"*@>
     <div  style="font-family:'Taviraj';width:100%">
         <h1 style="color:red"><b>พิกัด</b></h1>
         <h3>โปรดระบุพิกัดทางภูมิศาสตร์ของที่ตั้งร้านยา (วิธีการดูพิกัด <a ng-click="BTN()" style="color:blue">กดที่นี่</a> )</h3>

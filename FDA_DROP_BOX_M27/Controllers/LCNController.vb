@@ -151,6 +151,12 @@ Namespace Controllers
         Function INPUT_PDF_DRUG_KORYOR15() As ActionResult
             Return View()
         End Function
+        Function INPUT_EDIT_LCN() As ActionResult
+            Return View()
+        End Function
+        Function INPUT_EDIT_LCN_2() As ActionResult
+            Return View()
+        End Function
 
         Function INPUT_DRUG_PORYOR9() As ActionResult
             Return View()

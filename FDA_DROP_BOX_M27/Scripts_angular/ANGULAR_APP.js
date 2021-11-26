@@ -1,4 +1,4 @@
-﻿var app = angular.module('ANGULAR_APP', ['ngMaterial', 'ngFileUpload']);
+﻿var app = angular.module('ANGULAR_APP', ['ngMaterial', 'ngFileUpload', "ui.bootstrap"]);
 
 app.directive('loading', ['$http', function ($http) {
     return {

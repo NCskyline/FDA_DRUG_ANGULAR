@@ -21,7 +21,8 @@
     <OptionInfer>On</OptionInfer>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -813,6 +814,8 @@
     <Content Include="Views\DI\PREVIEW_NYM1.vbhtml" />
     <Content Include="Views\DI\INPUT_EDITNORYORMOR1_PORYOR8.vbhtml" />
     <Content Include="Views\DI\PREVIEW_EDITNORYORMOR1_PORYOR8.vbhtml" />
+    <Content Include="Views\LCN\INPUT_EDIT_LCN.vbhtml" />
+    <Content Include="Views\LCN\INPUT_EDIT_LCN_2.vbhtml" />
     <Content Include="Views\MASTER_DATA\FRM_ASSIGN_WORK_MAIN.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">
