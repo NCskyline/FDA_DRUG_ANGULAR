@@ -1,44 +1,42 @@
-﻿@Code
-    ViewData("Title") = "FRM_DR_STAFF_CONFIRM"
-End Code
-    
-    <script src="~/Scripts_angular/ANGULAR_APP.js"></script>
-    <script src="~/Scripts_angular/CENTER_SV.js"></script>
-    <style>
-        .tab {
-            overflow: hidden;
-            border: none solid #ccc;
-            /*background-color: #f1f1f1;*/
+﻿@Code ViewData("Title") = "FRM_DR_STAFF_CONFIRM" End Code
+
+<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
+<script src="~/Scripts_angular/CENTER_SV.js"></script>
+<style>
+    .tab {
+        overflow: hidden;
+        border: none solid #ccc;
+        /*background-color: #f1f1f1;*/
+    }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
         }
 
-            /* Style the buttons that are used to open the tab content */
-            .tab button {
-                background-color: inherit;
-                float: left;
-                border: none;
-                outline: none;
-                cursor: pointer;
-                padding: 14px 16px;
-                transition: 0.3s;
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+                background-color: #ddd;
             }
 
-                /* Change background color of buttons on hover */
-                .tab button:hover {
-                    background-color: #ddd;
-                }
+            /* Create an active/current tablink class */
+            .tab button.active {
+                background-color: #ccc;
+            }
 
-                /* Create an active/current tablink class */
-                .tab button.active {
-                    background-color: #ccc;
-                }
-
-        /* Style the tab content */
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border-top: none;
-        }
-    </style>
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border-top: none;
+    }
+</style>
 
 <div ng-app="" ng-controller="">
     <div class="content-part">

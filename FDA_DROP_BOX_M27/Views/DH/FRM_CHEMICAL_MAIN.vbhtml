@@ -1,17 +1,15 @@
-﻿@Code
-    Layout = ""
-End Code
+﻿@Code Layout = "" End Code
 
 <div><h3 style="color:red">{{HEADER}}</h3></div>
-<div >
-    
+<div>
+
 </div>
 <hr />
 <table style="width:100%">
     <tr>
         <td style="width:100%"><input style="width:60%" class="form-control" placeholder="ค้นหา..." ng-model="filter" /></td>
         <td align="right"><button class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="ADD_CHEMICAL()">เพิ่มสาร (Add Substance)</button></td>
-    </tr>    
+    </tr>
 </table>
 <br />
 <div class="row">
@@ -21,12 +19,18 @@ End Code
                 <thead>
                     <tr>
                         <th>เลขรับ</th>
-                        <th>ชื่อสาร<br />
-                        Substance</th>
-                        <th>สถานะ<br />
-                        Status</th>
-                        <th>รหัสสาร<br />
-                        Code</th>
+                        <th>
+                            ชื่อสาร<br />
+                            Substance
+                        </th>
+                        <th>
+                            สถานะ<br />
+                            Status
+                        </th>
+                        <th>
+                            รหัสสาร<br />
+                            Code
+                        </th>
                         <th></th>
                     </tr>
                 </thead>
@@ -58,6 +62,7 @@ End Code
             </div>
         </div>
     </div>
-    
 </div>
-
+<div align="right">
+    <a ng-click="BTN_PAYMENT()" style="color:blue">กดที่นี่เพื่อชำระเงิน</a>
+</div>

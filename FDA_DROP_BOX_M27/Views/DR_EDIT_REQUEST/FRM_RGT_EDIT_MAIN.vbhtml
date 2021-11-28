@@ -115,15 +115,15 @@ End Code
                                 </td>
                                 <td>
                                 </td>
-                            </tr>                           
+                            </tr>
                         </tbody>
                         <tfoot>
                             <tr></tr>
                         </tfoot>
                     </table>
                 </div>
-                <div style="text-align:right">
-                    <a ng-click="BTN_PAYMENT">ชำระเงินคลิ๊กที่นี่</a>
+                <div align="right">
+                    <a ng-click="BTN_PAYMENT()" style="color:blue">กดที่นี่เพื่อชำระเงิน</a>
                 </div>
             </div>
         </div>
