@@ -33,6 +33,40 @@
         height: 10px;
         background-color: black;
     }
+
+    .tab {
+        overflow: hidden;
+        border: none solid #ccc;
+        /*background-color: #f1f1f1;*/
+    }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+                background-color: #ddd;
+            }
+
+            /* Create an active/current tablink class */
+            .tab button.active {
+                background-color: #ccc;
+            }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border-top: none;
+    }
 </style>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -684,13 +718,18 @@
         <br />
 
         <div style="font-size:20px"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
-        <div class="row">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'FIRST')"><u>กรณีขอรับใบอนุญาต (กรณีรายใหม่)</u></button>
+            <button class="tablinks" onclick="openTab(event, 'SECOND')"><u>กรณีขอต่ออายุใบอนุญาต</u></button>
+            <button class="tablinks" onclick="openTab(event, 'THIRD')"><u>กรณีขอรับใบแทนใบอนุญาต</u></button>
+        </div>
+        @*<div class="row">
             <div class="col-sm-12 in" style="width:100%">
                 <div ng-include="FILE_ATTACH">
 
                 </div>
             </div>
-        </div>
+        </div>*@
         @*<div style="margin-left:5%;font-size:20px"><strong>๕.๑ <u>กรณีขอรับใบอนุญาต (กรณีรายใหม่)</u></strong></div>
         <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๑ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong></div>
         <table style="width:90%;font-size:20px ;margin-left:10%">
@@ -790,7 +829,6 @@
         <div style="margin-left:5%;font-size:20px;text-align:center"><strong>ข้าพเจ้าขอรับรองว่า ข้อความและเอกสารหรือหลักฐานทั้งหมดที่ยื่นเพื่อประกอบคำขอรับใบอนุญาตเป็นความจริงทุกประการ</strong></div>
         <br />
         <br />
-
         <table style="width:100%">
             <tr>
                 <td style="width:25%"></td>
@@ -821,30 +859,6 @@
             </tr>
 
         </table>
-        @*<br />
-        <div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-3" style="text-align:center">
-                    รายละเอืยด :
-                </div>
-                <div class="col-sm-9">
-                    {{REMARK}}
-                </div>
-            </div>
-            <br />
-            <table class="table" style="width:100%">
-                <tr>
-                    <td>ชื่อไฟล์</td>
-                    <td></td>
-                </tr>
-                <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
-                    <td>{{datas.FILENAME}}</td>
-                    <td>
-                        <a ng-show="PROCESS == '123'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                    </td>
-                </tr>
-            </table>
-        </div>*@
         <br />
         <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
             <input type="button" class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
@@ -852,3 +866,23 @@
         </div>
     </div>
 </div>
+
+<script>
+    function openTab(evt, Type) {
+        var i, tabcontent, tablinks;
+
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        document.getElementById(Type).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    document.getElementById("defaultOpen").click();
+</script>
