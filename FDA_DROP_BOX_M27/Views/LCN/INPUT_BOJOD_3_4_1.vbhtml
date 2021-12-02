@@ -723,6 +723,110 @@
             <button class="tablinks" onclick="openTab(event, 'SECOND')"><u>กรณีขอต่ออายุใบอนุญาต</u></button>
             <button class="tablinks" onclick="openTab(event, 'THIRD')"><u>กรณีขอรับใบแทนใบอนุญาต</u></button>
         </div>
+        <div id="FIRST" class="tabcontent">
+            <table width="100%" border="1">
+                <tr>
+                    <td width="10%" align="center">ลำดับที่</td>
+                    <td width="50%" align="center">รายการเอกสาร</td>
+                    <td width="40%" align="center">ไฟล์แนบ</td>
+                </tr>
+                <tr>
+                    <td align="center">๑.</td>
+                    <td colspan="2">กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</td>
+                </tr>
+                <tr>
+                    <td align="center">๑.๑</td>
+                    <td>สำเนาใบอนุญาตขายยาแผนปัจจุบันตามกฎหมายว่าด้วยยา</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr>
+                <tr>
+                    <td align="center">๑.๒</td>
+                    <td>คำรับรองของผู้รับอนุญาตและเภสัชกรผู้ควบคุมกิจการ</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr> 
+                <tr>
+                    <td align="center">๑.๓</td>
+                    <td>รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr> 
+                <tr>
+                    <td align="center">๑.๔</td>
+                    <td>สำเนาใบอนุญาตประกอบวิชาชีพเภสัชกรรม</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr> 
+                <tr>
+                    <td align="center">๑.๕</td>
+                    <td>หนังสือแต่งตั้งผู้ดำเนินกิจการ กรณีผู้ขอรับใบอนุญาตเป็นนิติบุคคล</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr>
+                <tr>
+                    <td align="center">๒.</td>
+                    <td colspan="2">กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ โดยการขายส่งตรง</td>
+                </tr>
+                <tr>
+                    <td align="center">๒.๑</td>
+                    <td>สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr>
+                <tr>
+                    <td align="center">๒.๒</td>
+                    <td>รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr>
+                <tr>
+                    <td align="center">๓.</td>
+                    <td colspan="2">กรณีขอรับใบอนุญาตขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ ในบริเวณสถานที่ที่มีการประชุม</td>
+                </tr>
+                <tr>
+                    <td align="center">๓.๑</td>
+                    <td>สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="SECOND" class="tabcontent">
+            <table width="100%" border="1">
+                <tr>
+                    <td width="10%" align="center">ลำดับที่</td>
+                    <td width="50%" align="center">รายการเอกสาร</td>
+                    <td width="40%" align="center">ไฟล์แนบ</td>
+                </tr>
+                <tr>
+                    <td align="center">๑.</td>
+                    <td>ใบอนุญาตฉบับเดิม</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr> 
+                <tr>
+                    <td align="center">๒.</td>
+                    <td>รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="THIRD" class="tabcontent">
+            <table width="100%" border="1">
+                <tr>
+                    <td width="10%" align="center">ลำดับที่</td>
+                    <td width="50%" align="center">รายการเอกสาร</td>
+                    <td width="40%" align="center">ไฟล์แนบ</td>
+                </tr>
+                <tr>
+                    <td align="center">๑.</td>
+                    <td>ใบแจ้งความ กรณีใบอนุญาตสูญหาย</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr> 
+                <tr>
+                    <td align="center">๒.</td>
+                    <td>ใบอนุญาต กรณีใบอนุญาตดังกล่าวถูกทำลายบางส่วนหรือลบเลือนในสาระสำคัญ</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr> 
+                <tr>
+                    <td align="center">๓.</td>
+                    <td>รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr>
+            </table>
+        </div>
         @*<div class="row">
             <div class="col-sm-12 in" style="width:100%">
                 <div ng-include="FILE_ATTACH">
