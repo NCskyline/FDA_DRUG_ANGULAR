@@ -1213,7 +1213,7 @@
                 <tr>
                     <td align="center">2.4</td>
                     <td>
-                        การละลายของตัวยาสำคัญ (Solubility study) (โปรดดูรายละเอียดหัวข้อ/เนื้อหาที่ต้องการในหมายเหตุ)
+                        การละลายของตัวยาสำคัญ (Solubility study) (โปรดดูรายละเอียดหัวข้อ/เนื้อหาที่ต้องการในหมายเหตุ)<br />
                         <a data-toggle="modal" data-target="#popup19" style="color:red">
                             ดูรายละเอียด กดที่นี่
                         </a>
@@ -1237,7 +1237,7 @@
                 <tr>
                     <td align="center">2.6</td>
                     <td>
-                        ข้อมูลผลิตภัณฑ์ยา (Product information) (โปรดดูรายละเอียดหัวข้อ/เนื้อหาที่ต้องการในหมายเหตุ)
+                        ข้อมูลผลิตภัณฑ์ยา (Product information) (โปรดดูรายละเอียดหัวข้อ/เนื้อหาที่ต้องการในหมายเหตุ)<br />
                         <a data-toggle="modal" data-target="#popup21" style="color:red">
                             ดูรายละเอียด กดที่นี่
                         </a>
@@ -1249,7 +1249,7 @@
                 <tr>
                     <td align="center">2.7</td>
                     <td>
-                        ข้อมูลส่วนประกอบตัวยาไม่สำคัญ (Excipients) (โปรดดูรายละเอียดหัวข้อ/เนื้อหาที่ต้องการในหมายเหตุ)
+                        ข้อมูลส่วนประกอบตัวยาไม่สำคัญ (Excipients) (โปรดดูรายละเอียดหัวข้อ/เนื้อหาที่ต้องการในหมายเหตุ)<br />
                         <a data-toggle="modal" data-target="#popup22" style="color:red">
                             ดูรายละเอียด กดที่นี่
                         </a>
@@ -1295,7 +1295,7 @@
                     <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
                     @*<td></td>*@
                     <td></td>
-                </tr> 
+                </tr>
                 <tr>
                     <td align="center">2.12</td>
                     <td>
@@ -1694,6 +1694,487 @@
                     </tr>
                 </table>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">1.4.1</td>
+                        <td>ชื่อรายงาน (Study title)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">1.4.2</td>
+                        <td>ชื่อและที่อยู่ผู้ให้การสนับสนุน (Name and address of sponsor)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">1.4.3</td>
+                        <td>ชื่อผู้รับผิดชอบโครงการศึกษา และที่อยู่ของสถาบันที่ดำเนินการศึกษา (Name, Person in charge and address of institution)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">1.4.4</td>
+                        <td>ชื่อและที่อยู่ของผู้วิจัยศึกษาหลัก (Name and address of principal investigator)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">1.4.5</td>
+                        <td>ชื่อแพทย์หรือผู้วิจัยศึกษาทางคลินิก (Name of medical/ clinical investigator)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">1.4.6</td>
+                        <td>ชื่อและที่อยู่ของผู้รับผิดชอบหลักด้านห้องปฏิบัติการทางคลินิก (Name, Person in charge and address of clinical laboratory)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">1.4.7</td>
+                        <td>ชื่อและที่อยู่ของผู้รับผิดชอบหลักด้านห้องปฏิบัติการวิเคราะห์ระดับยา (Name, Person in charge and address of analytical laboratory)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">1.4.8</td>
+                        <td>ชื่อและที่อยู่ของผู้รับผิดชอบหลักด้านการจัดการข้อมูล การวิเคราะห์ทางเภสัชจลนศาสตร์และทางสถิติ (Name, Person in charge and address for data management, pharmacokinetics and statistical)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">1.4.9</td>
+                        <td>ชื่อและที่อยู่ของผู้ร่วมศึกษาวิจัยคนอื่น ๆ (ถ้ามี) (Name and address of other investigator(s) and study personnel) (if applicable)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">1.4.10</td>
+                        <td>วันที่โครงร่างฯ ได้รับการอนุมัติจาก IRB/EC (Ethical approval date)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">1.4.11</td>
+                        <td>วันเวลาที่เริ่มและยุติการศึกษาทางคลินิกและการวิเคราะห์ระดับยา (Start and end date of clinical and analytical study)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">1.4.12</td>
+                        <td>การลงนามพร้อมวันที่ของผู้ศึกษาวิจัย (Signature and date of investigator(s)) ผู้เขียนรายงานทางการแพทย์ (Medical writer) ผู้จัดการด้านการประกันคุณภาพ (QA Manager)</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">7.1.1</td>
+                        <td>
+                            ตัวยาสำคัญ (API) *แนบหนังสือรับรองการวิเคราะห์ของตัวยาสำคัญ (Certificate of analysis of API)*<br />
+                            **เฉพาะกรณีตัวยาสำคัญเป็นยาในกลุ่ม Sartans เช่น Irbesartan Valsartan เป็นต้น โปรดแสดงรายละเอียดต่อไปนี้<br />
+                            <span style="padding-left:2em">- ตัวยาสำคัญ ได้รับ Certification of Suitability (CEP) จาก European Directorate for the Quality of Medicines (EDQM) หรือไม่</span><br />
+                            <span style="padding-left:4em">- ใช่ (โปรดให้รายละเอียดเพิ่มเติมในข้อ b)</span><br />
+                            <span style="padding-left:4em">- ไม่ใช่ (โปรดให้รายละเอียดเพิ่มเติมในข้อ c)</span><br />
+                            <span style="padding-left:2em">- โปรดแสดงสำเนา  CEP ดังกล่าว ซึ่งสามารถตรวจสอบได้จาก<a href="https://www.edqm.eu/en/news/certification-of-suitability">https://www.edqm.eu/en/news/certification-of-suitability</a> และ <a href="https://extranet.edqm.eu/publications/Recherches_CEP.shtml">https://extranet.edqm.eu/publications/Recherches_CEP.shtml</a></span><br />
+                            <span style="padding-left:2em">- โปรดแสดงเหตุผลและหลักฐานประกอบการพิจารณาเลือกใช้วัตถุดิบจากแหล่งผลิตนี้ รวมถึงการควบคุม Nitrosamine impurities และ Acceptant criteria</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">7.1.2</td>
+                        <td>ชื่อการค้า (Trade Name)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">7.1.3</td>
+                        <td>ความแรง (Strength)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">7.1.4</td>
+                        <td>รูปแบบยา (Dosage form)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">7.1.5</td>
+                        <td>ชื่อและที่อยู่ของผู้ผลิต (Name and address of manufacturer)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">7.1.6</td>
+                        <td>ชื่อและที่อยู่ผู้นำสั่งยาเข้ามาในราชอาณาจักร (ถ้ามี) (Name and address of importer) (if available)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">7.1.7</td>
+                        <td>รุ่นที่ผลิต (Batch number)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">7.1.8</td>
+                        <td>วันที่ผลิต (Date of manufacture)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">7.1.9</td>
+                        <td>วันหมดอายุ (Expiry date)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">7.1.10</td>
+                        <td>ขนาดรุ่นการผลิต (Batch size) หากน้อยกว่า 100,000 หน่วย ต้องแนบเอกสารเพิ่มเติมตามเงื่อนไขและเอกสารที่ต้องยื่นประกอบการพิจารณารุ่นการผลิตนำร่อง (Pilot batch) ที่น้อยกว่า 100,000 หน่วยหรือหนังสืออนุมัติ</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">7.1.11</td>
+                        <td>สูตรตำรับ (Product formulation) แสดงลักษณะยาและส่วนประกอบของผลิตภัณฑ์ยา (Description and Composition of product)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">7.1.12</td>
+                        <td>ข้อกำหนดมาตรฐานและวิธีวิเคราะห์ (Finished product specifications)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">7.1.13</td>
+                        <td>หนังสือรับรองการวิเคราะห์ของผลิตภัณฑ์ยาทดสอบ (Certificate of analysis of test product)</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup7" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup8" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup9" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup10" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup11" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup12" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup13" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup14" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup15" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup16" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup17" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup18" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup19" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup20" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup21" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup22" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup23" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup24" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="popup25" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
