@@ -1868,7 +1868,68 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">7.2.1</td>
+                        <td>ชื่อการค้า (Trade name)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">7.2.2</td>
+                        <td>ตัวยาสำคัญ (API)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">7.2.3</td>
+                        <td>ความแรง (Strength)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">7.2.4</td>
+                        <td>รูปแบบยา (Dosage form)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">7.2.5</td>
+                        <td>ชื่อและที่อยู่ผู้ผลิต (Name and address of manufacturer)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">7.2.6</td>
+                        <td>ชื่อและที่อยู่ผู้นาสั่งยาเข้ามาในราชอาณาจักร (ถ้ามี) (Name and address of importer) (if available)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">7.2.7</td>
+                        <td>รุ่นที่ผลิต (Batch number)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">7.2.8</td>
+                        <td>วันที่ผลิต (Date of manufacture)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">7.2.9</td>
+                        <td>วันหมดอายุ (Expiry date)</td>
+</tr> 
+                    <tr>
+                        <td align="center">7.2.10</td>
+                        <td>สูตรตำรับ (Product Formulation) แสดงลักษณะยาและส่วนประกอบของผลิตภัณฑ์ยา (Description and Composition of product)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">7.2.11</td>
+                        <td>หนังสือรับรองการวิเคราะห์ของยาอ้างอิง หรือผลิตภัณฑ์ยาเปรียบเทียบ หรือ ผลิตภัณฑ์ยาต้นแบบ (COA of Reference or Comparator or Innovator product)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">7.2.12</td>
+                        <td>
+                            ผลิตภัณฑ์ยาอ้างอิงผลิตจากแหล่งผลิตเดียวกันกับผลิตภัณฑ์ยาต้นแบบที่ขึ้นทะเบียนในประเทศไทย (The sameness of manufacturing site(s) of used reference product)<br />
+                            <span style="padding-left:2em">- ใช่ เลขทะเบียนตำรับยา (Drug registration number)..................................................</span><br />
+                            <span style="padding-left:2em">- ไม่ใช่ แนบข้อมูล Comparison of dissolution profile ระหว่างแหล่งผลิตของผลิตภัณฑ์ยาอ้างอิง</span><br />
+                            <span style="padding-left:2em">- อื่น ๆ..................................................</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -1885,7 +1946,56 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">8.3.1</td>
+                        <td>บทนำ วัตถุประสงค์ รายละเอียดของ วิธีดำเนินการทดสอบการละลายของผลิตภัณฑ์ยา วิธีการวิเคราะห์ และเกณฑ์ที่ใช้ในการพิจารณาการยอมรับผลิตภัณฑ์ยา (Introduction, Objectives, Dissolution method & procedure & Acceptance criteria or limit)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">8.3.2</td>
+                        <td>สารเคมีและเครื่องมือที่ใช้ (Chemicals & Instruments)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">8.3.3</td>
+                        <td>
+                            ตัวกลางการละลาย (Dissolution media) โปรดระบุข้อมูล อย่างน้อย ดังต่อไปนี้<br />
+                            <span style="padding-left:2em">- ส่วนประกอบและการเตรียมตัวกลางการละลาย (Compositions & Preparations)</span><br />
+                            <span style="padding-left:2em">- pH</span><br />
+                            <span style="padding-left:2em">- อุณหภูมิ (Temperature)</span><br />
+                            <span style="padding-left:2em">- ปริมาตร (Volume)</span><br />
+                            <span style="padding-left:2em">- วิธีการกำจัดก๊าซ (Method of de-aeration) เป็นต้น</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">8.3.4</td>
+                        <td>จำนวนหน่วยของผลิตภัณฑ์ยาที่ใช้ (Number of units) (โปรดระบุ)..................................................</td>
+                    </tr>
+                    <tr>
+                        <td align="center">8.3.5</td>
+                        <td>โครงร่างการตรวจสอบรายงานวิธีการตรวจสอบความถูกต้องของวิธีการวิเคราะห์ (Protocol & Summary report for analytical method validation/verification)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">8.3.6</td>
+                        <td>
+                            ผลการทดสอบการละลายของผลิตภัณฑ์ยาในตัวกลางการละลายทั้งหมด (Dissolution profile comparison results)<br />
+                            <span style="padding-left:2em">- ผลการศึกษา (Results) แสดงด้วยรูปแบบตาราง</span><br />
+                            <span style="padding-left:2em">- ร้อยละของการปลดปล่อยตัวยาสำคัญ (% Drug release) แต่ละหน่วย/จุดเวลา และแสดงรายละเอียดการคำนวณดังกล่าว</span><br />
+                            <span style="padding-left:2em">- ค่าเฉลี่ยร้อยละการปลดปล่อยตัวยาสำคัญ 12 หน่วย/ จุดเวลา</span><br />
+                            <span style="padding-left:2em">- ส่วนเบี่ยงเบนมาตรฐาน (Standard deviation: SD) ของร้อยละการปลดปล่อยตัวยาสำคัญ 12 หน่วย/จุดเวลา</span><br />
+                            <span style="padding-left:2em">- % CV หรือ RSD ของร้อยละการปลดปล่อยตัวยาสำคัญ 12 หน่วย/จุดเวลา</span><br />
+                            <span style="padding-left:2em">- กราฟแสดงการเปรียบเทียบผลการละลายของผลิตภัณฑ์ยาทดสอบและยาอ้างอิง (Comparative dissolution profiles)</span><br />
+                            <span style="padding-left:2em">- เปรียบเทียบความเหมือนกันระหว่างผลการละลายของผลิตภัณฑ์ยาทดสอบและยาอ้างอิง หรือ ผลิตภัณฑ์ยาเปรียบเทียบ หรือ ผลิตภัณฑ์ยาต้นแบบ ด้วยการแสดงการคำนวณค่า similarity factor (f2) หรือวิธีอื่นที่เหมาะสม พร้อมเหตุผลสนับสนุน</span><br />
+                            <span style="padding-left:2em">- การอภิปราย และสรุปผลการทดสอบการละลายของผลิตภัณฑ์ยา (Discussion and Conclusions)</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -1902,7 +2012,47 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">9.1.1</td>
+                        <td>รูปแบบการศึกษาทางคลินิกและแผนการศึกษา (Clinical study design and plan)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">9.1.2</td>
+                        <td>
+                            การคัดเลือกอาสาสมัคร (Selection of subject)<br />
+                            <span style="padding-left:2em">- เกณฑ์การคัดเข้า (Inclusion criteria)</span><br />
+                            <span style="padding-left:2em">- เกณฑ์การคัดออก (Exclusion criteria)</span><br />
+                            <span style="padding-left:2em">- สาเหตุการคัดอาสาสมัครออกจากศึกษา (Removal of subject from study includes withdraw and/or dropout)</span>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td align="center">9.1.3</td>
+                        <td>
+                            การรักษา (Treatments)<br />
+                            <span style="padding-left:2em">- วิธีการให้ยา (Treatments administered)</span><br />
+                            <span style="padding-left:2em">- ข้อมูลผลิตภัณฑ์ยาที่ใช้ในการทดสอบ (Identity of drug product(s))</span><br />
+                            <span style="padding-left:2em">- การเลือกขนาดยาที่ใช้ในการศึกษา (Selection of doses in the study)</span><br />
+                            <span style="padding-left:2em">- วิธีการกำหนดอาสาสมัครให้กลุ่มการรักษา (Method of assigning subjects to treatment groups)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">9.1.4</td>
+                        <td>
+                            ประสิทธิภาพและความปลอดภัย (Efficacy and Safety)<br />
+                            <span style="padding-left:2em">- การบันทึก การประเมิน และแผนผังการวัดค่าทางคลินิกและความปลอดภัย (Clinical and safety measurements records, assessed and flow chart)</span><br />
+                            <span style="padding-left:2em">- การเลือกจุดเจาะเลือด(Selection of sampling time points)</span><br />
+                            <span style="padding-left:2em">- การวัดระดับยาในเลือด (Drug concentration measurements)</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -1919,7 +2069,35 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">9.3.1</td>
+                        <td>แผนการวิเคราะห์ทางสถิติ (Statistical and analytical plans)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">9.3.2</td>
+                        <td>การคำนวณขนาดกลุ่มตัวอย่าง และค่าอำนาจจำแนกความแตกต่างระหว่างกลุ่ม (Determination of sample size and power of the study)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">9.3.3</td>
+                        <td>การเปลี่ยนแปลงในการทำการศึกษาหรือแผนการวิเคราะห์(Changes in the conduct of the study or planned analyses)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">9.3.4</td>
+                        <td>สรุปวิธีการวิเคราะห์ระดับยาในเลือด (Summary of bioanalytical method)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">9.3.5</td>
+                        <td>การประกันคุณภาพของข้อมูล (Data quality assurance) โดยระบุ QA statement</td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -1936,7 +2114,35 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">10.1.1</td>
+                        <td>Demographic characteristics of the subject</td>
+                    </tr>
+                    <tr>
+                        <td align="center">10.1.2</td>
+                        <td>Details of clinical activity</td>
+                    </tr>
+                    <tr>
+                        <td align="center">10.1.3</td>
+                        <td>Deviation from protocol</td>
+                    </tr>
+                    <tr>
+                        <td align="center">10.1.4</td>
+                        <td>Results of drug/alcohol/smoking usage, medical history and physical examination, vital sign and relevant laboratory test of subject</td>
+                    </tr>
+                    <tr>
+                        <td align="center">10.1.5</td>
+                        <td>Adverse event/reaction reports for test product and reference product</td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -1953,7 +2159,31 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">10.2.1</td>
+                        <td>Drug levels at each sampling time, descriptive statistics</td>
+                    </tr>
+                    <tr>
+                        <td align="center">10.2.2</td>
+                        <td>Figure of mean plasma or urine concentration-time profile</td>
+                    </tr>
+                    <tr>
+                        <td align="center">10.2.3</td>
+                        <td>Figure of individual subject plasma or urine concentration-time profile</td>
+                    </tr>
+                    <tr>
+                        <td align="center">10.2.4</td>
+                        <td>Table of individual subject pharmacokinetic parameters, descriptive statistics</td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -1970,7 +2200,33 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">10.3.1</td>
+                        <td>Statistical considerations</td>
+                    </tr>
+                    <tr>
+                        <td align="center">10.3.2</td>
+                        <td>Time points selected for Kel, T1/2</td>
+                    </tr>
+                    <tr>
+                        <td align="center">10.3.3</td>
+                        <td>
+                            Summary statistical significance for Cmax and AUC (based on log-transformed data calculated as 90% CI of test/reference geometric means)<br />
+                            <span style="padding-left:2em">- Intra-subject variability</span><br />
+                            <span style="padding-left:2em">- Assessment of sequence, period and treatment effects</span><br />
+                            <span style="padding-left:2em">- Table of analysis of variance, geometric least-squares means for each pharmacokinetic parameters</span><br />
+                            <span style="padding-left:2em">- Table of</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -1987,7 +2243,23 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">13.1.1</td>
+                        <td>Study protocol and its amendments together with Institutional Review Board/Ethical Committee approvals</td>
+                    </tr>
+                    <tr>
+                        <td align="center">13.1.2</td>
+                        <td>Informed consent form</td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -2004,7 +2276,27 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">13.2.1</td>
+                        <td>รายงานการตรวจสอบความถูกต้องของวิธีวิเคราะห์ (Method validation report)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">13.2.2</td>
+                        <td>Summary sequences of injection for all run (100%)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">13.2.3</td>
+                        <td>ข้อมูลดิบโครมาโตแกรมอย่างน้อย 20% ซึ่งรวมถึงโครมาโตแกรมในหัวข้อ selectivity, precision and accuracy, long-term stability of drug in plasma (Raw chromatograms at least 20% includes selectivity, precision and accuracy, long-term stability of drug in plasma)</td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -2021,7 +2313,31 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">13.3.1</td>
+                        <td>รายงานการวิเคราะห์ระดับยา (Analytical report)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">13.3.2</td>
+                        <td>Summary sequences of injection for all run (100%)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">13.3.3</td>
+                        <td>ข้อมูลดิบโครมาโตแกรมอย่างน้อย 20% พร้อมระบุวิธีการเลือกข้อมูลดิบโครมาโตแกรมของอาสาสมัครที่ส่งมา (Raw chromatograms at least 20% and method for selection the raw chromatograms of subjects)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">13.3.4</td>
+                        <td>ข้อมูลดิบระดับยาในเลือดสำหรับอาสาสมัครทุกคนแสดงใน Excel file (Raw data of drug levels in plasma for all subjects presented in excel file)</td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -2038,7 +2354,27 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">13.4.1</td>
+                        <td>หลักฐานแสดงการรับรองมาตรฐานของสถานที่การศึกษาวิจัยทางคลินิก (Certificate of Clinical facility) และ/หรือ หลักฐานแสดงการรับรองมาตรฐานของสถานที่ตรวจวิเคราะห์ระดับยา (Certificate of Analytical laboratory) <font style="color:red">*พิจารณาตามแบบตรวจสอบหลักฐานแสดงมาตรฐานห้องปฏิบัติการชีวสมมูล (F-D2-216)*</font></td>
+                    </tr>
+                    <tr>
+                        <td align="center">13.4.2</td>
+                        <td>หลักฐานแสดงการรับรองมาตรฐานห้องปฏิบัติการที่ตรวจวิเคราะห์ผลทางคลินิก (Certificate of Clinical laboratory) และ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">13.4.3</td>
+                        <td>F-D2-216 แบบตรวจสอบหลักฐานแสดงมาตรฐานห้องปฏิบัติการชีวสมมูล</td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -2055,7 +2391,48 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">2.3.1</td>
+                        <td>
+                            คุณสมบัติทางเคมีกายภาพ (Physicochemical properties) โปรดระบุข้อมูลAppearance, CAS No., Chemical name (IUPAC), INN name, Hygroscopic, Stereo-isomer, Molecular formula*, Molecular structure*, Molecular weight, pKa,  Specific optical rotation, Partition coefficient*, Polymorphism*, Crystalline forms*, Solubility*, Particle size*<br />
+                            <font style="color:red">***กรณีตัวยาสำคัญที่อยู่ในรูปเกลือ, hydrate หรือ solvates ต้องแสดงข้อมูล Molecular formula และ Molecular weight ของ  free base  หรือ anhydrous  หรือ unsolvated เพิ่มเติม***</font><br />
+                            พร้อมแสดงรายละเอียดว่า ตัวยาสำคัญที่เลือกใช้ นั้นแตกต่าง หรือ เหมือน ผลิตภัณฑ์ยาอ้างอิง หรือ ผลิตภัณฑ์ยาเปรียบเทียบ หรือ ผลิตภัณฑ์ยาต้นแบบ (Reference or Comparator or Innovator product)
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td align="center">2.3.2</td>
+                        <td>ชื่อและที่อยู่ผู้ผลิต (Manufacturer) ที่อยู่ผู้ผลิตระบุประเทศด้วย***</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">2.3.3</td>
+                        <td>
+                            Certificate of Analysis (COA) ของ API***<br />
+                            **เฉพาะกรณีตัวยาสำคัญเป็นยาในกลุ่ม Sartans เช่น Irbesartan Valsartan เป็นต้น โปรดแสดงรายละเอียดต่อไปนี้<br />
+                            <span style="padding-left:2em">- ตัวยาสำคัญ ได้รับ Certification of Suitability (CEP) จาก European Directorate for the Quality of Medicines (EDQM) หรือไม่</span><br />
+                            <span style="padding-left:4em">- ใช่ (โปรดให้รายละเอียดเพิ่มเติมในข้อ b)</span><br />
+                            <span style="padding-left:4em">- ไม่ใช่ (โปรดให้รายละเอียดเพิ่มเติมในข้อ c)</span><br />
+                            <span style="padding-left:2em">- โปรดแสดงสำเนา  CEP ดังกล่าว ซึ่งสามารถตรวจสอบได้จาก <a href="https://www.edqm.eu/en/news/certification-of-suitability">https://www.edqm.eu/en/news/certification-of-suitability</a>  และ <a href="https://extranet.edqm.eu/publications/Recherches_CEP.shtml">https://extranet.edqm.eu/publications/Recherches_CEP.shtml</a></span><br />
+                            <span style="padding-left:2em">- โปรดแสดงเหตุผลและหลักฐานประกอบ การพิจารณาเลือกใช้วัตถุดิบจากแหล่งผลิตนี้ รวมถึงการควบคุม Nitrosamine impurities และ Acceptant criteria</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">2.3.4</td>
+                        <td>
+                            ดัชนีการรักษา (Therapeutic index)<br />
+                            <span style="padding-left:2em">- LD50/ED50 ≥ 2 เท่า โดยแหล่งข้อมูลมาจาก Species และ Route เดียวกัน (โปรดระบุ)..................................................</span><br />
+                            <span style="padding-left:2em">- Narrow Therapeutic index (NTI) drug lists จาก Regulatory Agencies (โปรดระบุ)..................................................</span><br />
+                            <span style="padding-left:2em">- อื่นๆ (โปรดระบุ)..................................................</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -2072,7 +2449,63 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">2.4.1</td>
+                        <td>ขนาดยาสูงสุดสำหรับการรับประทาน 1 ครั้ง (Highest single dose administered**) และขนาดยาสูงสุดที่มีการจำหน่ายในท้องตลาดทั่วโลก (Maximum dose strength that is marketed)</td>
+                    </tr>  
+                    <tr>
+                        <td align="center">2.4.2</td>
+                        <td>ข้อมูลความคงตัวของตัวยาสำคัญในช่วง physiological pH 1.2 – 6.8 (ถ้ามี) (Stability of API in the physiological pH range from 1.2 – 6.8) (if available)</td>
+                    </tr> 
+                    <tr>
+                        <td align="center">2.4.3</td>
+                        <td>
+                            โครงร่างและวิธีการทดสอบการละลายของตัวยาสำคัญ  (Solubility study protocol and method of solubility determination)<br />
+                            โปรดระบุดังนี้<br />
+                            <span style="padding-left:2em">- วิธีการทดสอบอย่างละเอียด (Detailed study method) Shake flask method หรือ วิธีอื่นที่เทียบเท่า พร้อมเหตุผลสนับสนุน (โปรดระบุ)..................................................</span><br />
+                            <span style="padding-left:2em">- สารเคมีและเครื่องมือที่ใช้ (Chemical & Instruments)</span><br />
+                            <span style="padding-left:2em">- ชนิด ปริมาตร และ pH ของตัวกลางการละลาย (Type, volume and pH of medium)</span><br />
+                            <span style="padding-left:2em">- การเตรียม standard solutions และ sample solutions (Preparations of standard and sample solutions)</span><br />
+                            <span style="padding-left:2em">- การควบคุม pH ของตัวกลางการละลาย ตลอดระยะเวลาที่ทดสอบ</span><br />
+                            <span style="padding-left:2em">- การควบคุมอุณหภูมิ (temperature)  ของตัวกลาง การละลาย ที่ 37 ± 1 ºC ตลอดระยะเวลาที่ทดสอบ</span><br />
+                            <span style="padding-left:2em">- Chromatographic system เช่น Detector, flow rate, mobile phase, column เป็นต้น</span>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td align="center">2.4.4</td>
+                        <td>
+                            วันที่ทำการทดสอบการละลายของตัวยาสำคัญ (Solubility study date) โปรดระบุ<br />
+                            <span style="padding-left:2em">- วันที่บังคับใช้โครงร่างการทดสอบการละลายของตัวยาสำคัญ (Effective date of study protocol)</span><br />
+                            <span style="padding-left:2em">- วันที่ทำการทดสอบการทดสอบการละลายของตัวยาสำคัญ (Solubility study date)</span><br />
+                            <span style="padding-left:2em">- วันที่รายงานผลการทดสอบการละลายของ  ตัวยาสำคัญ (Study report date)</span>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td align="center">2.4.5</td>
+                        <td>โครงร่างการตรวจสอบความถูกต้องของวิธีการวิเคราะห์ และรายงานผลการตรวจสอบความถูกต้องของวิธีการวิเคราะห์ (Analytical method Validation/verification protocol and report)</td>
+                    </tr>  
+                    <tr>
+                        <td align="center">2.4.6</td>
+                        <td>
+                            ผลการทดสอบและการอภิปรายผล (Results and discussion)<br />
+                            <span style="padding-left:2em">- รายงานผลการทดสอบการละลายของตัวยาสำคัญ ฉบับสมบูรณ์ (Full report of solubility study) พร้อมการแสดงผลการทดสอบในรูปแบบตาราง  เพื่อแสดงค่าการละลายของตัวยาสำคัญที่ทำการทดสอบในตัวกลางการละลายแต่ละ pH และ แสดงการคำนวณ maximum dose strength /solubility ratio  (โปรดดูตัวอย่างตารางแนบท้าย)</span><br />
+                            <span style="padding-left:2em">- ข้อมูลดิบของผลการทดสอบการละลายของ ตัวยาสำคัญ (Raw data of solubility study results)</span><br />
+                            <span style="padding-left:2em">- กราฟแสดงความสัมพันธ์ระหว่าง pH และ การละลายของตัวยาสำคัญ (pH solubility profile of the drug substance)</span>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td align="center">2.4.7</td>
+                        <td>สรุปผลการทดสอบการละลายของตัวยาสำคัญ (Conclusion for solubility study)</td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -2089,7 +2522,23 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">2.5.1</td>
+                        <td> การดูดซึมยาในคน (Fraction absorption) มีค่า  ≥ 85% : วิธี Mass balance หรือ การศึกษา Absolute bioavailability (Human mass balance studies and/or Human absolute bioavailability studies) (โปรดระบุ).........................................................</td>
+                    </tr>
+                    <tr>
+                        <td align="center">2.5.2</td>
+                        <td>วิธีการศึกษาอื่นๆ ตามระเบียบที่เกี่ยวข้อง (ถ้ามี) (Supportive studies) (if available) (โปรดระบุ)..................................................</td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -2106,7 +2555,70 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">2.6.1</td>
+                        <td>General information, Uses & administration, Pharmacodynamics, Pharmacokinetics, Adverse effects & Precautions</td>
+                    </tr>
+                    <tr>
+                        <td align="center">2.6.2</td>
+                        <td>
+                            ผลิตภัณฑ์ยาทดสอบ (Test product)
+                            <span style="padding-left:2em">- ชื่อการค้า (Trade name)</span><br />
+                            <span style="padding-left:2em">- ตัวยาสำคัญ (API)</span><br />
+                            <span style="padding-left:2em">- ความแรง (Strength)</span><br />
+                            <span style="padding-left:2em">- รูปแบบยา (Dosage form)</span><br />
+                            <span style="padding-left:2em">- ชื่อและที่อยู่ผู้ผลิต (Name and address of manufacturer)</span><br />
+                            <span style="padding-left:2em">- ชื่อและที่อยู่ผู้นำสั่งยาเข้ามาในราชอาณาจักร (ถ้ามี) (Name and address of importer) (if available)</span><br />
+                            <span style="padding-left:2em">- รุ่นที่ผลิต (Batch number)</span><br />
+                            <span style="padding-left:2em">- วันที่ผลิต (Date of manufacture)</span><br />
+                            <span style="padding-left:2em">- วันหมดอายุ (Expiry date)</span><br />
+                            <span style="padding-left:2em">- Batch size หากน้อยกว่า 100,000 หน่วย ต้องแนบเอกสารเพิ่มเติมตามเงื่อนไขและเอกสารที่ต้องยื่นประกอบการพิจารณารุ่นการผลิตนำร่อง (Pilot batch) ที่น้อยกว่า 100,000 หน่วยหรือหนังสืออนุมัติ ทั้งนี้ต้องแสดง Batch record ประกอบ การพิจารณา</span><br />
+                            <span style="padding-left:2em">- ลักษณะยาและส่วนประกอบของผลิตภัณฑ์ยา (Description and Composition of product)</span><br />
+                            *แสดงรายละเอียดรูปแบบ ลักษณะเฉพาะของ ผลิตภัณฑ์ยา น้ำหนักหรือปริมาตรรวมต่อหน่วย<br />
+                            **แสดงชื่อและปริมาณตัวยาสำคัญ และปริมาณส่วนประกอบในตำรับยาต่อหน่วย ซึ่งต้องสอดคล้องกับสูตรยาต่อรุ่นการผลิต (Batch formula)<br />
+                            <span style="padding-left:2em">- สูตรยาต่อรุ่นการผลิต จำนวนผลิตภัณฑ์ยาที่ผลิตต่อรุ่นการผลิต ปริมาณที่ Overage และกระบวนการผลิต (Batch formula, Production batch and Manufacturing process)***</span><br />
+                            <font style="color:red">***กรณีที่มีการ  Overage : ข้อมูลใน Batch formula ให้แสดงปริมาณที่ Overage และแจ้ง % Overage พร้อมทั้งแสดงการคำนวณ Overage ให้ชัดเจน***</font><br />
+                            <span style="padding-left:2em">- Finish Product Specification (FPS)</span><br />
+                            <span style="padding-left:2em">- หนังสือรับรองการวิเคราะห์ของผลิตภัณฑ์ยาทดสอบ (COA of Test product)***</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">2.6.3</td>
+                        <td>
+                            ผลิตภัณฑ์ยาอ้างอิง หรือ ผลิตภัณฑ์ยาเปรียบเทียบ หรือ ผลิตภัณฑ์ยาต้นแบบ ซึ่งใช้เป็นผลิตภัณฑ์ยาความแรงเปรียบเทียบ (Reference or Comparator or Innovator product that be selected for the Reference strength drug product)<br />
+                            ผลิตภัณฑ์ยาอ้างอิงผลิตจากแหล่งผลิตเดียวกันกับผลิตภัณฑ์ยาต้นแบบที่ขึ้นทะเบียนในประเทศไทย (The sameness of manufacturing site(s) of used reference product)<br />
+                            <span style="padding-left:4em">- ใช่ เลขทะเบียนตำรับยา (Drug registration number)..................................</span><br />
+                            <span style="padding-left:4em">- ไม่ใช่ แนบข้อมูล Comparison of dissolution profile ระหว่างแหล่งผลิตของผลิตภัณฑ์ยาอ้างอิง</span><br />
+                            <span style="padding-left:4em">- อื่น ๆ................................</span><br />
+                            <span style="padding-left:2em">- ชื่อการค้า (Trade name)</span><br />
+                            <span style="padding-left:2em">- เลขทะเบียนตำรับยา (Drug Registration Number)</span><br />
+                            <span style="padding-left:2em">- ตัวยาสำคัญ (API)</span><br />
+                            <span style="padding-left:2em">- ความแรง (Strength)</span><br />
+                            <span style="padding-left:2em">- รูปแบบยา (Dosage form)</span><br />
+                            <span style="padding-left:2em">- ชื่อและที่อยู่ผู้ผลิต (Name and address of manufacturer)</span><br />
+                            <span style="padding-left:2em">- ชื่อและที่อยู่ผู้นำสั่งยาเข้ามาในราชอาณาจักร (ถ้ามี) (Name and address of importer) (if available)</span><br />
+                            <span style="padding-left:2em">- รุ่นที่ผลิต (Batch number)</span><br />
+                            <span style="padding-left:2em">- วันที่ผลิต (Date of manufacture)</span><br />
+                            <span style="padding-left:2em">- วันหมดอายุ (Expiry date)</span><br />
+                            <span style="padding-left:2em">- ลักษณะยาและส่วนประกอบของผลิตภัณฑ์ยา (Description and Composition of product)***</span><br />
+                            แสดงรายละเอียดรูปแบบ ลักษณะเฉพาะของ ผลิตภัณฑ์ยา น้ำหนักหรือปริมาตรรวมต่อหน่วย<br />
+                            แสดงชื่อ หน้าที่และปริมาณตัวยาสำคัญ และปริมาณส่วนประกอบในตำรับยาต่อหน่วย***<br />
+                            <span style="padding-left:2em">- หนังสือรับรองการวิเคราะห์ของยาอ้างอิง หรือ ผลิตภัณฑ์ยาเปรียบเทียบ หรือ ผลิตภัณฑ์ยาต้นแบบ (COA of  Reference or Comparator or Innovator product)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">2.6.4</td>
+                        <td>ตารางแสดงการเปรียบเทียบ ลักษณะยาและส่วนประกอบของผลิตภัณฑ์ยา ระหว่างผลิตภัณฑ์ยาทดสอบ และผลิตภัณฑ์ยาอ้างอิง หรือ ผลิตภัณฑ์ยาเปรียบเทียบ หรือ ผลิตภัณฑ์ยาต้นแบบ (Comparison for Description and Composition of Test & Reference or Comparator or Innovator product โดยแสดงรายละเอียดการเปรียบเทียบ ตามหัวข้อในแบบ ย.1 หน้า 3 (Page No. 3 of Form MA-1) สำหรับคำขอขึ้นทะเบียนตำรับยา พร้อมแสดงหน้าที่ของส่วนประกอบแต่ละตัวในตำรับยา</td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -2123,7 +2635,15 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>โปรดชี้แจงพร้อมเอกสารสนับสนุน ว่าส่วนประกอบตัวยาไม่สำคัญแต่ละตัว</div>
+                <div style="padding-left:2em">- ไม่เป็นสารที่อาจมีผลต่อการดูดซึมยา </div>
+                <div style="padding-left:2em">- เป็นสารที่มีการใช้อย่างกว้างขวาง</div>
+                <div style="padding-left:2em">- ไม่มีอันตรกิริยาต่อเภสัชจลนศาสตร์ของตัวยาสำคัญ</div>
+                <div style="padding-left:2em">- ปริมาณที่ใช้ไม่สูงกว่าปกติ  และ </div>
+                <div style="padding-left:2em">- ไม่เป็นสารชนิดใหม่</div>
+                <div><font style="color:red">*กรณีที่มีการใช้ส่วนประกอบตัวยาไม่สำคัญ ในปริมาณสูงมากกว่าปกติหรือเป็นสารชนิดใหม่ เป็นส่วนประกอบในสูตรตำรับ ต้องส่งข้อมูลเพิ่มเติม*</font></div>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -2140,7 +2660,63 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%" align="center">ลำดับ</td>
+                        <td align="center">รายการ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">2.8.1</td>
+                        <td>
+                            ปริมาณตัวยาสำคัญ<br />
+                            ของผลิตภัณฑ์ยาทดสอบ และผลิตภัณฑ์ยาอ้างอิง หรือ ผลิตภัณฑ์ยาเปรียบเทียบ หรือ ผลิตภัณฑ์ยาต้นแบบ (Content of Active ingredient(s)/Potency of Test & Reference or Comparator or Innovator product)<br />
+                            <font style="color:red">*ทดสอบภายใต้สภาวะทดสอบ (Condition) และห้องทดลองเดียวกัน*</font><br />
+                            <span style="padding-left:2em">- วิธีการวิเคราะห์ เกณฑ์ที่ใช้ในการพิจารณาการยอมรับผลิตภัณฑ์ยา และผลการหาปริมาณตัวยาสำคัญของผลิตภัณฑ์ยา (Analytical method & procedure, Acceptance criteria or limit and Results)***</span><br />
+                            <span style="padding-left:2em">- รายงานวิธีการตรวจสอบความถูกต้องของวิธีการวิเคราะห์ (Analytical method Validation/ Verification report for assay)***</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">2.8.2</td>
+                        <td>
+                            Uniformity of dosage unit<br />
+                            ของผลิตภัณฑ์ยาทดสอบ และผลิตภัณฑ์ยาอ้างอิง หรือ ผลิตภัณฑ์ยาเปรียบเทียบ หรือ ผลิตภัณฑ์ยาต้นแบบ (Uniformity of dosage unit For Test & Reference or Comparator or Innovator product)<br />
+                            <font style="color:red">*ทดสอบภายใต้สภาวะทดสอบ (Condition) และห้องทดลองเดียวกัน*</font><br />
+                            <span style="padding-left:2em">- Weight variation แสดงวิธีการทดสอบ เกณฑ์ที่ใช้ในการพิจารณาการยอมรับผลิตภัณฑ์ยา ผลการทดสอบ อภิปราย และสรุปผล (Weight variation method & procedure, Acceptance criteria or limit, Results Discussion and Conclusion) หรือ</span><br />
+                            <span style="padding-left:2em">- Content uniformity แสดงวิธีการวิเคราะห์   เกณฑ์ที่ใช้ในการพิจารณาการยอมรับผลิตภัณฑ์ยา  ผลการวิเคราะห์ อภิปราย สรุปผล และรายงานวิธีการตรวจสอบความถูกต้องของวิธีการวิเคราะห์  ฉบับสมบูรณ์  (Content uniformity method & procedure, Acceptance criteria or limit, Results Discussion and Conclusion including full report of Analytical method Validation/Verification)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">2.8.3</td>
+                        <td>
+                            Dissolution Profile Comparison<br />
+                            ของผลิตภัณฑ์ยาทดสอบ และผลิตภัณฑ์ยาอ้างอิง หรือ ผลิตภัณฑ์ยาเปรียบเทียบ หรือ ผลิตภัณฑ์ยาต้นแบบ (Content of Active ingredient(s)/Potency of Test & Reference or Comparator or Innovator product)<br />
+                            <font style="color:red">*ทดสอบภายใต้สภาวะทดสอบ (Condition) และห้องทดลองเดียวกัน*</font><br />
+                            <span style="padding-left:2em">- บทนำ วัตถุประสงค์ รายละเอียดของ วิธีดำเนินการทดสอบการละลายของผลิตภัณฑ์ยา วิธีการวิเคราะห์ และเกณฑ์ที่ใช้ในการพิจารณาการยอมรับผลิตภัณฑ์ยา (Introduction, Objectives, Dissolution method & procedure & Acceptance criteria or limit)***</span><br />
+                            <font style="color:red">*The recommended pH : 1.2, 4.5 & 6.8 (Ph.Eur. buffers Recommended & no surfactant; in case of gelatin capsules or tablets with gelatin coatings the use of enzymes may be acceptable) ± Other pH(s) with justification & Scientific supportive evidences*</font><br />
+                            <span style="padding-left:2em">- สารเคมีและเครื่องมือที่ใช้ (Chemicals & Instruments)</span><br />
+                            <span style="padding-left:2em">- ตัวกลางการละลาย (Dissolution media) โปรดระบุข้อมูล อย่างน้อย ดังต่อไปนี้</span><br />
+                            <span style="padding-left:4em">- ส่วนประกอบและการเตรียม ตัวกลางการละลาย (Compositions & Preparations)</span><br />
+                            <span style="padding-left:4em">- pH</span><br />
+                            <span style="padding-left:4em">- อุณหภูมิ (Temperature)</span><br />
+                            <span style="padding-left:4em">- ปริมาตร (Volume)</span><br />
+                            <span style="padding-left:4em">- วิธีการกำจัดก๊าซ (Method of de-aeration) เป็นต้น</span><br />
+                            <span style="padding-left:2em">- จำนวนหน่วยของผลิตภัณฑ์ยาที่ใช้ (Number of units) (โปรดระบุ).........................</span><br />
+                            <span style="padding-left:2em">- โครงร่างการตรวจสอบรายงานวิธีการตรวจสอบความถูกต้องของวิธีการวิเคราะห์ (Protocol & Report for Analytical method Validation/Verification)</span><br />
+                            <span style="padding-left:2em">- ผลการศึกษา (Results) โดยรายงานผลการทดสอบการละลายของผลิตภัณฑ์ยา ในตัวกลางการละลายทั้งหมด ด้วยรูปแบบตารางแสดง</span><br />
+                            <span style="padding-left:4em">- ร้อยละของการปลดปล่อยตัวยาสำคัญ (% Drug release) แต่ละหน่วย/จุดเวลา และแสดงรายละเอียดการคำนวณดังกล่าว</span><br />
+                            <span style="padding-left:4em">- ค่าเฉลี่ยร้อยละการปลดปล่อยตัวยาสำคัญ  12 หน่วย/จุดเวลา</span><br />
+                            <span style="padding-left:4em">- ส่วนเบี่ยงเบนมาตรฐาน (Standard deviation: SD ) ของร้อยละการปลดปล่อยตัวยาสำคัญ  12 หน่วย/จุดเวลา</span><br />
+                            <span style="padding-left:4em">- % CV หรือ RSD ของร้อยละการปลดปล่อยตัวยาสำคัญ 12 หน่วย/จุดเวลา</span><br />
+                            <span style="padding-left:4em">- กราฟแสดงการเปรียบเทียบผลการละลายของผลิตภัณฑ์ยาทดสอบและยาอ้างอิง (Comparative dissolution profiles)</span><br />
+                            <span style="padding-left:4em">- เปรียบเทียบความเหมือนกันระหว่างผลการละลายของผลิตภัณฑ์ยาทดสอบ และยาอ้างอิง หรือ ผลิตภัณฑ์ยาเปรียบเทียบ หรือ ผลิตภัณฑ์ยาต้นแบบ ด้วยการแสดงการคำนวณค่า similarity factor (f2) หรือวิธีอื่นที่เหมาะสม พร้อมเหตุผลสนับสนุน</span><br />
+                            <span style="padding-left:4em">- การอภิปราย และสรุปผลการทดสอบการละลายของผลิตภัณฑ์ยา (Discussion and Conclusions)</span><br />
+                            <span style="padding-left:2em">- ข้อมูลดิบของการทดสอบการละลายของผลิตภัณฑ์ยา (Raw data of Comparative dissolution profile)</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -2157,7 +2733,13 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <div>จากการยกเว้นการศึกษาชีวสมมูลนั้น ยอมรับได้ในทางสาธารณสุข โดยพิจารณาจากข้อบ่งใช้และดัชนีการรักษาของยา  ด้วยการอภิปรายในหัวข้อ ดังนี้</div>
+                <div style="padding-left:2em">- กรณีเกิด Inferior bioavailability จะส่งผลอย่างไรต่อประสิทธิภาพการรักษา โดยเฉพาะประเด็นของการเกิด drug resistance ซึ่งอาจนำไปสู่อันตรายของการใช้ยานี้ในข้อบ่งใช้ต่างๆ</div>
+                <div style="padding-left:2em">- กรณีเกิด Superior bioavailability ส่งผลอย่างไรในส่วนของฤทธิ์ทางเภสัชวิทยา และผลข้างเคียงที่อาจเกิดขึ้นให้ชัดเจน (เป็นมติคณะอนุกรรมการฯ)</div>
+                <div style="padding-left:2em">- เชื่อมโยงความสัมพันธ์ ระหว่างดุลความเสี่ยงและประโยชน์ที่ได้รับ ผลการทดสอบการละลายของตัวยาสำคัญ การซึมผ่านเซลล์ และผลการทดสอบการละลายของผลิตภัณฑ์ยา</div>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -2174,7 +2756,152 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div>เอกสารต้องประกอบด้วยหัวข้ออย่างน้อยดังต่อไปนี้</div>
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="40%" align="center">รายการ</td>
+                        <td width="25%" align="center">☐ Test product</td>
+                        <td width="35%" align="center">☐ Reference or ☐ Comparator or ☐ Innovator product</td>
+                    </tr>
+                    <tr>
+                        <td>☐ ตัวยาสำคัญ (API)</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐ ความแรง (Strength)</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐ รูปแบบยา (Dosage form)</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐ ชื่อการค้า (Trade name)</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐ เลขทะเบียนตำรับยา</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐ ชื่อและที่อยู่ของผู้ผลิต</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐ ชื่อและที่อยู่ของผู้นำสั่งยาเข้ามาในราชอาณาจักร</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐ Batch number</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐ Batch size</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐ Manufactured date</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐ Expired date</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐ ตัวยาสำคัญ (API)</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐ Certificate Of Analysis</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐ สูตรตำรับ<u>เหมือน</u>กับที่จะนำเข้ามาในราชอาณาจักร</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐ Content of Active ingredient(s) [% Label amount]</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">☐ Uniformity of dosage unit</td>
+                    </tr>
+                    <tr>
+                        <td><span style="padding-left:2em">☐ Weight variation <b><u>หรือ</u></b></span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span style="padding-left:2em">☐ Content uniformity</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            ☐ Dissolution Profile Comparison (Comparative dissolutioin profile) ทดสอบทั้งหมด......................pH<br />
+                            ระบุค่า ของแต่ละ pH พร้อมแสดง<br />
+                            <span style="padding-left:2em">☐ ⨍₂หรือ</span><br />
+                            <span style="padding-left:4em">☐ วิธีทางสถิติอื่นๆ ที่เหมาะสม (โปรดระบุ Statistical model ที่เลือกใช้ พร้อมเหตุผล...................)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="30%">☐ pH 1.2...............</td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td width="30%">☐ pH...............</td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td width="30%">☐ pH 4.5...............</td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td width="30%">☐ pH...............</td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td width="30%">☐ pH 6.8...............</td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td width="30%">☐ pH...............</td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td width="30%">☐ pH...............</td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td width="30%">☐ pH...............</td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td width="30%">☐ pH...............</td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td width="30%">☐ pH...............</td>
+                        <td colspan="2"></td>
+                    </tr>
+                </table>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>

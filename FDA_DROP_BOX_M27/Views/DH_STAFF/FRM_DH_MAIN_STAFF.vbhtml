@@ -37,7 +37,7 @@
                                     <th style="width:13%">วันที่ยื่นคำขอ</th>
                                     <th style="width:15%">สถานะ</th>
                                     <th style="width:20%">ชื่อสาร</th>
-                                    <th style="width:15%">รหัสดำเนินการ</th>
+                                    <th style="width:15%">เลขดำเนินการ</th>
                                     <th style="width:11%"></th>
                                 </tr>
                             </thead>

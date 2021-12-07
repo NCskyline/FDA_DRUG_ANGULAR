@@ -54,7 +54,7 @@
             <table style="margin-top:10px;width:100%;" class="table table-condensed">
                 <thead>
                     <tr>
-                        <th style="width:8%">รหัสการดำเนินการ</th>
+                        <th style="width:8%">เลขดำเนินการ</th>
                         <th style="width:8%">วันที่ยื่นคำขอ</th>
                         <th style="width:10%">เลขจดแจ้ง</th>
                         <th style="width:20%">ชื่อสาร</th>

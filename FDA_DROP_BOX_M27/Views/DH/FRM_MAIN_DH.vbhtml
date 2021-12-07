@@ -68,7 +68,7 @@
                                     Manufacturer
                                 </th>
                                 <th>
-                                    รหัสดำเนินการ <br />
+                                    เลขดำเนินการ <br />
                                     Submission Code
                                 </th>
                                 <th>
