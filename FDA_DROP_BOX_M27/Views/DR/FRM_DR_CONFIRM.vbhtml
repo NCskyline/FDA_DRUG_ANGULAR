@@ -200,8 +200,8 @@
                         <td style="width:27%;text-align:center">หมายเหตุ</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>1</td>
+                        <td>test</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -209,16 +209,6 @@
                         <td></td>
                     </tr>
                 </table>
-                <br />
-                <div>
-                    &nbsp; &nbsp; &nbsp;๒.๔ รายการขนาดบรรจุที่แนบท้ายคำขอ
-                </div>
-                <table style="width:100%">
-                    <tr>
-                        <td style="width:100%;text-align:center"></td>
-                    </tr>
-                </table>
-
                 <br />
                 @*<div><h4>๓.ยาตัวอย่าง</h4></div>
                     <div><h4>๔.หลักฐานแสดงข้อมูลด้านวิชาการของตำรับยา</h4></div>
@@ -273,21 +263,21 @@
                         </td>
                     </tr>
                 </table>
-                <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?"><center>กดที่นี่เพื่อดูกระบวนงาน</center></a>
+                
                 <br />
                 <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%">
                     <input type="button" class="form-control" value="ยืนคำขอ" />
                 </div>
                 <br />
-                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%" ">
+                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%">
                     <input type="button" class="form-control" value="ยกเลิก" />
                 </div>
                 <br />
-                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%" ">
+                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%">
                     <input type="button" class="form-control" value="Download PDF" />
                 </div>
                 <br />
-                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%" ">
+                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%">
                     <input type="button" class="form-control" ng-click="BTN_BACK()" value="กลับหน้ารายการ" />
                 </div>
             </div>
