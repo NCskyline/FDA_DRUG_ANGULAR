@@ -20,7 +20,7 @@
                     <td style="width:10%"><input class="form-control inline" type="text"></td>
                 </tr>
                 <tr>
-                    <td style="width:5%">รหัสดำเนินการ</td>
+                    <td style="width:5%">เลขดำเนินการ</td>
                     <td style="width:10%"><input class="form-control inline" type="text"></td>
                     <td style="width:10%"><button class="btn btn-lg" style="width:150px;height:40px">ค้นหา</button></td>
                 </tr>
