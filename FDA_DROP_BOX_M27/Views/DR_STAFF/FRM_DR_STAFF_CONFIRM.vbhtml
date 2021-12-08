@@ -238,8 +238,8 @@
                         <td style="width:27%;text-align:center">หมายเหตุ</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td align="center">1</td>
+                        <td>test</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -247,16 +247,6 @@
                         <td></td>
                     </tr>
                 </table>
-                <br />
-                <div>
-                    &nbsp; &nbsp; &nbsp;๒.๔ รายการขนาดบรรจุที่แนบท้ายคำขอ
-                </div>
-                <table style="width:100%">
-                    <tr>
-                        <td style="width:100%;text-align:center"></td>
-                    </tr>
-                </table>
-
                 <br />
 
                 <table style="width:100%">
@@ -283,7 +273,7 @@
                 <br />
 
             </div>
-            <div class="in">
+            @*<div class="in">
                 <br />
                 <div>
                     <h2><b>รายการไฟล์แนบ</b></h2>
@@ -301,7 +291,7 @@
                             <td style="width:10%" align="center"><b>ลำดับที่</b></td>
                             <td style="width:50%" align="center"><b>รายการตรวจสอบเอกสาร</b></td>
                             <td style="width:20%" align="center"><b>ไฟล์แนบ</b></td>
-                            @*<td style="width:10%" align="center"><b>เจ้าหน้าที่ตรวจสอบ</b></td>*@
+                            <td style="width:10%" align="center"><b>เจ้าหน้าที่ตรวจสอบ</b></td>
                             <td style="width:20%" align="center"><b>บันทึกข้อบกพร่อง</b></td>
                         </tr>
                         <tr>
@@ -316,28 +306,28 @@
                                 กรณียื่นแบบ eCTD โปรดระบุ หมายเลข eCTD identifier .......................................................
                             </td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">2</td>
                             <td style="width:50%">ยาตัวอย่าง (โดยแนบภาพถ่ายของยาตัวอย่าง)</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">3</td>
                             <td style="width:50%">เอกสารวิชาการประกอบการขึ้นทะเบียนตำรับยา (Technicals Dossiers)</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">3.1</td>
                             <td style="width:50%">เอกสารด้านคุณภาพ [ ] ยื่นประเมินแบบ eCTD [ ] ยืนประเมินแบบกระดาษ [ ] ยื่นประเมินแบบ NeeS (โปรดแนบไฟล์ในระบบนี้)</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
@@ -346,7 +336,7 @@
                                 เอกสารด้านความปลอดภัย [ ] ยื่นประเมินแบบ eCTD [ ] ยืนประเมินแบบกระดาษ [ ] ยื่นประเมินแบบ NeeS (โปรดแนบไฟล์ในระบบนี้)
                             </td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
@@ -355,28 +345,28 @@
                                 เอกสารด้านประสิทธิภาพ [ ] ยื่นประเมินแบบ eCTD [ ] ยืนประเมินแบบกระดาษ [ ] ยื่นประเมินแบบ NeeS (โปรดแนบไฟล์ในระบบนี้)
                             </td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">4</td>
                             <td style="width:50%">ฉลาก</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">5</td>
                             <td style="width:50%">เอกสารกำกับยา</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">5.1</td>
                             <td style="width:50%">เอกสารกำกับยาแบบ PI ภาษาไทย</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
@@ -385,7 +375,7 @@
                                 เอกสารกำกับยาแบบ PIL ภาษาไทย
                             </td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
@@ -394,14 +384,14 @@
                                 เอกสารกำกับยาแบบ SPC ภาษาไทย
                             </td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">5.4</td>
                             <td style="width:50%">เอกสารกำกับยาแบบ PI ภาษาอังกฤษ</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
@@ -410,7 +400,7 @@
                                 เอกสารกำกับยาแบบ PIL ภาษาอังกฤษ
                             </td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
@@ -419,7 +409,7 @@
                                 เอกสารกำกับยาแบบ SPC ภาษาอังกฤษ
                             </td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
@@ -428,7 +418,7 @@
                                 เอกสารกำกับยาภาษาอื่น ๆ (ถ้ามี)
                             </td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
@@ -437,70 +427,70 @@
                                 หนังสือรับรองเกี่ยวกับผู้ผลิตและการจำหน่ายผลิตภัณฑ์สำหรับกรณีที่เป็นยานำเข้า อย่างน้อยต้องประกอบด้วย หนังสือรับรองมาตรฐานการผลิตหรือเอกสารอื่นที่เกี่ยวข้อง หนังสือรับรองการจำหน่าย
                             </td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">7</td>
                             <td style="width:50%">เอกสารแสดงเลขที่คำขอรับสิทธิบัตรหรืออนุสิทธิบัตรที่ประกาศโฆษณาแล้วตามกฏหมายว่าด้วยสิทธิบัตร หรือข้อมูลจดทะเบียนสิทธิภูมิปัญญาการแพทย์แผนไทยส่วนบุคคลภูมิปัญญาที่เป็นตำรับยาแผนไทยทั่วไปหรือตำราการแพทย์แผนไทยทั่วไป หรือการได้รับอนุญาตให้ใช้ประโยชน์จากตำรับยาแผนไทยของชาติ หรือตำราการแพทย์แผนไทยของชาติตามกฏหมายว่าด้วยการคุ้มครองและส่งเสริมภูมิปัญญาการแพทย์แผนไทย (ถ้ามี)ง</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">8</td>
                             <td style="width:50%">หลักฐานอื่น ๆ ตามที่สำนักงานคณะกรรมการอาหารและยากำหนด</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">8.1</td>
                             <td style="width:50%">ข้อกำหนดมาตรฐานและวิธีวิเคราะห์ (Finnish Products Specification)</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">8.2</td>
                             <td style="width:50%">คำรับรองในการส่งเอกสารเพิ่มเติมในการศึกษาความคงสภาพของยา</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">8.3</td>
                             <td style="width:50%">คำรับรองเงื่อนไขการขึ้นทะเบียนตำรับยาเฉพาะกลุ่ม (กรณียาที่จำหน่ายได้เฉพาะในโรงพยาบาล/ สถานพยาบาล)</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">8.4</td>
                             <td style="width:50%">คำรับรองเงื่อนไขการขึ้นทะเบียนตำรับยาเพื่อการส่งออก</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">8.5</td>
                             <td style="width:50%">คำรับรองเงื่อนไขอื่น ๆ</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">8.6</td>
                             <td style="width:50%">หนังสือมอบอำนาจ</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                         <tr>
                             <td style="width:10%" align="center">8.7</td>
                             <td style="width:50%">เอกสารอื่นๆ</td>
                             <td style="width:20%"><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
-                            @*<td style="width:10%"></td>*@
+                            <td style="width:10%"></td>
                             <td style="width:20%"></td>
                         </tr>
                     </table>
@@ -512,7 +502,7 @@
                     <button class="btn btn-lg">บันทึก</button>
                     <button class="btn btn-lg" ng-click="BTN_BACK()">ย้อนกลับ</button>
                 </div>
-            </div>
+            </div>*@
         </div>
         <div class="part part-1-3">
             <div style="width:80%;margin-left:10%">
@@ -584,4 +574,3 @@
     }
     document.getElementById("defaultOpen").click();
 </script>
-

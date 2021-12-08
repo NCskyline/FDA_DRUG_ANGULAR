@@ -236,8 +236,8 @@
                 <td style="width:27%;text-align:center">หมายเหตุ</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td align="center">1</td>
+                <td>test</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -246,16 +246,7 @@
             </tr>
         </table>
         <br />
-        <div>
-            &nbsp; &nbsp; &nbsp;๒.๔ รายการขนาดบรรจุที่แนบท้ายคำขอ
-        </div>
-        <table style="width:100%">
-            <tr>
-                <td style="width:100%;text-align:center"></td>
-            </tr>
-        </table>
-
-        <br />
+      
         @*<div><h4>๓.ยาตัวอย่าง</h4></div>
             <div><h4>๔.หลักฐานแสดงข้อมูลด้านวิชาการของตำรับยา</h4></div>
             <div> &nbsp; &nbsp; &nbsp;๔.๑ เอกสารด้านคุณภาพ</div>

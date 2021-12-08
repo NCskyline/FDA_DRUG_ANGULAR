@@ -200,7 +200,7 @@
                         <td style="width:27%;text-align:center">หมายเหตุ</td>
                     </tr>
                     <tr>
-                        <td>1</td>
+                        <td align="center">1</td>
                         <td>test</td>
                         <td></td>
                         <td></td>
@@ -263,7 +263,9 @@
                         </td>
                     </tr>
                 </table>
-                
+                <a href="" style="color:dodgerblue">
+                    <center><u>กดที่นี่เพื่อดูรายการกระบวนงาน</u></center>
+                </a>
                 <br />
                 <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%">
                     <input type="button" class="form-control" value="ยืนคำขอ" />
@@ -284,4 +286,3 @@
         </div>
     </div>
 </div>
-
