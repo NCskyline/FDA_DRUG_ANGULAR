@@ -1,5 +1,4 @@
 ﻿
-
 <script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/LCN_CTRL.js"></script>
@@ -55,9 +54,7 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
