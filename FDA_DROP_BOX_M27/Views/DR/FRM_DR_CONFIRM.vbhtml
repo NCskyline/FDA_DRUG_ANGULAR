@@ -179,7 +179,7 @@
                     <div>&nbsp; &nbsp; &nbsp;๒.๒ ลักษณะยา :</div>
                     <td style="width:90%"></td>
                 </tr>
-                <div>&nbsp; &nbsp; &nbsp;๒.๓ ชื่อและปริมาณของตัวยาสำำคัญและส่วนประกอบในตำรับยา</div>
+                <div>&nbsp; &nbsp; &nbsp;๒.๓ ชื่อและปริมาณของตัวยาสำคัญและส่วนประกอบในตำรับยา</div>
 
                 <table style="width:100%">
                     <tr>

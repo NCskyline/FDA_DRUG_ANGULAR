@@ -1,5 +1,4 @@
-﻿
-app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
+﻿app.controller('DH_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     CHK_TOKEN();
     var LCN_IDA = sessionStorage.LCN_IDA;

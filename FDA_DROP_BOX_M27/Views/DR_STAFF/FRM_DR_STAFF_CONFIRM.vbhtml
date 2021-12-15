@@ -43,72 +43,75 @@
         <div class="part part-2-3">
             <div class="ic" style="font-family:'Taviraj';width:100%">
                 <div>
-                    <p style="text-align: right;">แบบ ย.1</p>
-                    <p style="text-align: right;">FORM MA-1</p>
+                    <p style="text-align:right;">แบบ ย.1</p>
+                    <p style="text-align:right;">FORM MA-1</p>
 
                 </div>
                 <table style="width:100%">
                     <tr>
-                        <td style="width:35%"></td>
-                        <td style="width:35%"></td>
-                        <td style="width:5%;text-align:right">เลขที่:</td>
-                        <td style=" width:25%;text-align:center"></td>
+                        <td width="35%"></td>
+                        <td width="35%"></td>
+                        <td width="5%" style="text-align:right">เลขที่:</td>
+                        <td width="25%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin"></td>
                     </tr>
                 </table>
                 <table style="width:100%">
                     <tr>
-                        <td style="width:35%"></td>
-                        <td style="width:35%"></td>
-                        <td style="width:5%;text-align:right">วันที่:</td>
-                        <td style=" width:25%;text-align:center"></td>
+                        <td width="35%"></td>
+                        <td width="35%"></td>
+                        <td width="5%" style="text-align:right">วันที่:</td>
+                        <td width="25%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin"></td>
                     </tr>
                 </table>
                 <table style="width:100%">
                     <tr>
-                        <td style="width:35%"></td>
-                        <td style="width:35%"></td>
-                        <td style="width:5%;text-align:right"> ลงชื่อ:</td>
-                        <td style=" width:15%;text-align:center"></td>
-                        <td style="width:10%">ผู้รับคำขอ</td>
+                        <td width="35%"></td>
+                        <td width="35%"></td>
+                        <td width="5%" style="text-align:right">ลงชื่อ:</td>
+                        <td width="15%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin"></td>
+                        <td>ผู้รับคำขอ</td>
                     </tr>
                 </table>
 
 
-                <h1 style="text-align: center;"> คำขอขึ้นทะเบียนตำรับยา</h1>
+                <h1 style="text-align:center">คำขอขึ้นทะเบียนตำรับยา</h1>
                 <div>
                     <div>
+                        <p style="text-align:center">
+                            <label>ประเภท</label>&nbsp;<span style="padding-left:1em"><input type="radio" />&nbsp;&nbsp;ยาแผนปัจจุบัน</span><span style="padding-left:1em"><input type="radio" />&nbsp;&nbsp;ยาแผนโบราณ</span>
+                        </p>
                         <p style="text-align: center;">
-                            <label>ประเภท</label> <input type="radio" /> ยาแผนปัจจุบัน <input type="radio" /> ยาแผนโบราณ
-                    </div> <p style="text-align: center;">
-                        <input type="radio" /> ผลิต <input type="radio" /> แบ่งบรรจุ <input type="radio" /> นำเเข้าหรือสั่งเข้ามาในราชอาณาจักร
+                            <input type="radio" />&nbsp;&nbsp;ผลิต<span style="padding-left:1em"><input type="radio" />&nbsp;&nbsp;แบ่งบรรจุ</span><span style="padding-left:1em"><input type="radio" />&nbsp;&nbsp;นำเเข้าหรือสั่งเข้ามาในราชอาณาจักร</span>
+                        </p>
+                    </div>                
                 </div>
-                <table style="width:100%">
+                <table width="100%">
                     <tr>
-                        <td style="width:35%;text-align:right">ใบอนุญาตเลขที่ :</td>
-                        <td style="width:35%"></td>
-                        <td style="width:30%"></td>
+                        <td width="35%" style="text-align:right">ใบอนุญาตเลขที่ :</td>
+                        <td width="35%"></td>
+                        <td width="30%"></td>
                     </tr>
                     <tr>
-                        <h4>๑.รายละเอียดของผู้ยื่นคำขอและผู้ผลิต</h4>
+                        <h4>๑. รายละเอียดของผู้ยื่นคำขอและผู้ผลิต</h4>
                     </tr>
                 </table>
                 <div> &nbsp; &nbsp; &nbsp;๑.๑ ชื่อและที่อยู่ของผู้ยื่นคำขอ (ผู้รับอนุญาตผลิต ผู้รับอนุญาตนำหรือสั่งยาเข้ามาในราชอาณาจักร)</div>
-                <table style="width:100%">
+                <table width="100%">
                     <tr>
-                        <td style=" width:15%;text-align:right"> ชื่อผู้รับอนุญาต :</td>
-                        <td style=" width:85%;text-align:center"></td>
+                        <td width="15%" style="text-align:right">ชื่อผู้รับอนุญาต :</td>
+                        <td style="text-align:center;border-bottom:dotted;border-bottom-width:thin"></td>
                     </tr>
                     <tr>
-                        <td style=" width:15%;text-align:right">อยู่เลขที่ :</td>
-                        <td style=" width:85%;text-align:center"></td>
+                        <td width="15%" style="text-align:right">อยู่เลขที่ :</td>
+                        <td style="text-align:center;border-bottom:dotted;border-bottom-width:thin"></td>
                     </tr>
                 </table>
-                <table style="width:100%">
+                <table width="100%">
                     <tr>
-                        <td style="width:15%;text-align:right">ประเทศ :</td>
-                        <td style="width:40%;text-align:center"></td>
-                        <td style="width:10%;text-align:right">โทรศัพท์/โทรสาร :</td>
-                        <td style="width:35%" text-align:center></td>
+                        <td width="15%" style="text-align:right">ประเทศ :</td>
+                        <td width="35%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin"></td>
+                        <td width="15%" style="text-align:right">โทรศัพท์/โทรสาร :</td>
+                        <td style="text-align:center;border-bottom:dotted;border-bottom-width:thin"></td>
                     </tr>
                 </table>
                 <div> &nbsp; &nbsp; &nbsp;๑.๒ ชื่อและที่อยุ่ของผู้ผลิตสำเร็จรูป</div>
@@ -162,18 +165,18 @@
                 <div>&nbsp; &nbsp; &nbsp;๑.๔ ชื่อและที่อยู่ของผู้ผลิตที่รับผิดชอบในการตรวจปล่อยหรือผ่านเพื่อจำหน่าย</div>
                 <table style="width:100%">
                     <tr>
-                        <td style="width:33%;text-align:right">&nbsp; &nbsp; &nbsp; ชื่อผู้ผลิตที่รับผิดชอบในการตรวจปล่อยหรือผ่านเพื่อจำหน่าย :</td>
-                        <td style=" width:72%;text-align:center"></td>
+                        <td width="40%" style="text-align:right">&nbsp; &nbsp; &nbsp; ชื่อผู้ผลิตที่รับผิดชอบในการตรวจปล่อยหรือผ่านเพื่อจำหน่าย :</td>
+                        <td style="border-bottom:dotted;border-bottom-width:thin"></td>
                     </tr>
                 </table>
                 <table style="width:100%">
                     <tr>
-                        <td style="width:15%;text-align:right">อยู่เลขที่ :</td>
-                        <td style="width:85%"></td>
+                        <td width="15%" style="text-align:right">อยู่เลขที่ :</td>
+                        <td style="border-bottom:dotted;border-bottom-width:thin"></td>
                     </tr>
                     <tr>
-                        <td style="width:15%;text-align:right">ประเทศ :</td>
-                        <td style="width:85%"></td>
+                        <td width="15%" style="text-align:right">ประเทศ :</td>
+                        <td style="border-bottom:dotted;border-bottom-width:thin"></td>
                     </tr>
                 </table>
                 <div>&nbsp; &nbsp; &nbsp;๑.๕ รายละเอียดผู้ผลิตที่เกี่ยวข้อง</div>
@@ -504,8 +507,8 @@
                 </div>
             </div>*@
         </div>
-        <div class="part part-1-3">
-            <div style="width:80%;margin-left:10%">
+        <div class="part part-1-3 ic">
+            <div style="width:90%;margin-left:5%">
                 <table class="table">
                     <tr>
                         <td>วันที่ออกเลขรับคำขอ :</td>
@@ -524,9 +527,7 @@
                     <select class="form-control">
                         <option></option>
                     </select>
-                </div>
-                <br />
-                <div style="width:80%;margin-left:10%">
+                    <br />
                     <select class="form-control">
                         <option></option>
                     </select>
@@ -536,20 +537,74 @@
                     <input type="button" class="form-control" value="ยืนยัน" />
                 </div>
                 <br />
-                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%" ">
+                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%">
                     <input type="button" class="form-control" value="ยกเลิก" />
                 </div>
                 <br />
-                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%" ">
+                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%">
                     <input type="button" class="form-control" value="Download PDF" />
                 </div>
                 <br />
-                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%" ">
+                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%">
                     <input type="button" class="form-control" value="Preview ใบสำคัญ" />
                 </div>
                 <br />
-                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%" ">
+                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%">
                     <input type="button" class="form-control" value="กลับหน้ารายการ" />
+                </div>
+                <hr />
+                <div style="text-align:center;font-size:20px">ผลประเมินผู้เชี่ยวชาญ</div>
+                <table width="100%">
+                    <tr>
+                        <td width="5%">ชื่อ</td>
+                        <td style="border-bottom:dotted;border-bottom-width:thin"></td>
+                    </tr>
+                </table>
+                <table width="100%">
+                    <tr>
+                        <td width="40%">สถานะการประเมิน</td>
+                        <td style="border-bottom:dotted;border-bottom-width:thin"></td>
+                    </tr>
+                </table>
+                <table width="100%">
+                    <tr>
+                        <td width="35%">ผลการประเมิน</td>
+                        <td style="border-bottom:dotted;border-bottom-width:thin"></td>
+                    </tr>
+                </table>
+                <table width="100%">
+                    <tr>
+                        <td width="55%">รายละเอียดการประเมิน</td>
+                        <td>
+                            <a>
+                                <font style="color:blue">กดเพื่อดูรายละเอียด</font>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%">
+                    <tr>
+                        <td width="30%">วันที่ประเมิน</td>
+                        <td style="border-bottom:dotted;border-bottom-width:thin"></td>
+                    </tr>
+                </table>
+                <div style="text-align:center">
+                    <a>
+                        <u><font style="color:blue">กดเพิ่ม / เปลี่ยนผู้เชี่ยวชาญ</font></u>
+                    </a>
+                </div>
+                <table width="100%">
+                    <tr>
+                        <td style="text-align:center">ชื่อเจ้าหน้าที่รับผิดชอบคำขอ</td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom:dotted;border-bottom-width:thin">{{}}</td>
+                    </tr>
+                </table>
+                <div style="text-align:center">
+                    <a>
+                        <u><font style="color:blue">กดดูข้อมูลใบอนุญาต / ทะเบียน</font></u>
+                    </a>
                 </div>
             </div>
         </div>
