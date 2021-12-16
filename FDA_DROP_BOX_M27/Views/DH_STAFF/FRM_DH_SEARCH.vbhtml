@@ -16,26 +16,29 @@
     <hr />*@
 <table width="100%">
     <tr>
-        <td style="width:12%">สถานะ</td>
+        <td style="width:7%">สถานะ</td>
         <td style="width:30%">
             <select style="font-family:'Taviraj';font-size:20px;" ng-model="STATUS_ID">
                 <option value="">-- กรุณาเลือกสถานะ --</option>
                 <option ng-repeat="x in LIST_STATUS" value="{{x.STATUS_ID}}">{{x.STATUS_NAME}}</option>
             </select>
         </td>
-        <td style="width:12%">เลขดำเนินการ</td>
+        <td width="2%"></td>
+        <td style="width:10%">เลขดำเนินการ</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="TR_ID"></td>
     </tr>
     <tr>
-        <td style="width:12%">เลขจดแจ้ง</td>
+        <td style="width:7%">เลขจดแจ้ง</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="DRM"></td>
-        <td style="width:12%">ชื่อสาร</td>
+        <td width="2%"></td>
+        <td style="width:10%">ชื่อสาร</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="iowanm"></td>
     </tr>
     <tr>
-        <td style="width:12%">ผู้รับอนุญาต</td>
+        <td style="width:7%">ผู้รับอนุญาต</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="thanm"></td>
-        <td style="width:12%">ผู้ผลิตเภสัชเคมีภัณฑ์</td>
+        <td width="2%"></td>
+        <td style="width:10%">ผู้ผลิตเภสัชเคมีภัณฑ์</td>
         <td style="width:30%"><input class="form-control inline" type="text" style="width:100%" ng-model="frgn"></td>
     </tr>
 </table>
@@ -54,12 +57,12 @@
             <table style="margin-top:10px;width:100%;" class="table table-condensed">
                 <thead>
                     <tr>
-                        <th style="width:8%">เลขดำเนินการ</th>
-                        <th style="width:8%">วันที่ยื่นคำขอ</th>
-                        <th style="width:10%">เลขจดแจ้ง</th>
-                        <th style="width:20%">ชื่อสาร</th>
-                        <th style="width:10%">ชื่อผู้ผลิต</th>
-                        <th style="width:10%">ชื่อผู้รับอนุญาต</th>
+                        <th style="width:14%">เลขดำเนินการ</th>
+                        <th style="width:14%">วันที่ยื่นคำขอ</th>
+                        <th style="width:12%">เลขจดแจ้ง</th>
+                        <th style="width:15%">ชื่อสาร</th>
+                        <th style="width:15%">ชื่อผู้ผลิต</th>
+                        <th style="width:15%">ชื่อผู้รับอนุญาต</th>
                         <th style="width:5%">ประเภท</th>
                         <th style="width:5%">สถานะ</th>
 
@@ -78,7 +81,7 @@
                         <td>{{data.STATUS_NAME}}</td>
                         <td>
                             <span class="fa fa-eye"></span>
-                            <a ng-click>
+                            <a ng-click="">
                                 ดูข้อมูล
                             </a>
                         </td>

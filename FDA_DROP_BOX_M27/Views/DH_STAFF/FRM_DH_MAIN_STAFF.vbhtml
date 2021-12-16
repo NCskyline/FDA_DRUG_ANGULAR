@@ -32,23 +32,20 @@
                         <table style="margin-top:10px;width:100%;" class="table table-condensed">
                             <thead>
                                 <tr>
-                                    <th style="width:13%">เลขที่รับคำขอ</th>
+                                    <th style="width:15%">เลขดำเนินการ</th>
                                     <th style="width:13%">วันที่รับ</th>
-                                    <th style="width:13%">วันที่ยื่นคำขอ</th>
                                     <th style="width:15%">สถานะ</th>
                                     <th style="width:20%">ชื่อสาร</th>
-                                    <th style="width:15%">เลขดำเนินการ</th>
                                     <th style="width:11%"></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr ng-repeat="data in LIST_DH_STAFF">
-                                    <td>{{data.rcvno}}</td>
+                                    <td>{{data.TR_ID}}</td>
                                     <td>{{data.rcvdate}}</td>
-                                    <td>{{data.REQUEST_DATE}}</td>
                                     <td>{{data.STATUS_NAME}}</td>
                                     <td>{{data.TRADING_NAME}}</td>
-                                    <td>{{data.TR_ID}}</td>
+
                                     <td>
                                         <span class="fa fa-eye"></span>
                                         <a ng-click="SELECT_DH(data)">
