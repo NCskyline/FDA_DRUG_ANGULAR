@@ -111,7 +111,8 @@ End Code
 
                 <md-datepicker ng-model="LIST_GMP.CER.DOCUMENT_DATE" md-placeholder="Enter date"
                                input-aria-describedby="datepicker-description"
-                               input-aria-labelledby="datepicker-header "></md-datepicker>
+                               input-aria-labelledby="datepicker-header ">
+                </md-datepicker>
 
             </td>
         </tr>

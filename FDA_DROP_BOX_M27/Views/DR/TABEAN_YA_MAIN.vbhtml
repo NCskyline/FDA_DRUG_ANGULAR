@@ -8,21 +8,23 @@ End Code
     <script src="~/Scripts_angular/DR_CTRL.js"></script>
 <style>
     .tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
+        overflow: hidden;
+        border: none;
+        background-color: #f1f1f1;
+        
+    }
 
 /* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-}
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-family:'Taviraj';
+        }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
@@ -30,11 +32,11 @@ End Code
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
+            .tab button.active {
+                background-color: #ccc;
+            }
 
-/* Style the tab content */
+    /* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
@@ -42,7 +44,7 @@ End Code
   border-top: none;
 }
 </style>
-<div ng-app="ANGULAR_APP" ng-controller="DR_CTRL"> 
+<div @*ng-app="ANGULAR_APP" ng-controller="DR_CTRL"*@> 
     <div class="ic" style="font-family:'Taviraj'">
         <div>
             <h1>ข้อมูล</h1>
@@ -73,8 +75,8 @@ End Code
             <br />
             <div>
                 <div class="tab">
-                    <button class="tablinks" onclick="openTab(event, 'DS')" id="defaultOpen">ยาตัวอย่าง</button>
-                    <button class="tablinks" onclick="openTab(event, 'DR')">ย.1</button>
+                    <button class="tablinks" onclick="openTab(event, 'DS')" >ยาตัวอย่าง</button>
+                    <button class="tablinks" onclick="openTab(event, 'DR')" id="defaultOpen">คำขอขึ้นทะเบียนตำรับยา</button>
                 </div>
             </div>
 
@@ -192,15 +194,17 @@ End Code
             @*------------------  DR  ------------------*@
 
         <div id="DR" class="tabcontent">
-            <h3 style="color:red">ย.1</h3>
-            <table width="100%" style="font-family:'Taviraj'">
+            <h3 style="color:red">คำขอขึ้นทะเบียนตำรับยา</h3>
+            <table width="100%" style="font-family:'Taviraj'" >
                 <tr>
-                    <td width="40%">ใบอนุญาตคำขออนุญาตผลิตยาตัวอย่างเพื่อขอขึ้นทะเบียนตำรับยา ({{lcnnoType}})</td>
-
-                    <td align="right">
+                    <td width="10%" style="font-size:20px"><b>ชื่อยาภาษาไทย :</b></td>
+                    <td width="30%">ยาภาษาไทย</td>
+                    <td width="12%" style="font-size:20px"><b>ชื่อยาภาษาอังกฤษ :</b></td>
+                    <td width="28%"></td>
+                    <td width="10%" align="right" >
                         <button class="btn btn-lg" ng-click="BTN_INPUT()">สร้างคำขอ</button>
                     </td>
-                    <td>
+                    <td width="10%">
                         <button class="btn btn-lg" ng-click="BTN_TRANSFER()">คำขอ Transfer/Refer/Copy</button>
                     </td>
                 </tr>
@@ -248,7 +252,7 @@ End Code
                                             </a>
                                         </td>
                                         <td>
-                                            <span class="fa fa-eye"></span>
+                                            <span class="fa fa-pen"></span>
                                             <a ng-click="BTN_RQT(datas)">
                                                 เพิ่มข้อมูลส่วนที่ 2
                                             </a>
@@ -256,7 +260,7 @@ End Code
                                     </tr>
                                     <tr>
                                         <td>บันทึกข้อมูลและรอสร้างคำขอ</td>
-                                        <td>พารา</td>
+                                        <td>พารา A</td>
                                         <td>para</td>
                                         <td>640009999</td>
                                         <td>
@@ -266,7 +270,7 @@ End Code
                                             </a>
                                         </td>
                                         <td>
-                                            <span class="fa fa-pager"></span>
+                                            <span class="fa fa-pen"></span>
                                             <a ng-click="BTN_RQT(datas)">
                                                 เพิ่มข้อมูลส่วนที่ 2
                                             </a>
