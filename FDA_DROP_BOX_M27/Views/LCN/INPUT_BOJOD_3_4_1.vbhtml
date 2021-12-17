@@ -33,6 +33,40 @@
         height: 10px;
         background-color: black;
     }
+
+    .tab {
+        overflow: hidden;
+        border: none solid #ccc;
+        /*background-color: #f1f1f1;*/
+    }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+                background-color: #ddd;
+            }
+
+            /* Create an active/current tablink class */
+            .tab button.active {
+                background-color: #ccc;
+            }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border-top: none;
+    }
 </style>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -684,13 +718,122 @@
         <br />
 
         <div style="font-size:20px"><strong>๕. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
-        <div class="row">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'FIRST')"><u>กรณีขอรับใบอนุญาต (กรณีรายใหม่)</u></button>
+            <button class="tablinks" onclick="openTab(event, 'SECOND')"><u>กรณีขอต่ออายุใบอนุญาต</u></button>
+            <button class="tablinks" onclick="openTab(event, 'THIRD')"><u>กรณีขอรับใบแทนใบอนุญาต</u></button>
+        </div>
+        <div id="FIRST" class="tabcontent">
+            <table width="100%" border="1">
+                <tr>
+                    <td width="10%" align="center">ลำดับที่</td>
+                    <td width="50%" align="center">รายการเอกสาร</td>
+                    <td width="40%" align="center">ไฟล์แนบ</td>
+                </tr>
+                <tr>
+                    <td align="center">๑.</td>
+                    <td colspan="2">กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</td>
+                </tr>
+                <tr>
+                    <td align="center">๑.๑</td>
+                    <td>สำเนาใบอนุญาตขายยาแผนปัจจุบันตามกฎหมายว่าด้วยยา</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr>
+                <tr>
+                    <td align="center">๑.๒</td>
+                    <td>คำรับรองของผู้รับอนุญาตและเภสัชกรผู้ควบคุมกิจการ</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr> 
+                <tr>
+                    <td align="center">๑.๓</td>
+                    <td>รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr> 
+                <tr>
+                    <td align="center">๑.๔</td>
+                    <td>สำเนาใบอนุญาตประกอบวิชาชีพเภสัชกรรม</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr> 
+                <tr>
+                    <td align="center">๑.๕</td>
+                    <td>หนังสือแต่งตั้งผู้ดำเนินกิจการ กรณีผู้ขอรับใบอนุญาตเป็นนิติบุคคล</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr>
+                <tr>
+                    <td align="center">๒.</td>
+                    <td colspan="2">กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ โดยการขายส่งตรง</td>
+                </tr>
+                <tr>
+                    <td align="center">๒.๑</td>
+                    <td>สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr>
+                <tr>
+                    <td align="center">๒.๒</td>
+                    <td>รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr>
+                <tr>
+                    <td align="center">๓.</td>
+                    <td colspan="2">กรณีขอรับใบอนุญาตขายวัตถุออกฤทธฺิ์ในประเภท ๓ หรือประเภท ๔ ในบริเวณสถานที่ที่มีการประชุม</td>
+                </tr>
+                <tr>
+                    <td align="center">๓.๑</td>
+                    <td>สำเนาใบอนุญาตผลิต ขาย หรือนำเข้าวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="SECOND" class="tabcontent">
+            <table width="100%" border="1">
+                <tr>
+                    <td width="10%" align="center">ลำดับที่</td>
+                    <td width="50%" align="center">รายการเอกสาร</td>
+                    <td width="40%" align="center">ไฟล์แนบ</td>
+                </tr>
+                <tr>
+                    <td align="center">๑.</td>
+                    <td>ใบอนุญาตฉบับเดิม</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr> 
+                <tr>
+                    <td align="center">๒.</td>
+                    <td>รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="THIRD" class="tabcontent">
+            <table width="100%" border="1">
+                <tr>
+                    <td width="10%" align="center">ลำดับที่</td>
+                    <td width="50%" align="center">รายการเอกสาร</td>
+                    <td width="40%" align="center">ไฟล์แนบ</td>
+                </tr>
+                <tr>
+                    <td align="center">๑.</td>
+                    <td>ใบแจ้งความ กรณีใบอนุญาตสูญหาย</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr> 
+                <tr>
+                    <td align="center">๒.</td>
+                    <td>ใบอนุญาต กรณีใบอนุญาตดังกล่าวถูกทำลายบางส่วนหรือลบเลือนในสาระสำคัญ</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr> 
+                <tr>
+                    <td align="center">๓.</td>
+                    <td>รูปถ่ายหน้าตรง ไม่สวมหมวกและแว่นตาสีเข้ม ของผู้ขอรับใบอนุญาตหรือผู้ได้รับมอบหมายหรือแต่งตั้งให้ดำเนินกิจการเกี่ยวกับใบอนุญาต ขนาด ๑ นิ้ว จำนวน ๓ รูป ซึ่งถ่ายไว้ไม่เกิน ๖ เดือนก่อนวันยื่นคำขอ</td>
+                    <td><input id="file-input" align="center" ng-model="FILE_DATA" type="file" name="file" ngf-select="selectFileforUpload(datas,$files)" /></td>
+                </tr>
+            </table>
+        </div>
+        @*<div class="row">
             <div class="col-sm-12 in" style="width:100%">
                 <div ng-include="FILE_ATTACH">
 
                 </div>
             </div>
-        </div>
+        </div>*@
         @*<div style="margin-left:5%;font-size:20px"><strong>๕.๑ <u>กรณีขอรับใบอนุญาต (กรณีรายใหม่)</u></strong></div>
         <div style="margin-left:8%;font-size:20px"><strong>๕.๑.๑ กรณีขอรับใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔</strong></div>
         <table style="width:90%;font-size:20px ;margin-left:10%">
@@ -790,7 +933,6 @@
         <div style="margin-left:5%;font-size:20px;text-align:center"><strong>ข้าพเจ้าขอรับรองว่า ข้อความและเอกสารหรือหลักฐานทั้งหมดที่ยื่นเพื่อประกอบคำขอรับใบอนุญาตเป็นความจริงทุกประการ</strong></div>
         <br />
         <br />
-
         <table style="width:100%">
             <tr>
                 <td style="width:25%"></td>
@@ -821,30 +963,6 @@
             </tr>
 
         </table>
-        @*<br />
-        <div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-3" style="text-align:center">
-                    รายละเอืยด :
-                </div>
-                <div class="col-sm-9">
-                    {{REMARK}}
-                </div>
-            </div>
-            <br />
-            <table class="table" style="width:100%">
-                <tr>
-                    <td>ชื่อไฟล์</td>
-                    <td></td>
-                </tr>
-                <tr ng-repeat="datas in LIST_LCN" style="background-color:#FDFCE3">
-                    <td>{{datas.FILENAME}}</td>
-                    <td>
-                        <a ng-show="PROCESS == '123'" ng-click="OPEN_DOC_PATH(datas.PATH,datas.FILENAME)">ดูเอกสาร</a>
-                    </td>
-                </tr>
-            </table>
-        </div>*@
         <br />
         <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
             <input type="button" class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_SAVE_LCN_INPUT()" value="บันทึก" />
@@ -852,3 +970,23 @@
         </div>
     </div>
 </div>
+
+<script>
+    function openTab(evt, Type) {
+        var i, tabcontent, tablinks;
+
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        document.getElementById(Type).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    document.getElementById("defaultOpen").click();
+</script>

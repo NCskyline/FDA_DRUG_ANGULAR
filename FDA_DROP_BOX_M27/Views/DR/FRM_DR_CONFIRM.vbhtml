@@ -1,6 +1,4 @@
-﻿@Code
-    ViewData("Title") = "FRM_DR_CONFIRM"
-End Code
+﻿@Code ViewData("Title") = "FRM_DR_CONFIRM" End Code
 
 <div>
     <div class="content-part">
@@ -181,7 +179,7 @@ End Code
                     <div>&nbsp; &nbsp; &nbsp;๒.๒ ลักษณะยา :</div>
                     <td style="width:90%"></td>
                 </tr>
-                <div>&nbsp; &nbsp; &nbsp;๒.๓ ชื่อและปริมาณของตัวยาสำำคัญและส่วนประกอบในตำรับยา</div>
+                <div>&nbsp; &nbsp; &nbsp;๒.๓ ชื่อและปริมาณของตัวยาสำคัญและส่วนประกอบในตำรับยา</div>
 
                 <table style="width:100%">
                     <tr>
@@ -202,8 +200,8 @@ End Code
                         <td style="width:27%;text-align:center">หมายเหตุ</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td align="center">1</td>
+                        <td>test</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -211,30 +209,20 @@ End Code
                         <td></td>
                     </tr>
                 </table>
-                <br />
-                <div>
-                    &nbsp; &nbsp; &nbsp;๒.๔ รายการขนาดบรรจุที่แนบท้ายคำขอ
-                </div>
-                <table style="width:100%">
-                    <tr>
-                        <td style="width:100%;text-align:center"></td>
-                    </tr>
-                </table>
-
                 <br />
                 @*<div><h4>๓.ยาตัวอย่าง</h4></div>
-            <div><h4>๔.หลักฐานแสดงข้อมูลด้านวิชาการของตำรับยา</h4></div>
-            <div> &nbsp; &nbsp; &nbsp;๔.๑ เอกสารด้านคุณภาพ</div>
-            <div> &nbsp; &nbsp; &nbsp;๔.๒ เอกสารด้านความปลอดภับ</div>
-            <div> &nbsp; &nbsp; &nbsp;๔.๓ เอกสารด้านประสิทธิภาพ</div>
-            <div><h4>๕. ฉลากและเอกสารกำกับยา</h4></div>
-            <div><h4>๖. หนังสือรับรองเกี่ยวกับผู้ผลิตและการจำหน่ายผลิตภัณฑ์สำหรับกรณีที่เป็นยานำเข้า อย่างน้อยต้องประกอบด้วย</h4></div>
-            <div><h4>&nbsp; &nbsp; &nbsp;หนังสือรับรองมาตรฐานการผลิตหรือเอกสารอื่นที่เกี่ยวข้อง หนังสือรับรองการจำหน่ายา</h4></div>
-            <div><h4>๗. เอกสารแสดงเลขที่คำขอรับสิทธิบัตรหรืออนุสิทธิบัตรที่ประกาศโฆษณาแล้วตามกฏหมายว่าด้วยสิทธิบัตร หรือข้อมูลจด</h4></div>
-            <div><h4>&nbsp; &nbsp; &nbsp;ทะเบียนสิทธิภูมิปัญญาการแพทย์แผนไทยส่วนบุคคลภูมิปัญญาที่เป็นตำรับยาแผนไทยทั่วไปหรือตำราการแพทย์แผนไทย</h4></div>
-            <div><h4>&nbsp; &nbsp; &nbsp;ทั่วไป หรือการได้รับอนุญาตให้ใช้ประโยชน์จากตำรับยาแผนไทยของชาติ หรือตำราการแพทย์แผนไทยของชาติตาม</h4></div>
-            <div><h4>&nbsp; &nbsp; &nbsp;กฏหมายว่าด้วยการคุ้มครองและส่งเสริมภูมิปัญญาการแพทย์แผนไทย (ถ้ามี)</h4></div>
-            <div><h4>๘. หลักฐานอื่น ๆ ตามที่สำนักงานคณะกรรมการอาหารและยากำหนด</h4></div>*@
+                    <div><h4>๔.หลักฐานแสดงข้อมูลด้านวิชาการของตำรับยา</h4></div>
+                    <div> &nbsp; &nbsp; &nbsp;๔.๑ เอกสารด้านคุณภาพ</div>
+                    <div> &nbsp; &nbsp; &nbsp;๔.๒ เอกสารด้านความปลอดภับ</div>
+                    <div> &nbsp; &nbsp; &nbsp;๔.๓ เอกสารด้านประสิทธิภาพ</div>
+                    <div><h4>๕. ฉลากและเอกสารกำกับยา</h4></div>
+                    <div><h4>๖. หนังสือรับรองเกี่ยวกับผู้ผลิตและการจำหน่ายผลิตภัณฑ์สำหรับกรณีที่เป็นยานำเข้า อย่างน้อยต้องประกอบด้วย</h4></div>
+                    <div><h4>&nbsp; &nbsp; &nbsp;หนังสือรับรองมาตรฐานการผลิตหรือเอกสารอื่นที่เกี่ยวข้อง หนังสือรับรองการจำหน่ายา</h4></div>
+                    <div><h4>๗. เอกสารแสดงเลขที่คำขอรับสิทธิบัตรหรืออนุสิทธิบัตรที่ประกาศโฆษณาแล้วตามกฏหมายว่าด้วยสิทธิบัตร หรือข้อมูลจด</h4></div>
+                    <div><h4>&nbsp; &nbsp; &nbsp;ทะเบียนสิทธิภูมิปัญญาการแพทย์แผนไทยส่วนบุคคลภูมิปัญญาที่เป็นตำรับยาแผนไทยทั่วไปหรือตำราการแพทย์แผนไทย</h4></div>
+                    <div><h4>&nbsp; &nbsp; &nbsp;ทั่วไป หรือการได้รับอนุญาตให้ใช้ประโยชน์จากตำรับยาแผนไทยของชาติ หรือตำราการแพทย์แผนไทยของชาติตาม</h4></div>
+                    <div><h4>&nbsp; &nbsp; &nbsp;กฏหมายว่าด้วยการคุ้มครองและส่งเสริมภูมิปัญญาการแพทย์แผนไทย (ถ้ามี)</h4></div>
+                    <div><h4>๘. หลักฐานอื่น ๆ ตามที่สำนักงานคณะกรรมการอาหารและยากำหนด</h4></div>*@
                 <table style="width:100%">
                     <tr>
                         <td style="width:50%;text-align:center"></td>
@@ -275,24 +263,26 @@ End Code
                         </td>
                     </tr>
                 </table>
+                <a href="" style="color:dodgerblue">
+                    <center><u>กดที่นี่เพื่อดูรายการกระบวนงาน</u></center>
+                </a>
                 <br />
                 <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%">
                     <input type="button" class="form-control" value="ยืนคำขอ" />
                 </div>
                 <br />
-                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%" ">
+                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%">
                     <input type="button" class="form-control" value="ยกเลิก" />
                 </div>
                 <br />
-                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%" ">
+                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%">
                     <input type="button" class="form-control" value="Download PDF" />
                 </div>
                 <br />
-                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%" ">
+                <div class="col-sm-12" style="text-align:center;width:60%;margin-left:20%">
                     <input type="button" class="form-control" ng-click="BTN_BACK()" value="กลับหน้ารายการ" />
                 </div>
             </div>
         </div>
     </div>
 </div>
-

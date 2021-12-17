@@ -480,22 +480,22 @@
         <br />
         <div style="font-size:20px"><strong>๔. พร้อมกับคำขอนี้ข้าพเจ้าได้แนบเอกสารหรือหลักฐานต่างๆ มาด้วย คือ</strong></div>
         <table style="width:90%;font-size:20px;margin-left:5%">
-            <tr>
+            @*<tr>
                 <td colspan="2">
                     (๔.๑) ใบอนุญาตขายวัตถุออกฤทธิ์ในประเภท ๓ หรือประเภท ๔ แล้วแต่กรณี
                 </td>
-            </tr>
+            </tr>*@
             <tr>
                 <td colspan="2">
-                    (๔.๒) เอกสารแสดงรายละเอียดของสถานที่ขายหรือสถานที่เก็บวัตถุออกฤทธิ์แห่งใหม่หรือที่มีการเปลี่ยนแปลง
+                    (๔.๑) เอกสารแสดงรายละเอียดของสถานที่ขายหรือสถานที่เก็บวัตถุออกฤทธิ์แห่งใหม่หรือที่มีการเปลี่ยนแปลง
                 </td>
             </tr>
             <tr>
-                <td style="width:25%">
+                <td width="20%">
                     หรือเพิ่ม แล้วแต่กรณี (ถ้ามี)
                 </td>
                 <td>
-                    <input type="text" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" id="txt_EDIT_DESCRIPTION" />
+                    <input class="form-control inline" type="text" ng-model="LIST_LCN.DALCN_EDIT_REQUEST.EDIT_DESCRIPTION" id="txt_EDIT_DESCRIPTION" />
                 </td>
             </tr>
             <tr>

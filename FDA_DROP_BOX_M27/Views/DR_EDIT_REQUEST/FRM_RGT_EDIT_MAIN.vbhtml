@@ -15,7 +15,7 @@ End Code
                         </select>
                     </td>
                     <td>
-                        <input type="button" class="form-control" ng-click="BTN_INPUT_YOR5()" value="สร้างคำขอแก้ไข" />
+                        <input type="button" class="btn btn-lg" style="background-color:#38A86B;color:white"  ng-click="BTN_INPUT_YOR5()" value="สร้างคำขอแก้ไข" />
                     </td>
                 </tr>
             </table>
@@ -115,15 +115,15 @@ End Code
                                 </td>
                                 <td>
                                 </td>
-                            </tr>                           
+                            </tr>
                         </tbody>
                         <tfoot>
                             <tr></tr>
                         </tfoot>
                     </table>
                 </div>
-                <div style="text-align:right">
-                    <a ng-click="BTN_PAYMENT">ชำระเงินคลิ๊กที่นี่</a>
+                <div align="right">
+                    <a ng-click="BTN_PAYMENT()" style="color:blue">กดที่นี่เพื่อชำระเงิน</a>
                 </div>
             </div>
         </div>

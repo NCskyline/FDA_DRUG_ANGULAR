@@ -1,5 +1,4 @@
-﻿
-@Code
+﻿@Code
     Layout = ""
 End Code
 

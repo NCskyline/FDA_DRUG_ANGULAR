@@ -376,4 +376,11 @@ app.controller('DH_STAFF_CTRL', function ($scope, CENTER_SV, $http, $location) {
         return DATE_CHANGE = day + " " + month + " " + year;
     }
 
+
+    function Openmodel() {
+        $('#exampleModalLong').modal('toggle'); // เป็นคำสั่งเปิดปิด
+    }
+
+
+
 });

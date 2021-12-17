@@ -1,9 +1,7 @@
-﻿@Code
-    Layout = ""
-End Code
+﻿@Code Layout = "" End Code
 <div ng-controller="LCN_CTRL" ng-app="ANGULAR_APP">
     <div class="content-part " style="font-family:'Taviraj'">
-        <div class="part part-2-3 ic" >
+        <div class="part part-2-3 ic">
             <div style="width:100%;">
                 <div>
                     <table width="100%" style="font-family:'Taviraj';font-size:20px;">
@@ -35,49 +33,49 @@ End Code
                                         </tr>
                                     </thead>
                                     @*<tbody>
-            <tr ng-repeat="data in DATA_SUBTITUTE | filter: filter">
-                <td>{{data.RCVNO_MANUAL}}</td>
-                <td>{{data.LCNNO_MANUAL}}</td>
-                <td>{{data.STATUS_NAME}}</td>
-                <td>{{data.TRANSECTION_ID_UPLOAD}}</td>
-                <td>{{data.PURPOSE}}</td>
-                <td>
-                    <span class="fa fa-eye"></span>
-                    <a ng-click="BTN_SUBTITUTE_PREVIEW(data)">
-                        ดูข้อมูล
-                    </a>
-                </td>
-            </tr>
-        </tbody>*@
-                                <tbody>
+                                    <tr ng-repeat="data in DATA_SUBTITUTE | filter: filter">
+                                        <td>{{data.RCVNO_MANUAL}}</td>
+                                        <td>{{data.LCNNO_MANUAL}}</td>
+                                        <td>{{data.STATUS_NAME}}</td>
+                                        <td>{{data.TRANSECTION_ID_UPLOAD}}</td>
+                                        <td>{{data.PURPOSE}}</td>
+                                        <td>
+                                            <span class="fa fa-eye"></span>
+                                            <a ng-click="BTN_SUBTITUTE_PREVIEW(data)">
+                                                ดูข้อมูล
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>*@
+                                    <tbody>
 
-                                    <tr>
-                                        <td>6409999</td>
-                                        <td>ขย1 กท 9999/2555</td>
-                                        <td>ยื่นคำขอแล้วรอเจ้าหน้าที่พิจารณา</td>
-                                        <td>64009999</td>
-                                        <td></td>
-                                        <td>
-                                            <span class="fa fa-eye"></span>
-                                            <a ng-click="SELECT_STT(datas)">
-                                                ดูข้อมูล
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6409999</td>
-                                        <td>ขย1 กท 9999/2555</td>
-                                        <td>อนุมัติแล้วรอชำระเงิน</td>
-                                        <td>64009999</td>
-                                        <td></td>
-                                        <td>
-                                            <span class="fa fa-eye"></span>
-                                            <a ng-click="SELECT_STT(datas)">
-                                                ดูข้อมูล
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                                        <tr>
+                                            <td>6409999</td>
+                                            <td>ขย1 กท 9999/2555</td>
+                                            <td>ยื่นคำขอแล้วรอเจ้าหน้าที่พิจารณา</td>
+                                            <td>64009999</td>
+                                            <td></td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="SELECT_STT(datas)">
+                                                    ดูข้อมูล
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>6409999</td>
+                                            <td>ขย1 กท 9999/2555</td>
+                                            <td>อนุมัติแล้วรอชำระเงิน</td>
+                                            <td>64009999</td>
+                                            <td></td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="SELECT_STT(datas)">
+                                                    ดูข้อมูล
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
                                     <tfoot>
                                         <tr></tr>
                                     </tfoot>
@@ -87,6 +85,9 @@ End Code
                         </div>
                     </div>
                 </div>
+            </div>
+            <div align="right">
+                <a ng-click="BTN_PAYMENT()" style="color:blue">กดที่นี่เพื่อชำระเงิน</a>
             </div>
         </div>
     </div>

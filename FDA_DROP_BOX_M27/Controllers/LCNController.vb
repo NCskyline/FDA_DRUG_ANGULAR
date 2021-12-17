@@ -45,6 +45,9 @@ Namespace Controllers
         Function INPUT_MODIFY_PORDOJ_3_2() As ActionResult
             Return View()
         End Function
+        Function INPUT_MODIFY_NORDOJ_3_4() As ActionResult
+            Return View()
+        End Function
         Function INPUT_BOJOD_3_4_1() As ActionResult
             Return View()
         End Function

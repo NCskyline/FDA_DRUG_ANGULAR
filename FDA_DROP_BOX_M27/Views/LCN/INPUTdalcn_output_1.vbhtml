@@ -56,7 +56,7 @@
 
 <div class="ic" ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" ng-init="pageload()" ng-cloak="">
     @*<div ng-show="LIST_LCN.PROCESS == '101'">*@
-        <div style="font-family:'Taviraj';font-size:24px;width:100%">
+    <div style="font-family:'Taviraj';font-size:24px;width:100%">
         <h1 style="text-align:right;font-size:24px;">
             <strong>แบบ ข.ย.๑</strong>
         </h1>
@@ -120,28 +120,28 @@
             <hr style="border-top:2px dotted ;width:17%" />
         </div>
 
-            <table style="width:100%">
-                <tr>
-                    <td style="text-align:right;width:90%">
-                        เขียนที่
-                    </td>
-                    <td style="width:40%">
-                        <input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'Taviraj';" type="text" />
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align:right;width:100px">
-                        วันที่
-                    </td>
-                    <td>
+        <table style="width:100%">
+            <tr>
+                <td style="text-align:right;width:90%">
+                    เขียนที่
+                </td>
+                <td style="width:40%">
+                    <input class="form-control inline" ng-model="LIST_LCN.dalcn.WRITE_AT" style="font-family:'Taviraj';" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right;width:100px">
+                    วันที่
+                </td>
+                <td>
 
-                        <md-datepicker ng-model="LIST_LCN.dalcn.WRITE_DATE" md-placeholder="Enter date"
+                    <md-datepicker ng-model="LIST_LCN.dalcn.WRITE_DATE" md-placeholder="Enter date"
                                    input-aria-describedby="datepicker-description"
                                    input-aria-labelledby="datepicker-header ">
-                        </md-datepicker>
-                    </td>
-                </tr>
-            </table>
+                    </md-datepicker>
+                </td>
+            </tr>
+        </table>
         <br />
         <table style="width:100%;">
             <tr>
@@ -397,7 +397,7 @@
                 ชื่อ
             </td>
             <td style="width:10%">
-                <select id="PREFIX" name="PREFIX" class="selectpicker"  data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
+                <select id="PREFIX" name="PREFIX" class="selectpicker" data-live-search="true" title="-- Please select --" ng-model="LIST_PHR_ADD.PHR_PREFIX_ID">
                     @*<option value="0">--กรุณาเลือก--</option>*@
                     <option ng-repeat="x in PREFIX" value="{{x.prefixcd}}">{{x.thanm}}</option>
                 </select>
@@ -430,38 +430,38 @@
         </tr>
     </table>
     <br />
-        <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />
-        <div>
-            <table class="table" width="100%">
-                <thead>
-                    <tr>
-                        <th>ลำดับ</th>
-                        <th>เภสัชกรชั้น</th>
-                        <th>ชื่อ-นามสกุล</th>
-                        <th>เลขบัตรประจำตัวประชาชน</th>
-                        <th>ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="datas in COLLECT_PHR">
-                        <td>{{$index + 1}}</td>
-                        <td>{{datas.PHR_LEVEL}}</td>
-                        <td>{{datas.PHR_NAME}}</td>
-                        <td>{{datas.PHR_CTZNO}}</td>
-                        <td>{{datas.PHR_TEXT_NUM}}</td>
-                        <td>
-                            <span class="fas fa-edit"></span>
-                            <a ng-click="deletePHR(datas,$index)">
-                                ลบข้อมูล
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr></tr>
-                </tfoot>
-            </table>
-        </div>
+    <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />
+    <div>
+        <table class="table" width="100%">
+            <thead>
+                <tr>
+                    <th>ลำดับ</th>
+                    <th>เภสัชกรชั้น</th>
+                    <th>ชื่อ-นามสกุล</th>
+                    <th>เลขบัตรประจำตัวประชาชน</th>
+                    <th>ใบอนุญาตประกอบวิชาชีพเภสัชกรรมเลขที่</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="datas in COLLECT_PHR">
+                    <td>{{$index + 1}}</td>
+                    <td>{{datas.PHR_LEVEL}}</td>
+                    <td>{{datas.PHR_NAME}}</td>
+                    <td>{{datas.PHR_CTZNO}}</td>
+                    <td>{{datas.PHR_TEXT_NUM}}</td>
+                    <td>
+                        <span class="fas fa-edit"></span>
+                        <a ng-click="deletePHR(datas,$index)">
+                            ลบข้อมูล
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr></tr>
+            </tfoot>
+        </table>
+    </div>
 
     <hr />
 
@@ -534,7 +534,7 @@
         </tr>
     </table>
     <br />
-    
+
     <br />
     <br />
     <br />

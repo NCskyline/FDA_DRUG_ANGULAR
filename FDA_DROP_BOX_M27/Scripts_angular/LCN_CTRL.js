@@ -1482,4 +1482,8 @@
     $scope.BTN_Switch = function (value) {
         $scope.value = value;
     };
+
+    function Openmodel() {
+        $('#exampleModalLong').modal('toggle'); // เป็นคำสั่งเปิดปิด
+    }
 });

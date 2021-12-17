@@ -1,16 +1,14 @@
-﻿@Code
-    ViewData("Title") = "FRM_CERT_EDIT_REQUEST"
-End Code
+﻿@Code ViewData("Title") = "FRM_CERT_EDIT_REQUEST" End Code
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('select').selectpicker('refresh');
-        })
-    </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
 
-    <script src="~/Scripts_angular/ANGULAR_APP.js"></script>
-    <script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>
-    <script src="~/Scripts_angular/CENTER_SV.js"></script>
+<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
+<script src="~/Scripts_angular/CERT_GMP_CTRL.js"></script>
+<script src="~/Scripts_angular/CENTER_SV.js"></script>
 
 <div ng-app="ANGULAR_APP" ng-controller="CERT_GMP_CTRL" ng-init="CER_EDIT()">
     <div class="ic">
@@ -47,13 +45,13 @@ End Code
                     </td>
                 </tr>
                 @*<tr>
-                <td style="height:25px">
-                    Global Location Number (GLN) :
-                </td>
-                <td>
-                    <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
-                </td>
-            </tr>*@
+                        <td style="height:25px">
+                            Global Location Number (GLN) :
+                        </td>
+                        <td>
+                            <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                        </td>
+                    </tr>*@
                 <tr>
                     <td style="height:25px">
                         4. ที่ตั้ง (Site Address)<font color="red">*</font>

@@ -1,52 +1,50 @@
-﻿@Code
-    ViewData("Title") = "FRM_DS_CONFIRM"
-End Code
-    <style>
-        .title1 {
-            width: 150px;
-            height: 170px;
-            /*background-color: aqua;*/
-            text-align: center;
-            border: solid;
-            float: left;
+﻿@Code ViewData("Title") = "FRM_DS_CONFIRM" End Code
+<style>
+    .title1 {
+        width: 150px;
+        height: 170px;
+        /*background-color: aqua;*/
+        text-align: center;
+        border: solid;
+        float: left;
+    }
+
+    .title2 {
+        width: 400px;
+        height: 120px;
+        /*background-color:antiquewhite;*/
+        text-align: right;
+        border: solid;
+        float: right;
+    }
+
+    .checkbox {
+        width: 20px;
+        height: 20px;
+        margin-left: 45%;
+        margin-top: 5%;
+    }
+
+    .hr {
+        width: 95%;
+        height: 10px;
+        background-color: black;
+    }
+
+    .datepickerdemoBasicUsage {
+        /** Demo styles for mdCalendar. */
+    }
+
+        .datepickerdemoBasicUsage md-content {
+            padding-bottom: 200px;
         }
 
-        .title2 {
-            width: 400px;
-            height: 120px;
-            /*background-color:antiquewhite;*/
-            text-align: right;
-            border: solid;
-            float: right;
+        .datepickerdemoBasicUsage .validation-messages {
+            font-size: 12px;
+            color: #dd2c00;
+            margin-left: 15px;
         }
-
-        .checkbox {
-            width: 20px;
-            height: 20px;
-            margin-left: 45%;
-            margin-top: 5%;
-        }
-
-        .hr {
-            width: 95%;
-            height: 10px;
-            background-color: black;
-        }
-
-        .datepickerdemoBasicUsage {
-            /** Demo styles for mdCalendar. */
-        }
-
-            .datepickerdemoBasicUsage md-content {
-                padding-bottom: 200px;
-            }
-
-            .datepickerdemoBasicUsage .validation-messages {
-                font-size: 12px;
-                color: #dd2c00;
-                margin-left: 15px;
-            }
-    </style>
+</style>
 
 <div>
     <div class="ic">
@@ -303,7 +301,7 @@ End Code
         <div style="text-align:center">
             <button class="btn btn-lg" style="background-color:#38A86B;color:white">ยื่นคำขอ</button>
             <button class="btn btn-lg" style="background-color:#FF0000;color:white">ยกเลิก / ยกเลิกคำขอ</button>
-            <button class="btn btn-lg" >ดาวน์โหลด PDF</button>
+            <button class="btn btn-lg">ดาวน์โหลด PDF</button>
             <button class="btn btn-lg" style="background-color:#FFD700">ย้อนกลับ</button>
         </div>
     </div>

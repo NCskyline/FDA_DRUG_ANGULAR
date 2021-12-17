@@ -2,11 +2,11 @@
     Layout = ""
 End Code
 
-
 <script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
-<div  ng-init="pageload()"> @*ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" class="ic"*@
+<div ng-init="pageload()">
+    @*ng-controller="LCN_CTRL" ng-app="ANGULAR_APP" class="ic"*@
     <div style="font-family:'Taviraj';font-size:20px">
         <h2>ต่ออายุใบอนุญาตสถานที่ด้านยา</h2>
         <table width="100%">
@@ -23,8 +23,6 @@ End Code
                             </td>
                         </tr>
                     </table>
-
-
                 </td>
             </tr>
         </table>
@@ -36,8 +34,6 @@ End Code
                         <option value="1" selected>ปีล่าสุด</option>
                         <option value="2">ทั้งหมด</option>
                     </select>
-
-
                 </td>
             </tr>
         </table>
@@ -59,28 +55,28 @@ End Code
                             </tr>
                         </thead>
                         @*<tbody>
-            <tr ng-repeat="data in LIST_EXTEND">
-                <td>{{data.LCNNO_MANUAL}}</td>
-                <td>{{data.STATUS_NAME}}</td>
-                <td>{{data.thanameplace}}</td>
-                <td>{{data.fulladdr}}</td>
-                <td>{{data.TRANSECTION_ID_UPLOAD}}</td>
-                <td>{{data.REMARK}}</td>
-                <td>{{data.expyear}}</td>
-                <td>
-                    <span class="fa fa-eye"></span>
-                    <a ng-click="BTN_PREVIEW_EXTEND(data)">
-                        ดูข้อมูล
-                    </a>
-                </td>
-                <td>
-                    <span class="fa fa-pager"></span>
-                    <a ng-click="BTN_FILE(data)">
-                        พิมพ์ใบปะหน้า
-                    </a>
-                </td>
-            </tr>
-        </tbody>*@
+                                <tr ng-repeat="data in LIST_EXTEND">
+                                    <td>{{data.LCNNO_MANUAL}}</td>
+                                    <td>{{data.STATUS_NAME}}</td>
+                                    <td>{{data.thanameplace}}</td>
+                                    <td>{{data.fulladdr}}</td>
+                                    <td>{{data.TRANSECTION_ID_UPLOAD}}</td>
+                                    <td>{{data.REMARK}}</td>
+                                    <td>{{data.expyear}}</td>
+                                    <td>
+                                        <span class="fa fa-eye"></span>
+                                        <a ng-click="BTN_PREVIEW_EXTEND(data)">
+                                            ดูข้อมูล
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <span class="fa fa-pager"></span>
+                                        <a ng-click="BTN_FILE(data)">
+                                            พิมพ์ใบปะหน้า
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>*@
                         <tbody>
                             <tr>
                                 <td>ผย1 กท 1/2564</td>
@@ -97,11 +93,11 @@ End Code
                                     </a>
                                 </td>
                                 @*<td>
-                                    <span class="fa fa-pager"></span>
-                                    <a ng-click="BTN_FILE(data)">
-                                        พิมพ์ใบปะหน้า
-                                    </a>
-                                </td>*@
+                                        <span class="fa fa-pager"></span>
+                                        <a ng-click="BTN_FILE(data)">
+                                            พิมพ์ใบปะหน้า
+                                        </a>
+                                    </td>*@
                         <tbody>
                             <tr>
                                 <td>ขย1 กท 1/2564</td>
@@ -166,13 +162,13 @@ End Code
                                     </a>
                                 </td>
                             </tr>
-                           
-
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-
+    </div>
+    <div align="right">
+        <a ng-click="BTN_PAYMENT()" style="color:blue">กดที่นี่เพื่อชำระเงิน</a>
     </div>
 </div>

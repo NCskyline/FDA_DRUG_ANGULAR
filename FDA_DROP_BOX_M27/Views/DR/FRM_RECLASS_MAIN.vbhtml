@@ -1,6 +1,4 @@
-﻿@Code
-    Layout = ""
-End Code
+﻿@Code Layout = "" End Code
 
 <div style="font-family:'Taviraj';width:100%">
     <div><h3 style="color:red"> คำขอเปลี่ยนประเภทยาแผนปัจจุบันสำหรับมนุษย์</h3></div>
@@ -11,19 +9,19 @@ End Code
                 <td>{{RGTNO_DISPLAY}}</td>
             </tr>
             @*<tr>
-                <td>ชื่อผู้รับอนุญาต (License Name)</td>
-                <td>{{nameOperator}}</td>
-            </tr>
-            <tr>
-                <td>ชื่อสถานที่ (Establishment Name)</td>
-                <td>{{thanameplace}}</td>
-            </tr>*@
+                    <td>ชื่อผู้รับอนุญาต (License Name)</td>
+                    <td>{{nameOperator}}</td>
+                </tr>
+                <tr>
+                    <td>ชื่อสถานที่ (Establishment Name)</td>
+                    <td>{{thanameplace}}</td>
+                </tr>*@
         </table>
         <hr />
         <table style="width:100%">
             <tr>
                 <td style="width:100%"><input style="width:60%" class="form-control" placeholder="ค้นหา..." ng-model="filter" /></td>
-                <td align="right"><button class="btn btn-lg" ng-click="BTN_INPUT_RECLASS()">สร้างคำขอ</button></td>
+                <td align="right"><button class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_INPUT_RECLASS()">สร้างคำขอ</button></td>
             </tr>
         </table>
         <br />
@@ -34,7 +32,7 @@ End Code
                         <thead>
                             <tr>
                                 <th>
-                                    รหัสดำเนินการ
+                                    เลขดำเนินการ
                                 </th>
                                 <th>
                                     เลขรับที่
@@ -55,18 +53,18 @@ End Code
                         <tbody>
                             @*<tr ng-repeat="datas in DATA_RECLASS | filter : filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
 
-            <td>{{datas.TR_ID}}</td>
-            <td>{{datas.RCVNO_DISPLAY}}</td>
-            <td>{{datas.RGTNO_DISPLAY}}</td>
-            <td>{{datas.DRUG_NAME}}</td>
-            <td>{{datas.STATUS_NAME}}</td>
-            <td>
-                <span class="fa fa-eye"></span>
-                <a ng-click="SELECT_RECLASS(datas)">
-                    เลือก
-                </a>
-            </td>
-        </tr>*@
+                                    <td>{{datas.TR_ID}}</td>
+                                    <td>{{datas.RCVNO_DISPLAY}}</td>
+                                    <td>{{datas.RGTNO_DISPLAY}}</td>
+                                    <td>{{datas.DRUG_NAME}}</td>
+                                    <td>{{datas.STATUS_NAME}}</td>
+                                    <td>
+                                        <span class="fa fa-eye"></span>
+                                        <a ng-click="SELECT_RECLASS(datas)">
+                                            เลือก
+                                        </a>
+                                    </td>
+                                </tr>*@
                             <tr>
                                 <td>640009999</td>
                                 <td></td>
@@ -92,7 +90,8 @@ End Code
                                     <a ng-click="SELECT_RECLASS(datas)">
                                         เลือก
                                     </a>
-                                </td><td></td>
+                                </td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>640009999</td>
@@ -128,5 +127,8 @@ End Code
                 </div>
             </div>
         </div>
+    </div>
+    <div align="right">
+        <a ng-click="BTN_PAYMENT()" style="color:blue">กดที่นี่เพื่อชำระเงิน</a>
     </div>
 </div>

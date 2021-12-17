@@ -82,117 +82,264 @@ End Code
 
             @*------------------  DS  ------------------*@
 
-            <div id="DS" class="tabcontent">
-                <h3 style="color:red">ยาตัวอย่าง</h3>
+        <div id="DS" class="tabcontent">
+            <h3 style="color:red">ยาตัวอย่าง</h3>
+            <table width="100%" style="font-family:'Taviraj'">
+                <tr>
+                    <td width="40%">ใบอนุญาตคำขออนุญาตผลิตยาตัวอย่างเพื่อขอขึ้นทะเบียนตำรับยา ({{lcnnoType}})</td>
+
+                    <td align="right">
+                        <button class="btn btn-lg" ng-click="BTN_DS_INPUT()">สร้างคำขอ</button>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <div class="row">
+                <div class="col-sm-12" style="width:100%;">
+                    <div class="card" style=" border-top: 10px solid #F9D027;">
+                        <table width="100%" style="font-family:'Taviraj'" class="table">
+                            <thead style="font-weight:300;">
+                                <tr>
+                                    <td>รหัสบัญชีรายการยา</td>
+                                    <td>ชื่อยา (Th/Eng)</td>
+                                    <td>เลขดำเนินการ</td>
+                                    <td>สถานะ</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>DL-64-01257</td>
+                                    <td>พาราทดสอบ</td>
+                                    <td>640009999</td>
+                                    <td>บันทึกแล้ว รอการส่งเรื่อง</td>
+                                    <td>
+                                        <span class="fa fa-eye"></span>
+                                        <a ng-click="">
+                                            ดูข้อมูล
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>DL-64-01257</td>
+                                    <td>พาราทดสอบ</td>
+                                    <td>640009999</td>
+                                    <td>ส่งเรื่องแล้ว รอการชำระเงิน</td>
+                                    <td>
+                                        <span class="fa fa-eye"></span>
+                                        <a ng-click="">
+                                            ดูข้อมูล
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>DL-64-01257</td>
+                                    <td>พาราทดสอบ</td>
+                                    <td>640009999</td>
+                                    <td>อนุมัติคำขอ</td>
+                                    <td>
+                                        <span class="fa fa-eye"></span>
+                                        <a ng-click="">
+                                            ดูข้อมูล
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>DL-64-01257</td>
+                                    <td>พาราทดสอบ</td>
+                                    <td>640009999</td>
+                                    <td>รอการแก้ไขคำขอ</td>
+                                    <td>
+                                        <span class="fa fa-eye"></span>
+                                        <a ng-click="">
+                                            ดูข้อมูล
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <span class="fa fa-pen"></span>
+                                        <a ng-click="">
+                                            ดูรายละเอียดที่ต้องแก้ไข
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
+                                    <td>{{data.RCVNO_MANUAL}}</td>
+                                    <td>{{data.LCNNO_MANUAL}}</td>
+                                    <td>{{data.STATUS_NAME}}</td>
+                                    <td>{{data.TRANSACTION_UPLOAD}}</td>
+                                    <td>
+                                        <span class="fa fa-eye"></span>
+                                        <a ng-click="">
+                                            ดูข้อมูล
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <span class="fa fa-pen"></span>
+                                        <a ng-click="">
+                                            ดูรายละเอียดที่ต้องแก้ไข
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div align="right">
+                <a ng-click="BTN_PAYMENT()" style="color:blue">กดที่นี่เพื่อชำระเงิน</a>
+            </div>
+        </div>
+
+            @*------------------  DR  ------------------*@
+
+            <div id="DR" class="tabcontent">
+                <h3 style="color:red">ย.1</h3>
                 <table width="100%" style="font-family:'Taviraj'">
                     <tr>
                         <td width="40%">ใบอนุญาตคำขออนุญาตผลิตยาตัวอย่างเพื่อขอขึ้นทะเบียนตำรับยา ({{lcnnoType}})</td>
 
                         <td align="right">
-                            <button class="btn btn-lg" ng-click="BTN_DS_INPUT()">สร้างคำขอ</button>
+                            <button class="btn btn-lg" ng-click="BTN_INPUT()">สร้างคำขอ</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-lg" ng-click="BTN_TRANSFER()">คำขอ Transfer/Refer/Copy</button>
                         </td>
                     </tr>
                 </table>
+                <hr />
                 <br />
-                <div class="row">
-                    <div class="col-sm-12" style="width:100%;">
-                        <div class="card" style=" border-top: 10px solid #F9D027;">
-                            <table width="100%" style="font-family:'Taviraj'" class="table">
-                                <thead style="font-weight:300;">
-                                    <tr>
-                                        <td>รหัสบัญชีรายการยา</td>
-                                        <td>ชื่อยา (Th/Eng)</td>
-                                        <td>เลขดำเนินการ</td>
-                                        <td>สถานะ</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>DL-64-01257</td>
-                                        <td>พาราทดสอบ</td>
-                                        <td>640009999</td>
-                                        <td>บันทึกแล้ว รอการส่งเรื่อง</td>
-                                        <td>
-                                            <span class="fa fa-eye"></span>
-                                            <a ng-click="">
-                                                ดูข้อมูล
-                                            </a>
-                                        </td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>DL-64-01257</td>
-                                        <td>พาราทดสอบ</td>
-                                        <td>640009999</td>
-                                        <td>ส่งเรื่องแล้ว รอการชำระเงิน</td>
-                                        <td>
-                                            <span class="fa fa-eye"></span>
-                                            <a ng-click="">
-                                                ดูข้อมูล
-                                            </a>
-                                        </td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>DL-64-01257</td>
-                                        <td>พาราทดสอบ</td>
-                                        <td>640009999</td>
-                                        <td>อนุมัติคำขอ</td>
-                                        <td>
-                                            <span class="fa fa-eye"></span>
-                                            <a ng-click="">
-                                                ดูข้อมูล
-                                            </a>
-                                        </td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>DL-64-01257</td>
-                                        <td>พาราทดสอบ</td>
-                                        <td>640009999</td>
-                                        <td>รอการแก้ไขคำขอ</td>
-                                        <td>
-                                            <span class="fa fa-eye"></span>
-                                            <a ng-click="">
-                                                ดูข้อมูล
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <span class="fa fa-pen"></span>
-                                            <a ng-click="">
-                                                ดูรายละเอียดที่ต้องแก้ไข
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
-                                        <td>{{data.RCVNO_MANUAL}}</td>
-                                        <td>{{data.LCNNO_MANUAL}}</td>
-                                        <td>{{data.STATUS_NAME}}</td>
-                                        <td>{{data.TRANSACTION_UPLOAD}}</td>
-                                        <td>
-                                            <span class="fa fa-eye"></span>
-                                            <a ng-click="">
-                                                ดูข้อมูล
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <span class="fa fa-pen"></span>
-                                            <a ng-click="">
-                                                ดูรายละเอียดที่ต้องแก้ไข
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <div class="in">
+                    <h3 style="color:red">คำขอขึ้นทะเบียน</h3>
+                    <div class="row">
+                        <div class="col-sm-12" style="width:100%;">
+                            <div class="card" style=" border-top: 10px solid #F9D027;">
+                                <table width="100%" style="font-family:'Taviraj'" class="table">
+                                    <thead style="font-weight:300;">
+                                        <tr>
+                                            <td>สถานะ</td>
+                                            <td>ชื่อภาษาไทย</td>
+                                            <td>ชื่อภาษาอังกฤษ</td>
+                                            <td>เลขดำเนินการ</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @*<tr ng-repeat="data in DATA_EDIT_LCN_RQT">
+                                            <td>{{data.RCVNO_MANUAL}}</td>
+                                            <td>{{data.LCNNO_MANUAL}}</td>
+                                            <td>{{data.STATUS_NAME}}</td>
+                                            <td>{{data.TRANSACTION_UPLOAD}}</td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="">
+                                                    ดูข้อมูล
+                                                </a>
+                                            </td>
+                                        </tr>*@
+                                        <tr>
+                                            <td>สร้างคำขอแล้ว รอชำระเงิน</td>
+                                            <td>พารา</td>
+                                            <td>para</td>
+                                            <td>640009999</td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="BTN_PREVIEW(datas)">
+                                                    ดูข้อมูล
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="BTN_RQT(datas)">
+                                                    เพิ่มข้อมูลส่วนที่ 2
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>บันทึกข้อมูลและรอสร้างคำขอ</td>
+                                            <td>พารา</td>
+                                            <td>para</td>
+                                            <td>640009999</td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="BTN_PREVIEW(datas)">
+                                                    ดูข้อมูล
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <span class="fa fa-pager"></span>
+                                                <a ng-click="BTN_RQT(datas)">
+                                                    เพิ่มข้อมูลส่วนที่ 2
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
+                    <div align="right">
+                        <a ng-click="BTN_PAYMENT()" style="color:blue">กดที่นี่เพื่อชำระเงิน</a>
+                    </div>
                 </div>
+                <br />
+                <div class="in">
+                    <h3 style="color:red">ทะเบียนตำรับ</h3>
+                    <div class="row">
+                        <div class="col-sm-12" style="width:100%;">
+                            <div class="card" style=" border-top: 10px solid #F9D027;">
+                                <table width="100%" style="font-family:'Taviraj'" class="table">
+                                    <thead style="font-weight:300;">
+                                        <tr>
+                                            <td>สถานะ</td>
+                                            <td>ชื่อภาษาไทย</td>
+                                            <td>ชื่อภาษาอังกฤษ</td>
+                                            <td>เลขดำเนินการ</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ชำระค่าใบสำคัญการขึ้นทะเบียน</td>
+                                            <td>พารา</td>
+                                            <td>para</td>
+                                            <td>640009999</td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="">
+                                                    ดูข้อมูล
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
+                                            <td>{{data.RCVNO_MANUAL}}</td>
+                                            <td>{{data.LCNNO_MANUAL}}</td>
+                                            <td>{{data.STATUS_NAME}}</td>
+                                            <td>{{data.TRANSACTION_UPLOAD}}</td>
+                                            <td>
+                                                <span class="fa fa-eye"></span>
+                                                <a ng-click="">
+                                                    ดูข้อมูล
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div align="right">
+                        <a ng-click="BTN_PAYMENT()" style="color:blue">กดที่นี่เพื่อชำระเงิน</a>
+                    </div>
+                </div>
+
             </div>
-
-            @*------------------  DR  ------------------*@
-
         <div id="DR" class="tabcontent">
             <h3 style="color:red">คำขอขึ้นทะเบียนตำรับยา</h3>
             <table width="100%" style="font-family:'Taviraj'" >

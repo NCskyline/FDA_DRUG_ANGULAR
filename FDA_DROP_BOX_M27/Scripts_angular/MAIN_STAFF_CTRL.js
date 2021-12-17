@@ -79,6 +79,9 @@
 
     };
 
+    function Openmodel() {
+        $('#exampleModalLong').modal('toggle'); // เป็นคำสั่งเปิดปิด
+    }
 
 
 });

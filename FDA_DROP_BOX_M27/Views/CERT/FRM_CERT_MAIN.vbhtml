@@ -37,7 +37,7 @@ End Code
                                 ThFDA-D Ref</th>
                                 <th>วันที่ยื่นคำขอ <br />
                                 Submission Date</th>
-                                <th>รหัสดำเนินการ <br />
+                                <th>เลขดำเนินการ <br />
                                 Submission Code</th>
                                 <th>ชื่อผู้ผลิต <br />
                                 Manufacturer</th>
