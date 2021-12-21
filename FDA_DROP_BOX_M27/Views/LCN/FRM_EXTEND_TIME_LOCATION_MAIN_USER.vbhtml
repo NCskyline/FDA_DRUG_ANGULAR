@@ -2,7 +2,6 @@
     Layout = ""
 End Code
 
-
 <script src="../Scripts_angular/ANGULAR_APP.js"></script>
 <script src="../Scripts_angular/CENTER_SV.js"></script>
 <script src="../Scripts_angular/LCN_CTRL.js"></script>
@@ -24,8 +23,6 @@ End Code
                             </td>
                         </tr>
                     </table>
-
-
                 </td>
             </tr>
         </table>
@@ -37,8 +34,6 @@ End Code
                         <option value="1" selected>ปีล่าสุด</option>
                         <option value="2">ทั้งหมด</option>
                     </select>
-
-
                 </td>
             </tr>
         </table>
@@ -167,16 +162,13 @@ End Code
                                     </a>
                                 </td>
                             </tr>
-
-
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-
     </div>
     <div align="right">
-        <a ng-click="BTN_PAYMENT()">ชำระเงินคลิ๊กที่นี่</a>
+        <a ng-click="BTN_PAYMENT()" style="color:blue">กดที่นี่เพื่อชำระเงิน</a>
     </div>
 </div>

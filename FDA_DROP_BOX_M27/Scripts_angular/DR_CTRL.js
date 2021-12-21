@@ -247,7 +247,7 @@
 
     };
     $scope.BTN_PREVIEW = function () {
-        REDIRECT('/DR/INPUT_YOR_1');
+        REDIRECT('/DR/FRM_DR_CONFIRM');
     };
 
     $scope.BTN_TRANSFER = function () {

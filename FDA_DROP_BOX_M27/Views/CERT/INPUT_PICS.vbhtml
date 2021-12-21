@@ -1,13 +1,11 @@
-﻿@Code
-    Layout = ""
-End Code
+﻿@Code Layout = "" End Code
 
 @*<h2>INPUT_PICS</h2>*@
 
 <script type="text/javascript">
-        $(document).ready(function () {
-            $('select').selectpicker('refresh');
-        })
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
 </script>
 
 
@@ -86,13 +84,13 @@ End Code
             </td>
         </tr>
         @*<tr>
-            <td style="height:25px">
-                Global Location Number (GLN) :
-            </td>
-            <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
-            </td>
-        </tr>*@
+                <td style="height:25px">
+                    Global Location Number (GLN) :
+                </td>
+                <td>
+                    <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                </td>
+            </tr>*@
 
         <tr>
             <td style="height:25px">

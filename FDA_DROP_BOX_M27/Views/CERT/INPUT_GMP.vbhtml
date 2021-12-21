@@ -1,14 +1,13 @@
-﻿@Code
-    Layout = ""
-End Code
+﻿@Code Layout = "" End Code
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('select').selectpicker('refresh');
-        })
-    </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
 
-<div class="ic" > @*ng-repeat="datas in LIST_GMP"*@
+<div class="ic">
+    @*ng-repeat="datas in LIST_GMP"*@
     <h3 style="font-family:'Taviraj'">
         <b>รายละเอียดใบรับรองสถานที่ผลิตเภสัชเคมีภัณฑ์มาตรฐาน GMP</b>
     </h3>
@@ -41,13 +40,13 @@ End Code
             </td>
         </tr>
         @*<tr>
-            <td style="height:25px">
-                Global Location Number (GLN) :
-            </td>
-            <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
-            </td>
-        </tr>*@
+                <td style="height:25px">
+                    Global Location Number (GLN) :
+                </td>
+                <td>
+                    <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                </td>
+            </tr>*@
         <tr>
             <td style="height:25px">
                 4. ที่ตั้ง (Site Address)<font color="red">*</font>

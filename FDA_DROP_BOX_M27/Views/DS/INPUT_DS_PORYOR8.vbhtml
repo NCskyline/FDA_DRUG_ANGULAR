@@ -193,8 +193,8 @@ End Code
             </div>
             <br />
             <div class="col-sm-12" style="text-align:center;margin-bottom:40px;">
-                <input type="button" class="btn btn-lg " ng-click="BTN_SAVE_DS()" value="บันทึก" />
-                <input type="button" class="btn btn-lg " value="ย้อนกลับ" />
+                <input type="button" class="btn btn-lg" style="background-color:#38A86B;color:white" ng-click="BTN_SAVE_DS()" value="บันทึก" />
+                <input type="button" class="btn btn-lg" style="background-color:#FFD700" value="ย้อนกลับ" />
             </div>
         </div>
         <div class="clearfix"></div>

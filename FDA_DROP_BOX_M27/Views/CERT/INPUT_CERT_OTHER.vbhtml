@@ -1,23 +1,19 @@
-﻿@Code
-    Layout = ""
-
-End Code
+﻿@Code Layout = "" End Code
 
 @*<script src="../Scripts/bootstrap-select.js"></script>
-<script src="../Scripts/bootstrap-select.min.js"></script>*@
+    <script src="../Scripts/bootstrap-select.min.js"></script>*@
 @*<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>*@
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('select').selectpicker('refresh');
-        })
-    </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
 
 <style type="text/css">
     .auto-style1 {
         height: 23px;
     }
-    
 </style>
 
 <div class="ic">
@@ -96,13 +92,13 @@ End Code
             </td>
         </tr>
         @*<tr>
-            <td style="height:25px">
-                Global Location Number (GLN)
-            </td>
-            <td>
-                <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
-            </td>
-        </tr>*@
+                <td style="height:25px">
+                    Global Location Number (GLN)
+                </td>
+                <td>
+                    <input class="form-control inline" ng-model="LIST_GMP.CER_DETAIL_MANUFACTURE.GLN" style="font-family:'Taviraj';font-size:20px;" type="text" />
+                </td>
+            </tr>*@
         <tr>
             <td style="height:25px">
                 8. วันที่ออกใบรับรอง (Issue Date)<font color="red">*</font>
@@ -111,7 +107,8 @@ End Code
 
                 <md-datepicker ng-model="LIST_GMP.CER.DOCUMENT_DATE" md-placeholder="Enter date"
                                input-aria-describedby="datepicker-description"
-                               input-aria-labelledby="datepicker-header "></md-datepicker>
+                               input-aria-labelledby="datepicker-header ">
+                </md-datepicker>
 
             </td>
         </tr>

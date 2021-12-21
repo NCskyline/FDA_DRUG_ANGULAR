@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div align="right">
-                <a ng-click="BTN_PAYMENT()">ชำระเงินคลิ๊กที่นี่</a>
+                <a ng-click="BTN_PAYMENT()" style="color:blue">กดที่นี่เพื่อชำระเงิน</a>
             </div>
         </div>
     </div>

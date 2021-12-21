@@ -816,6 +816,8 @@
     <Content Include="Views\LCN\INPUT_EDIT_LCN.vbhtml" />
     <Content Include="Views\LCN\INPUT_EDIT_LCN_2.vbhtml" />
     <Content Include="Views\MASTER_DATA\FRM_ASSIGN_WORK_MAIN.vbhtml" />
+    <Content Include="Views\DR_STAFF\POPUP_DR_STAFF.vbhtml" />
+    <Content Include="Views\DR_STAFF\POPUP_ADD_DR_STAFF.vbhtml" />
     <Content Include="Views\MASTER_DATA\INPUT_ASSIGN_WORK_TO_STAFF.vbhtml" />
     <None Include="Web References\WS_DRUG_126\WS_DRUG.disco" />
     <Content Include="Web References\WS_FDA_CITIZEN\HOUSE.datasource">

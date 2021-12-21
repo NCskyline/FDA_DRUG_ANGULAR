@@ -52,6 +52,10 @@
                 <button class="tablinks" onclick="openTab(event, 'ATC')">6.กลุ่มตำรับ</button>
                 <button class="tablinks" onclick="openTab(event, 'INDICATION')">7.ข้อบ่งใช้</button>
                 <button class="tablinks" onclick="openTab(event, 'COLOR')">8.สีของยา</button>
+                <button class="tablinks" onclick="openTab(event, 'DETAILS')">9.รายละเอียดยาสำหรับสัตว์</button>
+            </div>
+            <div align="right">
+                <a ng-click="" style="color:blue"><u>กดที่นี่เพื่ออ่านคู่มือ</u></a>
             </div>
         </div>
         <div class="in">
@@ -85,6 +89,9 @@
                 @Html.Partial("../DL/INPUT_DRUG_USE", Nothing)
             </div>
             <div id="COLOR" class="tabcontent">
+
+            </div>
+            <div id="DETAILS" class="tabcontent">
 
             </div>
         </div>
