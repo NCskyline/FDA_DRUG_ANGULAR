@@ -32,5 +32,11 @@ Namespace Controllers
         Function FRM_STAFF_LOCATION_MANUAL_INSERT() As ActionResult
             Return View()
         End Function
+        Function INPUT_ASSIGN_WORK_TO_STAFF() As ActionResult
+            Return View()
+        End Function
+        Function FRM_ASSIGN_WORK_MAIN() As ActionResult
+            Return View()
+        End Function
     End Class
 End Namespace
