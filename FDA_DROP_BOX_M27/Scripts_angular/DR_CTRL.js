@@ -305,6 +305,10 @@
         REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
     };
 
+    $scope.SELECT_DS = function () {
+        REDIRECT('/DS/FRM_DS_CONFIRM');
+    };
+
 }).controller('appController', ['$scope', function ($scope) {
     $scope.$on('LOAD', function () { $scope.loading = true; alert('1'); });
     $scope.$on('UNLOAD', function () { $scope.loading = false; alert('2'); });

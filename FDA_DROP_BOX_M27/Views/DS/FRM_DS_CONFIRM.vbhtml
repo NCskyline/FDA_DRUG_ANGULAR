@@ -68,7 +68,6 @@
                                 <td style="text-align:left;width:20%">
                                     เลขรับที่
                                 </td>
-
                                 <td colspan="3" style="border-bottom:dotted;border-bottom-width:thin;"></td>
                             </tr>
                             <tr>
@@ -81,7 +80,6 @@
                             <tr>
                                 <td style="text-align:left">
                                     ลงชื่่อ
-
                                 </td>
 
                                 <td style="border-bottom:dotted;border-bottom-width:thin;"></td>
