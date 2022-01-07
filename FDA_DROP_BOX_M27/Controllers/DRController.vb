@@ -143,6 +143,15 @@ Namespace Controllers
             Dim clsds As New ClassDataset
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
         End Function
+        '
+        Function SP_GET_READ_DATA_RECLASS_BY_NEWCODE(ByVal Newcode As String)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_GET_READ_DATA_RECLASS_BY_NEWCODE(Newcode)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+        End Function
+
 #End Region
 
 #Region "FILE_ATTACH"

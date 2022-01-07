@@ -1656,7 +1656,18 @@
         return response;
     };
 
-   
+    
+    this.SP_GET_READ_DATA_RECLASS_BY_NEWCODE = function (Newcode) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/DR/SP_GET_READ_DATA_RECLASS_BY_NEWCODE"),
+            params: {
+                Newcode: Newcode
+            }
+        });
+        return response;
+    };
+
 
     this.GETDATA_DRUG_PRODUCT = function (register) {
         var response = $http({

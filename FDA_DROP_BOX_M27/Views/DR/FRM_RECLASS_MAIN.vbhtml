@@ -51,7 +51,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @*<tr ng-repeat="datas in DATA_RECLASS | filter : filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                            <tr ng-repeat="datas in DATA_RECLASS | filter : filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
 
                                     <td>{{datas.TR_ID}}</td>
                                     <td>{{datas.RCVNO_DISPLAY}}</td>
@@ -64,8 +64,8 @@
                                             เลือก
                                         </a>
                                     </td>
-                                </tr>*@
-                            <tr>
+                                </tr>
+                            @*<tr>
                                 <td>640009999</td>
                                 <td></td>
                                 <td>K 1/62 (NC)</td>
@@ -111,7 +111,7 @@
                                         รายละเอียดการแก้ไข
                                     </a>
                                 </td>
-                            </tr>
+                            </tr>*@
 
                         </tbody>
                     </table>

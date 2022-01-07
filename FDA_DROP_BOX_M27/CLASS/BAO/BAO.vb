@@ -184,6 +184,16 @@ Public Class BAO
         dtt.TableName = "SP_STAFF_CERT_SEARCH"
         Return dtt
     End Function
+
+
+    Public Function SP_GET_READ_DATA_RECLASS_BY_NEWCODE(ByVal Newcode As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim dt As New DataTable
+        Dim sql As String = "exec SP_GET_READ_DATA_RECLASS_BY_NEWCODE @Newcode='" & Newcode & "'"
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        dt.TableName = "SP_GET_READ_DATA_RECLASS_BY_NEWCODE"
+        Return dt
+    End Function
     Public Function SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID(ByVal FK_IDA As Integer, ByVal process As Integer) As DataTable
         Dim clsds As New ClassDataset
         Dim dt As New DataTable
