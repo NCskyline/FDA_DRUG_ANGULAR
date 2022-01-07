@@ -7,9 +7,47 @@
 <div ng-app="ANGULAR_APP" ng-controller="DR_CTRL">
     <div class="content-part " style="font-family:'Taviraj';width:100%">
         <div class="part part-1-3 ic">
-            <ul class="listree">
+            <ul class="listree" style="font-size:18px">
+                @*<li>
+                    <div class="listree-submenu-heading">
+                        <b>ก. คำขอขึ้นทะเบียน</b>
+                    </div>
+                    <ul class="listree-submenu-items" style="color:black">
+                        <li>
+                            <a ng-click="" style="color:#06B716">คำขอขึ้นทะเบียน</a>
+                        </li>
+                        <li>
+                            <a ng-click="" style="color:#06B716">คำขอ REFER</a>
+                        </li>
+                        <li>
+                            <a ng-click="" style="color:#06B716">คำขอ TRANFER</a>
+                        </li>
+                        <li>
+                            <a ng-click="" style="color:#06B716">คำขอปลด SMP</a>
+                        </li>
+                        <li>
+                            <a ng-click="" style="color:#06B716">คำขอ BE</a>
+                            <ul>
+                                <li>
+                                    <a ng-click="" style="color:#06B716">ขออนุมัติโครงร่างการศึกษา</a>
+                                </li>
+                                <li>
+                                    <a ng-click="" style="color:#06B716">ขออนุมัติรายการการยกเว้นการศึกษาฯ</a>
+                                </li>
+                                <li>
+                                    <a ng-click="" style="color:#06B716">ขออนุมัติรายงานการศึกษาฯ</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
                 <li>
-                    <div class="listree-submenu-heading"><b>ก. โปรกเลือกประเภทยา</b></div>
+                    <div class="listree-submenu-heading">
+                        <a ng-click=""></a><b>ข.คำขอยาตัวอย่าง</b>
+                    </div>
+                </li>*@
+                <li>
+                    <div class="listree-submenu-heading"><b>ก. โปรดเลือกประเภทยา</b></div>
                     <ul class="listree-submenu-items" style="color:black">
                         <li>
                             <a ng-click="BTN_MENU('130001')" style="color:#06B716">ยาแผนปัจจุบัน สำหรับมนุษย์</a>  @*ng-click="DATA_GMP('31')"*@
@@ -70,7 +108,6 @@
                         </li>
                     </ul>
                 </li>
-
             </ul>
         </div>
         <div class="part part-2-3 ic">

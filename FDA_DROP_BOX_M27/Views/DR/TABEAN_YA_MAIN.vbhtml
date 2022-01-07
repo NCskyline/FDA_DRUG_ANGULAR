@@ -155,7 +155,7 @@ End Code
                                     <td>รอการแก้ไขคำขอ</td>
                                     <td>
                                         <span class="fa fa-eye"></span>
-                                        <a ng-click="">
+                                        <a ng-click="SELECT_DS()">
                                             ดูข้อมูล
                                         </a>
                                     </td>
@@ -173,7 +173,7 @@ End Code
                                     <td>{{data.TRANSACTION_UPLOAD}}</td>
                                     <td>
                                         <span class="fa fa-eye"></span>
-                                        <a ng-click="">
+                                        <a ng-click="SELECT_DS()">
                                             ดูข้อมูล
                                         </a>
                                     </td>
