@@ -190,8 +190,13 @@ Public Class BAO
         Dim clsds As New ClassDataset
         Dim dt As New DataTable
         Dim sql As String = "exec SP_GET_READ_DATA_RECLASS_BY_NEWCODE @Newcode='" & Newcode & "'"
-        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
-        dt.TableName = "SP_GET_READ_DATA_RECLASS_BY_NEWCODE"
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+            dt.TableName = "SP_GET_READ_DATA_RECLASS_BY_NEWCODE"
+        Catch ex As Exception
+
+        End Try
+
         Return dt
     End Function
     Public Function SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID(ByVal FK_IDA As Integer, ByVal process As Integer) As DataTable
@@ -710,6 +715,15 @@ Public Class BAO
     Public Function SP_MAS_CHEMICAL_by_IOWANM_AND_AORI(ByVal IOWANM As String, ByVal aori As String) As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_MAS_CHEMICAL_by_IOWANM_AND_AORI @IOWANM='" & IOWANM & "' ,@aori='" & aori & "'"
+        Dim dt As New DataTable
+        dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+
+        Return dt
+    End Function
+
+    Public Function SP_SEARCH_REGISTER_BY_TXT_AND_IDENTIFY(ByVal txt As String, ByVal identify As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_SEARCH_REGISTER_BY_TXT_AND_IDENTIFY @SEARCH_TEXT='" & txt & "' ,@identify='" & identify & "'"
         Dim dt As New DataTable
         dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
 

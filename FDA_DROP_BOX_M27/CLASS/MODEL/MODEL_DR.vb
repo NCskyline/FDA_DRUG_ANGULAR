@@ -1,4 +1,15 @@
 ﻿Public Class MODEL_DR
+    Private _DR_RECLASS As New DR_RECLASS
+    Public Property DR_RECLASS() As DR_RECLASS
+        Get
+            Return _DR_RECLASS
+        End Get
+        Set(ByVal value As DR_RECLASS)
+            _DR_RECLASS = value
+        End Set
+    End Property
+
+
     Private _IDA_BIO As String
     Public Property IDA_BIO() As String
         Get

@@ -6,7 +6,7 @@ End Code
     <script src="~/Scripts_angular/CENTER_SV.js"></script>
     <script src="~/Scripts_angular/DR_CTRL.js"></script>
 
-    <div ng-app="ANGULAR_APP" ng-controller="DR_CTRL">
+    <div ng-app="ANGULAR_APP" ng-controller="DR_CTRL" ng-init="pageload_reclass()">
         <div class="ic" style="font-family:'Taviraj';">
             <div>
                 <table style="width:100%">
@@ -84,7 +84,13 @@ End Code
                     </tr>
                     <tr>
                         <td style="width:2%"></td>
-                        <td style="width:98%" colspan="2">ได้รับอนุญาตให้<span style="padding-left:30px;"><input type="radio" ng-model="LIST_READ_RC.PRODUCER_TYPE" disabled /></span>&nbsp; ผลิตยาแผนปัจจุบัน<span style="padding-left: 15px;"><input type="radio" ng-model="LIST_READ_RC.IMPORT_TYPE" disabled /></span>&nbsp; นำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร</td>
+                        <td style="width:98%" colspan="2">
+                            ได้รับอนุญาตให้<span style="padding-left:30px;">
+                                @*<input type="radio" ng-model="LIST_READ_RC.PRODUCER_TYPE" disabled />
+                                    </span>&nbsp; ผลิตยาแผนปัจจุบัน<span style="padding-left: 15px;"><input type="radio" ng-model="LIST_READ_RC.IMPORT_TYPE" disabled /></span>
+                                &nbsp; นำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร</td>*@
+                                <label><input type="radio" ng-model="LIST_READ_RC.PRODUCER_TYPE" name="Rdl_lcn_type" value="1" disabled> ผลิตยาแผนปัจจุบัน</label>
+                                <label><input type="radio" ng-model="LIST_READ_RC.PRODUCER_TYPE" name="Rdl_lcn_type" value="2" disabled> นำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร</label>
                     </tr>
                 </table>
                 <table style="width:100%">
@@ -123,87 +129,11 @@ End Code
                         <td style="width:2%"></td>
                         <td style="width:15%">มีความประสงค์ขอเปลี่ยนประเภทยา ชื่อ</td>
                         <td width="40%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin;">{{LIST_READ_RC.DRUG_NAME}}</td>
-                        <td style="width:5%">เลขทะเบียนที่</td>
-                        <td width="38%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin;">{{LIST_READ_RC.register}}</td>
+                        <td style="width:10%">เลขทะเบียนที่</td>
+                        <td width="38%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin;">{{LIST_READ_RC.RGTNO_DISPLAY}}</td>
                     </tr>
                 </table>
-                <div>
-                    <div>
-                        <table width="100%">
-                            <tr>
-                                <td align="right" width="50%">
-                                    <input class="form-control" placeholder="ค้นหาทะเบียนที่นี่..." ng-model="register" />
-                                </td>
-                                <td align="left" width="50%">
-                                    <button class="btn btn-lg" ng-click="BTN_SEARCH_REGIST(register)" value="ค้นหาทะเบียนที่นี่">[กรณีตัวยา (API) และรูปแบบยา (Dosage form) เดียวกัน แต่มีหลายความแรง (Strength)]</button>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="ic">
-                        <table id="myTable" datatable="ng" class="dataTable" width="100%">
-                            <thead>
-                                <tr>
-                                    <th width="50%">ชื่อยา</th>
-                                    <th>เลขทะเบียน/th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="datas in LIST_REGISTER | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
-                                    <td>{{datas.DRUGNAME}}</td>
-                                    <td>{{datas.register}}</td>
-                                    <td>
-                                        <a ng-click="BTN_ADD_REGISTER(datas)">
-                                            เลือกทะเบียน
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr></tr>
-                            </tfoot>
-                        </table>
-                        <uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
-                                        ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
-                                        boundary-link-numbers="true" rotate="false" max-size="maxSize">
-                        </uib-pagination>
-                        <div align="center">
-                            <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i> ก่อนหน้า (Previous)</button>
-                            <button type="button" class="btn btn-sm" ng-disabled="currentPage >= LIST_CHEM.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป (Next)<i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
 
-                    <div>
-                        <table class="dataTable" width="100%">
-                            <thead>
-                                <tr>
-                                    <th>ลำดับ</th>
-                                    <th width="55%">ชื่อยา</th>
-                                    <th>เลขทะเบียน</th>
-                                    <th>U1</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="datas in GMP_CHEM">
-                                    <td>{{$index + 1}}</td>
-                                    <td>{{datas.DRUGNAME}}</td>
-                                    <td>{{datas.register}}</td>
-                                    <td>{{datas.Newcode}}</td>
-                                    <td>
-                                        <span class="fas fa-edit"></span>
-                                        <a ng-click="deleteRegist(datas,$index)">
-                                            ลบทะเบียน
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr></tr>
-                            </tfoot>
-                        </table>
-                    </div>
-                </div>
 
 
                 <table style="width:100%">
@@ -214,15 +144,15 @@ End Code
                             <form name="rdl_class">
 
 
-                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="1" disabled> ยาควบคุมพิเศษ</label>
-                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="2" disabled> ยาอันตราย</label>
-                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="3" disabled> ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</label>
-                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="4" disabled> ยาสามัญประจำบ้าน</label>
+                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" ng-value="1" disabled> ยาควบคุมพิเศษ</label>
+                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" ng-value="2" disabled> ยาอันตราย</label>
+                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" ng-value="3" disabled> ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</label>
+                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" ng-value="4" disabled> ยาสามัญประจำบ้าน</label>
                             </form>
                         </td>
                         @*<td style="width:20%"><input type="checkbox" />&nbsp; ยาควบคุมพิเศษ</td>
-                <td style="width:13%"><input type="checkbox" />&nbsp; ยาอันตราย</td>
-                <td style="width:42%"><input type="checkbox" />&nbsp; ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</td>*@
+                        <td style="width:13%"><input type="checkbox" />&nbsp; ยาอันตราย</td>
+                        <td style="width:42%"><input type="checkbox" />&nbsp; ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</td>*@
                     </tr>
                 </table>
                 <table style="width:100%">
@@ -243,17 +173,17 @@ End Code
                 <p><span style="padding-left: 55px;">ข้าพเจ้าได้แนบเอกสาร หรือหลักฐาน ตามที่สำนักงานคณะกรรมการอาหารและยา ประกาศกำหนดไว้ในแนวทางการจัดเตรียมเอกสารประกอบการขอเปลี่ยนประเภทยาแผนปัจจุบันสำหรับมนุษย์</span></p>
                 <table style="width:100%">
                     @*<tr>
-                <td style="width:8%"></td>
-                <td style="width:92%"><input type="checkbox" />&nbsp; แบบตรวจสอบการยื่นเอกสาร พร้อมเอกสารและหลักฐานประกอบการขอเปลี่ยนประเภทยาแผนปัจจุบันสำหรับมนุษย์ ลงนามยืนยันความถูกต้อง ครบถ้วนของเอกสาร</td>
-            </tr>
-            <tr>
-                <td style="width:8%"></td>
-                <td style="width:92%"><input type="checkbox" />&nbsp; สำเนาใบอนุญาต กรณีผู้ยื่นคำขอเป็นผู้รับอนุญาต</td>
-            </tr>
-            <tr>
-                <td style="width:8%"></td>
-                <td style="width:92%"><input type="checkbox" />&nbsp; หนังสือมอบอำนาจ ที่ระบุอำนาจให้ยื่นคำขอรวมถึงเอกสาร หลักฐาน แก้ไขเพิ่มเติม รับทราบ ติดตามผลการพิจารณา และยกเลิกคำขอพร้อมรับคำขอและเอกสาร หลักฐานคืน สำเนาบัตรประชาชนผู้มอบและผู้รับมอบอำนาจ พร้อมติดอากรแสตมป์ 30 บาท (กรณีมอบอำนาจมาเพื่อดำเนินการ)</td>
-            </tr>*@
+                        <td style="width:8%"></td>
+                        <td style="width:92%"><input type="checkbox" />&nbsp; แบบตรวจสอบการยื่นเอกสาร พร้อมเอกสารและหลักฐานประกอบการขอเปลี่ยนประเภทยาแผนปัจจุบันสำหรับมนุษย์ ลงนามยืนยันความถูกต้อง ครบถ้วนของเอกสาร</td>
+                    </tr>
+                    <tr>
+                        <td style="width:8%"></td>
+                        <td style="width:92%"><input type="checkbox" />&nbsp; สำเนาใบอนุญาต กรณีผู้ยื่นคำขอเป็นผู้รับอนุญาต</td>
+                    </tr>
+                    <tr>
+                        <td style="width:8%"></td>
+                        <td style="width:92%"><input type="checkbox" />&nbsp; หนังสือมอบอำนาจ ที่ระบุอำนาจให้ยื่นคำขอรวมถึงเอกสาร หลักฐาน แก้ไขเพิ่มเติม รับทราบ ติดตามผลการพิจารณา และยกเลิกคำขอพร้อมรับคำขอและเอกสาร หลักฐานคืน สำเนาบัตรประชาชนผู้มอบและผู้รับมอบอำนาจ พร้อมติดอากรแสตมป์ 30 บาท (กรณีมอบอำนาจมาเพื่อดำเนินการ)</td>
+                    </tr>*@
                     <tr>
                         <td style="width:2%"></td>
                         <td>
@@ -293,7 +223,91 @@ End Code
             </div>
             <br />
         </div>
+
+        
+
         <div class="in" style="font-family:'Taviraj';">
+            <h2>เพิ่มทะเบียนความแรงอื่นๆ</h2>
+            <div>
+                <div>
+                    <table width="100%">
+                        <tr>
+                            <td style="width:2%"></td>
+                            <td align="right" width="50%">
+                                <input class="form-control" placeholder="ค้นหาทะเบียนที่นี่..." ng-model="register" />
+                            </td>
+                            <td align="left" width="50%">
+                                <button class="btn btn-lg" ng-click="BTN_SEARCH_REGIST(register)">ค้นหาทะเบียนที่นี่</button>
+                                [กรณีตัวยา (API) และรูปแบบยา (Dosage form) เดียวกัน แต่มีหลายความแรง (Strength)]
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="ic">
+                    <table id="myTable" datatable="ng" class="dataTable" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="50%">ชื่อยา</th>
+                                <th>เลขทะเบียน</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="datas in LIST_REGIST_S">
+                                <td>{{datas.DRUG_NAME}}</td>
+                                <td>{{datas.RGTNO_DISPLAY}}</td>
+                                <td>
+                                    <a ng-click="BTN_ADD_REGISTER(datas)">
+                                        เลือกทะเบียน
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr></tr>
+                        </tfoot>
+                    </table>
+                    @*<uib-pagination class="pagination-sm" total-items="filterData.length" ng-model="page"
+                                ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=10
+                                boundary-link-numbers="true" rotate="false" max-size="maxSize">
+                </uib-pagination>
+                <div align="center">
+                    <button type="button" class="btn btn-sm" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fas fa-arrow-left"></i> ก่อนหน้า (Previous)</button>
+                    <button type="button" class="btn btn-sm" ng-disabled="currentPage >= LIST_REGIST_S.length/entryLimit - 1" ng-click="currentPage = currentPage+1">ถัดไป (Next)<i class="fas fa-arrow-right"></i></button>
+                </div>*@
+                </div>
+
+                <div>
+                    <table class="dataTable" width="100%">
+                        <thead>
+                            <tr>
+                                <th>ลำดับ</th>
+                                <th width="55%">ชื่อยา</th>
+                                <th>เลขทะเบียน</th>
+                                <th>U1</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="datas in RECLASS_REGISTER">
+                                <td>{{$index + 1}}</td>
+                                <td>{{datas.DRUNG_NAME}}</td>
+                                <td>{{datas.REGISTER}}</td>
+                                <td>{{datas.NEWCODE_U}}</td>
+                                <td>
+                                    <span class="fas fa-edit"></span>
+                                    <a ng-click="deleteRegist(datas,$index)">
+                                        ลบทะเบียน
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr></tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
             <div ng-include="FILE_ATTACH">
 
             </div>

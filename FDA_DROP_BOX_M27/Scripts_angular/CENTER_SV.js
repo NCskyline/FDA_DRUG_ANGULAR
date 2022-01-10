@@ -1610,6 +1610,14 @@
         return response;
     };
 
+    this.SETMODEL_RECLASS = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SETMODEL_RECLASS")
+        });
+        return response;
+    };
+
     this.SETMODEL_CHEM = function () {
         var response = $http({
             method: "post",
@@ -1660,7 +1668,7 @@
     this.SP_GET_READ_DATA_RECLASS_BY_NEWCODE = function (Newcode) {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/DR/SP_GET_READ_DATA_RECLASS_BY_NEWCODE"),
+            url: SET_URL_SV("/DR_CENTER/SP_GET_READ_DATA_RECLASS_BY_NEWCODE"),
             params: {
                 Newcode: Newcode
             }
@@ -2067,6 +2075,20 @@
         });
         return response;
     };
+    
+    this.SP_SEARCH_REGISTER_BY_TXT_AND_IDENTIFY = function (txt, identify) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_SEARCH_REGISTER_BY_TXT_AND_IDENTIFY"),
+            params: {
+
+                txt: txt,
+                identify: identify
+            }
+        });
+        return response;
+    };
+
     this.GETDATA_CHEMICAL = function (IDA) {
         var response = $http({
             method: "post",

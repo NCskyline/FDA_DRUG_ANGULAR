@@ -2138,10 +2138,10 @@
         <elementListCompartment Id="4c8b35a3-d0dc-4f6f-9887-afc8ee87b234" absoluteBounds="0.51499999999999968, 22.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="bf3e5d6e-4187-46ab-86e3-9fa5492d9b76" isExpanded="false" absoluteBounds="0.5, 49.125, 2, 0.45">
+    <classShape Id="ec8d4559-03db-4498-b27f-58f67e8f6b1f" isExpanded="false" absoluteBounds="0.5, 49.125, 2, 0.45">
       <DataClassMoniker Name="/Linq_DRUGDataContext/DR_RECLASS" />
       <nestedChildShapes>
-        <elementListCompartment Id="0052ca05-e6fc-4db5-92ab-d21eabd143b7" absoluteBounds="0.515, 49.585, 1.9700000000000002, 5.6338297526041661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="0bf5c00a-3ead-4311-ad73-5704b1cd6749" absoluteBounds="0.515, 49.585, 1.9700000000000002, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

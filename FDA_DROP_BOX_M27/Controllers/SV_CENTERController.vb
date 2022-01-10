@@ -373,7 +373,13 @@ Namespace Controllers
             Dim clsds As New ClassDataset
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
         End Function
-
+        Function SP_SEARCH_REGISTER_BY_TXT_AND_IDENTIFY(ByVal txt As String, ByVal identify As String) As JsonResult
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_SEARCH_REGISTER_BY_TXT_AND_IDENTIFY(txt, identify)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+        End Function
         Function SP_SYSLCNSNM_BY_LCNSID_AND_IDENTIFY(ByVal identify As String, ByVal LCNSID As String)
             Dim dt As New DataTable
             Dim bao As New BAO
@@ -2862,7 +2868,12 @@ Namespace Controllers
 
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
+        Function SETMODEL_RECLASS() As JsonResult
 
+            Dim MODEL As New MODEL_DR
+
+            Return Json(MODEL, JsonRequestBehavior.AllowGet)
+        End Function
         Function SETMODEL_EDIT_LCN() As JsonResult
 
             Dim MODEL As New MODEL_STAFF_EDIT_LCN

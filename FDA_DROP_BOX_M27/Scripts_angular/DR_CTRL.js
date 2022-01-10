@@ -6,6 +6,14 @@
     var CITIZEN = CITIZEN_ID_AUTHORIZE;
     var PROCESS_ID = QueryString("PROCESS");
 
+    $scope.RECLASS_REGISTER = [];
+    //$scope.currentPage = 0;
+    //$scope.paging = {
+    //    total: 10,
+    //    current: 1,
+    //    onPageChanged: loadPages
+    //};
+
     pageload();
 
     function dropdown() {
@@ -13,6 +21,8 @@
             $('select').selectpicker('refresh');
         });
     }
+
+
 
     function pageload() {
 
@@ -122,6 +132,9 @@
             $scope.DATA_RECLASS = datas.data;
         }, function () { });
 
+        
+       
+
 
         //var id = '@Html.IdFor( o => o.model )';
         //var dropdown = $("#" + id);
@@ -143,6 +156,54 @@
            
         //}, function () { });
     }
+
+    $scope.pageload_reclass = function () {
+
+        //set model data reclass
+        var data = CENTER_SV.SETMODEL_RECLASS();
+        data.then(function (datas) {
+            $scope.LIST_DRRC = datas.data;
+
+        }, function () { });
+
+        var data_RC = CENTER_SV.SP_GET_READ_DATA_RECLASS_BY_NEWCODE(sessionStorage.NEWCODE);
+        data_RC.then(function (datas) {
+            $scope.LIST_READ_RC = datas.data[0];
+        }, function () { });
+
+        
+
+    };
+
+    $scope.BTN_SEARCH_REGIST = function (txt) {
+
+        var GetdataCHEM = CENTER_SV.SP_SEARCH_REGISTER_BY_TXT_AND_IDENTIFY(txt, sessionStorage.CITIZEN_ID_AUTHORIZE);
+            GetdataCHEM.then(function (datas) {
+                $scope.LIST_REGIST_S = datas.data;
+
+            }, function () { });
+        };
+
+    $scope.BTN_ADD_REGISTER = function (datas) {
+
+        var obj = {
+
+            IDA: Int32Array,
+            REGISTER: datas.REGISTER,
+            RID: datas.IDA,
+            DRUNG_NAME: datas.DRUG_NAME,
+            FK_IDA: Int32Array,
+            NEWCODE_U: datas.NEWCODE_U
+
+        };
+        $scope.RECLASS_REGISTER.push(obj);
+    };
+
+    $scope.deleteRegist = function (data, i) {
+        $scope.RECLASS_REGISTER.splice(i, 1);
+    };
+
+
 
     $scope.BTN_MENU = function (process) {
 
@@ -199,6 +260,7 @@
     };
     
     $scope.BTN_INPUT_RECLASS = function () {
+
         REDIRECT('/DR/INPUT_RECLASS');
     };
     

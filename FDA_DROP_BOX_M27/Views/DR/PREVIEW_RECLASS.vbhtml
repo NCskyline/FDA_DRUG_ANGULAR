@@ -2,9 +2,9 @@
     ViewData("Title") = "PREVIEW_RECLASS"
 End Code
 
-<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
+@*<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
-<script src="~/Scripts_angular/DR_CTRL.js"></script>
+<script src="~/Scripts_angular/DR_CTRL.js"></script>*@
 
 <div ng-app="ANGULAR_APP" ng-controller="DR_CTRL">
     <div class="ic" style="font-family:'Taviraj';">
@@ -49,9 +49,9 @@ End Code
                     <td style="border-bottom:dotted;border-bottom-width:thin">
 
                         @*<md-datepicker ng-model="LIST_DRRC.DR_RECLASS.WRITE_DATE" md-placeholder="Enter date"
-                                           input-aria-describedby="datepicker-description"
-                                           input-aria-labelledby="datepicker-header ">
-                            </md-datepicker>*@
+                                   input-aria-describedby="datepicker-description"
+                                   input-aria-labelledby="datepicker-header ">
+                    </md-datepicker>*@
                         {{LIST_DRRC.DR_RECLASS.WRITE_DATE}}
                     </td>
                 </tr>
@@ -64,7 +64,7 @@ End Code
                         ข้าพเจ้า
                     </td>
                     <td style="text-align:center;border-bottom:dotted;border-bottom-width:thin;">
-                        <label>{{LIST_LCN.thanm}}</label>
+                        <label>{{LIST_READ_RC.thanm}}</label>
                     </td>
                 </tr>
                 <tr>
@@ -81,21 +81,21 @@ End Code
                         ซึ่งมีผู้ดำเนินกิจการ ชื่อ
                     </td>
                     <td style="text-align:left;width:2000px;border-bottom:dotted;border-bottom-width:thin;">
-                        <label>{{LIST_LCN.BSN_THAIFULLNAME}}</label>
+                        <label>{{LIST_READ_RC.BSN_THAIFULLNAME}}</label>
                     </td>
                 </tr>
                 <tr>
                     <td style="width:2%"></td>
-                    <td style="width:98%" colspan="2">ได้รับอนุญาตให้<span style="padding-left:30px;"><input type="radio" disabled /></span>&nbsp; ผลิตยาแผนปัจจุบัน<span style="padding-left: 15px;"><input type="radio" disabled /></span>&nbsp; นำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร</td>
+                    <td style="width:98%" colspan="2">ได้รับอนุญาตให้<span style="padding-left:30px;"><input type="radio" ng-model="LIST_READ_RC.PRODUCER_TYPE" disabled /></span>&nbsp; ผลิตยาแผนปัจจุบัน<span style="padding-left: 15px;"><input type="radio" ng-model="LIST_READ_RC.IMPORT_TYPE" disabled /></span>&nbsp; นำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร</td>
                 </tr>
             </table>
             <table style="width:100%">
                 <tr>
                     <td style="width:2%"></td>
                     <td style="width:10%">ตามใบอนุญาตเลขที่</td>
-                    <td width="30%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
+                    <td width="30%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin;">{{LIST_READ_RC.lcnno_no}}</td>
                     <td style="width:10%">มีสถานที่ประกอบธุรกิจชื่อ</td>
-                    <td width="48%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
+                    <td width="48%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin;">{{LIST_READ_RC.location_name}}</td>
                 </tr>
             </table>
             <table style="width:100%">
@@ -105,7 +105,7 @@ End Code
                         อยู่เลขที่
                     </td>
                     <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;" colspan="3">
-                        {{LIST_LCN.BSN_FULL_ADDR}}
+                        {{LIST_READ_RC.thanm_addr}}
                     </td>
 
                 </tr>
@@ -115,7 +115,7 @@ End Code
                         โทรศัพท์
                     </td>
                     <td style="text-align:left;border-bottom:dotted;border-bottom-width:thin;">
-                        {{LIST_LCN.BSN_TELEPHONE}}
+                        {{LIST_READ_RC.tel}}
                     </td>
                 </tr>
 
@@ -124,9 +124,9 @@ End Code
                 <tr>
                     <td style="width:2%"></td>
                     <td style="width:15%">มีความประสงค์ขอเปลี่ยนประเภทยา ชื่อ</td>
-                    <td width="40%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
+                    <td width="40%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin;">{{LIST_READ_RC.DRUG_NAME}}</td>
                     <td style="width:5%">เลขทะเบียนที่</td>
-                    <td width="38%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin;"></td>
+                    <td width="38%" style="text-align:center;border-bottom:dotted;border-bottom-width:thin;">{{LIST_READ_RC.register}}</td>
                 </tr>
             </table>
             <table style="width:100%">
@@ -137,15 +137,12 @@ End Code
                         <form name="rdl_class">
 
 
-                            <label><input type="radio" ng-model="CHK1" id="Rdl_old_type" value="1" disabled> ยาควบคุมพิเศษ</label>
-                            <label><input type="radio" ng-model="CHK1" id="Rdl_old_type" value="2" disabled> ยาอันตราย</label>
-                            <label><input type="radio" ng-model="CHK1" id="Rdl_old_type" value="3" disabled> ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</label>
-                            <label><input type="radio" ng-model="CHK1" id="Rdl_old_type" value="4" disabled> ยาสามัญประจำบ้าน</label>
+                            <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="1" disabled> ยาควบคุมพิเศษ</label>
+                            <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="2" disabled> ยาอันตราย</label>
+                            <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="3" disabled> ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</label>
+                            <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="4" disabled> ยาสามัญประจำบ้าน</label>
                         </form>
                     </td>
-                    @*<td style="width:20%"><input type="checkbox" />&nbsp; ยาควบคุมพิเศษ</td>
-                        <td style="width:13%"><input type="checkbox" />&nbsp; ยาอันตราย</td>
-                        <td style="width:42%"><input type="checkbox" />&nbsp; ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</td>*@
                 </tr>
             </table>
             <table style="width:100%">
@@ -154,10 +151,10 @@ End Code
                     <td style="width:23%"> เป็น</td>
                     <td>
                         <form name="rdl_class">
-                            <label><input type="radio" ng-model="CHK2" id="Rdl_old_type" value="1"> ยาควบคุมพิเศษ</label>
-                            <label><input type="radio" ng-model="CHK2" id="Rdl_old_type" value="2"> ยาอันตราย</label>
-                            <label><input type="radio" ng-model="CHK2" id="Rdl_old_type" value="3"> ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</label>
-                            <label><input type="radio" ng-model="CHK2" id="Rdl_old_type" value="4"> ยาสามัญประจำบ้าน</label>
+                            <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_new_type" value="1"> ยาควบคุมพิเศษ</label>
+                            <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_new_type" value="2"> ยาอันตราย</label>
+                            <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_new_type" value="3"> ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</label>
+                            <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_new_type" value="4"> ยาสามัญประจำบ้าน</label>
                         </form>
                     </td>
                 </tr>
@@ -166,17 +163,17 @@ End Code
             <p><span style="padding-left: 55px;">ข้าพเจ้าได้แนบเอกสาร หรือหลักฐาน ตามที่สำนักงานคณะกรรมการอาหารและยา ประกาศกำหนดไว้ในแนวทางการจัดเตรียมเอกสารประกอบการขอเปลี่ยนประเภทยาแผนปัจจุบันสำหรับมนุษย์</span></p>
             <table style="width:100%">
                 @*<tr>
-                        <td style="width:8%"></td>
-                        <td style="width:92%"><input type="checkbox" />&nbsp; แบบตรวจสอบการยื่นเอกสาร พร้อมเอกสารและหลักฐานประกอบการขอเปลี่ยนประเภทยาแผนปัจจุบันสำหรับมนุษย์ ลงนามยืนยันความถูกต้อง ครบถ้วนของเอกสาร</td>
-                    </tr>
-                    <tr>
-                        <td style="width:8%"></td>
-                        <td style="width:92%"><input type="checkbox" />&nbsp; สำเนาใบอนุญาต กรณีผู้ยื่นคำขอเป็นผู้รับอนุญาต</td>
-                    </tr>
-                    <tr>
-                        <td style="width:8%"></td>
-                        <td style="width:92%"><input type="checkbox" />&nbsp; หนังสือมอบอำนาจ ที่ระบุอำนาจให้ยื่นคำขอรวมถึงเอกสาร หลักฐาน แก้ไขเพิ่มเติม รับทราบ ติดตามผลการพิจารณา และยกเลิกคำขอพร้อมรับคำขอและเอกสาร หลักฐานคืน สำเนาบัตรประชาชนผู้มอบและผู้รับมอบอำนาจ พร้อมติดอากรแสตมป์ 30 บาท (กรณีมอบอำนาจมาเพื่อดำเนินการ)</td>
-                    </tr>*@
+                <td style="width:8%"></td>
+                <td style="width:92%"><input type="checkbox" />&nbsp; แบบตรวจสอบการยื่นเอกสาร พร้อมเอกสารและหลักฐานประกอบการขอเปลี่ยนประเภทยาแผนปัจจุบันสำหรับมนุษย์ ลงนามยืนยันความถูกต้อง ครบถ้วนของเอกสาร</td>
+            </tr>
+            <tr>
+                <td style="width:8%"></td>
+                <td style="width:92%"><input type="checkbox" />&nbsp; สำเนาใบอนุญาต กรณีผู้ยื่นคำขอเป็นผู้รับอนุญาต</td>
+            </tr>
+            <tr>
+                <td style="width:8%"></td>
+                <td style="width:92%"><input type="checkbox" />&nbsp; หนังสือมอบอำนาจ ที่ระบุอำนาจให้ยื่นคำขอรวมถึงเอกสาร หลักฐาน แก้ไขเพิ่มเติม รับทราบ ติดตามผลการพิจารณา และยกเลิกคำขอพร้อมรับคำขอและเอกสาร หลักฐานคืน สำเนาบัตรประชาชนผู้มอบและผู้รับมอบอำนาจ พร้อมติดอากรแสตมป์ 30 บาท (กรณีมอบอำนาจมาเพื่อดำเนินการ)</td>
+            </tr>*@
                 <tr>
                     <td style="width:2%"></td>
                     <td>

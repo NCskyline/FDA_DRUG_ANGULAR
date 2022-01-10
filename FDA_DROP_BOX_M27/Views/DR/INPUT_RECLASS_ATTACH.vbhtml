@@ -40,8 +40,27 @@
     <table style="width:100%" border="1">
         <tr>
             <td rowspan="2">
-                ชื่อยา<br />
-                เลขทะเบียน
+                <table>
+                    <tr>
+                        <td>
+                            ชื่อยา
+                        </td>
+                        <td>
+                            
+                            {{LIST_READ_RC.DRUG_NAME}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            เลขทะเบียน
+                        </td>
+                        <td>
+                            {{LIST_READ_RC.RGTNO_DISPLAY}}
+                        </td>
+                    </tr>
+                </table>
+      
+                
             </td>
             <td style="width:40%">
                 เลขที่รับ<br />

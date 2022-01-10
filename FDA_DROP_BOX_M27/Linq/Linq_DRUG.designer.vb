@@ -138977,6 +138977,8 @@ Partial Public Class DR_RECLASS
 	
 	Private _TEL As String
 	
+	Private _NEWCODE_U As String
+	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
     End Sub
@@ -139095,6 +139097,10 @@ Partial Public Class DR_RECLASS
     Partial Private Sub OnTELChanging(value As String)
     End Sub
     Partial Private Sub OnTELChanged()
+    End Sub
+    Partial Private Sub OnNEWCODE_UChanging(value As String)
+    End Sub
+    Partial Private Sub OnNEWCODE_UChanged()
     End Sub
     #End Region
 	
@@ -139548,6 +139554,22 @@ Partial Public Class DR_RECLASS
 				Me._TEL = value
 				Me.SendPropertyChanged("TEL")
 				Me.OnTELChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NEWCODE_U", DbType:="NVarChar(MAX)")>  _
+	Public Property NEWCODE_U() As String
+		Get
+			Return Me._NEWCODE_U
+		End Get
+		Set
+			If (String.Equals(Me._NEWCODE_U, value) = false) Then
+				Me.OnNEWCODE_UChanging(value)
+				Me.SendPropertyChanging
+				Me._NEWCODE_U = value
+				Me.SendPropertyChanged("NEWCODE_U")
+				Me.OnNEWCODE_UChanged
 			End If
 		End Set
 	End Property
