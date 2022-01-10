@@ -26,55 +26,75 @@ End Code
                 <h3>ข้อมูลทั่วไป</h3>
             </div>
             <br />
-            <table class="table" width="100%">
+            <table class="table" width="100%" style="font-size:20px">
                 <tr>
                     <td width="30%">เขียนที่ :</td>
-                    <td width="70%"></td>
+                    <td width="70%">
+                        <label></label>
+                    </td>
                 </tr>
                 <tr>
                     <td>วันที่ :</td>
-                    <td></td>
+                    <td>
+                        <label></label>
+                    </td>
                 </tr>
                 <tr>
                     <td>บัญชีรายการยา :</td>
-                    <td></td>
+                    <td>
+                        <label></label>
+                    </td>
                 </tr>
             </table>
+            <br />
             <div align="center">
                 <h3>ข้อมูลใบอนุญาต</h3>
             </div>
             <br />
-            <table class="table" width="100%">
+            <table class="table" width="100%" style="font-size:20px">
                 <tr>
                     <td width="30%">ชื่อผู้รับอนุญาต :</td>
-                    <td width="70%"></td>
+                    <td width="70%">
+                        <label></label>
+                    </td>
                 </tr>
                 <tr>
                     <td>เลขที่ใบอนุญาต :</td>
-                    <td></td>
+                    <td>
+                        <label></label>
+                    </td>
                 </tr>
                 <tr>
                     <td>สถานที่ผลิต/นำสั่ง :</td>
-                    <td></td>
+                    <td>
+                        <label></label>
+                    </td>
                 </tr>
                 <tr>
                     <td>ชื่อผู้ดำเนินกิจการ :</td>
-                    <td></td>
+                    <td>
+                        <label></label>
+                    </td>
                 </tr>
                 <tr>
                     <td>ที่อยู่ :</td>
-                    <td></td>
+                    <td>
+                        <label></label>
+                    </td>
                 </tr>
                 <tr>
                     <td>ผู้มีหน้าที่ปฏิบัติการ :</td>
-                    <td></td>
+                    <td>
+                        <label></label>
+                    </td>
                 </tr>
             </table>
+            <br />
             <div align="center">
                 <h3>ข้อมูลผลิตภัณฑ์ยา</h3>
             </div>
             <br />
-            <table class="table" width="100%">
+            <table class="table" width="100%" style="font-size:20px">
                 <tr>
                     <td width="30%">ชื่อยา :</td>
                     <td width="70%"></td>

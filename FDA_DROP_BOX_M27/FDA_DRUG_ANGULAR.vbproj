@@ -21,7 +21,8 @@
     <OptionInfer>On</OptionInfer>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -178,6 +179,7 @@
     <Compile Include="CLASS\MODEL\MODEL_DL.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DR.vb" />
     <Compile Include="CLASS\MODEL\MODEL_DS.vb" />
+    <Compile Include="CLASS\MODEL\MODEL_LOCATIONS.vb" />
     <Compile Include="CLASS\MODEL\MODEL_STAFF_EDIT_LCN.vb" />
     <Compile Include="CLASS\MODEL\MODEL_LCN.vb" />
     <Compile Include="CLASS\MODEL\MODEL_RESULT.vb" />
