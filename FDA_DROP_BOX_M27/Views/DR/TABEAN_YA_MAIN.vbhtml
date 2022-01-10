@@ -44,7 +44,7 @@ End Code
   border-top: none;
 }
 </style>
-<div @*ng-app="ANGULAR_APP" ng-controller="DR_CTRL"*@> 
+<div ng-app="ANGULAR_APP" ng-controller="DR_CTRL"> 
     <div class="ic" style="font-family:'Taviraj'">
         <div>
             <h1>ข้อมูล</h1>

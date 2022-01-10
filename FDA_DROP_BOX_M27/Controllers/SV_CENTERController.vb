@@ -2835,6 +2835,18 @@ Namespace Controllers
             Return Json(dao.fields, JsonRequestBehavior.AllowGet)
         End Function
 
+        Function GETEX_DRUG(ByVal IDA As String) As JsonResult
+            Dim model As New MODEL_LOCATIONS
+            Dim dao As New DAO_DRUG.TB_DALCN_LOCATION_ADDRESS
+            dao.GetDataby_IDA(IDA)
+            Try
+
+            Catch ex As Exception
+
+            End Try
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
+        End Function
 #End Region
 
 #Region "MODEL DATA"

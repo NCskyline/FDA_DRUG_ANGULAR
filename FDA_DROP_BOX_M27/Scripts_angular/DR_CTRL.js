@@ -116,7 +116,6 @@
             $scope.DATA_RGT = datas.data;
         }, function () { });
 
-        
         var data4 = CENTER_SV.SP_RECLASS_BY_NEWCODE(sessionStorage.NEWCODE);
         data4.then(function (datas) {
             $scope.DATA_RECLASS = datas.data;
@@ -179,7 +178,6 @@
         REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
 
     };
-
 
     $scope.BTN_DL = function (process) {
         sessionStorage.PROCESS = process;
