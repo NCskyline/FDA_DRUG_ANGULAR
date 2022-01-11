@@ -2131,6 +2131,12 @@ Partial Public Class Linq_DRUGDataContext
     End Sub
   Partial Private Sub DeleteDR_RECLASS(instance As DR_RECLASS)
     End Sub
+  Partial Private Sub InsertDR_RECLASS_REGIST_DETAIL(instance As DR_RECLASS_REGIST_DETAIL)
+    End Sub
+  Partial Private Sub UpdateDR_RECLASS_REGIST_DETAIL(instance As DR_RECLASS_REGIST_DETAIL)
+    End Sub
+  Partial Private Sub DeleteDR_RECLASS_REGIST_DETAIL(instance As DR_RECLASS_REGIST_DETAIL)
+    End Sub
   #End Region
 	
 	Public Sub New()
@@ -4297,6 +4303,12 @@ Partial Public Class Linq_DRUGDataContext
 	Public ReadOnly Property DR_RECLASSes() As System.Data.Linq.Table(Of DR_RECLASS)
 		Get
 			Return Me.GetTable(Of DR_RECLASS)
+		End Get
+	End Property
+	
+	Public ReadOnly Property DR_RECLASS_REGIST_DETAILs() As System.Data.Linq.Table(Of DR_RECLASS_REGIST_DETAIL)
+		Get
+			Return Me.GetTable(Of DR_RECLASS_REGIST_DETAIL)
 		End Get
 	End Property
 End Class
@@ -139570,6 +139582,178 @@ Partial Public Class DR_RECLASS
 				Me._NEWCODE_U = value
 				Me.SendPropertyChanged("NEWCODE_U")
 				Me.OnNEWCODE_UChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.DR_RECLASS_REGIST_DETAIL")>  _
+Partial Public Class DR_RECLASS_REGIST_DETAIL
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _IDA As Integer
+	
+	Private _FK_IDA As System.Nullable(Of Integer)
+	
+	Private _REGISTER As String
+	
+	Private _DRUNG_NAME As String
+	
+	Private _NEWCODE_U As String
+	
+	Private _RID As System.Nullable(Of Integer)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnIDAChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnIDAChanged()
+    End Sub
+    Partial Private Sub OnFK_IDAChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnFK_IDAChanged()
+    End Sub
+    Partial Private Sub OnREGISTERChanging(value As String)
+    End Sub
+    Partial Private Sub OnREGISTERChanged()
+    End Sub
+    Partial Private Sub OnDRUNG_NAMEChanging(value As String)
+    End Sub
+    Partial Private Sub OnDRUNG_NAMEChanged()
+    End Sub
+    Partial Private Sub OnNEWCODE_UChanging(value As String)
+    End Sub
+    Partial Private Sub OnNEWCODE_UChanged()
+    End Sub
+    Partial Private Sub OnRIDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnRIDChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDA", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property IDA() As Integer
+		Get
+			Return Me._IDA
+		End Get
+		Set
+			If ((Me._IDA = value)  _
+						= false) Then
+				Me.OnIDAChanging(value)
+				Me.SendPropertyChanging
+				Me._IDA = value
+				Me.SendPropertyChanged("IDA")
+				Me.OnIDAChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FK_IDA", DbType:="Int")>  _
+	Public Property FK_IDA() As System.Nullable(Of Integer)
+		Get
+			Return Me._FK_IDA
+		End Get
+		Set
+			If (Me._FK_IDA.Equals(value) = false) Then
+				Me.OnFK_IDAChanging(value)
+				Me.SendPropertyChanging
+				Me._FK_IDA = value
+				Me.SendPropertyChanged("FK_IDA")
+				Me.OnFK_IDAChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_REGISTER", DbType:="NVarChar(MAX)")>  _
+	Public Property REGISTER() As String
+		Get
+			Return Me._REGISTER
+		End Get
+		Set
+			If (String.Equals(Me._REGISTER, value) = false) Then
+				Me.OnREGISTERChanging(value)
+				Me.SendPropertyChanging
+				Me._REGISTER = value
+				Me.SendPropertyChanged("REGISTER")
+				Me.OnREGISTERChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DRUNG_NAME", DbType:="NVarChar(MAX)")>  _
+	Public Property DRUNG_NAME() As String
+		Get
+			Return Me._DRUNG_NAME
+		End Get
+		Set
+			If (String.Equals(Me._DRUNG_NAME, value) = false) Then
+				Me.OnDRUNG_NAMEChanging(value)
+				Me.SendPropertyChanging
+				Me._DRUNG_NAME = value
+				Me.SendPropertyChanged("DRUNG_NAME")
+				Me.OnDRUNG_NAMEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NEWCODE_U", DbType:="NVarChar(MAX)")>  _
+	Public Property NEWCODE_U() As String
+		Get
+			Return Me._NEWCODE_U
+		End Get
+		Set
+			If (String.Equals(Me._NEWCODE_U, value) = false) Then
+				Me.OnNEWCODE_UChanging(value)
+				Me.SendPropertyChanging
+				Me._NEWCODE_U = value
+				Me.SendPropertyChanged("NEWCODE_U")
+				Me.OnNEWCODE_UChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_RID", DbType:="Int")>  _
+	Public Property RID() As System.Nullable(Of Integer)
+		Get
+			Return Me._RID
+		End Get
+		Set
+			If (Me._RID.Equals(value) = false) Then
+				Me.OnRIDChanging(value)
+				Me.SendPropertyChanging
+				Me._RID = value
+				Me.SendPropertyChanged("RID")
+				Me.OnRIDChanged
 			End If
 		End Set
 	End Property

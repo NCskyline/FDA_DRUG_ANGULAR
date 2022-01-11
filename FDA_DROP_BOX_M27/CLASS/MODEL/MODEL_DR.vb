@@ -9,6 +9,15 @@
         End Set
     End Property
 
+    Private _DR_RECLASS_REGIST_DETAIL As New List(Of DR_RECLASS_REGIST_DETAIL)
+    Public Property DR_RECLASS_REGIST_DETAIL() As List(Of DR_RECLASS_REGIST_DETAIL)
+        Get
+            Return _DR_RECLASS_REGIST_DETAIL
+        End Get
+        Set(ByVal value As List(Of DR_RECLASS_REGIST_DETAIL))
+            _DR_RECLASS_REGIST_DETAIL = value
+        End Set
+    End Property
 
     Private _IDA_BIO As String
     Public Property IDA_BIO() As String
