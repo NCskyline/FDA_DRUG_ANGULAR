@@ -2845,11 +2845,7 @@ Namespace Controllers
             Dim model As New MODEL_LOCATIONS
             Dim dao As New DAO_DRUG.TB_DALCN_LOCATION_ADDRESS
             dao.GetDataby_IDA(IDA)
-            Try
-
-            Catch ex As Exception
-
-            End Try
+            model.DALCN_LOCATION_ADDRESS = dao.fields
 
             Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
