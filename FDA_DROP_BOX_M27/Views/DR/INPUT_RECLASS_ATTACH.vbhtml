@@ -71,11 +71,23 @@
     <table style="width:100%" border="1">
         <tr>
             <td style="width:24%">ประเภทยาปัจจุบัน</td>
-            <td style="width:76%"><input type="checkbox" />&nbsp; ยาควบคุมพิเศษ &nbsp;<input type="checkbox" />&nbsp; ยาอันตราย &nbsp;<input type="checkbox" />&nbsp; ยาไม่อันตรายหรือควบคุมพิเศษ &nbsp;<input type="checkbox" />&nbsp; ยาสามัญประจำบ้าน</td>
+            <td style="width:76%"><form name="rdl_class">
+
+
+    <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="1" disabled> ยาควบคุมพิเศษ</label>
+    <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="2" disabled> ยาอันตราย</label>
+    <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="3" disabled> ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</label>
+    <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="4" disabled> ยาสามัญประจำบ้าน</label>
+</form></td>
         </tr>
         <tr>
             <td style="width:24%">ขอเปลี่ยนประเภทยาเป็น</td>
-            <td style="width:76%"><input type="checkbox" />&nbsp; ยาควบคุมพิเศษ &nbsp;<input type="checkbox" />&nbsp; ยาอันตราย &nbsp;<input type="checkbox" />&nbsp; ยาไม่อันตรายหรือควบคุมพิเศษ &nbsp;<input type="checkbox" />&nbsp; ยาสามัญประจำบ้าน</td>
+            <td style="width:76%"><form name="rdl_class">
+    <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_New_type" ng-value="1"> ยาควบคุมพิเศษ</label>
+    <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_New_type" ng-value="2"> ยาอันตราย</label>
+    <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_New_type" ng-value="3"> ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</label>
+    <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_New_type" ng-value="4"> ยาสามัญประจำบ้าน</label>
+</form></td>
         </tr>
     </table>
     <br /><br />

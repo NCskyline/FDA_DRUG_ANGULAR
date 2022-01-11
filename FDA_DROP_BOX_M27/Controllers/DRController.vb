@@ -1,5 +1,7 @@
 ﻿Imports System.Web.Mvc
-
+Imports System.Web.Script.Serialization
+Imports Newtonsoft.Json
+Imports Newtonsoft.Json.Linq
 Namespace Controllers
     Public Class DRController
         Inherits Controller
@@ -160,6 +162,24 @@ Namespace Controllers
 
 #Region "INSERT_DATA"
 
+        Function INSERT_RECLASS(ByVal XML As String, ByVal XML2 As String, ByVal CTZNO As String, ByVal CITIZEN_ID_AUTHORIZE As String, ByVal PROCESS_ID As String) As JsonResult
+            Dim obj = JsonConvert.DeserializeObject(XML)
+            Dim jss As New JavaScriptSerializer
+            Dim bb As MODEL_BOX = jss.Deserialize(XML, GetType(MODEL_DR))
+            Dim result As String = ""
+            Dim chk As Boolean = True
+            Dim TR_ID As String = ""
+
+            Dim bao_tran As New BAO
+            TR_ID = bao_tran.insert_transection_new(PROCESS_ID, CTZNO, CITIZEN_ID_AUTHORIZE)
+
+
+
+
+
+            Return Json(msg_r, JsonRequestBehavior.AllowGet)
+
+        End Function
 #End Region
 
 #Region "UPDATE_DATA"

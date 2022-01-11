@@ -89,8 +89,8 @@ End Code
                                 @*<input type="radio" ng-model="LIST_READ_RC.PRODUCER_TYPE" disabled />
                                     </span>&nbsp; ผลิตยาแผนปัจจุบัน<span style="padding-left: 15px;"><input type="radio" ng-model="LIST_READ_RC.IMPORT_TYPE" disabled /></span>
                                 &nbsp; นำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร</td>*@
-                                <label><input type="radio" ng-model="LIST_READ_RC.PRODUCER_TYPE" name="Rdl_lcn_type" value="1" disabled> ผลิตยาแผนปัจจุบัน</label>
-                                <label><input type="radio" ng-model="LIST_READ_RC.PRODUCER_TYPE" name="Rdl_lcn_type" value="2" disabled> นำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร</label>
+                                <label><input type="radio" ng-model="LIST_READ_RC.PRODUCER_TYPE_R" name="Rdl_lcn_type"  value="1" disabled> ผลิตยาแผนปัจจุบัน</label>
+                                <label><input type="radio" ng-model="LIST_READ_RC.PRODUCER_TYPE_R" name="Rdl_lcn_type" value="2" disabled> นำหรือสั่งยาแผนปัจจุบันเข้ามาในราชอาณาจักร</label>
                     </tr>
                 </table>
                 <table style="width:100%">
@@ -144,10 +144,10 @@ End Code
                             <form name="rdl_class">
 
 
-                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" ng-value="1" disabled> ยาควบคุมพิเศษ</label>
-                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" ng-value="2" disabled> ยาอันตราย</label>
-                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" ng-value="3" disabled> ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</label>
-                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" ng-value="4" disabled> ยาสามัญประจำบ้าน</label>
+                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="1" disabled> ยาควบคุมพิเศษ</label>
+                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="2" disabled> ยาอันตราย</label>
+                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="3" disabled> ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</label>
+                                <label><input type="radio" ng-model="LIST_READ_RC.thakindnm" id="Rdl_old_type" value="4" disabled> ยาสามัญประจำบ้าน</label>
                             </form>
                         </td>
                         @*<td style="width:20%"><input type="checkbox" />&nbsp; ยาควบคุมพิเศษ</td>
@@ -161,10 +161,10 @@ End Code
                         <td style="width:23%"> เป็น</td>
                         <td>
                             <form name="rdl_class">
-                                <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_old_type" value="1"> ยาควบคุมพิเศษ</label>
-                                <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_old_type" value="2"> ยาอันตราย</label>
-                                <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_old_type" value="3"> ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</label>
-                                <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_old_type" value="4"> ยาสามัญประจำบ้าน</label>
+                                <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_New_type" ng-value="1"> ยาควบคุมพิเศษ</label>
+                                <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_New_type" ng-value="2"> ยาอันตราย</label>
+                                <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_New_type" ng-value="3"> ยาที่ไม่ใช่ยาอันตรายหรือยาควบคุมพิเศษ</label>
+                                <label><input type="radio" ng-model="LIST_DRRC.DR_RECLASS.NEW_DOSESAGE" id="Rdl_New_type" ng-value="4"> ยาสามัญประจำบ้าน</label>
                             </form>
                         </td>
                     </tr>
@@ -188,9 +188,9 @@ End Code
                         <td style="width:2%"></td>
                         <td>
                             <form name="rdl_class">
-                                <label><input type="checkbox" ng-model="ATTACH" id="Rdl_old_type" value="1">  แบบตรวจสอบการยื่นเอกสาร พร้อมเอกสารและหลักฐานประกอบการขอเปลี่ยนประเภทยาแผนปัจจุบันสำหรับมนุษย์ ลงนามยืนยันความถูกต้อง ครบถ้วนของเอกสาร</label><br />
-                                <label><input type="checkbox" ng-model="ATTACH" id="Rdl_old_type" value="2">  สำเนาใบอนุญาต กรณีผู้ยื่นคำขอเป็นผู้รับอนุญาต</label><br />
-                                <label><input type="checkbox" ng-model="ATTACH" id="Rdl_old_type" value="3"> หนังสือมอบอำนาจ ที่ระบุอำนาจให้ยื่นคำขอรวมถึงเอกสาร หลักฐาน แก้ไขเพิ่มเติม รับทราบ ติดตามผลการพิจารณา และยกเลิกคำขอพร้อมรับคำขอและเอกสาร หลักฐานคืน สำเนาบัตรประชาชนผู้มอบและผู้รับมอบอำนาจ พร้อมติดอากรแสตมป์ 30 บาท (กรณีมอบอำนาจมาเพื่อดำเนินการ)</label>
+                                <label><input type="checkbox" ng-model="LIST_DRRC.DR_RECLASS.ATTACH1" id="cb_attcth1" value="1">  แบบตรวจสอบการยื่นเอกสาร พร้อมเอกสารและหลักฐานประกอบการขอเปลี่ยนประเภทยาแผนปัจจุบันสำหรับมนุษย์ ลงนามยืนยันความถูกต้อง ครบถ้วนของเอกสาร</label><br />
+                                <label><input type="checkbox" ng-model="LIST_DRRC.DR_RECLASS.ATTACH2" id="cb_attcth2" value="2">  สำเนาใบอนุญาต กรณีผู้ยื่นคำขอเป็นผู้รับอนุญาต</label><br />
+                                <label><input type="checkbox" ng-model="LIST_DRRC.DR_RECLASS.ATTACH3" id="cb_attcth3" value="3"> หนังสือมอบอำนาจ ที่ระบุอำนาจให้ยื่นคำขอรวมถึงเอกสาร หลักฐาน แก้ไขเพิ่มเติม รับทราบ ติดตามผลการพิจารณา และยกเลิกคำขอพร้อมรับคำขอและเอกสาร หลักฐานคืน สำเนาบัตรประชาชนผู้มอบและผู้รับมอบอำนาจ พร้อมติดอากรแสตมป์ 30 บาท (กรณีมอบอำนาจมาเพื่อดำเนินการ)</label>
 
                             </form>
                         </td>
@@ -307,7 +307,7 @@ End Code
                     </table>
                 </div>
             </div>
-
+            <br />
             <div ng-include="FILE_ATTACH">
 
             </div>
