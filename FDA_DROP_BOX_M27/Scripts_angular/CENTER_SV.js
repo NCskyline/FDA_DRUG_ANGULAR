@@ -1927,7 +1927,6 @@
         return response;
     };
 
-
     this.UPDATE_DATA_STAFF = function (TR_ID, STATUS_ID, REMARK) {
         var response = $http({
             method: "post",
@@ -2177,6 +2176,18 @@
             data: JSON.stringify(requestData)
         });
         return response; 
+    };
+
+    this.GETEX_DRUG = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SEV_CENTER/GETEX_DRUG"),
+            dataType: "json",
+            data: {
+                IDA: IDA
+            }
+        });
+        return response;
     };
 });
 
