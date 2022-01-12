@@ -131,9 +131,12 @@
             $scope.DATA_RECLASS = datas.data;
         }, function () { });
 
-        
-       
+        //var dataLo = CENTER_SV.SP_DALCN_EDIT_REQUEST_BY_FK_IDA(sessionStorage.LCN_IDA);
+        //dataLo.then(function (datas) {
+        //    $scope.DATA_EDIT_LCN_RQT = datas.data;
 
+
+        //}, function () { });
 
         //var id = '@Html.IdFor( o => o.model )';
         //var dropdown = $("#" + id);
@@ -172,6 +175,13 @@
 
         
 
+    };
+
+    $scope.getdetails = function (IDA) {
+        var data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
+        data_location.then(function (datas) {
+            $scope.LIST_LCN = datas.data;
+        }, function () { });
     };
 
     $scope.BTN_SEARCH_REGIST = function (txt) {

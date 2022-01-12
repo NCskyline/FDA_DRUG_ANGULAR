@@ -96,7 +96,7 @@ End Code
             <br />
             <div class="row">
                 <div class="col-sm-12" style="width:100%;">
-                    <div class="card" style=" border-top: 10px solid #F9D027;">
+                    <div class="card" style=" border-top: 10px solid #F9D027">
                         <table width="100%" style="font-family:'Taviraj'" class="table">
                             <thead style="font-weight:300;">
                                 <tr>
@@ -109,7 +109,7 @@ End Code
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                @*<tr>
                                     <td>DL-64-01257</td>
                                     <td>พาราทดสอบ</td>
                                     <td>640009999</td>
@@ -165,9 +165,10 @@ End Code
                                             ดูรายละเอียดที่ต้องแก้ไข
                                         </a>
                                     </td>
-                                </tr>
+                                </tr>*@
                                 <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
                                     <td>{{data.RCVNO_MANUAL}}</td>
+                                    <td></td>
                                     <td>{{data.LCNNO_MANUAL}}</td>
                                     <td>{{data.STATUS_NAME}}</td>
                                     <td>{{data.TRANSACTION_UPLOAD}}</td>

@@ -2143,7 +2143,7 @@
     this.GETEX_DRUG = function (IDA) {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/SEV_CENTER/GETEX_DRUG"),
+            url: SET_URL_SV("/SV_CENTER/GETEX_DRUG"),
             dataType: "json",
             data: {
                 IDA: IDA

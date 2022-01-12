@@ -2,12 +2,15 @@
     ViewData("Title") = "INPUT_DS_PORYOR8"
 End Code
 
-
-
 <script src="~/Scripts_angular/ANGULAR_APP.js"></script>
 <script src="~/Scripts_angular/CENTER_SV.js"></script>
 <script src="~/Scripts_angular/DR_CTRL.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('select').selectpicker('refresh');
+    })
+</script>
 
 <div ng-app="ANGULAR_APP" ng-controller="DR_CTRL">
     <div style="font-family:'Taviraj'">
@@ -79,13 +82,54 @@ End Code
                 <tr>
                     <td>ที่อยู่ :</td>
                     <td>
-                        <label></label>
+                        {{LIST_LCN.thaaddr}}
+                </tr>
+                <tr>
+                    <td>ซอย :</td>
+                    <td>
+                        {{LIST_LCN.thasoi}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>ถนน :</td>
+                    <td>
+                        {{LIST_LCN.tharoad}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>หมู่ :</td>
+                    <td>
+                        {{LIST_LCN.thamu}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>ตำบล :</td>
+                    <td>
+                        {{LIST_LCN.thathmblnm}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>อำเภอ :</td>
+                    <td>
+                        {{LIST_LCN.thaamphrnm}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>จังหวัด :</td>
+                    <td>
+                        {{LIST_LCN.thachngwtnm}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>โทรศัพท์ :</td>
+                    <td>
+                        {{LIST_LCN.tel}}
                     </td>
                 </tr>
                 <tr>
                     <td>ผู้มีหน้าที่ปฏิบัติการ :</td>
                     <td>
-                        <label></label>
+                        {{}}
                     </td>
                 </tr>
             </table>
@@ -105,21 +149,21 @@ End Code
                 </tr>
             </table>
             <br />
-            <table class="table" width="100%" border="1">
+            <table class="table" width="100%" border="1" style="font-size:20px">
                 <tr>
-                    <td>ลำดับ</td>
-                    <td>ตัวยาสำคัญ</td>
-                    <td>ปริมาณ</td>
-                    <td>หน่วย</td>
+                    <td width="10%" style="text-align:center">ลำดับ</td>
+                    <td style="text-align:center">ตัวยาสำคัญ</td>
+                    <td style="text-align:center">ปริมาณ</td>
+                    <td style="text-align:center">หน่วย</td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td style="text-align:center"></td>
                     <td></td>
                     <td></td>
                     <td></td>
                 </tr>
             </table>
-            <table class="table">
+            <table class="table" style="font-size:20px">
                 <tr>
                     <td width="15%">หน่วยนับตามรูปแบบยา :</td>
                     <td width="30%"></td>
@@ -141,18 +185,18 @@ End Code
                         <input type="button" class="form-control" value="บันทึก" />
                     </td>
                     <td>
-                        <input type="button" class="form-control" value="เพิ่ม/ลบ ขนาดบรรจุ" />
+                        <input type="button" class="form-control" value="เพิ่ม/ลบ ขนาดบรรจุ" @*ng-click="ADD_PACKAGE()"*@ />
                     </td>
                 </tr>
             </table>
             <br />
-            <div align="center">
+            <div align="center" style="font-size:20px">     
                 <table class="table" width="70%" border="1">
                     <tr>
-                        <td>ชื่อขนาดบรรจุ</td>
-                        <td>จำนวนปริมาณนำสั่ง / ผลิต</td>
-                        <td>หน่วย</td>
-                        <td></td>
+                        <td style="text-align:center">ชื่อขนาดบรรจุ</td>
+                        <td style="text-align:center">จำนวนปริมาณนำสั่ง / ผลิต</td>
+                        <td style="text-align:center">หน่วย</td>
+                        <td style="text-align:center"></td>
                     </tr>
                     <tr>
                         <td></td>
