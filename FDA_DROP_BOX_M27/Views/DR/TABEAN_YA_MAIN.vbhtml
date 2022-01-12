@@ -168,7 +168,6 @@ End Code
                                 </tr>*@
                                 <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
                                     <td>{{data.RCVNO_MANUAL}}</td>
-                                    <td></td>
                                     <td>{{data.LCNNO_MANUAL}}</td>
                                     <td>{{data.STATUS_NAME}}</td>
                                     <td>{{data.TRANSACTION_UPLOAD}}</td>
