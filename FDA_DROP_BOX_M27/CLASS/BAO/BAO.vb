@@ -199,6 +199,21 @@ Public Class BAO
 
         Return dt
     End Function
+
+    Public Function SP_GET_DATA_RECLASS_BY_IDA(ByVal IDA As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim dt As New DataTable
+        Dim sql As String = "exec SP_GET_DATA_RECLASS_BY_IDA @IDA=" & IDA
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+            dt.TableName = "SP_GET_DATA_RECLASS_BY_IDA"
+        Catch ex As Exception
+
+        End Try
+
+        Return dt
+    End Function
+
     Public Function SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID(ByVal FK_IDA As Integer, ByVal process As Integer) As DataTable
         Dim clsds As New ClassDataset
         Dim dt As New DataTable

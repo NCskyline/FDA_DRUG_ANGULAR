@@ -20,6 +20,10 @@ function REDIRECT(urls) {
     window.location = full_url;
 }
 
+function parseJsonDate_edit(jsonDateString) {
+    return new Date(parseInt(jsonDateString.replace('/Date(', '')));
+}
+
 
 function SET_URL_SV(url) {
     var host = '';

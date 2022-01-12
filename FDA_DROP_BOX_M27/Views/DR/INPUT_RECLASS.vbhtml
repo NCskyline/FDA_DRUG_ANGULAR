@@ -188,9 +188,9 @@ End Code
                         <td style="width:2%"></td>
                         <td>
                             <form name="rdl_class">
-                                <label><input type="checkbox" ng-model="LIST_DRRC.DR_RECLASS.ATTACH1" id="cb_attcth1" value="1">  แบบตรวจสอบการยื่นเอกสาร พร้อมเอกสารและหลักฐานประกอบการขอเปลี่ยนประเภทยาแผนปัจจุบันสำหรับมนุษย์ ลงนามยืนยันความถูกต้อง ครบถ้วนของเอกสาร</label><br />
-                                <label><input type="checkbox" ng-model="LIST_DRRC.DR_RECLASS.ATTACH2" id="cb_attcth2" value="2">  สำเนาใบอนุญาต กรณีผู้ยื่นคำขอเป็นผู้รับอนุญาต</label><br />
-                                <label><input type="checkbox" ng-model="LIST_DRRC.DR_RECLASS.ATTACH3" id="cb_attcth3" value="3"> หนังสือมอบอำนาจ ที่ระบุอำนาจให้ยื่นคำขอรวมถึงเอกสาร หลักฐาน แก้ไขเพิ่มเติม รับทราบ ติดตามผลการพิจารณา และยกเลิกคำขอพร้อมรับคำขอและเอกสาร หลักฐานคืน สำเนาบัตรประชาชนผู้มอบและผู้รับมอบอำนาจ พร้อมติดอากรแสตมป์ 30 บาท (กรณีมอบอำนาจมาเพื่อดำเนินการ)</label>
+                                <label><input type="checkbox" ng-model="LIST_DRRC.DR_RECLASS.ATTACH1" id="cb_attcth1" ng-true-value="1" ng-false-value="0">  แบบตรวจสอบการยื่นเอกสาร พร้อมเอกสารและหลักฐานประกอบการขอเปลี่ยนประเภทยาแผนปัจจุบันสำหรับมนุษย์ ลงนามยืนยันความถูกต้อง ครบถ้วนของเอกสาร</label><br />
+                                <label><input type="checkbox" ng-model="LIST_DRRC.DR_RECLASS.ATTACH2" id="cb_attcth2" ng-true-value="1" ng-false-value="0">  สำเนาใบอนุญาต กรณีผู้ยื่นคำขอเป็นผู้รับอนุญาต</label><br />
+                                <label><input type="checkbox" ng-model="LIST_DRRC.DR_RECLASS.ATTACH3" id="cb_attcth3" ng-true-value="1" ng-false-value="0"> หนังสือมอบอำนาจ ที่ระบุอำนาจให้ยื่นคำขอรวมถึงเอกสาร หลักฐาน แก้ไขเพิ่มเติม รับทราบ ติดตามผลการพิจารณา และยกเลิกคำขอพร้อมรับคำขอและเอกสาร หลักฐานคืน สำเนาบัตรประชาชนผู้มอบและผู้รับมอบอำนาจ พร้อมติดอากรแสตมป์ 30 บาท (กรณีมอบอำนาจมาเพื่อดำเนินการ)</label>
 
                             </form>
                         </td>
@@ -290,7 +290,7 @@ End Code
                         <tbody>
                             <tr ng-repeat="datas in RECLASS_REGISTER">
                                 <td>{{$index + 1}}</td>
-                                <td>{{datas.DRUNG_NAME}}</td>
+                                <td>{{datas.DRUG_NAME}}</td>
                                 <td>{{datas.REGISTER}}</td>
                                 <td>{{datas.NEWCODE_U}}</td>
                                 <td>

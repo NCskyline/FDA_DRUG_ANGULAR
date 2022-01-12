@@ -639,8 +639,17 @@
         return response;
     };
 
-
-
+    
+    this.SP_GET_DATA_RECLASS_BY_IDA = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/DR_CENTER/SP_GET_DATA_RECLASS_BY_IDA"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
     this.INSERT_DH = function (data , datachem, ProcessID) {
         var response = $http({
             method: "post",
@@ -655,8 +664,20 @@
         return response;
     };
 
-
-
+    
+    this.SEND_RQT_RECLASS = function (IDA, EMAIL, TEL, CITIZEN_ID) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/DR_CENTER/SEND_RQT_RECLASS"),
+            params: {
+                IDA: IDA,
+                EMAIL: EMAIL,
+                TEL: TEL,
+                CITIZEN_ID: CITIZEN_ID
+            }
+        });
+        return response;
+    };
     this.INSERT_CERT_GMP = function (aa,bb,ProcessID) {
         var response = $http({
             method: "post",
@@ -671,7 +692,24 @@
         return response;
     };
 
-    
+    this.INSERT_RECLASS = function (aa, bb, CITIZEN_ID_AUTHORIZE, NEWCODE, PROCESS_ID, CTZNO) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/DR_CENTER/INSERT_RECLASS"),
+            dataType: "json",
+            data: {
+                XML: JSON.stringify(aa),
+                XML2: JSON.stringify(bb),
+                CITIZEN_ID_AUTHORIZE: CITIZEN_ID_AUTHORIZE,
+                NEWCODE_U: NEWCODE,
+                CTZNO: CTZNO,
+                PROCESS_ID
+            }
+        });
+        return response;
+    };
+
+
     this.INSERT_LCN_EDIT_RQT = function (aa, ProcessID) {
         var response = $http({
             method: "post",

@@ -6975,7 +6975,7 @@
       <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="FK_IDA" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="REGISTER" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="DRUNG_NAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DRUG_NAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="NEWCODE_U" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="RID" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
