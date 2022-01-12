@@ -139617,7 +139617,7 @@ Partial Public Class DR_RECLASS_REGIST_DETAIL
 	
 	Private _REGISTER As String
 	
-	Private _DRUNG_NAME As String
+	Private _DRUG_NAME As String
 	
 	Private _NEWCODE_U As String
 	
@@ -139642,9 +139642,9 @@ Partial Public Class DR_RECLASS_REGIST_DETAIL
     End Sub
     Partial Private Sub OnREGISTERChanged()
     End Sub
-    Partial Private Sub OnDRUNG_NAMEChanging(value As String)
+    Partial Private Sub OnDRUG_NAMEChanging(value As String)
     End Sub
-    Partial Private Sub OnDRUNG_NAMEChanged()
+    Partial Private Sub OnDRUG_NAMEChanged()
     End Sub
     Partial Private Sub OnNEWCODE_UChanging(value As String)
     End Sub
@@ -139710,18 +139710,18 @@ Partial Public Class DR_RECLASS_REGIST_DETAIL
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DRUNG_NAME", DbType:="NVarChar(MAX)")>  _
-	Public Property DRUNG_NAME() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DRUG_NAME", DbType:="NVarChar(MAX)")>  _
+	Public Property DRUG_NAME() As String
 		Get
-			Return Me._DRUNG_NAME
+			Return Me._DRUG_NAME
 		End Get
 		Set
-			If (String.Equals(Me._DRUNG_NAME, value) = false) Then
-				Me.OnDRUNG_NAMEChanging(value)
+			If (String.Equals(Me._DRUG_NAME, value) = false) Then
+				Me.OnDRUG_NAMEChanging(value)
 				Me.SendPropertyChanging
-				Me._DRUNG_NAME = value
-				Me.SendPropertyChanged("DRUNG_NAME")
-				Me.OnDRUNG_NAMEChanged
+				Me._DRUG_NAME = value
+				Me.SendPropertyChanged("DRUG_NAME")
+				Me.OnDRUG_NAMEChanged
 			End If
 		End Set
 	End Property

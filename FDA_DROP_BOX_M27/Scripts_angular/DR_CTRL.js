@@ -1,11 +1,20 @@
-﻿app.controller('DR_CTRL', function ($scope, CENTER_SV, $http, $location) {
+﻿app.filter('startFrom', function () {
+    return function (input, start) {
+        if (input) {
+            start = +start;
+            return input.slice(start);
+        }
+        return [];
+    };
+});
+app.controller('DR_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     CHK_TOKEN();
     var LCN_IDA = sessionStorage.LCN_IDA;
     var LCT_IDA = sessionStorage.LCT_IDA;
     var CITIZEN = CITIZEN_ID_AUTHORIZE;
     var PROCESS_ID = QueryString("PROCESS");
-
+    var IDA = sessionStorage.IDA;
     $scope.RECLASS_REGISTER = [];
     //$scope.currentPage = 0;
     //$scope.paging = {
@@ -184,6 +193,28 @@
         }, function () { });
     };
 
+
+    $scope.pageload_reclass_pv = function () {
+
+        //set model data reclass
+        var data = CENTER_SV.SETMODEL_RECLASS();
+        data.then(function (datas) {
+            $scope.LIST_DRRC = datas.data;
+
+        }, function () { });
+
+        var data_RC = CENTER_SV.SP_GET_DATA_RECLASS_BY_IDA(IDA);
+        data_RC.then(function (datas) {
+            $scope.LIST_DRRC = datas.data[0];
+        }, function () { });
+
+        var data_RC = CENTER_SV.SP_GET_READ_DATA_RECLASS_BY_NEWCODE(sessionStorage.NEWCODE);
+        data_RC.then(function (datas) {
+            $scope.LIST_READ_RC = datas.data[0];
+        }, function () { });
+
+    };
+
     $scope.BTN_SEARCH_REGIST = function (txt) {
 
         var GetdataCHEM = CENTER_SV.SP_SEARCH_REGISTER_BY_TXT_AND_IDENTIFY(txt, sessionStorage.CITIZEN_ID_AUTHORIZE);
@@ -198,9 +229,9 @@
         var obj = {
 
             IDA: Int32Array,
-            REGISTER: datas.REGISTER,
+            REGISTER: datas.RGTNO_DISPLAY,
             RID: datas.IDA,
-            DRUNG_NAME: datas.DRUG_NAME,
+            DRUG_NAME: datas.DRUG_NAME,
             FK_IDA: Int32Array,
             NEWCODE_U: datas.NEWCODE_U
 
@@ -272,48 +303,95 @@
         REDIRECT('/DR/INPUT_RECLASS');
     };
     
-    $scope.SELECT_RECLASS = function () {
+    $scope.SELECT_RECLASS = function (datas) {
+        sessionStorage.IDA = datas.IDA;
         REDIRECT('/DR/PREVIEW_RECLASS');
     };
     
     $scope.BTN_SAVE_RECLASS = function () {
-        Swal.fire({
-            title: 'คุณต้องการส่งใช่หรือไม่ ?',
-            text: "กรุณาตรวจสอบความถูกต้องก่อนส่ง!",
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'ใช่, ฉันต้องการส่งข้อมูล',
-            cancelButtonText: 'ยกเลิก'
-        }).then((result) => {
-            if (result.value) {
-                success_data('SUCCESS');
-                REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
-            }
+        //$scope.LIST_DRRC.DR_RECLASS.WRITE_DATE = parseJsonDate_edit(LIST_DRRC.DR_RECLASS.WRITE_DATE);
+        var Getdata = CENTER_SV.INSERT_RECLASS($scope.LIST_DRRC, $scope.RECLASS_REGISTER, sessionStorage.CITIZEN_ID_AUTHORIZE, sessionStorage.NEWCODE, sessionStorage.PROCESS_ID, sessionStorage.CITIZEN_ID);
+        Getdata.then(function (datas) {
+            //var TR_ID = datas.data.TR_ID;
+            //var PROCESS = PROCESS_ID;
+            //var obj = $scope.DOC_LIST.FILE_LISTs;
+            //angular.forEach(obj, function (value, key) {
+            //    var FILEs = value.FILE_DATA;
+            //    $scope.PDF.push(FILEs);
+            //});
+            //var upload = CENTER_SV.UPLOAD_PDF_ATTACH($scope.DOC_LIST.FILE_LISTs, TR_ID, PROCESS, $scope.PDF);
+            //upload.then(function (datas) {
+            //    if (datas.data.result == 'SUCCESS') {
+            //        $scope.FLAG = 'PASS';
+            //    }
+            //});
+
+            Swal.fire({
+                title: 'คุณต้องการบันทึกใช่หรือไม่ ?',
+                text: "กรุณาตรวจสอบความถูกต้องก่อนบันทึก!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'ใช่, ฉันต้องการบันทึกข้อมูล',
+                cancelButtonText: 'ยกเลิก'
+            }).then((result) => {
+                if (result.value) {
+                    success_data('SUCCESS');
+                    REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
+                }
+            });
+
+
         });
+
+        
 
     };
     $scope.BTN_POPUP_RECLASS = function () {
         Openmodel();
     };
-    
-    $scope.BTN_SEND_RECLASS = function () {
-        Swal.fire({
-            title: 'คุณต้องการยื่นคำขอใช่หรือไม่ ?',
-            text: "กรุณาตรวจสอบความถูกต้องก่อนส่ง!",
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'ใช่, ฉันต้องการยื่นคำขอ',
-            cancelButtonText: 'ยกเลิก'
-        }).then((result) => {
-            if (result.value) {
-                success_data('SUCCESS');
-                REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
-            }
+
+    function Openmodel() {
+        $('#exampleModalLong').modal('toggle'); // เป็นคำสั่งเปิดปิด
+    }
+
+    $scope.BTN_SEND_RECLASS = function (EMAIL, TEL) {
+        var Getdata = CENTER_SV.SEND_RQT_RECLASS(sessionStorage.IDA, EMAIL, TEL, sessionStorage.CITIZEN_ID);
+        Getdata.then(function (datas) {
+            Swal.fire({
+                title: 'คุณต้องการยื่นคำขอใช่หรือไม่ ?',
+                text: "กรุณาตรวจสอบความถูกต้องก่อนส่ง!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'ใช่, ฉันต้องการยื่นคำขอ',
+                cancelButtonText: 'ยกเลิก'
+            }).then((result) => {
+                if (result.value) {
+                    success_data('SUCCESS');
+                    REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
+                }
+            });
+
+
         });
+        //Swal.fire({
+        //    title: 'คุณต้องการยื่นคำขอใช่หรือไม่ ?',
+        //    text: "กรุณาตรวจสอบความถูกต้องก่อนส่ง!",
+        //    type: 'warning',
+        //    showCancelButton: true,
+        //    confirmButtonColor: '#3085d6',
+        //    cancelButtonColor: '#d33',
+        //    confirmButtonText: 'ใช่, ฉันต้องการยื่นคำขอ',
+        //    cancelButtonText: 'ยกเลิก'
+        //}).then((result) => {
+        //    if (result.value) {
+        //        success_data('SUCCESS');
+        //        REDIRECT('/DR/FRM_MAIN_PAGE_PRODUCT');
+        //    }
+        //});
 
     };
     $scope.BTN_PREVIEW = function () {
