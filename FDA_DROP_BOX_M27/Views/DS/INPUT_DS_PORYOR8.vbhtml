@@ -57,26 +57,26 @@ End Code
             <table class="table" width="100%" style="font-size:20px">
                 <tr>
                     <td width="30%">ชื่อผู้รับอนุญาต :</td>
-                    <td width="70%">
-                        <label></label>
+                    <td>
+                        {{LIST_LCN.thanm}}
                     </td>
                 </tr>
                 <tr>
                     <td>เลขที่ใบอนุญาต :</td>
                     <td>
-                        <label></label>
+                        {{LIST_LCN.lcnno}}
                     </td>
                 </tr>
                 <tr>
                     <td>สถานที่ผลิต/นำสั่ง :</td>
                     <td>
-                        <label></label>
+                        {{LIST_LCN.thanameplace}}
                     </td>
                 </tr>
                 <tr>
                     <td>ชื่อผู้ดำเนินกิจการ :</td>
                     <td>
-                        <label></label>
+                        {{LIST_LCN.BSN_THAIFULLNAME}}
                     </td>
                 </tr>
                 <tr>
@@ -129,7 +129,7 @@ End Code
                 <tr>
                     <td>ผู้มีหน้าที่ปฏิบัติการ :</td>
                     <td>
-                        {{}}
+                        
                     </td>
                 </tr>
             </table>
@@ -141,11 +141,11 @@ End Code
             <table class="table" width="100%" style="font-size:20px">
                 <tr>
                     <td width="30%">ชื่อยา :</td>
-                    <td width="70%"></td>
+                    <td>{{LIST_DRUG_PRO.DRUG_NAME_THAI}}</td>
                 </tr>
                 <tr>
                     <td>ลักษณะและสีของยา :</td>
-                    <td></td>
+                    <td>{{LIST_DRUG_PRO.DRUG_COLOR}}</td>
                 </tr>
             </table>
             <br />

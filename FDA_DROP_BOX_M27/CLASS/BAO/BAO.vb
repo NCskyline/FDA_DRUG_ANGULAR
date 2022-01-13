@@ -328,7 +328,6 @@ Public Class BAO
         Return dt
     End Function
 
-
     Public Function SP_STAFF_OFFER_DDL_BY_PVNCD(ByVal PVCODE As String) As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_STAFF_OFFER_DDL_BY_PVNCD @pvncd =" & PVCODE
@@ -644,7 +643,6 @@ Public Class BAO
         End Try
         Return dt
     End Function
-
 
     Public Function SP_LOCATION_BSN_BY_LCN_IDA(ByVal IDA As Integer) As DataTable
         Dim clsds As New ClassDataset
@@ -1297,6 +1295,18 @@ Public Class BAO
         End Try
 
 
+        Return dt
+    End Function
+
+    Public Function SP_DRUG_REGISTRATION_DETAIL_CAS_FK_IDA(ByVal IDA As String) As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_DRUG_REGISTRATION_DETAIL_CAS_FK_IDA @IDA='" & IDA & "'"
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
         Return dt
     End Function
 End Class

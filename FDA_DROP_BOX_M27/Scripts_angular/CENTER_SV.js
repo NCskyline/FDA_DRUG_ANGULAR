@@ -2200,17 +2200,28 @@
         return response; 
     };
 
-    this.GETEX_DRUG = function (IDA) {
+    this.SP_DRUG_REGISTRATION_DETAIL_CAS_FK_IDA = function (IDA) {
         var response = $http({
             method: "post",
-            url: SET_URL_SV("/SV_CENTER/GETEX_DRUG"),
-            dataType: "json",
-            data: {
+            url: SET_URL_SV("/SV_CENTER/SP_DRUG_REGISTRATION_DETAIL_CAS_FK_IDA"),
+            params: {
                 IDA: IDA
             }
         });
         return response;
     };
+
+    //this.GETEX_DRUG = function (IDA) {
+    //    var response = $http({
+    //        method: "post",
+    //        url: SET_URL_SV("/SV_CENTER/GETEX_DRUG"),
+    //        dataType: "json",
+    //        data: {
+    //            IDA: IDA
+    //        }
+    //    });
+    //    return response;
+    //};
 });
 
 

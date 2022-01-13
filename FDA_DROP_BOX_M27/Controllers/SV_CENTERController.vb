@@ -914,6 +914,14 @@ Namespace Controllers
 
         End Function
 
+        Function SP_DRUG_REGISTRATION_DETAIL_CAS_FK_IDA(ByVal IDA As String) As JsonResult
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_DRUG_REGISTRATION_DETAIL_CAS_FK_IDA(IDA)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+
+        End Function
 #End Region
 
 #Region "GET_DATA"
@@ -2841,14 +2849,14 @@ Namespace Controllers
             Return Json(dao.fields, JsonRequestBehavior.AllowGet)
         End Function
 
-        Function GETEX_DRUG(ByVal IDA As String) As JsonResult
-            Dim model As New MODEL_LOCATIONS
-            Dim dao As New DAO_DRUG.TB_DALCN_LOCATION_ADDRESS
-            dao.GetDataby_IDA(IDA)
-            model.DALCN_LOCATION_ADDRESS = dao.fields
+        'Function GETEX_DRUG(ByVal IDA As String) As JsonResult
+        '    Dim model As New MODEL_LOCATIONS
+        '    Dim dao As New DAO_DRUG.TB_DALCN_LOCATION_ADDRESS
+        '    dao.GetDataby_IDA(IDA)
+        '    model.DALCN_LOCATION_ADDRESS = dao.fields
 
-            Return Json(model, JsonRequestBehavior.AllowGet)
-        End Function
+        '    Return Json(model, JsonRequestBehavior.AllowGet)
+        'End Function
 #End Region
 
 #Region "MODEL DATA"

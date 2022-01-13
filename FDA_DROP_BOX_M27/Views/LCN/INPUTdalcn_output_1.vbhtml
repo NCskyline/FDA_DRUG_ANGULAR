@@ -162,7 +162,7 @@
 
         <br />
 
-        <table style=" font-size:20px;width:100%" ;>
+        <table style=" font-size:20px;width:100%">
             <tr>
                 <td>
                     ซึ่งมีผู้ดำเนินกิจการ ชื่อ
