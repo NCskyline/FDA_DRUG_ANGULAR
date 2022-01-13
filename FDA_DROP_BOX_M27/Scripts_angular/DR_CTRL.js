@@ -186,10 +186,22 @@ app.controller('DR_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     };
 
-    $scope.getdetails = function (IDA) {
+    $scope.getdetails = function () {
         var data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
         data_location.then(function (datas) {
             $scope.LIST_LCN = datas.data;
+        }, function () { });
+
+        var data_drugpro = CENTER_SV.SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID(sessionStorage.FK_IDA, sessionStorage.process);
+        data_drugpro.then(function (datas) {
+            $scope.LIST_DRUG_PRO = datas.data;
+        }, function () { });
+    };
+
+    $scope.getdetails_exdrug = function () {
+        var data_exdrug = CENTER_SV.SP_DRUG_REGISTRATION_DETAIL_CAS_FK_IDA(IDA);
+        data_exdrug.then(function (datas) {
+            $scope.LIST_EXDRUG = datas.data;
         }, function () { });
     };
 

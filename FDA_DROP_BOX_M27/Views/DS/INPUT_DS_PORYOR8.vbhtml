@@ -141,11 +141,11 @@ End Code
             <table class="table" width="100%" style="font-size:20px">
                 <tr>
                     <td width="30%">ชื่อยา :</td>
-                    <td width="70%"></td>
+                    <td>{{LIST_DRUG_PRO.DRUG_NAME_THAI}}</td>
                 </tr>
                 <tr>
                     <td>ลักษณะและสีของยา :</td>
-                    <td></td>
+                    <td>{{LIST_DRUG_PRO.DRUG_COLOR}}</td>
                 </tr>
             </table>
             <br />
