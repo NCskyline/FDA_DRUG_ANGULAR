@@ -593,6 +593,15 @@
         });
         return response;
     };
+    
+    this.SP_DR_RECLASS_STAFF = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/DR_STAFF_CENTER/SP_DR_RECLASS_STAFF")
+
+        });
+        return response;
+    };
 
     this.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR = function (IDENTIFY , _year) {
         var response = $http({
@@ -605,6 +614,19 @@
         });
         return response;
     };
+
+    
+    this.SP_GET_READ_DATA_RECLASS_STAFF_BY_IDA = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/DR_STAFF_CENTER/SP_GET_READ_DATA_RECLASS_STAFF_BY_IDA"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
+
     //this.GET_LCN_INFORMATION_BSN_INPUT = function (LOCATION_TYPE_CD,iden) {
     //    var response = $http({
     //        method: "post",

@@ -314,7 +314,7 @@
         <div style=" font-size:20px">อุปกรณ์ และการดำเนินการตามหลักวิธีปฏิบัติทางเภสัชกรรมชุมชน เพื่อประกอบการอนุญาต</div>
         <br />
 
-        <table style="width:50%">
+        <table style="width:80%">
             <tr>
                 <td>
                     ชื่อสถานที่เก็บ ( 1 ) :
@@ -385,7 +385,7 @@
     </div>
     <br />
     <br />
-    <table style="font-size:20px;width:100%">
+    <table style="font-family:'Taviraj';font-size:24px;width:100%">
         <tr>
             <td style="width:20%">
                 โดยมีเภสัชกรชั้น
@@ -432,7 +432,7 @@
     <br />
     <input type="button" style="font-size:20px;width:100px" value="เพิ่ม" ng-click="BTN_ADD_PHR(LIST_PHR_ADD)" />
     <div>
-        <table class="table" width="100%">
+        <table class="table" style="font-family:'Taviraj';font-size:24px;width:100%">
             <thead>
                 <tr>
                     <th>ลำดับ</th>
@@ -465,10 +465,10 @@
 
     <hr />
 
-    <table style="width:100%">
+    <table style="font-family:'Taviraj';font-size:24px;width:100%">
         <tr>
             <td style="text-align:center" colspan="2">
-                <strong>(ถ้ามีมากกว่าหนึ่งคนให้แจ้งเพิ่มเติมท้ายคำขอนี้จน)</strong>
+                <strong>(ถ้ามีมากกว่าหนึ่งคนให้แจ้งเพิ่มเติมท้ายคำขอนี้)</strong>
             </td>
         </tr>
         <tr>
@@ -487,8 +487,8 @@
     </table>
     <br />
 
-    <div>
-        ข้าพเจ้าขอรับรองว่าในระยะเวลาสองปีก่อนยื่นคำขอนี้ ข้าพเจ้าไม่เคยได้รับโทษจำคุกโดยคำพิพากษาถึงที่สุดหรือคำสั่งที่ชอบด้วยกฎหมายให้จำคุกในความผิดที่
+    <div style="font-size:20px;font-family:'Taviraj';">
+       <span style="width:30px;"></span> ข้าพเจ้าขอรับรองว่าในระยะเวลาสองปีก่อนยื่นคำขอนี้ ข้าพเจ้าไม่เคยได้รับโทษจำคุกโดยคำพิพากษาถึงที่สุดหรือคำสั่งที่ชอบด้วยกฎหมายให้จำคุกในความผิดที่
         กฎหมายบัญญัติ ให้ถือเอาการกระทำโดยทุจริตเป็นองค์ประกอบหรือในความผิดตามกฎหมายว่าด้วยยาเสพติดให้โทษ กฎหมายว่าด้วยวัตถุที่ออกฤทธิ์ต่อจิตและ
         ประสาท กฎหมายว่าด้วยการขายยาหรือพระราชบัญญัตินี้
         ข้าพเจ้าได้แนบหลักฐานมาด้วย คือ
@@ -511,7 +511,8 @@
     <br />
     <br />
     <br />
-    <table style="font-size:20px;width:40%;float:right">
+    <table style="font-size:20px;font-family:'Taviraj';width:40%;float:right">
+
         <tr>
             <td>
                 (ลายมือชื่อ)

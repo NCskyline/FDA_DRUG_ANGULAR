@@ -47,80 +47,24 @@ End Code
                         </tr>
                     </thead>
                     <tbody>
-                        @*<tr ng-repeat="datas in DATA_RECLASS | filter : filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                        <tr ng-repeat="datas in DATA_RECLASS | filter : filter | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
 
-                                <td>{{datas.TR_ID}}</td>
-                                <td>{{datas.RCVNO_DISPLAY}}</td>
-                                <td>{{datas.RGTNO_DISPLAY}}</td>
-                                <td>{{datas.DRUG_NAME}}</td>
-                                <td>{{datas.STATUS_NAME}}</td>
-                                <td>
-                                    <span class="fa fa-eye"></span>
-                                    <a ng-click="SELECT_RECLASS(datas)">
-                                        เลือก
-                                    </a>
-                                </td>
-                            </tr>*@
-                        <tr>
-                            <td>640009999</td>
+                            <td>{{datas.TR_ID}}</td>
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td>K 1/62 (NC)</td>
-                            <td>ทดสอบ4 /test4</td>
-                            <td>ชำระเงินแล้ว รอเจ้าหน้าที่ตรวจสอบเอกสาร</td>
+                            <td>{{datas.RCVNO_DISPLAY}}</td>
+                            <td>{{datas.RGTNO_DISPLAY}}</td>
+                            <td>{{datas.DRUG_NAME}}</td>
+                            <td>{{datas.STATUS_NAME}}</td>
                             <td>
                                 <span class="fa fa-eye"></span>
                                 <a ng-click="SELECT_RECLASS(datas)">
-                                    ดูข้อมูล
+                                    เลือก
                                 </a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>640009999</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>K 1/62 (NC)</td>
-                            <td>ทดสอบ4 /test4</td>
-                            <td>รับคำขอแล้วรอส่งผู้เชี่ยวชาญพิจารณา</td>
-                            <td>
-                                <span class="fa fa-eye"></span>
-                                <a ng-click="SELECT_RECLASS(datas)">
-                                    ดูข้อมูล
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>640009999</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>K 1/62 (NC)</td>
-                            <td>ทดสอบ4 /test4</td>
-                            <td>ส่งให้ผู้ประกอบการแก้ไขคำขอ</td>
-                            <td>
-                                <span class="fa fa-eye"></span>
-                                <a ng-click="SELECT_RECLASS(datas)">
-                                    ดูข้อมูล
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>640009999</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>K 1/62 (NC)</td>
-                            <td>ทดสอบ4 /test4</td>
-                            <td>อนุมัติ</td>
-                            <td>
-                                <span class="fa fa-eye"></span>
-                                <a ng-click="SELECT_RECLASS(datas)">
-                                    ดูข้อมูล
-                                </a>
-                            </td>
-                        </tr>
+
 
                     </tbody>
                 </table>

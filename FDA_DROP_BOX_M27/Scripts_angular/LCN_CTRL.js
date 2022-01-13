@@ -912,25 +912,25 @@
 
         //}, function () { });
 
-        if ($scope.LIST_EXTEND.YEAR_SELECT == "1") { 
-            var _YEAR = new Date().getFullYear();
-            if (_YEAR < 2500) {
-                _YEAR = _YEAR + 544;
-            }
-            var data_lct = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR(IDENTIFY, _YEAR);
-            data_lct.then(function (datas) {
-                $scope.LIST_EXTEND = datas.data;
+        //if ($scope.LIST_EXTEND.YEAR_SELECT == "1") { 
+        //    var _YEAR = new Date().getFullYear();
+        //    if (_YEAR < 2500) {
+        //        _YEAR = _YEAR + 544;
+        //    }
+        //    var data_lct = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY_YEAR(IDENTIFY, _YEAR);
+        //    data_lct.then(function (datas) {
+        //        $scope.LIST_EXTEND = datas.data;
 
-            }, function () { });
+        //    }, function () { });
 
-        } else {
-            var data_lct1 = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(IDENTIFY);
-            data_lct1.then(function (datas) {
-                $scope.LIST_EXTEND = datas.data;
+        //} else {
+        //    var data_lct1 = CENTER_SV.SP_LCN_EXTEND_REQUEST_BY_IDENTIFY(IDENTIFY);
+        //    data_lct1.then(function (datas) {
+        //        $scope.LIST_EXTEND = datas.data;
 
-            }, function () { });
+        //    }, function () { });
 
-        }
+        //}
 
         var datakeep = CENTER_SV.SP_MASTER_DALCN_DETAIL_LOCATION_KEEP_BY_IDA(LCN_IDA);
         datakeep.then(function (datas) {
@@ -1034,7 +1034,7 @@
 
         var Data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
         Data_location.then(function (datas) {
-            $scope.LIST_LABEL = datas.data;
+            $scope.LIST_LABEL = datas.data[0];
             //$scope.LIST_LABEL.fulladdr = datas.data[0].fulladdr;
         }, function () { });
 
@@ -1348,8 +1348,8 @@
             var obj = {
 
                 LOCATION_IDA: IDA,
-                thanameplace: datas[0].thanameplace,
-                fulladdr: datas[0].fulladdr
+                thanameplace: datas.thanameplace,
+                fulladdr: datas.fulladdr
 
             };
             $scope.COLLECT_KEEP.push(obj);
@@ -1363,7 +1363,8 @@
 
     $scope.BTN_ADD_PHR = function (datas) {
 
-        if (datas.PHR_PREFIX_ID == '0' || datas.PHR_PREFIX_ID == '' || datas.PHR_NAME == '' || datas.PHR_CTZNO == '' || datas.PHR_TEXT_NUM == '') {
+        if (datas.PHR_PREFIX_ID == '0' || datas.PHR_LEVEL == '' || datas.PHR_NAME == '' || datas.PHR_CTZNO == '' || datas.PHR_TEXT_NUM == ''
+            || datas.PHR_LEVEL == undefined || datas.PHR_PREFIX_ID == undefined || datas.PHR_NAME == undefined || datas.PHR_CTZNO == undefined || datas.PHR_TEXT_NUM == undefined) {
             Swal.fire({
                 title: 'ERROR',
                 text: 'กรุณากรอกข้อมูลให้ครบถ้วน',

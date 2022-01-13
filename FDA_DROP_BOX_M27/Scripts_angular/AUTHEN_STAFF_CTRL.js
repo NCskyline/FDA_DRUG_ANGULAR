@@ -81,6 +81,32 @@
         }, function () { });
     }
 
+    $scope.pageload_reclass_pv = function () {
+
+        //set model data reclass
+        var data = CENTER_SV.SETMODEL_RECLASS();
+        data.then(function (datas) {
+            $scope.LIST_DRRC = datas.data;
+
+        }, function () { });
+
+        var data_RC = CENTER_SV.SP_GET_DATA_RECLASS_BY_IDA(sessionStorage.IDA);
+        data_RC.then(function (datas) {
+            $scope.LIST_DRRC = datas.data[0];
+        }, function () { });
+
+        var data_RC = CENTER_SV.SP_GET_READ_DATA_RECLASS_STAFF_BY_IDA(sessionStorage.IDA);
+        data_RC.then(function (datas) {
+            $scope.LIST_READ_RC = datas.data[0];
+        }, function () { });
+
+        //STATUS
+
+    };
+    $scope.BTN_BACK = function () {
+        REDIRECT('/AUTHEN/FRM_STAFF_MAIN');
+    };
+
 
     $scope.BTN_SUB_MENU_CLICK = function (BTN_GROUP, IDgroup, SEQ) {
 
@@ -195,10 +221,10 @@
             } else if (SEQ == '7') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_STAFF_DR_RECLASS_MAIN');
 
-                //var dataedit2 = CENTER_SV.SP_STAFF_DS();
-                //dataedit2.then(function (datas) {
-                //    $scope.DATA_DS_STAFF = datas.data;
-                //}, function () { });
+                var DATA_RC = CENTER_SV.SP_DR_RECLASS_STAFF();
+                DATA_RC.then(function (datas) {
+                    $scope.DATA_RECLASS = datas.data;
+                }, function () { });
                 
             } else if (SEQ == '996') {
                 $scope.SUB_MAIN_PAGE = SET_URL_SV('/DR_STAFF/FRM_SUBSTITUTE_TABEAN_STAFF_MAIN');
@@ -383,7 +409,7 @@
         REDIRECT('/DR_STAFF/PREVIEW_RGT_EDIT');
     };
     $scope.SELECT_RECLASS = function (data) {
-        //sessionStorage.IDA = data.IDA;
+        sessionStorage.IDA = data.IDA;
         //sessionStorage.LCN_IDA = data.FK_IDA;
         //sessionStorage.PROCESS_ID = data.PROCESS_ID;
         //sessionStorage.PREVIEW_CERT_IDA = datas.IDA;

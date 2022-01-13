@@ -41,6 +41,20 @@ Public Class BAO
         Return dt
     End Function
     '
+    Public Function SP_DR_RECLASS_STAFF() As DataTable
+        Dim clsds As New ClassDataset
+        Dim sql As String = "exec SP_DR_RECLASS_STAFF"
+        Dim dt As New DataTable
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+        dt.TableName = "SP_DR_RECLASS_STAFF"
+        Return dt
+    End Function
+
     Public Function SP_STATUS_CERT_STAFF_FIX() As DataTable
         Dim clsds As New ClassDataset
         Dim sql As String = "exec SP_STATUS_CERT_STAFF_FIX"
@@ -207,6 +221,20 @@ Public Class BAO
         Try
             dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
             dt.TableName = "SP_GET_DATA_RECLASS_BY_IDA"
+        Catch ex As Exception
+
+        End Try
+
+        Return dt
+    End Function
+
+    Public Function SP_GET_READ_DATA_RECLASS_STAFF_BY_IDA(ByVal IDA As Integer) As DataTable
+        Dim clsds As New ClassDataset
+        Dim dt As New DataTable
+        Dim sql As String = "exec SP_GET_READ_DATA_RECLASS_STAFF_BY_IDA @IDA=" & IDA
+        Try
+            dt = clsds.dsQueryselect(sql, _con_d).Tables(0)
+            dt.TableName = "SP_GET_READ_DATA_RECLASS_STAFF_BY_IDA"
         Catch ex As Exception
 
         End Try

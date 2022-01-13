@@ -69,4 +69,22 @@ Namespace Controllers
             Return View()
         End Function
     End Class
+    Public Class DR_STAFF_CENTERController
+        Inherits Controller
+        Function SP_DR_RECLASS_STAFF()
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_DR_RECLASS_STAFF()
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+        End Function
+        '
+        Function SP_GET_READ_DATA_RECLASS_STAFF_BY_IDA(ByVal IDA As Integer)
+            Dim dt As New DataTable
+            Dim bao As New BAO
+            dt = bao.SP_GET_READ_DATA_RECLASS_STAFF_BY_IDA(IDA)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
+        End Function
+    End Class
 End Namespace
