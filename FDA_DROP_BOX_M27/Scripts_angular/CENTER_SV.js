@@ -1694,6 +1694,14 @@
         });
         return response;
     };
+    this.SETMODEL_LCT = function () {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SETMODEL_LCT")
+        });
+        return response;
+    };
+
 
     this.SETMODEL_CHEMICAL = function () {
         var response = $http({

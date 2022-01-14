@@ -49,6 +49,17 @@
             _DALCN_DETAIL_LOCATION_KEEP = value
         End Set
     End Property
+
+    Private _DALCN_LOCATION_ADDRESS_RQT As New DALCN_LOCATION_ADDRESS_RQT
+    Public Property DALCN_LOCATION_ADDRESS_RQT() As DALCN_LOCATION_ADDRESS_RQT
+        Get
+            Return _DALCN_LOCATION_ADDRESS_RQT
+        End Get
+        Set(ByVal value As DALCN_LOCATION_ADDRESS_RQT)
+            _DALCN_LOCATION_ADDRESS_RQT = value
+        End Set
+    End Property
+
     Private _DALCN_NCT_SUBSTITUTE As DALCN_NCT_SUBSTITUTE
     Public Property DALCN_NCT_SUBSTITUTE() As DALCN_NCT_SUBSTITUTE
         Get
