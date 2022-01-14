@@ -280,6 +280,48 @@
 
     }
 
+    $scope.pageload_lct = function () {
+
+        var LOAD_MODEL = CENTER_SV.SETMODEL_LCT();
+        LOAD_MODEL.then(function (datas) {
+            $scope.LIST_LCT = datas.data;
+        }, function () { });
+
+        var data_CNT = CENTER_SV.SP_MASTER_sysisocnt();
+        data_CNT.then(function (datas) {
+            $scope.CNT_LIST = datas.data;
+
+        }, function () { });
+
+        var data_CHNT = CENTER_SV.SP_SYSCHNGWT();
+        data_CHNT.then(function (datas) {
+            $scope.REF_CHNGWT = datas.data;
+
+        }, function () { });
+
+        var data_AMP = CENTER_SV.SP_SYSAMPHR();
+        data_AMP.then(function (datas) {
+            $scope.REF_AMP = datas.data;
+
+        }, function () { });
+
+
+        var data_TMB = CENTER_SV.SP_SYSTHMBL();
+        data_TMB.then(function (datas) {
+            $scope.REF_TMB = datas.data;
+
+        }, function () { });
+
+
+
+    };
+
+    $scope.BTN_MENU_LCT = function (process) {
+        if (process == '99') {
+            REDIRECT('/LCN/FRM_LCN_LCT?PROCESS=' + process);
+        }
+    };
+
 
     $scope.BTN_MENU = function (process) {
 

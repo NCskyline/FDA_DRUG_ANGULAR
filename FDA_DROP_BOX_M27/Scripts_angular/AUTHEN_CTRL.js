@@ -41,7 +41,8 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
                     if (TYPE == 'LCN') {
                         sessionStorage.PROCESS = '';
-                        window.location = "/LCN/FRM_LCN_NEWS";
+                        window.location = "/LCN/FRM_MAIN_PRODUCT_LCN";
+
                     } else if (TYPE == 'DH') {
                         window.location = "/DH/FRM_MAIN_PAGE_PHESAJ";
                     } else if (TYPE == 'DR') {
@@ -53,6 +54,7 @@ app.controller('AUTHEN_CTRL', function ($scope, CENTER_SV, $http, $location) {
                     if (TYPE == 'LCN') {
                         //window.location = "/FDA_DRUG_ANGULAR_DEMO/LCN/FRM_LCN_NEWS";
                         window.location = "/FDA_DRUG_ANGULAR_DEMO/LCN/FRM_LCN_NEWS";
+                        //window.location = "/FDA_DRUG_ANGULAR_DEMO/LCN/FRM_MAIN_PRODUCT_LCN";
 
                     } else if (TYPE == 'DH') {
                         window.location = "/FDA_DRUG_ANGULAR_DEMO/DH/FRM_MAIN_PAGE_PHESAJ";  // << ปิดเวลาอัพขึ้นเซิร์ฟ เปิดแถวล่าง

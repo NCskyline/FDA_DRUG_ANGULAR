@@ -241,6 +241,13 @@ Namespace Controllers
             Return View()
         End Function
 
+        Function INPUT_LCT_REQUEST() As ActionResult
+            Return View()
+        End Function
+
+        Function PREVIEW_LCT_REQUEST() As ActionResult
+            Return View()
+        End Function
     End Class
 
     Public Class LCN_CENTERController

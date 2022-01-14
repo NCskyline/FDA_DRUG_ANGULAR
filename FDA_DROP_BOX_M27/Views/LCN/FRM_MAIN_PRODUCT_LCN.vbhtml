@@ -1,31 +1,36 @@
 ﻿@Code
     ViewData("Title") = "FRM_MAIN_PRODUCT_LCN"
 End Code
+
 <link rel="stylesheet" href="../dist/listree.min.css" />
 <link href="../css/bootstrap_limitless.min.css" rel="stylesheet" />
+<script src="~/Scripts_angular/ANGULAR_APP.js"></script>
+<script src="~/Scripts_angular/CENTER_SV.js"></script>
+<script src="~/Scripts_angular/LCN_CTRL.js"></script>
 
-<div>
+
+<div  ng-controller="LCN_CTRL" ng-app="ANGULAR_APP">
     <div class="content-part">
         <div class="part part-1-3 ic" style="font-family:'Taviraj';width:100%">
             <ul class="listree">
                 <li>
                     <div class="listree-submenu-heading" style="color:black">
-                        <a ng-click="BTN_MENU('99')" style="color:#06B716">ข้อมูลสถานที่ตั้งที่ลงทะเบียน (ขออนุญาตใหม่)</a>
+                        <a ng-click="BTN_MENU_LCT('99')" style="color:#06B716">ข้อมูลสถานที่ตั้งที่ลงทะเบียน (ขออนุญาตใหม่)</a>
                     </div>
                 </li>
                 <li>
                     <div class="listree-submenu-heading" style="color:black">
-                        <a ng-click="BTN_MENU('100741')" style="color:#06B716">ยื่นคำขอต่ออายุใบอนุญาต (ระบบใหม่)</a>
+                        <a ng-click="BTN_MENU_LCT('100741')" style="color:#06B716">ยื่นคำขอต่ออายุใบอนุญาต (ระบบใหม่)</a>
                     </div>
                 </li>
                 <li>
                     <div class="listree-submenu-heading" style="color:black">
-                        <a ng-click="BTN_MENU('130099')" style="color:#06B716">คำขอใบแทนใบอนุญาตสถานที่ด้านยา</a>
+                        <a ng-click="BTN_MENU_LCT('130099')" style="color:#06B716">คำขอใบแทนใบอนุญาตสถานที่ด้านยา</a>
                     </div>
                 </li>
                 <li>
                     <div class="listree-submenu-heading" style="color:black">
-                        <a ng-click="BTN_MENU('130099')" style="color:#06B716">ระบบขอรับรองการตรวจประเมิน (GPP)</a>
+                        <a ng-click="BTN_MENU_LCT('130099')" style="color:#06B716">ระบบขอรับรองการตรวจประเมิน (GPP)</a>
                     </div>
                 </li>
             </ul>

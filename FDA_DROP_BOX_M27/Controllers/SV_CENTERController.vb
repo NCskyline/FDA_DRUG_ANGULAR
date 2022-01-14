@@ -2933,6 +2933,12 @@ Namespace Controllers
 
             Return Json(MODEL, JsonRequestBehavior.AllowGet)
         End Function
+        Function SETMODEL_LCT() As JsonResult
+
+            Dim MODEL As New MODEL_LCN
+
+            Return Json(MODEL, JsonRequestBehavior.AllowGet)
+        End Function
         Public Function SETMODEL_LIST() As JsonResult
             Dim MODEL As New MODEL_FILELIST
             Dim filelist As New FILE_LIST
