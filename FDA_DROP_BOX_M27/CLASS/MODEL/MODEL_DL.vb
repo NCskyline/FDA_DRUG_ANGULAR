@@ -36,3 +36,69 @@
         End Set
     End Property
 End Class
+
+Public Class MODEL_DS_DATA
+    Private _LCNNO As String
+    Public Property LCNNO() As String
+        Get
+            Return _LCNNO
+        End Get
+        Set(ByVal value As String)
+            _LCNNO = value
+        End Set
+    End Property
+    Private _DRUG_NAME_THAI As String
+    Public Property DRUG_NAME_THAI() As String
+        Get
+            Return _DRUG_NAME_THAI
+        End Get
+        Set(ByVal value As String)
+            _DRUG_NAME_THAI = value
+        End Set
+    End Property
+    Private _DRUG_NAME_OTHER As String
+    Public Property DRUG_NAME_OTHER() As String
+        Get
+            Return _DRUG_NAME_OTHER
+        End Get
+        Set(ByVal value As String)
+            _DRUG_NAME_OTHER = value
+        End Set
+    End Property
+    Private _DRUG_GROUP As String
+    Public Property DRUG_GROUP() As String
+        Get
+            Return _DRUG_GROUP
+        End Get
+        Set(ByVal value As String)
+            _DRUG_GROUP = value
+        End Set
+    End Property
+    Private _DRUG_TYPE As String
+    Public Property DRUG_TYPE() As String
+        Get
+            Return _DRUG_TYPE
+        End Get
+        Set(ByVal value As String)
+            _DRUG_TYPE = value
+        End Set
+    End Property
+    Private _COMPANYNAME As String
+    Public Property COMPANYNAME() As String
+        Get
+            Return _COMPANYNAME
+        End Get
+        Set(ByVal value As String)
+            _COMPANYNAME = value
+        End Set
+    End Property
+    Private _RCVNO_DISPLAY As String
+    Public Property RCVNO_DISPLAY() As String
+        Get
+            Return _RCVNO_DISPLAY
+        End Get
+        Set(ByVal value As String)
+            _RCVNO_DISPLAY = value
+        End Set
+    End Property
+End Class

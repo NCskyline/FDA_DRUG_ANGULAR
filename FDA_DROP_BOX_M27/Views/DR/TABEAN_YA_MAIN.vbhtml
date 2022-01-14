@@ -44,32 +44,32 @@ End Code
   border-top: none;
 }
 </style>
-<div ng-app="ANGULAR_APP" ng-controller="DR_CTRL"> 
+<div ng-app="ANGULAR_APP" ng-controller="DR_CTRL" ng-init="getdetails_drug()"> 
     <div class="ic" style="font-family:'Taviraj'">
         <div>
             <h1>ข้อมูล</h1>
             <table class="table" width="100%" border="1">
                 <tr>
                     <td>ชื่อบริษัท</td>
-                    <td>ทดสอบ จำกัด</td>
+                    <td>{{DATA_DL.COMPANYNAME}}</td>
                     <td>เลขที่ใบอนุญาต</td>
-                    <td>ผย1 กท 999/2563</td>
+                    <td>{{DATA_DL.LCNNO}}</td>
                 </tr>
                 <tr>
                     <td>ชื่อยา (ภาษาไหย)</td>
-                    <td>พาราทดสอบ</td>
+                    <td>{{DATA_DL.DRUG_NAME_THAI}}</td>
                     <td>ชื่อยา (ภาษาอังกฤษ)</td>
-                    <td></td>
+                    <td>{{DATA_DL.DRUG_NAME_OTHER}}</td>
                 </tr>
                 <tr>
                     <td>หมวดยา</td>
-                    <td>แก๊สทางการแพทย์</td>
+                    <td>{{DATA_DL.DRUG_GROUP}}</td>
                     <td>ชนิดยา</td>
-                    <td></td>
+                    <td>{{DATA_DL.DRUG_TYPE}}</td>
                 </tr>
                 <tr>
                     <td>เลขที่ตำรับ</td>
-                    <td>DL-64-01257</td>
+                    <td>{{DATA_DL.RCVNO_DISPLAY}}</td>
                 </tr>
             </table>
             <br />
@@ -109,68 +109,11 @@ End Code
                                 </tr>
                             </thead>
                             <tbody>
-                                @*<tr>
-                                    <td>DL-64-01257</td>
-                                    <td>พาราทดสอบ</td>
-                                    <td>640009999</td>
-                                    <td>บันทึกแล้ว รอการส่งเรื่อง</td>
-                                    <td>
-                                        <span class="fa fa-eye"></span>
-                                        <a ng-click="">
-                                            ดูข้อมูล
-                                        </a>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>DL-64-01257</td>
-                                    <td>พาราทดสอบ</td>
-                                    <td>640009999</td>
-                                    <td>ส่งเรื่องแล้ว รอการชำระเงิน</td>
-                                    <td>
-                                        <span class="fa fa-eye"></span>
-                                        <a ng-click="">
-                                            ดูข้อมูล
-                                        </a>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>DL-64-01257</td>
-                                    <td>พาราทดสอบ</td>
-                                    <td>640009999</td>
-                                    <td>อนุมัติคำขอ</td>
-                                    <td>
-                                        <span class="fa fa-eye"></span>
-                                        <a ng-click="">
-                                            ดูข้อมูล
-                                        </a>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>DL-64-01257</td>
-                                    <td>พาราทดสอบ</td>
-                                    <td>640009999</td>
-                                    <td>รอการแก้ไขคำขอ</td>
-                                    <td>
-                                        <span class="fa fa-eye"></span>
-                                        <a ng-click="SELECT_DS()">
-                                            ดูข้อมูล
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <span class="fa fa-pen"></span>
-                                        <a ng-click="">
-                                            ดูรายละเอียดที่ต้องแก้ไข
-                                        </a>
-                                    </td>
-                                </tr>*@
-                                <tr ng-repeat="data in DATA_EDIT_LCN_RQT">
-                                    <td>{{data.RCVNO_MANUAL}}</td>
-                                    <td>{{data.LCNNO_MANUAL}}</td>
-                                    <td>{{data.STATUS_NAME}}</td>
-                                    <td>{{data.TRANSACTION_UPLOAD}}</td>
+                                <tr ng-repeat="datas in DATA_DRUG">
+                                    <td>{{datas.RCVNO_MANUAL}}</td>
+                                    <td>{{datas.drug_name}}</td>
+                                    <td>{{datas.TRANSACTION_UPLOAD}}</td>
+                                    <td>{{datas.STATUS_NAME}}</td>
                                     <td>
                                         <span class="fa fa-eye"></span>
                                         <a ng-click="SELECT_DS()">

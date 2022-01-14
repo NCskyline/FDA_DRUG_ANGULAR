@@ -90611,6 +90611,10 @@ Partial Public Class DRUG_REGISTRATION
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End If
 	End Sub
+
+    Friend Function ctgthanm() As String
+        Throw New NotImplementedException()
+    End Function
 End Class
 
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.DRRGT_PI")>  _

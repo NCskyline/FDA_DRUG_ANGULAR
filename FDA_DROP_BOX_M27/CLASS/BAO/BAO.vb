@@ -1309,4 +1309,12 @@ Public Class BAO
         End Try
         Return dt
     End Function
+
+    Public Function SP_GET_TR_UPLOAD_BY_PROCESS_ID_AND_IDA(ByVal process As Integer, ByVal auth As String, ByVal ida As Integer) As DataTable
+        Dim sql As String = "exec SP_GET_TR_UPLOAD_BY_PROCESS_ID_AND_IDA @process_id=" & process & ",@auth='" & auth & "',@IDA=" & ida
+        Dim dta As New DataTable
+        dta = Queryds(sql)
+        dta.TableName = "SP_GET_TR_UPLOAD_BY_PROCESS_ID_AND_IDA"
+        Return dta
+    End Function
 End Class

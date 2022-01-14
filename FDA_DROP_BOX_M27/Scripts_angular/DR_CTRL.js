@@ -140,6 +140,20 @@ app.controller('DR_CTRL', function ($scope, CENTER_SV, $http, $location) {
             $scope.DATA_RECLASS = datas.data;
         }, function () { });
 
+        var getdata = CENTER_SV.GET_INFORMATION(LCN_IDA);
+        getdata.then(function (datas) {
+            $scope.LCNNO_NO = datas.data.lcnno;
+            $scope.thanameplace = datas.data.thanameplace;
+            $scope.nameOperator = datas.data.nameOperator;
+        }, function () { });
+
+        //var data5 = CENTER_SV.SP_GET_TR_UPLOAD_BY_PROCESS_ID_AND_IDA(process, CITIZEN, ida);
+        //data5.then(function (datas) {
+        //    $scope.DATA_DRUG = datas.data;
+        //}, function () { });
+
+
+
         //var dataLo = CENTER_SV.SP_DALCN_EDIT_REQUEST_BY_FK_IDA(sessionStorage.LCN_IDA);
         //dataLo.then(function (datas) {
         //    $scope.DATA_EDIT_LCN_RQT = datas.data;
@@ -186,24 +200,62 @@ app.controller('DR_CTRL', function ($scope, CENTER_SV, $http, $location) {
 
     };
 
-    $scope.getdetails = function () {
-        var data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
-        data_location.then(function (datas) {
-            $scope.LIST_LCN = datas.data;
+    $scope.getdetails_drug = function () {
+        var IDA = QueryString("MAIN_IDA")
+        var process = '';
+        var data_dl = CENTER_SV.GET_DATA_DL(IDA);
+        data_dl.then(function (datas) {
+            $scope.DATA_DL = datas.data;
+
+            var getdata = CENTER_SV.GET_INFORMATION(LCN_IDA);
+            getdata.then(function (datas) {
+                
+                $scope.DATA_DL.LCNNO = datas.data.lcnno;
+                $scope.DATA_DL.COMPANYNAME = COMPANY_NAME;
+
+                if (datas.data.LCNTPCD = "ผย1") {
+                   process = '1701';
+                } else if (datas.data.LCNTPCD = "นย1") {
+                   process = '1702';
+                } else if (datas.data.LCNTPCD = "ผยบ") {
+                   process = '1703';
+                } else if (datas.data.LCNTPCD = "นยบ") {
+                   process = '1704';
+                }
+
+                var data5 = CENTER_SV.SP_GET_TR_UPLOAD_BY_PROCESS_ID_AND_IDA(process, CITIZEN, IDA);
+                data5.then(function (datas) {
+                    $scope.DATA_DRUG = datas.data;
+                }, function () { });
+
+            }, function () { });
+
         }, function () { });
 
-        var data_drugpro = CENTER_SV.SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID(sessionStorage.FK_IDA, sessionStorage.process);
-        data_drugpro.then(function (datas) {
-            $scope.LIST_DRUG_PRO = datas.data;
-        }, function () { });
+        
+       
     };
 
-    $scope.getdetails_exdrug = function () {
-        var data_exdrug = CENTER_SV.SP_DRUG_REGISTRATION_DETAIL_CAS_FK_IDA(IDA);
-        data_exdrug.then(function (datas) {
-            $scope.LIST_EXDRUG = datas.data;
-        }, function () { });
-    };
+    //$scope.getdetails = function () {
+    //    var data_location = CENTER_SV.SP_LOCATION_ADDRESS_by_LOCATION_ADDRESS_IDA(IDA);
+    //    data_location.then(function (datas) {
+    //        $scope.LIST_LCN = datas.data;
+    //    }, function () { });
+
+    //    var data_drugpro = CENTER_SV.SP_DRUG_REGISTRATION_BY_FK_IDA_PROCESS_ID(sessionStorage.FK_IDA, sessionStorage.process);
+    //    data_drugpro.then(function (datas) {
+    //        $scope.LIST_DRUG_PRO = datas.data;
+    //    }, function () { });
+    //};
+
+    //$scope.getdetails_exdrug = function () {
+    //    var data_exdrug = CENTER_SV.SP_DRUG_REGISTRATION_DETAIL_CAS_FK_IDA(IDA);
+    //    data_exdrug.then(function (datas) {
+    //        $scope.LIST_EXDRUG = datas.data;
+    //    }, function () { });
+    //};
+
+
 
 
     $scope.pageload_reclass_pv = function () {
@@ -303,7 +355,9 @@ app.controller('DR_CTRL', function ($scope, CENTER_SV, $http, $location) {
     };
 
     $scope.BTN_DATA = function (data) {
-        REDIRECT('/DR/TABEAN_YA_MAIN');
+        var main_ida = data.IDA;
+        
+        REDIRECT('/DR/TABEAN_YA_MAIN?MAIN_IDA=' + main_ida);
     };
 
     $scope.BTN_INPUT = function (data) {

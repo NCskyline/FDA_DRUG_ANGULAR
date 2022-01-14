@@ -846,7 +846,7 @@ Namespace Controllers
                 End Try
 
                 Try
-
+                    model.LCNTPCD = TbNO.fields.lcntpcd
                 Catch ex As Exception
 
                 End Try
@@ -921,6 +921,14 @@ Namespace Controllers
             Dim clsds As New ClassDataset
             Return Json(clsds.DataTableToJSON(dt), JsonRequestBehavior.AllowGet)
 
+        End Function
+
+        Function SP_GET_TR_UPLOAD_BY_PROCESS_ID_AND_IDA(ByVal process As Integer, ByVal auth As String, ByVal ida As Integer) As JsonResult
+            Dim dta As New DataTable
+            Dim bao As New BAO
+            dta = bao.SP_GET_TR_UPLOAD_BY_PROCESS_ID_AND_IDA(process, auth, ida)
+            Dim clsds As New ClassDataset
+            Return Json(clsds.DataTableToJSON(dta), JsonRequestBehavior.AllowGet)
         End Function
 #End Region
 
@@ -2847,6 +2855,29 @@ Namespace Controllers
             dao.GetDataby_IDA(IDA)
 
             Return Json(dao.fields, JsonRequestBehavior.AllowGet)
+        End Function
+
+        Function GET_DATA_DL(ByVal IDA As Integer) As JsonResult
+
+            Dim model As New MODEL_DS_DATA
+            Dim dao As New DAO_DRUG.ClsDBDRUG_REGISTRATION
+            dao.GetDataby_IDA(IDA)
+
+            Dim dao2 As New DAO_DRUG.ClsDBdactg
+            dao2.GetData_by_cd(dao.fields.DRUG_GROUP)
+
+            Dim dao3 As New DAO_DRUG.TB_drkdofdrg
+            dao3.GetData_by_kindcd(dao.fields.kindcd)
+            model.RCVNO_DISPLAY = dao.fields.RCVNO_DISPLAY
+            model.DRUG_NAME_THAI = dao.fields.DRUG_NAME_THAI
+            model.DRUG_NAME_OTHER = dao.fields.DRUG_NAME_OTHER
+            model.DRUG_GROUP = dao2.fields.ctgthanm
+            model.DRUG_TYPE = dao3.fields.thakindnm
+
+
+
+
+            Return Json(model, JsonRequestBehavior.AllowGet)
         End Function
 
         'Function GETEX_DRUG(ByVal IDA As String) As JsonResult

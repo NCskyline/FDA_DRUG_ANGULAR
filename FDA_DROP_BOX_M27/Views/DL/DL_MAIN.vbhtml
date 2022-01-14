@@ -9,24 +9,24 @@ End Code
             <div>
                 <table width="100%" style="font-family:'Taviraj';font-size:medium">
                     <tr>
-                        <td style="width:80%">
+                        <td style="width:20%">
                             <b>License number :</b>
                         </td>
-                        <td></td>
+                        <td>{{LCNNO_NO}}</td>
                     </tr>
                     <tr>
                         <td>
                             <b>ชื่อสถานที่ :</b>
                         </td>
-                        <td></td>
+                        <td>{{thanameplace}}</td>
                     </tr>
                     <tr>
                         <td>
                             <b>ชื่อผู้ดำเนินการ :</b>
                         </td>
-                        <td></td>
+                        <td>{{nameOperator}}</td>
                         <td align="right">
-                            <input class="btn btn-lg" style="width:90%;color:white;background-color:#38A86B" type="button" ng-click="BTN_DL(Process_ID)" value="สร้างชื่อตำรับ" />
+                            <input class="btn btn-lg" style="width:70%;color:white;background-color:#38A86B" type="button" ng-click="BTN_DL(Process_ID)" value="สร้างชื่อตำรับ" />
                         </td>
                     </tr>
                 </table>
@@ -64,7 +64,7 @@ End Code
                             <td></td>
                             <td>
                                 <span class="fa fa-eye"></span>
-                                <a ng-click="BTN_DATA(data)">
+                                <a ng-click="BTN_DATA(datas)">
                                     เลือก
                                 </a>
                             </td>

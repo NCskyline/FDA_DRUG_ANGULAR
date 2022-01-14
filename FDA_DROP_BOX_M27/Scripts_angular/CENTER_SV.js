@@ -2211,6 +2211,30 @@
         return response;
     };
 
+    this.SP_GET_TR_UPLOAD_BY_PROCESS_ID_AND_IDA = function (process, auth, ida) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/SP_GET_TR_UPLOAD_BY_PROCESS_ID_AND_IDA"),
+            params: {
+                process: process,
+                auth: auth,
+                ida: ida
+            }
+        });
+        return response;
+    };
+
+    this.GET_DATA_DL = function (IDA) {
+        var response = $http({
+            method: "post",
+            url: SET_URL_SV("/SV_CENTER/GET_DATA_DL"),
+            params: {
+                IDA: IDA
+            }
+        });
+        return response;
+    };
+
     //this.GETEX_DRUG = function (IDA) {
     //    var response = $http({
     //        method: "post",

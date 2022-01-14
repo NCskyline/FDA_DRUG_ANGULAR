@@ -80,6 +80,7 @@
     Public AGENT_COUNTRY_NAME As String
     Public CHK_TYPE_LCN As String
     Public CLOSE_BTN As String
+    Public LCNTPCD As String
 
 End Class
 
